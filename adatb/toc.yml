@@ -1,0 +1,27 @@
+- name: "A tantárgy célja"
+  href: kovetelmenyek\index.md
+- name: "1. gyakorlat: Egyszerű, egytáblás lekérdezések"
+  href: gyak1\index.md
+- name: "2. gyakorlat: Egyszerű, kifejezések, függvények"
+  href: gyak2\index.md
+- name: "3. gyakorlat: Aggregált függvények és csoportok képzése"
+  href: gyak3\index.md
+- name: "4. gyakorlat: Táblák összekapcsolása"
+  href: gyak4\index.md
+- name: "5. gyakrolat: Halmazműveletek"
+  href: gyak5\index.md
+- name: "6. gyakorlat: Adatdefiníció és adatmanipuláció SQL-ben"
+  href: gyak6\index.md
+- name: "7. gyakorlat: Beágyazott SQL lekérdezések"
+  href: gyak7\index.md
+- name: "8. gyakorlat: A csoportosítás speciális lehetőségei"
+  href: gyak8\index.md
+- name: "9. gyakorlat: Partíciók, ablakok, analitikus függvények"
+  href: gyak9\index.md
+- name: "10. gyakorlat: Nézetek, tárolt eljárások, függvények"
+  href: gyak10\index.md
+- name: "11. gyakorlat: Összefoglalás"
+  href: gyak11\index.md
+
+
+

@@ -1,0 +1,99 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+<title> Projektfeladat: Szótanító játék</title>
+<meta name="color-scheme" content="light dark">
+<link rel="stylesheet" href="../../assets/github-markdown.css">
+<link rel="stylesheet" href="../../assets/article.css">
+
+<link rel="stylesheet" href="xhttps://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/themes/prism-coy.min.css" integrity="sha512-LOT5F67SMZVdXMrvQe4S1ZHu5l6xk3CST2qqno9kY329OsJBBpybnq+fM9qG4ZSaNzPOjoGzHAeBamSSJyyuZg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/themes/prism-solarizedlight.min.css"  crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/line-numbers/prism-line-numbers.css"  crossorigin="anonymous" referrerpolicy="no-referrer" />
+<style>
+			body {
+				box-sizing: border-box;
+				min-width: 200px;
+				max-width: 980px;
+				margin: 0 auto;
+				padding: 45px;
+			}
+
+			@media (prefers-color-scheme: dark) {
+				body {
+					background-color: #0d1117;
+				}
+			}
+		</style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-fork-ribbon-css/0.2.3/gh-fork-ribbon.min.css">
+<style>
+			.github-fork-ribbon:before {
+				background-color: #121612;
+			}
+		</style>
+</head>
+<body>
+<article class="markdown-body line-numbers">
+
+
+<h1 id="projektfeladat-szotanito-jatek">Projektfeladat: Szótanító játék</h1>
+<h2 id="a-feladat-leirasa">A feladat leírása</h2>
+<p>A feladat egy szótanító program 	írása, melyben a képernyőre véletlenszerű sorrendben kipakolt magyar és idegen nyelvű szópárokat egérrel kell egymásra húzni. Az egymásra húzott szópárok eltűnnek a képernyőről. Ha minden szópár eltűnt, újabb 10 szó kerül ki. A szótárt pontosvesszővel tagolt fájlból kell olvasni, melynek minden sora egy-egy szópárt tartalmaz. A szótárt tartalmazó fájl előállítása is a feladat része.</p>
+<ul>
+<li>A szavakat tartalmazó fájlt fájlmegnyitó ablakból lehessen kiválasztani.</li>
+<li>A kiválasztott fájl tartalmát egy kérdésekből álló listába kell olvasni.</li>
+<li>A fájl megnyitásakor és olvasásakor keletkező esetleges kivételeket le kell kezelni.</li>
+<li>A játék indulás után rakjon ki 10 véletlenszerűen kiválasztott szópárt (20 szókártya) összekeverve a képernyőre.  Lehet két oszlopba is rakni őket.</li>
+</ul>
+<blockquote>
+<p>Teams-en várjuk a feladattal kapcsolatban kérdéseket, és igyekszünk mihamarabb válaszolni.</p>
+</blockquote>
+<h2 id="tippek-a-megvalositashoz">Tippek a megvalósításhoz</h2>
+<p>Érdemes a lovas képkirakós mintapéldát alapul venni, csak most szavakat mozgatunk, nem képeket.</p>
+<p>Érdemes létrehozni egy szókártya osztályt, mely megvalósítja a vonszolhatóságot, valamint publikus változóban tárolja a kártya párján lévő szöveget. De úgy is lehet, hogy minden szókártya egy sorszámot tárol, és az összetartozó szavakhoz ugyan az a szám tartozik.</p>
+<p>A szavakat tartalmazó elemek kipakolásánál a fő űrlapon érdemes közös eseménykiszolgálót rendelni a <code>MouseUp</code> eseményhez, és ebben vizsgálni, hogy az az elem, aminek a vonszolását befejeztük, másik elem fölött van-e, és ha igen, párban van-e a másik elemmel.</p>
+<h3 id="segitseg-a-fajlmegnyito-ablak-hasznalatahoz">Segítség a fájlmegnyitó ablak használatához</h3>
+<pre><code class="language-csharp">private void button1_Click(object sender, EventArgs e)
+{
+    OpenFileDialog ofd = new OpenFileDialog();
+    if (ofd.ShowDialog() == DialogResult.OK)
+    {
+        StreamReader sr = new StreamReader(ofd.FileName);
+        // file olvasása 
+        sr.Close();
+    }
+}
+
+</code></pre>
+<p>Az  <code>ofd.ShowDialog()</code>  metódushívás jeleníti meg a fájlmegnyitó ablakot. Ha a felhasználó választott fájlt, a  <code>ShowDialog()</code>  <code>DialogResult.OK</code>  eredménnyel tér vissza, egyébként  <code>DialogResult.Cancel</code>  lesz a visszatérési érték. Csak<br />
+<code>DialogResult.OK</code>  után van értelme a fájlt megnyitását megkísérelni.</p>
+<h3 id="try-catch-blokkok"><code>try</code>  <code>catch</code>  blokkok</h3>
+<p>A fájlmegnyitás, illetve olvasás nem biztos hogy sikerül,  <code>try</code>  <code>catch</code>  blokk használata indokolt.</p>
+<pre><code class="language-csharp">            OpenFileDialog ofd = new OpenFileDialog();
+            try
+            {
+                StreamReader sr = new StreamReader(&quot;Eheti lottó nyerőszámok.txt&quot;);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+</code></pre>
+
+</article>
+
+<a class="github-fork-ribbon" href="https://github.com/sindresorhus/github-markdown-css" data-ribbon="Fork me on GitHub" title="Fork me on GitHub">Fork me on GitHub</a>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+<script src="../../assets/article.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/components/prism-core.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/autoloader/prism-autoloader.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/line-numbers/prism-line-numbers.js"></script>
+
+<!-- Video wrap -->
+<div id="inlineVideo_template" class="jump nodisplay">
+    <video id="centvideo" playsinline controls></video>
+    <div></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,199 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+<title> Függvények és vezérlőszerkezetek</title>
+<meta name="color-scheme" content="light dark">
+<link rel="stylesheet" href="../../assets/github-markdown.css">
+<link rel="stylesheet" href="../../assets/article.css">
+
+<link rel="stylesheet" href="xhttps://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/themes/prism-coy.min.css" integrity="sha512-LOT5F67SMZVdXMrvQe4S1ZHu5l6xk3CST2qqno9kY329OsJBBpybnq+fM9qG4ZSaNzPOjoGzHAeBamSSJyyuZg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/themes/prism-solarizedlight.min.css"  crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/line-numbers/prism-line-numbers.css"  crossorigin="anonymous" referrerpolicy="no-referrer" />
+<style>
+			body {
+				box-sizing: border-box;
+				min-width: 200px;
+				max-width: 980px;
+				margin: 0 auto;
+				padding: 45px;
+			}
+
+			@media (prefers-color-scheme: dark) {
+				body {
+					background-color: #0d1117;
+				}
+			}
+		</style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-fork-ribbon-css/0.2.3/gh-fork-ribbon.min.css">
+<style>
+			.github-fork-ribbon:before {
+				background-color: #121612;
+			}
+		</style>
+</head>
+<body>
+<article class="markdown-body line-numbers">
+
+
+<h1 id="fuggvenyek-es-vezerloszerkezetek">Függvények és vezérlőszerkezetek</h1>
+<h2 id="videok">Videók</h2>
+<p><a href="S1fgv1-1.m4v">1. videó</a>
+<a href="S1fgv2-2.m4v">2. videó</a>
+<a href="S1fgv3-3.m4v">3. videó</a>
+<a href="S1fgv4-4.m4v">4. videó</a></p>
+<h2 id="feladat-solution-letrehozasa">0. feladat: Solution létrehozása</h2>
+<p>Ezen a gyakorlaton azt kérjük, hogy a két felépítendő feladatot -- Fibonacci sor és Pascal háromszög -- egy közös solution-ön belül hozzátok létre két külön projektként:</p>
+<p><span class='tg_task'>▷</span> Hozzatok létre egy új projektet a megszokott módon, de most a solution neve nem az alapértelmezésben felkínált projektnév legyen, hanem <code>MasodikHet_NEPTUN</code> fromátumú:
+<img src="1600008026941.png" alt="1600008026941.png" />
+<span class='tg_task'>▷</span> Ezután a Solution felett jobb egérgombra megjelenő helyi menüből új projektet lehet adni a Solution-höz. Ennek neve legyen <strong>Pascal</strong>.
+<img src="1600005026998.png" alt="1600005026998.png" /></p>
+<p><span class='tg_task'>▷</span> Ezután a <strong>MasodikHet_NEPTUN</strong> nevű solution tartalmaz egy <strong>Fibonacci</strong> és egy <strong>Pascal</strong> nevű projektet. Az <code>F5</code> billentyű lenyomására mindig a félkövér betűvel szedett projekt indul el, ez az alapértelmezett projekt. Ezt is a projekt nevéhez tartozó helyi menüből lehet átállítani:<br />
+<img src="1600007423489.png" alt="1600007423489.png" /></p>
+<p><span class='tg_task'>▷</span> A végén a teljes solution-t adjátok le betömörítve!</p>
+<blockquote>
+<p>A solution és a projekt neve egy szóból kell álljon, tartalmazhat számot, de nem kezdődhet számmal! Ékezetet a ZIP miatt nem érdemes használni, de nem tilos.</p>
+</blockquote>
+<h2 id="feladat-fibonacci-sor-kirakasa-gombokbol">1. feladat: Fibonacci sor kirakása gombokból</h2>
+<p><span class='tg_task'>▷</span>  Rakjátok ki a  <a href="https://hu.wikipedia.org/wiki/Fibonacci-sz%C3%A1mok">Fibonacci-sor</a>  első tíz elemét gombokból az űrlapra.</p>
+<p>Segítségül:</p>
+<p><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/47f0f322e5c0d6f9ef56bd8236e4163f8816e870" alt="" /></p>
+<p>A fentiek alapján a Fibonacci sor <em>n</em>-edik elemét megadó függvény:</p>
+<pre><code class="language-csharp">int Fibonacci(int n)
+{
+    if (n == 0) return 0;
+    if (n == 1) return 1;
+    return Fibonacci(n - 1) + Fibonacci(n - 2);
+}
+</code></pre>
+<blockquote>
+<p>Rekurzív függvényeknek azokat a függvényeket nevezzük, melyek saját magukat meghívják. A fenti függvény jó példa erre.</p>
+</blockquote>
+<p>A gombok kihelyezése elvégezhető az űrlap konstruktorában, de létrehozhattunk volna eseménykiszolgálót az űrlap <code>Load</code> eseményéhez is:</p>
+<pre><code class="language-csharp">public Form1()
+{
+    InitializeComponent();
+    for (int i = 1; i &lt; 10; i++)
+    { 
+        Button b = new Button();
+        b.Top = i * 30;
+        b.Text = Fibonacci(i).ToString();
+        Controls.Add(b);
+    }
+}      
+</code></pre>
+<h2 id="feladat-pascal-haromszog-kirakasa-gombokbol">2. feladat: Pascal-háromszög kirakása gombokból</h2>
+<p>A feladat a  <a href="https://hu.wikipedia.org/wiki/Pascal-h%C3%A1romsz%C3%B6g">Pascal-háromszög</a>  első néhány sorának kirakása gombokból.</p>
+<p>A Pascal háromszögben szereplő binomiális együtthatók kifejezhetők a faktoriálissal:
+<img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/c42a41f48e94296543f7f82ae26e19f69cc73ece" alt="{\displaystyle {n \choose k}={\frac {n!}{k!,(n-k)!}}}" /></p>
+<h3 id="faktorialis-kiszamolasa">2.1 Faktoriális kiszámolása</h3>
+<p>A .NET keretrendszer nem tartalmaz kész függvényt a faktoriális kiszámítására, ezért első lépésként nekünk kell megírnunk. Kétféle úton is el lehet indulni, bármelyik megoldást választhatjátok.</p>
+<h4 id="lehetoseg-faktroialis-kiszamitasa-iteracioval">1. lehetőség: faktroiális kiszámítása iterációval</h4>
+<p><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/4234ee890533fa15c15af33b07648b46ef87f08a" alt="" /></p>
+<p>A C# függvény a fenti szorzatösszeget képezi:</p>
+<pre><code class="language-csharp">int Faktorialis(int n)
+{
+    int eredmény = 1;
+    for (int i = 1; i &lt;= n; i++) eredmény *= i;
+    return eredmény;
+}
+
+</code></pre>
+<ul>
+<li>A <code>*=</code> operátor megszorozza a változó értékét az operátor után szereplő értékkel. Hasonlóképpen működnek a <code>+=</code>,<code>-=</code> és a <code>/=</code> operátorok.</li>
+<li>A <code>++</code> operátor növeli a változó értékét 1-el, míg a <code>--</code> csökkenti.</li>
+</ul>
+<h4 id="lehetoseg-faktorialis-kiszamitasa-rekurzioval">2 lehetőség: faktoriális kiszámítása rekurzióval</h4>
+<p>Mint korábban írtuk, rekurzív függvényeknek azokat a függvényeket nevezzük, melyek saját magukat meghívják. Ebben a megközelítésben abból indulunk ki, hogy ha <span class="math">\(n&gt;0\)</span> akkor <span class="math">\(n!=(n-1)!\)</span>, ha viszont <span class="math">\(n\leq0\)</span>, akkor <span class="math">\(n=1\)</span>.</p>
+<p>C#-ul:</p>
+<pre><code class="language-csharp">int Faktorialis2(int n)
+{ 
+    if (n == 0) return 1;
+    return n * Faktorialis2(n - 1);            
+}
+</code></pre>
+<h2 id="a-haromszog-kirakasa">2.2 A háromszög kirakása</h2>
+<p><span class='tg_task'>▷</span>  Rakjátok ki a binomiális együtthatókat egy 10x10-es négyzetrácsba gomb (<code>Button</code>) vezérlőkből az alábbi összefüggés alapján:</p>
+<p><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/c42a41f48e94296543f7f82ae26e19f69cc73ece" alt="{\displaystyle {n \choose k}={\frac {n!}{k!,(n-k)!}}}" /></p>
+<p>A <em>n</em> helyére a sor számát, <em>k</em> helyére az oszlopét helyettesítsd!</p>
+<p>Először egy négyzetrácsba tesszük az elemeket, majd később csináljuk meg azt, hogy ne jelenjenek meg a főátló felettiek, és később rendezzük őket piramis alakba:</p>
+<pre><code class="language-csharp">namespace Pascal
+{
+    public partial class Form1 : Form
+    { 
+        public Form1()
+        {
+            InitializeComponent();
+            for (int sor = 0; sor &lt; 10; sor++)
+            {
+                for (int oszlop = 0; oszlop &lt;= sor; oszlop++)
+                {
+                    Button b = new Button();
+                    b.Top = sor * 60;
+                    b.Left = oszlop * 60;
+                    b.Height = 60;
+                    b.Width = 60;
+                    this.Controls.Add(b);
+                    int p = Faktorialis(sor) / (Faktorialis(oszlop) * (Faktorialis(sor-oszlop)));
+                    b.Text = p.ToString();
+                }
+            }
+        }
+
+        int Faktorialis(int n)
+        {
+            int eredmény = 1;
+            for (int i = 1; i &lt;= n; i++) eredmény *=  i; 
+                       
+            return eredmény;
+        }
+
+        int Faktorialis2(int n)
+        { 
+            if (n == 0) return 1;
+            return n * Faktoriális2(n - 1);            
+        }
+    }
+} 
+</code></pre>
+<p><span class='tg_task'>▷</span> Oldjátok meg, hogy csak a főátló, és a főátló alatti “kockák” jelennenek meg.</p>
+<blockquote>
+<p>Tipp: főátló alatt azok az elemek vannak, amelyeknél az oszlop száma nagyobb, vagy egyenlő, mint a sor száma. A Pascal-háromszög háromszög, és nem négyzet  Egyenlőre most derékszögű háromszögünk lesz.</p>
+</blockquote>
+<p><span class='tg_task'>▷</span> Az elemek jelenjenek meg piramis-szerűen.</p>
+<blockquote>
+<p>Tipp: minden sorban egy kicsit jobban balra kell tolni az elemeket, mint az előző sorben. Egész pontosan minden sorban az elemeket egy fél elemnyivel balrább kell kell tolni, mint az előző sor elemeit.</p>
+</blockquote>
+<blockquote>
+<p>Tipp: a ClientRectangle.Width kifejezés értéke az ablak belső mérete – keretek nélkül – pixelekben. (Ablak esetén a Width és a Height a keretet is magában foglalja, ami függ Windows verziótól és a beállított témától is.) Az első sort az ablak szélességének felével érdemes jobbra tolni, amiből – ha nagyon szőrszálhasokgatunk – ki kell vonni egy fél elemszélességnyit.</p>
+</blockquote>
+<h2 id="extra-feladat-versenyen-kivul">Extra feladat “versenyen kívül”</h2>
+<p><span class='tg_task'>▷</span> Csináljatok sakktáblát. Azaz csak minden második négyzetet jelenítsétek meg.</p>
+<p>Tipp: a <code>%</code> (modulo) operátor az osztási maradékot képzi. Az alábbi kódrészlet eldönti egy számról, hogy páros-e:</p>
+<pre><code class="language-csharp">if (a % 2 == 0)
+{
+	//páros
+}
+else
+{
+	//páratlan
+}
+</code></pre>
+
+</article>
+
+<a class="github-fork-ribbon" href="https://github.com/sindresorhus/github-markdown-css" data-ribbon="Fork me on GitHub" title="Fork me on GitHub">Fork me on GitHub</a>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+<script src="../../assets/article.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/components/prism-core.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/autoloader/prism-autoloader.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/line-numbers/prism-line-numbers.js"></script>
+
+<!-- Video wrap -->
+<div id="inlineVideo_template" class="jump nodisplay">
+    <video id="centvideo" playsinline controls></video>
+    <div></div>
+</div>
+</body>
+</html>

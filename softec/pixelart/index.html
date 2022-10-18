@@ -1,0 +1,75 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+<title> PixelArt</title>
+<meta name="color-scheme" content="light dark">
+<link rel="stylesheet" href="../../assets/github-markdown.css">
+<link rel="stylesheet" href="../../assets/article.css">
+
+<link rel="stylesheet" href="xhttps://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/themes/prism-coy.min.css" integrity="sha512-LOT5F67SMZVdXMrvQe4S1ZHu5l6xk3CST2qqno9kY329OsJBBpybnq+fM9qG4ZSaNzPOjoGzHAeBamSSJyyuZg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/themes/prism-solarizedlight.min.css"  crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/line-numbers/prism-line-numbers.css"  crossorigin="anonymous" referrerpolicy="no-referrer" />
+<style>
+			body {
+				box-sizing: border-box;
+				min-width: 200px;
+				max-width: 980px;
+				margin: 0 auto;
+				padding: 45px;
+			}
+
+			@media (prefers-color-scheme: dark) {
+				body {
+					background-color: #0d1117;
+				}
+			}
+		</style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-fork-ribbon-css/0.2.3/gh-fork-ribbon.min.css">
+<style>
+			.github-fork-ribbon:before {
+				background-color: #121612;
+			}
+		</style>
+</head>
+<body>
+<article class="markdown-body line-numbers">
+
+
+<h1 id="pixelart">PixelArt</h1>
+<p>A feladat célja egy egyszerű rajzoló program elkészítése, mellyel 8x8 pixeles ábrákat lehet rajzolni Label-ből származtatott objektumok átszínezésével.</p>
+<h2 id="pixel-osztaly">1. Pixel osztály</h2>
+<p><span class='tg_task'>▷</span> a.	Származtass osztályt a Label osztályból Pixel néven!
+<span class='tg_task'>▷</span> Az osztály szintjén legyen egy Selected nevű bool típusú változó, mely alapértelmezetten false értéket kap.
+<span class='tg_task'>▷</span> Az osztályban szintjén ezen felül hozz létre egy DefaultColor nevű Color típusú objektumot is, amely a „sötét szürke” színt kapja alapértékként, valamint egy SelectedColor nevűt, ami a feketét. Utóbbi objektum publikus legyen!
+<span class='tg_task'>▷</span> A konstruktorban állítsd be a Pixel színét a DefaultColor-ra és rendelj eseménykezelőket kódból a Click, a MouseLeave, és a MouseEnter eseményekhez.
+<span class='tg_task'>▷</span> A MouseEnter eseménykezelőben állítsd be a Pixel hátterét a SelectedColor-ra, amennyiben a Selected változó értéke hamis.
+<span class='tg_task'>▷</span> A MouseLeave eseménykezelőben állítsd be a Pixel hátterét a DefaultColor-ra, amennyiben a Selected változó értéke hamis.
+<span class='tg_task'>▷</span> A Click eseménykezelőben váltsd át a Selected változó értékét (true -&gt; false, false -&gt;true), majd, ha a Selected igaz, akkor a Pixel háttere legyen a SelectedColor, egyébként pedig a DefaultColor.</p>
+<h2 id="form-osszeallitasa">2.	 Form összeállítása</h2>
+<p><span class='tg_task'>▷</span>Tegyél ki a Form1-re egy Panel-t és három TextBox-ot az ábrán látható módon. A TextBox-ok Text tulajdonságát tervezőből állítsd „0”-ra. A Panel mérete legyen 240x240.
+<span class='tg_task'>▷</span> A Form1 konstruktorában egymásba ágyazott for ciklusokkal helyezz ki 8x8 példányt a Pixel osztályból a Panel-re. (A panel1 vezérlőihez add az objektumokat és ne a Form1-hez.) A Pixel-ek értelem szerűen helyezkedjenek el hézagok nélkül és mindegyik legyen 30x30-as méretű.</p>
+<h2 id="szinezes">3. Színezés</h2>
+<p><span class='tg_task'>▷</span>Rendelj közös eseménykezelőt a három TextBox-hoz!
+<span class='tg_task'>▷</span>Az eseménykezelőn belül hozz létre három byte típusú változót r, g és b néven 0 kezdőértékkel.
+<span class='tg_task'>▷</span>Egy try-catch blokkon belül olvasd be a három változó értékét rendre a három TextBox-ból és a catch ágat hagyd üresen.
+<span class='tg_task'>▷</span>A beolvasás után egy foreach ciklussal menj végig a panel-ben található Pixel-eken és mindegyik SelectedColor tulajdonságát állítsd a megadott RGB értékeknek megfelelően. Segítség: Color.FromArgb(r,g,b)
+<img src="1602072975369.png" alt="1602072975369.png" /></p>
+
+</article>
+
+<a class="github-fork-ribbon" href="https://github.com/sindresorhus/github-markdown-css" data-ribbon="Fork me on GitHub" title="Fork me on GitHub">Fork me on GitHub</a>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+<script src="../../assets/article.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/components/prism-core.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/autoloader/prism-autoloader.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/line-numbers/prism-line-numbers.js"></script>
+
+<!-- Video wrap -->
+<div id="inlineVideo_template" class="jump nodisplay">
+    <video id="centvideo" playsinline controls></video>
+    <div></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,139 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+<title> Gyakorlat 02 – Egyszerű, kifejezések, függvények</title>
+<meta name="color-scheme" content="light dark">
+<link rel="stylesheet" href="../../assets/github-markdown.css">
+<link rel="stylesheet" href="../../assets/article.css">
+
+<link rel="stylesheet" href="xhttps://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/themes/prism-coy.min.css" integrity="sha512-LOT5F67SMZVdXMrvQe4S1ZHu5l6xk3CST2qqno9kY329OsJBBpybnq+fM9qG4ZSaNzPOjoGzHAeBamSSJyyuZg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/themes/prism-solarizedlight.min.css"  crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/line-numbers/prism-line-numbers.css"  crossorigin="anonymous" referrerpolicy="no-referrer" />
+<style>
+			body {
+				box-sizing: border-box;
+				min-width: 200px;
+				max-width: 980px;
+				margin: 0 auto;
+				padding: 45px;
+			}
+
+			@media (prefers-color-scheme: dark) {
+				body {
+					background-color: #0d1117;
+				}
+			}
+		</style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-fork-ribbon-css/0.2.3/gh-fork-ribbon.min.css">
+<style>
+			.github-fork-ribbon:before {
+				background-color: #121612;
+			}
+		</style>
+</head>
+<body>
+<article class="markdown-body line-numbers">
+
+
+<h1 id="gyakorlat-02-egyszeru-kifejezesek-fuggvenyek">Gyakorlat 02 – Egyszerű, kifejezések, függvények</h1>
+<h2 id="osszefoglalo-video">Összefoglaló videó</h2>
+<p><a href="gyak02_1_x264.mp4">gyak02_1_x264.mp4</a></p>
+<h2 id="elokeszuletek">Előkészületek</h2>
+<p>Diakmunka adatbázis telepítése a Moodle oldalon található diakmunka.sql script segítségével
+-- Vagy --
+Ha technikai okokból a saját adatbázis nem érhető el, csatlakozás a tanszéki kiszolgálóra
+|              | |
+|-             |-|
+|Szerver       |sql.2rpi.hu,7000
+|Felhasználónév|hallgato
+|Jelszó        |Password123
+|Adatbázis     |diakmunka</p>
+<p>Válasszuk ki a diakmunka adatbázist!</p>
+<h2 id="elmelet">Elmélet</h2>
+<p>•	Kifejezések
+•	Függvények</p>
+<h2 id="feladatok">FELADATOK</h2>
+<p><span class='tg_task'>▷</span> Listázzuk azon diákok nevét és születési idejét, akik 1984-ben vagy 1985-ben születtek!</p>
+<ol type="a">
+<li>A születési dátum csak az évet, hónapot és a napot tartalmazza!</li>
+<li>A születési dátum oszlopát nevezzük el 'Születési idő'-nek!
+<a href="Gy2_1.mp4">Megoldás</a>
+<span class='tg_task'>▷</span> Készítsünk lekérdezést, amely a tanulók nevét és az ebből képzett felhasználói nevét tartalmazza.</li>
+<li>A felhasználói név álljon a név első kettő, illetve utolsó kettő betűjének összefűzéséből!</li>
+<li>A listát szűrjük azon tanulókra, akik teljes neve - szóközzel együtt - legalább 10 betűs!
+<a href="Gy2_2.mp4">Megoldás</a>
+<span class='tg_task'>▷</span> Készítsünk listát a diákok adatairól, ahol a diákok neve úgy jelenik meg, hogy először a keresztnév, majd a vezetéknév, közöttük szóközzel!</li>
+<li>Ezen felül a születési idő három külön oszlopban jelenjen meg (év, hónap, nap).</li>
+<li>Az oszlopokat nevezzük el értelemszerűen!
+<a href="Gy2_3.mp4">Megoldás</a>
+<span class='tg_task'>▷</span> Készítsünk listát a munkaadókról, amely a munkahely azonosítója mellett egy másik oszlopban a település nevét jeleníti meg, majd kettősponttal és szóközzel elválasztva a munkaadó nevét, pl: Cseprűfalva: Bicaj Futárszolgálat.</li>
+<li>Az oszlop neve legyen 'Munkahely'.</li>
+<li>Ne jelenjenek meg azok a munkaadók, akiknek a nevében a 'Kávé' szó benne van!
+<a href="Gy2_4.mp4">Megoldás</a>
+<span class='tg_task'>▷</span> Készítsünk listát a munkák azonosítójáról és megnevezéséről! Egy új oszlopban azt is jelenítsük meg, hogy melyik munka hetente mennyit fizet!</li>
+<li>Az oszlop neve legyen Heti bér, az értéket kerekítsük 1000 forintra!</li>
+<li>A listát szűrjük azon rekordokra, ahol a kerekített heti bér 10000 Ft felett van!
+<a href="Gy2_5.mp4">Megoldás</a>
+<span class='tg_task'>▷</span> Készítsünk lekérdezést, amely listázza azon munkaadók nevét, akik Szombati településen vannak!</li>
+<li>A munkaadó neve csupa nagybetűvel jelenjen meg!</li>
+<li>Egy új oszlopban jelenítsük meg a munkaadó nevének második részét 'Cégforma' néven!
+<a href="Gy2_6.mp4">Megoldás</a>
+<span class='tg_task'>▷</span> A diákok számára differenciált béremelést terveznek: a középiskolások esetében 33%, egyéb esetben 17% mértékben. Készítsünk listát, amely tartalmazza a munkák azonosítóját, az állás nevét, az eredeti óradíjat és a tervezett emelt óradíjat.</li>
+<li>Az oszlopoknak adjuk nevet értelemszerűen!</li>
+<li>Az emelt óradíj összegét kerekítsük egészre! (Az esetlegesen megjelenő 0 tizedesjegyekkel ne foglalkozzunk)
+<a href="Gy2_7.mp4">Megoldás</a>
+<span class='tg_task'>▷</span> Egy másik terv szerint a 4 órában dolgozó diákok egységesen 100 Ft, az 5 órában dolgozók 150 Ft, a többiek 200 Ft emelést kapnak óránként.</li>
+<li>A listából maradjanak ki a takarítók! (ők már korábban kaptak emelést).</li>
+<li>Jelenítsük meg a munkák azonosítóját, az állás nevét, óraszámát, és az óradíj emelés előtti és utáni összegét!</li>
+<li>Az oszlopoknak adjunk nevet értelemszerűen!
+<a href="Gy2_8.mp4">Megoldás</a>
+<span class='tg_task'>▷</span> A diákok számára próbaidőt írnak elő, amely a munka kezdetétől számítva 3 hónapig tart.    Jelenítsük meg a munka tábla adatait egy új oszloppal kiegészítve, amelyik a próbaidő    végének dátumát mutatja!</li>
+<li>Az oszlop neve Próbaidő vége legyen!</li>
+<li>A lista ne tartalmazza azokat a munkákat, ahol a diákok azonosítója nincs megadva!
+<a href="Gy2_9.mp4">Megoldás</a>
+<span class='tg_task'>▷</span> Egy vezetői döntés szerint a munkák kezdetét mindig az adott hónap elsejétől kell számítani.Készítsünk lekérdezést, amely megjeleníti a munka tábla munkaId, allas és datum oszlopait, valamint egy új oszlopot 'Kezdő dátum' néven. Ez mindig azt a napot jelenítse meg, amikor a munka megkezdhető.</li>
+<li>A döntés nem vonatkozik azokra, akik napi keresete 1500 Ft alatt van, őket   hagyjuk ki a listából!</li>
+<li>ÖTLET: az időszámítás kezdő dátumához (aminek értéke 0) adjunk hozzá annyi hónapot, amely a datum oszlop értékéig eltelt</li>
+<li>ÖTLET2: vágjuk le a dátum végéről a napot, majd tegyük hozzá az elsejét, utána konvertáljuk át dátummá
+<a href="Gy2_10.mp4">Megoldás</a>
+<span class='tg_task'>▷</span> Készítsünk listát a diákok adatairól, amely egy új oszlopban azt is tartalmazza, hogy melyik diák
+jelenleg (a mai nap) hány éves! Egy másik új oszlop jelenítse meg, hogy a diák 35 év alatti-e (Igen vagy Nem).</li>
+<li>Az oszlopokat nevezzük el értelemszerűen!</li>
+<li>A diákok neve két külön oszlopban jelenjen meg: vezetéknév és keresztnév, a vezetéknév csupa nagybetűs, a keresztnév csupa kisbetűs legyen!</li>
+<li>A listából hagyjuk ki a Péter keresztnevű diákokat!
+<a href="Gy2_11.mp4">Megoldás</a>
+<span class='tg_task'>▷</span> Készítsünk listát a munkák azonosítójáról, megnevezéséről és az óraszámáról! Egy új oszlopban jelenítsük meg, hogy a munka kezdő dátuma tavaszra, nyárra, őszre, vagy télre esik-e!</li>
+<li>Az oszlop neve legyen 'Idény'.</li>
+<li>A listából hagyjuk ki azokat, ahol a munka azonosítója páratlan szám! (kettővel osztva 1 maradékot ad)
+<a href="Gy2_12.mp4">Megoldás</a>
+<span class='tg_task'>▷</span> Készítsünk listát a munkák azonosítóiról és a megnevezésükről! A megnevezés allas-óraszám formában jelenjen meg, pl: eladó-4.</li>
+<li>Jelenítsük meg a dátumot is, de csak a évet és a hónapot, pl: 2003-07!</li>
+<li>Ennek az oszlopnak 'Kezdés hónapja' legyen a neve! A listát szűrjük a nyári hónapokra!
+<a href="Gy2_13.mp4">Megoldás</a>
+<span class='tg_task'>▷</span> Készítsünk listát a diákok adatairól, amely a Nev oszlop helyén a diák monogramját jeleníti meg (keresztnév, illetve vezetéknév első betűje összefűzve).</li>
+<li>A listát szűrjük 1983.01.01 és 1987.06.01 között született diákokra!
+<a href="Gy2_14.mp4">Megoldás</a>
+<span class='tg_task'>▷</span> A diákok a munkakezdés évének utolsó napján bónuszt kapnak, amennyiben az adott évben legalább 6 hónapot dolgoznak.</li>
+<li>Jelenítsük meg, hogy az egyes munkák adatait, egy új oszlopban az éves bónusz napját is 'Bónusz dátum' néven!</li>
+<li>A lista csak a bónuszra jogosultak adatait tartalmazza!
+<a href="Gy2_15.mp4">Megoldás</a></li>
+</ol>
+
+</article>
+
+<a class="github-fork-ribbon" href="https://github.com/sindresorhus/github-markdown-css" data-ribbon="Fork me on GitHub" title="Fork me on GitHub">Fork me on GitHub</a>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+<script src="../../assets/article.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/components/prism-core.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/autoloader/prism-autoloader.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/line-numbers/prism-line-numbers.js"></script>
+
+<!-- Video wrap -->
+<div id="inlineVideo_template" class="jump nodisplay">
+    <video id="centvideo" playsinline controls></video>
+    <div></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,272 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+<title> A csoportosítás speciális lehetőségei</title>
+<meta name="color-scheme" content="light dark">
+<link rel="stylesheet" href="../../assets/github-markdown.css">
+<link rel="stylesheet" href="../../assets/article.css">
+
+<link rel="stylesheet" href="xhttps://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/themes/prism-coy.min.css" integrity="sha512-LOT5F67SMZVdXMrvQe4S1ZHu5l6xk3CST2qqno9kY329OsJBBpybnq+fM9qG4ZSaNzPOjoGzHAeBamSSJyyuZg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/themes/prism-solarizedlight.min.css"  crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/line-numbers/prism-line-numbers.css"  crossorigin="anonymous" referrerpolicy="no-referrer" />
+<style>
+			body {
+				box-sizing: border-box;
+				min-width: 200px;
+				max-width: 980px;
+				margin: 0 auto;
+				padding: 45px;
+			}
+
+			@media (prefers-color-scheme: dark) {
+				body {
+					background-color: #0d1117;
+				}
+			}
+		</style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-fork-ribbon-css/0.2.3/gh-fork-ribbon.min.css">
+<style>
+			.github-fork-ribbon:before {
+				background-color: #121612;
+			}
+		</style>
+</head>
+<body>
+<article class="markdown-body line-numbers">
+
+
+<h1 id="a-csoportositas-specialis-lehetosegei">A csoportosítás speciális lehetőségei</h1>
+<p><a href="gyak08_x264.mp4">Összefoglaló videó</a></p>
+<h2 id="rollup">ROLLUP</h2>
+<p>Az oszlopneveket és a NULL értéket kombinálva csoportosít, és  megjeleníti a  részösszegeket valamint végösszeget. Csoportosításkor a nem NULL oszlopok száma jobbról balra csökken</p>
+<pre><code class="language-sql">SELECT oszlopkifejezések, 
+             aggregálás
+FROM …
+GROUP BY ROLLUP(oszlopkifejezések)
+--Az oszlopkifejezések többnyire oszlopnevek listáját jelenti
+</code></pre>
+<p>Például:</p>
+<pre><code class="language-sql">SELECT oszlop1, oszlop2, oszlop3, SUM(oszlop4)
+FROM …GROUP BY ROLLUP (oszlop1, oszlop2, oszlop3)
+</code></pre>
+<p>esetén a következő csoportok jönnek létre:
+|  |  ||
+|--|--|--|
+| oszlop1 | oszlop2 | oszlop3 |
+| oszlop1 | oszlop2 | NULL |
+| oszlop1 | NULL | NULL |
+| NULL | NULL | NULL |</p>
+<h2 id="cube">CUBE</h2>
+<p>Az oszlopneveket és a NULL értéket kombinálva csoportosít, és  megjeleníti a  részösszegeket valamint végösszeget. A csoportosításhoz minden lehetséges kombinációt felhasznál.</p>
+<pre><code class="language-sql">SELECT oszlopkifejezések, 
+             aggregálás
+FROM …
+GROUP BY CUBE(oszlopkifejezések)
+</code></pre>
+<p>Például:</p>
+<pre><code class="language-sql">SELECT oszlop1, oszlop2, oszlop3, SUM(oszlop4)
+FROM …GROUP BY CUBE (oszlop1, oszlop2, oszlop3)
+</code></pre>
+<p>esetén a következő csoportok jönnek létre:
+|  |  ||
+|--|--|--|
+| oszlop1 | oszlop2 | oszlop3 |
+| oszlop1 | oszlop2 | NULL |
+| oszlop1 | NULL | osszlop3 |
+| oszlop1 | NULL | NULL |
+| NULL | oszlop2 | oszlop3 |
+| NULL | oszlop2 | NULL |
+| NULL | NULL | oszlop3 |
+| NULL | NULL | NULL |</p>
+<h2 id="grouping-sets">GROUPING SETS</h2>
+<p>A GROUP BY parancs kiegészítve a GROUPING SETS taggal lehetővé teszi, hogy többféle csoportosítást is megadjunk.
+A csoportosításokat leíró oszlopkifejezéseket egymás után, zárójelek között , vesszővel elválasztva kell megadni. A GROUPING SETS-ek az egyes csoportokra kiadott SELECT-ek UNION ALL-jainak alternatívái</p>
+<pre><code class="language-sql">SELECT oszlop1, oszlop2, SUM(oszlop3)
+FROM table
+GROUP BY GROUPING SETS(( oszlop1, oszlop2), (oszlop1)
+)
+</code></pre>
+<h2 id="a-grouping-es-grouping_id-fuggvenyek">A GROUPING és GROUPING _ID  függvények</h2>
+<ul>
+<li>A GROUPING fv. értéke 1, ha az adott oszlopkifejezés szerint aggregálás (sum, min, max stb.) van, különben 0</li>
+<li>A GROUPING_ID fv. értéke a paraméterként megkapott oszlopkifejezések aggregációs szintjének száma.</li>
+</ul>
+<blockquote>
+<p>A szintszám számítása úgy történik, hogy az oszloplistához egy bináris kódot rendelünk. Ennek i-ik eleme 1, ha az i-ik oszlop szerint van aggregálás, különben 0. A szintszám a bináris szám értéke lesz tízes számrendszerben.  Pl: ha a csoport (oszlop1, oszlop2), és mindkettő szerint van aggregálás, akkor a szintszám binárisan 11, decimálisan 3.</p>
+</blockquote>
+<ul>
+<li>Használhatók a SELECT, a HAVING és az ORDER BY részekben, amennyiben a GROUP BY is specifikálva van</li>
+<li>Mindkét fv. legfontosabb alkalmazása, hogy megkülönböztessük a ROLLUP, CUBE és GROUPING SETS-ek által visszaadott NULL értékeket (részösszegek, végösszegek) a normál NULL értékektől</li>
+<li>Ha egy oszlop(kifejezés) szerint csoportosítunk, akkor a két fv. ugyanazt az értéket adja vissza</li>
+</ul>
+<h1 id="peldak">Példák</h1>
+<h2 id="rollup-1">ROLLUP</h2>
+<p>Készítsünk listát a raktáron lévő termékek összértékéről raktárkód, azon belül kategóriakód, majd mennyiségi egység szerinti bontásban! A lista jelenítse meg a részösszegeket és a végösszeget is! A listát szűrjük az 5-ös és 9-es azonosítójú kategóriára! A csoportosításnál a ROLLUP záradékot használjuk!</p>
+<pre><code class="language-sql">SELECT RAKTAR_KOD, KAT_ID, MEGYS, 
+       SUM(LISTAAR*KESZLET) AS 'Készlet értéke'
+FROM Termek
+WHERE kat_ID IN (5,9)
+GROUP BY ROLLUP (RAKTAR_KOD, KAT_ID, MEGYS)
+</code></pre>
+<h2 id="cube-1">CUBE</h2>
+<p>Készítsünk listát a raktáron lévő termékek összértékéről raktárkód, azon belül kategóriakód, majd mennyiségi egység szerinti bontásban! A lista jelenítse meg a részösszegeket és a végösszeget is! A listát szűrjük az 5-ös és 9-es azonosítójú kategóriára! A csoportosításnál a CUBE záradékot használjuk!</p>
+<pre><code class="language-sql">SELECT RAKTAR_KOD, KAT_ID, MEGYS, 
+       SUM(LISTAAR*KESZLET) AS 'Készlet értéke'
+FROM Termek
+WHERE kat_ID IN (5,9)
+GROUP BY CUBE (RAKTAR_KOD, KAT_ID, MEGYS)
+</code></pre>
+<h2 id="grouping-sets-1">GROUPING SETS</h2>
+<p>Készítsünk listát az egyes ügyfelek átlagos életkoráról az ügyfél neme, illetve az ügyfél születési éve szerint csoportosítva! A listát szűrjük azon ügyfelekre, akik neve D-vel vagy E-vel kezdődik!(Az életkor legyen a születési évtől a jelenlegi évig eltelt évek száma)</p>
+<pre><code class="language-sql">SELECT szulev, nem, 
+       AVG(YEAR(GETDATE())-SZULEV) AS 'Átlagos életkor'
+FROM Ugyfel
+WHERE NEV LIKE 'E%' OR NEV LIKE 'D%'
+GROUP BY GROUPING SETS((SZULEV),(NEM))
+</code></pre>
+<h2 id="grouping-grouping_id">GROUPING(),  GROUPING_ID()</h2>
+<p>Listázzuk, hogy melyik évben hány db terméket rendeltek meg! A lista megfelelően jelölve jelenítse meg a rendelések teljes összegét is!</p>
+<pre><code class="language-sql">SELECT  
+ (
+  CASE GROUPING(YEAR(REND_DATUM))   
+  WHEN 0 THEN CAST(YEAR(REND_DATUM) AS nvarchar(4))
+  WHEN 1 THEN 'Összesen' END
+  ) 
+  AS ÉV,  
+  COUNT(*) AS 'DB'
+FROM Rendeles
+GROUP BY ROLLUP(YEAR(REND_DATUM))
+</code></pre>
+<p>Listázzuk, hogy naponta, azon belül fizetési mód szerint hány rendelés történt! A lista megfelelően jelölve jelenítse meg a részösszegeket és a végösszeget is!</p>
+<pre><code class="language-sql">SELECT  IIF(GROUPING(REND_DATUM)=1,'Összesen',
+        CAST(REND_DATUM AS nvarchar(10))) AS 'Rendelés dátuma',
+ (  
+  CASE GROUPING_ID(REND_DATUM, FIZ_MOD)   
+   WHEN 0 THEN FIZ_MOD
+   WHEN 1 THEN '**Fizetési módok összesen**'   
+   WHEN 3 THEN 'Összesen'
+  END)   as 'FIZ_MOD',    
+   COUNT(*) as 'DB'
+FROM Rendeles
+GROUP BY ROLLUP(REND_DATUM, FIZ_MOD)
+</code></pre>
+<blockquote>
+<p>A GROUPING SETS, GROUPING / GROUPING_ID fv. és a ROLLUP / CUBE együtt is használhatók</p>
+<pre><code class="language-sql">SELECT CASE WHEN GROUPING(szulev)=0 
+     THEN CAST(SZULEV AS nvarchar(4))
+     ELSE 'Minden év'
+    END AS 'Születési év',
+ CASE 
+      WHEN GROUPING(nem)=1 THEN 'Minden nem'
+      ELSE NEM
+    END AS 'Nem', 
+    AVG(YEAR(GETDATE())-SZULEV) 
+AS 'Átlagos életkor'
+FROM Ugyfel
+WHERE NEV LIKE 'E%' OR NEV LIKE 'D%'
+GROUP BY GROUPING SETS(ROLLUP(SZULEV), CUBE(nem))
+</code></pre>
+</blockquote>
+<h1 id="feladatok">Feladatok</h1>
+<p><span class='tg_task'>▷</span>Melyek azok a termékek, amelyek neve az átlagosnál hosszabb?</p>
+<ol type="a">
+<li>Csak a termékek kódja és megnevezése jelenjen meg!
+<a href="Gy08_01.mp4">Megoldás</a></li>
+</ol>
+<p><span class='tg_task'>▷</span>Melyek azok a termékek, amelyekből ugyanannyi van készleten, mint dvd-ből?</p>
+<ol type="a">
+<li>Csak a termékek kódja és megnevezése jelenjen meg!</li>
+<li>A Dvd ne szerepeljen a listában!
+<a href="Gy08_02.mp4">Megoldás</a></li>
+</ol>
+<p><span class='tg_task'>▷</span>Melyek azok a raktárak, amelyekben nincs olyan termék, amelynek nevében a matrica szó benne van?</p>
+<ol type="a">
+<li>A listában a raktárak minden adata jelenjen meg!
+<a href="Gy08_03.mp4">Megoldás</a></li>
+</ol>
+<p><span class='tg_task'>▷</span>Mely nap(ok)on történt a legkevesebb megrendelés?
+<a href="Gy08_04.mp4">Megoldás</a></p>
+<p><span class='tg_task'>▷</span>Listázzuk azon termékek adatait, amelyek listaára saját raktárukban a legkisebb!
+<a href="Gy08_05.mp4">Megoldás</a></p>
+<p><span class='tg_task'>▷</span>Készítsünk listát arról, hogy ügyfelenként (LOGIN), azon belül szállítási módonként hány megrendelés történt!</p>
+<ol type="a">
+<li>A lista tartalmazza a részösszegeket és a végösszeget is!</li>
+<li>Használjuk a ROLLUP záradékot!
+<a href="Gy08_06.mp4">Megoldás</a></li>
+</ol>
+<p><span class='tg_task'>▷</span>Készítsünk listát a termékek számáról a következő csoportosítási szempontok szerint: kategória azonosító, raktárkód, raktárkód+mennyiségi egység!</p>
+<ol type="a">
+<li>A listát szűrjük azokra a csoportokra, ahol a termékek száma legalább 6!
+<a href="Gy08_07.mp4">Megoldás</a></li>
+</ol>
+<p><span class='tg_task'>▷</span>Készítsünk listát az egyes termékkategóriákban lévő termékek számáról!</p>
+<ol type="a">
+<li>Elég megjeleníteni a kategóriák azonosítóit és a darabszámokat!</li>
+<li>A lista megfelelően jelölve tartalmazza a végösszeget is!</li>
+<li>Az oszlopokat nevezzük el értelemszerűen!</li>
+<li>A listát rendezzük a darabszám szerint növekvő sorrendbe!
+<a href="Gy08_08.mp4">Megoldás</a></li>
+</ol>
+<p><span class='tg_task'>▷</span>Készítsünk listát az ügyfelek számáról születési év szerint, azon belül nem szerinti bontásban!</p>
+<ol type="a">
+<li>A lista megfelelően jelölve tartalmazza a részösszegeket és a végösszeget is!</li>
+<li>Az oszlopoknak adjunk nevet értelemszerűen!
+<a href="Gy08_09.mp4">Megoldás</a></li>
+</ol>
+<p><span class='tg_task'>▷</span>Készítsünk listát a termékek számáról a felvitel hónapja, azon belül napja szerint csoportosítva.</p>
+<ol type="a">
+<li>A lista csak a részösszegeket és a végösszeget tartalmazza!</li>
+<li>Az oszlopoknak adjunk megfelelő nevet!</li>
+<li>Ötlet: HAVING + GROUPING_ID fv együttes használata
+<a href="Gy08_10.mp4">Megoldás</a></li>
+</ol>
+<p><span class='tg_task'>▷</span>Készítsünk listát éves bontásban norbert2 azonosítójú ügyfél rendeléseinek értékéről!</p>
+<ol type="a">
+<li>A lista megfelelően jelölve tartalmazza a végösszeget is!</li>
+<li>Az oszlopokat nevezzük el értelemszerűen!
+<a href="Gy08_11.mp4">Megoldás</a></li>
+</ol>
+<p><span class='tg_task'>▷</span>Készítsünk listát szállítási dátumonként, azon belül szállítási módonként az egyes rendelések összmennyiségéről!</p>
+<ol type="a">
+<li>Csak azokat a termékeket vegyük figyelembe, amelyek mennyiségi egysége db!</li>
+<li>A listát szűrjük úgy, hogy az csak a részösszeg sorokat és a végösszeget tartalmazza!
+<a href="Gy08_12.mp4">Megoldás</a></li>
+</ol>
+<p><span class='tg_task'>▷</span>Készítsünk listát a termékek átlagos listaárairól!</p>
+<ol type="a">
+<li>A lista legyen csoportosítva a következő szempontok alapján: kategórianév, kategórianév + raktárnév</li>
+<li>A lista tartalmazzon végösszeget (az átlagos árat minden termékre) is!</li>
+<li>Az átlagos értéke max. két tizedesjeggyel legyen megjelenítve!
+<a href="Gy08_13.mp4">Megoldás</a></li>
+</ol>
+<p><span class='tg_task'>▷</span>Hány olyan ügyfél van, aki még nem rendelt semmit?</p>
+<ol type="a">
+<li>Csoportosítsuk őket nem szerint, azon belül életkor szerint!</li>
+<li>A lista tartalmazza a részösszegeket és a végösszeget is!
+<a href="Gy08_14.mp4">Megoldás</a></li>
+</ol>
+<p><span class='tg_task'>▷</span>Készítsünk listát arról, hogy évente hányszor rendelték meg azokat a termékeket, amelyek kategóriájukban a legdrágábbak!</p>
+<ol type="a">
+<li>A lista jelenítse meg az évet, a termék nevét és a rendelés számát!</li>
+<li>Jelenjenek meg a részösszegek és a végösszeg is!
+<a href="Gy08_15.mp4">Megoldás</a></li>
+</ol>
+
+</article>
+
+<a class="github-fork-ribbon" href="https://github.com/sindresorhus/github-markdown-css" data-ribbon="Fork me on GitHub" title="Fork me on GitHub">Fork me on GitHub</a>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+<script src="../../assets/article.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/components/prism-core.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/autoloader/prism-autoloader.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/line-numbers/prism-line-numbers.js"></script>
+
+<!-- Video wrap -->
+<div id="inlineVideo_template" class="jump nodisplay">
+    <video id="centvideo" playsinline controls></video>
+    <div></div>
+</div>
+</body>
+</html>

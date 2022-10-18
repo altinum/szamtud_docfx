@@ -1,0 +1,380 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+<title> Partíciók, ablakok, analitikus függvények</title>
+<meta name="color-scheme" content="light dark">
+<link rel="stylesheet" href="../../assets/github-markdown.css">
+<link rel="stylesheet" href="../../assets/article.css">
+
+<link rel="stylesheet" href="xhttps://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/themes/prism-coy.min.css" integrity="sha512-LOT5F67SMZVdXMrvQe4S1ZHu5l6xk3CST2qqno9kY329OsJBBpybnq+fM9qG4ZSaNzPOjoGzHAeBamSSJyyuZg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/themes/prism-solarizedlight.min.css"  crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/line-numbers/prism-line-numbers.css"  crossorigin="anonymous" referrerpolicy="no-referrer" />
+<style>
+			body {
+				box-sizing: border-box;
+				min-width: 200px;
+				max-width: 980px;
+				margin: 0 auto;
+				padding: 45px;
+			}
+
+			@media (prefers-color-scheme: dark) {
+				body {
+					background-color: #0d1117;
+				}
+			}
+		</style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-fork-ribbon-css/0.2.3/gh-fork-ribbon.min.css">
+<style>
+			.github-fork-ribbon:before {
+				background-color: #121612;
+			}
+		</style>
+</head>
+<body>
+<article class="markdown-body line-numbers">
+
+
+<h1 id="particiok-ablakok-analitikus-fuggvenyek">Partíciók, ablakok, analitikus függvények</h1>
+<p><a href="gyak09_x264.mp4">Összefoglaló videó (18 perc)</a></p>
+<h2 id="particiok">Partíciók</h2>
+<p>Azon rekordok csoportja, amelyeken az aggregálást el kell végezni. A GROUP BY egyfajta alternatíváinak is tekinthetjük őket.
+Forma:</p>
+<pre><code class="language-sql">OVER(PARTITION BY kifejezés) 
+--kiegészíthető rendezéssel:
+OVER (PARTITION BY kifejezés  ORDER BY kifejezés)
+</code></pre>
+<blockquote>
+<p>Példa: Jelenítsük meg a termékek kódja és listaára mellett a termékkategória átlagárát is!</p>
+</blockquote>
+<pre><code class="language-sql">SELECT TERMEKKOD, LISTAAR,
+       AVG(LISTAAR) OVER (PARTITION BY KAT_ID) AS 'Kategória átlagár'
+FROM Termek
+</code></pre>
+<h2 id="ablakok">Ablakok</h2>
+<p>Ablakokat a ROWS és a RANGE segítségével hozhatunk létre. Ezek az ablakot határozzák meg, használatukhoz az ORDER BY rész kötelező.
+Forma:</p>
+<pre><code class="language-sql">OVER(PARTITION BY kifejezés ORDER BY kifejezés
+ROWS | RANGE 
+BETWEEN kezdőpont AND végpont)
+/*A kifejezés - itt és az összes többi utasítás/függvény leírásban - 
+a gyakorlatban többnyire oszlopnevet vagy oszlopnevek listáját jelenti*/
+</code></pre>
+<h3 id="rows">ROWS</h3>
+<p>A ROWS az ablak méretét <strong>fizikailag</strong> adja meg  (legtöbbször az aktuális sort megelőző és/vagy követő sorok számát konkrétan megadja)
+Kezdőpont, végpont lehet:</p>
+<ul>
+<li>CURRENT ROW,</li>
+<li>n PRECEDING,</li>
+<li>n FOLLOWING.</li>
+</ul>
+<p>Speciálisan:</p>
+<ul>
+<li>UNBOUNDED PRECEDING (kezdőpont),</li>
+<li>UNBOUNDED FOLLOWING (végpont)
+(A partíció legelső, illetve legutolsó sorát jelenítik meg)</li>
+</ul>
+<p>Formája:</p>
+<pre><code class="language-sql">OVER(
+PARTITION BY kifejezés 
+ORDER BY kifejezés
+ROWS BETWEEN kezdőpont AND végpont)
+</code></pre>
+<blockquote>
+<p>Példa: Listázzuk az egyes megrendelések dátumát, a termék kódját és mennyiségét, valamint a sorszám szerinti előző 5 megrendelés átlagos mennyiségét is!</p>
+</blockquote>
+<pre><code class="language-sql">SELECT rt.TERMEKKOD, r.REND_DATUM,
+ 	   rt.MENNYISEG, AVG(rt.MENNYISEG) 
+       OVER(PARTITION BY rt.TERMEKKOD 
+       ORDER BY r.SORSZAM
+       ROWS BETWEEN 5 PRECEDING AND 1 PRECEDING) 
+       AS 'ELőző 5 rendelés mennyiség átlaga'
+FROM Rendeles_tetel rt
+     JOIN Rendeles r ON r.SORSZAM = rt.SORSZAM
+</code></pre>
+<h3 id="range">RANGE</h3>
+<p>A RANGE az ablak méretét <strong>logikailag</strong> adja meg: nem a sorok számát, hanem a legelső, legutolsó vagy az aktuális sort, mint az intervallum kezdő- vagy végpontját).
+Kezdőpont, végpont lehet:</p>
+<ul>
+<li>CURRENT ROW,</li>
+<li>UNBOUNDED PRECEEDING (kezdőpont)</li>
+<li>UNBOUNDED FOLLOWING (végpont)</li>
+</ul>
+<p>Formája:</p>
+<pre><code class="language-sql">Formája: 
+OVER(
+PARTITION BY kifejezés 
+ORDER BY kifejezés
+RANGE BETWEEN kezdőpont AND végpont)
+</code></pre>
+<blockquote>
+<p>Példa: Jelenítsük meg, hogy az egyes ügyfelek az adott rendelési dátumig bezárólag összesen hányszor rendeltek! Megjelenítendő a rendelés dátuma, az ügyfél login-ja és a rendelés darabszáma</p>
+</blockquote>
+<pre><code class="language-sql">SELECT DISTINCT REND_DATUM,[LOGIN],
+       COUNT(*) OVER(PARTITION BY [LOGIN] ORDER BY REND_DATUM
+       RANGE BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW) 
+       AS 'Eddigi rendeléseinek száma'
+FROM Rendeles ORDER BY REND_DATUM, [LOGIN] 
+</code></pre>
+<h2 id="analitikus-fuggvenyek">Analitikus függvények</h2>
+<h3 id="row_number">ROW_NUMBER()</h3>
+<p>A lekérdezés eredménysoraihoz sorszámokat rendel. Mindig <strong>szigorúan monoton</strong> növekvő számokat ad vissza! Több partíció esetén a sorszámozás minden partíciónál újra kezdődik.</p>
+<p>Formája:</p>
+<pre><code class="language-sql">ROW_NUMBER()
+OVER (
+PARTITION BY kifejezés
+ORDER BY kifejezés)
+</code></pre>
+<blockquote>
+<p>Példa: Készítsünk sorszámozott listát nemenként az ügyfelekről! A sorszámozás szempontja az ügyfél email-címe legyen!</p>
+</blockquote>
+<pre><code class="language-sql">SELECT ROW_NUMBER() OVER(PARTITION BY nem ORDER BY email) AS 'Nemenkénti sorszám', *
+FROM Ugyfel
+</code></pre>
+<h3 id="rank">RANK()</h3>
+<p>Megadja, hogy az adott rekord hányadik a partícióban az adott rendezettség szerint. Mindig  <strong>monoton</strong> növekvő számokat ad vissza!</p>
+<ul>
+<li>Az azonos értékű sorok ugyanazt a sorszámot kapják.</li>
+<li>A következő sorszám az aktuálisnál annyival lesz nagyobb, ahány azonos értékű sor van.</li>
+</ul>
+<p>Formája:</p>
+<pre><code class="language-sql">RANK()
+OVER (
+PARTITION BY kifejezés
+ORDER BY kifejezés)
+</code></pre>
+<blockquote>
+<p>Példa:Listázzuk a termékek kódját, megnevezését, kategória kódját, készlet mennyiségét és azt, hogy a termék a készlet alapján hányadik a kategóriájában</p>
+</blockquote>
+<pre><code class="language-sql">SELECT TERMEKKOD, MEGNEVEZES, KAT_ID, KESZLET,
+       RANK() OVER (PARTITION BY KAT_ID 
+	    ORDER BY KESZLET DESC)
+   AS 'Készlet szerinti helyezés kategóriájában'
+FROM Termek
+</code></pre>
+<h3 id="dense_rank">DENSE_RANK()</h3>
+<p>Megadja, hogy az adott rekord hányadik a partícióban az adott rendezettség szerint.  A DENSE_RANK() mindig <strong>monoton növekvő</strong> számokat ad vissza.</p>
+<ul>
+<li>Az azonos értékű sorok ugyanazt a sorszámot kapják</li>
+<li>A következő sorszám az aktuálisnál eggyel nagyobb lesz</li>
+</ul>
+<p>Formája:</p>
+<pre><code class="language-sql">ROW_NUMBER()
+OVER (PARTITION BY kifejezés
+ORDER BY kifejezés)
+</code></pre>
+<blockquote>
+<p>Példa: Az előző példa DENSE_RANK() függvénnyel</p>
+</blockquote>
+<pre><code class="language-sql">SELECT TERMEKKOD, MEGNEVEZES, KAT_ID, KESZLET,
+       DENSE_RANK() OVER (PARTITION BY KAT_ID 
+	    ORDER BY KESZLET DESC)
+    AS 'Készlet szerinti helyezés kategóriájában'
+FROM Termek
+</code></pre>
+<h3 id="lag">LAG()</h3>
+<p>Megadja egy adott sorhoz képest x-sorral korábbi oszlop értékét partíciónként egy adott rendezési szempont  szerint.</p>
+<ul>
+<li>A default érték akkor jelenik meg, ha nincs x sorral korábbi elem</li>
+<li>Ha x és default érték elmarad, akkor 1 sorral ugrik vissza</li>
+</ul>
+<p>Formája:</p>
+<pre><code class="language-sql">LAG(kifejezés, x, default érték) 
+OVER (PARTITION BY kifejezés ORDER BY kifejezés)
+</code></pre>
+<blockquote>
+<p>Példa: Listázzuk minden rendelési tétel sorszámát, a termék kódját és mennyiségét, valamint az adott termék előző rendelésének mennyiségét!</p>
+</blockquote>
+<pre><code class="language-sql">SELECT SORSZAM, TERMEKKOD, MENNYISEG,
+       LAG(MENNYISEG,1,0) OVER(PARTITION BY TERMEKKOD ORDER BY SORSZAM)
+       AS 'Előző rendelési mennyiség'
+FROM Rendeles_tetel
+</code></pre>
+<h3 id="lead">LEAD()</h3>
+<p>Megadja egy adott sorhoz képest x-sorral későbbi oszlop értékét partíciónként egy adott rendezési szempont  szerint. Ha x és default érték elmarad, akkor 1 sort lép előre.
+Formája:</p>
+<pre><code class="language-sql">LEAD(kifejezés, x, default) 
+OVER (PARTITION BY kifejezés ORDER BY kifejezés)
+</code></pre>
+<blockquote>
+<p>Példa: Listázzuk minden rendelési tétel sorszámát, a termék kódját és mennyiségét, valamint az adott termék kettővel későbbi rendelésének mennyiségét!</p>
+</blockquote>
+<pre><code class="language-sql">SELECT SORSZAM, TERMEKKOD, MENNYISEG,
+       LEAD(MENNYISEG,2,0) OVER(PARTITION BY TERMEKKOD ORDER BY SORSZAM)
+   AS 'Két rendeléssel későbbi rendelési mennyiség'
+FROM Rendeles_tetel
+</code></pre>
+<h3 id="first_value">FIRST_VALUE()</h3>
+<p>Megadja egy adott sorrendben lévő csoport(partíció) legelső elemét.
+Formája:</p>
+<pre><code class="language-sql">FIRST_VALUE(kifejezés) 
+OVER (ORDER BY kifejezés
+PARTITION BY kifejezés)
+</code></pre>
+<blockquote>
+<p>Példa: Listázzuk az egyes ügyfelek adatait és első rendelésük dátumát! A lista ne tartalmazzon duplikált sorokat!</p>
+</blockquote>
+<pre><code class="language-sql">SELECT DISTINCT u.*, 
+ 	   FIRST_VALUE(r.REND_DATUM) 
+       OVER (Partition BY u.LOGIN ORDER BY r.REND_DATUM) 
+   		AS 'Első rendelés'
+FROM Ugyfel u JOIN Rendeles r 
+	 ON u.LOGIN = r.LOGIN
+</code></pre>
+<h3 id="last_value">LAST_VALUE()</h3>
+<p>Megadja egy adott sorrendben lévő csoport(partíció) legutolsó elemét.</p>
+<blockquote>
+<p>A LAST_VALUE esetén vigyázni kell, mivel futtatáskor a partíció legutolsó eleme alapértelmezés szerint az aktuális sor! Megoldás lehet a RANGE vagy helyette fordított sorrend és FIRST_VALUE()</p>
+</blockquote>
+<p>Formája:</p>
+<pre><code class="language-sql">LAST_VALUE(kifejezés) 
+OVER (ORDER BY kifejezés
+PARTITION BY kifejezés)
+</code></pre>
+<blockquote>
+<p>Példa: Listázzuk az ügyfelek adatai és azt, hogy melyik ügyfél utoljára milyen módon legelőször, illetve legutoljára! A lista ne tartalmazzon duplikált sorokat!</p>
+</blockquote>
+<pre><code class="language-sql"> SELECT DISTINCT u.*, FIRST_VALUE(r.FIZ_MOD) 
+       OVER (Partition BY u.LOGIN ORDER BY r.SORSZAM) 
+   		AS 'Fizetési mód legelső rendeléskor',
+   		LAST_VALUE(r.FIZ_MOD) 
+       OVER (Partition BY u.LOGIN ORDER BY r.SORSZAM 
+       RANGE BETWEEN UNBOUNDED PRECEDING AND UNBOUNDED FOLLOWING) 
+       AS 'Fizetési mód legutolsó rendeléskor'
+FROM Ugyfel u
+JOIN Rendeles r ON u.LOGIN = r.LOGIN
+</code></pre>
+<h3 id="ntile">NTILE()</h3>
+<p>A partíció elemeit adott számú osztályba sorolja a megadott sorrend alapján.
+Formája:</p>
+<pre><code class="language-sql">NTILE(osztályok száma) 
+OVER (ORDER BY kifejezés
+PARTITION BY kifejezés)
+</code></pre>
+<p>Példa: Soroljuk be a termékeket kategóriájukban a listaáruk alapján 5 osztályba!</p>
+<pre><code class="language-sql">SELECT *, 
+      NTILE(5) OVER(PARTITION BY KAT_ID 
+      ORDER BY LISTAAR) 
+      AS 'Osztály'
+FROM Termek
+</code></pre>
+<h3 id="megjegyzesek">Megjegyzések</h3>
+<ul>
+<li>Az analitikus függvények segítségével sok feladat egyszerűbben megoldható, mint „hagyományos” módon, viszont ilyenkor a lekérdezés többnyire lassúbb lesz</li>
+<li>Bizonyos feladatok a RANGE és a ROWS segítségével is megoldhatók, viszont duplikált sorok esetén a RANGE és a ROWS különböző eredményt adhat</li>
+<li>Egy lekérdezésben több ablak-függvény is szerepelhet</li>
+<li>Ha ROWS/RANGE esetén a végpont elhagyható, ez esetben alapértelmezés szerint a CURRENT ROW lesz</li>
+<li>Ha a PARTITION BY kimarad, akkor csak egy csoport lesz, amely minden rekordot tartalmaz</li>
+</ul>
+<h1 id="feladatok">Feladatok</h1>
+<p><span class='tg_task'>▷</span> Készítsünk listát arról, hogy melyik ügyfél (LOGIN) hányszor rendelt összesen.</p>
+<ol type="a">
+<li>A lista tartalmazza a végösszeget is.</li>
+<li>A listát rendezzük a rendelések száma szerint növekvő sorrendbe!
+<a href="Gy09_01.mp4">Megoldás</a></li>
+</ol>
+<p><span class='tg_task'>▷</span> Átlagosan hány termék van készleten kategóriánként (KAT_ID), raktáranként (RAKTAR_KOD), illetve mennyiségi egységenként? (szempontonként külön-külön)</p>
+<ol type="a">
+<li>Az átlagot kerekítsük egészre!
+<a href="Gy09_02.mp4">Megoldás</a></li>
+</ol>
+<p><span class='tg_task'>▷</span> Készítsünk listát a megrendelt termékek legkisebb és legnagyobb egységáráról szállítási dátum, azon belül szállítási mód szerinti bontásban!</p>
+<ol type="a">
+<li>A lista csak a 2015 májusi szállításokat tartalmazza!</li>
+<li>Jelenítsük meg a részösszegeket és a végösszeget is!
+<a href="Gy09_03.mp4">Megoldás</a></li>
+</ol>
+<p><span class='tg_task'>▷</span> Készítsünk csoportot a termékek listaára alapján a következők szerint: Az &quot;olcsó&quot; termékek legyenek azok, amelyek listaára 3000 alatt van. A &quot;drága&quot; termékek legyenek az 5000 felettiek, a többi legyen &quot;közepes&quot;.</p>
+<ol type="a">
+<li>Listázzuk az egyes csoportokat, és a csoportokba tartozó termékek darabszámát!</li>
+<li>A lista jelenítse meg a végösszeget is!
+<a href="Gy09_04.mp4">Megoldás</a></li>
+</ol>
+<p><span class='tg_task'>▷</span> Listázzuk a rendelési tételek számát raktáranként éves bontásban!</p>
+<ol type="a">
+<li>A listában a raktár neve, az év és a darabszám jelenjen meg!</li>
+<li>A lista jelenítse meg a részösszegeket és a végösszeget is!</li>
+<li>A végösszeget megfelelően jelöljük!</li>
+<li>Az oszlopokat nevezzük el értelemszerűen!
+<a href="Gy09_05.mp4">Megoldás</a></li>
+</ol>
+<p><span class='tg_task'>▷</span> <strong>Készítsünk listát az ügyfelek adatairól név szerinti sorrendben.</strong></p>
+<ol type="a">
+<li>Minden sorban jelenjen meg a sorrend szerint előző, illetve következő ügyfél neve is.</li>
+<li>Ha nincs előző vagy következő ügyfél, akkor a 'Nincs' jelenjen meg!
+<a href="Gy09_06.mp4">Megoldás</a></li>
+</ol>
+<p><span class='tg_task'>▷</span> <strong>Készítsünk lekérdezést, amely megmutatja, hogy melyik termékkategóriába hány termék tartozik. A lista a kategória nevét és a darabszámot jelenítse meg.</strong></p>
+<ol type="a">
+<li>A lista ne tartalmazzon duplikált sorokat.</li>
+<li>A feladatot partíciók segítségével oldjuk meg!
+<a href="Gy09_07.mp4">Megoldás</a></li>
+</ol>
+<p><span class='tg_task'>▷</span> <strong>Készítsünk listát a rendelési tételekről. Az egyes rendelési tételeket termékenként soroljuk be 4 osztályba a rendelés mennyisége alapján. Jelenítsük meg ezt az információt is egy új oszlopban, az oszlop neve legyen 'Mennyiségi kategória'.</strong></p>
+<ol type="a">
+<li>A lista csak a 100 Ft feletti egységárú rendelési tételeket vegye figyelembe!
+<a href="Gy09_08.mp4">Megoldás</a></li>
+</ol>
+<p><span class='tg_task'>▷</span> <strong>Listázzuk a termékek kódját, megnevezését, kategóriájának nevét, és listaárát.</strong></p>
+<ol type="a">
+<li>A listát egészítsük ki két új oszloppal, amelyek a kategória legolcsóbb, illetve legdrágább termékének árát tartalmazzák.</li>
+<li>A két új oszlop létrehozásánál partíciókkal dolgozzunk!
+<a href="Gy09_09.mp4">Megoldás</a></li>
+</ol>
+<p><span class='tg_task'>▷</span> <strong>Készítsünk listát a rendelésekről. A lista legyen rendezve ügyfelenként (LOGIN), azon belül a rendelés dátuma szerint. A listához készítsünk sorszámozást is. A sorszám a következő formában jelenjen meg: sorszám_év_login. Pl: 1_2015_adam1</strong></p>
+<ol type="a">
+<li>A számozás login-onként, azon belül rendelési évenként kezdődjön újra.</li>
+<li>A sorszám oszlop neve legyen Azonosító.
+<a href="Gy09_10.mp4">Megoldás</a></li>
+</ol>
+<p><span class='tg_task'>▷</span> Készítsünk listát a termékek adatairól listaár szerint növekvő sorrendben! A lista jelenítse meg két új oszlopban a sorrend szerint előző, illetve következő termék listaárát is a termék saját kategóriájában és raktárában!</p>
+<ol type="a">
+<li>Ahol nincs előző vagy következő érték, ott 0 jelenjen meg!</li>
+<li>Az oszlopokat nevezzük el értelemszerűen!
+<a href="Gy09_11.mp4">Megoldás</a></li>
+</ol>
+<p><span class='tg_task'>▷</span> Listázzuk a termékek kódját, nevét és listaárát listaár szerinti sorrendben!</p>
+<ol type="a">
+<li>Vegyünk fel egy új oszlopot Mozgóátlag néven, amely minden esetben az aktuális termék, az előző, és a következő termék átlagárát tartalmazza!</li>
+<li>A mozgóátlagot kerekítsük két tizedesre!
+<a href="Gy09_12.mp4">Megoldás</a></li>
+</ol>
+<p><span class='tg_task'>▷</span> Készítsünk listát, amely a rendelések sorszámát és a rendelés értékét tartalmazza. A listát egészítsük ki egy új oszloppal, amely minden rendelés esetén addigi rendelések összegét tartalmazza (az aktuálisat is beleértve)!</p>
+<ol type="a">
+<li>A listát rendezzük sorszám szerint növekvő sorrendbe.</li>
+<li>A lista ne tartalmazzon duplikált sorokat!</li>
+<li>Nevezzük el az oszlopokat értelemszerűen!
+<a href="Gy09_13.mp4">Megoldás</a></li>
+</ol>
+<p><span class='tg_task'>▷</span> Készítsünk listát a termékek kódjáról, nevéről, kategória azonosítójáról, raktár azonosítójáról és listaáráról, valamint a termék adott szempontok szerinti rangsorokban elfoglalt helyezéseiről. (Szempontonként külön oszlopban, a helyezéseknél növekvő sorrendet feltételezve). A szempontok a következők legyenek: listaár, kategória szerinti listaár, és raktárkód szerinti listaár.</p>
+<ol type="a">
+<li>Az oszlopokat nevezzük el értelemszerűen.</li>
+<li>A helyezések egyenlőség esetén &quot;sűrűn&quot; kövessék egymást.</li>
+<li>A lista legyen rendezett kategória azonosító, azon belül listaár szerint!
+<a href="Gy09_14.mp4">Megoldás</a></li>
+</ol>
+<p><span class='tg_task'>▷</span> Készítsünk listát a rendelési tételekről, amely minden sor esetén göngyölítve tartalmazza az ügyfél adott rendelési tételig meglévő rendelési tételeinek összértékét!</p>
+<ol type="a">
+<li>Az új oszlop neve legyen Eddigi rendelési tételek összértéke!</li>
+<li>Az ügyfél neve is jelenjen meg!
+<a href="Gy09_15.mp4">Megoldás</a></li>
+</ol>
+
+</article>
+
+<a class="github-fork-ribbon" href="https://github.com/sindresorhus/github-markdown-css" data-ribbon="Fork me on GitHub" title="Fork me on GitHub">Fork me on GitHub</a>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+<script src="../../assets/article.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/components/prism-core.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/autoloader/prism-autoloader.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/line-numbers/prism-line-numbers.js"></script>
+
+<!-- Video wrap -->
+<div id="inlineVideo_template" class="jump nodisplay">
+    <video id="centvideo" playsinline controls></video>
+    <div></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,437 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+<title> Adatdefiníció és adatmanipuláció SQL-ben</title>
+<meta name="color-scheme" content="light dark">
+<link rel="stylesheet" href="../../assets/github-markdown.css">
+<link rel="stylesheet" href="../../assets/article.css">
+
+<link rel="stylesheet" href="xhttps://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/themes/prism-coy.min.css" integrity="sha512-LOT5F67SMZVdXMrvQe4S1ZHu5l6xk3CST2qqno9kY329OsJBBpybnq+fM9qG4ZSaNzPOjoGzHAeBamSSJyyuZg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/themes/prism-solarizedlight.min.css"  crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/line-numbers/prism-line-numbers.css"  crossorigin="anonymous" referrerpolicy="no-referrer" />
+<style>
+			body {
+				box-sizing: border-box;
+				min-width: 200px;
+				max-width: 980px;
+				margin: 0 auto;
+				padding: 45px;
+			}
+
+			@media (prefers-color-scheme: dark) {
+				body {
+					background-color: #0d1117;
+				}
+			}
+		</style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-fork-ribbon-css/0.2.3/gh-fork-ribbon.min.css">
+<style>
+			.github-fork-ribbon:before {
+				background-color: #121612;
+			}
+		</style>
+</head>
+<body>
+<article class="markdown-body line-numbers">
+
+
+<h1 id="adatdefinicio-es-adatmanipulacio-sql-ben">Adatdefiníció és adatmanipuláció SQL-ben</h1>
+<p><a href="gyak06_x264.mp4">Összefoglaló videó</a></p>
+<h2 id="tabla-szerkezetenek-letrehozasa">Tábla szerkezetének létrehozása</h2>
+<p>Táblaszerkezetet a</p>
+<pre><code class="language-sql">CREATE TABLE táblanév 
+(
+   oszlopnév_1  típusnév_1,
+   oszlopnév_2  típusnév_2,
+   …   oszlopnév_n  típusnév_n
+)
+</code></pre>
+<p>utasítással hozhatunk létre.  Például egy személy alapvető adatait tároló tábla szerkezetét a következő utasítással:</p>
+<pre><code class="language-sql">CREATE TABLE személy
+(
+   azon            int,
+   szülidő        date,
+   lakcím         varchar(50),
+   hazas_e      bit   
+)
+</code></pre>
+<h2 id="tabla-szerkezetenek-modositasa">Tábla szerkezetének módosítása</h2>
+<p>A táblaszerkezet módosítására az ALTER TABLE utasítás szolgál, amelyet oszlopok hozzáadásához, módosításához és törléséhez követhet:</p>
+<ul>
+<li>ADD</li>
+<li>ALTER COLUMN</li>
+<li>DROP COLUMN</li>
+</ul>
+<p>Érdemes megfigyelni, hogy a hozzáadáshoz az ADD kulcsszó önmagában áll, míg az ALTER és a DROP esetében a COLUMN kulcsszót is alkalmazni kell a helyes szintaxishoz.</p>
+<h3 id="oszlopok-hozzaadasa">Oszlop(ok) hozzáadása</h3>
+<p>Oszlopot vagy oszlopokat utólag az alábbi utasítással adhatunk már meglévő táblához:</p>
+<pre><code class="language-sql">ALTER TABLE táblanév ADD oszlopnév típus
+</code></pre>
+<p>Például  az alábbi utasítás a már létrehozott Személy táblához hozzáadja az anyja_neve oszlopot</p>
+<pre><code class="language-sql">ALTER TABLE személy ADD anyja_neve varchar(100)
+</code></pre>
+<p>Egyidejűleg több oszlopot is a táblához adhatunk:</p>
+<pre><code class="language-sql">ALTER TABLE személy ADD nev varchar(100), kedvencstilus varchar(50)
+</code></pre>
+<h3 id="oszlopok-modositasa">Oszlopok módosítása</h3>
+<p>Oszlopot az ALTER COLUMN segítségével módosíthatunk, az alábbi szintaxissal:</p>
+<pre><code class="language-sql">ALTER TABLE táblanév ALTER COLUMN oszlopnév típus
+</code></pre>
+<p>Például:</p>
+<pre><code class="language-sql">ALTER TABLE személy ALTER COLUMN lakcím varchar(100)
+</code></pre>
+<p>Módosítás egyidejűleg csak egy oszlopot érinthet.</p>
+<h3 id="oszlopok-torlese">Oszlopok törlése</h3>
+<p>Oszlopot a DROP COLUMN segítségével törölhetünk, az alábbi szintaxissal:</p>
+<pre><code class="language-sql">ALTER TABLE táblanév DROP COLUMN oszlopnév
+</code></pre>
+<p>Például:</p>
+<pre><code class="language-sql">ALTER TABLE személy DROP COLUMN anyja_neve
+</code></pre>
+<p>Oszlopokat szintén csak egyesével törölhetünk.</p>
+<h2 id="kenyszerek">Kényszerek</h2>
+<p>A kényszerek (CONSTRAINT) a lehetséges adatok halmazát leíró, korlátozó szabályok.  Kényszereket megadhatunk a tábla létrehozásakor és utólag is, illetve definiálhatóak az oszlop és a tábla szintjén is (lásd még az egyes típusú kényszereknél)
+<strong>Oszlopkényszerről</strong>  beszélünk, ha a kényszert az adott oszlopdefiníció kiegészítéseként adjuk meg:</p>
+<pre><code class="language-sql">oszlopnév típusnév CONSTRAINT constraint_név constraint_definíció
+</code></pre>
+<p>Például:</p>
+<pre><code class="language-sql">CREATE TABLE személy
+(
+   azon            int,
+   szülidő        date,
+   lakcím         varchar(50),
+   hazas_e      bit CONSTRAINT DEFHAZAS default 0 
+   /*alapértelmezett 0 érték a hazas_e oszlop számára: 
+   ha beszúráskor az oszlopnak nem adnak értéket, alapértelmezés szerint 0 lesz az értéke*/
+)
+</code></pre>
+<p>A CONSTRAINT kulcsszó és a constraint név elhagyható elem, a szintaxis így is helyes:</p>
+<pre><code class="language-sql">hazas_e      bit default 0 
+</code></pre>
+<p>**Táblakényszerről ** akkor, ha a tábladefiníció kiegészítéseként határozzuk meg a kényszert, a következő formában:</p>
+<pre><code class="language-sql">CONSTRAINT constraint_név constraint_definíció 
+</code></pre>
+<p>Például:</p>
+<pre><code class="language-sql">CREATE TABLE személy
+(
+   azon            int NOT NULL,
+   szülidő        date NOT NULL,
+   lakcím         varchar(50) NULL,
+   foallasu_e   bit,
+   CONSTRAINT SzulidoMultban CHECK (szülidő&lt;=getdate())
+   /* A születési időnek meg kell előznie az aktuális időpontot. 
+   Ha a beszúrt vagy módosított sor értéke ennek nem tesz eleget, 
+   a művelet nem lesz sikeres*/
+)
+</code></pre>
+<p>DEFAULT és NULL/NOT NULL kényszert tábla létrehozásakor oszlopszinten kell definiálni, táblaszinten nem lehet.</p>
+<p>A kényszerek utólag – a tábla szerkezetének definiálása után – is megadhatók:</p>
+<pre><code class="language-sql">ALTER TABLE táblanév ADD CONSTRAINT constraint_név constraint_definíció
+</code></pre>
+<p>például:</p>
+<pre><code>Alter table személy ADD CONSTRAINT defhazas DEFAULT 0 FOR hazas_e
+</code></pre>
+<p>A NULL/NOT NULL kényszert az alábbi módon adhatjuk meg utólag egy oszlopnak:</p>
+<pre><code class="language-sql">ALTER TABLE táblanév ALTER COLUMN oszlopdefiníció NULL
+ALTER TABLE táblanév ALTER COLUMN oszlopdefiníció NOT NULL
+</code></pre>
+<p>például</p>
+<pre><code class="language-sql">Alter table személy ALTER COLUMN hazas_e bit NOT NULL
+</code></pre>
+<p><strong>Megjegyzés:</strong> a Constraintek neve a táblákéhoz hasonlóan egyedi kell legyen</p>
+<h3 id="a-nullnot-null-kenyszer">A NULL/NOT NULL kényszer</h3>
+<p>A NULL/NOT NULL kényszer segítségével azt határozhatjuk meg, hogy egy adott oszlopban engedélyezzük-e a definiálatlan értéket. Alapértelmezés szerint a NULL érték engedélyezett.
+Az alábbi példában az azon és a szülidő oszlopokban nem, a lakcím és a házas-e oszlopokban engedélyezett a NULL érték.</p>
+<pre><code class="language-sql">CREATE TABLE személy
+(
+   azon         int NOT NULL,
+   szülidő      date NOT NULL,
+   lakcím      varchar(50) NULL,
+   hazas_e    bit   NULL
+)
+</code></pre>
+<p>A NULL/NOT NULL constraintet utólag az ALTER TABLE [tábla] ALTER COLUMN [oszlop] paranccsal adhatjuk a táblához:</p>
+<pre><code class="language-sql">Alter table személy ALTER COLUMN hazas_e bit NOT NULL
+</code></pre>
+<h3 id="a-primary-key-kenyszer">A PRIMARY KEY kényszer</h3>
+<p>A tábla elsődleges kulcsának meghatározása. Egytagú kulcsot meghatározhatunk oszlop- és táblakényszerként is, többtagút csak táblakényszerként.</p>
+<pre><code class="language-sql">CREATE TABLE személy
+(
+   azon         int PRIMARY KEY,  --ilyenkor a NOT NULL-t nem kell megadni, a PK alapból NOT NULL
+   szülidő      date NOT NULL,
+   lakcím       varchar(50) NULL,
+   hazas_e      bit   NULL,
+)
+</code></pre>
+<p>vele ekvivalens az alábbi, az elsődleges kulcsot táblakényszerként megadó script:</p>
+<pre><code class="language-sql">CREATE TABLE személy
+(
+   azon            int NOT NULL,
+   szülidő        date NOT NULL,
+   lakcím         varchar(50) NULL,
+   hazas_e      bit   NULL,
+   CONSTRAINT pk_személy       PRIMARY KEY (azon)
+)
+</code></pre>
+<p>Ha két (vagy több) tagból áll az elsődleges kulcsunk, akkor azt az alábbi módon adhatjuk meg:</p>
+<pre><code class="language-sql">CREATE TABLE személy
+(
+   azon            int NOT NULL,
+   szülidő        date NOT NULL,
+   lakcím         varchar(50) NULL,
+   hazas_e      bit   NULL,
+   CONSTRAINT pk_személy       PRIMARY KEY (azon, szülidő)
+)
+</code></pre>
+<p>PRIMARY KEY kényszert a táblára utólagosan táblakényszerként tehetünk fel:</p>
+<pre><code class="language-sql">alter table személy9 add constraint PK_Szemely PRIMARY key(azon)
+</code></pre>
+<h3 id="a-unique-kenyszer">A UNIQUE kényszer</h3>
+<p>Nem csak elsődleges kulcsok esetében követelhetjük meg az egyediséget, hanem egyéb oszlopokra vagy oszlopkombinációkra is.
+A UNIQUE  kényszer meghatározható oszlopszinten:</p>
+<pre><code class="language-sql">CREATE TABLE személy
+(
+   azon            int UNIQUE,
+   szülidő         date NOT NULL,
+   lakcím         varchar(50) NULL,
+   hazas_e      bit   NULL,
+)
+</code></pre>
+<p>és táblaszinten is:</p>
+<pre><code class="language-sql">CREATE TABLE személy
+(
+   azon            int NOT NULL,
+   szülidő        date NOT NULL,
+   lakcím         varchar(50) NULL,
+   hazas_e      bit   NULL,
+   CONSTRAINT uk_személy       UNIQUE (azon)
+)
+</code></pre>
+<p>A UNIQUE zárójelei között több oszlopot is felsorolhatunk.
+UNIQUE kényszert utólagosan így tehetünk fel a táblára:</p>
+<pre><code class="language-sql">alter table személy add constraint UK_Személy UNIQUE(azon)
+</code></pre>
+<h3 id="a-foreign-key-kenyszer">A FOREIGN KEY kényszer</h3>
+<p>A FOREIGN KEY kényszer segítségével idegen kulcsot definiálhatunk a táblánkban, amely egy másik  tábla elsődleges kulcsára mutat.
+Formája:
+Definiálható oszlop- és táblakényszerként is:</p>
+<pre><code class="language-sql">CREATE TABLE személy
+(
+   azon            int NOT NULL,
+   szülidő         date NOT NULL,
+   lakcím         varchar(50) NULL,
+   szamlakod int FOREIGN KEY REFERENCES szamla (kod)
+   --oszlopnév típus FOREIGN KEY REFERENCES hivatkozott tábla (hivatkozott tábla oszlopa)
+)
+
+CREATE TABLE személy
+(
+   azon            int NOT NULL,
+   szülidő        date NOT NULL,
+   lakcím         varchar(50) NULL,
+   szamlakod  int   NULL,
+   CONSTRAINT fk_személy FOREIGN KEY (szamlakod) REFERENCES szamla (kod)
+   --CONSTRAINT Constraint név FOREIGN KEY (oszlop neve) REFERENCES hivatkozott_tábla (hivatkozott tábla oszlopának neve)   
+)
+</code></pre>
+<p>FOREIGN kényszer az előzőekhez hasonlóan ALTER TABLE ADD Constraint utasítással rakható fel a táblára.
+###A DEFAULT kényszer
+A DEFAULT kényszer segítségével egy oszlopra határozhatjuk meg, hogy milyen értéket kapjon abban az esetben, ha beszúráskor nem adják meg számára azt.
+Csak oszlopkényszerként definiálható, hasonlóan a NULL/NOT NULL-hoz</p>
+<pre><code class="language-sql">CREATE TABLE személy
+(
+   azon            int NOT NULL,
+   szülidő         date NOT NULL,
+   lakcím         varchar(50) NULL,
+   foallasu_e  bit DEFAULT 1
+)
+</code></pre>
+<p>Utólagosan az ALTER TABLE ADD CONSTRAINT utasítással rakható fel a táblára.</p>
+<h3 id="a-check-kenyszer">A CHECK kényszer</h3>
+<p>A Check kényszer segítségével logikai feltételeket határozhatunk meg a táblába beszúrással vagy módosítással kerülő adatokra. Oszlop- és táblakényszerként is meghatározható:</p>
+<pre><code class="language-sql">CREATE TABLE személy
+(
+   azon            int NOT NULL,
+   szülidő         date NOT NULL,
+   lakcím         varchar(50) NULL,
+fizetés 		int CHECK (fizetés&gt;0)
+)
+CREATE TABLE személy
+(
+   azon            int NOT NULL,
+   szülidő        date NOT NULL,
+   lakcím         varchar(50) NULL,
+   fizetés         int,
+   CONSTRAINT chk_személyCHECK (fizetés &gt; 0)
+)
+</code></pre>
+<p>Utólagosan az ALTER TABLE ADD CONSTRAINT utasítással rakható fel a táblára.</p>
+<h2 id="adatmanipulacios-parancsok">Adatmanipulációs parancsok</h2>
+<p>Az adatmanipulációs parancsok segítségével  adatokat</p>
+<ul>
+<li>szúrhatunk be (INSERT, INSERT SELECT, SELECT INTO)</li>
+<li>törölhetünk (DELETE, TRUNCATE)</li>
+<li>módosíthatunk (UPDATE)</li>
+</ul>
+<h3 id="beszuras">Beszúrás</h3>
+<h4 id="insert">INSERT</h4>
+<pre><code class="language-sql">INSERT INTO táblanév (oszlopnév lista) VALUES (értéklista)
+INSERT INTO személy (szülidő, lakcím, fizetés) VALUES ('2001.05.02', 'Budapest, Váci út 3', 250000)
+</code></pre>
+<p>Az INTO  kulcsszó és az oszlopnév lista elhagyható, de ebben az esetben az összes oszlop számára meg kell adnunk értéket.</p>
+<pre><code class="language-sql">INSERT személy values (1, '2001.05.02', 'Budapest, Váci út 3', 250000)
+</code></pre>
+<h4 id="insert.select">INSERT ... SELECT</h4>
+<p>Az INSERT parancsban nem csak a values segítségével adhatjuk meg a beszúrni kívánt értékeket, hanem írhatunk lekérdezést is, amelynek eredményét a táblába betöltjük.</p>
+<pre><code class="language-sql">INSERT INTO személy (szülidő, lakcím, fizetés) SELECT szülidő, lakcím, fizetésFROM dolgozó
+</code></pre>
+<p>Az INTO  kulcsszó és az oszlopnév lista elhagyható, de ebben az esetben az összes oszlop számára meg kell adnunk értéket.</p>
+<h4 id="select.into">SELECT ... INTO</h4>
+<p>A SELECT INTO segítségével egy lekérdezés eredményét menthetjükel egy új táblába.</p>
+<pre><code class="language-sql">Select * INTO házasok from személy where hazas_e=1
+</code></pre>
+<h3 id="torles">TÖRLÉS</h3>
+<h4 id="delete">DELETE</h4>
+<p>Táblából sorokat a DELETE utasítással törölhetünk. A DELETE parancsot egy lekérdezéshez hasonlóan fogalmazhatjuk meg, például:</p>
+<pre><code class="language-sql">DELETE FROM személy WHERE fizetés &gt; 500000
+</code></pre>
+<h4 id="truncate">TRUNCATE</h4>
+<p>Egy tábla minden sorát törölhetjük a TRUNCATE TABLE táblanév utasítással.</p>
+<pre><code class="language-sql">TRUNCATE TABLE személy
+</code></pre>
+<h3 id="modositas">MÓDOSÍTÁS</h3>
+<p>A tábla adatainak módosítása az UPDATE paranccsak lehetséges. Az UPDATE parancsot szintén egy lekérdezéshez hasonlóan fogalmazhatjuk meg:</p>
+<pre><code class="language-sql">UPDATE személy SET fizetés = fizetés * 1.25 WHERE lakcím like ’Budapest%’
+</code></pre>
+<h2 id="adatbazis-objektumok-torlese">Adatbázis-objektumok törlése</h2>
+<p>A korábbiakban ismertetett TRUNCATE paranccsal a tábla tartalmát törölhetjük teljes egészében.
+Ha az egész táblát szeretnénk eltávolítani az adatbázisból, arra a DROP TABLE utasítás szolgál:</p>
+<pre><code class="language-sql">DROP TABLE személy
+</code></pre>
+<p>Ha nem az egész táblát, csupán egy oszlopot szeretnénk törölni, akkor a következő utasításra lesz szükségünk:</p>
+<pre><code class="language-sql">ALTER TABLE személy DROP COLUMN lakcím
+</code></pre>
+<p>Azonban, ha olyan oszlopot szeretnénk törölni, amelyre CONSTRAINT hivatkozik (kivéve NULL/NOT NULL), akkor előbb azt kell törölnünk, ellenkező esetben hibaüzenetet  kapunk:</p>
+<pre><code class="language-sql">Server: Msg 5074, Level 16, State 1, Line 1
+The object 'checkmultbanszuletett' is dependent on column 'szülidő'.
+</code></pre>
+<p>Constraintet az alábbi formában törölhetünk:</p>
+<pre><code class="language-sql">Alter table személy drop constraint checkmultbanszuletett
+</code></pre>
+<p>Ha nem mi adtunk nevet a kényszernek, hanem az SQL szerverre bíztuk ezt (oszlopkényszereknél fordul elő), akkor például a hibaüzenetből könnyen kiolvasható.</p>
+<h2 id="feladatok">Feladatok</h2>
+<p><span class='tg_task'>▷</span>	Listázzuk az egyetemi tanárok titulusát, nevét és a státuszuk megnevezését!</p>
+<ol type="a">
+<li>A listát rendezzük titulus szerint, azon belül név szerint növekvő sorrendbe!
+<a href="Gy0601.mp4">Megoldás</a></li>
+</ol>
+<p><span class='tg_task'>▷</span>	Készítsünk lekérdezést, amely megjeleníti, hogy melyik beosztásban hány oktató van!</p>
+<ol type="a">
+<li>Csak a beosztás nevét és az oktatók számát jelenítsük meg!</li>
+<li>Az oszlopok neve legyen 'Beosztás' és 'Létszám'</li>
+<li>Az Óraadókat hagyjuk ki a listából!
+<a href="Gy0602.mp4">Megoldás</a></li>
+</ol>
+<p><span class='tg_task'>▷</span>	Készítsünk listát az egyes tantárgyak adatairól!</p>
+<ol type="a">
+<li>A lista tartalmazzon egy új oszlopot 'Rövid név' néven, amely a tantárgy nevének első öt betűjét és utolsó három betűjét tartalmazza, közöttük három ponttal (...)!</li>
+<li>A rövid név csupa nagy betűvel jelenjen meg!</li>
+<li>A listát rendezzük a rövid név szerint növekvő sorrendbe!
+<a href="Gy0603.mp4">Megoldás</a></li>
+</ol>
+<p><span class='tg_task'>▷</span>	Hány óra van összesen pénteki napokon?</p>
+<ol type="a">
+<li>Csak az órák számát jelenítsük meg!</li>
+<li>Az oszlopot nevezzük el 'Pénteki óraszám'-nak
+<a href="Gy0604.mp4">Megoldás</a></li>
+</ol>
+<p><span class='tg_task'>▷</span>	Készítsünk listát, amely megadja, hogy mely tantárgyakból nincs óra a 118-as teremben!</p>
+<ol type="a">
+<li>Csak a tantárgyak azonosítóját és nevét jelenítsük meg!</li>
+<li>A lista ne tartalmazzon duplikált sorokat!
+<a href="Gy0605.mp4">Megoldás</a></li>
+</ol>
+<p><span class='tg_task'>▷</span>	Készítsen új táblát, a tábla nevének eleje az Ön Neptun-kódja legyen, majd egy aláhúzásjel, végül TANKONYV, Pl: UJAENB_TANKONYV</p>
+<ol type="a">
+<li>A tábla oszlopai legyenek: Tkod egész szám, Tcim szöveg(50), Tegysegar valós szám</li>
+<li>Adjuk meg a következő kényszereket is: Tkod elsődleges kulcs, Tegysegar &gt; 0, a Tcim és a Tegysegar legyenek kötelezően kitöltendő mezők
+<a href="Gy0606.mp4">Megoldás</a></li>
+</ol>
+<p><span class='tg_task'>▷</span>	Készítsen új táblát, az Oktatok tábla lemásolásával NEPTUNKOD_TANAR néven, pl: UJAENB_TANAR!</p>
+<ol type="a">
+<li>Használja a SELECT ... INTO ... FROM szerkezetet!
+<a href="Gy0607.mp4">Megoldás</a></li>
+</ol>
+<p><span class='tg_task'>▷</span>	Adja hozzá a következő kényszereket a 7. feladatban létrehozott táblához:</p>
+<ol type="a">
+<li>Az oktato_id oszlopra állítsa be, hogy kötelezően kitöltendő legyen</li>
+<li>Az oktato_id legyen elsődleges kulcs, a titulus alapértelmezett értéke legyen üres string</li>
+<li>Az oktato neve egyedi legyen! A beosztás kódja csak 1 és 7 közötti egész szám lehessen!</li>
+<li>A feladatot több lépésben is megoldhatja!
+<a href="Gy0608.mp4">Megoldás</a></li>
+</ol>
+<p><span class='tg_task'>▷</span>	Hozzon létre új táblát NEPTUN_TANAR_TK néven, pl: UJAENB_TANAR_TK, amely a tanár által használt tankönyveket fogja tárolni!</p>
+<ol type="a">
+<li>A tábla szerkezete a következő legyen: ttkkod egész szám elsődleges kulcs, tkod egész szám - a tanár kódja, ttkod egész szám a tankönyv kódja</li>
+<li>A tkod legyen idegen kulcs a NEPTUN_TANAR tábla oktato_id mezőjéhez, a ttkod pedig a NEPTUN_TANKONYV tábla tkod mezőjéhez kötve!
+<a href="Gy0609.mp4">Megoldás</a></li>
+</ol>
+<p><span class='tg_task'>▷</span>	Adjunk hozzá új oszlopot a NEPTUN_TANKONYV táblához: akkreditalt_e bit, és a NEPTUN_TANAR táblához: vegzettseg szoveg(2)!</p>
+<ol type="a">
+<li>Az akkreditalt_e alapértelmezett értéke 0 legyen!</li>
+<li>A vegzettseg csak a következő értékeket vehesse fel: E, F, K, 8 és N (Egyetem, Főiskola, Középiskola, 8 általános és nincs), alapértelmezett értéke legyen 'E'
+<a href="Gy0610.mp4">Megoldás</a></li>
+</ol>
+<p><span class='tg_task'>▷</span>	Töltsük fel a NEPTUN_TANKONYV táblát a következő adatokkal:</p>
+<ol type="a">
+<li>1, 'Matematika alapjai', 2400</li>
+<li>2, 'Bevezetés a fizikába', 3500</li>
+<li>3, 'Differenciálegyenletek', 5000</li>
+<li>4, 'Gazdasági ismeretek I.',4000</li>
+<li>5, 'Statisztika', 3800
+<a href="Gy0611.mp4">Megoldás</a></li>
+</ol>
+<p><span class='tg_task'>▷</span>	Szúrjuk be a NEPTUN_TANAR_TK táblába a következő sorokat:</p>
+<ol type="a">
+<li>1, 2, 3</li>
+<li>2, 1, 2</li>
+<li>3, 3, 2</li>
+<li>4, 5, 4
+<a href="Gy0612.mp4">Megoldás</a></li>
+</ol>
+<p><span class='tg_task'>▷</span>	Töröljük az Óraadó beosztású tanárokat a NEPTUN_TANAR táblából!</p>
+<ol type="a">
+<li>Segítség: mivel a törlés során két táblát kell összekapcsolni, ezért ilyenkor a DELETE után meg kell adni a törlésben érintett tábla nevét is, azaz DELETE NEPTUN_TANAR FROM ...
+<a href="Gy0613.mp4">Megoldás</a></li>
+</ol>
+<p><span class='tg_task'>▷</span>	Állítsuk vissza az előző feladatban kitörölt tanárokat a NEPTUN_TANAR Táblába az Oktatok tábla adatait felhasználva!</p>
+<ol type="a">
+<li>Használjuk az INSERT INTO... SELECT szerkezetet! Vegyük figyelembe, hogy az Oktatok táblának nincs vegzettseg oszlopa!
+<a href="Gy0614.mp4">Megoldás</a></li>
+</ol>
+<p><span class='tg_task'>▷</span>	Módosítsuk a NEPTUN_TANKONYV táblában a tankönyvek egységárát úgy, hogy mindegyik 20%-kal több legyen!</p>
+<ol type="a">
+<li>Ugyanitt módosítsuk az akkreditalt_e értékét úgy, hogy a meglévő ellentett értéke legyen, (azaz ha 1 volt, akkor 0, ha 0 volt, akkor 1 legyen)
+<a href="Gy0615.mp4">Megoldás</a></li>
+</ol>
+<p><span class='tg_task'>▷</span>	Plusz feladat: Töröljük ki az általunk létrehozott NEPTUN_TANAR, NEPTUN_TANAR_TK és NEPTUN_TANKONYV táblákat!
+<a href="Gy0616.mp4">Megoldás</a></p>
+
+</article>
+
+<a class="github-fork-ribbon" href="https://github.com/sindresorhus/github-markdown-css" data-ribbon="Fork me on GitHub" title="Fork me on GitHub">Fork me on GitHub</a>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+<script src="../../assets/article.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/components/prism-core.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/autoloader/prism-autoloader.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/line-numbers/prism-line-numbers.js"></script>
+
+<!-- Video wrap -->
+<div id="inlineVideo_template" class="jump nodisplay">
+    <video id="centvideo" playsinline controls></video>
+    <div></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,184 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+<title> Halmazműveletek</title>
+<meta name="color-scheme" content="light dark">
+<link rel="stylesheet" href="../../assets/github-markdown.css">
+<link rel="stylesheet" href="../../assets/article.css">
+
+<link rel="stylesheet" href="xhttps://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/themes/prism-coy.min.css" integrity="sha512-LOT5F67SMZVdXMrvQe4S1ZHu5l6xk3CST2qqno9kY329OsJBBpybnq+fM9qG4ZSaNzPOjoGzHAeBamSSJyyuZg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/themes/prism-solarizedlight.min.css"  crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/line-numbers/prism-line-numbers.css"  crossorigin="anonymous" referrerpolicy="no-referrer" />
+<style>
+			body {
+				box-sizing: border-box;
+				min-width: 200px;
+				max-width: 980px;
+				margin: 0 auto;
+				padding: 45px;
+			}
+
+			@media (prefers-color-scheme: dark) {
+				body {
+					background-color: #0d1117;
+				}
+			}
+		</style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-fork-ribbon-css/0.2.3/gh-fork-ribbon.min.css">
+<style>
+			.github-fork-ribbon:before {
+				background-color: #121612;
+			}
+		</style>
+</head>
+<body>
+<article class="markdown-body line-numbers">
+
+
+<p><a href="gyak05_prez_x264.mp4">Összefoglaló videó</a></p>
+<h1 id="halmazmuveletek">Halmazműveletek</h1>
+<p>Az alábbiakban ismertetésre kerül halmazműveletek két vagy több lekérdezéssel végeznek műveleteket.</p>
+<ul>
+<li>Általános szabály, hogy a lekérdezéseknek azonos szerkezetűeknek kell lenniük (oszlopok száma, sorrendje, típusa azonos, illetve kompatibilis).</li>
+<li>Az oszlopok neveinek nem kell megegyezniük. Ha a halmazműveletekben résztvevő lekérdezések oszlopnevei nem egyformák, abban az esetben az eredményhalmaz oszlopainak nevei az első lekérdezés oszlopnevei lesznek</li>
+<li>Amennyiben a halmazműveletek eredményének sorait rendezni szeretnénk, akkor a rendezést (ORDER BY) mindig a legutolsó lekérdezés végén kell definiálni A rendezésnél alias nevek is használhatók.</li>
+<li>A halmazműveletek helyett többnyire van más megoldási lehetőség is (Pl: összetett WHERE –feltétel, JOIN)</li>
+<li>Több halmazművelet esetén a kiértékelési sorrend:
+<ol>
+<li>Zárójelben lévő műveletek</li>
+<li>Metszet</li>
+<li>Különbség és Unió (balról jobbra)</li>
+</ol>
+</li>
+</ul>
+<h2 id="unio">Unió</h2>
+<p>Két vagy több lekérdezés eredménysorait fűzi össze egyetlen eredményhalmazzá.
+A lekérdezéseknek azonos szerkezetűeknek kell lenniük (oszlopok száma, sorrendje, típusa azonos, illetve kompatibilis)</p>
+<pre><code class="language-sql">SELECT oszlopnevek
+FROM ….
+UNION (ALL)
+SELECT oszlopnevek
+FROM …
+</code></pre>
+<h2 id="metszet">Metszet</h2>
+<p>Két vagy több lekérdezés eredményhalmazainak közös sorait adja meg.</p>
+<pre><code class="language-sql">SELECT oszlopnevek
+FROM ……
+INTERSECT
+SELECT oszlopnevek
+FROM …….
+</code></pre>
+<h2 id="kulonbseg">Különbség</h2>
+<p>Két lekérdezés különbsége azokat a sorokat adja vissza, amelyek az első lekérdezés eredményhalmazában benne vannak, de a másodikéban nincsenek.</p>
+<pre><code class="language-sql">SELECT oszlopnevek
+FROM ……
+EXCEPT
+SELECT oszlopnevek
+FROM …….
+</code></pre>
+<h2 id="feladatok">Feladatok</h2>
+<p>A feladatok a <em>tanulmanyi</em> adatbázishoz készültek.  Készen elérhető a tanszéki kiszolgálón az alábbi kapcsolati adatokkal:
+|              | |
+|-             |-|
+|Szerver       |sql.2rpi.hu,7000
+|Felhasználónév|hallgato
+|Jelszó        |Password123
+|Adatbázis     |tanulmanyi</p>
+<p><span class='tg_task'>▷</span>Hány kreditet érnek átlagosan azok a tantárgyak, amelyek nevében az 'ürge' szó szerepel?</p>
+<ol type="a">
+<li>Az átlag nem egész szám, ezért tizedes törtként jelenjen meg!</li>
+<li>Ha lehet, az eredmény ne tartalmazzon felesleges 0-kat a tizedes jegyek között!</li>
+<li>ÖTLET: konvertáljuk a kredit értékét float típusúvá
+<a href="Gy05_01.mp4">Megoldás</a></li>
+</ol>
+<p><span class='tg_task'>▷</span>Hány óra van összesen a 120-as teremben?
+<a href="Gy05_02.mp4">Megoldás</a></p>
+<p><span class='tg_task'>▷</span>Listázzuk, hogy melyik tanárnak hány órája van napi bontásban!</p>
+<ol type="a">
+<li>A lista jelenítse meg a tanár és a nap azonosítóját, valamint az óraszámot!</li>
+<li>A listából hagyjuk el azokat a sorokat, ahol ez az óraszám kisebb, mint 3!
+<a href="Gy05_03.mp4">Megoldás</a></li>
+</ol>
+<p><span class='tg_task'>▷</span>Hány órájuk van a tanároknak státuszonkénti bontásban?</p>
+<ol type="a">
+<li>Jelenítsük meg a státusz kódját, nevét és az óraszámot!
+<a href="Gy05_04.mp4">Megoldás</a></li>
+</ol>
+<p><span class='tg_task'>▷</span>Listázzuk az egyes oktatók kódját és nevét, valamint egy új oszlopban, hogy az adott oktató tantárgyfelelős-e!</p>
+<ol type="a">
+<li>Rendezzük a listát név szerint!</li>
+<li>Egy oktató neve és azonosítója csak egyszer jelenjen meg!
+<a href="Gy05_05.mp4">Megoldás</a></li>
+</ol>
+<p><strong>A 6.-10 feladatokat halmazműveletek segítségével oldja meg!</strong></p>
+<p><span class='tg_task'>▷</span><strong>Jelenítsük meg azon tanárok azonosítóját és nevét, akik hétfői vagy keddi napokon tanítanak!</strong>
+<a href="Gy05_06.mp4">Megoldás</a></p>
+<p><span class='tg_task'>▷</span><strong>Melyek azok a tantárgyak, amelyek esetén van óra a 8.00-kor kezdődő sávban, de nincs a 12.30-kor kezdődő sávban?</strong>
+<a href="Gy05_07.mp4">Megoldás</a></p>
+<p><span class='tg_task'>▷</span><strong>Listázzuk azokat a termeket, amelyekben oktat Kovács László és van olyan tanóra a teremben, ahol a tantárgy nevében nem szerepel az 'ürge' szó!</strong></p>
+<ol type="a">
+<li>A termeknél elég a nevet megjeleníteni.
+<a href="Gy05_08.mp4">Megoldás</a></li>
+</ol>
+<p><span class='tg_task'>▷</span><strong>Készítsünk listát arról, hogy melyik tanárnak hány órája van a (munka) hét elején (hétfőn), hét közben (kedd, szerda és csütörtök), illetve a hét végén (péntek)!</strong></p>
+<ol type="a">
+<li>Jelenítsük meg a tanár azonosítóját, nevét, az időszakot (hét eleje - hét közben - hét vége), valamint az óraszámot!</li>
+<li>A három megjelölt időszakot külön kérdezzük le, majd fűzzük össze a lekérdezések eredményeit!</li>
+<li>Rendezzük a listát az oktató neve, azon belül időszak szerint!
+<a href="Gy05_09.mp4">Megoldás</a></li>
+</ol>
+<p><span class='tg_task'>▷</span><strong>Melyik napokon nincs órája Pelikán Józsefnek?</strong>
+<a href="Gy05_10.mp4">Megoldás</a></p>
+<p><span class='tg_task'>▷</span><em>Készítsünk listát az oktatók adatairól!</em></p>
+<ol type="a">
+<li>Az oktatók titulusa és neve összefűzve jelenjen meg, közöttük szóközzel!</li>
+<li>Ha valakinek nincs titulusa, akkor csak a neve jelenjen meg, szóköz nélkül!</li>
+<li>A listát rendezzük a beosztás kódja, azon belül a státusz kódja szerint növekvő sorrendbe!</li>
+<li>Az oszlopokat nevezzük el értelemszerűen!
+<a href="Gy05_11.mp4">Megoldás</a></li>
+</ol>
+<p><span class='tg_task'>▷</span><em>Készítsünk listát, amely megmutatja, hogy összesen hány tantárgy van kreditenkénti csoportosításban!</em></p>
+<ol type="a">
+<li>A listából hagyjuk ki azokat a tételeket, ahol ez a darabszám 1!</li>
+<li>A Folyami gáttan tantárgyat ne vegyük figyelembe!</li>
+<li>A listát rendezzük darabszám szerint csökkenő sorrendbe!</li>
+<li>Az oszlopokat nevezzük el értelemszerűen!
+<a href="Gy05_12.mp4">Megoldás</a></li>
+</ol>
+<p><span class='tg_task'>▷</span><em>Készítsünk listát az oktatók nevéről, a beosztásuk alapján elvárt és a tényleges óraszámukról!</em></p>
+<ol type="a">
+<li>Az oszlopok neve legyen 'Oktató neve', 'Elvárt óraszám' és 'Tényleges óraszám'</li>
+<li>Szűrjük a listát azokra az oktatókra, ahol az elvárt és a tényleges óraszám azonos
+<a href="Gy05_13.mp4">Megoldás</a></li>
+</ol>
+<p><span class='tg_task'>▷</span><em>Készítsünk listát, amely megmutatja, hogy mely tantárgyból nincs óra egyáltalán!</em></p>
+<ol type="a">
+<li>Csak a tantárgy neve jelenjen meg!
+<a href="Gy05_14.mp4">Megoldás</a></li>
+</ol>
+<p><span class='tg_task'>▷</span><em>Hány órájuk van az óraadóknak napi bontásban?</em></p>
+<ol type="a">
+<li>Csak a napok nevét és az óraszámot jelenítsük meg!</li>
+<li>Rendezzük a listát óraszám szerint növekvő sorrendbe!
+<a href="Gy05_15.mp4">Megoldás</a></li>
+</ol>
+<p>(A <strong>félkövérrel</strong> szedett feladatok kötelezők, a <em>dőlt betűvel</em> szedettek a vizsgához felkészítő feladatok, a többi ismétlés)</p>
+
+</article>
+
+<a class="github-fork-ribbon" href="https://github.com/sindresorhus/github-markdown-css" data-ribbon="Fork me on GitHub" title="Fork me on GitHub">Fork me on GitHub</a>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+<script src="../../assets/article.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/components/prism-core.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/autoloader/prism-autoloader.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/line-numbers/prism-line-numbers.js"></script>
+
+<!-- Video wrap -->
+<div id="inlineVideo_template" class="jump nodisplay">
+    <video id="centvideo" playsinline controls></video>
+    <div></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,119 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+<title> Projektfeladat:  Labirintus játék</title>
+<meta name="color-scheme" content="light dark">
+<link rel="stylesheet" href="../../assets/github-markdown.css">
+<link rel="stylesheet" href="../../assets/article.css">
+
+<link rel="stylesheet" href="xhttps://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/themes/prism-coy.min.css" integrity="sha512-LOT5F67SMZVdXMrvQe4S1ZHu5l6xk3CST2qqno9kY329OsJBBpybnq+fM9qG4ZSaNzPOjoGzHAeBamSSJyyuZg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/themes/prism-solarizedlight.min.css"  crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/line-numbers/prism-line-numbers.css"  crossorigin="anonymous" referrerpolicy="no-referrer" />
+<style>
+			body {
+				box-sizing: border-box;
+				min-width: 200px;
+				max-width: 980px;
+				margin: 0 auto;
+				padding: 45px;
+			}
+
+			@media (prefers-color-scheme: dark) {
+				body {
+					background-color: #0d1117;
+				}
+			}
+		</style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-fork-ribbon-css/0.2.3/gh-fork-ribbon.min.css">
+<style>
+			.github-fork-ribbon:before {
+				background-color: #121612;
+			}
+		</style>
+</head>
+<body>
+<article class="markdown-body line-numbers">
+
+
+<h1 id="projektfeladat-labirintus-jatek">Projektfeladat:  Labirintus játék</h1>
+<h2 id="a-feladat-leirasa">A feladat leírása</h2>
+<p>A feladat egy olyan labirintusos játék készítése, melyben a játékos egy fájlmegnyitó ablakon keresztül kiválaszthat egy labirintust leíró fájlt, majd a billentyűk segítségével végigvezethet egy figurát a pályán.</p>
+<p>A labirintus (maze) legenerálására vannak online eszközök, mint <a href="https://www.dcode.fr/maze-generator">ez itt</a>. A legenerált labirintus szövegfájlként letölthető. A letöltött fájlokban jelöljétek a START és a CÉL mezőt is tetszőleges módon.</p>
+<ul>
+<li><p>A labirintust tartalmazó fájlt fájlmegnyitó ablakból lehessen kiválasztani!</p>
+</li>
+<li><p>A fájl megnyitásakor és olvasásakor keletkező esetleges kivételeket le kell kezelni.</p>
+</li>
+<li><p>A labirintust érdemes <code>PictureBox</code>-ból származtatott osztályokból felépíteni, mert a gombok könnyen &quot;lenyelik&quot; a gomblenyomás eseményeket.</p>
+</li>
+<li><p>A játékost gombokkal lehessen irányítani -- az irányítás és az ütközésvizsgálat a kígyós játékhoz hasonlóan történhet.</p>
+</li>
+<li><p>A lépések számát és az eltelt időt meg kell jeleníteni.</p>
+</li>
+<li><p>Legyen lehetőség újrakezdeni a pályát.</p>
+</li>
+<li><p>A játék bővíthető megehető pöttyökkel vagy tetszőleges extrával.</p>
+</li>
+</ul>
+<blockquote>
+<p>Teams-en várjuk a feladattal kapcsolatban kérdéseket, és igyekszünk mihamarabb válaszolni.</p>
+</blockquote>
+<h2 id="tippek-a-megvalositashoz">Tippek a megvalósításhoz</h2>
+<h3 id="hivatkozas-a-string-elemeire">Hivatkozás a <code>string</code> elemeire</h3>
+<p>A <code>string</code>-ben szereplő betűkre ugyanúgy lehet hivatkozni, mint egy tömb elemeire. Az alábbi kódrészlet fukszia és kék gombokat pakol egymás mellé az <code>s</code> karakterláncban szereplő betűknek megfelelően. Ez a gondolatmenet felhasználható a labirintusfájl olvasásánál. A karakterlánc hossza a <code>Length</code> tulajdonságán keresztül olvasható ki.</p>
+<pre><code class="language-csharp">string s = &quot;KKFFKK&quot;;
+
+for (int i = 0; i &lt; s.Length; i++)
+{
+    Button b = new Button();
+    b.Left = i * 30;
+    b.Width = 30;
+
+    if (s[i] == 'K') b.BackColor = Color.Blue;
+    if (s[i] == 'F') b.BackColor = Color.Fuchsia;
+
+    Controls.Add(b);
+}
+</code></pre>
+<h3 id="objektumok-tipusanak-megallapitasa">Objektumok típusának megállapítása</h3>
+<p>Az alábbi kódrészlet az űrlapon szereplő vezérlők közül a gombokat fuksziára színezi, a címkéket nem fuksziára. Ez a megoldás felhasználható annak eldöntésére, hogy falnak vagy a célnak ütköztünk.</p>
+<pre><code class="language-csharp">//Bejárjuk egy iterációval az űrlap összes vezérlőjét, azaz a Controls gyűjteményt
+foreach (var elem in Controls)
+{
+    //Az épp vizsgált elem Button?
+    if (elem is Button)
+    {
+        //Ha igen, cast-oljuk Buttonná, és színezzük
+        Button b = (Button)elem;
+        b.BackColor = Color.Fuchsia;
+    }
+
+
+    //Az épp vizsgált elem Label?
+    if (elem is Label)
+    {
+        //Ha igen, cast-oljuk Labellé, és színezzük
+        Label l = (Label)elem;
+        b.BackColor = Color.Blue;
+    }
+}
+</code></pre>
+
+</article>
+
+<a class="github-fork-ribbon" href="https://github.com/sindresorhus/github-markdown-css" data-ribbon="Fork me on GitHub" title="Fork me on GitHub">Fork me on GitHub</a>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+<script src="../../assets/article.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/components/prism-core.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/autoloader/prism-autoloader.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/line-numbers/prism-line-numbers.js"></script>
+
+<!-- Video wrap -->
+<div id="inlineVideo_template" class="jump nodisplay">
+    <video id="centvideo" playsinline controls></video>
+    <div></div>
+</div>
+</body>
+</html>

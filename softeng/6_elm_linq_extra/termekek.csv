@@ -1,0 +1,551 @@
+﻿01010001T;félfamentes rajzlap A4 (10 lap);342;3000;csomag;Béla;2016;7;12;127;rajzlap;9;Lapos;1016 Budapest Krisztina krt. 87-89.
+01010110T;Fotópapír A/4 fényes;30;200;db;Béla;2016;7;12;44;fotópapír;9;Lapos;1016 Budapest Krisztina krt. 87-89.
+01010304T;Öntapadós hologramos papír A/4;59;1100;db;Sára;2016;7;11;112;öntapadó;8;Havanna;1181 Budapest Havanna u. 3
+01020299T;Oklevél A/4 egyszínű;48;6600;db;Béla;2016;7;7;110;oklevél;9;Lapos;1016 Budapest Krisztina krt. 87-89.
+01020300T;Oklevél A/4 színes;55;200;db;Béla;2016;7;12;110;oklevél;9;Lapos;1016 Budapest Krisztina krt. 87-89.
+01030091T;Emléklap A/5;26;200;db;Béla;2016;7;12;33;emléklap;7;Báthory;1152 Budapest Báthory u. 2.
+01030092T;Esküvői meghívó;59;100;db;Sára;2016;7;13;98;meghívó;9;Lapos;1016 Budapest Krisztina krt. 87-89.
+01040307T;Pausz papír A/4;15;200;ív;Sára;2016;7;13;115;pausz;8;Havanna;1181 Budapest Havanna u. 3
+01040502T;Előlap spirálhoz;25;100;db;Sára;2016;7;13;31;előlap;5;NAGY;2089 Telki Nefelejcs u. 27
+01080093T;Fax papír 15 m;161;300;db;Sára;2016;7;13;34;fax papír;9;Lapos;1016 Budapest Krisztina krt. 87-89.
+01080512T;Öntapadó A/4;4575;100;doboz;Sára;2016;7;13;112;öntapadó;5;NAGY;2089 Telki Nefelejcs u. 27
+01080513T;Selyemfényű karton A/4;38;100;ív;Sára;2016;7;11;83;karton;8;Havanna;1181 Budapest Havanna u. 3
+01090498T;Műnyomó 300g 17,5*20;3;1800;ív;Mari;2016;7;6;101;műnyomó;8;Havanna;1181 Budapest Havanna u. 3
+01090499T;Color Copy A/4 250 g;15;1500;Ív;Sára;2016;7;9;21;color copy;6;Veresegyházi;2112 Veresegyház Új iskola u. 10.
+01090500T;Color Copy A4 200 g;14;100;Ív;Béla;2016;7;4;21;color copy;9;Lapos;1016 Budapest Krisztina krt. 87-89.
+01090501T;"Kreatív A/4 300g ";4;100;Ív;Béla;2016;7;1;90;kreatív;8;Havanna;1181 Budapest Havanna u. 3
+01090515T;Színes A/3 160 gr IQ;11;400;ív;Béla;2016;7;1;83;karton;5;NAGY;2089 Telki Nefelejcs u. 27
+01090516T;Színes karton A4;25;1000;ív;Béla;2016;7;1;83;karton;9;Lapos;1016 Budapest Krisztina krt. 87-89.
+01090517T;Színes ofszet B/4;4;1000;ív;Béla;2016;7;1;109;ofszet;7;Báthory;1152 Budapest Báthory u. 2.
+01100070T;Dekorációs karton;73;600;ív;Béla;2016;7;5;83;karton;5;NAGY;2089 Telki Nefelejcs u. 27
+01100071T;Dekorációs karton arany, ezüst;89;3100;ív;Sára;2016;7;6;83;karton;7;Báthory;1152 Budapest Báthory u. 2.
+01100072T;Dipa A/4 keretezett;9;400;ív;Sára;2016;7;6;26;dipa;9;Lapos;1016 Budapest Krisztina krt. 87-89.
+01100094T;Fénymásoló papír DataCopy;845;300;csomag;Sára;2016;7;2;36;fénymásoló papír;9;Lapos;1016 Budapest Krisztina krt. 87-89.
+01100095T;Fénymásoló papír GetCopy;728;200;csomag;Sára;2016;7;1;36;fénymásoló papír;9;Lapos;1016 Budapest Krisztina krt. 87-89.
+01100096T;Fénymásoló papír Qconnect;728;500;csomag;Sára;2016;7;1;36;fénymásoló papír;5;NAGY;2089 Telki Nefelejcs u. 27
+01100496T;Színes másoló a/4 80g;1500;300;csomag;Sára;2016;7;1;21;color copy;5;NAGY;2089 Telki Nefelejcs u. 27
+01100497T;"Color Copy 160 g-os ";14;100;ív;Béla;2016;7;5;21;color copy;5;NAGY;2089 Telki Nefelejcs u. 27
+01100503T;Color Copy A4 120 g;10;900;ív;Béla;2016;7;5;21;color copy;6;Veresegyházi;2112 Veresegyház Új iskola u. 10.
+01100504T;Fehér másoló A/3;1488;1000;csomag;Sára;2016;7;10;36;fénymásoló papír;6;Veresegyházi;2112 Veresegyház Új iskola u. 10.
+01100505T;Fehér másoló A/4;686;200;csomag;Sára;2016;7;10;36;fénymásoló papír;6;Veresegyházi;2112 Veresegyház Új iskola u. 10.
+01100509T;Márványos A/4;40;100;ív;Sára;2016;7;12;83;karton;6;Veresegyházi;2112 Veresegyház Új iskola u. 10.
+01100510T;"Kreatív A/4 120g ";13;200;ív;Sára;2016;7;12;90;kreatív;5;NAGY;2089 Telki Nefelejcs u. 27
+02010028T;"Árazószalag ";106;100;db;Sára;2016;7;16;10;árazószalag;9;Lapos;1016 Budapest Krisztina krt. 87-89.
+02020029T;Átírótömb A/6;115;200;db;Sára;2016;7;19;11;átírótömb;8;Havanna;1181 Budapest Havanna u. 3
+02020032T;"Beírókönyv A5 ";133;200;db;Sára;2016;7;16;13;beírókönyv;8;Havanna;1181 Budapest Havanna u. 3
+02020033T;Beírókönyv A4;328;100;db;Sára;2016;7;11;13;beírókönyv;5;NAGY;2089 Telki Nefelejcs u. 27
+02020037T;Bevételi pénztárbizonylat 3×25;144;300;db;Sára;2016;7;11;116;pénztárbizonylat;6;Veresegyházi;2112 Veresegyház Új iskola u. 10.
+02020245T;Kiadási pénztárbizonylat 2×25;103;400;db;Sára;2016;7;11;116;pénztárbizonylat;7;Báthory;1152 Budapest Báthory u. 2.
+02020444T;Határidő napló A/6;464;2700;db;Sára;2016;7;11;62;határidő napló;9;Lapos;1016 Budapest Krisztina krt. 87-89.
+02030040T;Boríték LA 4 francia;6;100;db;Sára;2016;7;11;16;boríték;6;Veresegyházi;2112 Veresegyház Új iskola u. 10.
+02030041T;Boríték LC 5;6;2000;db;Mari;2016;7;12;16;boríték;9;Lapos;1016 Budapest Krisztina krt. 87-89.
+02030042T;Boríték LC 6;3;2000;db;Mari;2016;7;15;16;boríték;6;Veresegyházi;2112 Veresegyház Új iskola u. 10.
+02030043T;Boríték légp. kicsi;39;2500;db;Sára;2016;7;20;16;boríték;7;Báthory;1152 Budapest Báthory u. 2.
+02030044T;Boríték mintás;15;10000;db;Béla;2016;7;23;16;boríték;6;Veresegyházi;2112 Veresegyház Új iskola u. 10.
+02040002T;irodai tűzőgép;2100;10000;db;Béla;2016;7;23;149;tűzőgép;6;Veresegyházi;2112 Veresegyház Új iskola u. 10.
+02040025T;Álló irattartó karton;133;200;db;Béla;2016;7;23;70;iratgyűjtő;8;Havanna;1181 Budapest Havanna u. 3
+02040145T;Gemkapocs 28 mm;30;400;db;Béla;2016;7;23;48;gemkapocs;8;Havanna;1181 Budapest Havanna u. 3
+02040146T;Gemkapocs ICO;48;3200;db;Béla;2016;7;23;48;gemkapocs;7;Báthory;1152 Budapest Báthory u. 2.
+02040147T;Genotherm lefűzhető A/5;8;1500;db;Béla;2016;7;23;51;genotherm;8;Havanna;1181 Budapest Havanna u. 3
+02040148T;Genotherm lefűzhető A4 10db-os;63;200;csomag;Béla;2016;7;18;51;genotherm;9;Lapos;1016 Budapest Krisztina krt. 87-89.
+02040149T;Genotherm A4 10db-os;110;4700;csomag;Béla;2016;7;18;51;genotherm;7;Báthory;1152 Budapest Báthory u. 2.
+02040176T;Gyorsfűző dosszié fehér;18;1200;db;Sára;2016;7;23;58;gyorsfűző;7;Báthory;1152 Budapest Báthory u. 2.
+02040177T;Gyorsfűző műa.;30;200;db;Béla;2016;7;21;58;gyorsfűző;5;NAGY;2089 Telki Nefelejcs u. 27
+02040178T;Gyorsfűző műa.;35;1000;db;Béla;2016;7;21;58;gyorsfűző;8;Havanna;1181 Budapest Havanna u. 3
+02040194T;Hibajav.roll.Pritt 4,2mm;794;500;db;Béla;2016;7;21;66;hibajavító;8;Havanna;1181 Budapest Havanna u. 3
+02040195T;Hibajavító ecsetes Aqua;185;400;db;Béla;2016;7;19;66;hibajavító;5;NAGY;2089 Telki Nefelejcs u. 27
+02040196T;Hibajavító készlet Blanco;273;100;db;Béla;2016;7;19;66;hibajavító;7;Báthory;1152 Budapest Báthory u. 2.
+02040197T;"Hibajavító lap ";81;100;db;Béla;2016;7;19;66;hibajavító;9;Lapos;1016 Budapest Krisztina krt. 87-89.
+02040198T;Hibajavító roller 5 mm;133;200;db;Béla;2016;7;19;66;hibajavító;7;Báthory;1152 Budapest Báthory u. 2.
+02040199T;Hibajavító roller Pax;286;300;db;Béla;2016;7;19;66;hibajavító;7;Báthory;1152 Budapest Báthory u. 2.
+02040200T;Hibajavító Kores mini pen;278;300;db;Mari;2016;7;14;66;hibajavító;6;Veresegyházi;2112 Veresegyház Új iskola u. 10.
+02040206T;Írásvetítő fólia;81;100;db;Mari;2016;7;14;155;írásvetítő fólia;8;Havanna;1181 Budapest Havanna u. 3
+02040207T;Iratgyűjtő ESSELTE ablakos;19;1500;db;Mari;2016;7;14;70;iratgyűjtő;6;Veresegyházi;2112 Veresegyház Új iskola u. 10.
+02040208T;Iratgyűjtő fehér;19;400;db;Mari;2016;7;19;70;iratgyűjtő;8;Havanna;1181 Budapest Havanna u. 3
+02040209T;Iratsín fehér;44;600;db;Mari;2016;7;19;72;iratsín;7;Báthory;1152 Budapest Báthory u. 2.
+02040210T;Iratsín kék;89;2500;db;Mari;2016;7;19;72;iratsín;6;Veresegyházi;2112 Veresegyház Új iskola u. 10.
+02040211T;Iratrendező ESSELTE;243;700;db;Béla;2016;7;14;71;iratrendező;9;Lapos;1016 Budapest Krisztina krt. 87-89.
+02040214T;Iromány fedél feles;59;300;db;Mari;2016;7;11;74;irodaszer;5;NAGY;2089 Telki Nefelejcs u. 27
+02040290T;Naptár 24-es;89;300;db;Mari;2016;7;10;103;naptár;8;Havanna;1181 Budapest Havanna u. 3
+02040291T;Naptárhát kicsi;15;1400;db;Mari;2016;7;10;104;naptárhát;8;Havanna;1181 Budapest Havanna u. 3
+02040292T;Naptárhát nagy;78;6900;db;Sára;2016;7;9;104;naptárhát;9;Lapos;1016 Budapest Krisztina krt. 87-89.
+02040293T;Névjegytartó kicsi;310;9000;db;Sára;2016;7;9;105;névjegytartó;9;Lapos;1016 Budapest Krisztina krt. 87-89.
+02040294T;Notesz A/5 sima;103;300;db;Béla;2016;7;7;106;notesz;5;NAGY;2089 Telki Nefelejcs u. 27
+02040295T;Notesz A/5 sima spirál;89;4100;db;Mari;2016;7;11;106;notesz;9;Lapos;1016 Budapest Krisztina krt. 87-89.
+02040296T;Notesz A/6 College;56;2000;db;Mari;2016;7;14;106;notesz;6;Veresegyházi;2112 Veresegyház Új iskola u. 10.
+02040297T;Notesz sima spirál College;103;1900;db;Mari;2016;7;14;106;notesz;9;Lapos;1016 Budapest Krisztina krt. 87-89.
+02040298T;Notesz mintás;44;300;db;Mari;2016;7;14;106;notesz;6;Veresegyházi;2112 Veresegyház Új iskola u. 10.
+02040308T;Pénztárgépsz. 2 pl. nem öníró;81;300;db;Mari;2016;7;16;117;pénztárgépszalag;9;Lapos;1016 Budapest Krisztina krt. 87-89.
+02040309T;Pénztárgépszalag 2pl SC 57.5/60;93;100;db;Mari;2016;7;16;117;pénztárgépszalag;6;Veresegyházi;2112 Veresegyház Új iskola u. 10.
+02040401T;Tűzőgép Boxer 10;339;300;db;Mari;2016;7;21;149;tűzőgép;8;Havanna;1181 Budapest Havanna u. 3
+02040402T;"Tűzőgép Boxer ";286;900;db;Mari;2016;7;21;149;tűzőgép;5;NAGY;2089 Telki Nefelejcs u. 27
+02040403T;Tűzőgép SAX 239;1351;1100;db;Mari;2016;7;21;149;tűzőgép;5;NAGY;2089 Telki Nefelejcs u. 27
+02040404T;Tűzőgép EAGLE;405;300;db;Mari;2016;7;21;149;tűzőgép;8;Havanna;1181 Budapest Havanna u. 3
+02040405T;Tűzőkapocs 10-es;44;300;csomag;Mari;2016;7;22;150;tűzőkapocs;7;Báthory;1152 Budapest Báthory u. 2.
+02040406T;Tűzőkapocs 24/6;34;4200;csomag;Mari;2016;7;21;150;tűzőkapocs;9;Lapos;1016 Budapest Krisztina krt. 87-89.
+02040506T;Fólia tasakos A4 125 mik.;44;100;ív;Mari;2016;7;24;43;fólia;9;Lapos;1016 Budapest Krisztina krt. 87-89.
+02040507T;Fólia tasakos A4 80 mik.;40;100;ív;Mari;2016;7;23;43;fólia;8;Havanna;1181 Budapest Havanna u. 3
+02040508T;Fólia tasakos A4100 mik.;44;100;ív;Sára;2016;7;28;43;fólia;8;Havanna;1181 Budapest Havanna u. 3
+02050460T;Boríték C/4-es;15;200;db;Mari;2016;7;26;16;boríték;5;NAGY;2089 Telki Nefelejcs u. 27
+02050461T;Boríték B/4-es;18;100;db;Béla;2016;7;23;16;boríték;8;Havanna;1181 Budapest Havanna u. 3
+02060034T;"Bélyegzőfesték ";297;700;db;Béla;2016;7;23;15;bélyegzőfesték;9;Lapos;1016 Budapest Krisztina krt. 87-89.
+02060038T;Bélyegző IDEAL 50;780;100;db;Béla;2016;7;23;14;bélyegző;8;Havanna;1181 Budapest Havanna u. 3
+02060039T;Bélyegző párna;650;100;db;Béla;2016;7;26;14;bélyegző;6;Veresegyházi;2112 Veresegyház Új iskola u. 10.
+02060447T;Bélyegző pocket;1377;900;db;Mari;2016;7;27;14;bélyegző;6;Veresegyházi;2112 Veresegyház Új iskola u. 10.
+02060448T;Bélyegző RP 18-47;1147;1200;db;Sára;2016;7;29;14;bélyegző;7;Báthory;1152 Budapest Báthory u. 2.
+02080069T;CD tartó tok;30;400;db;Sára;2016;7;29;17;cd tok;8;Havanna;1181 Budapest Havanna u. 3
+02080081T;Dvd;133;1300;db;Sára;2016;7;24;29;dvd;9;Lapos;1016 Budapest Krisztina krt. 87-89.
+02080109T;Floppy lemez;51;500;db;Mari;2016;7;27;42;floppy;7;Báthory;1152 Budapest Báthory u. 2.
+02080226T;Kapocskiszedő;106;1300;db;Béla;2016;7;29;82;kapocskiszedő;8;Havanna;1181 Budapest Havanna u. 3
+02080431T;Álló irattartó;214;200;db;Sára;2016;7;28;73;irattartó;8;Havanna;1181 Budapest Havanna u. 3
+02080432T;Tokos iratrendező;259;1100;db;Sára;2016;7;28;71;iratrendező;5;NAGY;2089 Telki Nefelejcs u. 27
+02080433T;Ragasztószalag 19 mm-es;55;200;db;Sára;2016;7;28;125;ragasztószalag;9;Lapos;1016 Budapest Krisztina krt. 87-89.
+02080434T;Mappa müa A/4;210;600;db;Mari;2016;7;26;96;mappa;8;Havanna;1181 Budapest Havanna u. 3
+02080435T;Mappa bemutató;184;10000;db;Sára;2016;7;28;96;mappa;9;Lapos;1016 Budapest Krisztina krt. 87-89.
+02080436T;Irattartó müa. boríték A/4;66;800;db;Mari;2016;7;25;73;irattartó;7;Báthory;1152 Budapest Báthory u. 2.
+02080449T;Térképtű színes;103;100;csomag;Mari;2016;7;23;142;térképtű;6;Veresegyházi;2112 Veresegyház Új iskola u. 10.
+02080450T;Gémkapocs 28-as színes;44;200;csomag;Mari;2016;7;23;49;gémkapocs;8;Havanna;1181 Budapest Havanna u. 3
+02080451T;Gémkapocs 50-es;103;100;csomag;Mari;2016;7;23;49;gémkapocs;5;NAGY;2089 Telki Nefelejcs u. 27
+02080452T;Tűzőgép mini;438;200;db;Mari;2016;7;18;149;tűzőgép;6;Veresegyházi;2112 Veresegyház Új iskola u. 10.
+02080453T;Lyukasztó EAGLE;526;600;db;Mari;2016;7;19;95;lyukasztó;7;Báthory;1152 Budapest Báthory u. 2.
+02080454T;Lyukasztó BOXER;765;400;db;Sára;2016;7;24;95;lyukasztó;9;Lapos;1016 Budapest Krisztina krt. 87-89.
+02080455T;Festékpatron BCI-3BK;625;900;db;Mari;2016;7;22;40;festékpatron;6;Veresegyházi;2112 Veresegyház Új iskola u. 10.
+02080456T;Genoterm HERLITZ 10-es;89;500;csomag;Béla;2016;7;21;50;genoterm;7;Báthory;1152 Budapest Báthory u. 2.
+02080511T;Oki toner C;14250;100;db;Béla;2016;7;20;147;toner;8;Havanna;1181 Budapest Havanna u. 3
+02080514T;"Spirál 1/4 ";45;300;db;Béla;2016;7;20;131;spirál;9;Lapos;1016 Budapest Krisztina krt. 87-89.
+03010342T;Ragasztószalag  TIXO;15;100;db;Béla;2016;7;25;125;ragasztószalag;9;Lapos;1016 Budapest Krisztina krt. 87-89.
+03010344T;Ragasztószalag nagy 12 mm;63;1100;db;Béla;2016;7;25;125;ragasztószalag;7;Báthory;1152 Budapest Báthory u. 2.
+03010345T;Ragasztószalag széles barna;166;500;db;Béla;2016;7;25;125;ragasztószalag;6;Veresegyházi;2112 Veresegyház Új iskola u. 10.
+03050076T;Díszkötöző szalag metál nagy;26;800;db;Béla;2016;7;25;28;díszkötöző;8;Havanna;1181 Budapest Havanna u. 3
+03050077T;Diszkötöző szalag arany;44;100;db;Mari;2016;7;24;28;díszkötöző;8;Havanna;1181 Budapest Havanna u. 3
+03050078T;Díszkötöző szalag metál kicsi;15;100;db;Mari;2016;7;21;28;díszkötöző;8;Havanna;1181 Budapest Havanna u. 3
+03050079T;Díszkötöző szalag vékony;15;40000;db;Mari;2016;7;20;28;díszkötöző;8;Havanna;1181 Budapest Havanna u. 3
+03050080T;Diszkötöző széles szalag;81;26000;db;Béla;2016;7;17;28;díszkötöző;6;Veresegyházi;2112 Veresegyház Új iskola u. 10.
+03050457T;Ajándék cs. tasak kicsi;26;50000;db;Béla;2016;7;17;6;ajándék tasak;6;Veresegyházi;2112 Veresegyház Új iskola u. 10.
+03050458T;Ajándék cs. 2×100×70;148;8000;tekercs;Sára;2016;7;22;6;ajándék tasak;7;Báthory;1152 Budapest Báthory u. 2.
+03050459T;Talpas tasak;40;2600;db;Sára;2016;7;22;6;ajándék tasak;8;Havanna;1181 Budapest Havanna u. 3
+03080003T;Ajándék cs. tasak italos;185;400;db;Sára;2016;7;22;6;ajándék tasak;6;Veresegyházi;2112 Veresegyház Új iskola u. 10.
+03080004T;Ajándék cs. tasak italos, fólia;19;200;db;Sára;2016;7;22;6;ajándék tasak;6;Veresegyházi;2112 Veresegyház Új iskola u. 10.
+03080005T;Ajándék cs. tasak virágos nagy;290;2500;db;Sára;2016;7;27;6;ajándék tasak;8;Havanna;1181 Budapest Havanna u. 3
+03080006T;Ajándék cs. tasak mintás kicsi;26;100;db;Mari;2016;7;31;6;ajándék tasak;8;Havanna;1181 Budapest Havanna u. 3
+03080007T;Ajándék cs. tasak mintás nagy;206;2000;db;Mari;2016;7;27;6;ajándék tasak;9;Lapos;1016 Budapest Krisztina krt. 87-89.
+03080008T;Ajándék cs. tasak kicsi;103;2200;db;Mari;2016;7;27;6;ajándék tasak;7;Báthory;1152 Budapest Báthory u. 2.
+03080009T;Ajándék csom. 100x70 metál;148;700;db;Mari;2016;7;27;6;ajándék tasak;8;Havanna;1181 Budapest Havanna u. 3
+03080010T;Ajándék csom. 150x70;206;1900;db;Mari;2016;7;30;6;ajándék tasak;9;Lapos;1016 Budapest Krisztina krt. 87-89.
+03080011T;Ajándék cs. tasak közepes;148;2300;db;Mari;2016;7;28;6;ajándék tasak;6;Veresegyházi;2112 Veresegyház Új iskola u. 10.
+03080012T;Ajándék csom. 200x70;125;300;db;Mari;2016;7;28;6;ajándék tasak;8;Havanna;1181 Budapest Havanna u. 3
+03080013T;Ajándék csom. 50x70 húsvéti;64;600;db;Béla;2016;7;23;6;ajándék tasak;6;Veresegyházi;2112 Veresegyház Új iskola u. 10.
+03080014T;Ajándék csom. 70x50 metál;81;1000;db;Béla;2016;7;23;6;ajándék tasak;8;Havanna;1181 Budapest Havanna u. 3
+03080015T;Ajándék csom. gyűrt;169;1300;db;Béla;2016;7;24;6;ajándék tasak;9;Lapos;1016 Budapest Krisztina krt. 87-89.
+03080016T;házt.csom.  5 ív;110;200;csomag;Béla;2016;7;24;22;csomagoló;8;Havanna;1181 Budapest Havanna u. 3
+03080017T;iskolai csomagoló papír;148;100;db;Sára;2016;7;29;24;csomagoló papír;9;Lapos;1016 Budapest Krisztina krt. 87-89.
+03080018T;"Ajándék csom. gyűrt 50x70 ";121;2600;ív;Sára;2016;7;29;24;csomagoló papír;5;NAGY;2089 Telki Nefelejcs u. 27
+03080019T;Ajándék csom. Krepp;56;600;db;Béla;2016;7;27;24;csomagoló papír;5;NAGY;2089 Telki Nefelejcs u. 27
+03080020T;"Ajándék csom. nagy  ";44;800;ív;Sára;2016;7;22;24;csomagoló papír;9;Lapos;1016 Budapest Krisztina krt. 87-89.
+03080021T;Ajándék csom. vékony;23;200;db;Béla;2016;7;26;24;csomagoló papír;7;Báthory;1152 Budapest Báthory u. 2.
+03080030T;Ajándék cs. húsvéti 200x70;220;800;db;Mari;2016;7;22;24;csomagoló papír;7;Báthory;1152 Budapest Báthory u. 2.
+03080031T;Ajándék cs. húsvéti;106;2100;db;Sára;2016;7;27;24;csomagoló papír;6;Veresegyházi;2112 Veresegyház Új iskola u. 10.
+03080437T;Ajándék csomagoló tasak;185;3600;db;Sára;2016;7;27;6;ajándék tasak;7;Báthory;1152 Budapest Báthory u. 2.
+03080438T;Ajándék csomagoló tasak lézeres;214;3900;db;Sára;2016;7;28;6;ajándék tasak;7;Báthory;1152 Budapest Báthory u. 2.
+03080439T;Italtartó doboz;114;1100;db;Sára;2016;7;28;6;ajándék tasak;8;Havanna;1181 Budapest Havanna u. 3
+04020445T;Határidő napló 2010-s;728;600;db;Sára;2016;7;24;62;határidő napló;9;Lapos;1016 Budapest Krisztina krt. 87-89.
+04030234T;Képeslap karácsonyi;30;2100;db;Béla;2016;7;22;85;képeslap;5;NAGY;2089 Telki Nefelejcs u. 27
+04030235T;Képeslap karácsonyi borítékos;73;900;db;Béla;2016;7;22;85;képeslap;7;Báthory;1152 Budapest Báthory u. 2.
+04030236T;Képeslap karácsonyi WD;15;10000;db;Béla;2016;7;22;85;képeslap;6;Veresegyházi;2112 Veresegyház Új iskola u. 10.
+04030237T;Képeslap kerek;36;100;db;Béla;2016;7;17;85;képeslap;9;Lapos;1016 Budapest Krisztina krt. 87-89.
+04030238T;Képeslap stancolt;59;300;db;Sára;2016;7;18;85;képeslap;9;Lapos;1016 Budapest Krisztina krt. 87-89.
+04030239T;Képeslap stancolt szív;48;400;db;Béla;2016;7;21;85;képeslap;9;Lapos;1016 Budapest Krisztina krt. 87-89.
+04030240T;Képeslap virágos;14;1600;db;Sára;2016;7;20;85;képeslap;7;Báthory;1152 Budapest Báthory u. 2.
+04030241T;Képeslap virágos +boríték;44;2300;db;Mari;2016;7;25;85;képeslap;8;Havanna;1181 Budapest Havanna u. 3
+04030242T;Képeslap WD +boríték;118;2300;db;Mari;2016;7;25;85;képeslap;8;Havanna;1181 Budapest Havanna u. 3
+04030243T;Képkirakó Dirib-darab;195;1000;db;Mari;2016;7;25;86;képkirakó;7;Báthory;1152 Budapest Báthory u. 2.
+04030260T;Levélpapír A/4;15;1600;db;Béla;2016;7;26;93;levélpapír;6;Veresegyházi;2112 Veresegyház Új iskola u. 10.
+04030261T;Levélpapír állatos;140;1000;csomag;Béla;2016;7;26;93;levélpapír;6;Veresegyházi;2112 Veresegyház Új iskola u. 10.
+04030262T;Levélpapír sima;56;600;csomag;Sára;2016;7;29;93;levélpapír;6;Veresegyházi;2112 Veresegyház Új iskola u. 10.
+04030263T;Levélpapír szett;89;1300;db;Sára;2016;7;29;93;levélpapír;7;Báthory;1152 Budapest Báthory u. 2.
+04030264T;"Levélpapír szett ";74;300;db;Mari;2016;7;30;93;levélpapír;6;Veresegyházi;2112 Veresegyház Új iskola u. 10.
+04030265T;Levélpapír szett natur, mintás;103;200;db;Mari;2016;7;30;93;levélpapír;6;Veresegyházi;2112 Veresegyház Új iskola u. 10.
+04030266T;Levélpapír szett virágos;169;500;db;Mari;2016;7;30;93;levélpapír;7;Báthory;1152 Budapest Báthory u. 2.
+04030285T;Mikulás zacskó;11;300;db;Mari;2016;7;30;6;ajándék tasak;8;Havanna;1181 Budapest Havanna u. 3
+04030286T;Műanyag állatok;44;300;db;Mari;2016;7;30;25;dekor;5;NAGY;2089 Telki Nefelejcs u. 27
+04030287T;Műanyag foszforeszkáló állat;23;5100;db;Béla;2016;7;26;25;dekor;8;Havanna;1181 Budapest Havanna u. 3
+04030288T;Műanyag pohár 1 dl-es;3;100;db;Béla;2016;7;26;25;dekor;7;Báthory;1152 Budapest Báthory u. 2.
+04030289T;Műanyag pohár 5 cl-es;15;2400;db;Béla;2016;7;23;25;dekor;6;Veresegyházi;2112 Veresegyház Új iskola u. 10.
+04040090T;Emlékkönyv;526;7700;db;Béla;2016;7;23;32;emlékkönyv;6;Veresegyházi;2112 Veresegyház Új iskola u. 10.
+04040387T;Tenisz labda;81;600;db;Béla;2016;7;22;92;labda;8;Havanna;1181 Budapest Havanna u. 3
+04050022T;Álarc;89;500;db;Béla;2016;7;22;7;álarc;8;Havanna;1181 Budapest Havanna u. 3
+04050023T;Álarc fejdísz;144;1000;db;Sára;2016;7;27;7;álarc;8;Havanna;1181 Budapest Havanna u. 3
+04050024T;Álarc szemüveg;144;1000;db;Sára;2016;7;27;7;álarc;7;Báthory;1152 Budapest Báthory u. 2.
+04050035T;Bérlet tok;24;1500;db;Sára;2016;7;27;5;ajándék tárgy;5;NAGY;2089 Telki Nefelejcs u. 27
+04050073T;Díszdoboz kar.;61;300;db;Béla;2016;8;1;27;díszdoboz;9;Lapos;1016 Budapest Krisztina krt. 87-89.
+04050074T;Díszdoboz tollnak 2 db-os;66;100;db;Mari;2016;7;28;27;díszdoboz;7;Báthory;1152 Budapest Báthory u. 2.
+04050075T;Díszdoboz tollnak 2 db-os keskeny;44;100;db;Béla;2016;7;23;27;díszdoboz;5;NAGY;2089 Telki Nefelejcs u. 27
+04050171T;Gumilabda közepes;110;500;db;Béla;2016;7;23;92;labda;7;Báthory;1152 Budapest Báthory u. 2.
+04050187T;Hajgumi macis;66;700;db;Béla;2016;7;23;61;hajgumi;8;Havanna;1181 Budapest Havanna u. 3
+04050203T;Hűtőmágnes;24;300;db;Mari;2016;7;22;67;hűtőmágnes;7;Báthory;1152 Budapest Báthory u. 2.
+04050204T;Hűtőmágnes WD;169;300;db;Mari;2016;7;22;67;hűtőmágnes;8;Havanna;1181 Budapest Havanna u. 3
+04050220T;Játék autó;65;400;db;Mari;2016;7;27;79;játékautó;7;Báthory;1152 Budapest Báthory u. 2.
+04050221T;Játékautó Blisteres;133;500;db;Mari;2016;7;27;79;játékautó;7;Báthory;1152 Budapest Báthory u. 2.
+04050222T;Játékautó elemes;165;100;db;Mari;2016;7;27;79;játékautó;7;Báthory;1152 Budapest Báthory u. 2.
+04050223T;Játékautó mini;73;400;db;Sára;2016;8;1;79;játékautó;7;Báthory;1152 Budapest Báthory u. 2.
+04050224T;Jelzőkréta;48;800;db;Sára;2016;8;1;80;jelzőkréta;5;NAGY;2089 Telki Nefelejcs u. 27
+04050225T;Kártya mini Magyar;131;2800;db;Sára;2016;8;1;84;kártya;6;Veresegyházi;2112 Veresegyház Új iskola u. 10.
+04050250T;Kulcstartó autós;115;3700;db;Béla;2016;8;5;91;kulcstartó;8;Havanna;1181 Budapest Havanna u. 3
+04050251T;Kulcstartó billiárd golyós;148;3500;db;Béla;2016;8;9;91;kulcstartó;8;Havanna;1181 Budapest Havanna u. 3
+04050252T;Kulcstartó Csőrikés;124;1000;db;Béla;2016;8;5;91;kulcstartó;8;Havanna;1181 Budapest Havanna u. 3
+04050253T;Kulcstartó figurás;103;1200;db;Mari;2016;8;6;91;kulcstartó;8;Havanna;1181 Budapest Havanna u. 3
+04050254T;Kulcstartó intarziás állatos;155;800;db;Mari;2016;8;6;91;kulcstartó;9;Lapos;1016 Budapest Krisztina krt. 87-89.
+04050255T;Kulcstartó mesefigurás;36;2010;db;Mari;2016;8;9;91;kulcstartó;9;Lapos;1016 Budapest Krisztina krt. 87-89.
+04050256T;Kulcstartó nagyítós;129;2500;db;Mari;2016;8;9;91;kulcstartó;9;Lapos;1016 Budapest Krisztina krt. 87-89.
+04050267T;Logikai készlet;129;2000;db;Mari;2016;8;9;5;ajándék tárgy;5;NAGY;2089 Telki Nefelejcs u. 27
+04050268T;Lufi formázható;15;3000;db;Béla;2016;8;13;94;lufi;7;Báthory;1152 Budapest Báthory u. 2.
+04050269T;Lufi hullámos;11;1300;db;Béla;2016;8;13;94;lufi;6;Veresegyházi;2112 Veresegyház Új iskola u. 10.
+04050320T;Plüss  QX állatok;173;500;db;Sára;2016;8;12;119;plüss;9;Lapos;1016 Budapest Krisztina krt. 87-89.
+04050321T;Plüss kicsi;161;2000;db;Sára;2016;8;12;119;plüss;7;Báthory;1152 Budapest Báthory u. 2.
+04050322T;Plüss sárkány;314;100;db;Sára;2016;8;12;119;plüss;5;NAGY;2089 Telki Nefelejcs u. 27
+04050358T;"Strandlabda ";356;100;db;Sára;2016;8;8;132;strandlabda;8;Havanna;1181 Budapest Havanna u. 3
+04080270T;Mappa bőr A5;1765;200;db;Sára;2016;8;8;96;mappa;6;Veresegyházi;2112 Veresegyház Új iskola u. 10.
+04080271T;Mappa PVC villámzáras;264;100;db;Sára;2016;8;7;96;mappa;8;Havanna;1181 Budapest Havanna u. 3
+04080272T;Mappa PVC villámzáras  képes;360;1000;db;Mari;2016;8;11;96;mappa;9;Lapos;1016 Budapest Krisztina krt. 87-89.
+04080442T;Emlékkönyv;316;3000;db;Mari;2016;8;11;32;emlékkönyv;7;Báthory;1152 Budapest Báthory u. 2.
+04080443T;Emlékkönyv lakatos;449;1000;db;Sára;2016;8;6;32;emlékkönyv;7;Báthory;1152 Budapest Báthory u. 2.
+04110066T;Címke 8 db-os;26;700;db;Sára;2016;8;6;20;címke;7;Báthory;1152 Budapest Báthory u. 2.
+04110067T;Címke WD. állat;31;300;db;Sára;2016;8;9;20;címke;7;Báthory;1152 Budapest Báthory u. 2.
+04110068T;Címke egyszínű;20;200;db;Béla;2016;8;5;20;címke;9;Lapos;1016 Budapest Krisztina krt. 87-89.
+04110227T;Képeslap  borítékos;33;100;db;Mari;2016;8;10;85;képeslap;6;Veresegyházi;2112 Veresegyház Új iskola u. 10.
+04110228T;"Képeslap ""Nászajándék""";184;600;db;Béla;2016;8;10;85;képeslap;9;Lapos;1016 Budapest Krisztina krt. 87-89.
+04110229T;"Képeslap ""Részvét""";33;200;db;Béla;2016;8;10;85;képeslap;5;NAGY;2089 Telki Nefelejcs u. 27
+04110230T;"Képeslap humoros ";55;1000;db;Mari;2016;8;13;85;képeslap;6;Veresegyházi;2112 Veresegyház Új iskola u. 10.
+04110231T;Képeslap humoros borítékos;81;1000;db;Mari;2016;8;13;85;képeslap;5;NAGY;2089 Telki Nefelejcs u. 27
+04110232T;Képeslap humoros kaparós;51;900;db;Mari;2016;8;12;85;képeslap;8;Havanna;1181 Budapest Havanna u. 3
+04110233T;Képeslap humoros;89;700;db;Béla;2016;8;7;85;képeslap;5;NAGY;2089 Telki Nefelejcs u. 27
+04110258T;Lampion;73;1000;db;Mari;2016;8;3;5;ajándék tárgy;9;Lapos;1016 Budapest Krisztina krt. 87-89.
+04110273T;Matrica állatos;55;6200;db;Mari;2016;7;29;97;matrica;5;NAGY;2089 Telki Nefelejcs u. 27
+04110274T;Matrica autóra H;49;300;db;Béla;2016;7;24;97;matrica;5;NAGY;2089 Telki Nefelejcs u. 27
+04110275T;Matrica motoros kicsi;49;200;db;Mari;2016;7;22;97;matrica;9;Lapos;1016 Budapest Krisztina krt. 87-89.
+04110276T;Matrica Stickers nagy állatos;109;400;db;Mari;2016;7;22;97;matrica;9;Lapos;1016 Budapest Krisztina krt. 87-89.
+04110277T;Matrica Stickers szíves;93;900;db;Béla;2016;7;21;97;matrica;6;Veresegyházi;2112 Veresegyház Új iskola u. 10.
+04110278T;Matrica Test ékszer tattoo;161;500;db;Béla;2016;7;21;97;matrica;8;Havanna;1181 Budapest Havanna u. 3
+04110279T;Matrica tetoválás;168;700;db;Béla;2016;7;21;97;matrica;7;Báthory;1152 Budapest Báthory u. 2.
+04110280T;Matrica tetoválós kicsi;148;300;db;Mari;2016;7;23;97;matrica;9;Lapos;1016 Budapest Krisztina krt. 87-89.
+04110281T;"Matrica világítós ";175;100;db;Sára;2016;7;25;97;matrica;9;Lapos;1016 Budapest Krisztina krt. 87-89.
+04110282T;Matrica WD kicsi;56;300;db;Sára;2016;7;25;97;matrica;5;NAGY;2089 Telki Nefelejcs u. 27
+04110283T;Meghívó állatos;155;100;db;Sára;2016;7;23;98;meghívó;5;NAGY;2089 Telki Nefelejcs u. 27
+04110284T;Meghívó borítékos;169;100;db;Sára;2016;7;26;98;meghívó;5;NAGY;2089 Telki Nefelejcs u. 27
+04110362T;Szalvéta gyűjtőknek;183;1200;csomag;Sára;2016;7;26;133;szalvéta;5;NAGY;2089 Telki Nefelejcs u. 27
+05010026T;Alufólia 10 m-es;118;100;db;Sára;2016;7;26;9;alufólia;9;Lapos;1016 Budapest Krisztina krt. 87-89.
+05010027T;Alufólia 20 m-es;214;5900;db;Mari;2016;7;29;9;alufólia;6;Veresegyházi;2112 Veresegyház Új iskola u. 10.
+05010306T;Papízsebkendő,10db Szindy;20;5000;csomag;Sára;2016;8;3;114;papízsebkendő;8;Havanna;1181 Budapest Havanna u. 3
+05010369T;Szemetes zsák 60 literes;129;300;csomag;Sára;2016;8;3;135;szemetes;7;Báthory;1152 Budapest Báthory u. 2.
+05010370T;Szilvia csomagoló;89;100;db;Sára;2016;8;3;22;csomagoló;7;Báthory;1152 Budapest Báthory u. 2.
+05040310T;Pill.ragasztó;103;300;db;Béla;2016;7;30;124;ragasztó;8;Havanna;1181 Budapest Havanna u. 3
+05040348T;Rajzszeg színes;106;200;csomag;Béla;2016;7;30;128;rajzszeg;8;Havanna;1181 Budapest Havanna u. 3
+05040349T;Rajzszeg;63;600;db;Béla;2016;7;30;128;rajzszeg;6;Veresegyházi;2112 Veresegyház Új iskola u. 10.
+05050045T;Celofán;46;200;csomag;Béla;2016;7;30;18;celofán;8;Havanna;1181 Budapest Havanna u. 3
+05050046T;Celofán 50 db-os;73;100;db;Béla;2016;8;3;18;celofán;8;Havanna;1181 Budapest Havanna u. 3
+05050170T;Gumigyűrű;19;400;csomag;Béla;2016;8;8;53;gumigyűrű;9;Lapos;1016 Budapest Krisztina krt. 87-89.
+05050346T;Rágógumi Orbit;89;400;csomag;Béla;2016;8;8;126;rágógumi;9;Lapos;1016 Budapest Krisztina krt. 87-89.
+05050465T;Tapétavágó kés;40;1600;db;Mari;2016;8;9;140;tapétavágó;6;Veresegyházi;2112 Veresegyház Új iskola u. 10.
+05080340T;Ragasztó, Technokol 35g kék;144;200;db;Mari;2016;8;9;124;ragasztó;8;Havanna;1181 Budapest Havanna u. 3
+05080341T;Ragasztó, Technokol 35g piros;144;1100;db;Mari;2016;8;9;124;ragasztó;6;Veresegyházi;2112 Veresegyház Új iskola u. 10.
+05110359T;"Szalvéta ";176;100;csomag;Mari;2016;8;9;133;szalvéta;8;Havanna;1181 Budapest Havanna u. 3
+05110360T;Szalvéta egyszínű;118;1000;csomag;Béla;2016;8;6;133;szalvéta;6;Veresegyházi;2112 Veresegyház Új iskola u. 10.
+05110361T;Szalvéta Goma húsvéti;175;1500;csomag;Béla;2016;8;6;133;szalvéta;7;Báthory;1152 Budapest Báthory u. 2.
+05110363T;Szalvéta dekor;133;100;csomag;Béla;2016;8;6;133;szalvéta;9;Lapos;1016 Budapest Krisztina krt. 87-89.
+05110364T;Szalvéta kicsi virágos;161;300;csomag;Mari;2016;8;11;133;szalvéta;8;Havanna;1181 Budapest Havanna u. 3
+06010036T;Betűtartó sin;33;300;db;Béla;2016;8;8;78;iskolaszer;7;Báthory;1152 Budapest Báthory u. 2.
+06010082T;Ecset Centrum 10,11,12;40;200;db;Béla;2016;8;8;30;ecset;8;Havanna;1181 Budapest Havanna u. 3
+06010083T;Ecset Centrum 7,8,9;33;900;db;Sára;2016;8;9;30;ecset;6;Veresegyházi;2112 Veresegyház Új iskola u. 10.
+06010084T;Ecset Deák 2-es;60;200;db;Sára;2016;8;9;30;ecset;9;Lapos;1016 Budapest Krisztina krt. 87-89.
+06010085T;Ecset Lizzy 10-es;65;200;db;Sára;2016;8;9;30;ecset;5;NAGY;2089 Telki Nefelejcs u. 27
+06010086T;Ecset Nebulo 4-es;36;3600;db;Mari;2016;8;8;30;ecset;8;Havanna;1181 Budapest Havanna u. 3
+06010111T;"Füzet  A/4 ";68;600;db;Mari;2016;8;8;45;füzet;9;Lapos;1016 Budapest Krisztina krt. 87-89.
+06010112T;Füzet  A4 mintás;78;1500;db;Mari;2016;8;6;45;füzet;9;Lapos;1016 Budapest Krisztina krt. 87-89.
+06010113T;Füzet 31-32 szótár;34;4500;db;Sára;2016;8;11;45;füzet;8;Havanna;1181 Budapest Havanna u. 3
+06010114T;Füzet A/5 hangjegy 36/16;30;800;db;Béla;2016;8;11;45;füzet;6;Veresegyházi;2112 Veresegyház Új iskola u. 10.
+06010115T;Füzet A/5, mintás;48;100;db;Béla;2016;8;8;45;füzet;9;Lapos;1016 Budapest Krisztina krt. 87-89.
+06010201T;Hőmérő, műa.;36;1400;db;Mari;2016;8;10;78;iskolaszer;6;Veresegyházi;2112 Veresegyház Új iskola u. 10.
+06010202T;Hurkapálca 10 db-os;23;150;csomag;Béla;2016;8;12;78;iskolaszer;6;Veresegyházi;2112 Veresegyház Új iskola u. 10.
+06010305T;Papírcenti 100 cm-es;9;100;db;Béla;2016;8;12;78;iskolaszer;6;Veresegyházi;2112 Veresegyház Új iskola u. 10.
+06010343T;Ragasztószalag 19 mm-es SCOTCH+ tépő;426;1600;db;Béla;2016;8;12;124;ragasztó;6;Veresegyházi;2112 Veresegyház Új iskola u. 10.
+06010365T;Számegyenes;36;900;db;Béla;2016;8;10;78;iskolaszer;8;Havanna;1181 Budapest Havanna u. 3
+06010366T;Számológép Roxin;508;300;db;Béla;2016;8;11;134;számológép;6;Veresegyházi;2112 Veresegyház Új iskola u. 10.
+06010367T;Számolókorong;35;300;csomag;Béla;2016;8;11;78;iskolaszer;6;Veresegyházi;2112 Veresegyház Új iskola u. 10.
+06010368T;Számolópálca;61;900;csomag;Sára;2016;8;10;78;iskolaszer;5;NAGY;2089 Telki Nefelejcs u. 27
+06010373T;Színes papír I.II-IV.V-VIII-ig;43;2200;db;Sára;2016;8;10;78;iskolaszer;8;Havanna;1181 Budapest Havanna u. 3
+06010374T;Szorzótábla műanyag;45;1600;db;Béla;2016;8;8;78;iskolaszer;8;Havanna;1181 Budapest Havanna u. 3
+06010375T;Szögmérő 180 fokos műa.;24;200;db;Béla;2016;8;8;137;szögmérő;6;Veresegyházi;2112 Veresegyház Új iskola u. 10.
+06010376T;Szögmérő papír;11;100;db;Béla;2016;8;3;137;szögmérő;6;Veresegyházi;2112 Veresegyház Új iskola u. 10.
+06010377T;Szögmérő színes;8;200;db;Mari;2016;8;1;137;szögmérő;9;Lapos;1016 Budapest Krisztina krt. 87-89.
+06040087T;Ecset Nebuló 10-es;79;4000;db;Mari;2016;8;1;30;ecset;7;Báthory;1152 Budapest Báthory u. 2.
+06040088T;Egészségügyi könyv;51;4400;db;Sára;2016;8;1;78;iskolaszer;7;Báthory;1152 Budapest Báthory u. 2.
+06040089T;Ellenőrzőborító;5;200;db;Sára;2016;8;1;78;iskolaszer;7;Báthory;1152 Budapest Báthory u. 2.
+06040172T;Gumis mappa csomagolt;195;2000;db;Mari;2016;8;6;96;mappa;7;Báthory;1152 Budapest Báthory u. 2.
+06040173T;Gumis mappa fóliázott állatos;211;1800;db;Mari;2016;8;6;96;mappa;7;Báthory;1152 Budapest Báthory u. 2.
+06040174T;"Gumis mappa ";148;7000;db;Sára;2016;8;1;96;mappa;6;Veresegyházi;2112 Veresegyház Új iskola u. 10.
+06040175T;Gumis mappa Köbüki;191;400;db;Sára;2016;8;1;96;mappa;8;Havanna;1181 Budapest Havanna u. 3
+06040179T;Gyurma színes 200 g-os;180;100;db;Sára;2016;8;1;59;gyurma;6;Veresegyházi;2112 Veresegyház Új iskola u. 10.
+06040180T;Gyurma színes natúr;228;400;db;Mari;2016;8;4;59;gyurma;8;Havanna;1181 Budapest Havanna u. 3
+06040181T;Gyűjtőlap A/4;8;2600;db;Mari;2016;8;1;78;iskolaszer;6;Veresegyházi;2112 Veresegyház Új iskola u. 10.
+06040182T;Gyűrűskönyv bet. A/4;184;2600;db;Mari;2016;8;1;60;gyűrűskönyv;7;Báthory;1152 Budapest Báthory u. 2.
+06040183T;Gyűrűskönyv bet. A/5;95;200;db;Mari;2016;8;1;60;gyűrűskönyv;9;Lapos;1016 Budapest Krisztina krt. 87-89.
+06040184T;Gyűrűskönyv betét A/5;218;100;db;Mari;2016;7;27;60;gyűrűskönyv;9;Lapos;1016 Budapest Krisztina krt. 87-89.
+06040185T;Gyűrűskönyv;581;1800;db;Mari;2016;7;27;60;gyűrűskönyv;9;Lapos;1016 Budapest Krisztina krt. 87-89.
+06040186T;Gyűrűskönyv színes;699;700;db;Sára;2016;7;27;60;gyűrűskönyv;6;Veresegyházi;2112 Veresegyház Új iskola u. 10.
+06040205T;Indigó Pelikán;15;200;db;Sára;2016;7;28;68;indigó;5;NAGY;2089 Telki Nefelejcs u. 27
+06040206T;kék indigó;12;100;db;Sára;2016;12;11;68;indigó;5;NAGY;2089 Telki Nefelejcs u. 27
+06040212T;Írólap 10-50 ffam.;29;400;db;Sára;2016;8;1;75;írólap;8;Havanna;1181 Budapest Havanna u. 3
+06040213T;"Írólap 20-50 ";34;100;db;Sára;2016;7;28;75;írólap;8;Havanna;1181 Budapest Havanna u. 3
+06040246T;Körző;161;100;db;Béla;2016;7;24;89;körző;5;NAGY;2089 Telki Nefelejcs u. 27
+06040247T;Körzőhegy grafit;30;2200;db;Béla;2016;7;24;89;körző;8;Havanna;1181 Budapest Havanna u. 3
+06040248T;Körző maped;243;300;db;Béla;2016;7;21;89;körző;6;Veresegyházi;2112 Veresegyház Új iskola u. 10.
+06040323T;Post-it 51×38 100 lapos;36;200;db;Béla;2016;7;23;121;post-it;8;Havanna;1181 Budapest Havanna u. 3
+06040324T;Post-it 75×75 100 lapos;89;1500;db;Sára;2016;7;23;121;post-it;7;Báthory;1152 Budapest Báthory u. 2.
+06040325T;Radír gyümölcsös;40;2600;db;Béla;2016;7;20;122;radír;9;Lapos;1016 Budapest Krisztina krt. 87-89.
+06040326T;Radír KOH-I-NOR 80;19;100;db;Béla;2016;7;20;122;radír;8;Havanna;1181 Budapest Havanna u. 3
+06040327T;Radír Koh-i-nor 40;36;2200;db;Béla;2016;7;17;122;radír;9;Lapos;1016 Budapest Krisztina krt. 87-89.
+06040328T;Radír Maped;44;2400;db;Béla;2016;7;17;122;radír;8;Havanna;1181 Budapest Havanna u. 3
+06040329T;Radír stabilo;44;1700;db;Béla;2016;7;17;122;radír;6;Veresegyházi;2112 Veresegyház Új iskola u. 10.
+06040330T;"Radír Tikky 30 ";50;1100;db;Sára;2016;7;12;122;radír;7;Báthory;1152 Budapest Báthory u. 2.
+06040331T;"Radír Tikky 40 ";49;200;db;Sára;2016;7;12;122;radír;8;Havanna;1181 Budapest Havanna u. 3
+06040347T;Rajzlap A/4 10db ffam.;28;200;csomag;Sára;2016;7;12;127;rajzlap;5;NAGY;2089 Telki Nefelejcs u. 27
+06040350T;Regiszteres füzet A4;256;500;db;Béla;2016;7;12;129;regiszteres füzet;9;Lapos;1016 Budapest Krisztina krt. 87-89.
+06040351T;Regiszteres füzet A5 Hightech;203;200;db;Sára;2016;7;11;129;regiszteres füzet;5;NAGY;2089 Telki Nefelejcs u. 27
+06040352T;Rovatolt papír 20 íves;103;0;db;Mari;2016;7;16;78;iskolaszer;6;Veresegyházi;2112 Veresegyház Új iskola u. 10.
+06040353T;Sorvezető;8;600;db;Béla;2016;7;16;78;iskolaszer;5;NAGY;2089 Telki Nefelejcs u. 27
+06040354T;Sp.Füzet A/4  perforált, lyuk.;206;800;db;Sára;2016;7;20;45;füzet;5;NAGY;2089 Telki Nefelejcs u. 27
+06040355T;Sp.Füzet A/4 70-as;155;600;db;Béla;2016;7;21;45;füzet;8;Havanna;1181 Budapest Havanna u. 3
+06040356T;Sp.Füzet A/4  70es;144;100;db;Mari;2016;7;24;45;füzet;8;Havanna;1181 Budapest Havanna u. 3
+06040357T;Sp.Füzet A/5 70-es;89;4400;db;Mari;2016;7;24;45;füzet;6;Veresegyházi;2112 Veresegyház Új iskola u. 10.
+06040378T;Szövegkiemelő vékony;89;100;db;Mari;2016;7;24;138;szövegkiemelő;8;Havanna;1181 Budapest Havanna u. 3
+06040379T;"Szövegkiemelő ";93;200;db;Béla;2016;7;23;138;szövegkiemelő;9;Lapos;1016 Budapest Krisztina krt. 87-89.
+06040380T;Szövegkiemelő;78;500;db;Sára;2016;7;20;138;szövegkiemelő;5;NAGY;2089 Telki Nefelejcs u. 27
+06040381T;Szövegkiemelő Videotip;103;100;csomag;Béla;2016;7;22;138;szövegkiemelő;6;Veresegyházi;2112 Veresegyház Új iskola u. 10.
+06040382T;Táblafilc;633;500;csomag;Béla;2016;7;22;139;táblafilc;9;Lapos;1016 Budapest Krisztina krt. 87-89.
+06040383T;Taffet papír;19;300;db;Béla;2016;7;22;78;iskolaszer;6;Veresegyházi;2112 Veresegyház Új iskola u. 10.
+06040384T;Technika cs. I-II-III-IV;58;500;db;Béla;2016;7;22;78;iskolaszer;5;NAGY;2089 Telki Nefelejcs u. 27
+06040385T;Tempera szóló ezüst;96;100;db;Sára;2016;7;24;141;tempera;8;Havanna;1181 Budapest Havanna u. 3
+06040386T;Tempera szóló színes;48;100;db;Mari;2016;7;22;141;tempera;8;Havanna;1181 Budapest Havanna u. 3
+06040392T;Tolltartó 1 zipzáros;728;400;db;Sára;2016;7;17;146;tolltartó;7;Báthory;1152 Budapest Báthory u. 2.
+06040393T;Tolltartó 2 részes NG.;765;1000;db;Sára;2016;7;19;146;tolltartó;9;Lapos;1016 Budapest Krisztina krt. 87-89.
+06040394T;Tolltartó zipzáras;324;100;db;Béla;2016;7;18;146;tolltartó;5;NAGY;2089 Telki Nefelejcs u. 27
+06040395T;Tolltartó 2 zipzáros töltött;728;700;db;Béla;2016;7;18;146;tolltartó;7;Báthory;1152 Budapest Báthory u. 2.
+06040396T;Tolltartó Garfield;410;2900;db;Béla;2016;7;18;146;tolltartó;7;Báthory;1152 Budapest Báthory u. 2.
+06040397T;Tolltartó asztali;655;700;csomag;Sára;2016;7;17;146;tolltartó;8;Havanna;1181 Budapest Havanna u. 3
+06040398T;"Tolltartó hengeres ";411;100;db;Sára;2016;7;17;146;tolltartó;5;NAGY;2089 Telki Nefelejcs u. 27
+06040399T;Tombola tömb;125;100;db;Sára;2016;7;17;78;iskolaszer;7;Báthory;1152 Budapest Báthory u. 2.
+06040400T;Tornazsák;511;200;db;Sára;2016;7;17;78;iskolaszer;8;Havanna;1181 Budapest Havanna u. 3
+06040446T;Számológép tudományos;1173;200;db;Sára;2016;7;17;134;számológép;5;NAGY;2089 Telki Nefelejcs u. 27
+06050249T;Krepp papír;73;500;db;Mari;2016;7;15;78;iskolaszer;5;NAGY;2089 Telki Nefelejcs u. 27
+06050301T;"Olló gyerek ";133;100;db;Mari;2016;7;15;111;olló;8;Havanna;1181 Budapest Havanna u. 3
+06050302T;Olló Tagit 18 cm-es;176;400;db;Mari;2016;7;15;111;olló;5;NAGY;2089 Telki Nefelejcs u. 27
+06050303T;Olló, iskolai;161;100;db;Sára;2016;7;12;111;olló;7;Báthory;1152 Budapest Báthory u. 2.
+06080116T;Füzet A5 1-8 osz.-ig;34;200;db;Béla;2016;7;13;45;füzet;7;Báthory;1152 Budapest Báthory u. 2.
+06080117T;Füzetborító A/4 átlátszó;10;600;db;Mari;2016;7;14;46;füzetborító;6;Veresegyházi;2112 Veresegyház Új iskola u. 10.
+06080118T;Füzetborító átlátszó A5;8;300;db;Mari;2016;7;9;46;füzetborító;6;Veresegyházi;2112 Veresegyház Új iskola u. 10.
+06080119T;Füzetborító mesefig.;19;100;db;Mari;2016;7;9;46;füzetborító;2;Nagyszeben;1182 Budapest Nagyszeben u. 12.
+06080120T;Füzetborító öntapadó kicsi;23;100;db;Béla;2016;7;8;46;füzetborító;9;Lapos;1016 Budapest Krisztina krt. 87-89.
+06080121T;Füzetborító öntapadó tekercses;195;300;csomag;Béla;2016;7;8;46;füzetborító;7;Báthory;1152 Budapest Báthory u. 2.
+06080122T;Füzetborító öntapadós nagy;19;300;db;Béla;2016;7;5;46;füzetborító;7;Báthory;1152 Budapest Báthory u. 2.
+06080123T;Füzettartó A/4 keménytáblás;551;2000;db;Sára;2016;7;10;47;füzettartó;6;Veresegyházi;2112 Veresegyház Új iskola u. 10.
+06080124T;Füzettartó A/4 keménytáblás;508;900;db;Mari;2016;7;14;47;füzettartó;6;Veresegyházi;2112 Veresegyház Új iskola u. 10.
+06080125T;Füzettartó A/5 vastag;411;400;db;Mari;2016;7;14;47;füzettartó;7;Báthory;1152 Budapest Báthory u. 2.
+06080126T;"Füzettartó A/5  ";203;1500;db;Mari;2016;7;9;47;füzettartó;9;Lapos;1016 Budapest Krisztina krt. 87-89.
+06080188T;Hegyező gép;875;900;db;Sára;2016;7;14;64;hegyező;8;Havanna;1181 Budapest Havanna u. 3
+06080189T;Hegyező műanyag dupla;30;500;db;Sára;2016;7;9;64;hegyező;6;Veresegyházi;2112 Veresegyház Új iskola u. 10.
+06080190T;Hegyező műanyag egyes;23;1000;db;Sára;2016;7;9;64;hegyező;6;Veresegyházi;2112 Veresegyház Új iskola u. 10.
+06080191T;Hegyező tartályos egyes;30;300;db;Sára;2016;7;10;64;hegyező;8;Havanna;1181 Budapest Havanna u. 3
+06080192T;Hegyző fém 1 lyukú;70;200;db;Sára;2016;7;7;65;hegyző;9;Lapos;1016 Budapest Krisztina krt. 87-89.
+06080193T;Hegyző fém 2 lyukú;180;100;db;Sára;2016;7;7;65;hegyző;7;Báthory;1152 Budapest Báthory u. 2.
+06080259T;Leckefüzet;161;0;db;Mari;2016;7;2;78;iskolaszer;6;Veresegyházi;2112 Veresegyház Új iskola u. 10.
+06080332T;Radírtoll betét ER100;74;1500;db;Mari;2016;7;2;123;radírtoll;5;NAGY;2089 Telki Nefelejcs u. 27
+06080333T;Radírtoll betét vastag;119;500;db;Béla;2016;7;1;123;radírtoll;7;Báthory;1152 Budapest Báthory u. 2.
+06080334T;"Ragasztó szalag KORES ";133;3000;db;Mari;2016;7;2;124;ragasztó;5;NAGY;2089 Telki Nefelejcs u. 27
+06080335T;Ragasztó 9 g Pax;110;200;db;Mari;2016;7;2;124;ragasztó;9;Lapos;1016 Budapest Krisztina krt. 87-89.
+06080336T;Ragasztó 8 g Pritt;81;4900;db;Mari;2016;7;2;124;ragasztó;9;Lapos;1016 Budapest Krisztina krt. 87-89.
+06080337T;Ragasztó Gyurma;293;100;db;Sára;2016;7;6;124;ragasztó;7;Báthory;1152 Budapest Báthory u. 2.
+06080338T;Ragasztó kenőfejes Nebuló;101;3600;db;Mari;2016;7;8;124;ragasztó;8;Havanna;1181 Budapest Havanna u. 3
+06080339T;Ragasztó kores;89;900;db;Mari;2016;7;11;124;ragasztó;5;NAGY;2089 Telki Nefelejcs u. 27
+06080407T;Vízfesték  12 színű nagy;249;100;db;Sára;2016;7;14;151;vízfesték;7;Báthory;1152 Budapest Báthory u. 2.
+06080408T;"Vízfesték 12 db-os ";210;100;db;Sára;2016;7;14;151;vízfesték;7;Báthory;1152 Budapest Báthory u. 2.
+06080409T;Vízfesték 12 színű kerek;180;100;db;Sára;2016;7;14;151;vízfesték;6;Veresegyházi;2112 Veresegyház Új iskola u. 10.
+06080410T;Vízfesték 12db-os kínai;176;100;db;Béla;2016;7;15;151;vízfesték;6;Veresegyházi;2112 Veresegyház Új iskola u. 10.
+06080411T;Vonalzó 15 cm-es ESSELTE;58;100;db;Sára;2016;7;18;152;vonalzó;8;Havanna;1181 Budapest Havanna u. 3
+06080412T;Vonalzó 16 cm-es LIZZY;30;100;db;Sára;2016;7;15;152;vonalzó;7;Báthory;1152 Budapest Báthory u. 2.
+06080413T;Vonalzó 30 cm;30;100;db;Sára;2016;7;18;152;vonalzó;8;Havanna;1181 Budapest Havanna u. 3
+06080414T;"Vonalzó 20 cm-es ";30;2600;db;Mari;2016;7;22;152;vonalzó;8;Havanna;1181 Budapest Havanna u. 3
+06080415T;Vonalzó 45 fokos;30;200;db;Mari;2016;7;22;152;vonalzó;9;Lapos;1016 Budapest Krisztina krt. 87-89.
+06080416T;Vonalzó 60 fokos;33;100;db;Mari;2016;7;22;152;vonalzó;6;Veresegyházi;2112 Veresegyház Új iskola u. 10.
+06080417T;Zászló papír;20;200;db;Mari;2016;7;22;153;zászló;5;NAGY;2089 Telki Nefelejcs u. 27
+06080422T;Füzettartó A/4;324;200;db;Mari;2016;7;22;78;iskolaszer;7;Báthory;1152 Budapest Báthory u. 2.
+06080423T;Beíró A/5 kockás;228;200;db;Mari;2016;7;22;12;beíró;5;NAGY;2089 Telki Nefelejcs u. 27
+06080424T;Füzetborító A/4 mintás;24;500;db;Béla;2016;7;26;46;füzetborító;9;Lapos;1016 Budapest Krisztina krt. 87-89.
+06080425T;Miliméterpapír;8;400;db;Sára;2016;7;30;99;miliméterpapír;6;Veresegyházi;2112 Veresegyház Új iskola u. 10.
+06080426T;Szótárfüzet Lizzy;161;300;db;Mari;2016;7;27;45;füzet;7;Báthory;1152 Budapest Báthory u. 2.
+06080427T;Ablakkréta;161;200;db;Sára;2016;7;23;78;iskolaszer;9;Lapos;1016 Budapest Krisztina krt. 87-89.
+06080428T;Ecsetkészlet;180;500;db;Sára;2016;7;23;30;ecset;8;Havanna;1181 Budapest Havanna u. 3
+06080429T;Meghívó ballagási;63;400;db;Sára;2016;7;26;98;meghívó;6;Veresegyházi;2112 Veresegyház Új iskola u. 10.
+06080430T;Öntapadős betűk;74;900;csomag;Béla;2016;7;22;78;iskolaszer;7;Báthory;1152 Budapest Báthory u. 2.
+06080440T;Gyurma 12 szinű;161;1900;csomag;Béla;2016;7;20;59;gyurma;5;NAGY;2089 Telki Nefelejcs u. 27
+06080441T;Gyurmakés;121;300;csomag;Béla;2016;7;21;59;gyurma;9;Lapos;1016 Budapest Krisztina krt. 87-89.
+07010136T;G.toll betét PAX;123;1800;db;Béla;2016;7;26;145;tollbetét;6;Veresegyházi;2112 Veresegyház Új iskola u. 10.
+07010137T;G.toll betét PAX tip.;48;600;db;Sára;2016;7;31;145;tollbetét;6;Veresegyházi;2112 Veresegyház Új iskola u. 10.
+07010138T;G.toll betét jumbo;33;1700;db;Mari;2016;8;2;145;tollbetét;8;Havanna;1181 Budapest Havanna u. 3
+07010139T;"G.toll betét S7L ";91;1000;db;Mari;2016;8;2;145;tollbetét;6;Veresegyházi;2112 Veresegyház Új iskola u. 10.
+07010140T;G.toll betét Stabilo;23;1200;db;Béla;2016;7;28;145;tollbetét;5;NAGY;2089 Telki Nefelejcs u. 27
+07010141T;G.toll betét X20;15;600;db;Béla;2016;7;25;145;tollbetét;7;Báthory;1152 Budapest Báthory u. 2.
+07010142T;G.toll betét Zebra F-0.7;228;100;db;Mari;2016;7;28;145;tollbetét;5;NAGY;2089 Telki Nefelejcs u. 27
+07010143T;G.toll betét Zebra H-0,7;78;200;db;Mari;2016;7;28;145;tollbetét;7;Báthory;1152 Budapest Báthory u. 2.
+07010144T;G.toll betét Zebra K-0,7;89;200;db;Béla;2016;7;25;145;tollbetét;9;Lapos;1016 Budapest Krisztina krt. 87-89.
+07010244T;Kerámiatoll;74;200;db;Béla;2016;7;25;144;toll;5;NAGY;2089 Telki Nefelejcs u. 27
+07010371T;Színes ceruza 6-os;99;2200;db;Sára;2016;7;25;136;színes;8;Havanna;1181 Budapest Havanna u. 3
+07010372T;Színes ceruza 12 szín;161;3000;db;Sára;2016;7;25;136;színes;7;Báthory;1152 Budapest Báthory u. 2.
+07030103T;Filctoll TINTEN PEN;53;300;db;Béla;2016;7;22;41;filctoll;8;Havanna;1181 Budapest Havanna u. 3
+07030104T;Filctoll vastag ARTIP;76;400;db;Sára;2016;7;23;41;filctoll;8;Havanna;1181 Budapest Havanna u. 3
+07030105T;Filctoll, alkoholos Centropen;114;200;db;Sára;2016;7;23;41;filctoll;5;NAGY;2089 Telki Nefelejcs u. 27
+07030106T;Filctoll, alkoholosOHP F-M-C;103;700;db;Mari;2016;7;21;41;filctoll;9;Lapos;1016 Budapest Krisztina krt. 87-89.
+07030107T;Filctoll, textil Edding 4500;276;1000;db;Mari;2016;7;21;41;filctoll;5;NAGY;2089 Telki Nefelejcs u. 27
+07030108T;Filctoll CD író;0;500;db;Mari;2016;7;21;41;filctoll;5;NAGY;2089 Telki Nefelejcs u. 27
+07040047T;Ceruza 2H-4B;39;200;db;Mari;2016;7;21;19;ceruza;5;NAGY;2089 Telki Nefelejcs u. 27
+07040048T;Ceruza arany, ezüst;55;1900;db;Mari;2016;7;21;19;ceruza;6;Veresegyházi;2112 Veresegyház Új iskola u. 10.
+07040049T;Ceruza Conté zöld;40;100;db;Mari;2016;7;21;19;ceruza;9;Lapos;1016 Budapest Krisztina krt. 87-89.
+07040050T;Ceruza Cseh;30;200;db;Mari;2016;7;21;19;ceruza;6;Veresegyházi;2112 Veresegyház Új iskola u. 10.
+07040051T;"Ceruza háromszög ";39;500;db;Mari;2016;7;21;19;ceruza;6;Veresegyházi;2112 Veresegyház Új iskola u. 10.
+07040052T;Ceruza 2H-3B Koh-i-nor;53;100;db;Sára;2016;7;23;19;ceruza;5;NAGY;2089 Telki Nefelejcs u. 27
+07040053T;Ceruza HB radiros;23;200;db;Sára;2016;7;23;19;ceruza;5;NAGY;2089 Telki Nefelejcs u. 27
+07040054T;Ceruza kártyás;55;100;db;Mari;2016;7;28;19;ceruza;7;Báthory;1152 Budapest Báthory u. 2.
+07040055T;Ceruza piros-kék;59;200;db;Sára;2016;8;2;19;ceruza;9;Lapos;1016 Budapest Krisztina krt. 87-89.
+07040056T;Ceruza piros-kék vékony;40;500;db;Sára;2016;8;2;19;ceruza;7;Báthory;1152 Budapest Báthory u. 2.
+07040057T;Ceruza Progresso;106;100;db;Sára;2016;8;2;19;ceruza;7;Báthory;1152 Budapest Báthory u. 2.
+07040058T;Ceruza radíros kínai;11;200;db;Sára;2016;8;2;19;ceruza;7;Báthory;1152 Budapest Báthory u. 2.
+07040059T;Ceruza smaragd;58;300;db;Sára;2016;8;2;19;ceruza;9;Lapos;1016 Budapest Krisztina krt. 87-89.
+07040060T;Ceruza stabilo swano;36;100;db;Sára;2016;8;2;19;ceruza;6;Veresegyházi;2112 Veresegyház Új iskola u. 10.
+07040061T;Ceruza stabilo opera;44;300;db;Sára;2016;7;30;19;ceruza;9;Lapos;1016 Budapest Krisztina krt. 87-89.
+07040097T;"Filctoll ";26;100;db;Béla;2016;7;29;41;filctoll;8;Havanna;1181 Budapest Havanna u. 3
+07040098T;Filctoll document pen;278;100;db;Béla;2016;7;29;41;filctoll;5;NAGY;2089 Telki Nefelejcs u. 27
+07040099T;Filctoll Edding 750;434;200;csomag;Sára;2016;7;29;41;filctoll;9;Lapos;1016 Budapest Krisztina krt. 87-89.
+07040100T;Filctoll Marvy alkoholos;390;200;db;Sára;2016;7;29;41;filctoll;5;NAGY;2089 Telki Nefelejcs u. 27
+07040101T;Filctoll permanent vastag;140;700;db;Sára;2016;7;28;41;filctoll;9;Lapos;1016 Budapest Krisztina krt. 87-89.
+07040102T;Filctoll supra fine;46;100;db;Sára;2016;7;28;41;filctoll;7;Báthory;1152 Budapest Báthory u. 2.
+07040127T;G. toll betét mini;30;100;db;Sára;2016;7;28;145;tollbetét;9;Lapos;1016 Budapest Krisztina krt. 87-89.
+07040128T;G. toll betét mini fém;55;100;db;Béla;2016;7;31;145;tollbetét;6;Veresegyházi;2112 Veresegyház Új iskola u. 10.
+07040129T;G. toll betét réz;30;200;db;Béla;2016;7;31;145;tollbetét;5;NAGY;2089 Telki Nefelejcs u. 27
+07040130T;G. toll betét S7S;80;200;db;Béla;2016;7;31;145;tollbetét;6;Veresegyházi;2112 Veresegyház Új iskola u. 10.
+07040131T;G. toll betét UNI lachnok Fine SA-7C;85;1900;db;Mari;2016;8;2;145;tollbetét;9;Lapos;1016 Budapest Krisztina krt. 87-89.
+07040132T;G.toll betét csavaros;55;500;db;Mari;2016;8;2;145;tollbetét;8;Havanna;1181 Budapest Havanna u. 3
+07040133T;G.toll betét görbe hegyű;39;200;db;Sára;2016;8;5;145;tollbetét;5;NAGY;2089 Telki Nefelejcs u. 27
+07040134T;G.toll betét illatos;44;3500;db;Béla;2016;8;4;145;tollbetét;7;Báthory;1152 Budapest Báthory u. 2.
+07040135T;"G.toll betét Parker ";684;4300;db;Mari;2016;8;8;145;tollbetét;6;Veresegyházi;2112 Veresegyház Új iskola u. 10.
+07040165T;Golyóstoll UNI laknock;218;100;db;Sára;2016;8;12;52;golyóstoll;9;Lapos;1016 Budapest Krisztina krt. 87-89.
+07040166T;Golyóstoll Zebra 301;455;1400;db;Béla;2016;8;10;52;golyóstoll;8;Havanna;1181 Budapest Havanna u. 3
+07040167T;Golyóstoll Zebra mini;655;400;db;Béla;2016;8;10;52;golyóstoll;9;Lapos;1016 Budapest Krisztina krt. 87-89.
+07040168T;Golyóstoll Zebra new hard;189;400;db;Béla;2016;8;10;52;golyóstoll;8;Havanna;1181 Budapest Havanna u. 3
+07040169T;Golyóstoll Zodiák;94;1200;db;Béla;2016;8;14;52;golyóstoll;8;Havanna;1181 Budapest Havanna u. 3
+07040215T;Ironbél  2B ICO;74;200;db;Béla;2016;8;14;76;ironbél;7;Báthory;1152 Budapest Báthory u. 2.
+07040216T;Ironbél B 0,5;36;400;db;Mari;2016;8;10;76;ironbél;5;NAGY;2089 Telki Nefelejcs u. 27
+07040217T;Ironbél H 0,5;59;200;db;Béla;2016;8;9;76;ironbél;6;Veresegyházi;2112 Veresegyház Új iskola u. 10.
+07040218T;Ironbél HB 0,5;23;200;db;Béla;2016;8;13;76;ironbél;6;Veresegyházi;2112 Veresegyház Új iskola u. 10.
+07040219T;Ironbél HI-POLIMER HB 0,7;78;100;db;Béla;2016;8;12;76;ironbél;6;Veresegyházi;2112 Veresegyház Új iskola u. 10.
+07040257T;Lakk filc Edding 750;434;100;db;Mari;2016;8;11;41;filctoll;8;Havanna;1181 Budapest Havanna u. 3
+07040388T;Tintapatron /kék/;9;200;csomag;Mari;2016;8;11;143;tintapatron;7;Báthory;1152 Budapest Báthory u. 2.
+07040389T;Tintapatron 30 db-os kék;360;200;db;Mari;2016;8;11;143;tintapatron;7;Báthory;1152 Budapest Báthory u. 2.
+07040390T;Tintapatron színes;11;200;db;Mari;2016;8;11;143;tintapatron;9;Lapos;1016 Budapest Krisztina krt. 87-89.
+07040391T;Toll Centropen roller;80;200;db;Mari;2016;8;11;144;toll;9;Lapos;1016 Budapest Krisztina krt. 87-89.
+07050462T;"Töltőtoll tinta ";493;300;üveg;Mari;2016;8;13;148;töltőtoll;5;NAGY;2089 Telki Nefelejcs u. 27
+07050463T;Ceruzafogó;36;700;db;Sára;2016;8;13;78;iskolaszer;8;Havanna;1181 Budapest Havanna u. 3
+07050464T;Szövegkiemelő Staedtler;140;900;db;Sára;2016;8;13;138;szövegkiemelő;7;Báthory;1152 Budapest Báthory u. 2.
+07080062T;Ceruza szén;146;200;db;Sára;2016;8;12;19;ceruza;5;NAGY;2089 Telki Nefelejcs u. 27
+07080063T;Ceruza szorzótáblás;35;100;db;Sára;2016;8;12;19;ceruza;7;Báthory;1152 Budapest Báthory u. 2.
+07080064T;Ceruza zöld színű;40;200;db;Béla;2016;8;17;19;ceruza;6;Veresegyházi;2112 Veresegyház Új iskola u. 10.
+07080065T;Ceruza kínai;11;100;db;Béla;2016;8;17;19;ceruza;8;Havanna;1181 Budapest Havanna u. 3
+07080150T;Golyóstoll;51;100;db;Béla;2016;8;17;52;golyóstoll;6;Veresegyházi;2112 Veresegyház Új iskola u. 10.
+07080151T;Golyóstoll + ceruza Twister 2in1;390;200;db;Béla;2016;8;17;52;golyóstoll;9;Lapos;1016 Budapest Krisztina krt. 87-89.
+07080152T;"Golyóstoll 3 funkciós ";1019;400;db;Béla;2016;8;20;52;golyóstoll;5;NAGY;2089 Telki Nefelejcs u. 27
+07080153T;Golyóstoll illatos ICO;41;100;db;Béla;2016;8;20;52;golyóstoll;8;Havanna;1181 Budapest Havanna u. 3
+07080154T;Golyóstoll INOXCROM;401;300;db;Béla;2016;8;20;52;golyóstoll;6;Veresegyházi;2112 Veresegyház Új iskola u. 10.
+07080155T;Golyóstoll;33;100;db;Béla;2016;8;20;52;golyóstoll;5;NAGY;2089 Telki Nefelejcs u. 27
+07080156T;Golyóstoll kupakos piros;23;900;db;Béla;2016;8;20;52;golyóstoll;8;Havanna;1181 Budapest Havanna u. 3
+07080157T;Golyóstoll Montex Hytone;93;500;db;Béla;2016;8;20;52;golyóstoll;7;Báthory;1152 Budapest Báthory u. 2.
+07080158T;Golyóstoll Parker tokban;773;2000;db;Béla;2016;8;20;52;golyóstoll;5;NAGY;2089 Telki Nefelejcs u. 27
+07080159T;Golyóstoll Pax tip.;63;200;db;Béla;2016;8;20;52;golyóstoll;8;Havanna;1181 Budapest Havanna u. 3
+07080160T;Golyóstoll penac;239;200;db;Béla;2016;8;15;52;golyóstoll;7;Báthory;1152 Budapest Báthory u. 2.
+07080161T;Golyóstoll kétszínű;44;100;db;Béla;2016;8;16;52;golyóstoll;9;Lapos;1016 Budapest Krisztina krt. 87-89.
+07080162T;Golyóstoll Stabilo piros;101;700;db;Mari;2016;8;19;52;golyóstoll;6;Veresegyházi;2112 Veresegyház Új iskola u. 10.
+07080163T;Golyóstoll UNI átlátszó;230;6000;db;Mari;2016;8;21;52;golyóstoll;5;NAGY;2089 Telki Nefelejcs u. 27
+07080164T;Golyóstoll UNI gumis;231;30000;db;Mari;2016;8;21;52;golyóstoll;6;Veresegyházi;2112 Veresegyház Új iskola u. 10.
+07080311T;Pixiron  UNI;276;22000;db;Mari;2016;8;21;118;pixiron;8;Havanna;1181 Budapest Havanna u. 3
+07080312T;Pixiron 0,7 Handy;125;2000;db;Mari;2016;8;21;118;pixiron;5;NAGY;2089 Telki Nefelejcs u. 27
+07080313T;Pixiron Centrum;59;12500;db;Mari;2016;8;21;118;pixiron;9;Lapos;1016 Budapest Krisztina krt. 87-89.
+07080314T;Pixiron Handy fém;133;12000;db;Mari;2016;8;21;118;pixiron;8;Havanna;1181 Budapest Havanna u. 3
+07080315T;Pixiron Handy műanyag;94;25000;db;Mari;2016;8;22;118;pixiron;8;Havanna;1181 Budapest Havanna u. 3
+07080316T;Pixiron KOH-I-NOOR;468;700;db;Sára;2016;8;25;118;pixiron;8;Havanna;1181 Budapest Havanna u. 3
+07080317T;"Pixiron mini ";59;2000;db;Béla;2016;8;26;118;pixiron;5;NAGY;2089 Telki Nefelejcs u. 27
+07080318T;Pixiron Penac;235;8000;db;Béla;2016;8;26;118;pixiron;5;NAGY;2089 Telki Nefelejcs u. 27
+07080319T;Pixiron Pentel színes;299;4000;db;Béla;2016;8;26;118;pixiron;7;Báthory;1152 Budapest Báthory u. 2.
+07080418T;"Zselés toll ";95;4000;db;Béla;2016;8;26;154;zseléstoll;7;Báthory;1152 Budapest Báthory u. 2.
+07080419T;Zselés toll MICRO;66;6000;db;Sára;2016;8;22;154;zseléstoll;9;Lapos;1016 Budapest Krisztina krt. 87-89.
+07080420T;Zselés toll Muhnwa;161;2000;db;Mari;2016;8;21;154;zseléstoll;7;Báthory;1152 Budapest Báthory u. 2.
+07080421T;Zseléstoll Lizzy Card;228;100;csomag;Mari;2016;8;21;154;zseléstoll;7;Báthory;1152 Budapest Báthory u. 2.
+07080466T;Golyóstoll Stabiló 308;81;1000;db;Sára;2016;8;26;52;golyóstoll;9;Lapos;1016 Budapest Krisztina krt. 87-89.
+07080467T;Golyóstoll kétfunkciós ICO;273;8000;db;Sára;2016;8;22;52;golyóstoll;8;Havanna;1181 Budapest Havanna u. 3
+07080468T;Golyóstoll háromfunkciós;110;7200;db;Sára;2016;8;22;52;golyóstoll;6;Veresegyházi;2112 Veresegyház Új iskola u. 10.
+07080469T;Golyóstoll UNIBALL 07;364;35000;db;Sára;2016;8;22;52;golyóstoll;8;Havanna;1181 Budapest Havanna u. 3
+07080470T;Golyóstoll háromszög;188;15000;db;Sára;2016;8;21;52;golyóstoll;7;Báthory;1152 Budapest Báthory u. 2.
+07080471T;Golyóstoll levélbontós;294;50000;db;Béla;2016;8;23;52;golyóstoll;7;Báthory;1152 Budapest Báthory u. 2.
+08070472T;A föld amelyen élünk - Európa földrajza;1089;100;db;Béla;2016;8;23;4;könyv;8;Havanna;1181 Budapest Havanna u. 3
+08070473T;A föld amelyen élünk - Távoli földrészek;1089;200;db;Mari;2016;8;27;4;könyv;6;Veresegyházi;2112 Veresegyház Új iskola u. 10.
+08070474T;A föld amelyen élünk - Hazánk földrajza;1089;100;db;Béla;2016;8;29;4;könyv;5;NAGY;2089 Telki Nefelejcs u. 27
+08070475T;A föld amelyen élünk - munkafüzet;440;9000;db;Béla;2016;8;29;100;munkafüzet;5;NAGY;2089 Telki Nefelejcs u. 27
+08070476T;Anyanyelvi gyakorló 2;293;3900;db;Béla;2016;8;29;100;munkafüzet;6;Veresegyházi;2112 Veresegyház Új iskola u. 10.
+08070477T;Anyanyelvi gyakorló 3;353;1400;db;Sára;2016;9;3;100;munkafüzet;6;Veresegyházi;2112 Veresegyház Új iskola u. 10.
+08070478T;Összefoglaló feladatgyüjtemény számtech.;785;900;db;Béla;2016;8;29;100;munkafüzet;8;Havanna;1181 Budapest Havanna u. 3
+08070479T;Fizika;674;200;db;Béla;2016;8;29;4;könyv;7;Báthory;1152 Budapest Báthory u. 2.
+08070480T;Fizika 13 éveseknek;308;5000;db;Béla;2016;8;29;4;könyv;8;Havanna;1181 Budapest Havanna u. 3
+08070481T;Fizika munkafüzet 13 év.;198;500;db;Béla;2016;8;24;100;munkafüzet;7;Báthory;1152 Budapest Báthory u. 2.
+08070482T;Fizika munkafüzet 14 év.;190;500;db;Mari;2016;8;28;100;munkafüzet;5;NAGY;2089 Telki Nefelejcs u. 27
+08070483T;Fizikai feladatok és tévedések;324;100;db;Béla;2016;8;25;4;könyv;5;NAGY;2089 Telki Nefelejcs u. 27
+08070484T;Fogalmazás lépésről lépésre;345;100;db;Béla;2016;8;24;4;könyv;8;Havanna;1181 Budapest Havanna u. 3
+08070485T;Jól felkészültem-e - Fizika;291;200;db;Béla;2016;8;22;4;könyv;6;Veresegyházi;2112 Veresegyház Új iskola u. 10.
+08070486T;Matematika gyakorló 2;403;100;db;Béla;2016;8;19;100;munkafüzet;6;Veresegyházi;2112 Veresegyház Új iskola u. 10.
+08070487T;Matematika gyakorló 3;403;200;db;Mari;2016;8;17;100;munkafüzet;6;Veresegyházi;2112 Veresegyház Új iskola u. 10.
+08070488T;Matematika gyakorló 4;403;2000;db;Mari;2016;8;17;100;munkafüzet;9;Lapos;1016 Budapest Krisztina krt. 87-89.
+08070489T;RAMba zárt világ;868;4400;db;Mari;2016;8;17;4;könyv;8;Havanna;1181 Budapest Havanna u. 3
+08070490T;Szövegszerkesztés;691;100;db;Sára;2016;8;20;4;könyv;8;Havanna;1181 Budapest Havanna u. 3
+08070491T;Szám.tech. kicsiknek;214;1300;db;Sára;2016;8;20;4;könyv;8;Havanna;1181 Budapest Havanna u. 3
+08070492T;Informatika;735;100;db;Sára;2016;8;20;4;könyv;9;Lapos;1016 Budapest Krisztina krt. 87-89.
+08070493T;Érettségi felv. fel. Matematika;720;100;db;Sára;2016;8;20;4;könyv;5;NAGY;2089 Telki Nefelejcs u. 27
+08070494T;Érettségi felv. fel. Fizika;440;400;db;Sára;2016;8;20;4;könyv;6;Veresegyházi;2112 Veresegyház Új iskola u. 10.
+08070495T;Érettségi felv. fel. Biológia;440;100;db;Sára;2016;8;18;4;könyv;9;Lapos;1016 Budapest Krisztina krt. 87-89.
+F001-KB101;férfi szövet kabát;22000;173;db;Sára;2016;8;13;38;férfi kabát;1;Kisfaludy;2135 Csörög Kisfaludy u. 55.
+F007-NA201;férfi farmer nadrág;7890;105;db;Sára;2016;8;13;39;férfi nadrág;3;Toldy;1015 Budapest Toldy F. u. 58.
+F013-NA207;férfi szövet nadrág;11900;389;db;Sára;2016;8;13;39;férfi nadrág;1;Kisfaludy;2135 Csörög Kisfaludy u. 55.
+F021-IN215;férfi ing;6490;381;db;Mari;2016;8;13;37;férfi ing;1;Kisfaludy;2135 Csörög Kisfaludy u. 55.
+G001-KB101;gyermek kabát (fiú);8900;396;db;Sára;2016;8;8;55;gyermek kabát;1;Kisfaludy;2135 Csörög Kisfaludy u. 55.
+G013-NA201;gyermek farmer nadrág (fiú);4990;200;db;Sára;2016;8;13;56;gyermek nadrág;3;Toldy;1015 Budapest Toldy F. u. 58.
+G019-NA207;gyermek pamut nadrág (fiú);1290;182;db;Sára;2016;8;13;56;gyermek nadrág;3;Toldy;1015 Budapest Toldy F. u. 58.
+G023-FE301;fiú alsó;390;328;db;Sára;2016;8;13;35;fehérnemű;3;Toldy;1015 Budapest Toldy F. u. 58.
+G029-FE307;fiú zokni;240;468;db;Sára;2016;8;13;35;fehérnemű;4;KIS;1039 Budapest Madzsar J. u. 23.
+G038-FE316;fiú harisnya;990;205;db;Sára;2016;8;13;35;fehérnemű;3;Toldy;1015 Budapest Toldy F. u. 58.
+G041-AL211;fiú ünneplős ruha;16900;297;db;Mari;2016;8;10;8;alkalmi;4;KIS;1039 Budapest Madzsar J. u. 23.
+G048-PO218;gyermek póló (fiú);3900;355;db;Mari;2016;8;10;57;gyermek póló;3;Toldy;1015 Budapest Toldy F. u. 58.
+G064-CI401;gyermek szandál (fiú);6900;376;db;Sára;2016;8;5;54;gyermek cipő;1;Kisfaludy;2135 Csörög Kisfaludy u. 55.
+G073-CI410;gyermek cipő (fiú);7900;406;db;Sára;2016;8;3;54;gyermek cipő;2;Nagyszeben;1182 Budapest Nagyszeben u. 12.
+G082-CI419;gyermek csizma (fiú);8000;229;db;Sára;2016;8;3;54;gyermek cipő;3;Toldy;1015 Budapest Toldy F. u. 58.
+L001-KB101;gyermek kabát (lány);8900;78;db;Sára;2016;8;3;55;gyermek kabát;1;Kisfaludy;2135 Csörög Kisfaludy u. 55.
+L013-NA201;gyermek farmer nadrág (lány);4990;449;db;Béla;2016;8;2;56;gyermek nadrág;3;Toldy;1015 Budapest Toldy F. u. 58.
+L019-NA207;gyermek pamut nadrág (lány);1290;162;db;Mari;2016;7;29;56;gyermek nadrág;1;Kisfaludy;2135 Csörög Kisfaludy u. 55.
+L023-FE301;lány alsó;390;369;db;Béla;2016;7;26;35;fehérnemű;1;Kisfaludy;2135 Csörög Kisfaludy u. 55.
+L029-FE307;lány zokni;240;470;db;Béla;2016;7;27;35;fehérnemű;4;KIS;1039 Budapest Madzsar J. u. 23.
+L033-FE311;lány harisnya;990;373;db;Sára;2016;7;23;35;fehérnemű;3;Toldy;1015 Budapest Toldy F. u. 58.
+L041-AL211;lány ünneplős ruha;16900;325;db;Sára;2016;7;20;8;alkalmi;3;Toldy;1015 Budapest Toldy F. u. 58.
+L048-PO218;gyermek póló (lány);3900;113;db;Sára;2016;7;20;57;gyermek póló;3;Toldy;1015 Budapest Toldy F. u. 58.
+L064-CI401;gyermek szandál (lány);6900;119;db;Mari;2016;7;17;54;gyermek cipő;3;Toldy;1015 Budapest Toldy F. u. 58.
+L073-CI410;gyermek cipő (lány);7900;323;db;Sára;2016;7;19;54;gyermek cipő;3;Toldy;1015 Budapest Toldy F. u. 58.
+L082-CI419;gyermek csizma (lány);8000;264;db;Sára;2016;7;19;54;gyermek cipő;1;Kisfaludy;2135 Csörög Kisfaludy u. 55.
+N001-KB101;női szövet kabát;24000;77;db;Béla;2016;7;18;107;női kabát;1;Kisfaludy;2135 Csörög Kisfaludy u. 55.
+N008-NA201;női farmer nadrág;8290;289;db;Mari;2016;7;18;108;női nadrág;2;Nagyszeben;1182 Budapest Nagyszeben u. 12.
+N019-FE301;női alsó;690;53;db;Mari;2016;7;18;35;fehérnemű;2;Nagyszeben;1182 Budapest Nagyszeben u. 12.
+N029-AL212;női koktélruha;32000;283;db;Mari;2016;7;18;8;alkalmi;4;KIS;1039 Budapest Madzsar J. u. 23.
+N035-AL218;kosztüm (rövid);39000;369;db;Sára;2016;7;15;88;kosztüm;3;Toldy;1015 Budapest Toldy F. u. 58.
+N039-AL222;kosztüm (hosszú);46000;238;db;Mari;2016;7;20;88;kosztüm;2;Nagyszeben;1182 Budapest Nagyszeben u. 12.
+U001-KI501;sál;1990;77;db;Mari;2016;7;15;130;sál;1;Kisfaludy;2135 Csörög Kisfaludy u. 55.

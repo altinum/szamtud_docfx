@@ -1,0 +1,87 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+<title> Szópároztatós játék</title>
+<meta name="color-scheme" content="light dark">
+<link rel="stylesheet" href="../../assets/github-markdown.css">
+<link rel="stylesheet" href="../../assets/article.css">
+
+<link rel="stylesheet" href="xhttps://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/themes/prism-coy.min.css" integrity="sha512-LOT5F67SMZVdXMrvQe4S1ZHu5l6xk3CST2qqno9kY329OsJBBpybnq+fM9qG4ZSaNzPOjoGzHAeBamSSJyyuZg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/themes/prism-solarizedlight.min.css"  crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/line-numbers/prism-line-numbers.css"  crossorigin="anonymous" referrerpolicy="no-referrer" />
+<style>
+			body {
+				box-sizing: border-box;
+				min-width: 200px;
+				max-width: 980px;
+				margin: 0 auto;
+				padding: 45px;
+			}
+
+			@media (prefers-color-scheme: dark) {
+				body {
+					background-color: #0d1117;
+				}
+			}
+		</style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-fork-ribbon-css/0.2.3/gh-fork-ribbon.min.css">
+<style>
+			.github-fork-ribbon:before {
+				background-color: #121612;
+			}
+		</style>
+</head>
+<body>
+<article class="markdown-body line-numbers">
+
+
+<h1 id="szoparoztatos-jatek">Szópároztatós játék</h1>
+<p>A játék szövegfájlból olvas fel szópárokat, melyeket színes címkékben helyez el. A szövegfájl minden sorai párosával egy-egy összetartozó magyar és angol szót tartalmaznak. A játékos az egérrel tologathatja a szavakat a képernyőn. Ha a játokos egymás után kattint egy szópárra, mindkét szó eltűnik. A játék célja az összes szó eltűntetése.</p>
+<p>Melléklet: szavak.txt a  <a href="http://web.uni-corvinus.hu/%7Elmohacs/alfa/">http://web.uni-corvinus.hu/~lmohacs/alfa/</a> oldalról</p>
+<h2 id="egerrel-mozgathato-cimke-keszitese">Egérrel mozgatható címke készítése</h2>
+<ol>
+<li>Származtass <code>Szó</code> nevű osztályt a <code>Button</code> osztályból!</li>
+<li>Az osztályt egészítsd ki konstruktorral!</li>
+<li>Az osztály szintjén vezess be egy <code>mozoge</code> nevű logikai változót <code>hamis</code> kezdőértékkel!</li>
+<li>Vezess be <code>ox</code> és <code>oy</code> nevű egész típusú változókat is az osztály szintjén!</li>
+<li>A konstruktorban rendelj esemény-kiszolgáló függvényt az egér lenyomásához, felengedéséhez illetve mozgatásához tartozó eseményekhez!</li>
+<li>Az egérgomb lenyomásakor az <code>ox</code>, és <code>oy</code> változók értékét állítsd be az egér aktuális koordinátáinak megfelelően! A <code>mozoge</code> változó értéke legyen igaz!</li>
+<li>Az egérgomb felengedésére <code>mozoge</code> változó kapjon hamis értéket!</li>
+<li>Ha az egér megmozdul, vizsgáld meg, a <code>mozoge</code> változó értékét! Ha igaz, állítsd be <code>Szó</code> koordinátáit értelemszerűen! Tipp: pl. <code>Left += e.X - ox</code>;</li>
+<li>Egészítsd ki az osztályt publikus <code>string</code> típusú <code>MásikSzó</code> nevű tulajdonsággal, melyben a szó jelentését tároljuk majd a másik nyelven. (A párok megtalálásánál lesz jelentősége.)
+Szópárok felolvasása fájlból, és szétszórásuk az ablakban</li>
+<li>A <code>Form1</code> konstruktorában vagy <code>Load</code> eseményéhez tartozó eseménykiszolgálóban hozz létre egy példányt a <code>Random</code> osztályból!</li>
+<li>Hozz létre egy példányt a <code>StreamReader-ből</code> is, mely megnyitja a <em>szavak.txt</em> fájlt!</li>
+<li>Nem előírt lépésszámú ciklussal olvasd végig a fájlt, mely felváltva tartalmaz angol és magyar szavakat, melyek szópárokat alkotnak:</li>
+<li>Minden cikluslépésben két sort olvass be a fájlból egy-egy <code>string</code> típusú változóba, és két <code>Szó</code> címkét pakolj véletlenszerű pozícióba az űrlapra.</li>
+<li>Az egyik címkén a magyar, a másikon az angol szó jelenjen meg. A <code>Szó</code> típusú objektumok <code>MásikSzó</code> tulajdonsága kapja meg az éppen feldolgozott szópár másik tagját.</li>
+<li>Az angol és a magyar szavakat tartalmazó címkéket különböztesd meg eltérő háttérszínnel!
+ </li>
+</ol>
+<h2 id="parok-megtalalasa">Párok megtalálása</h2>
+<ol start="16">
+<li>Bővítsd a <code>Form1</code> osztályt <code>Szó előző = new Szó();</code> referenciával, melyben az utoljára megkattintott szó referenciáját tárolod majd! (A <code>new..</code> azért szerencsés, hogy az első kattintásnál se legyen <code>null</code> az előző értéke.)</li>
+<li>A fájl feldolgozásáért felelős ciklusban rendelj közös eseménykiszolgálót az összes <code>Szó</code> típusú objektum <code>Click</code> eseményéhez. Az angol és a magyar jelentéshez tartozó <code>Szó</code> objektumok is közös eseménykiszolgálót kapjanak.</li>
+<li><code>Click</code> eseményéhez tartozó közös eseménykiszolgálóban vizsgáld, hogy az utoljára kattintott, előző nevű referencia által hivatkozott szó <code>MásikSzó</code> tulajdonságában tárolt érték megegyezik-e az éppen megkattintott szó feliratával! Ha igen, tüntesd el mindkettőt!</li>
+<li>A <code>Click</code> eseményéhez tartozó eseménykiszolgálóban ne felejtsd el beállítani a előző nevű referenciát az épp megkattintott szóra!</li>
+</ol>
+<p> </p>
+
+</article>
+
+<a class="github-fork-ribbon" href="https://github.com/sindresorhus/github-markdown-css" data-ribbon="Fork me on GitHub" title="Fork me on GitHub">Fork me on GitHub</a>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+<script src="../../assets/article.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/components/prism-core.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/autoloader/prism-autoloader.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/line-numbers/prism-line-numbers.js"></script>
+
+<!-- Video wrap -->
+<div id="inlineVideo_template" class="jump nodisplay">
+    <video id="centvideo" playsinline controls></video>
+    <div></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,104 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+<title> Projektfeladat:  Kígyós játék almákkal</title>
+<meta name="color-scheme" content="light dark">
+<link rel="stylesheet" href="../../assets/github-markdown.css">
+<link rel="stylesheet" href="../../assets/article.css">
+
+<link rel="stylesheet" href="xhttps://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/themes/prism-coy.min.css" integrity="sha512-LOT5F67SMZVdXMrvQe4S1ZHu5l6xk3CST2qqno9kY329OsJBBpybnq+fM9qG4ZSaNzPOjoGzHAeBamSSJyyuZg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/themes/prism-solarizedlight.min.css"  crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/line-numbers/prism-line-numbers.css"  crossorigin="anonymous" referrerpolicy="no-referrer" />
+<style>
+			body {
+				box-sizing: border-box;
+				min-width: 200px;
+				max-width: 980px;
+				margin: 0 auto;
+				padding: 45px;
+			}
+
+			@media (prefers-color-scheme: dark) {
+				body {
+					background-color: #0d1117;
+				}
+			}
+		</style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-fork-ribbon-css/0.2.3/gh-fork-ribbon.min.css">
+<style>
+			.github-fork-ribbon:before {
+				background-color: #121612;
+			}
+		</style>
+</head>
+<body>
+<article class="markdown-body line-numbers">
+
+
+<h1 id="projektfeladat-kigyos-jatek-almakkal">Projektfeladat:  Kígyós játék almákkal</h1>
+<h2 id="a-feladat-leirasa">A feladat leírása</h2>
+<p>A gyakorlaton felépített kígyós játék folytatása a feladat az alábbiak szerint:</p>
+<ul>
+<li>Bizonyos lépésszámonként gyorsuljon a játék, de ne kerüljön negatív érték az időzítőbe. (Itt ez a hibatűrés.)</li>
+<li>A kígyóelemek periodikusan ismétlődő színűek legyenek!</li>
+<li>A kígyó hossza ne automatikusan nőjön, hanem bizonyos lépésszámonként jelenjenek meg véletlenszerűen almák vagy hasonló elemek, melyeket meg lehet enni, és ezektől hosszabbodjon a hüllő.</li>
+<li>Az almákhoz hasonlóan mérgek is jelenjenek meg, melyek megölik vagy rövidítik az állatot. (Szabadon választható.)</li>
+<li>Az eltelt idő és a lépésszám megjelenítendő.</li>
+</ul>
+<p>Extra: legyen két kígyó!</p>
+<blockquote>
+<p>Teams-en várjuk a feladattal kapcsolatban kérdéseket, és igyekszünk mihamarabb válaszolni.</p>
+</blockquote>
+<h2 id="tippek-a-megvalositashoz">Tippek a megvalósításhoz</h2>
+<h3 id="kigyoelemek-es-almak-vegyesen">Kígyóelemek és almák vegyesen</h3>
+<p>Ha kígyóelemek és almák vegyesen kerülnek az űrlapra, már nem működik az a megközelítés, hogy minden lépésben hozzáadunk egy új kígyóelemet a <code>Controls</code> gyűjteményhez, majd kivesszük a <code>Controls</code> gyűjtemény
+0. elemét, mert az almáknak is a  gyűjtemény részét kell képezniük. Szükség lesz egy külön listára, melyben a kígyó elemeit tartjuk:</p>
+<pre><code class="language-csharp">List&lt;Kigyoelem&gt; kígyóelemek = new List&lt;Kigyoelem&gt;();
+</code></pre>
+<p>Az &quot;előremozdulásnál&quot; a lista alapján meghatározzuk a levágandó farokelemre mutató referenciát, majd eltávolítjuk mind a kígyóelemeket tartalmazó listából, mind a <code>Controls</code> listából.</p>
+<pre><code class="language-csharp"> Kigyoelem levágandóFarok = kígyóelemek[0];
+ Controls.Remove(levágandóFarok);
+ kígyóelemek.Remove(levágandóFarok);
+</code></pre>
+<h3 id="objektumok-tipusanak-megallapitasa">Objektumok típusának megállapítása</h3>
+<p>Az alábbi kódrészlet az űrlapon szereplő vezérlők közül a gombokat fuksziára színezi, a címkéket nem fuksziára. Ez a megoldás felhasználható annak eldöntésére, hogy kígyóelemnek vagy almának ütköztünk.</p>
+<pre><code class="language-csharp">//Bejárjuk egy iterációval az űrlap összes vezérlőjét, azaz a Controls gyűjteményt
+foreach (var elem in Controls)
+{
+    //Az épp vizsgált elem Button?
+    if (elem is Button)
+    {
+        //Ha igen, cast-oljuk Buttonná, és színezzük
+        Button b = (Button)elem;
+        b.BackColor = Color.Fuchsia;
+    }
+
+
+    //Az épp vizsgált elem Label?
+    if (elem is Label)
+    {
+        //Ha igen, cast-oljuk Labellé, és színezzük
+        Label l = (Label)elem;
+        b.BackColor = Color.Blue;
+    }
+}
+</code></pre>
+
+</article>
+
+<a class="github-fork-ribbon" href="https://github.com/sindresorhus/github-markdown-css" data-ribbon="Fork me on GitHub" title="Fork me on GitHub">Fork me on GitHub</a>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+<script src="../../assets/article.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/components/prism-core.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/autoloader/prism-autoloader.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/line-numbers/prism-line-numbers.js"></script>
+
+<!-- Video wrap -->
+<div id="inlineVideo_template" class="jump nodisplay">
+    <video id="centvideo" playsinline controls></video>
+    <div></div>
+</div>
+</body>
+</html>

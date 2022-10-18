@@ -1,0 +1,290 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+<title> Nézetek, tárolt eljárások, függvények</title>
+<meta name="color-scheme" content="light dark">
+<link rel="stylesheet" href="../../assets/github-markdown.css">
+<link rel="stylesheet" href="../../assets/article.css">
+
+<link rel="stylesheet" href="xhttps://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/themes/prism-coy.min.css" integrity="sha512-LOT5F67SMZVdXMrvQe4S1ZHu5l6xk3CST2qqno9kY329OsJBBpybnq+fM9qG4ZSaNzPOjoGzHAeBamSSJyyuZg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/themes/prism-solarizedlight.min.css"  crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/line-numbers/prism-line-numbers.css"  crossorigin="anonymous" referrerpolicy="no-referrer" />
+<style>
+			body {
+				box-sizing: border-box;
+				min-width: 200px;
+				max-width: 980px;
+				margin: 0 auto;
+				padding: 45px;
+			}
+
+			@media (prefers-color-scheme: dark) {
+				body {
+					background-color: #0d1117;
+				}
+			}
+		</style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-fork-ribbon-css/0.2.3/gh-fork-ribbon.min.css">
+<style>
+			.github-fork-ribbon:before {
+				background-color: #121612;
+			}
+		</style>
+</head>
+<body>
+<article class="markdown-body line-numbers">
+
+
+<h1 id="nezetek-tarolt-eljarasok-fuggvenyek">Nézetek, tárolt eljárások, függvények</h1>
+<p><a href="gyak10_x264.mp4">Összefoglaló videó</a></p>
+<h2 id="nezetek">Nézetek</h2>
+<p>A nézet egy elmentett, névvel ellátott lekérdezés.</p>
+<ul>
+<li>A nézetekből ugyanúgy lehet lekérdezni, mint táblákból</li>
+<li>A nézetek segítségével meghatározhatjuk a megjelenítendő adatok körét</li>
+<li>A nézetekhez adhatunk jogosultságokat az  alaptáblákhoz való jogosultságok nélkül is</li>
+<li>A DML-műveletek nem mindig megengedettek nézeteken keresztül</li>
+</ul>
+<h3 id="a-nezetek-ket-fo-tipusa">A nézetek két fő típusa</h3>
+<ul>
+<li>Virtuális: csak a lekérdezés tárolódik (csak ez tananyag)</li>
+<li>Materializált: az adatok is tárolásra kerülnek (indexed view)</li>
+</ul>
+<h3 id="letrehozas">Létrehozás</h3>
+<pre><code class="language-sql">CREATE VIEW view_név  
+[(oszlopnevek listája)]
+[WITH view_attribútumok]
+AS SELECT_utasítás
+[WITH CHECK OPTION]*
+</code></pre>
+<ul>
+<li>A szögletes zárójelbe tett részek opcionálisak</li>
+<li>A view_attribútumokkal nem foglalkozunk</li>
+<li>Az SQL Server 2016-tól a CREATE OR ALTER VIEW forma is használható</li>
+<li>WITH CHECK OPTION záradék az adatintegritást segíti. Bekapcsolásával csak olyan adatmódosítást végezhetünk a view-n keresztül, amely megfelel a SELECT-ben lévő feltételeknek</li>
+</ul>
+<h3 id="pelda">Példa:</h3>
+<pre><code class="language-sql">CREATE VIEW v_klimas_szobak
+(Azonosító, Szobaszám, [Férőhelyek száma])
+SELECT szoba_id, szoba_szama, ferohely
+FROM szoba
+WHERE KLIMAS=’i’
+
+# A Nézet használata
+SELECT * FROM v_klimas_szobak
+</code></pre>
+<h2 id="tarolt-eljarasok">Tárolt eljárások</h2>
+<p>A tárolt eljárás olyan adatbázis objektumként tárolt program, amely SQL- utasításokat is tartalmazhat.</p>
+<p>A tárolt eljárások főbb jellemzői</p>
+<ul>
+<li>Input és output paramétereket, valamint különböző algoritmikus szerkezeteket is tartalmazhatnak (elágazás, ciklus)</li>
+<li>Az adatbázis szerveren tárolódnak</li>
+<li>Futtatásuk jogosultságokhoz köthető</li>
+</ul>
+<h3 id="tarolt-eljarasok-letrehozasa-sql-ben">Tárolt eljárások létrehozása SQL-ben</h3>
+<pre><code class="language-sql">CREATE PROCEDURE
+eljárás_név
+[paraméterek listája]
+[WITH eljárás_opciók]
+AS
+[BEGIN]
+Utasítások
+[END]
+</code></pre>
+<ul>
+<li>A szögletes zárójelbe tett részek opcionálisak</li>
+<li>Az eljárás opciókkal nem foglalkozunk</li>
+<li>Az SQL Server 2016-tól a CREATE OR ALTER PROCEDURE forma is használható</li>
+</ul>
+<h3 id="pelda-1">Példa</h3>
+<pre><code class="language-sql">CREATE PROCEDURE vevo_foglalasok
+@vevoid nvarchar(20)
+AS
+BEGIN
+SELECT *
+FROM Foglalas
+WHERE UGYFEL_FK = @vevoid
+END
+# Futtatás
+EXEC vevo_foglalasok 'laszlo2'
+</code></pre>
+<h2 id="fuggvenyek">Függvények</h2>
+<p>A (felhasználó által definiált) függvény olyan adatbázis objektum, amely végrehajt egy tevékenységet, majd annak eredményét visszaadja egy érték vagy egy tábla formájában
+A függvények főbb jellemzői</p>
+<ul>
+<li>Input paramétereket, SQL-utasításokat, valamint különböző algoritmikus szerkezeteket is tartalmazhatnak (elágazás, ciklus)</li>
+<li>Az adatbázis szerveren tárolódnak</li>
+<li>Futtatásuk jogosultságokhoz köthető</li>
+<li>Felhasználhatók SQL-utasításokban, pl: SELECT utasításban</li>
+</ul>
+<h3 id="letrehozas-1">Létrehozás</h3>
+<h4 id="skalarerteku">Skalárértékű</h4>
+<pre><code class="language-sql">CREATE FUNCTION fv_név
+([paraméterek listája])
+RETURNS adattípus_név
+[WITH fv_opciók]
+[AS]
+BEGIN
+Utasítások
+RETURN skalár_kifejezés
+END
+</code></pre>
+<h4 id="tablaerteku">Táblaértékű</h4>
+<pre><code class="language-sql">CREATE FUNCTION fv_név
+([paraméterek listája])
+RETURNS TABLE
+[WITH fv_opciók]
+[AS]
+RETURN select_kifejezés
+</code></pre>
+<ul>
+<li>A szögletes zárójelbe tett részek opcionálisak</li>
+<li>A fv. opciókkal nem foglalkozunk</li>
+<li>Az SQL Server 2016-tól a CREATE OR ALTER FUNCTION forma is használható</li>
+<li>A CLR-függvényekkel nem foglalkozunk</li>
+</ul>
+<h4 id="pelda-2">Példa</h4>
+<pre><code class="language-sql">CREATE FUNCTION csillagszam
+(@szallas_id INT)
+RETURNS INT
+AS
+BEGIN
+DECLARE @db INT
+SELECT @db=CSILLAGOK_SZAMA
+FROM Szallashely
+WHERE SZALLAS_ID=@szallas_id
+RETURN @db
+END
+# Függvény alkalmazása
+SELECT dbo.csillagszam(5)
+</code></pre>
+<h2 id="fuggvenyek-es-tarolt-eljarasok-osszehasonlitasa">Függvények és tárolt eljárások összehasonlítása</h2>
+<p>A függvények sok tekintetben a tárolt eljárásokhoz hasonló tulajdonságokkal rendelkeznek, de van közöttük néhány fontos különbség.
+| Függvények                                                              | Tárolt eljárások                         |   |
+|-------------------------------------------------------------------------|------------------------------------------|---|
+| Csak input paraméterek                                                  | Input és output paraméterek              |   |
+| Tranzakciók nem használhatók                                            | Tranzakciók is használhatók              |   |
+| A SELECT utasításban használhatók                                       | A SELECT utasításban nem használhatóak   |   |
+| Kivételkezelés nem használható                                          | Kivételkezelés használható               |   |
+| Nem hívhat meg tárolt eljárást                                          | Függvényhívás lehetséges                 |   |
+| Mindig egy értéket adnak vissza (érték lehet egy skalár vagy egy tábla) | Visszaadhat nulla, egy vagy több értéket |   |</p>
+<p><strong>Megjegyzések</strong>
+-A nézetek definíciójában nem használható az ORDER BY záradék (kivéve, ha TOP záradék is definiálva van, ld. köv. gyakorlat)</p>
+<ul>
+<li>A nézetekben nem hivatkozhatunk ideiglenes táblákra (ld. köv. gyakorlat)</li>
+<li>Tárolt eljárásoknál az output paramétereket az OUT kulcsszóval jelölhetjük, pl: @i INT OUT</li>
+<li>A függvényekben sem paraméterként, sem visszaadott értékként nem szerepelhet a Timestamp típus</li>
+<li>Afüggvények egymásba is ágyazhatók</li>
+<li>Tárolt eljárásoknál és fv-eknél
+<ul>
+<li>Elágazások megvalósítása: IF feltétel utasítás[blokk] [ELSE utasítás[blokk]]</li>
+<li>Ciklusok megvalósítása: WHILE feltétel utasítás[blokk]</li>
+</ul>
+</li>
+</ul>
+<h1 id="feladatok">Feladatok</h1>
+<p>A feladatok a szallashely adatbázishoz készültek,  létrehozásához szükséges script elérhető itt:
+<a href="szallas.sql">szallas.sql</a></p>
+<p><span class='tg_task'>▷</span>Készítsünk sorszámozott listát a szálláshelyek adatairól!</p>
+<ol type="a">
+<li>A lista legyen a szálláshely típusa szerint, azon belül hely szerint, majd a neve szerint növekvően rendezve!</li>
+<li>A számozás típusonként kezdődjön újra!
+<a href="Gy10_1.mp4">Megoldás</a></li>
+</ol>
+<p><span class='tg_task'>▷</span>Készítsünk lekérdezést, amely a foglalások adatait jeleníti meg!</p>
+<ol type="a">
+<li>A lista tartalmazzon két új oszlopot, amelyek az adott ügyfél legrövidebb, illetve leghosszabb foglalásának hosszát (a foglalt napok számát) mutatják meg!</li>
+<li>Az oszlopokat nevezzük el értelemszerűen!
+<a href="Gy10_2.mp4">Megoldás</a></li>
+</ol>
+<p><span class='tg_task'>▷</span>Készítsük listát, amely megjeleníti az ügyfelek azonosítóját, nevét és a foglalásainak kezdő- és befejező dátumát, valamint azt, hogy a foglalás összesen hány főre történt!</p>
+<ol type="a">
+<li>Egy új oszlopban jelenítsük meg azt is, hogy az ügyfél előző három foglalása összesen hány főre történt!
+<a href="Gy10_3.mp4">Megoldás</a></li>
+</ol>
+<p><span class='tg_task'>▷</span>Készítsünk listát arról, hogy az egyes szálláshelyeken évente hány foglalás történt!</p>
+<ol type="a">
+<li>A lista jelenítse meg a szálláshely azonosítóját, nevét, az évet, és a foglalások számát!</li>
+<li>Egy új oszlopban jelenítsük meg a szálláshely eddigi éves foglalásainak számát is (az aktuálisat is beleértve).</li>
+<li>Az évnél a METTOL dátumot vegyük figyelembe!</li>
+<li>A lista ne tartalmazzon duplikált sorokat!
+<a href="Gy10_4.mp4">Megoldás</a></li>
+</ol>
+<p><span class='tg_task'>▷</span>Készítsük listát a szálláshelyekről! A lista tartalmazza a szálláshely azonosítóját, nevét, és a csillagok számát csillagszám szerint csökkenő, azon belül szállásnév szerint növekvő sorrendben!</p>
+<ol type="a">
+<li>Vegyünk fel két új oszlopot, amely a sorrend szerint előző szálláshely nevét, illetve azonosítóját is megjeleníti!
+<a href="Gy10_5.mp4">Megoldás</a></li>
+</ol>
+<p><span class='tg_task'>▷</span><strong>Készítsünk nézetet NEPTUNKÓD_VSZOBA néven, amely megjeleníti a szobák adatai mellett a megfelelő szálláshely nevét, helyét és a csillagok számát is!</strong></p>
+<ol type="a">
+<li>Az oszlopoknak nem szükséges külön nevet adni!</li>
+<li>Teszteljük is a nézetet, pl: SELECT * FROM UJAENB_VSZOBA
+<a href="Gy10_6.mp4">Megoldás</a></li>
+</ol>
+<p><span class='tg_task'>▷</span> <strong>Készítsünk tárolt eljárást NEPTUNKÓD_SPUgyfelenkentiFoglalasok néve, amely ügyfelenkénti bontásban megjeleníti, hogy hány foglalás történt!</strong></p>
+<ol type="a">
+<li>Elég az ügyfél kódjával dolgozni!</li>
+<li>Teszteljük le a tárolt eljárás működését, pl: EXEC UJAENB_SPUgyfelenkentiFoglalasok
+<a href="Gy10_7.mp4">Megoldás</a></li>
+</ol>
+<p><strong><span class='tg_task'>▷</span>Készítsen tárolt eljárást NEPTUNKÓD_SPUgyfelFoglalasok, amely a paraméterként megkapott ügyfél azonosítóhoz tartozó foglalások adatait listázza!</strong></p>
+<ol type="a">
+<li>Teszteljük a tárolt eljárás működését, pl: EXEC UJAENB_SPUgyfelFoglalasok 'laszlo2'
+<a href="Gy10_8.mp4">Megoldás</a></li>
+</ol>
+<p><strong><span class='tg_task'>▷</span>Készítsen skalár értékű függvényt NEPTUNKÓD_UDFFerohely néven, amely visszaadja, hogy a paraméterként megkapott foglalás azonosítóhoz hány férőhelyes szoba tartozik!</strong></p>
+<ol type="a">
+<li>Teszteljük is a függvény működését, pl: SELECT dbo.UJAENB_UDFFerohely(600)
+<a href="Gy10_9.mp4">Megoldás</a></li>
+</ol>
+<p><strong><span class='tg_task'>▷</span>Készítsen tábla értékű függvényt NEPTUNKÓD_UDFFoglalasnelkuliek néven, amely azon ügyfelek adatait listázza, akik még nem foglaltak egyszer sem az adott évben adott hónapjában! A függvény paraméterként kapja meg a foglalás évét és hónapját! (Itt is a METTOL dátummal dolgozzunk)</strong></p>
+<ol type="a">
+<li>Teszteljük is a függvény működését,
+pl: SELECT * FROM dbo.UJAENB_UDFFoglalasnelkuliek(2016, 10)**
+<a href="Gy10_10.mp4">Megoldás</a></li>
+</ol>
+<p><span class='tg_task'>▷</span>Készítsünk nézetet NEPTUNKÓD_VFoglalasreszletek néven, amely a következő adatokat jeleníti meg: foglalás azonosítója, az ügyfél neve, a szálláshely neve és helye, a foglalás kezdete és vége, és a szoba száma.</p>
+<ol type="a">
+<li>Az oszlopokat nevezzük el értelemszerűen!</li>
+<li>Teszteljük a nézet működését, pl: SELECT * FROM UJAENB_VFoglalasreszletek
+<a href="Gy10_11.mp4">Megoldás</a></li>
+</ol>
+<p><span class='tg_task'>▷</span>Készítsen skalár függvényt NEPTUNKÓD_UDFAtlagosFoglalasszam néven, amely a paraméterként megkapott szállásazonosítóhoz megadja a napi foglalások átlagos számát (valós szám)! A napnál a METTOL dátumot használjuk!</p>
+<ol type="a">
+<li>Ha az adott szálláson nem volt foglalás, akkor 0 jelenjen meg!</li>
+<li>Teszteljük a fv. működését, pl: SELECT dbo.UJAENB_UDFAtlagosFoglalasszam(1)
+<a href="Gy10_12.mp4">Megoldás</a></li>
+</ol>
+<p><span class='tg_task'>▷</span>Készítsen tábla értékű függvényt NEPTUNKÓD_UDFJougyfelek néven, amely listázza azon ügyfelek azonosítóját és nevét, akik az átlagosnál többször foglaltak a paraméterként megadott időszakban (az átlag is az adott időszakra vonatkozzon)</p>
+<ol type="a">
+<li>Az időszak kezdetét és végét a METTŐL dátumhoz viszonyítsuk!</li>
+<li>Az átlagnál egész számokkal dolgozzunk!</li>
+<li>Teszteljük a függvény működését,
+pl: SELECT * FROM dbo.UJAENB_UDFJougyfelek('2016.01.01','2016.10.20')
+<a href="Gy10_13.mp4">Megoldás</a></li>
+</ol>
+<p><span class='tg_task'>▷</span>Készítsünk tárolt eljárást NEPTUNKÓD_SPRangsor néven, amely rangsorolja a szálláshelyeket a foglalások száma alapján (a legtöbb foglalás legyen a rangsorban az első). A listában a szállás azonosítója, neve és a rangsor szerinti helyezés jelenjen meg - holtverseny esetén ugrással (ne sűrűn)!</p>
+<ol type="a">
+<li>Teszteljük a tárolt eljárást, pl: EXEC UJAENB_SPRangsor
+<a href="Gy10_14.mp4">Megoldás</a></li>
+</ol>
+<p><span class='tg_task'>▷</span>Töröljük le a létrehozott nézeteket, tárolt eljárásokat és függvényeket!</p>
+
+</article>
+
+<a class="github-fork-ribbon" href="https://github.com/sindresorhus/github-markdown-css" data-ribbon="Fork me on GitHub" title="Fork me on GitHub">Fork me on GitHub</a>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+<script src="../../assets/article.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/components/prism-core.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/autoloader/prism-autoloader.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/line-numbers/prism-line-numbers.js"></script>
+
+<!-- Video wrap -->
+<div id="inlineVideo_template" class="jump nodisplay">
+    <video id="centvideo" playsinline controls></video>
+    <div></div>
+</div>
+</body>
+</html>

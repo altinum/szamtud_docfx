@@ -1,0 +1,134 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+<title> Bantumi játék</title>
+<meta name="color-scheme" content="light dark">
+<link rel="stylesheet" href="../../assets/github-markdown.css">
+<link rel="stylesheet" href="../../assets/article.css">
+
+<link rel="stylesheet" href="xhttps://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/themes/prism-coy.min.css" integrity="sha512-LOT5F67SMZVdXMrvQe4S1ZHu5l6xk3CST2qqno9kY329OsJBBpybnq+fM9qG4ZSaNzPOjoGzHAeBamSSJyyuZg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/themes/prism-solarizedlight.min.css"  crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/line-numbers/prism-line-numbers.css"  crossorigin="anonymous" referrerpolicy="no-referrer" />
+<style>
+			body {
+				box-sizing: border-box;
+				min-width: 200px;
+				max-width: 980px;
+				margin: 0 auto;
+				padding: 45px;
+			}
+
+			@media (prefers-color-scheme: dark) {
+				body {
+					background-color: #0d1117;
+				}
+			}
+		</style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-fork-ribbon-css/0.2.3/gh-fork-ribbon.min.css">
+<style>
+			.github-fork-ribbon:before {
+				background-color: #121612;
+			}
+		</style>
+</head>
+<body>
+<article class="markdown-body line-numbers">
+
+
+<h1 id="bantumi-jatek">Bantumi játék</h1>
+<h2 id="videok">Videók</h2>
+<p><a href="S1value_Ref1.m4v">e1. videó</a> -- Érték és referencia típusok
+<a href="S1value_Ref2.m4v">e2. videó</a></p>
+<p><a href="S1bantumi1.m4v">1. videó</a>
+<a href="S1bantumi2.m4v">2. videó</a>
+<a href="S1bantumi3.m4v">3. videó</a>
+<a href="S1bantumi4.m4v">4. videó</a>
+<a href="S1bantumi5.m4v">5. videó</a>
+<a href="S1bantumi6.m4v">6. videó</a></p>
+<p>A játéknak nagyon sok változata létezik elérő szabályokkal. A nyerést éppen ezért nem implementáljuk, csak a játéktáblát.</p>
+<h2 id="feladatmegoldas-lepesrol-lepesre">Feladatmegoldás lépésről lépésre</h2>
+<p><span class='tg_task'>▷</span>  Származtass egy osztályt <code>Lyuk</code> néven a <code>Button</code> osztályból!</p>
+<pre><code class="language-csharp">public class Lyuk: Button
+{
+}
+</code></pre>
+<p><span class='tg_task'>▷</span>  A Lyuk konstruktorában méretezze magát <code>50x50</code> képpontosra!</p>
+<pre><code class="language-csharp">	public Lyuk()
+	{
+		this.Height = 50;
+		this.Width = 50;
+	}
+</code></pre>
+<p><span class='tg_task'>▷</span> Bővítsd a Lyuk osztályt teljesen kifejtett getter-setter metódusokkal ellátott <code>BabokSzáma</code> tulajdonsággal! (<em>propfull-tab-tab</em>)</p>
+<pre><code class="language-csharp">class Lyuk : Button
+{
+    private int babokSzáma;
+    public int BabokSzáma
+    {
+        get { return babokSzáma; }
+        set { babokSzáma = value; }
+    }
+    ...
+</code></pre>
+<p><span class='tg_task'>▷</span> A setter metódusban állítsd be a <code>Lyuk</code> <code>Button</code>-tól örökölt <code>Text</code> tulajdonságát a beállított babok számának megfelelően!</p>
+<pre><code class="language-csharp">class Lyuk : Button
+{
+    private int babokSzáma;
+    public int BabokSzáma
+    {
+        get { return babokSzáma; }
+        set { 
+            babokSzáma = value;
+            Text = babokSzáma.ToString(); 
+        }
+    }
+    ...
+</code></pre>
+<p><span class='tg_task'>▷</span> Fordítsd le az alkalmazást, majd helyezz el néhány példányt tervező nézetből a <code>Fomr1</code>-en! A <em>Properties</em> ablakban be kell tudni állítani a <code>BabokSzáma</code> tulajdonságot, ami azonnal megjelenik a <code>Lyuk</code> felirataként.</p>
+<p><span class='tg_task'>▷</span> Bővítsd a <code>Lyuk</code> osztályt szintén <code>Lyuk</code> típusú, <code>KövetkezőLyuk</code> nevű tulajdonsággal, melyben minden lyuknál beállítható, ki a soron következő lyuk. A getter-setter metódusokat itt nem kell kifejteni. (<em>prop-tab-tab</em>)</p>
+<pre><code class="language-csharp">     public Lyuk KövetkezőLyuk { get; set; }
+</code></pre>
+<p><span class='tg_task'>▷</span> Az űrlapon helyezz el tervező nézetben lyukakat, és az óramutató járásával ellentétes irányban haladva a <em>Properties</em> ablakon keresztül minden <code>Lyuk</code>nál állítsd be a <code>KövetkezőLyuk</code> értékét! (Egyértelmű lesz, ha oda jutsz.)</p>
+<p><span class='tg_task'>▷</span> Bővítsd a <code>Lyuk</code> osztályt <code>void</code> típusú <code>BabotKap</code> nevű publikus metódussal, mely paraméterként <code>mennyiBabot</code> nevű égész típusú paramétert kap! Ha a <code>mennyiBabot&gt; 0,</code></p>
+<ul>
+<li>növelje a <code>Lyuk</code> saját babjainak számát egyel a <code>BabokSzáma</code> tulajdonságának beállításával, majd</li>
+<li>hívja meg a <code>KövetkezőLyuk</code> <code>BabotKap</code> függvényét <code>mennyiBabot-1</code> paraméterrel!<br />
+(Egy babot megtart magának, a többit tovább adja a következő Lyuknak. Ha már nincs mit tovább adni, nem csinál semmit.)</li>
+</ul>
+<pre><code class="language-csharp">    public void BabotKap(int mennyiBabot)
+    {
+        if (mennyiBabot&gt;0) BabokSzáma++;
+            
+        if (mennyiBabot-1 &gt;0)
+        {                
+            KövetkezőLyuk.BabotKap(mennyiBabot - 1);
+        }
+    }
+</code></pre>
+<p><span class='tg_task'>▷</span> A <code>Lyuk</code> konstruktorában rendelj esemény-kiszolgálót a <code>Button</code>-tól örökölt <code>Click</code> eseményhez.</p>
+<p><span class='tg_task'>▷</span> Az esemény-kiszolgáló hívja meg <code>KövetkezőLyuk</code> <code>BabotKap</code> metódusát <code>BabokSzáma</code> paraméterrel, majd nullázza saját <code>BabokSzáma</code> tulajdonságát!   (A megkattintott <code>Lyuk</code> minden babját odaadja a következő <code>Lyuk</code>-nak.)</p>
+<pre><code class="language-csharp">    private void Lyuk_Click(object sender, EventArgs e)
+    {
+        KövetkezőLyuk.BabotKap(this.BabokSzáma);
+        this.BabokSzáma = 0;
+    }
+</code></pre>
+
+</article>
+
+<a class="github-fork-ribbon" href="https://github.com/sindresorhus/github-markdown-css" data-ribbon="Fork me on GitHub" title="Fork me on GitHub">Fork me on GitHub</a>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+<script src="../../assets/article.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/components/prism-core.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/autoloader/prism-autoloader.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/line-numbers/prism-line-numbers.js"></script>
+
+<!-- Video wrap -->
+<div id="inlineVideo_template" class="jump nodisplay">
+    <video id="centvideo" playsinline controls></video>
+    <div></div>
+</div>
+</body>
+</html>

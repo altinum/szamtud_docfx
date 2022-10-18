@@ -1,0 +1,87 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+<title> Kígyós játék</title>
+<meta name="color-scheme" content="light dark">
+<link rel="stylesheet" href="../../assets/github-markdown.css">
+<link rel="stylesheet" href="../../assets/article.css">
+
+<link rel="stylesheet" href="xhttps://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/themes/prism-coy.min.css" integrity="sha512-LOT5F67SMZVdXMrvQe4S1ZHu5l6xk3CST2qqno9kY329OsJBBpybnq+fM9qG4ZSaNzPOjoGzHAeBamSSJyyuZg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/themes/prism-solarizedlight.min.css"  crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/line-numbers/prism-line-numbers.css"  crossorigin="anonymous" referrerpolicy="no-referrer" />
+<style>
+			body {
+				box-sizing: border-box;
+				min-width: 200px;
+				max-width: 980px;
+				margin: 0 auto;
+				padding: 45px;
+			}
+
+			@media (prefers-color-scheme: dark) {
+				body {
+					background-color: #0d1117;
+				}
+			}
+		</style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-fork-ribbon-css/0.2.3/gh-fork-ribbon.min.css">
+<style>
+			.github-fork-ribbon:before {
+				background-color: #121612;
+			}
+		</style>
+</head>
+<body>
+<article class="markdown-body line-numbers">
+
+
+<h1 id="kigyos-jatek">Kígyós játék</h1>
+<h2 id="videok">Videók</h2>
+<p><a href="S1snake1.m4v">1. rész</a>
+<a href="S1sanke2.m4v">2. rész</a>
+<a href="S1sake3.m4v">3. rész</a>
+<a href="S1snake4.m4v">4. rész</a>
+<a href="S1snake5.m4v">5. rész</a>
+<a href="S1snake6.m4v">6. rész</a></p>
+<h2 id="jatek-felepitese-lepesenkent">Játék felépítése lépésenként</h2>
+<h3 id="lepesek-a-kigyos-jatek-felepitesehez">Lépések a kígyós játék felépítéséhez</h3>
+<p><span class='tg_task'>▷</span>  Származtass a <code>PictureBox</code> osztálytól egy új osztályt <code>KígyóElem</code> néven!
+<span class='tg_task'>▷</span> A <code>KígyóElem</code> osztályt bővítsd egy méret statikus egész konstanssal, melynek értéke legyen <code>20</code>.
+<span class='tg_task'>▷</span> A <code>KígyóElem</code> osztályt bővítsd konstruktorral, melyben az a fenti konstansnak megfelelően 20x20 képpontosra méretezi magát.
+<span class='tg_task'>▷</span> A <code>Form1</code> osztályt bővítsd <code>fejX</code> és <code>fejY</code> változókkal, melyekben az utoljára kirakott kígyófej koordinátáit tárolod! Állíts be értelemszerű kezdőéréket! (Pl. 100, 100)
+<span class='tg_task'>▷</span> A <code>Form1</code> osztályt bővítsd <code>irányX</code> és <code>irányY</code> változókkal, melyekben kígyó haladási irályát tárolod! (<code>-1</code>,<code>0</code>,<code>1</code> értékeket vehet fel.) Állíts be kezdőértéket -- ettől függ majd, hogy merre indul a kígyónk!
+<span class='tg_task'>▷</span> A <code>Form1</code> osztályt bővítsd <code>sorszám</code> nevű, <code>0</code> kezdőértékű változóval!
+<span class='tg_task'>▷</span> A <code>Form1</code>-en helyezz el egy engedélyezett számlálót fél másodperces intervallummal, majd rendelj a <code>Tick</code> eseményéhez esemény-kiszolgáló függvényt!
+<span class='tg_task'>▷</span> Az esemény-kiszolgálóban hozz létre egy új példányt a <code>KígyóElem</code> osztályból, majd az iránynak és a méretnek megfelelően változtasd a <code>fejX</code> és <code>fejY</code> változók értékeit! Ezután már mozogni kell a kígyóknak.
+<span class='tg_task'>▷</span> Rendelj esemény-kiszolgálót az űrlap <code>KeyDown</code> eseményhez.
+<span class='tg_task'>▷</span> Változtasd a kígyó irányát az esemény-kiszolgáló paramétereként kapott <code>e.KeyValue</code> (vagy <code>KeyCode</code>) értéke alapján!
+<span class='tg_task'>▷</span> Valósítsd meg az ütközésvizsgálatot! Járd be az űrlap <code>Controls</code> listáját <code>foreach</code> ciklussal, és vizsgálj meg minden <code>KígyóElemet</code> <code>ke</code> néven. Ha van olyan, melynek <code>Top</code> illetve <code>Left</code> tulajdonságai megegyeznek a <code>fejY</code> illetve <code>fejX</code> változók értékeivel, a kígyó farkába harapott.
+<span class='tg_task'>▷</span> Rövidüljön a kígyó. Ehhez először bővítsd egy <code>hossz</code> nevű változóval az osztályt, melyben a kígyó aktuális hosszát tárolod! Ha az űrlapon lévő vezérlők száma meghaladja a hossz változó értékét, vedd ki az űrlap <code>Controls</code> listájának nulladik elemét!
+<span class='tg_task'>▷</span> A kígyóelem konstruktorában páros és a páratlan sorszámú kígyóelemeket színezd eltérően!</p>
+<h3 id="ellenorzo-kerdesek">Ellenőrző kérdések</h3>
+<ol>
+<li>Egy űrlapon csak a <code>Button</code> osztály példányai vannak. Írd le azt a <code>foreach</code> ciklust, mely bejárja az űrlap <code>Controls</code> listáját és minden gomb <code>Visible</code> tulajdonságát hamis értékűre állítja!</li>
+<li>Hogyan lehet az űrlap <code>Contrlos</code> listájának egy meghatároztt sorszámú elemét törölni?</li>
+<li>Hogyan lehet megtudni, hogy egy lista hány elemet tartalmaz?</li>
+<li>Írd le azt a kódrészletet, mely egy számról eldönti, hogy páros-e!</li>
+<li>Származtass egy osztályt a <code>Button</code> osztályból, mely automatikusan átmétetezi magát 30x30 pixelesre!</li>
+</ol>
+
+</article>
+
+<a class="github-fork-ribbon" href="https://github.com/sindresorhus/github-markdown-css" data-ribbon="Fork me on GitHub" title="Fork me on GitHub">Fork me on GitHub</a>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+<script src="../../assets/article.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/components/prism-core.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/autoloader/prism-autoloader.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/line-numbers/prism-line-numbers.js"></script>
+
+<!-- Video wrap -->
+<div id="inlineVideo_template" class="jump nodisplay">
+    <video id="centvideo" playsinline controls></video>
+    <div></div>
+</div>
+</body>
+</html>

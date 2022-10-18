@@ -1,0 +1,217 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+<title> Kódolós feladatok</title>
+<meta name="color-scheme" content="light dark">
+<link rel="stylesheet" href="../../assets/github-markdown.css">
+<link rel="stylesheet" href="../../assets/article.css">
+
+<link rel="stylesheet" href="xhttps://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/themes/prism-coy.min.css" integrity="sha512-LOT5F67SMZVdXMrvQe4S1ZHu5l6xk3CST2qqno9kY329OsJBBpybnq+fM9qG4ZSaNzPOjoGzHAeBamSSJyyuZg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/themes/prism-solarizedlight.min.css"  crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/line-numbers/prism-line-numbers.css"  crossorigin="anonymous" referrerpolicy="no-referrer" />
+<style>
+			body {
+				box-sizing: border-box;
+				min-width: 200px;
+				max-width: 980px;
+				margin: 0 auto;
+				padding: 45px;
+			}
+
+			@media (prefers-color-scheme: dark) {
+				body {
+					background-color: #0d1117;
+				}
+			}
+		</style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-fork-ribbon-css/0.2.3/gh-fork-ribbon.min.css">
+<style>
+			.github-fork-ribbon:before {
+				background-color: #121612;
+			}
+		</style>
+</head>
+<body>
+<article class="markdown-body line-numbers">
+
+
+<hr />
+<p><span class='tg_task'>▷</span> A <code>StreamReader</code> osztály mely tulajdonságából tudható meg, hogy tudunk-e még olvasni a fájlból?</p>
+<p><span class='tg_task'>▷</span> Miért fontos, hogy egy fájlt lezárjunk olvasás után?</p>
+<p><span class='tg_task'>▷</span> Mit jelent <code>@</code> karakter a <code>string</code> literálók előtt? Pl:</p>
+<pre><code class="language-csharp">string fileName = @&quot;c:\temp\kerdesek.txt&quot;;
+</code></pre>
+<p><span class='tg_task'>▷</span> Mi a hiba a következő kódrészletben:</p>
+<pre><code class="language-csharp">StreamReader sr = new StreamReader(&quot;c:\tmp\valami.txt&quot;);
+</code></pre>
+<p><span class='tg_task'>▷</span> Mi a hiba a következő kódrészletben:</p>
+<pre><code class="language-csharp">string s = 'Добар дан';
+</code></pre>
+<p><span class='tg_task'>▷</span> Mi a hiba a következő kódrészletben:</p>
+<pre><code class="language-csharp">for(int i=1,i&lt;5,i++) 
+{
+	Console.WriteLine(i);
+}
+</code></pre>
+<p><span class='tg_task'>▷</span> Mi a hiba a következő kódrészletben:</p>
+<pre><code class="language-csharp">if(a % 2 = 0) MessageBox.Show(&quot;Páros&quot;);
+</code></pre>
+<p><span class='tg_task'>▷</span> Mikor fut le egy osztály konstruktora?</p>
+<p><span class='tg_task'>▷</span> Milyen ciklus (iteráció) típusokat ismersz?</p>
+<p><span class='tg_task'>▷</span> Hogyan lehet int típust stringgé konvertálni?</p>
+<pre><code class="language-csharp">int i = 13;
+string s = ______ ;
+</code></pre>
+<p><span class='tg_task'>▷</span> Hogyan lehet <code>string</code> típust <code>int</code>-é konvertálni?</p>
+<pre><code class="language-csharp">string s = textBox1.Text;
+int i = _________
+</code></pre>
+<p><span class='tg_task'>▷</span> Hogyan lehet <code>string</code> típust <code>double</code>-é konvertálni?</p>
+<pre><code class="language-csharp">double d = Math.PI;
+string s = ______ ;
+</code></pre>
+<p><span class='tg_task'>▷</span> Milyen értékeket vehet fel az `i változó a következő ciklus törzsében:</p>
+<pre><code class="language-csharp">for(int i=1;i&lt;5;i++) 
+{
+	Console.WriteLine(i);
+}
+</code></pre>
+<p><span class='tg_task'>▷</span> Milyen tanult módszerekkel lehet bekapcsolt <code>Timer</code>-t elhelyezni egy űrlapon?</p>
+<p><span class='tg_task'>▷</span> Mit tartalmaz egy <code>Form</code> <code>Controls</code> struktúrája?</p>
+<p><span class='tg_task'>▷</span> A <code>Button</code> osztályt melyik névtér tartalmazza -- illetve hogyan lehet kideríteni, hogy egy osztály melyik névtérbe tartozik? (Milyen using szükséges?)</p>
+<p><span class='tg_task'>▷</span> Mi a fő különbség a <code>List</code> és az tömb  között?</p>
+<p><span class='tg_task'>▷</span> Lehet anélkül növelni a tömb elemeinek számát, hogy átmásolnánk a tömb elemeit?</p>
+<p><span class='tg_task'>▷</span> Milyen metódussal lehet egy <code>string</code>-et feldarabolni adott karakter mentén?</p>
+<p><span class='tg_task'>▷</span> Lehetséges azonos eseménykezelőt (pl. Click) rendelni több gombhoz?</p>
+<p><span class='tg_task'>▷</span> Milyen osztály segítségével lehet fájlból olvasni a tanultak szerint?</p>
+<p><span class='tg_task'>▷</span> Mire szolgál az &quot;is&quot; operátor?</p>
+<p><span class='tg_task'>▷</span> Hogyan lehet megjeleníteni egy szabványos fájlválasztó dialógusablakot?</p>
+<p><span class='tg_task'>▷</span> Mi a különbség a = és a == operátor között?</p>
+<p><span class='tg_task'>▷</span> Hogyan lehet szabványos üzenetablakot megjeleníteni?</p>
+<p><span class='tg_task'>▷</span> Egészítsd ki a kódrészletet úgy, hogy a <code>Sajátgomb</code> osztály a <code>Button</code> osztálytól származzon:</p>
+<pre><code class="language-csharp">class SajatGomb
+{
+}
+</code></pre>
+<p><span class='tg_task'>▷</span> Milyen formában kell változót deklarálni egy gombból származtatott osztályban, ha azt szeretnénk, hogy az megjelenjen a <em>Properties</em> ablaban?</p>
+<p><span class='tg_task'>▷</span> Mi a különbség a <code>public</code> és a <code>private</code> láthatóság között?</p>
+<p><span class='tg_task'>▷</span> Mikor fut le egy tulajdonság (property) setter ága?</p>
+<p><span class='tg_task'>▷</span> Milyen értékeket vehet fel egy <code>int</code> típusú változó?</p>
+<p><span class='tg_task'>▷</span> Milyen értékeket vehet fel egy <code>bool</code> típusú változó?</p>
+<p><span class='tg_task'>▷</span> Milyen értékeket vehet fel egy <code>double</code> típusú változó?</p>
+<p><span class='tg_task'>▷</span> Hogyan törlöd a lista első elemét?</p>
+<p><span class='tg_task'>▷</span> A <code>List&lt;&gt;</code> mely tulajdonságán keresztül olvasható ki a lista elemeinek száma?</p>
+<p><span class='tg_task'>▷</span> Hogyan állapítható meg, hogy egy <code>strting</code> hány karakterből áll?</p>
+<p><span class='tg_task'>▷</span> Irasd ki a string első karakterét:</p>
+<pre><code class="language-csharp">string s = &quot;Helló&quot;;
+Console.WriteLine(___________);
+</code></pre>
+<p><span class='tg_task'>▷</span> Egészítsd ki a kódrészletet úgy, hogy 1 és 10 között írja ki a számokat:</p>
+<pre><code class="language-csharp">for(int i=1;i _____ 10;i++) 
+{
+	Console.WriteLine(i);
+}
+</code></pre>
+<p><span class='tg_task'>▷</span> Milyen számokat ír ki az alábbi kódrészlet?</p>
+<pre><code class="language-csharp">for(int i=1;i &lt; 10;i++) 
+{
+	Console.WriteLine(i);
+}
+</code></pre>
+<p><span class='tg_task'>▷</span> Mire való az űrlap konstruktorában az <code>InitializeComponent()</code> metódushívás?</p>
+<p><span class='tg_task'>▷</span> Mikor fut le egy osztály konstruktora?</p>
+<p><span class='tg_task'>▷</span> Hogyan készítesz konstruktort egy osztályhoz?</p>
+<p><span class='tg_task'>▷</span> Mi az oka annak, hogy a <code>Random</code> osztályból tipikusan csak egy példányt hozunk létre? Miért nem szerencsés az alábbi kódrészlet?</p>
+<pre><code class="language-csharp">For(int i=1;i&lt;10;i++)
+{
+	Random rnd = new Random();
+	Console.WriteLine(rnd.Next(100));
+}
+</code></pre>
+<p><span class='tg_task'>▷</span> Milyen értékeket vehet fel az <code>x</code> változó értéke?</p>
+<pre><code class="language-csharp">Random rnd = new Random();
+int x= rnd.Next(100);
+</code></pre>
+<p><span class='tg_task'>▷</span> Hogyan lehet kiolvasni, hogy milyen széles egy űrlap?</p>
+<p><span class='tg_task'>▷</span> Sorolj fel 5-öt a Form osztály tulajdonságai közül!</p>
+<p><span class='tg_task'>▷</span> Sorolj fel 2-öt a Form osztály metódusai közül!</p>
+<p><span class='tg_task'>▷</span> Sorolj fel 5-öt a Form osztály eseményei közül!</p>
+<p><span class='tg_task'>▷</span> Mikor következnek be az alábbi események pl. egy gomb esetén?</p>
+<ul>
+<li>MouseUp</li>
+<li>MouseDown</li>
+<li>MouseMove</li>
+<li>MouseEnter</li>
+<li>MouseLeave</li>
+</ul>
+<p><span class='tg_task'>▷</span> Példaként adott az alábbi esemény-kiszolgáló függvény. Milyen információt hordoz az <code>e</code> paraméter?</p>
+<pre><code class="language-csharp">void b_MouseDown(object sender, MouseEventArgs e)
+{
+...
+}
+</code></pre>
+<p><span class='tg_task'>▷</span> Hogyan lehet elindítani illetve leállítani egy <code>Timer</code> típusú objektumot?</p>
+<p><span class='tg_task'>▷</span> Milyen mértékegységben méri <code>Timer</code> osztály  <code>Interval</code> tulajdonsága az időt?</p>
+<p><span class='tg_task'>▷</span> Mi a hiba az alábbi kódrészletben?</p>
+<pre><code class="language-csharp">int a = 13;
+Messagebox.show(a+1);
+</code></pre>
+<p><span class='tg_task'>▷</span> Mi a hiba az alábbi kódrészletben?</p>
+<pre><code class="language-csharp">Buttom[,] t = new Button[5,5]();
+t[1,5] = new Button();
+</code></pre>
+<p><span class='tg_task'>▷</span> Mi a hiba az alábbi kódrészletben?</p>
+<pre><code class="language-csharp">int(,) t = new int(5,5)();
+t(0,0) = 13;
+</code></pre>
+<p><span class='tg_task'>▷</span> A <code>StreamReader</code> osztály mely tulajdonságából tudható meg, hogy tudunk-e még olvasni a fájlból?</p>
+<p><span class='tg_task'>▷</span> Hol keresi a fájlrendszerben a program azokat a fájlokat, melyekhez nincs elérési útvonal megadva? Pl:</p>
+<pre><code class="language-csharp">StreamReader sr = new StreamReader(&quot;minta.txt&quot;);
+</code></pre>
+<p><span class='tg_task'>▷</span> Hogyan lehet megszakítani a <code>Form</code> <code>Closing</code> eseményéhez rendelt esemény kiszolgálóból az űrlap tulajdonságát?</p>
+<p><span class='tg_task'>▷</span> Mi történik akkor, ha egy tömb nem létező elemére hivatkozol?</p>
+<h3 id="kodolos-feladatok">Kódolós feladatok</h3>
+<p><span class='tg_task'>▷</span> Hogy cseréled fel <code>a</code> és <code>b</code> változók értékét?</p>
+<p><span class='tg_task'>▷</span> Generálj egy véletlen számot 0 és 10 között!</p>
+<p><span class='tg_task'>▷</span> Írd le azt a kódrészletet, mely ciklusból kirak egy űrlapra egymás alá 10 gombot!</p>
+<p><span class='tg_task'>▷</span> Származtass egy osztályt a Button osztályból, mely automatikusan átmétetezi magát 30x30 pixelesre!</p>
+<p><span class='tg_task'>▷</span> Hogyan lehet int típust string-é konvertálni? (Írj példát!)</p>
+<p><span class='tg_task'>▷</span> Hogyan lehet az űrlap Contrlos listájának egy meghatároztt sorszámú elemét törölni? (Írj példát!)</p>
+<p><span class='tg_task'>▷</span> Írd le azt a kódrészletet, mely egy számról eldönti, hogy páros-e!</p>
+<p><span class='tg_task'>▷</span> Írd le azt a kódrészletet, ami létrehoz egy 2x2-es egészekből álló tömböt!</p>
+<p><span class='tg_task'>▷</span> Írd le azt a kódrészletet, ami létrehoz egy string-ekből álló tömböt, majd hozzáad egy elemet!</p>
+<p><span class='tg_task'>▷</span> Írd le azt a néhány kódsort, mely létrehozza a <code>Button</code> osztály egy példányát, majd elhelyezi az űrlapon!</p>
+<p><span class='tg_task'>▷</span> Írd le azt a néhány kódsort, mely generál egy véletlen számot 0 és 10 között!</p>
+<p><span class='tg_task'>▷</span> Tegyük fél, hogy az űrlapon csak a <code>Button</code> osztály példányai vannak. Írd le azt a <code>foreach</code> ciklust, mely bejárja az űrlap <code>Controls</code> listáját és minden gomb <code>Visible</code> tulajdonságát hamis értékűre állítja!</p>
+<p>UserControl</p>
+<p>Random</p>
+<p>… 1 és 10 között kiírja a számokar</p>
+<p>… létrehoz egy 10x10 bool típusú elemből álló tömböt</p>
+<p>Írd le azt a néhány kódsort, mely SajátGomb néven származtat egy osztályt a Button osztályból!</p>
+<p>Írj példát for ciklusra!</p>
+<p>Hány közvetlen őse lehet C#-ban egy osztálynak?</p>
+<p>Hol lehet átírni, hogy melyik űrlappal induljon az alkalmazás?</p>
+<p>Írd le azt a kódrésztelet, amit 10x10 gombot kirak az űrlapra!</p>
+<p class="..">Melyik osztálytól ötököl a Példa osztály?<br />
+class Példa </p>
+<p>Írd le azt a kódrészletet, mely megnyit egy tetszőleges szövegfájlt olvasásra, majd soronként beolvassa a tartalmát!</p>
+<p>Unicode</p>
+
+</article>
+
+<a class="github-fork-ribbon" href="https://github.com/sindresorhus/github-markdown-css" data-ribbon="Fork me on GitHub" title="Fork me on GitHub">Fork me on GitHub</a>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+<script src="../../assets/article.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/components/prism-core.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/autoloader/prism-autoloader.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/line-numbers/prism-line-numbers.js"></script>
+
+<!-- Video wrap -->
+<div id="inlineVideo_template" class="jump nodisplay">
+    <video id="centvideo" playsinline controls></video>
+    <div></div>
+</div>
+</body>
+</html>

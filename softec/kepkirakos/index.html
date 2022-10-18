@@ -1,0 +1,190 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+<title> Képkirakós játék</title>
+<meta name="color-scheme" content="light dark">
+<link rel="stylesheet" href="../../assets/github-markdown.css">
+<link rel="stylesheet" href="../../assets/article.css">
+
+<link rel="stylesheet" href="xhttps://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/themes/prism-coy.min.css" integrity="sha512-LOT5F67SMZVdXMrvQe4S1ZHu5l6xk3CST2qqno9kY329OsJBBpybnq+fM9qG4ZSaNzPOjoGzHAeBamSSJyyuZg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/themes/prism-solarizedlight.min.css"  crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/line-numbers/prism-line-numbers.css"  crossorigin="anonymous" referrerpolicy="no-referrer" />
+<style>
+			body {
+				box-sizing: border-box;
+				min-width: 200px;
+				max-width: 980px;
+				margin: 0 auto;
+				padding: 45px;
+			}
+
+			@media (prefers-color-scheme: dark) {
+				body {
+					background-color: #0d1117;
+				}
+			}
+		</style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-fork-ribbon-css/0.2.3/gh-fork-ribbon.min.css">
+<style>
+			.github-fork-ribbon:before {
+				background-color: #121612;
+			}
+		</style>
+</head>
+<body>
+<article class="markdown-body line-numbers">
+
+
+<h1 id="kepkirakos-jatek">Képkirakós játék</h1>
+<h2 id="kiindulo-allomanyok-es-megoldas">Kiinduló állományok és megoldás</h2>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="lo.zip">lo.zip</a></td>
+<td>Kiinduló képek</td>
+</tr>
+<tr>
+<td><a href="Pascel_es_lo.docx">Pascel_es_lo.docx</a></td>
+<td>Előadás handout</td>
+</tr>
+<tr>
+<td><a href="kepkirakos_megoldas.zip">kepkirakos megoldas.zip</a></td>
+<td>Megoldás</td>
+</tr>
+</tbody>
+</table>
+<h2 id="a-megoldas-menete-videon">A megoldás menete videón</h2>
+<p><a href="S1lo1-1.m4v">1. Vonszolható gomb kíserlet</a>
+<a href="S1lo2-2.m4v">2. Képek kezelése, </a>
+<a href="S1lo3-3.m4v">3. 5x5 kiskép kirakása</a>
+<a href="S1lo4-4.m4v">4. Mozgatás</a>
+<a href="S1lo5-5.m4v">5. Keverés</a></p>
+<h3 id="ellenorzo-kerdesek">Ellenőrző kérdések</h3>
+<ol>
+<li><p>Hány közvetlen őse lehet C#-ban egy osztálynak?</p>
+</li>
+<li><p>Hol lehet átírni, hogy melyik űrlappal induljon az alkalmazás?</p>
+</li>
+<li><p>Írd le azt a kódrésztelet, amit 10x10 gombot kirak az űrlapra!</p>
+</li>
+<li><p>Sorolj fel 5-öt a Form osztály tulajdonságai közül!</p>
+</li>
+<li><p>Sorolj fel 2-öt a Form osztály metódusai közül!</p>
+</li>
+<li><p>Sorolj fel 5-öt a Form osztály eseményai közül!</p>
+</li>
+<li><p>Melyik osztálytól ötököl a Példa osztály?  <code>class Példa {...}</code></p>
+</li>
+<li><p>Mikor következnek be az alábbi események pl. egy gomb esetén?</p>
+<ul>
+<li>MouseUp</li>
+<li>MouseDown</li>
+<li>MouseMove</li>
+<li>MouseEnter</li>
+<li>MouseLeave</li>
+</ul>
+</li>
+<li><p>Példaként adott az alábbi esemény-kiszolgáló függvény. Milyen információt hordoz az  <em>e</em>  paraméter?</p>
+</li>
+</ol>
+<pre><code class="language-csharp">void b_MouseDown(object sender, MouseEventArgs e)  
+{  
+...  
+}
+</code></pre>
+<h2 id="a-feladatmegoldas-lepesei-gyakorlatra">A feladatmegoldás lépései gyakorlatra</h2>
+<h3 id="elso-fazis-uj-osztaly-szarmaztatasa">Első fázis – új osztály származtatása</h3>
+<p><span class='tg_task'>▷</span>  Származtass osztályt a <code>PictureBox</code> osztályból <code>Képkocka</code> néven!
+<span class='tg_task'>▷</span>  Az új <code>Képkocka</code> osztályt bővítsd konstruktorral!
+<span class='tg_task'>▷</span> A konstruktorban a <code>Képkocka</code> osztály színezze magát fukszia színűre, valamint állítsa be saját szélességét és magasságát 76 pixelre!
+<span class='tg_task'>▷</span> Fordítsd le az alkalmazást. Pl. futtasd és állítsd le. Fordítás után a Tollbox-on meg kell jelennie a <code>Képkocka</code> vezérlőnek, melyet a többihez hasonlóan tervező nézetben is elhelyezhetsz a űrlapon. Próbáld ki!</p>
+<h3 id="masodik-fazis-mozgathato-gomb">Második fázis – mozgatható gomb</h3>
+<p><span class='tg_task'>▷</span> A <code>Képkocka</code> konstruktorában rendelj esemélykiszolgáló függvényeket a <code>MouseDown</code>, a <code>MouseUp</code> és a <code>MouseMove</code> eseményekhez! (Ezeket a <code>Képkocka</code> osztály a <code>PictureBox</code> osztálytól örökölte.)
+<span class='tg_task'>▷</span> A <code>Képkocka</code> osztályt bővítsd egy <code>ox</code> és egy <code>oy</code> nevű <code>int</code> típusú változóval! Ebben tároljuk majd azt a koordinátát, ahol az egér a gomb lenyomásakor tartózkodott a gombon belül.
+<span class='tg_task'>▷</span> A Képkocka osztályt bővítsd egy <code>mozoge</code> nevű <code>bool</code> típusú változóval, melynek kezdőértéke <code>false</code>!
+<span class='tg_task'>▷</span> A <code>MouseDown</code> eseményhez tartozó eseménykiszolgálóban állítsd be <code>ox</code> és <code>oy</code> értékét <code>e.X</code> illetve <code>e.Y</code> érékére, és állítsd a <code>mozoge</code> változó értékét igazra!
+<span class='tg_task'>▷</span> A <code>MouseUp</code> eseményhez tartozó eseménykiszolgálóban nincs más teendő, mint a <code>mozoge</code> változó értékét hamisra állítani.
+<span class='tg_task'>▷</span> A <code>MouseMove</code> eseményhez tartozó eseménykiszolgálóban csak akkor csinálunk valamit, ha a <code>mozoge</code> változó értéke igaz. Hozd létre a feltételes szerkezetet! (<code>if..</code>)
+<span class='tg_task'>▷</span> Ha a fenti feltétel teljesül, tolja el (<code>+=</code>) a Képkocka az <code>X</code> koordinátáját (<code>Left</code> tulajdonság) <code>e.X-ox</code> képponttal, valamint az <code>Y</code> koordinátáját (Top tulajdonság) <code>e.Y-oy</code> képponttal!
+<span class='tg_task'>▷</span> Próbáld ki, mit csináltál: az előző fázis végén tervezőben kihelyezett gombnak most vonszolhatónak kéne lennie.</p>
+<h3 id="harmadik-fazis-lovas-kirakos">Harmadik fázis – lovas kirakós</h3>
+<p><span class='tg_task'>▷</span> Először rakj ki 5x5 Képkockát egymástól 76 pixeles távolságra! (Két egymásba ágyazott ciklus a <code>Form1</code> konstruktorában.)
+<span class='tg_task'>▷</span> Vezess be egy <code>int</code> típusú, <code>sorszám</code> nevű változót a ciklusok előtt <code>0</code> kezdőértékkel!
+<span class='tg_task'>▷</span> A <code>sorszám</code> változó értékét a belső ciklus törzsének utolsó lépéseként növeld egyel! Így, amikor kiraksz egy Képkockát, rendelkezésedre áll egy változó, melyből tudod, hogy épp hányadik képkockát rakod ki.
+<span class='tg_task'>▷</span> Töltsd le a <code>lo.zip</code> állományt, és csomagold ki egy mappába. A mappában lévő képetek másold be az projekten belül lévő <code>bin/debug</code> mappába, ide hozza majd létre a fordító a futtatható .exe állományt. Ha az alkalmazásban nem adsz elérési utat egy fájlnévhez, alapértelmezésben az .exe mellett keresi.
+17.  Töltsd be a <code>Képkocka</code> <code>Load</code> metódusa segítségével a megfelelő lódarabot!</p>
+<h3 id="negyedik-fazis-kepkockak-osszekeverese">Negyedik fázis – képkockák összekeverése</h3>
+<p><span class='tg_task'>▷</span>  Építsd be az alkalmazásba a keverő funkciót az alábbi kódrészlet alapján!</p>
+<pre><code class="language-csharp">public partial class Form1 : Form
+{
+    public Form1()
+    {
+      ....                 
+    }
+
+    int[] tömb = new int[25];
+
+    void Kever()
+    {
+        int n = 25;
+        for (int i = 0; i &lt; n; i++)
+        {
+            tömb[i] = i+1;
+        }
+        Random rnd = new Random();
+        for (int i = 0; i &lt; n; i++)
+        {
+            int egyik = rnd.Next(n);
+            int másik = rnd.Next(n);
+            int köztes = tömb[egyik];
+            tömb[egyik] = tömb[másik];
+            tömb[másik] = köztes;
+        }
+    }
+}
+</code></pre>
+<pre><code class="language-csharp">public partial class Form1 : Form
+{
+    public Form1()
+    {
+        InitializeComponent();
+        Kever();
+        int sorszám = 0;
+        for (int sor = 0; sor &lt; 5; sor++)
+            for (int oszlop = 0; oszlop &lt; 5; oszlop++)
+            {
+                Kepkocka k = new Kepkocka(&quot;lo_&quot; + tömb[sorszám].ToString() + &quot;.jpg&quot;, sor, oszlop);               
+                this.Controls.Add(k);
+                sorszám++;
+            }                      
+    }
+    ...
+}
+
+
+</code></pre>
+
+</article>
+
+<a class="github-fork-ribbon" href="https://github.com/sindresorhus/github-markdown-css" data-ribbon="Fork me on GitHub" title="Fork me on GitHub">Fork me on GitHub</a>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+<script src="../../assets/article.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/components/prism-core.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/autoloader/prism-autoloader.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/line-numbers/prism-line-numbers.js"></script>
+
+<!-- Video wrap -->
+<div id="inlineVideo_template" class="jump nodisplay">
+    <video id="centvideo" playsinline controls></video>
+    <div></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,99 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+<title> Projektfeladat: Életjáték</title>
+<meta name="color-scheme" content="light dark">
+<link rel="stylesheet" href="../../assets/github-markdown.css">
+<link rel="stylesheet" href="../../assets/article.css">
+
+<link rel="stylesheet" href="xhttps://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/themes/prism-coy.min.css" integrity="sha512-LOT5F67SMZVdXMrvQe4S1ZHu5l6xk3CST2qqno9kY329OsJBBpybnq+fM9qG4ZSaNzPOjoGzHAeBamSSJyyuZg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/themes/prism-solarizedlight.min.css"  crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/line-numbers/prism-line-numbers.css"  crossorigin="anonymous" referrerpolicy="no-referrer" />
+<style>
+			body {
+				box-sizing: border-box;
+				min-width: 200px;
+				max-width: 980px;
+				margin: 0 auto;
+				padding: 45px;
+			}
+
+			@media (prefers-color-scheme: dark) {
+				body {
+					background-color: #0d1117;
+				}
+			}
+		</style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-fork-ribbon-css/0.2.3/gh-fork-ribbon.min.css">
+<style>
+			.github-fork-ribbon:before {
+				background-color: #121612;
+			}
+		</style>
+</head>
+<body>
+<article class="markdown-body line-numbers">
+
+
+<h1 id="projektfeladat-eletjatek">Projektfeladat: Életjáték</h1>
+<h2 id="a-feladat-leirasa">A feladat leírása</h2>
+<p>Az életjátékot (Game of Life)  John Horton Conway matematikus találta ki. Klasszikus értelemben nem játék, mert a játéktér mérete és kiinduló állapotának beállítása után a körökre osztott folyamat magától fut. A részletes leírás a <a href="https://hu.wikipedia.org/wiki/%C3%89letj%C3%A1t%C3%A9k">Wikipédia oldalon</a> olvasható.</p>
+<ul>
+<li>A játék indítása előtt be kell állítani a pálya méretét, és a kiinduló élő sejtek számát.</li>
+<li>A megfelelő számú élő sejtet véletlenszámgenerátorral kell elhelyezni a pályán.</li>
+<li>A játék ezután gombnyomással indítható.</li>
+</ul>
+<p>Minden sejtnek két állapota lehet: élő vagy halott. A sejt szomszédjai alatt a körülötte lévő nyolc sejt értendő.</p>
+<p>A játéktábla állapota körönként kerül kiszámolásra, minden körben ki kell számolni minden sejt állapotát az alábbiak szerint:</p>
+<ol>
+<li>A sejt  <em>túléli</em>  a kört, ha két vagy három szomszédja van.</li>
+<li>A sejt elpusztul, ha kettőnél kevesebb  <em>(elszigetelődés)</em>, vagy háromnál több  <em>(túlnépesedés)</em>  szomszédja van.</li>
+<li>Új sejt  <em>születik</em>  minden olyan cellában, melynek környezetében pontosan három sejt található.</li>
+</ol>
+<p>Fontos, hogy a változások csak a kör végén következnek be, tehát az „elhalálozók” nem akadályozzák a születést és a túlélést (legalábbis az adott körben), és a születések nem mentik meg az „elhalálozókat”.</p>
+<blockquote>
+<p>Teams-en várjuk a feladattal kapcsolatban kérdéseket, és igyekszünk mihamarabb válaszolni.</p>
+</blockquote>
+<h2 id="tippek-a-megvalositashoz">Tippek a megvalósításhoz</h2>
+<p>Érdemes két táblát tartani: egyik a régi, a másik az új. A régi tábla szerint minden mezőre kiszámoljuk az új állapotot, melyeket az új táblán rögzítünk.</p>
+<pre><code class="language-csharp">bool[,] pálya = new bool[n, m];
+bool[,] újPálya = new bool[n, m];
+</code></pre>
+<h2 id="section"></h2>
+<p>A szomszédok megszámolásához érdemes írni egy függvényt, mely 1-et ad vissza, ha a megcímzett mezőn élő sejt van, és 0-t ha a megcímzett mezőn lévő sejt nem élő, vagy a pályán kívül esik. Erre a szélek és a sarkok miatt lesz szükség.</p>
+<pre><code class="language-csharp">int mezőÉrtéke(int sor, int oszlop, bool[,] p)
+{
+    if (sor &lt; p.GetUpperBound(0)) return 0;
+    if (oszlop &lt; p.GetUpperBound(1)) return 0;
+    if (sor &lt; 0 || oszlop &lt; 0) return 0;
+    return (p[sor, oszlop]?1:0);
+}
+</code></pre>
+<p>A <code>(p[sor, oszlop]?1:0)</code> kifejezésben egy feltétel szerepel a <code>?</code> elött, melynek értéke igaz vagy hamis lehet. Ha a feltétel teljesül, a kifejezés érték a <code>?</code> után szereplő kifejezés érték lesz, ellenkező esetben pedig a <code>:</code> utáni kifejezésé.</p>
+<p>A <code>GetUpperBound(n)</code> a tömb méretét adja vissza a megadott dimenzió mentén.</p>
+<h2 id="section-1"></h2>
+<p>Így már egyszerűen be lehet járni a pályát, a összeadogatni a 8 szomszédból olvasott értéket, és meghatározni a mező új állapotát.</p>
+<p>A művelet végeztével átmásoljuk az új tábla tartalmát a régibe, és kezdjük elölről.</p>
+<pre><code class="language-csharp">pálya = újPálya;
+</code></pre>
+<p>Ezután a képernyőn érdemes két egymásba ágyazott <code>for</code> ciklussal bejárni a pályát, és ahol kell, valamilyen vezérlő kihelyezésével jelölni az élő sejteket. A lépés előtt a <code>Controls.Clear()</code> metódussal lehet törölni az űrlapon lévő vezérlőket.</p>
+<p><a href="https://www.youtube.com/watch?v=6avJHaC3C2U&amp;feature=emb_rel_end">Youtube video</a> -- 4:32-től érdemes nézni</p>
+
+</article>
+
+<a class="github-fork-ribbon" href="https://github.com/sindresorhus/github-markdown-css" data-ribbon="Fork me on GitHub" title="Fork me on GitHub">Fork me on GitHub</a>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+<script src="../../assets/article.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/components/prism-core.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/autoloader/prism-autoloader.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/line-numbers/prism-line-numbers.js"></script>
+
+<!-- Video wrap -->
+<div id="inlineVideo_template" class="jump nodisplay">
+    <video id="centvideo" playsinline controls></video>
+    <div></div>
+</div>
+</body>
+</html>

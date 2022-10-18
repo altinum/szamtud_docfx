@@ -1,0 +1,113 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+<title> Projektfeladat:  Akasztófa játék</title>
+<meta name="color-scheme" content="light dark">
+<link rel="stylesheet" href="../../assets/github-markdown.css">
+<link rel="stylesheet" href="../../assets/article.css">
+
+<link rel="stylesheet" href="xhttps://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/themes/prism-coy.min.css" integrity="sha512-LOT5F67SMZVdXMrvQe4S1ZHu5l6xk3CST2qqno9kY329OsJBBpybnq+fM9qG4ZSaNzPOjoGzHAeBamSSJyyuZg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/themes/prism-solarizedlight.min.css"  crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/line-numbers/prism-line-numbers.css"  crossorigin="anonymous" referrerpolicy="no-referrer" />
+<style>
+			body {
+				box-sizing: border-box;
+				min-width: 200px;
+				max-width: 980px;
+				margin: 0 auto;
+				padding: 45px;
+			}
+
+			@media (prefers-color-scheme: dark) {
+				body {
+					background-color: #0d1117;
+				}
+			}
+		</style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-fork-ribbon-css/0.2.3/gh-fork-ribbon.min.css">
+<style>
+			.github-fork-ribbon:before {
+				background-color: #121612;
+			}
+		</style>
+</head>
+<body>
+<article class="markdown-body line-numbers">
+
+
+<h1 id="projektfeladat-akasztofa-jatek">Projektfeladat:  Akasztófa játék</h1>
+<h2 id="a-feladat-leirasa">A feladat leírása</h2>
+<p>A klasszikus szókitalálós játék megvalósítása a feladat.</p>
+<ul>
+<li>A szavak listáját fájlmegnyitó ablakból válaszható fájlból lehessen beolvasni, az esetleges hibák kezelése mellett.</li>
+<li>A beolvasott listából véletlenszerűen kerüljön kiválasztásra egy szó.</li>
+<li>A betűk gombokként kerüljenek ki a képernyőre! (Ld. képernyőbillentyűzet példa.)</li>
+<li>Lehessen új játékot kezdeni.</li>
+<li>A megvalósítás többi részében szabad kezetek van.</li>
+</ul>
+<blockquote>
+<p>Teams-en várjuk a feladattal kapcsolatban kérdéseket, és igyekszünk mihamarabb válaszolni.</p>
+</blockquote>
+<h2 id="tippek-a-megvalositashoz">Tippek a megvalósításhoz</h2>
+<h3 id="annak-eldontese-hogy-szerepel-e-egy-betu-egy-szoban">Annak eldöntése, hogy szerepel-e egy betű egy szóban</h3>
+<pre><code class="language-csharp">string s = &quot;Fukszia&quot;;
+if (s.IndexOf('x')&gt;=0)
+{
+    MessageBox.Show(&quot;Van benne x&quot;);
+}
+</code></pre>
+<h3 id="hivatkozas-a-string-elemeire">Hivatkozás a  <code>string</code>  elemeire</h3>
+<p>A  <code>string</code>-ben szereplő betűkre ugyanúgy lehet hivatkozni, mint egy tömb elemeire. Az alábbi kódrészlet fukszia és kék gombokat pakol egymás mellé az  <code>s</code>  karakterláncban szereplő betűknek megfelelően. Ez a gondolatmenet felhasználható a betűket tartalmazó gombok kipakolásakor. A karakterlánc hossza a  <code>Length</code>  tulajdonságán keresztül olvasható ki.</p>
+<pre><code class="language-csharp">string s = &quot;KKFFKK&quot;;
+
+for (int i = 0; i &lt; s.Length; i++)
+{
+    Button b = new Button();
+    b.Left = i * 30;
+    b.Width = 30;
+
+    if (s[i] == 'K') b.BackColor = Color.Blue;
+    if (s[i] == 'F') b.BackColor = Color.Fuchsia;
+
+    Controls.Add(b);
+}
+</code></pre>
+<p>A karakterlánc elemei kiolvashatók, de nem állíthatók. Az alábbi kódrészlet hibás:</p>
+<pre><code class="language-csharp">s[1] = 's'; ///Hibás
+</code></pre>
+<h3 id="rajzolashoz">Rajzoláshoz</h3>
+<p>Szükség lesz egy függvényre, ami a megfelelő számú elemét kirajzolja az akasztófának.</p>
+<pre><code class="language-csharp">void Rajzolas(int szint)
+{
+    // Akasztófa talp rajzolása, utána return
+    // ...
+    if (szint == 1) return;
+
+    //Akasztófa oszlop rajzolása
+    if (szint == 2) return;
+
+    //Akasztófa vízszintes gerenda rajzolása
+    if (szint == 3) return;
+            
+    //...
+}
+</code></pre>
+
+</article>
+
+<a class="github-fork-ribbon" href="https://github.com/sindresorhus/github-markdown-css" data-ribbon="Fork me on GitHub" title="Fork me on GitHub">Fork me on GitHub</a>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+<script src="../../assets/article.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/components/prism-core.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/autoloader/prism-autoloader.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/line-numbers/prism-line-numbers.js"></script>
+
+<!-- Video wrap -->
+<div id="inlineVideo_template" class="jump nodisplay">
+    <video id="centvideo" playsinline controls></video>
+    <div></div>
+</div>
+</body>
+</html>

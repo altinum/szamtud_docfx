@@ -1,0 +1,3 @@
+* Adatbázisok
+
+sql meg ilyenek

@@ -1,0 +1,248 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+<title> Előadásra szánt videók</title>
+<meta name="color-scheme" content="light dark">
+<link rel="stylesheet" href="../../assets/github-markdown.css">
+<link rel="stylesheet" href="../../assets/article.css">
+
+<link rel="stylesheet" href="xhttps://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/themes/prism-coy.min.css" integrity="sha512-LOT5F67SMZVdXMrvQe4S1ZHu5l6xk3CST2qqno9kY329OsJBBpybnq+fM9qG4ZSaNzPOjoGzHAeBamSSJyyuZg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/themes/prism-solarizedlight.min.css"  crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/line-numbers/prism-line-numbers.css"  crossorigin="anonymous" referrerpolicy="no-referrer" />
+<style>
+			body {
+				box-sizing: border-box;
+				min-width: 200px;
+				max-width: 980px;
+				margin: 0 auto;
+				padding: 45px;
+			}
+
+			@media (prefers-color-scheme: dark) {
+				body {
+					background-color: #0d1117;
+				}
+			}
+		</style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-fork-ribbon-css/0.2.3/gh-fork-ribbon.min.css">
+<style>
+			.github-fork-ribbon:before {
+				background-color: #121612;
+			}
+		</style>
+</head>
+<body>
+<article class="markdown-body line-numbers">
+
+
+<h2 id="eloadasra-szant-videok">Előadásra szánt videók</h2>
+<p><a href="S1misc_1.m4v">1. videó</a> -- Menüszalag használata
+<a href="S1misc_2.m4v">2. videó</a> -- Többablakos alkalmazások, a <code>Show()</code> és a <code>ShowDialog()</code> metódus közötti különbségek.
+<a href="S1misc_3.m4v">3. videó</a> -- Párbeszédablakok visszatérési értéke, a <code>DialogResult</code>
+<a href="S1misc_4.m4v">4. videó</a> -- <code>MessageBox</code>
+<a href="S1misc_5.m4v">5. videó</a> -- Űrlap bezárásának megszakítása, a <code>Closing</code> esemény
+<a href="S1misc_6.m4v">6. videó</a> -- Az <code>OpenFileDialog</code>  használata
+<a href="S1misc_7.m4v">7. videó</a> -- Ikonok használata</p>
+<h2 id="kepernyobillentyuzet">Képernyőbillentyűzet</h2>
+<p>Ez csak egy rávezető feladat a fájlkezeléshez és a közös eseménykiszolgálók kezeléséhez, nem kell leadni. A feladat egy billentyűzet felépítése a billentyűk elhelyezkedését leíró file alapján.</p>
+<p><a href="kbd_hun.txt">kbd_hun.txt</a> -- kiinduló állomány</p>
+<p>A fájl billentyűk elhelyezkedését, méretét, és a rajtuk lévő feliratot tartalmazza. Olvasd fel a fájlt, és rakd ki gombokból a billentyűzetet!</p>
+<p><a href="S1kbdhun1.m4v">1. videó</a>
+<a href="S1kbdhun2.m4v">2. videó</a></p>
+<h2 id="aknakereso-jatek">Aknakereső játék</h2>
+<h4 id="a-megoldas-menete-magyarazatokkal">A megoldás menete magyarázatokkal</h4>
+<p><a href="S1mine_1.m4v">1. videó</a> -- Bevezetés
+<a href="S1mine_2.m4v">2. videó</a> -- <code>Mező</code> osztály felépítése
+<a href="S1mine_3.m4v">3. videó</a> -- Pályaépítés mezőkből
+<a href="S1mine_4.m4v">4. videó</a> -- Aknásítás
+<a href="S1mine_5.m4v">5. videó</a> -- Mezők felfedése
+<a href="S1mine_6.m4v">6. videó</a> -- Mezők rekurzív felfedése
+<a href="S1mine_7.m4v">7. videó</a> -- Nagy pálya <code>Panel</code>-ben</p>
+<h4 id="a-mezo-osztaly">A Mező osztály</h4>
+<ol>
+<li>Származtass osztályt Mezo néven a Button osztályból!</li>
+<li>Vegyél fel egy osztályszintű egész szám konstanst, legyen az értéke 25. A konstruktorban méretezze magát a mező e szerint!</li>
+<li>A mezőnek a játékhoz két dolgot biztosan tudnia kell magáról: akna-e, és hogy a szomszédjában hány akna van. Vegyél fel ehhez a két adathoz osztályszintű mezőket!</li>
+<li>Mivel a mező mérete az osztályban szabályozható, így célszerű saját maga elhelyezését is rábízni. Ehhez alakítsd át a konstruktort, hogy fogadjon sor és oszlop pozíciót, majd a Top és Left tulajdonságokat állítsd be e szerint. Tárolt ezeket az értékeket későbbi felhasználásra osztályszintű változóként.</li>
+<li>A mező funkcionalitása a játékban a kattinthatóság: ha még nincs felfedve és rákattintunk, akkor, ha akna, vége a játéknak, ha nem, akkor megjeleníti a szomszédságában található aknák számát. Készíts tagfüggvényt, ami ellátja ezt a feladatot!</li>
+</ol>
+<pre><code class="language-csharp">class Mező : Button
+{
+    public static int méret = 25;
+    public bool akna = false;
+    public bool felfedve = false;
+    public int szomszédszám = 0;
+    public int sor, oszlop;
+
+    public Mező(int sor, int oszlop)
+    {
+        this.sor = sor;
+        this.oszlop = oszlop;
+        this.Top = oszlop * Mező.méret;
+        this.Left = sor * Mező.méret;
+        this.Height = Mező.méret;
+        this.Width = Mező.méret;
+    }
+
+    public void FelFed()
+    {
+        if (akna)
+        {
+            MessageBox.Show(&quot;:(&quot;);
+        }
+        else
+        {
+            this.FlatStyle = FlatStyle.Flat;
+            if (szomszédszám &gt; 0)
+            {
+                this.Text = szomszédszám.ToString();
+            }
+        }
+        this.felfedve = true;
+    }
+}
+</code></pre>
+<h4 id="a-form-kodja">A Form kódja</h4>
+<h5 id="palyagenerator">Pályagenerátor</h5>
+<ol>
+<li>A form osztályának feladata, hogy kellő mennyiségben kipakoljon mezőket a játéktérre. Ehhez készíts egy pályagenerátor tagfüggvényt, amely két paramétert kap: vízszintes és függőleges játéktérméret. Két egymásba ágyazott ciklussal tegyél ki mezőket.</li>
+<li>A pályára rakott mezőket ne csak a formhoz add hozzá, hanem tárold egy kétdimenziós tömbben is az első lépésben készült tagfüggvény kiegészítésével. A tömb legyen osztályszintű változó, amit a pályagenerátor bemeneti paraméterei alapján hozol létre.</li>
+<li>Szintén tárold osztályszintű változóban a megadott függőleges és vízszintes méretet!</li>
+<li>Hívd meg a pályagenerátort 10,10 paraméterekkel a form konstruktorából. Elindítva az alkalmazást, már látszania kell a pályának.</li>
+</ol>
+<h5 id="aknak-kirakasa">Aknák kirakása</h5>
+<ol>
+<li>Készíts tagfüggvényt, ami a már kirakott mezőkön véletlenszerűen helyez el aknákat. Hogy mennyi aknát rakjon ki, legyen bemeneti paraméter.</li>
+<li>A tagfüggvényben indíts ciklust, amely az átadott aknaszámnak megfelelő alkalommal fut le.</li>
+<li>A ciklusban generálj két véletlenszámot, melyek értéke 0 és a függőleges, illetve a vízszintes méret közé esik.</li>
+<li>A véletlenszám generátor példányosítását a ciklus előtt végezd el! (Mi a különbség?)</li>
+<li>Minden akna kirakásakor a szomszédos mezők szomszed értékét növeld eggyel!</li>
+<li>Futtatva a programot hibába ütközünk. A hiba oka, hogy a pálya peremére kerülő aknák esetén a szomszédok nem feltétlenül léteznek, ezt vizsgálni kell mielőtt a szomszed értéket növeljük. Ehhez egészítsd ki feltételekkel a megfelelő programrészt. Célszerű ehhez létrehoznod egy tagfüggvényt.</li>
+</ol>
+<h5 id="felfedes">Felfedés</h5>
+<ol>
+<li>Futtatva a programot ugyan nincs hiba, de nem is használható semmire az alkalmazás.</li>
+<li>A pályagenerátor függvényben rendelj közös esemény-kiszolgáló függvényt a kirakott mezőkhöz.</li>
+<li>Az esemény-kiszolgálóban hívd meg a Mezo felfed tagfüggvényét. Ha szükséges, módosítsd a tagfüggvény láthatóságát.</li>
+</ol>
+<h5 id="szomszedok-felfedese">Szomszédok felfedése</h5>
+<p>Futtatva a programot most már van aknavizsgálat és a szomszédok értéke is kiíródik, de a &quot;szigetszerű&quot; felfedés még nem történik meg. A mezőszintű felfedés mellett a form1 osztálynak kell gondoskodnia erről.</p>
+<ol>
+<li>Készíts tagfüggvényt Felfedes néven a form1 osztályban is. Paraméterül kapja a sor és oszlop értéket.</li>
+<li>A függvény, ha a kapott paraméterek szerinti mező szomszéd értéke 0, felfedi az összes szomszédos mezőt, ha azok nem aknák. A feladat leírásából is kitűnik, hogy ez egy rekurzív feladat. A rekurzió leállítási feltétele:</li>
+</ol>
+<ul>
+<li>Adott mező szomszédság értéke legyen 0</li>
+<li>Ne legyen akna</li>
+<li>Ne legyen még felfedve</li>
+</ul>
+<ol start="3">
+<li>A függvény törzsén belül a paraméterek alapján vedd ki a mezőt a pálya tömbből, majd fogalmazz meg egy feltételt a fenti leállítási feltétel alapján. Ha a feltétel teljesül, és az adott mező pályán van, a függvény fedje fel a sor, oszlop által meghatározott mezőt, majd hívja meg saját magát a mező szomszédos mezőin végighaladva!</li>
+</ol>
+<pre><code class="language-csharp">public partial class Form1 : Form
+{
+    Mező[,] pálya;
+    int szélesség;
+    int magasság;
+
+    public Form1()
+    {
+        InitializeComponent();
+        PályaGenerátor(10, 10);
+        AknaPakoló(10);
+    }
+
+    void AknaPakoló(int aknaszám)
+    {
+        Random rnd = new Random();
+        for (int i = 0; i &lt; aknaszám; i++)
+        {
+            int sor = rnd.Next(magasság);
+            int oszlop = rnd.Next(szélesség);
+            pálya[sor, oszlop].akna = true;
+            if (PályánVanE(sor - 1, oszlop - 1)) pálya[sor - 1, oszlop - 1].szomszédszám++;
+            if (PályánVanE(sor - 1, oszlop + 1)) pálya[sor - 1, oszlop + 1].szomszédszám++;
+            if (PályánVanE(sor + 1, oszlop - 1)) pálya[sor + 1, oszlop - 1].szomszédszám++;
+            if (PályánVanE(sor + 1, oszlop + 1)) pálya[sor + 1, oszlop + 1].szomszédszám++;
+            if (PályánVanE(sor - 0, oszlop + 1)) pálya[sor - 0, oszlop + 1].szomszédszám++;
+            if (PályánVanE(sor - 0, oszlop - 1)) pálya[sor - 0, oszlop - 1].szomszédszám++;
+            if (PályánVanE(sor + 1, oszlop - 0)) pálya[sor + 1, oszlop - 0].szomszédszám++;
+            if (PályánVanE(sor - 1, oszlop - 0)) pálya[sor - 1, oszlop - 0].szomszédszám++;
+        }
+    }
+
+    bool PályánVanE(int sor, int oszlop)
+    {
+        if ((sor &lt; 0) || (oszlop &lt; 0)) return false;
+        if ((sor &gt;= magasság) || (oszlop &gt;= szélesség)) return false;
+        return true;
+    }
+
+    void PályaGenerátor(int szélesség, int magasság)
+    {
+        this.szélesség = szélesség;
+        this.magasság = magasság;
+
+        pálya = new Mező[szélesség, magasság];
+        for (int s = 0; s &lt; magasság; s++)
+        {
+            for (int o = 0; o &lt; szélesség; o++)
+            {
+                Mező m = new Mező(s,o);
+                this.Controls.Add(m);
+                pálya[s, o] = m;
+                m.Click += new EventHandler(m_Click);
+            }    
+        }
+    }
+
+    void m_Click(object sender, EventArgs e)
+    {
+        Mező m = (Mező)sender;
+        felfedés(m.sor, m.oszlop);
+        m.FelFed();
+    }
+
+    void felfedés(int sor, int oszlop)
+    {
+        Mező mező = pálya[sor, oszlop];
+        if (mező.szomszédszám == 0 &amp;&amp; !mező.akna &amp;&amp; !mező.felfedve)
+        {
+            mező.FelFed();
+            if (PályánVanE(sor - 1, oszlop - 1)) felfedés(sor - 1, oszlop - 1);
+            if (PályánVanE(sor - 1, oszlop + 1)) felfedés(sor - 1, oszlop + 1);
+            if (PályánVanE(sor + 1, oszlop - 1)) felfedés(sor + 1, oszlop - 1);
+            if (PályánVanE(sor + 1, oszlop + 1)) felfedés(sor + 1, oszlop + 1);
+            if (PályánVanE(sor - 0, oszlop + 1)) felfedés(sor - 0, oszlop + 1);
+            if (PályánVanE(sor - 0, oszlop - 1)) felfedés(sor - 0, oszlop - 1);
+            if (PályánVanE(sor + 1, oszlop - 0)) felfedés(sor + 1, oszlop - 0);
+            if (PályánVanE(sor - 1, oszlop - 0)) felfedés(sor - 1, oszlop - 0);
+        }
+    }
+}
+</code></pre>
+<h4 id="tovabbi-gyakorlasi-lehetosegek">További gyakorlási lehetőségek</h4>
+<ol>
+<li>Nyerésvizsgálat: Ha már csak &quot;akna&quot; nem felfedett mezők maradtak a pályán, a játékot megnyerted. Oldd meg, hogy kattintáskor történjen nyerésvizsgálat!</li>
+<li>Újraindítás: Játék elveszítésekor vagy megnyerésekor készüljön új pálya és induljon újra a játék!</li>
+<li>Jobb kattintással lehessen megjelölni az aknának sejtett mezőket!</li>
+</ol>
+
+</article>
+
+<a class="github-fork-ribbon" href="https://github.com/sindresorhus/github-markdown-css" data-ribbon="Fork me on GitHub" title="Fork me on GitHub">Fork me on GitHub</a>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+<script src="../../assets/article.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/components/prism-core.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/autoloader/prism-autoloader.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/line-numbers/prism-line-numbers.js"></script>
+
+<!-- Video wrap -->
+<div id="inlineVideo_template" class="jump nodisplay">
+    <video id="centvideo" playsinline controls></video>
+    <div></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+<title> Projektfeladat: Hajós oktató</title>
+<meta name="color-scheme" content="light dark">
+<link rel="stylesheet" href="../../assets/github-markdown.css">
+<link rel="stylesheet" href="../../assets/article.css">
+
+<link rel="stylesheet" href="xhttps://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/themes/prism-coy.min.css" integrity="sha512-LOT5F67SMZVdXMrvQe4S1ZHu5l6xk3CST2qqno9kY329OsJBBpybnq+fM9qG4ZSaNzPOjoGzHAeBamSSJyyuZg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/themes/prism-solarizedlight.min.css"  crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/line-numbers/prism-line-numbers.css"  crossorigin="anonymous" referrerpolicy="no-referrer" />
+<style>
+			body {
+				box-sizing: border-box;
+				min-width: 200px;
+				max-width: 980px;
+				margin: 0 auto;
+				padding: 45px;
+			}
+
+			@media (prefers-color-scheme: dark) {
+				body {
+					background-color: #0d1117;
+				}
+			}
+		</style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-fork-ribbon-css/0.2.3/gh-fork-ribbon.min.css">
+<style>
+			.github-fork-ribbon:before {
+				background-color: #121612;
+			}
+		</style>
+</head>
+<body>
+<article class="markdown-body line-numbers">
+
+
+<h1 id="projektfeladat-hajos-oktato">Projektfeladat: Hajós oktató</h1>
+<h2 id="a-feladat-leirasa">A feladat leírása</h2>
+<p>A kedvtelési célú hajóvezetői vizsga hatósági vizsgakérdései (vitorlázáselmélet, kisgéphajó-elmélet, hajózási szabályzat) a Közlekedési Hatóság honlapjáról voltak letölthetők: <a href="2018_11_22_Hajozasi_szabalyzat.zip">2018_11_22_Hajozasi_szabalyzat.zip</a>. A tömörített állomány egy Excel táblában tartalmazta a vizsgán előforduló összes kérdést és a válaszlehetőségeket. Vannak olyan kérdések, amelyekhez kép is tartozik.</p>
+<p>A feladat olyan alkalmazás készítése C# nyelven, mely begyakoroltatja a kérdéssort a vizsgára készülőkkel.</p>
+<ul>
+<li>Első lépésként olyan formátumú csv fájlt kell exportálni Excelből, amit C# kódból fel tudsz dolgozni.</li>
+<li>Ezután létre kell hozni egy vizsgakérdés tematikájú osztályt, de itt kép is tartozhat a kérdéshez a kérdés szövege és a válaszlehetőségek mellett. Az osztály tartalmazzon egy publikus változót, mely tárolja, hogy egymás után hányszor válaszolták meg jól a kérdést.</li>
+<li>A fájl alapján fel kell építeni a kérdéseket tartalmazó listát (például: <code>List&lt;Kerdes&gt; x</code>).</li>
+<li>A képernyőn mindig egy kérdés legyen látható, a képek miatt nem lenne célszerű egymás alá tenni őket.</li>
+</ul>
+<p>Ha az 1400 kérdésből mindig véletlenszerűen választunk, nem lesz hatékony a tanulás. A program tartalmazzon egy listát, melyben az éppen gyakoroltatott 7 kérdés van. A program indításakor az első 7 kérdés kerüljön ide. Az éppen gyakoroltatott kérdések közül kerüljön mindig véletlenszerűen egy a képernyőre. Ha a tanuló egymás után háromszor helyesen válaszol egy kérdésre, a kérdés kerüljön ki a gyakoroltatott kérdések listájáról, és helyébe a teljes listáról kerüljön be a következő kérdés.</p>
+<blockquote>
+<p>Teams-en várjuk a feladattal kapcsolatban kérdéseket, és igyekszünk mihamarabb válaszolni.</p>
+</blockquote>
+<h2 id="tippek-a-megvalositashoz">Tippek a megvalósításhoz</h2>
+<h3 id="excel-allomany-feldolgozasa">Excel állomány feldolgozása</h3>
+<p>Az elején feltűnhet, hogy az Excelben csak színekkel vannak jelölve a jó válaszok, és ebből így nehéz lesz olyan csv-t csinálni, ami a helyes válasz sorszámát is tartalmazza. Az alábbi kis VBA programmal segítettek a problémán, de a letölthető ZIP tartalmaz egy olyan változatot is az Excel-fájlból, amelyben már külön oszlopokban szerepelnek a színkódok alapján képzett betűk.</p>
+<pre><code class="language-vba">Sub Gomb1_Click()
+    sorok = ActiveSheet.UsedRange.Rows.Count
+    For i = 1 To sorok
+	    Cells(i, 12) = Cells(i, 3).Font.ColorIndex
+    Next
+End Sub
+</code></pre>
+<h3 id="listak-kezelese">Listák kezelése</h3>
+<p>Az alábbi listákat, referenciát, illetve változót érdemes létrehozni a fő űrlap szintjén:</p>
+<pre><code class="language-csharp">//Ebbe a referenciába kerül az a kérdés, amelyik éppen a képernyőn van
+Kerdes aktuálisKérdés;
+
+//Ide kerül a fájl alapján a teljes kérdéslista
+List&lt;Kerdes&gt; összesKérdés = new List&lt;Kerdes&gt;();
+
+//Ebbe a listába kerül az éppen gyakoroltaott 7 kérdés
+List&lt;Kerdes&gt; gyakoroltatottKérdések = new List&lt;Kerdes&gt;();
+
+//Ez a változó tartalmazza azt, hogy ha háromszor jó választ adott a felhasználó egy kérdésre, akkor
+//hányas számú kérdés jön be az összesKérdés listából a helyére
+int követketőKérdés = 8;
+</code></pre>
+
+</article>
+
+<a class="github-fork-ribbon" href="https://github.com/sindresorhus/github-markdown-css" data-ribbon="Fork me on GitHub" title="Fork me on GitHub">Fork me on GitHub</a>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+<script src="../../assets/article.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/components/prism-core.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/autoloader/prism-autoloader.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/line-numbers/prism-line-numbers.js"></script>
+
+<!-- Video wrap -->
+<div id="inlineVideo_template" class="jump nodisplay">
+    <video id="centvideo" playsinline controls></video>
+    <div></div>
+</div>
+</body>
+</html>
