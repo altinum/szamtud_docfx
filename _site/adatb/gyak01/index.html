@@ -1,0 +1,407 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>1. gyakorlat &#8211; Egyszer&#369;, egyt&#225;bl&#225;s lek&#233;rdez&#233;sek </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="1. gyakorlat &#8211; Egyszer&#369;, egyt&#225;bl&#225;s lek&#233;rdez&#233;sek ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="1-gyakorlat--egyszerű-egytáblás-lekérdezések">1. gyakorlat – Egyszerű, egytáblás lekérdezések</h1>
+
+<h2 id="előkészületek">Előkészületek</h2>
+<ul>
+<li>A gyakorlatvezető Azure-előfizetésének használata
+-- VAGY --</li>
+<li>DVD adatbázis telepítése a dvd.sql script segítségével saját, Azure-ban létrehozott adatbázisba</li>
+</ul>
+<p>A gyakorlathoz tartozó adatbázis az egyetemen kívülről csak VPN-en keresztül érhető el.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Szerver</td>
+<td>bit.uni-corvinus.hu</td>
+</tr>
+<tr>
+<td>Felhasználónév</td>
+<td>hallgato</td>
+</tr>
+<tr>
+<td>Jelszó</td>
+<td>Password123</td>
+</tr>
+<tr>
+<td>Adatbázis</td>
+<td>dvd_magyar</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Adatbázis elérése Visual Studio-ból</strong></p>
+<p>A Visual Studio rendelkezik egy <em>Server Explorer</em> panellel, mely egy olyan segédeszköz, mellyel projekttől függetlenül lehet SQL adatbázisokhoz csatlakozni. A panel a <em>View</em> menüből a <em>Server Exprlorer</em> menüpont kiválasztása után jelenik meg. (Nem összekeverendő az <em>SQL Server Object Explorer</em>rel.)</p>
+<p>◯ A panelen a kis ikonra kattintval lehet csatlakozni egy új adatbázishoz.</p>
+<p>◯ A megjelenő lehetőségek közül az <strong>SQL Server</strong>t kell választani.</p>
+<p>◯ A felugró ablakban meg kell adni az adatbázis eléréséhet szükséges adatokat a fenti táblázat szerint.</p>
+<ul>
+<li>Fontos, hogy az <strong>Windows Authentication</strong> helyett az <strong>SQL Server Authentication</strong>-t válaszd! A <strong>Windows Authentication</strong> Windows-ba történő bejelentkezéshez használt <em>credential</em>-öket használja az SQL szerver felé is, míg az  <strong>SQL Server Authentication</strong> az SQL szerverben felvett <em>login</em> és <em>jelszó</em> alapján végzi el az autentikációt.</li>
+<li>Érdemes odafigyelni arra, hogy a szerver domain (sql.2rpi. hu) neve és a port (7000) <code>,</code> karakterrel vannak elválasztva, nem az URL-ben megszokott <code>:</code> használatos az elválasztásra.</li>
+</ul>
+<p><img src="../../images/vs_sql_connect2.png" alt=""></p>
+<p>◯ A megjelenő fában a <strong>Tables</strong>-t kinyitva láthatóvá válnak az adatbázis táblái, jobb egérgombbal kattintva bármelyik táblára a <strong>New Query</strong>  menüpont hozza elő azt a panelt, melyben az SQL mondatok futtathatók. (Teljesen mindegy, melyik táblán kattintasz, ugyanaz a lekérdezésszerkesztő panel jelenik meg.)</p>
+<h2 id="adatok-lekérdezése--select-utasítás">ADATOK LEKÉRDEZÉSE – SELECT UTASÍTÁS</h2>
+<h3 id="lekérdezések-oszlopainak-megváltoztatása">LEKÉRDEZÉSEK OSZLOPAINAK MEGVÁLTOZTATÁSA</h3>
+<p><strong>Legegyszerűbb példa</strong></p>
+<pre><code class="lang-sql">SELECT 1+1
+</code></pre>
+<p>A <code>SELECT</code> kulcsszó után tetszőleges algebrai kifejezés megadható, a lekérdezés a kifejezés eredményét adja vissza. Ez nem egy tipikus felhasználási mód, de  a teljesség kedvéért érdemes megemlíteni.</p>
+<p><strong>A megjelenítendő oszlopok kiválasztása</strong></p>
+<pre><code class="lang-sql">SELECT * FROM dvd;
+</code></pre>
+<pre><code class="lang-sql">SELECT cim, stilus FROM dvd;
+</code></pre>
+<p>A <code>SELECT</code> utasításrész után a megjelenítendő oszlopok nevei kerülnek egymástól vesszővel elválasztva, a * az összes oszlopot jelenti. A <code>FROM</code> utasításrész után adhatjuk meg a tábla nevét, melyből kérdezni akarunk.</p>
+<p><strong>Oszlopfejléc feliratának megváltoztatása</strong></p>
+<pre><code class="lang-sql">SELECT szam AS [Nyilvántartási szám], cim AS Filmcím FROM Dvd;
+</code></pre>
+<p>Ha egy elnevezés több szóból áll, szögletes zárójelbe kell tenni, különben az SQL szerver a második szót ismeretlen kifejezésnek értelmezi. Természetesen egyszavas oszlopnév körül is szerepeltethető szögletes zárójel. Ugyanez vonatkozik a mezőnevekre. A betűközzel tagolt mezőnevek használata nem javasolt, de nem tilos. A betűközzel tagolt mezőneveket mindenképpen szögletes zárójelbe kell tenni.</p>
+<p><strong>Számított oszlopértékek</strong></p>
+<p>Magyar billentyűzetet használóknál gyakori hiba, hogy a numerikus billentyűzeten az SQL-ben használt tizedes pont helyett vesszőt ütnek. Az SQL a vesszőt felsorolások tagolására használja. Az aritmetikai műveletek közül használható a <code>+</code> <code>-</code> <code>*</code> <code>/</code> , hatványozás a <code>^</code> operátorral történik.</p>
+<pre><code class="lang-sql">SELECT cim,nettoar AS [nettó ár], nettoar*1.25 AS [bruttó ár] FROM Dvd;
+</code></pre>
+<pre><code class="lang-sql">SELECT cim,nettoar * (1+(1.27/100)) AS [bruttó ár] FROM Dvd;
+</code></pre>
+<pre><code class="lang-sql">SELECT nev + ', ' + cim AS [Kölcsönző] FROM tagok;
+</code></pre>
+<p>Az <code>+</code> operátorral fűzhetünk össze szövegrészleteket illetve több értéket egy oszlopba.</p>
+<p><strong>A kiválasztott sorok számának korlátozása, a WHERE záradék</strong></p>
+<p>A kívánt sorokat a <code>WHERE</code> záradék használatával választhatjuk ki. A <code>WHERE</code> záradék a <code>FROM</code> záradékot követi.
+Feltételek szöveg és feljegyzés típusú mezőkre</p>
+<pre><code class="lang-sql">SELECT  cim, stilus FROM dvd WHERE stilus='számítástechnika';
+</code></pre>
+<p>Karakterláncok</p>
+<ul>
+<li>A lekérdezésben szereplő karakterláncokat aposztrófok (') közé foglaljuk.</li>
+<li>A karakterláncokban a kis- és nagybetűk különbözőnek számíthatnak.</li>
+</ul>
+<p><strong>A LIKE operátor</strong></p>
+<p>Előfordulhat, hogy nem ismerjük pontosan a keresendő értéket, illetve egy szövegben szereplő szövegrészletre keresünk. A mezőnév='valami' módszerrel csak teljes szövegegyezésre tudunk feltételt szabni.</p>
+<p>A 'LIKE' operátorral kiválaszthatjuk azokat a sorokat, amelyekben szereplő értékek megfelelnek egy karaktermintának.  A karaktermintának való megfelelést ellenőrző műveletet helyettesítő karakteres keresésnek is nevezzük. A behelyettesítéshez használt szimbólumok:</p>
+<p><code>_</code>  	- Egyetlen karaktert jelképez
+<code>%</code> 	- Nulla vagy több tetszőleges karakter sorozatát jelképezi</p>
+<pre><code class="lang-sql">SELECT  cim, stilus FROM dvd WHERE Cim LIKE 'A%';
+</code></pre>
+<p>A fenti példa az A betűvel kezdődő címeket listázza ki.</p>
+<pre><code class="lang-sql">SELECT  cim, stilus FROM dvd WHERE Cim LIKE '_z%';
+</code></pre>
+<p>A fenti példa azokat a sorokat adja eredményül, ahol a cím második karaktere z.</p>
+<pre><code class="lang-sql">SELECT  cim, stilus FROM dvd WHERE Cim LIKE '%kutya%';
+</code></pre>
+<p>Eredményül azokat a filmeket kapjuk, melyek címében szerepel a ‘kutya’ szó – előtte és utána tetszőleges karaktersorozattal.</p>
+<blockquote>
+<p>A szövegműveletek az adatbázis alapértelmezett beállításai szerint nem tesznek különbséget a kis- és nagybetűk közözött. Az adatbázis létrehozásánál a <strong>collation</strong> beállítás adja meg, hogy legyen-e különbség a kis- és nagybetűk között, illetve mely nyelv szabályai szerint történjen a szövegek sorba rendezése. Pl. magyarban ...,o ,ó ,ö ,ő ,p, ...  vagy ...,s, sz, t, ...</p>
+</blockquote>
+<p><strong>Az ESCAPE opció (nagyon haladóknak)</strong></p>
+<p>Előfordulhat, hogy a <code>LIKE</code> operátorral  éppen<code>%</code> vagy <code>_</code> jelet szeretnénk kerestetni. Az <code>ESCAPE</code> opció után kijelölhetünk egy ún. escape karaktert. Az escape karakter után következő karaktert a LIKE hagyományos karakterként és nem vezérlőkarakterként értelmezi.</p>
+<pre><code class="lang-sql">SELECT  cim, stilus FROM dvd WHERE Cim LIKE '%\_%' ESCAPE '\';
+</code></pre>
+<p>A fenti példa azon címeket listázza, melyekben szerepel az _ karakter. Magát az escape karaktert az escape karakter dupla leütésével érhetjük el:</p>
+<pre><code class="lang-sql">…Cim LIKE ‘C:\\%’ ESCAPE ‘\’;
+</code></pre>
+<p><strong>Feltételek számot vagy pénznemet tartalmazó mezőkre</strong></p>
+<p>A következő aritmetikai operátorokat használhatjuk: <code>&lt;</code>, <code>&gt;</code>, <code>=</code>, <code>&lt;=</code>, <code>&gt;=</code>, <code>&lt;&gt;</code></p>
+<pre><code class="lang-sql">SELECT * FROM dvd WHERE nettoar&gt;=3000
+</code></pre>
+<p><strong>Feltételek dátumot tartalmazó mezőkre</strong></p>
+<p>Az SQL szerver többféle dátumtípust kezel. A minta adatbázisban szereplő <code>date</code> adattípus nem tartalmaz időadatot.
+A <code>getdate()</code> függvény mindig az aznapi dátumot adja vissza. Ha kivonunk belőle egy dátum típusú értéket, megkapjuk az eltelt időt:</p>
+<pre><code class="lang-sql">SELECT getdate()-ki_datum AS [Mióta kölcsönözve] FROM kolcsonzes
+</code></pre>
+<p>Az eredmény azonban nehezen olvasható, mert szintén dátumformátumban van, az 1900. január 1 óta eltelt napok számának megfelelően. Az eredményt alávethetjük típuskonverziónak, vagy használhatjuk a DATEDIFF függvényt. Ezekről később lesz szó.
+Az SQL kifejezésekben szereplő dátumokat ' jelek közé kell tenni, és célszerű angol dátumformátumban megadni.</p>
+<pre><code class="lang-sql">SELECT * FROM kolcsonzes WHERE ki_datum&gt;='02/19/2000'
+</code></pre>
+<p><strong>Feltételek logikai típusú mezőkre</strong></p>
+<p>A Microsoft SQL Server nem rendelkezik valódi (TRUE, FALSE) logikai adattípussal, erre a <code>bit</code>  (0,1) értékkészletű típus használatos.</p>
+<ul>
+<li>igaz  	1</li>
+<li>hamis 	0</li>
+</ul>
+<p>Listázzuk a korhatáros filmeket:</p>
+<pre><code class="lang-sql">SELECT * FROM dvd WHERE korhatár=1
+</code></pre>
+<p>Listázzuk a nem korhatáros filmeket:</p>
+<pre><code class="lang-sql">SELECT * FROM dvd WHERE korhatár=0
+</code></pre>
+<p><strong>Kitöltetlen mezők keresése - <code>IS NULL</code> operátor</strong></p>
+<p>Az <code>IS NULL</code> operátor <code>NULL</code> értékeket keres. A <code>NULL</code> érték olyan értéket jelöl, amely nem érhető  el, nem ismert, nincs megadva vagy nem értelmezhető.</p>
+<pre><code class="lang-sql">SELECT  cim, stilus FROM dvd WHERE stilus IS NULL;
+</code></pre>
+<p>Eredményül azokat a sorokat kapjuk, akol a stílus mező nincs kitöltve.</p>
+<p><strong>Összetett feltételek - Logikai operátorok</strong></p>
+<p>Az SQL nyelv három logikai operátor használatát támogatja: <code>AND</code>, <code>OR</code> és <code>NOT</code></p>
+<pre><code class="lang-sql">SELECT cim, stilus FROM dvd WHERE stilus='számítástechnika' OR stilus='ismeretterjesztő';
+</code></pre>
+<pre><code class="lang-sql">SELECT cim, stilus FROM dvd WHERE NOT stilus='számítástechnika';
+</code></pre>
+<p>A <code>WHERE</code> záradékban szereplő összetett feltételek rekordonként kerülnek kiértékelésre. Az SQL szerver végigmegy a <code>FROM</code> záradékban szereplő táblán, és rekordonként eldönti, hogy az adott rekord megfelel-e a <code>WHERE</code> záradékban megadott feltételeknek.</p>
+<p><strong>A teljesség kedvéért</strong></p>
+<p>Az <code>AND</code> operátor igazságtáblázata
+||TRUE|FALSE|NULL
+-|-|-|-
+TRUE|TRUE|FALSE|NULL
+FALSE|FALSE|FALSE|FALSE
+NULL|NULL|FALSE|NULL</p>
+<p>Az <code>OR</code> operátor igazságtáblázata</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>TRUE</th>
+<th>FALSE</th>
+<th>NULL</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>TRUE</td>
+<td>TRUE</td>
+<td>TRUE</td>
+<td>TRUE</td>
+</tr>
+<tr>
+<td>FALSE</td>
+<td>TRUE</td>
+<td>FALSE</td>
+<td>NULL</td>
+</tr>
+<tr>
+<td>NULL</td>
+<td>TRUE</td>
+<td>NULL</td>
+<td>NULL</td>
+</tr>
+</tbody>
+</table>
+<p>A <code>NOT</code> operátor igazságtáblázata</p>
+<table>
+<thead>
+<tr>
+<th>TRUE</th>
+<th>FALSE</th>
+<th>NULL</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>FALSE</td>
+<td>TRUE</td>
+<td>NULL</td>
+</tr>
+</tbody>
+</table>
+<p>Vigyázzunk az <code>AND</code> művelet magasabb rendű, mint az <code>OR</code>! Vegyük példának a következő lekérdezést:</p>
+<pre><code class="lang-sql">SELECT * FROM magyarok WHERE 
+Neme='lany' AND tulajdonsag='szép' OR tulajdonsag='Okos'
+</code></pre>
+<p>A lekérdezés eredményül nem a szép és okos lányokat adja eredményül, mert az AND magasabb rendű művelet, mint az OR. A feltételt következő rekordok elégítik ki:</p>
+<ul>
+<li>szép lányok</li>
+<li>nemtől függetlenül mindenki, aki okoks</li>
+</ul>
+<p>A kívánt eredményt (szép és okos) megfelelő zárójelezéssel érhetjük el:</p>
+<pre><code class="lang-sql">SELECT * FROM magyarok WHERE 
+Neme='lany' AND (tulajdonsag='szép' OR tulajdonsag='Okos')
+</code></pre>
+<p><strong>A BETWEEN .. AND</strong></p>
+<p>A <code>BETWEEN</code> művelet használatával értéktartomány alapján szabhatunk feltételt.  A tartományt alsó és felső határértékével adhatjuk meg. A <code>BETWEEN</code> operátorral megadott határértékek beletartoznak a tartományba – zárt intervallumról beszélünk. Először az alsó határértéket kell megadnunk.</p>
+<pre><code class="lang-sql">SELECT cim, nettoar FROM dvd WHERE nettoar BETWEEN 1000 AND 5000;
+</code></pre>
+<p>Használata kiváltható egy összetett lekérdezéssel:</p>
+<pre><code class="lang-sql">SELECT cim, nettoar FROM dvd WHERE nettoar&gt;=1000 AND nettoar&lt;=5000;
+</code></pre>
+<p><strong>Az IN operáror</strong></p>
+<pre><code class="lang-sql">SELECT cim, stilus  FROM dvd WHERE stilus IN ('ismeretterjesztő', 'számítástechnika');
+</code></pre>
+<p>A <code>WHERE</code> záradékban lévő feltétel azoknál a rekordoknál teljesül, ahol a stílus mező értéke szerepel az IN utáni felsorolásban.</p>
+<p>Még két példa:</p>
+<pre><code class="lang-sql">SELECT  cim, stilus FROM dvd WHERE stílus='számítástechnika' OR stílus='ismeretterjesztő' 
+</code></pre>
+<pre><code class="lang-sql">SELECT  cim, stilus FROM dvd WHERE NOT (stílus='számítástechnika' OR stílus='ismeretterjesztő')
+</code></pre>
+<p><strong>A DISTINCT predikátum</strong></p>
+<p>A <code>DISTINCT</code> kihagyja eredményül kapott táblából az ismétlődő sorokat. A dvd táblában például több filmnek lehet azonos a stílusa. Ha a ‘rajzfilm’ két rekord stílus mezőjében szerepel, akkor a következő SQL-utasítás csak az egyik rekordot adja vissza:</p>
+<pre><code class="lang-sql">SELECT DISTINCT stilus FROM dvd;
+</code></pre>
+<p>A DISTINCT predikátumot használó lekérdezés eredménye nem frissíthető.</p>
+<h2 id="gyakorló-feladatok">Gyakorló feladatok</h2>
+<h3 id="mezők-listázása">Mezők listázása</h3>
+<p>(+/-) Mennyi 6*8?</p>
+<p><a href="Gy1_1.mp4">Megoldás</a></p>
+<p>(+/-) Listázd az összes mezőt a <code>dvd</code> táblából</p>
+<p><a href="Gy1_2.mp4">Megoldás</a></p>
+<p>(+/-) Listázd a <code>cim</code> mező tartalmát a <code>dvd</code> táblából!</p>
+<p><a href="Gy1_3.mp4">Megoldás</a></p>
+<p>(+/-) Listázd a <code>cim</code> és a  <code>stilus</code> mező tartalmát a <code>dvd</code> táblából!</p>
+<p><a href="Gy1_4.mp4">Megoldás</a></p>
+<p>(+/-) Listázzuk a <code>kolcsonzes</code> tábla következő oszlopait: ID, ki_datum, vissza_datum!</p>
+<p>a.	Az ID oszlop neve legyen Azonosító
+b.	A ki_datum oszlop neve legyen Kölcsönzés_dátuma
+c.	A vissza_datum oszlop neve legyen Visszahozatal_dátuma</p>
+<p><a href="Gy1_5.mp4">Megoldás</a></p>
+<p>(+/-) Listázd az 4000 forintnál drágább filmeket! (A táblázatban az árak forintban szerepelnek.)</p>
+<p>a. Listázd az 5000 forintnál olcsóbb filmeket!
+b. Listázd az 5000 forintnál olcsóbb, de 4000 forintnál drágább filmeket!</p>
+<p><a href="Gy1_6.mp4">Megoldás</a></p>
+<p>(+/-)	Melyek a 12-es azonosítójú kölcsönzések adatai?</p>
+<p>a.	Csak a ki, mit, és ki_datum oszlopok jelenjenek meg</p>
+<p><a href="Gy1_7.mp4">Megoldás</a></p>
+<p>(+/-)	<strong>Melyek azok a kölcsönzések, amelyek 2005.01.01 és 2007.01.01 között történtek?</strong></p>
+<p><a href="Gy1_8.mp4">Megoldás</a></p>
+<p>(+/-)	Melyek azok a kölcsönzések, ahol a kölcsönző az 1-es, 2-es, vagy a 3-as azonosítójú tag?</p>
+<p>a.	A kölcsönző tag azonosítója ne legyen benne az oszlopok listájában</p>
+<p><a href="Gy1_9.mp4">Megoldás</a></p>
+<p>(+/-)	<strong>Melyek azok a tagok, akiknek kedvenc stílusa a játék, és nevük a-ra végződik?</strong></p>
+<p>a.	Csak a tagok neve jelenjen meg, az oszlop neve Név legyen</p>
+<p><a href="Gy1_10.mp4">Megoldás</a></p>
+<p>(+/-)	Melyek azok a tagok, akik nevében nincs b betű, de címükben van?</p>
+<p><a href="Gy1_11.mp4">Megoldás</a></p>
+<p>(+/-)	<strong>Melyek azok a tagok, akiknek kedvenc nyelve 1, 2 vagy 5-ös azonosítójú?</strong></p>
+<p><a href="Gy1_12.mp4">Megoldás</a></p>
+<p>(+/-)	Melyek azok a dvd-k, amelyek nem magyar nyelvűek?</p>
+<p>Megjegyzés: itt most két lekérdezés kell, először meg kell keresni a magyar nyelv kódját, majd leszűrni a dvd táblát. Később majd meg tudjuk oldani egyben is.</p>
+<p><a href="Gy1_13.mp4">Megoldás</a></p>
+<p>(+/-)	<strong>Listázzuk egy oszlopban a tagok nevét, címét és kedvenc stílusát összefűzve!</strong></p>
+<p>a.	A nevet, címet és a stílust kötőjellel válasszuk el
+b.	A kötőjelek előtt és után legyen 1-1 szóköz
+c.	Az oszlop neve legyen TAG
+d.	Kinga keresztnevű tagok ne legyenek benne a listában</p>
+<p><a href="Gy1_14.mp4">Megoldás</a></p>
+<p>(+/-)	Mennyi lenne a dvd-k nettó ára, ha 20%-kal csökkenne?</p>
+<p>a.	Csak a dvd-k címét és a csökkentett árat jelenítsük meg
+b.	A csökkentett árat nevezzük el diszkont_ar-nak</p>
+<pre><code>[Megoldás](Gy1_15.mp4)
+</code></pre>
+<p>(+/-)	<strong>Vannak-e bizonyos ellentmondások a kolcsonzesek táblában? (ugyanazon tag ugyanazt a konyvet ugyanazon nap többször is kivette)?</strong></p>
+<p>a.	Listázzuk a szükséges oszlopokat
+b.	Adjuk ki ugyanazt a lekérdezést DISTINCT kulcsszóval is
+c.	Hasonlítsuk össze a 2 eredményhalmazt, egyformák-e?</p>
+<p><a href="Gy1_16.mp4">Megoldás</a></p>
+<p>(+/-)	Van-e olyan dvd, amely orosz nyelvű?</p>
+<p><a href="Gy1_17.mp4">Megoldás</a></p>
+<p>a.	Először keresse meg a nyelvek táblában az orosz nyelv azonosítóját
+b.	Majd szűrje le az adott nyelv azonosítójú dvd-ket</p>
+<p>(+/-)	Melyek azok a kölcsönzések, ahol még nem hozták vissza a dvd-t?</p>
+<p><a href="Gy1_18.mp4">Megoldás</a></p>
+<p>(+/-) Melyek azok a kölcsönzések, ahol a dvd-t már visszahozták, vagy nem hozták vissza, és a 3-as vagy 4-es azonosítójú tag vette ki?</p>
+<p>Megjegyzés: a logikai <em>AND</em> magasabb rendű művelet, mint az <em>OR</em>. Erre érdemes odafigyelni a zárójelezésnél!</p>
+<p><a href="Gy1_19.mp4">Megoldás</a></p>
+<p>(+/-) Listázd a filmeket cím abc szerinti sorrendben!</p>
+<p><a href="Gy1_20.mp4">Megoldás</a></p>
+<p>(+/-) Az előző lekérdezést bővíts úgy, hogy a film címe mellett a stílus is szerepeljen zárójelben. Az oszlopot nevezd is el.</p>
+<p><a href="Gy1_21.mp4">Megoldás</a></p>
+<p>(+/-) Listázd azokat a filmeket, melyek címében szerepel az „angol” vagy a „példatár” szavak valamelyike!</p>
+<p><a href="Gy1_22.mp4">Megoldás</a></p>
+<p>(+/-) Listázd a filmek címét úgy, hogy a cím után, vele egy mezőben, zárójelek között szerepeljen az ára áfával!</p>
+<p><a href="Gy1_23.mp4">Megoldás</a></p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

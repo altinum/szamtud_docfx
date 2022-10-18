@@ -1,0 +1,126 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>PixelArt </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="PixelArt ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="pixelart">PixelArt</h1>
+
+<p>A feladat célja egy egyszerű rajzoló program elkészítése, mellyel 8x8 pixeles ábrákat lehet rajzolni Label-ből származtatott objektumok átszínezésével.</p>
+<h2 id="1-pixel-osztály">1. Pixel osztály</h2>
+<p>(+/-) a.	Származtass osztályt a <code>Label</code> osztályból <code>Pixel</code> néven!</p>
+<p>(+/-) Az osztály szintjén legyen egy <code>Selected</code> nevű <code>bool</code> típusú változó, mely alapértelmezetten <code>false</code> értéket kap.</p>
+<p>(+/-) Az osztályban szintjén ezen felül hozz létre egy <code>DefaultColor</code> nevű <code>Color</code> típusú objektumot is, amely a „sötét szürke” színt kapja alapértékként, valamint egy <code>SelectedColor</code> nevűt, ami a feketét. Utóbbi objektum publikus legyen!</p>
+<p>(+/-) A konstruktorban állítsd be a <code>Pixel</code> színét a <code>DefaultColor</code>-ra és rendelj eseménykezelőket kódból a <code>Click</code>, a <code>MouseLeave</code>, és a <code>MouseEnter</code> eseményekhez.</p>
+<p>(+/-) A <code>MouseEnter</code> eseménykezelőben állítsd be a <code>Pixel</code> hátterét a <code>SelectedColor</code>-ra, amennyiben a <code>Selected</code> változó értéke hamis.</p>
+<p>(+/-) A <code>MouseLeave</code> eseménykezelőben állítsd be a <code>Pixel</code> hátterét a <code>DefaultColor</code>-ra, amennyiben a <code>Selected</code> változó értéke hamis.</p>
+<p>(+/-) A <code>Click</code> eseménykezelőben váltsd át a <code>Selected</code> változó értékét (<code>true</code> -&gt; <code>false</code>, <code>false</code> -&gt;<code>true</code>), majd, ha a <code>Selected</code> igaz, akkor a <code>Pixel</code> háttere legyen a <code>SelectedColor</code>, egyébként pedig a <code>DefaultColor</code>.</p>
+<h2 id="2-form-összeállítása">2.	 Form összeállítása</h2>
+<p>(+/-)Tegyél ki a <code>Form1</code>-re egy <code>Panel</code>-t és három <code>TextBox</code>-ot az ábrán látható módon. A <code>TextBox</code>-ok <code>Text</code> tulajdonságát tervezőből állítsd „0”-ra. A <code>Panel</code> mérete legyen 240x240.</p>
+<p>(+/-) A <code>Form1</code> konstruktorában egymásba ágyazott for ciklusokkal helyezz ki 8x8 példányt a <code>Pixel</code> osztályból a <code>Panel</code>-re. (A <code>panel1</code> vezérlőihez add az objektumokat és ne a <code>Form1</code>-hez.) A <code>Pixel</code>-ek értelem szerűen helyezkedjenek el hézagok nélkül és mindegyik legyen 30x30-as méretű.</p>
+<h2 id="3-színezés">3. Színezés</h2>
+<p>(+/-)Rendelj közös eseménykezelőt a három <code>TextBox</code>-hoz!</p>
+<p>(+/-)Az eseménykezelőn belül hozz létre három <code>byte</code> típusú változót <code>r</code>, <code>g</code> és <code>b</code> néven <code>0</code> kezdőértékkel.</p>
+<p>(+/-)Egy <code>try-catch</code> blokkon belül olvasd be a három változó értékét rendre a három <code>TextBox</code>-ból és a <code>catch</code> ágat hagyd üresen.</p>
+<p>(+/-)A beolvasás után egy <code>foreach</code> ciklussal menj végig a <code>panel</code>-ben található <code>Pixel</code>-eken és mindegyik <code>SelectedColor</code> tulajdonságát állítsd a megadott RGB értékeknek megfelelően. Segítség: <code>Color.FromArgb(r,g,b)</code></p>
+<p><img src="../../images/1602072975369.png" alt="1602072975369.png"></p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

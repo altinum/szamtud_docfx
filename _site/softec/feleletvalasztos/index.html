@@ -1,0 +1,256 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Feleltv&#225;laszt&#243;s j&#225;t&#233;k </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Feleltv&#225;laszt&#243;s j&#225;t&#233;k ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="feleltválasztós-játék">Feleltválasztós játék</h1>
+
+<p>A példaalkalmazás az alábbi témákat érinti:</p>
+<ul>
+<li>Szövegfájlok megnyitása és soromként történő olvasása</li>
+<li>Szövegfájl karakterkódolásának megadása</li>
+<li>UserControlok használata</li>
+<li>Metódusok túlterhelése</li>
+</ul>
+<h2 id="kiinduló-állományok-és-megoldás">Kiinduló állományok és megoldás</h2>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="jatek.csv">jatek.csv</a></td>
+<td>Kérdések - pontosvesszővel tagolt sorokban</td>
+</tr>
+<tr>
+<td><a href="jatek2.txt">jatek2.txt</a></td>
+<td>Kérdések - külön sorokba fejtve</td>
+</tr>
+<tr>
+<td><a href="handout.docx">handout.docx</a></td>
+<td>Előadás handout</td>
+</tr>
+<tr>
+<td><a href="Jatek.zip">Jatek.zip</a></td>
+<td>Előadás handout</td>
+</tr>
+</tbody>
+</table>
+<h2 id="a-megoldás-menete-videókon">A megoldás menete videókon</h2>
+<p><a href="S1quiz1Filehandling-1.m4v">Fájlkezelés</a></p>
+<p><a href="S1quiz2Uc-2.m4v">UserControl építése</a></p>
+<p><a href="S1quiz3Ucfromon-3.m4v">UserControl-ok kirakása</a></p>
+<p><a href="S1quiz4Overload-4.m4v">Túlterhelt konstruktor</a></p>
+<p><a href="S1quiz5Coloring-5.m4v">Válaszok színezése</a></p>
+<p><a href="S1quiz6Csv-6.m4v">CSV fájl kezelése</a></p>
+<p><a href="S1quiz7Utf-7.m4v">Karakterkódolások</a></p>
+<h3 id="ellenőrző-kérdések">Ellenőrző kérdések</h3>
+<ol>
+<li>A StreamReader osztály mely tulajdonságából tudható meg, hogy tudunk-e még olvasni a fájlból?</li>
+<li>Írd le azt a kódrészletet, mely megnyit egy tetszőleges szövegfájlt olvasásra, majd soronként beolvassa a tartalmát!</li>
+<li>Írd le azt a kódrészletet, mely ciklusból kirak egy űrlapra egymás alá 10 gombot!</li>
+<li>Mi a hiba a következő kódrészletbe: <code>StreamReader sr = new StreamReader(&quot;c:\tmp\valami.txt&quot;)</code>;</li>
+<li>Mit jelöl a <code>@</code> karakter stringek előtt?</li>
+<li>Hogyan lehet <code>string</code> típust <code>int</code>-é konvertálni? (Írj példát!)</li>
+<li>Hogyan lehet <code>int</code> típust <code>string</code>-é konvertálni? (Írj példát!)</li>
+</ol>
+<h2 id="feleltválasztós-játék-felépítése-lépésről-lépésre">Feleltválasztós játék felépítése lépésről lépésre</h2>
+<blockquote>
+<p>Azt tanácsoljuk, hogy a videók után önálóan probáljátok felépíteni a játékot az alábbi lépések mentén. Arra kérnénk mindenkit, hogy jelöljétek azokat a lépéseket, amivel kész vagytok, vagy ahol elakadtatok.</p>
+</blockquote>
+<h3 id="kiinduló-adatok-hozzáadása-a-projekthez">Kiinduló adatok hozzáadása a projekthez</h3>
+<p>(+/-) Töltsd le a honlapról a <code>jatek2.txt</code> állományt, és vizsgáld meg a tartalmát!</p>
+<p>(+/-) A fájlt húzd be a projektbe és a <em>Properties</em> ablakban a <em>Copy to output directory</em> beállítást állítsd „Copy if newer”-re!</p>
+<h3 id="usercontrol-létrehozása">UserControl létrehozása</h3>
+<p>(+/-) Hozz létre <code>UserControl</code>-t <code>KérdésUserControl</code> néven. A <code>KérdésUserControl</code>-ban helyezz el négy gombot és egy címkét a kérdésnek! A fenti vezérlők <code>Modifiers</code> tulajdonságát állítsd <code>public</code>-ra!</p>
+<h3 id="fájl-felolvasása">Fájl felolvasása</h3>
+<p>(+/-) A <code>Form1</code> osztály konstruktorában a <code>StreamReader</code> osztály segítségével nyiss d meg a <code>jatek2.txt</code> fájlt.</p>
+<p>(+/-) A <code>StreamReader</code> osztály segítségével nyisd meg a fájlt, és egy <code>while</code> ciklus segítségével olvass be cikluslépésenként hat sort találó nevű és megfelelő típusú változókba:
+-   az első sor a kérdés
+-   az ezt kévető négy sor a négy lehetséges választ tartalmazza
+-   a hatodik sor a helyes válasz sorszámát tartalmazó egész szám</p>
+<p>(+/-) A ciklus törzsében hozz létre példányt a <code>KérdésUserControl-ból</code>, és add az űrlap vezélőiek listájához!</p>
+<p>(+/-) Oldd meg, hogy a <code>KérdésUserControl</code>-ból létrehozott példányok egymás alá kerüljenek!</p>
+<p>(+/-) Állítsd be <code>KérdésUserControl</code>-ból létrehozott példányban lévő címke és gomb szövegét értelemszerűen!</p>
+<h3 id="játékos-válaszainak-ellenőrzése">Játékos válaszainak ellenőrzése</h3>
+<p>(+/-) Hozz létre egy publikus egész típusú változót a <code>KérdésUserControl</code> osztályban <code>JóVálasz</code> néven. Ebből tudja majd ellenőrizni a <code>KérdésUserControl</code>, hogy a felhasználó jó gombra kattintott-e.</p>
+<ol start="10">
+<li>A sorokat olvasó ciklus törzsében a <code>KérdésUserControl</code> <code>JóVálasz</code> változóját is állítsd be!</li>
+<li><code>KérdésUserControl</code>-ban rendelj eseménykiszolgálókat a gombokhoz. Minden eseménykiszolgáló színezze pirosra a hozzá tartozó gombot!</li>
+<li>Ezután a helyes válaszhoz tartozó gombot színezd zöldre!</li>
+</ol>
+<h3 id="megoldás">Megoldás</h3>
+<p>Kérdés UserControl code-behind</p>
+<pre><code class="lang-csharp">public partial class KérdésUserControl : UserControl
+{
+    int jóválasz;
+    public bool eltaláta = false;
+
+    public Kérdés()
+    {
+	    InitializeComponent();
+    }
+
+    public Kérdés(string kédés, string v1, string v2, string v3, string v4, int jóválasz)
+    {
+	    InitializeComponent();
+	    label1.Text = kédés;
+	    button1.Text = v1;
+	    button2.Text = v2;
+	    button3.Text = v3;
+	    button4.Text = v4;
+	    this.jóválasz = jóválasz;
+    }
+
+    private void button1_Click(object sender, EventArgs e)
+    {
+	    button1.BackColor = Color.Red;
+	    Színezd();
+	    if (jóválasz == 1) eltaláta = true;
+    }
+
+    private void button2_Click(object sender, EventArgs e) (...)
+    private void button3_Click(object sender, EventArgs e) (...)
+    private void button4_Click(object sender, EventArgs e) (...)
+
+    void Színezd()
+    {
+	    if (jóválasz == 1) button1.BackColor = Color.Green;
+	    if (jóválasz == 2) button2.BackColor = Color.Green;
+	    if (jóválasz == 3) button3.BackColor = Color.Green;
+	    if (jóválasz == 4) button4.BackColor = Color.Green;
+    }
+}
+</code></pre>
+<p>Form1 code-behind</p>
+<pre><code class="lang-csharp">private void Form1_Load(object sender, EventArgs e)
+{
+    StreamReader sr = new StreamReader(&quot;jatek.csv&quot;, Encoding.Default);
+    int kérdésszám = 0;
+    while (!sr.EndOfStream)
+    {
+        string sor = sr.ReadLine();
+        string[] s = sor.Split(';');
+        string kérdés = s[0];
+        string v1 = s[1];
+        string v2 = s[2];
+        string v3 = s[3];
+        string v4 = s[4];
+        byte jó = byte.Parse(s[5]);
+
+        KerdesUserControl kuc = new KerdesUserControl(kérdés, v1,v2,v3,v4,jó);
+        kuc.Top = kuc.Height * kérdésszám;
+        Controls.Add(kuc);
+
+        if (kérdésszám == 100) break;
+
+        kérdésszám++;
+    }
+
+    sr.Close();
+}
+</code></pre>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

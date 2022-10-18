@@ -1,0 +1,387 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Be&#225;gyazott SQL lek&#233;rdez&#233;sek </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Be&#225;gyazott SQL lek&#233;rdez&#233;sek ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="beágyazott-sql-lekérdezések">Beágyazott SQL lekérdezések</h1>
+
+<p><a href="gyak07_x264.mp4">Összefoglaló videó</a></p>
+<h2 id="alapfogalmak">Alapfogalmak</h2>
+<p>A beágyazott SQL lekérdezés (subuery) lekérdezés a lekérdezésen belül.</p>
+<ul>
+<li>Rendszerint egy (külső) SELECT utasításon belüli (belső) SELECT  utasítást jelent (INSERT, DELETE és UPDATE utasításokba is beágyazható)</li>
+<li>Először a belső SELECT fut le, majd annak  eredményét megkapva a külső SELECT hajtódik végre. Korrelált allekérdezéseknél (lásd később) ez soronként történik.</li>
+<li>Egy külső SELECT-be több belső SELECT is beágyazható.</li>
+</ul>
+<p>Tipikus formája:</p>
+<pre><code class="lang-sql">Select &lt;oszlopnév-lista&gt; from &lt;táblanév&gt; 
+where (Select &lt;oszlopnév-lista&gt; from &lt;táblanév&gt;)
+</code></pre>
+<p>pl: melyek azok a termékek, amelyeknek az átlagosnál nagyobb a listaára?</p>
+<pre><code class="lang-sql">select * from termek where listaar&gt;(select avg(listaar) from termek)
+</code></pre>
+<h3 id="korrelált-és-önálló-allekérdezések">Korrelált és önálló allekérdezések</h3>
+<p>Ha az allekérdezés hivatkozik a külső select valamely oszlopára, <strong>korrelált</strong> allekérdezésről beszélünk.</p>
+<pre><code class="lang-sql">select * from termek 
+where termek.listaar= (select max(listaar) from termek t2 where t2.kat_id=termek.kat_id)
+</code></pre>
+<p>Ha nem, az allekérdezés <strong>önálló</strong>.</p>
+<pre><code class="lang-sql">select * from termek where listaar&gt;(select avg(listaar) from termek)
+</code></pre>
+<h2 id="csoportosítás-eredmény-szerint">Csoportosítás eredmény szerint</h2>
+<p>Az allekérdezés visszaadhat egy értéket, ekkor <strong>skalár</strong> lekérdezésről beszélünk.</p>
+<pre><code class="lang-sql">select * from termek where listaar&gt;(select avg(listaar) from termek)
+</code></pre>
+<p>Visszaadhat több értéket, akkor <strong>multi-valued</strong> lekérdezésről van szó:</p>
+<pre><code class="lang-sql">select * from termek where termekkod in (select termekkod from rendeles_tetel)
+</code></pre>
+<p>Visszaadhat <strong>táblát</strong> is, amely nem tananyag. Allekérdezést a from záradékban is használhatunk, ekkor táblát visszaadó allekérdezésről van szó.</p>
+<h2 id="allekérdezések-használata">Allekérdezések használata</h2>
+<h3 id="hová-kerülhet-az-allekérdezés">Hová kerülhet az allekérdezés?</h3>
+<p>Select záradékba:</p>
+<pre><code class="lang-sql">select termekkod, 
+(select count(*) from rendeles_tetel where termekkod=termek.termekkod) as [Eladott darabszám] 
+from termek
+</code></pre>
+<p>From záradékba:</p>
+<pre><code class="lang-sql">select * from  (select * from termek) as T
+</code></pre>
+<p>Where záradékba:</p>
+<pre><code class="lang-sql">select * from termek where listaar&gt;(select avg(listaar) from termek)
+</code></pre>
+<p>Having záradékba:</p>
+<pre><code class="lang-sql">select * from rendeles_tetel where mennyiseg&gt;(select avg(mennyiseg) from rendeles_tetel)
+</code></pre>
+<h3 id="operátorok">Operátorok</h3>
+<h4 id="any">ANY</h4>
+<p>Az ANY operátor igaz értéket ad vissza, ha az összehasonlítás eredménye az alkérdés legalább egy eredménysorára teljesül. Az alábbi lekérdezés a legolcsóbb terméken kívül mindegyiket visszaadja.</p>
+<pre><code class="lang-sql">SELECT *
+FROM termek
+WHERE listaar &gt; ANY (select listaar from termek);
+</code></pre>
+<h4 id="all">ALL</h4>
+<p>Az ALL operátor igaz értéket ad vissza, ha az összehasonlítás eredménye az alkérdés minden eredménysorára teljesül. Az alábbi lekérdezés a legdrágább termék(ek)et adja vissza:</p>
+<pre><code class="lang-sql">SELECT *
+FROM termek
+WHERE listaar &gt;= ALL (select listaar from termek);
+</code></pre>
+<h4 id="in">IN</h4>
+<p>Az IN segítségével azt ellenőrízhetjük, a vizsgált érték eleme-e az eredményhalmaznak. Pl. melyek azok az ügyfelek, akik adtak már le rendelést?</p>
+<pre><code class="lang-sql">select * from ugyfel where login in (select login from rendeles)
+</code></pre>
+<h4 id="exists">EXISTS</h4>
+<p>Az EXISTS operátor igaz értéket ad vissza, ha a beágyazott SELECT eredményhalmaza nem üres. Az előző feladat EXISTS operátorral:</p>
+<pre><code class="lang-sql">select * from ugyfel where exists (select * from rendeles where rendeles.login=ugyfel.login)
+</code></pre>
+<h3 id="mikor-használjuk">Mikor használjuk?</h3>
+<ul>
+<li>Ha szeretnénk összehasonlítani egy kifejezés értékét a beágyazott lekérdezés eredményével (legtöbbször &lt;, &gt;, = )</li>
+<li>Ha szeretnénk eldönteni, hogy egy kifejezés eredménye benne van-e a beágyazott lekérdezés eredményhalmazában (IN)</li>
+<li>Ha szeretnénk eldönteni, hogy a beágyazott lekérdezés eredményhalmaza üres-e (EXISTS)</li>
+</ul>
+<h3 id="korlátozások">Korlátozások</h3>
+<p>Az ANSI SQL több korlátozást is megfogalmaz az allekérdezésekkel kapcsolatban, többségüket tapasztalhatjuk MSSQL-ben is:</p>
+<ul>
+<li>Mindig zárójelbe kell tenni</li>
+<li>Összehasonlítás esetén mindig a reláció jobb oldalán áll</li>
+<li>Nem lehet benne ORDER BY (leszámítva a TOP, FOR XML, OFFSET esetét), INTO</li>
+<li>Ha van benne GROUP BY, akkor nem lehet benne DISTINCT</li>
+<li>Ha csak egy értéket ad vissza, akkor nem lehet benne GROUP BY és HAVING sem</li>
+<li>A visszaadott érték(ek)nek (join) kompatibilisnek kell lennie a külső SELECT WHERE feltételével</li>
+<li>Bizonyos adattípusok nem használhatók (ntext, text, image)</li>
+</ul>
+<h3 id="megjegyzések">Megjegyzések</h3>
+<ul>
+<li>A beágyazott lekérdezések helyett többnyire más megoldást is használhatunk (pl: JOIN)</li>
+<li>A beágyazott lekérdezések átláthatóbbá teszik a kódot, viszont performacia szempontjából nem a legjobbak</li>
+<li>Ugyanaz a feladat sokszor többféle operátor használatával is megoldható (pl: IN, EXISTS).</li>
+<li>Nagyobb rekordszám esetén performancia szempontjából legtöbbször az EXISTS a legjobb választás</li>
+<li>Az IN és az EXISTS operátorok tagadhatók is (NOT IN, NOT EXISTS)</li>
+<li>A beágyazott lekérdezések  egymásba is ágyazhatók</li>
+</ul>
+<h2 id="példák">Példák</h2>
+<h3 id="önálló-alkérdés---összehasonlítás">Önálló alkérdés - összehasonlítás</h3>
+<p>Melyek azok a rendelési tételek, amelyek rendelési mennyisége az átlagos rendelési mennyiségnél nagyobb?</p>
+<pre><code class="lang-sql">SELECT * FROM rendeles_tetel
+WHERE mennyiseg &gt; (SELECT AVG(mennyiseg) FROM rendeles_tetel)
+</code></pre>
+<h3 id="önálló-alkérdés--összehasonlítás--any-all">Önálló alkérdés – összehasonlítás + ANY, ALL</h3>
+<p>Melyek azok a termékek, amelyek nem a legolcsóbbak (listaáruk nem a legkisebb)</p>
+<pre><code class="lang-sql">SELECT megnevezes
+FROM Termek
+WHERE listaar &gt; ANY
+(
+ SELECT listaar
+ FROM Termek
+)
+</code></pre>
+<p>Melyek a legdrágább termékek?</p>
+<pre><code class="lang-sql">SELECT megnevezes
+FROM Termek
+WHERE listaar &gt;= ALL
+(
+ SELECT listaar
+ FROM Termek
+)
+</code></pre>
+<h3 id="önálló-alkérdés---in">Önálló alkérdés - IN</h3>
+<p>Melyek azok az ügyfelek, akik már adtak le rendelést?</p>
+<pre><code class="lang-sql">SELECT Nev
+ FROM Ugyfel 
+WHERE [login] IN 
+(
+SELECT DISTINCT [login] 
+FROM rendeles
+)
+</code></pre>
+<h3 id="korrelált-alkérdés---összehasonlítás">Korrelált alkérdés - Összehasonlítás</h3>
+<p>Melyek azok a termékek, amelyek listaára kategóriájukban a legmagasabb?</p>
+<pre><code class="lang-sql">SELECT t.termekkod, t.MEGNEVEZES
+FROM Termek t
+WHERE t.LISTAAR = 
+(
+ SELECT max(t2.LISTAAR)
+ FROM Termek t2
+ WHERE t.KAT_ID = t2.KAT_ID
+)
+</code></pre>
+<h3 id="korrelált-alkérdés--összehasonlítás--any-all">Korrelált alkérdés – Összehasonlítás + ANY, ALL</h3>
+<p>Melyek azok az a termékek, amelyek saját raktárukban a legolcsóbbak?</p>
+<pre><code class="lang-sql">SELECT t.TERMEKKOD, t.megnevezes
+FROM Termek t
+WHERE t.listaar &lt;= ALL
+(
+ SELECT t2.listaar
+ FROM Termek t2
+ WHERE t.RAKTAR_KOD = t2.RAKTAR_KOD
+)
+</code></pre>
+<h3 id="korrelált-alkérdés---in">Korrelált alkérdés - IN</h3>
+<pre><code class="lang-sql">SELECT u.NEV
+FROM Ugyfel u
+WHERE 'Esküvői meghívó' IN
+(
+  SELECT t.megnevezes
+  FROM Rendeles r        JOIN Rendeles_Tetel rt ON r.SORSZAM = rt.SORSZAM
+       JOIN Termek t ON rt.TERMEKKOD = t.TERMEKKOD
+  WHERE u.LOGIN = r.LOGIN
+)
+</code></pre>
+<h3 id="korrelált-alkérdés---exists">Korrelált alkérdés - EXISTS</h3>
+<p>Melyek azok a termékek, amelyekből legalább egyszer rendeltek már 50 darabnál többet?</p>
+<pre><code class="lang-sql">SELECT t.megnevezes
+from Termek t
+where EXISTS
+(
+  SELECT *
+  FROM Rendeles_tetel rt 
+  WHERE rt.TERMEKKOD = t.TERMEKKOD 
+        AND rt.MENNYISEG &gt; 50
+)
+</code></pre>
+<h3 id="alkérdés---having">Alkérdés - HAVING</h3>
+<p>Melyek azok az ügyfelek, amelyek 2017-ben többször rendeltek, mint 2016-ban? Elég az ügyfelek azonosítóját (LOGIN) megjeleníteni!</p>
+<pre><code class="lang-sql">SELECT u.LOGIN
+FROM Rendeles r JOIN Ugyfel u ON r.LOGIN = u.LOGIN
+WHERE YEAR(rend_datum)=2017 
+GROUP BY u.login
+HAVING COUNT(*)&gt;
+(
+  SELECT COUNT(*)
+  FROM Rendeles r2 JOIN Ugyfel u2 ON r2.LOGIN = u2.LOGIN
+  WHERE YEAR(rend_datum)=2016 AND u2.LOGIN = u.LOGIN
+)
+</code></pre>
+<h1 id="feladatok">Feladatok</h1>
+<h2 id="előkészületek">Előkészületek</h2>
+<p>• Csatlakozás a tanszéki kiszolgálóra
+A gyakorlathoz tartozó adatbázis az egyetemen kívülről csak VPN-en keresztül érhető el.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Szerver</td>
+<td>bit.uni-corvinus.hu</td>
+</tr>
+<tr>
+<td>Felhasználónév</td>
+<td>hallgato</td>
+</tr>
+<tr>
+<td>Jelszó</td>
+<td>Password123</td>
+</tr>
+<tr>
+<td>Adatbázis</td>
+<td>webshop</td>
+</tr>
+</tbody>
+</table>
+<p>Válasszuk ki a webshop adatbázist!
+-- Vagy --
+•	Webshop adatbázis telepítése a webshop.sql script segítségével. Figyelem, nagy méretű állomány, lefuttatása néhány percet is igénybe vehet.</p>
+<p><em><strong>A 3,4,5,16 feladatokhoz mindenképpen saját (Azure vagy telepített) SQL szerverre van szükség, mivel adatdefiníciós és -manipulációs parancsok futtatása a tanszéki kiszolgálón nem megengedett.</strong></em></p>
+<h2 id="feladatsor">Feladatsor</h2>
+<p>(+/-) Melyek azok a rendelések, ahol a rendelés postai úton történt, és a megrendelés és a szállítás dátuma között több, mint egy hét telt el?
+a.	Csak a rendelések sorszámait listázzuk!
+<a href="Gy07_01.mp4">Megoldás</a></p>
+<p>(+/-) Listázzuk veronika4 azonosítójú (LOGIN) felhasználó összes rendelését!
+a.	Csak a rendelés sorszámát, dátumát, a termékkódot és a mennyiséget jelenítsük meg!
+<a href="Gy07_02.mp4">Megoldás</a></p>
+<p>(+/-) Egy spórolós ügyfél saját árlistát szeretne készíteni, amelyet egy külön táblában tárol.
+Ebben a megvásárolni kívánt termékek kódját és a más webshopokban elérhető legalacsonyabb árát tárolja. Első lépésként létrehoz egy táblát NEPTUNKOD_ARLISTA néven, amelynek szerkezete a következő:
+(
+ID egész szám,
+TERMEKKOD szöveg(255),
+MIN_LISTAAR valós szám
+)
+Az ID legyen elsődleges kulcs, a LISTAAR csak 0 és 50000 között lehet.
+a.	Hozzuk létre az új táblát és a megadott kényszereket!
+<a href="Gy07_03.mp4">Megoldás</a></p>
+<p>(+/-) Töltsük fel manuálisan a NEPTUNKOD_ARLISTA táblát a következő adatokkal:
+a.	 1, '01100070T', 80
+b.	 2, '02040403T', 1200
+c.	 3, '03080031T', 100
+d.	 4, '07040047T', 35
+<a href="Gy07_04.mp4">Megoldás</a></p>
+<p>(+/-) Listázzuk a NEPTUNKOD_ARLISTA tábla sorait! A lista tartalmazzon két új oszlopot is.
+a.	Az első a Termek táblában található listaár legyen ugyanerre a termékre 'Webshop_listaár' néven!
+b.	A második 'Megéri_e' néven egy bit típusú oszlop legyen. Ennek értéke 1, ha a listaár kisebb, vagy egyenlő, mint a Termek táblában található listaár, 0 ha magasabb.
+<a href="Gy07_05.mp4">Megoldás</a></p>
+<p>(+/-)  <strong>Listázzuk azon termékeket, amelyekből az átlagosnál kevesebb van raktáron!</strong>
+a.	Csak a termék kódja és megnevezése jelenjen meg!
+<a href="Gy07_06.mp4">Megoldás</a></p>
+<p>(+/-) ** Listázzuk azon ügyfeleket, akik még nem fizettek bankkártyával!**
+a.	Csak az ügyfelek neve jelenjen meg!
+<a href="Gy07_07.mp4">Megoldás</a></p>
+<p>(+/-) <strong>Mennyibe kerül a második legnagyobb listaárú termék?</strong>
+<a href="Gy07_08.mp4">Megoldás</a></p>
+<p>(+/-) <strong>Melyik raktár(ak)ban van az a termék, amelyből a legnagyobb készlet van?</strong>
+a.	 Csak a raktár(ak) neve jelenjen meg!
+<a href="Gy07_09.mp4">Megoldás</a></p>
+<p>(+/-) <strong>Melyek azok a termékek, amelyek listaára nagyobb, mint bármelyik olyan terméké, amelynek nevében az Ajándék szó szerepel?</strong>
+a.	A termékek kódját és nevét is jelenítsük meg!
+<a href="Gy07_10.mp4">Megoldás</a></p>
+<p>(+/-) Melyik hónapokban adtak le az ügyfelek több rendelést, mint januárban?
+a.	Elég a hónapok sorszámait megjeleníteni.
+b.	A listát rendezzük a hónapok száma szerint növekvő sorrendbe!
+<a href="Gy07_11.mp4">Megoldás</a></p>
+<p>(+/-) Melyek azok a termékek, amelyek listaára az átlagostól max. 20%-kal tér el?
+a.	A termék kódját és nevét is jelenítsük meg!
+<a href="Gy07_12.mp4">Megoldás</a></p>
+<p>(+/-) Készítsünk listát (sorszámonként) az egyes rendelések teljes összegéről!
+a.	Szűrjünk azon tételekre, ahol ez az érték nagyobb, mint Viktor Éva rendeléseinek teljes összege!
+b.	 A teljes összeg oszlopot nevezzük el értelemszerűen!
+<a href="Gy07_13.mp4">Megoldás</a></p>
+<p>(+/-) Listázzuk azokat a termékkategóriákat, amelyből 2017 januárban nem történt rendelés!
+a.	Elég a kategóriák nevét megjeleníteni!
+<a href="Gy07_14.mp4">Megoldás</a></p>
+<p>(+/-) Listázzuk azon rendelési tételeket, amelynek értéke nagyobb, mint a legdrágább termék listaára azon termékek közül, amelyek szülő kategóriája a ruha!
+<a href="Gy07_15.mp4">Megoldás</a></p>
+<p>(+/-) Plusz feladat: töröljük a NEPTUN_LISTAAR táblát</p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

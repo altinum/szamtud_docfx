@@ -1,0 +1,328 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>3. gyakorlat - Aggreg&#225;lt f&#252;ggv&#233;nyek &#233;s csoportok k&#233;pz&#233;se </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="3. gyakorlat - Aggreg&#225;lt f&#252;ggv&#233;nyek &#233;s csoportok k&#233;pz&#233;se ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="3-gyakorlat---aggregált-függvények-és-csoportok-képzése">3. gyakorlat - Aggregált függvények és csoportok képzése</h1>
+
+<p>Összefoglaló videó:</p>
+<p><a href="gyak03-osszefoglalo_x264.mp4">gyak03-osszefoglalo_x264.mp4</a></p>
+<p>A skaláris függvények mindig egy rekordon belül, a rekord mezőivel végeznek műveleteket.  Az összesítő függvények értékek egy halmazán végeznek számítást, és egyetlen értéket adnak vissza. Alapesetben, azaz, ha egyéb megkötéseket nem teszünk, a halmaz a tábla összes sorát jelenti.</p>
+<p>Az összesítő függvények (kivéve: COUNT(*)) nem veszik figyelembe a NULL értékeket.  Azaz, ha adott egy ilyen tábla:</p>
+<table>
+<thead>
+<tr>
+<th>Kod</th>
+<th>Nev</th>
+<th>Ertek</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>ABC</td>
+<td>100</td>
+</tr>
+<tr>
+<td>2</td>
+<td>DEF</td>
+<td>NULL</td>
+</tr>
+<tr>
+<td>3</td>
+<td>GHI</td>
+<td>20</td>
+</tr>
+</tbody>
+</table>
+<pre><code class="lang-sql">SELECT COUNT(Ertek) FROM tabla  --eredménye 2
+SELECT COUNT(*) FROM tabla -- eredménye 3
+SELECT AVG(ertek) FROM tabla --eredménye 60
+</code></pre>
+<p>de:</p>
+<pre><code class="lang-sql">SELECT AVG(isnull(ertek,0)) from tabla  --eredménye 40
+</code></pre>
+<p>Példák aggregált függvényekre: <code>MAX</code>, <code>MIN</code>, <code>COUNT</code>, <code>SUM</code>, <code>STDEV</code>, <code>VAR</code></p>
+<p>A <code>MIN</code> és a <code>MAX</code> bármely adattípusra használhatók, a <code>SUM</code> és az <code>AVG</code> függvényeket csak numerikus adatokkal használjuk. Egész oszlopra végzik el a műveletet, egy értéket adnak vissza.</p>
+<p>Példák:</p>
+<pre><code class="lang-sql">SELECT
+	MAX(nettoar) AS legdrágább,
+	MIN(nettoar) AS legolcsóbb,
+	AVG(nettoar) AS átlagár,
+	SUM(nettoar) AS összeg,
+	COUNT(nettoar) AS db,
+	STDEV(nettoar) AS szórás,
+	VAR(nettoar) AS variancia
+
+FROM dvd
+</code></pre>
+<pre><code class="lang-sql">SELECT MAX(cim) AS [abc első filmje], MIN(cim) AS [abc utolsó filmje] FROM dvd;
+</code></pre>
+<p>Szöveg típusú mezők esetén a <code>MIN</code> és a <code>MAX</code> az abc-ben elfoglalt helyre vonatkozik.</p>
+<pre><code class="lang-sql">SELECT COUNT(*) FROM dvd;
+</code></pre>
+<p>A <code>dvd</code> tábla rekordjainak számát adja vissza.</p>
+<pre><code class="lang-sql">SELECT COUNT(stilus) FROM dvd;
+</code></pre>
+<p>Megadja, hogy hány rekordban van kitöltve a <code>stilus</code> mező a <code>dvd</code> táblában.</p>
+<h2 id="csoportok-képzése---a-group-by-záradék">Csoportok képzése - A GROUP BY záradék</h2>
+<p>A <code>GROUP BY</code> záradék segítségével mező vagy kifejezés szerint csoportokat képezhetünk. Ha csoportokat alkotunk, és azután használjuk az aggregált függvényeket, akkor már nem az egész táblázatra vonatkoznak, hanem a csoportokra. (Minden csoportra külön értéket adnak vissza.)</p>
+<p>A <code>GROUP BY</code> záradékban minden oszlopnévnek kell szerepelnie, ami a <code>SELECT</code> után előfordul. Ez alól csak az aggregált függvények paramétereiként szereplő mezőnevek képeznek kivételt.</p>
+<pre><code class="lang-sql">SELECT stilus
+FROM dvd
+GROUP BY stilus
+</code></pre>
+<p>Csoportokat képezünk stílus szerint, és a <code>SELECT</code> kulcsszó után meg is jelenítjük a csoportjainkat. Azok a filmek is külön csoportba kerülnek, ahol a <code>stilus</code> mező nincs kitöltve. Ezek szerint annyi csoportunk lesz, ahány különböző stílus fordul elő a <code>dvd</code> táblában.</p>
+<pre><code class="lang-sql">SELECT stilus, nyelv
+FROM dvd
+GROUP BY stilus, nyelv
+</code></pre>
+<p>Itt azok a rekordok kerülnek egy csoportba, melyeknél a <code>stilus</code> és a <code>nyelv</code> megegyezik. (Pl. az összes angol nyelvű horror film egy csoportba kerül.)</p>
+<pre><code class="lang-sql">SELECT stilus, COUNT(stilus) AS db
+FROM dvd
+GROUP BY stilus
+</code></pre>
+<p>Csoportokat képezünk stílus alapján, majd megszámoljuk, hogy hány helyen van kitöltve a stilus mező egy csoporton belül.</p>
+<blockquote>
+<p>Megjegyzés: Ilyenkor pl. a címet már nem tehetném be a <code>SELECT</code> után. Tehát a <code>SELECT</code> után csak azok a feliratok szerepelhetnek, amik szerepelnek a <code>GROUP BY</code> részeként is.</p>
+<pre><code class="lang-sql">SELECT stilus, cim, COUNT(stilus) AS db 
+FROM dvd
+GROUP BY stilus
+</code></pre>
+<p>Ez így nem helyes, mert a <code>SELECT</code> után csak olyan állhat, ami a <code>GROUP BY</code> után is van.</p>
+</blockquote>
+<h2 id="a-having-záradék">A HAVING záradék</h2>
+<p>A <code>HAVING</code> záradék a csoportképzés utáni táblázatokra tesz rá egy feltételt.  A <code>WHERE</code> csoportképzés előtt használatos, míg a <code>HAVING</code> segítségével a már elkészült csoportokra fogalmazható meg feltétel!</p>
+<pre><code class="lang-sql">SELECT  stílus, COUNT(cím) AS Címek FROM dvd GROUP BY stílus HAVING  COUNT(cim)&gt;30; 
+</code></pre>
+<p>Csak azokat a stílusokat jeleníti meg, melyeknél több mint 30 címet számoltunk.</p>
+<pre><code class="lang-sql">SELECT Kategóriakód, Sum(Raktáron)FROM Termékek GROUP BY Kategóriakód HAVING Sum(Raktáron) &gt; 100
+</code></pre>
+<h2 id="rendezés---az-order-by-záradék">Rendezés - Az ORDER BY záradék</h2>
+<p>Az ORDER BY záradék lekérdezés eredményét sorba rendezi a megadott szempontok alapján.
+A rendezésnél megadhatjuk az egyes oszlopok nevét. Aaz AS kulcsszó után megadott név is használható, azaz a két alábbi lekérdezés azonos eredményt ad:</p>
+<pre><code class="lang-sql">select id, cim, nettoar*1.27 as bruttoar from DVD
+order by nettoar*1.27
+
+select id, cim, nettoar*1.27 as bruttoar from DVD
+order by bruttoar
+</code></pre>
+<p>Növekvő rendezés esetén az ASC, csökkenő rendezés esetén a DESC kulcsszót használhatjuk a rendezés irányának megadására  Alapértelmezett a növekvő rendezés, ilyenkor az ASC kulcsszó is elhagyható. DVD-k bruttoar szerinti csökkenő sorrendben:</p>
+<pre><code class="lang-sql">select id, cim, nettoar*1.27 as bruttoar from DVD
+order by bruttoar DESC
+</code></pre>
+<p>Rendezni lehetséges az aggregálás eredménye szerint is:</p>
+<pre><code class="lang-sql">select stilus, count(*) from dvd 
+group by stilus
+order by count(*) desc
+</code></pre>
+<blockquote>
+<p>Ha egy lekérdezésben csoportosítást is használunk, akkor az ORDER BY utáni felsorolásban lévő oszlopoknak benne kell lenniük a GROUP BY listában vagy egy összesítésben, azaz az alábbi lekérdezés <strong>nem</strong> helyes:</p>
+<pre><code class="lang-sql">select stilus, count(*) from dvd 
+group by stilus
+order by nettoar desc
+</code></pre>
+</blockquote>
+<h2 id="záradékok-sorrendje">Záradékok sorrendje</h2>
+<p><code>SELECT</code> -&gt; <code>FROM</code> -&gt; <code>WHERE</code> -&gt; <code>GROUP BY</code> -&gt; <code>HAVING</code> -&gt; <code>ORDER BY</code></p>
+<p>A záradékok sorrendje a gépi adatfeldolgozás sorrendjét követi:</p>
+<ul>
+<li><code>FROM</code>: kiválasztjuk, melyik táblá(k)ból szeretnénk dolgozni</li>
+<li><code>WHERE</code>: kiszűrjük, hogy melyik sorokkal szeretnénk dolgozni</li>
+<li><code>GROUP BY</code>: a szűrés után megmaradt sorok alapján csoportokat képezünk</li>
+<li><code>HAVING</code>: a csoportosítás után kapott táblára is szabhatunk szűrőfeltételt</li>
+<li><code>ORDER BY</code>: csak a legvégén érdemes sorba rakni az eredményt</li>
+</ul>
+<pre><code class="lang-sql">SELECT stilus, COUNT(stilus) AS db
+FROM dvd
+WHERE nettoar&lt;5000
+GROUP BY stilus
+HAVING COUNT(stilus)&gt;2
+ORDER BY stilus
+</code></pre>
+<h2 id="feladatok">Feladatok</h2>
+<p>A feladatokat a <em>dvd_magyar</em> adatbázishoz készültek.  Készen elérhető a tanszéki kiszolgálón az alábbi kapcsolati adatokkal:</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Szerver</td>
+<td>bit.uni-corvinus.hu</td>
+</tr>
+<tr>
+<td>Felhasználónév</td>
+<td>hallgato</td>
+</tr>
+<tr>
+<td>Jelszó</td>
+<td>Password123</td>
+</tr>
+<tr>
+<td>Adatbázis</td>
+<td>dvd_magyar</td>
+</tr>
+</tbody>
+</table>
+<p>(+/-) 1.	Jelenítsük meg, hogy összesen hány db történelem stílusú dvd van a dvd táblában!</p>
+<p>a.	Az oszlop neve legyen 'DB'!
+b.	Csak olyan dvd-ket vegyünk figyelembe, amelyeknek van címe!</p>
+<p><a href="Gy3_1.mp4">Megoldás</a></p>
+<p>(+/-) 2. Készítsünk lekérdezést, amely listázza, hogy mely napokon hány db kölcsönzés történt!</p>
+<p>a.   Az oszlopok neve legyen 'Dátum' és 'Kölcsönzések száma'
+b.   A listát rendezzük a kölcsönzés dátuma szerint csökkenő sorrendbe!</p>
+<p><a href="Gy3_2.mp4">Megoldás</a></p>
+<p><strong>(+/-) 3. Mennyi a dvd-k átlagos ára stílusonkénti bontásban?</strong></p>
+<p>a.   Csak azokat a stílusokat vegyük figyelembe, ahol az átlagos ár 4500 Ft feletti!
+b.   Az oszlopokat nevezzük el értelemszerűen!
+c.   A listát rendezzük átlagos ár szerint csökkenő sorrendbe!</p>
+<p><a href="Gy3_3.mp4">Megoldás</a></p>
+<p>(+/-) 4. Összesen mennyi a raktárkészlet teljes nettó értéke?
+a.   Az oszlop neve legyen 'Pontos érték'
+b.   Egy másik oszlopban jelenítsük meg az előző értéket millió Ft-ra kerekítve, az oszlop neve legyen 'Kerekíett érték millió Ft-ban'</p>
+<p><a href="Gy3_4.mp4">Megoldás</a></p>
+<p>(+/-) 5. Készítsünk listát, amely a kölcsönzések darabszámát listázza éves, azon belül havi bontásban!
+a.   Az oszlopokat nevezzük el értelemszerűen!
+b.   Rendezzük a listát Év szerint növekvő sorrendbe!</p>
+<p><a href="Gy3_5.mp4">Megoldás</a></p>
+<p>(+/-) 6. Listázzuk nyelvenkénti, azon belül stílusonkénti bontásban, hogy mennyi a dvd-k legkisebb és legnagyobb ára! a.   Az oszlopok neve legyen 'Nyelv', 'Stílus', 'MinÁr' és 'MaxÁr'!</p>
+<p>b.   A listából hagyjuk ki azokat a sorokat, ahol a nyelv vagy a stílus nincs megadva!
+c.   Szintén hagyjuk ki azokat a csoportokat, ahol a csoport elemszáma 3-nál kisebb!</p>
+<p><a href="Gy3_6.mp4">Megoldás</a></p>
+<p><strong>(+/-) 7. A kölcsönzéseket két csoportra oszthatjuk aszerint, hogy visszahozták-e már a dvd-t. Ez alapján készítsünk listát, amely megadja a kölcsönzés alatt lévő, illetve a már visszahozott dvd-k számát!</strong></p>
+<p>a.   Az oszlopok neve legyen 'Állapot' és 'DB'
+b.   A listát rendezzük DB szerint növekvő sorrendbe!</p>
+<p><a href="Gy3_7.mp4">Megoldás</a></p>
+<p>(+/-) 8. Hány darab különböző című dvd van stílusonként?
+a.    Az oszlopok neve legyen 'Stílus' és 'Különböző című dvd-k száma'
+b.    Csak azokat a dvd-ket számoljuk bele, amelyek stílusnevében a 'játék' szó benne van.</p>
+<p><a href="Gy3_8.mp4">Megoldás</a></p>
+<p><strong>(+/-) 9. A DVD-ket katalógusba szeretnénk rendezni, ezért készítsünk listát, amely a cím első betűje alapján, majd a stílus alapján, utána a nyelv alapján, végül a nettó ár alapján rendezi sorba a dvd-k listáját.</strong>
+a.   A lista jelenítse meg az összes oszlopot.
+b.   Azokra dvd-kre, ahol a cím nincs megadva, ott 'Ismeretlen cím'   szerepeljen, ahol pedig a stílus nincs megadva, ott 'Ismeretlen stílus'.</p>
+<p><a href="Gy3_9.mp4">Megoldás</a></p>
+<p>(+/-) 10. Készítsünk listát, amely a csoportokat hoz létre aszerint, hogy a mai naptól számítva hány nap telt el a kölcsönzés kezdete óta. A lista jelenítse meg csoportonkénti bontásban a kikölcsönzött dvd-k számát!
+a.   Az oszlopokat nevezzük el értelemszerűen!
+b.   A listát rendezzük az eltelt napok száma szerint csökkenő sorrendbe!</p>
+<p><a href="Gy3_10.mp4">Megoldás</a></p>
+<p>(+/-) 11. Egy nyelvtanuló kíváncsi, hogy vajon átlagosan drágábbak-e azok a dvd-k, amelyek nevében az 'angol' szó benne van azoknál, amelyeknél nincs. Ezért készítsünk lekérdezést, amely segítségével erre a kérdésre választ adhatunk!
+a.   Az átlagos ár 10 Ft-ra kerekítve jelenjen meg!</p>
+<p><a href="Gy3_11.mp4">Megoldás</a></p>
+<p><strong>(+/-) 12. A kölcsönző tulajdonosa elhatározza, hogy ezentúl kerekebb árakat alkalmaz. Ezért minden dvd árát 1000 Ft-ra kerekíti. Készítsünk lekérdezést, amely megmutatja, hogy melyik 1000 Ft-ra kerekített ár szerint, azon belül stílus szerint hány db dvd összesen raktáron! **
+a.   Csak olyan csoportokat listázzunk, ahol a raktárkészlet legalább 30!
+b.   A listát rendezzük kerekített ár szerint, azon belül raktárkészlet szerint növekvő sorrendbe!</strong></p>
+<p><a href="Gy3_12.mp4">Megoldás</a></p>
+<p>(+/-) 13. Készítsünk listát, amely nyelvenként, azon belül stílusonként, azon belül a raktár készlet mennyisége szerint jeleníti meg a dvd-k darabszámát, minimális és maximális árát!
+a.   Csak azokat a csoportokat jelenítsük meg, ahol a maximális ár legalább 1000 forinttal haladja meg a minimális árat!</p>
+<p><a href="Gy3_13.mp4">Megoldás</a></p>
+<p>(+/-) 14. Több dvd esetén a stílus nevében zárójelbe téve szerepel egy szó, pl. játék (repülős). Ez alapján létrehozható egy 'Alstílus' nevű oszlop, amely a zárójelben lévő szót tartalmazza a zárójellel együtt. Azoknál a stílusoknál, ahol nincs zárójel, ott az oszlop értéke legyen üres szöveg.   Készítsünk lekérdezést, amely stílusonként, azon belül alstílusonként listázza a raktáron lévő  dvd-k darabszámát.</p>
+<p>a.   A stílus nevéből vegyük ki a zárójeles kifejezést!</p>
+<p><a href="Gy3_14.mp4">Megoldás</a></p>
+<p><strong>(+/-) 15. A dvd-ket csoportosíthatjuk aszerint, hogy milyen hosszú a címük. Amelyiknél a cím hosszúsága 10 karakter alatt van, az legyen Rövid, 10-20-ig Átlagos, 20 felett Hosszú. Hány Rövid, Átlagos, illetve Hosszú dvd-van összesen raktáron?</strong></p>
+<p>a.    Az oszlopok neve legyen 'Cím hosszúság' és 'Darabszám'</p>
+<p><a href="Gy3_15.mp4">Megoldás</a></p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

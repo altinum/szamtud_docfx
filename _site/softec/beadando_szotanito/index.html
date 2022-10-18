@@ -1,0 +1,150 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Projektfeladat: Sz&#243;tan&#237;t&#243; j&#225;t&#233;k </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Projektfeladat: Sz&#243;tan&#237;t&#243; j&#225;t&#233;k ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="projektfeladat-szótanító-játék">Projektfeladat: Szótanító játék</h1>
+
+<h2 id="a-feladat-leírása">A feladat leírása</h2>
+<p>A feladat egy szótanító program 	írása, melyben a képernyőre véletlenszerű sorrendben kipakolt magyar és idegen nyelvű szópárokat egérrel kell egymásra húzni. Az egymásra húzott szópárok eltűnnek a képernyőről. Ha minden szópár eltűnt, újabb 10 szó kerül ki. A szótárt pontosvesszővel tagolt fájlból kell olvasni, melynek minden sora egy-egy szópárt tartalmaz. A szótárt tartalmazó fájl előállítása is a feladat része.</p>
+<ul>
+<li>A szavakat tartalmazó fájlt fájlmegnyitó ablakból lehessen kiválasztani.</li>
+<li>A kiválasztott fájl tartalmát egy kérdésekből álló listába kell olvasni.</li>
+<li>A fájl megnyitásakor és olvasásakor keletkező esetleges kivételeket le kell kezelni.</li>
+<li>A játék indulás után rakjon ki 10 véletlenszerűen kiválasztott szópárt (20 szókártya) összekeverve a képernyőre.  Lehet két oszlopba is rakni őket.</li>
+</ul>
+<blockquote>
+<p>Teams-en várjuk a feladattal kapcsolatban kérdéseket, és igyekszünk mihamarabb válaszolni.</p>
+</blockquote>
+<h2 id="tippek-a-megvalósításhoz">Tippek a megvalósításhoz</h2>
+<p>Érdemes a lovas képkirakós mintapéldát alapul venni, csak most szavakat mozgatunk, nem képeket.</p>
+<p>Érdemes létrehozni egy szókártya osztályt, mely megvalósítja a vonszolhatóságot, valamint publikus változóban tárolja a kártya párján lévő szöveget. De úgy is lehet, hogy minden szókártya egy sorszámot tárol, és az összetartozó szavakhoz ugyan az a szám tartozik.</p>
+<p>A szavakat tartalmazó elemek kipakolásánál a fő űrlapon érdemes közös eseménykiszolgálót rendelni a <code>MouseUp</code> eseményhez, és ebben vizsgálni, hogy az az elem, aminek a vonszolását befejeztük, másik elem fölött van-e, és ha igen, párban van-e a másik elemmel.</p>
+<h3 id="segítség-a-fájlmegnyitó-ablak-használatához">Segítség a fájlmegnyitó ablak használatához</h3>
+<pre><code class="lang-csharp">private void button1_Click(object sender, EventArgs e)
+{
+    OpenFileDialog ofd = new OpenFileDialog();
+    if (ofd.ShowDialog() == DialogResult.OK)
+    {
+        StreamReader sr = new StreamReader(ofd.FileName);
+        // file olvasása 
+        sr.Close();
+    }
+}
+
+</code></pre>
+<p>Az  <code>ofd.ShowDialog()</code>  metódushívás jeleníti meg a fájlmegnyitó ablakot. Ha a felhasználó választott fájlt, a  <code>ShowDialog()</code>  <code>DialogResult.OK</code>  eredménnyel tér vissza, egyébként  <code>DialogResult.Cancel</code>  lesz a visszatérési érték. Csak<br>
+<code>DialogResult.OK</code>  után van értelme a fájlt megnyitását megkísérelni.</p>
+<h3 id="try--catch--blokkok"><code>try</code>  <code>catch</code>  blokkok</h3>
+<p>A fájlmegnyitás, illetve olvasás nem biztos hogy sikerül,  <code>try</code>  <code>catch</code>  blokk használata indokolt.</p>
+<pre><code class="lang-csharp">            OpenFileDialog ofd = new OpenFileDialog();
+            try
+            {
+                StreamReader sr = new StreamReader(&quot;Eheti lottó nyerőszámok.txt&quot;);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+</code></pre>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>
