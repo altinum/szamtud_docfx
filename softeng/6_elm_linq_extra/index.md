@@ -1,4 +1,4 @@
-# Gyakorlati feladatsor
+# Gyakorlati feladatsor !!
 
 A feladat egy készen kapott CSV állomány feldolgozása, amely egy webshop termékeit tartalmazza. A CSV állományból ki kell nyerni a különféle típusú adatokat, majd az egyes alkotóelemekből szűrhető llistát alkotni, és a szűrések eredményét fájlba menteni. Szintén lehetővé kell tenni aggregált stasztikák megjelenítését.
 A feladatsor többek között megismertet a MenuStrip használatával, a LINQ join és aggregáló műveleteivel.
