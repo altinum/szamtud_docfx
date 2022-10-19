@@ -1,26 +1,38 @@
 - name: Tájékoztató
   href: tantargyi_informaciok\index.md
-- name: "1.gyak: In-memory adatbázis"
-  href: 1_gyak_in_memory_adatbazis\index.md
-- name: "2a.gyak: Távoli adatbázis visual studioban"
-  href: 2a_gyak_tavoli_adatbazis_visual_studioban\index.md
-- name: "2b.gyak: Lokális adatbázis visual studioban"
-  href: 2b_gyak_lokalis_adatbazis_visual_studioban\index.md
-- name: "3.elm: Reguláris Kifejezések"
-  href: 3_elm_regularis_kifejezesek\index.md
-- name: "3.gyak: Adatok validálása űrlapon"
-  href: 3_gyak_adatok_validalasa_urlapon\index.md
-- name: "4.elm: Táblakapcsolatok"
-  href: 4_elm_tablakapcsolatok\index.md
-- name: "4.gyak: Többtáblás adatbázis"
-  href: 4_gyak_tobbtablas_adatbazis\index.md
-- name: "5.elm LINQ összefoglaló"
-  href: 5_elm_LINQ_osszeffoglalo\index.md
-- name: "5.gyak: LINQ lekérdezések"
-  href: 5_gyak_linq_lekerdezesek_-_studies_adatb\index.md
-- name: "6.elm: LINQ extra"
-  href: 6_elm_linq_extra\index.md
-- name: "6a.gyak: Webshop"
-  href: 6a_gyak_webshop\index.html
+- name: 1. hét
+  items: 
+  - name: "Feladat: In-memory adatbázis"
+    href: 1_gyak_in_memory_adatbazis\index.md
+- name: 2. hét
+  items: 
+  - name: "2a.gyak: Távoli adatbázis visual studioban"
+    href: 2a_gyak_tavoli_adatbazis_visual_studioban\index.md
+  - name: "2b.gyak: Lokális adatbázis visual studioban"
+    href: 2b_gyak_lokalis_adatbazis_visual_studioban\index.md
+- name: 3. hét
+  items: 
+  - name: "Reguláris Kifejezések"
+    href: 3_elm_regularis_kifejezesek\index.md
+  - name: "3.gyak: Adatok validálása űrlapon"
+    href: 3_gyak_adatok_validalasa_urlapon\index.md
+- name: 4. hét
+  items: 
+  - name: "Elmélet: Táblakapcsolatok"
+    href: 4_elm_tablakapcsolatok\index.md
+  - name: "Feladat: Többtáblás adatbázis"
+    href: 4_gyak_tobbtablas_adatbazis\index.md
+- name: 5. hét
+  items: 
+  - name: "5.elm LINQ összefoglaló"
+    href: 5_elm_LINQ_osszeffoglalo\index.md
+  - name: "5.gyak: LINQ lekérdezések"
+    href: 5_gyak_linq_lekerdezesek_-_studies_adatb\index.md
+- name: 6. hét
+  items: 
+  - name: "6.elm: LINQ extra"
+    href: 6_elm_linq_extra\index.md
+  - name: "6a.gyak: Webshop"
+    href: 6a_gyak_webshop\index.html
 
 
