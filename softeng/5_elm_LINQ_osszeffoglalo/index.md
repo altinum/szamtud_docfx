@@ -17,7 +17,8 @@ var eredmény = from x in context.Hallgatok select x;
 ```
 Ebben a példában az `x` az úgynevezett soriterátor. Neve tetszőleges lehet -- az a lényeg, hogy következetesen használjuk -- de a tömörség miatt egybetűs neveket szokás adni. 
 
-> Az SQL-ben a záradékok sorrendje a gépi adatfeldolgozás sorrendjét követik. Fugunk egy vagy több táblát (FROM), kiválasztjuk, hogy melyik rekordokra van szükségünk (WHERE), ami a szűrés után bent maradt, csoportosíthatjuk (GROUP BY), a csoportosítás eredményére is szűrhetünk (HAVING), és a legvégén rendezünk csak sorba (ORDER BY).  A SELECT kucsszó a lekérdezés elejére kerül. LINQ-ban a `select` a végére kerül.
+> [!NOTE]
+> Az SQL-ben a záradékok sorrendje a gépi adatfeldolgozás sorrendjét követi. Fugunk egy vagy több táblát (FROM), kiválasztjuk, hogy melyik rekordokra van szükségünk (WHERE), ami a szűrés után bent maradt, csoportosíthatjuk (GROUP BY), a csoportosítás eredményére is szűrhetünk (HAVING), és a legvégén rendezünk csak sorba (ORDER BY).  A SELECT kucsszó a lekérdezés elejére kerül. LINQ-ban a `select` a végére kerül.
 
 LINQ esetében a `from`-mal kezdődik a kifejezés, melyet a soriterátor követ -- ami most éppen `x`, de lehetne bármi--, majd az `in` kulcsszó után következik a gyűjtemény neve, amiből kérdezni szeretnénk. Ez most épp a `Context.Hallgatók`. A példát a `select` zárja, amiben ki lehet kötni, hogy milyen adatokat jelenítsünk meg. A soriterátor szerepe a következő példából talán jobban megérthető:
 
