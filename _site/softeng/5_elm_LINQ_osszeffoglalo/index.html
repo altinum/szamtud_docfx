@@ -72,21 +72,108 @@
 <h2 id="mi-az-a-linq">Mi az a LINQ</h2>
 <p>A LINQ NET keretrendszerbe épített lekérdező nyelv (szabálygyűjtemény), amely rendelkezik a hagyományos lekérdező nyelvek (pl.: MSSQL) funkcionalitásának egy részével, egyszersmind integrálva van a C# nyelvebe.</p>
 <p>A gyakorlatban ez azt jelenti, hogy a programkódba közvetlenül írhatjuk a lekérdezéseket úgy, hogy az automatikus kódkiegészítés és a szintaxis ellenőrzés végig segít. Az <em>Entity Framework</em> a korábbi hetekben bemutatott módon leképezi C# osztályok formájába az adatbázis tábláinak sémáját (ORM), így az Intellisense a C# kód írása közben tisztában van az adatbázis felépítésével.</p>
+<p>Kettő féle szintaxis létezik, az előadásokon használt <code>SQL-szerű</code> és a <code>Lambda</code>. Mind a kettőnek meg van az előnye, bármelyiket lehet használni, akár vegyesen is.  A továbbiakban a két írásmód közül lehet választani a tabok segítségével, mindenki használja azt, amelyik jobban tetszik. Ha egy szintaxist szeretnél csak elsajátítani, akkor az SQL-es legyen az, mert az előadásokat könnyebb lesz követni.</p>
 <h2 id="linq-példák">LINQ példák</h2>
 <h3 id="a-legegyszerűbb-példa">A legegyszerűbb példa</h3>
 <p>A klasszikus <code>SELECT * FROM hallgatok</code> LINQ megfelelője:</p>
+<div class="tabGroup" id="tabgroup_bHGHmlrG6S">
+<ul role="tablist">
+<li role="presentation">
+<a href="#tabpanel_bHGHmlrG6S_sql" role="tab" aria-controls="tabpanel_bHGHmlrG6S_sql" data-tab="sql" tabindex="0" aria-selected="true">SQL szintaxis</a>
+</li>
+<li role="presentation">
+<a href="#tabpanel_bHGHmlrG6S_lambda" role="tab" aria-controls="tabpanel_bHGHmlrG6S_lambda" data-tab="lambda" tabindex="-1">Lambda szintaxis</a>
+</li>
+</ul>
+<section id="tabpanel_bHGHmlrG6S_sql" role="tabpanel" data-tab="sql">
+
 <pre><code class="lang-csharp">var eredmény = from x in context.Hallgatok select x;
 </code></pre>
 <p>Ebben a példában az <code>x</code> az úgynevezett soriterátor. Neve tetszőleges lehet -- az a lényeg, hogy következetesen használjuk -- de a tömörség miatt egybetűs neveket szokás adni.</p>
-<blockquote>
-<p>Az SQL-ben a záradékok sorrendje a gépi adatfeldolgozás sorrendjét követik. Fugunk egy vagy több táblát (FROM), kiválasztjuk, hogy melyik rekordokra van szükségünk (WHERE), ami a szűrés után bent maradt, csoportosíthatjuk (GROUP BY), a csoportosítás eredményére is szűrhetünk (HAVING), és a legvégén rendezünk csak sorba (ORDER BY).  A SELECT kucsszó a lekérdezés elejére kerül. LINQ-ban a <code>select</code> a végére kerül.</p>
-</blockquote>
-<p>LINQ esetében a <code>from</code>-mal kezdődik a kifejezés, melyet a soriterátor követ -- ami most éppen <code>x</code>, de lehetne bármi--, majd az <code>in</code> kulcsszó után következik a gyűjtemény neve, amiből kérdezni szeretnénk. Ez most épp a <code>Context.Hallgatók</code>. A példát a <code>select</code> zárja, amiben ki lehet kötni, hogy milyen adatokat jelenítsünk meg. A soriterátor szerepe a következő példából talán jobban megérthető:</p>
+</section>
+<section id="tabpanel_bHGHmlrG6S_lambda" role="tabpanel" data-tab="lambda" aria-hidden="true" hidden="hidden">
+
+<pre><code class="lang-csharp">var eredmény = context.Hallgatok.Select(h=&gt;h);
+</code></pre>
+<p>Az olvashatóságot segíti, ha ez az egy betű tükrözi az entitást, amivel dolgozunk. Például hallgatókból kiválasztjuk a hallgatókat <code>h</code>, ha csoportokat csináltunk belőlük és a csoportokon iterálunk, akkor pedig <code>g</code> (mint group).</p>
+</section>
+</div>
+
+<div class="NOTE">
+<h5>Note</h5>
+<p>Az SQL-ben a záradékok sorrendje a gépi adatfeldolgozás sorrendjét követi. Fogunk egy vagy több táblát (FROM), kiválasztjuk, hogy melyik rekordokra van szükségünk (WHERE), ami a szűrés után bent maradt, csoportosíthatjuk (GROUP BY), a csoportosítás eredményére is szűrhetünk (HAVING), és a legvégén rendezünk csak sorba (ORDER BY).  A SELECT kucsszó a lekérdezés elejére kerül. LINQ-ban a <code>select</code> a végére kerül.</p>
+</div>
+<div class="tabGroup" id="tabgroup_bHGHmlrG6S-1">
+<ul role="tablist">
+<li role="presentation">
+<a href="#tabpanel_bHGHmlrG6S-1_sql" role="tab" aria-controls="tabpanel_bHGHmlrG6S-1_sql" data-tab="sql" tabindex="0" aria-selected="true">SQL szintaxis</a>
+</li>
+<li role="presentation">
+<a href="#tabpanel_bHGHmlrG6S-1_lambda" role="tab" aria-controls="tabpanel_bHGHmlrG6S-1_lambda" data-tab="lambda" tabindex="-1">Lambda szintaxis</a>
+</li>
+</ul>
+<section id="tabpanel_bHGHmlrG6S-1_sql" role="tabpanel" data-tab="sql">
+
+<p>SQL-es szintaxis esetében a <code>from</code>-mal kezdődik a kifejezés, melyet a soriterátor követ -- ami most éppen <code>x</code>, de lehetne bármi--, majd az <code>in</code> kulcsszó után következik a gyűjtemény neve, amiből kérdezni szeretnénk. Ez most épp a <code>Context.Hallgatók</code>. A példát a <code>select</code> zárja, amiben ki lehet kötni, hogy milyen adatokat jelenítsünk meg. A soriterátor szerepe a következő példából talán jobban megérthető:</p>
 <pre><code class="lang-csharp">var eredmény = from x in context.Hallgatok 
                where x.Neptun == &quot;NEPTUN&quot;
                select x;
 </code></pre>
 <p>A fenti LINQ kifejezést talán így lehetne magyarra fordítani: &quot;Menj végig a <code>context.Hallgatok</code> gyűjtemény minden egyes elemén. A <code>where</code> kulcsszó után szereplő kifejezést futtasd le a gyűjtemény minden elemére, úgy hogy a soriterátorba (most épp <code>x</code>) kerül az éppen vizsgált elem. Az eredményhalmazban azok az elemek maradnak bent, melyek megfeleltek a <code>where</code>  után szereplő feltételnek.</p>
+</section>
+<section id="tabpanel_bHGHmlrG6S-1_lambda" role="tabpanel" data-tab="lambda" aria-hidden="true" hidden="hidden">
+
+<p>A lambdás szintaxis közelebb áll a C#-os logikához. Ez kiterjesztés metódusként vannak meghívva az objektumon. <code>objektum.metódus(lambdás kifejezés)</code> formátumot követi.
+Nézzünk egy példát:</p>
+<pre><code class="lang-csharp">List&lt;int&gt; lista=new List&lt;int&gt;{1,2,3,4,5}; //veszünk egy listát 1-től 5-ig számokkal
+List&lt;int&gt; eredmény = new List&lt;int&gt;(); //hozzunk létre egy listát, amiben az eredményt tároljuk
+
+eredmény=lista.Select(i =&gt; i).ToList(); //végigmegyünk a select-tel a listán és kiválasztjuk az összes elemet
+//itt az eredmény: 1;2;3;4;5
+</code></pre>
+<p>De mi ez a <code>i=&gt;i</code> lambdás dolog?
+Tulajdonképpen egy leegyszerűsített függvény, ami i-t kér be paraméternek és i-t is ad vissza.</p>
+<pre><code class="lang-csharp">int MintaFüggvény(int i)
+{
+    return i;
+}
+List&lt;int&gt; lista=new List&lt;int&gt;{1,2,3,4,5};
+List&lt;int&gt; eredmény = new List&lt;int&gt;();
+
+eredmény=lista.Select(MintaFüggvény).ToList(); //kicseréltük a lambdás kifejezést a vele egyenértékű függvényre
+//itt az eredmény: 1;2;3;4;5
+</code></pre>
+<p>Egy újabb példa:</p>
+<pre><code class="lang-csharp">int MintaFüggvény(int i)
+{
+    return i*i;
+}
+List&lt;int&gt; lista=new List&lt;int&gt;{1,2,3,4,5};
+List&lt;int&gt; eredmény1 = new List&lt;int&gt;();
+List&lt;int&gt; eredmény2 = new List&lt;int&gt;();
+
+eredmény1=lista.Select(MintaFüggvény).ToList();
+eredmény2=lista.Select(i=&gt;i*i).ToList();
+//itt az eredmény1 és eredmény2: 1;4;9;16;25
+</code></pre>
+<p><code>Where</code>-nél például egy olyan függvényt kér, ami igaz/hamis értéket ad vissza</p>
+<pre><code class="lang-csharp">bool MintaFüggvény(int i)
+{
+    return i&gt;2; //ha i nagyobb, mint kettő az eredmény igaz, ha nem, akkor hamis
+}
+List&lt;int&gt; lista=new List&lt;int&gt;{1,2,3,4,5};
+List&lt;int&gt; eredmény1 = new List&lt;int&gt;();
+List&lt;int&gt; eredmény2 = new List&lt;int&gt;();
+
+eredmény1=lista.Where(MintaFüggvény).ToList();
+eredmény2=lista.Where(i=&gt;i&gt;2).ToList();
+//itt az eredmény1 és eredmény2: 3;4;5
+</code></pre>
+<p>Az SQL-es szintaxisnak megfelelő Lambdás pedig:</p>
+<pre><code class="lang-csharp">var eredmény=context.Hallgatok.Where(h=&gt;h.Neptun==&quot;NEPTUN&quot;);
+</code></pre>
+</section>
+</div>
 <h3 id="egyszerű-lekérdezés-where-záradékkal-szelekció">Egyszerű lekérdezés where záradékkal (szelekció)</h3>
 <p>A fenti példa az eredményhalmazba beteszti az összes olyan objektumot, ami megfelel a feltételnek, de a következő példa már csak a neveket gyűjti ki:</p>
 <pre><code class="lang-csharp">var eredmény = from x in context.Hallgatok 

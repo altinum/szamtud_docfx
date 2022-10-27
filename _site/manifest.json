@@ -4,6 +4,18 @@
   "xrefmap": "xrefmap.yml",
   "files": [
     {
+      "type": "Conceptual",
+      "source_relative_path": "README.md",
+      "output": {
+        ".html": {
+          "relative_path": "README.html",
+          "hash": "6ttCAgf71lyMwZ3HBpilIeGQbC2OADkrvNvA/I/xaKw="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
       "log_codes": [
         "InvalidFileLink"
       ],
@@ -1566,10 +1578,10 @@
       "output": {
         ".html": {
           "relative_path": "softeng/5_elm_LINQ_osszeffoglalo/index.html",
-          "hash": "UnOhRnY6iPDu5v6tutHr9lTyvqBW8XDYAhMu+Umd5C4="
+          "hash": "Zgy//qjcw2C19oSisQW5l7gDp5wug7NIJrkOGizhM5c="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -1596,7 +1608,7 @@
       "output": {
         ".html": {
           "relative_path": "softeng/6_elm_linq_extra/index.html",
-          "hash": "FdViN9SdDI6bZ4YdrhuqCdLpkbebX41oiV9I0Sckgi8="
+          "hash": "Mclf0gZEUAf+GfOinZqYawvH3ZhtvKyHDwtL8QRlEBM="
         }
       },
       "is_incremental": true,
@@ -1722,7 +1734,7 @@
       "output": {
         ".html": {
           "relative_path": "softeng/knowledge_base/lokalis_adatbazis_visual_studioban/index.html",
-          "hash": "pq25OdrZUk+0G0UxIO1YZLSuJszvpBCv9tNxZs39NVE="
+          "hash": "YVKLSwz2nN2xkxmSQzRgGG7HV14pGuvkOReibkhqH5Y="
         }
       },
       "is_incremental": true,
@@ -1779,7 +1791,7 @@
       "output": {
         ".html": {
           "relative_path": "softeng/toc.html",
-          "hash": "HVK1vp6v7E4h0xo7dLGyQhW0Au8MPFJB/dZIgbxo3v0="
+          "hash": "uiNfOp4cUC0DPvB4PkJd2U+d+7oUyt5Oiwi2SE9Rndw="
         }
       },
       "is_incremental": false,
@@ -1834,7 +1846,7 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": true,
           "incrementalPhase": "build",
-          "total_file_count": 76,
+          "total_file_count": 77,
           "skipped_file_count": 76
         },
         "ResourceDocumentProcessor": {
