@@ -108,6 +108,7 @@ var eredmény = from x in context.Hallgatok
                select x.Nev;
 ```
 # [Lambda szintaxis](#tab/lambda)
+```csharp
 var eredmény = context.Hallgatok.Where(h=>h.Neptun=="NEPTUN").Select(h=>h.Nev);
 ```
 ***
@@ -133,7 +134,7 @@ var eredmény = from x in context.Hallgatok
                    x.Hallgato_id 
                };
 ```
-# [SQL szintaxis](#tab/lambda)
+# [Lambda szintaxis](#tab/lambda)
 ```csharp
 var eredmény = context.Hallgatok.Select(h=>new{x.Nev, x.Hallgato_id });
 ```
