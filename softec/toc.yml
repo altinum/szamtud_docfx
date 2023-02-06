@@ -58,14 +58,18 @@
     href: bantumi\index.md
  - name: "12. hét - 1. Géptermi ZH"
   items:
-    - name: "Aknakereső"
+    - name: "Előadás: Aknakereső"
     href: amoba\index.md
-    - name: "Kvíz játék kérdéslistával"
-    href: quiz2\index.md
-    - name: "Villámkérdések"
-    href: villamkerdesek\index.md
-    - name: "Szópároztatós játék"
-    href: szoparoztatos\index.md
+    - name: "Gyakorló feladatok ZH-ra"
+    items:
+      - name: "Kvíz játék kérdéslistával"
+      href: quiz2\index.md
+      - name: "Villámkérdések"
+      href: villamkerdesek\index.md
+      - name: "Szópároztatós játék"
+      href: szoparoztatos\index.md
+      - name: "PixelArt"
+      href: pixelart\index.md
  - name: "13. hét - Projektfeladat bemutatók"
   items:
     - name: "A beadandó feladatok értékelése"
@@ -82,8 +86,6 @@
     href: teamsbeszamolok\index.md
   - name: "Projektfeladat: Életjáték"
     href: beadando_game_of_life\index.md
-  - name: "PixelArt"
-    href: pixelart\index.md
   - name: "Projektfeladat: Hajós oktató"
     href: beadando_hajos\index.md
   - name: "Projektfeladat:  Memóriajáték folytatása"
