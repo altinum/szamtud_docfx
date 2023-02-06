@@ -61,7 +61,7 @@
     - name: "Előadás: Aknakereső"
       href: amoba\index.md
     - name: "Gyakorló feladatok ZH-ra"
-    items:
+      items:
       - name: "Kvíz játék kérdéslistával"
         href: quiz2\index.md
       - name: "Villámkérdések"
