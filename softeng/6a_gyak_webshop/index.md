@@ -95,6 +95,7 @@ private void ListBox2_SelectedIndexChanged(object sender, EventArgs e)
 
 
 Futtatás után látható, hogy a rácsban több idegen kulcs található, megyek feloldása nélkül a felhasználó számára nem értelmezhető az eredmény. Alakítsuk át a LINQ lekérdezést úgy, hogy értelmezhető legyen a rács tartalma:
+
 ``` csharp
 private void ListBox2_SelectedIndexChanged(object sender, EventArgs e)
 {
