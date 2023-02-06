@@ -33,7 +33,6 @@ namespace InMemoryDB.Models
 ```
 
 
-
 (+/-) Hozd létre az alábbi tulajdonságokat a `Student` osztályon belül, és állítsd _access modifier_-t `public`-ra:  
 
 Megnevezés|Adattípus|Leírás
