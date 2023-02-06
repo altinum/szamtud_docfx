@@ -1,27 +1,26 @@
-- name: "Projektfeladat: Hajós oktató"
-  href: beadando_hajos\index.md
-- name: "Checklist az második ZH-hoz"
-  href: zh2checklist\index.md
-- name: "Módosított követelmények"
-  href: levelezo_beadando\index.md
-- name: "Megoldások"
-  href: megoldasok\index.md
-- name: "Szoftvertechnológia I összefoglaló feladatsor"
-  href: osszefoglalo_levelezo\index.md
-- name: "Útmutató projektek feltöltéséhez"
-  href: projektfeltoltes\index.md
-- name: "Projektfeladat: Életjáték"
-  href: beadando_game_of_life\index.md
-- name: "Grafika"
-  href: grafika_ifs_reszletes\index.md
+- name: "A tárgy célja, követelmények"
+  href: kovetelmenyek\index.md
+- name: "Tudásbázis"
+  items:
+    - name: "Visual Studió telepítése"
+      href: vsinstall\index.md
+    - name: "Levelezős követelmények"
+      href: kovetelmenyek_levelezo\index.md
+    - name: "Módosított követelmények"
+      href: levelezo_beadando\index.md
 - name: "Első hét"
   href: masodfoku\index.md
-- name: "# Visual Studió telepítése"
-  href: vsinstall\index.md
-- name: "Projektfeladat: Szótanító játék"
-  href: beadando_szotanito\index.md
-- name: "Projektfeladat:  Akasztófa játék"
-  href: beadando_hangman\index.md
+
+
+- name: "Megoldások"
+  href: megoldasok\index.md
+
+
+- name: "Grafika"
+  href: grafika_ifs_reszletes\index.md
+
+
+
 - name: "Bantumi játék"
   href: bantumi\index.md
 - name: "A beadandó feladatok értékelése"
@@ -30,8 +29,7 @@
   href: beadando_spot_the_difference\index.md
 - name: "Szópároztatós játék"
   href: szoparoztatos\index.md
-- name: "A tárgy célja, követelmények"
-  href: kovetelmenyek\index.md
+
 - name: "Szoftvertechnológia I feladatlap-gyűjtemény"
   href: 2021\index.md
 - name: "Feleltválasztós játék"
@@ -46,23 +44,39 @@
   href: amoba\index.md
 - name: "Függvények és vezérlőszerkezetek"
   href: fuggvenyek\index.md
-- name: "A beszámolók menete"
-  href: teamsbeszamolok\index.md
-- name: "zt tanácsoljuk, hogy a felkészülést ne hagyjátok az utolsó pillanatra. A lenti *checklist* átnézése után érdemes az összes eddigi mintafeladatot megoldani a feladathoz tartozó lépésekre bontott útmutató alapján. Az első ZH-ban a feladatleírások egyértelmű, elemi lépésekre lesznek bontva. Még nem várunk el önálló ötleteket, csak némi jártasságot Visual Studio fejlesztőkörnyezet használatában, és *checklist* részben felsorolt nyelvi elemek ismeretét."
+- name: "ZH Checklist"
   href: zh1checklist\index.md
+- name: "Szoftvertechnológia I összefoglaló feladatsor"
+  href: osszefoglalo_levelezo\index.md
 - name: "Emory game"
   href: emory\index.md
-- name: "Kígyós játék"
-  href: kigyos\index.md
-- name: "PixelArt"
-  href: pixelart\index.md
-- name: "--"
+- name: "Checklist az második ZH-hoz"
+  href: zh2checklist\index.md
+- name: "Villámkérdések"
   href: villamkerdesek\index.md
-- name: "Projektfeladat:  Memóriajáték folytatása"
-  href: beadando_quiz_numerikus\index.md
+
 - name: "Képkirakós játék"
   href: kepkirakos\index.md
-- name: "# A tárgysorozat célja"
-  href: kovetelmenyek_levelezo\index.md
+
 - name: "Osztályok példánysítása"
   href: osztalyok\index.md
+- name: "Projektfeladatok"
+  items:
+  - name: "A beszámolók menete"
+    href: teamsbeszamolok\index.md
+  - name: "Útmutató projektek feltöltéséhez"
+    href: projektfeltoltes\index.md
+  - name: "Projektfeladat: Életjáték"
+    href: beadando_game_of_life\index.md
+  - name: "Kígyós játék"
+    href: kigyos\index.md
+  - name: "PixelArt"
+    href: pixelart\index.md
+  - name: "Projektfeladat: Hajós oktató"
+    href: beadando_hajos\index.md
+  - name: "Projektfeladat:  Memóriajáték folytatása"
+    href: beadando_quiz_numerikus\index.md
+  - name: "Projektfeladat: Szótanító játék"
+    href: beadando_szotanito\index.md
+  - name: "Projektfeladat:  Akasztófa játék"
+    href: beadando_hangman\index.md
