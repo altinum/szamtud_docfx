@@ -7,7 +7,6 @@ A gyakorlatban ez azt jelenti, hogy a programkódba közvetlenül írhatjuk a le
 
 Kettő féle szintaxis létezik, az előadásokon használt `SQL-szerű` és a `Lambda`. Mind a kettőnek meg van az előnye, bármelyiket lehet használni, akár vegyesen is.  A továbbiakban a két írásmód közül lehet választani a tabok segítségével, mindenki használja azt, amelyik jobban tetszik. Ha egy szintaxist szeretnél csak elsajátítani, akkor az SQL-es legyen az, mert az előadásokat könnyebb lesz követni.
 
-
 ## LINQ példák
 
 ### A legegyszerűbb példa
