@@ -17,59 +17,59 @@
 - name: "2. hét"
   items:
     - name: "Függvények és vezérlőszerkezetek"
-    href: fuggvenyek\index.md
+      href: fuggvenyek\index.md
 - name: "3. hét"
   items:
     - name: "Osztályok példánysítása"
-    href: osztalyok\index.md
+      href: osztalyok\index.md
 - name: "4. hét - 1. Géptermi ZH"
   items:
     - name: "ZH Checklist"
-    href: zh1checklist\index.md
+      href: zh1checklist\index.md
     - name: "Szoftvertechnológia I összefoglaló feladatsor"
-    href: osszefoglalo_levelezo\index.md
+      href: osszefoglalo_levelezo\index.md
  - name: "5. hét"
   items:
     - name: "Képkirakós játék"
-    href: kepkirakos\index.md
+      href: kepkirakos\index.md
  - name: "6. hét"
   items:
     - name: "Feleltválasztós játék"
-    href: feleletvalasztos\index.md
+      href: feleletvalasztos\index.md
  - name: "7. hét"
   items:
       - name: "Kígyós játék"
-      href: kigyos\index.md
+        href: kigyos\index.md
  - name: "8. hét - 1. Géptermi ZH"
   items:
     - name: "Checklist az második ZH-hoz"
-    href: zh2checklist\index.md
+      href: zh2checklist\index.md
  - name: "9. hét"
   items:
     - name: "Emory game"
-    href: emory\index.md
+      href: emory\index.md
  - name: "10. hét"
   items:
     - name: "Grafika"
-    href: grafika_ifs_reszletes\index.md
+      href: grafika_ifs_reszletes\index.md
  - name: "11. hét"
   items:
     - name: "Bantumi játék"
-    href: bantumi\index.md
+      href: bantumi\index.md
  - name: "12. hét - 1. Géptermi ZH"
   items:
     - name: "Előadás: Aknakereső"
-    href: amoba\index.md
+      href: amoba\index.md
     - name: "Gyakorló feladatok ZH-ra"
     items:
       - name: "Kvíz játék kérdéslistával"
-      href: quiz2\index.md
+        href: quiz2\index.md
       - name: "Villámkérdések"
-      href: villamkerdesek\index.md
+        href: villamkerdesek\index.md
       - name: "Szópároztatós játék"
-      href: szoparoztatos\index.md
+        href: szoparoztatos\index.md
       - name: "PixelArt"
-      href: pixelart\index.md
+        href: pixelart\index.md
  - name: "13. hét - Projektfeladat bemutatók"
   items:
     - name: "A beadandó feladatok értékelése"
