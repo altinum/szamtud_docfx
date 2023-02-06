@@ -1,4 +1,4 @@
-# Osztályok példánysítása
+# Osztályok példányosítása
 
 ## Videók
 
