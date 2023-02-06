@@ -178,6 +178,7 @@ studentBindingSource.DataSource = students;
 (+/-) Futtasd a programot, tölts ki néhány sort a táblázatból, és mentsd el a listát. Ez hasznos lesz a betöltés funkció tesztelésekor.
 
 ▶ Megoldás:
+
 ```csharp
 using System.Text; //névtér, ami a karakterkódolást tartalmazza
 
