@@ -27,7 +27,8 @@ Ezen a gyakorlaton azt kérjük, hogy a két felépítendő feladatot -- Fibonac
 
 (+/-) A végén a teljes solution-t adjátok le betömörítve!
 
-> A solution és a projekt neve egy szóból kell álljon, tartalmazhat számot, de nem kezdődhet számmal! Ékezetet a ZIP miatt nem érdemes használni, de nem tilos. 
+> [!CAUTION]
+> A solution és a projekt nevében nem lehet szóköz, tartalmazhat számot, de nem kezdődhet számmal! Ékezetet a ZIP miatt nem érdemes használni, de nem tilos. A pont használatát megengedi, de rossz gyakorlat, mert megzavarja a programot. (A névterek tagolása is ponttal történik)
 
 ## 1. feladat: Fibonacci sor kirakása gombokból
 
@@ -49,6 +50,7 @@ int Fibonacci(int n)
 }
 ```
 
+> [!NOTE]
 > Rekurzív függvényeknek azokat a függvényeket nevezzük, melyek saját magukat meghívják. A fenti függvény jó példa erre. 
 
 A gombok kihelyezése elvégezhető az űrlap konstruktorában, de létrehozhattunk volna eseménykiszolgálót az űrlap `Load` eseményéhez is:
@@ -177,7 +179,8 @@ namespace Pascal
 
 (+/-) Csináljatok sakktáblát. Azaz csak minden második négyzetet jelenítsétek meg.
 
-Tipp: a `%` (modulo) operátor az osztási maradékot képzi. Az alábbi kódrészlet eldönti egy számról, hogy páros-e:
+> [!Tip]
+> A `%` (modulo) operátor az osztási maradékot képzi. Az alábbi kódrészlet eldönti egy számról, hogy páros-e:
 
 ``` csharp
 if (a % 2 == 0)
