@@ -248,7 +248,7 @@ public Form1()
 ### 5. Gyakorló feladat: gombok kirakása háromszögben (ismétlés)
 
 Rakd ki egy 10x10-es gombokból álló mátrix gombjait úgy, hogy csak a főátlóban lévők és a főátló alattiak jelenjenek meg!
->[TIP]
+>[!TIP]
 >Itt azt érdemes vizsgálni egy feltételes elágazásban az belső ciklus törzsében, hogy az oszlop száma kisebb-e a sor számánál. 
 
 ### 6. Gyakorló feladat: gombok kirakása "karácsonyfában" (ismétlés)
