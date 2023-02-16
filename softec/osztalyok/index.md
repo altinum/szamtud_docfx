@@ -38,6 +38,7 @@ A jövő hétnél Moodle-ben van további információ ZH-val kapcsolatban.
 
 
 ### 1. feladat 
+# [feladat](#tab1/fel)
 
 (+/-) Hozz létre KÓDBÓL `gomb` néven egy példányt a `Button` osztályból, és add hozzá az űrlap vezérlőinek listájához!
 
@@ -62,14 +63,12 @@ A jövő hétnél Moodle-ben van további információ ZH-val kapcsolatban.
 (+/-)  Cseréld le a szorzótábla gombjait `VillogóGomb`-ra!
 
 (+/-)  :)
-
+# [megoldás](#tab1/meg)
 [1-3. pontok megoldása](S1_BEV_P1%201-3.m4v)
 [5-6. pontok megoldása](S1_BEV_P1%205-6.m4v)
 [7. pont megoldása](S1_BEV_P1%207a1.m4v)
 [7. pont megoldása, kiegészítés](S1_BEV_P1%207a2.m4v)
 [8-12. pontok megoldása](S1_BEV_P1%208-12.m4v)
-
-A megoldás kódja
 
 ```csharp
 class VillogoGomb : Button
@@ -105,7 +104,7 @@ class VillogoGomb : Button
 (+/-) Kattintásra a `SzíneződőGomb` színezze magát fukszia színűre.
 
 ### 3. feladat: számoló gomb - videó alapján
-
+# [feladat](#tab2/fel)
 (+/-) Származtass osztályt a `Button` osztályból `SzámolóGomb` néven!
 
 (+/-) A `SzámolóGomb` osztályt bővítsd konstruktorral!
@@ -128,8 +127,7 @@ class VillogoGomb : Button
 [változók érvenyessége](S1_BEV_P3%207lifecycle.m4v)
 [8-9. pont megoldása](S1_BEV_P3%208-9.m4v)
 
-A megoldás kódja
-
+# [megoldás](#tab2/meg)
 A `SzámolóGomb` osztály:
 
 ```csharp
@@ -180,15 +178,14 @@ private void Form1_Load(object sender, EventArgs e)
 ```
 
 ### 4. feladat: gombok kirakása véletlenszerűen
-
+# [feladat](#tab3/fel)
 (+/-)  Szervezz `for` ciklust 100 iterációs lépéssel. Minden lépésben rakj ki egy gombot a képernyőn véletlenszerű, de az ablakba eső pozícióba.
 
 (+/-)  A méret is legyen véletlen.
 
 (+/-)  A szín is.
 
-A megoldás kódja
-
+# [megoldás](#tab3/meg)
 Gombok véletlenszerű kirajzolása
 
 ``` csharp
@@ -251,8 +248,8 @@ public Form1()
 ### 5. Gyakorló feladat: gombok kirakása háromszögben (ismétlés)
 
 Rakd ki egy 10x10-es gombokból álló mátrix gombjait úgy, hogy csak a főátlóban lévők és a főátló alattiak jelenjenek meg!
-
-> Tipp: itt azt érdemes vizsgálni egy feltételes elágazásban az belső ciklus törzsében, hogy az oszlop száma kisebb-e a sor számánál. 
+>[!TIP]
+>Itt azt érdemes vizsgálni egy feltételes elágazásban az belső ciklus törzsében, hogy az oszlop száma kisebb-e a sor számánál. 
 
 ### 6. Gyakorló feladat: gombok kirakása "karácsonyfában" (ismétlés)
 
