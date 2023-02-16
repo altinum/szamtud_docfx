@@ -91,7 +91,7 @@ class VillogoGomb : Button
     }
 }
 ```
-***
+---
 
 ### 2. feladat: színeződő gomb - önálló munka
 
@@ -176,7 +176,7 @@ private void Form1_Load(object sender, EventArgs e)
     }
 }
 ```
-***
+---
 ### 4. feladat: gombok kirakása véletlenszerűen
 # [feladat](#tab/fel4)
 (+/-)  Szervezz `for` ciklust 100 iterációs lépéssel. Minden lépésben rakj ki egy gombot a képernyőn véletlenszerű, de az ablakba eső pozícióba.
@@ -243,7 +243,7 @@ public Form1()
     }
 }
 ```
-***
+---
 
 ### 5. Gyakorló feladat: gombok kirakása háromszögben (ismétlés)
 
