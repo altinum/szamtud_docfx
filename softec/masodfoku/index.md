@@ -59,6 +59,8 @@ A `Console.WriteLine()` a VisualStudio output ablakába ír. Ha nem találod, é
 ```csharp
 MessageBox.Show(_változónév_.ToString());
 ```
+> [!TIP]
+> A Visual Studio-n belül vannak beépített shortcutok a gyakran használt elemekre. Például cw+tab+tab=Console.WriteLine();
 
 ---
 
