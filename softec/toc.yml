@@ -40,7 +40,7 @@
   items:
       - name: "Kígyós játék"
         href: kigyos\index.md
-- name: "8. hét - 1. Géptermi ZH"
+- name: "8. hét - 2. Géptermi ZH"
   items:
     - name: "Checklist az második ZH-hoz"
       href: zh2checklist\index.md
@@ -56,7 +56,7 @@
   items:
     - name: "Bantumi játék"
       href: bantumi\index.md
-- name: "12. hét - 1. Géptermi ZH"
+- name: "12. hét - 3. Géptermi ZH"
   items:
     - name: "Előadás: Aknakereső"
       href: amoba\index.md
