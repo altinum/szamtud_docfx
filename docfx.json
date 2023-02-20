@@ -55,7 +55,10 @@
       }
     ],
     "dest": "_site",
-    "globalMetadataFiles": [],
+    "globalMetadataFiles": [
+    	"global/helper.js",
+	"global/article.css"
+    ],
     "fileMetadataFiles": [],
     "template": [
       "default"
