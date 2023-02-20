@@ -56,8 +56,7 @@
     ],
     "dest": "_site",
     "globalMetadataFiles": [
-    	"global/helper.js",
-	"global/article.css"
+    	"global/**"
     ],
     "fileMetadataFiles": [],
     "template": [
