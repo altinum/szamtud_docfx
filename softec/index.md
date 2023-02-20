@@ -1,15 +1,16 @@
 # Szoftvertechnológia I.
 
-[A tárgy célja, követelmények](/szoft1/kovetelmenyek/)
+[A tárgy célja, követelmények](../kovetelmenyek/)
 
 Az előadás és a gyakorlatok is jelenléti formában kerülnek megtartásra:
 
 |||||
 |-|-|-|-|
-|E01 Elmélet| CS:08:00-09:30 | E.fsz.II.ea. |Mohácsi László|
-|G02 Gyakorlat|CS:09:50-11:20|E.2.245|Török Tamás|
-|G02 Gyakorlat|CS:11:40-13:10|E.2.245|Király Eszter| 
-|G03 Gyakorlat|CS:13:40-15:10|E.2.245|Pikéthy Áron|
+|E01 Elmélet| SZ:08:00-09:30 | E.fsz.II.ea. |Mohácsi László|
+|G02 Gyakorlat|CS:09:50-11:20|E.2.245||
+|G02 Gyakorlat|CS:11:40-13:10|E.2.245|| 
+|G03 Gyakorlat|CS:13:40-15:10|E.2.245||
+|G03 Gyakorlat|CS:15:30-17:00|E.2.245||
 
 ## 1. hét
 
