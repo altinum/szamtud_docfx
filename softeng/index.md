@@ -20,7 +20,6 @@
   - [Lokális .mdf adatbázis](./knowledge_base/lokalis_adatbazis_visual_studioban/)
 
   
-
 ## I. blokk
 
 Vastag kilens készítése Widows Forms alapokon SQL adatbázishoz. 
