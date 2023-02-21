@@ -29,7 +29,6 @@ Az adatbázis költségeinek alacsonyan tartására két opciónk van:
 
 Ha a Serverless beállítással a vCore-okra számlázott tétel rejtélyesen nő, érdemes lehet állítani átállni "Basic"-re, aminek becsült költsége 4.21 EUR havonta, ami a félévből hátralevő időre kalkulálható.  
 
-
 ## Elfogyott kredit
 
 Ha elfogyott a kredit, a fiók letiltásra kerül. Ebben az esetben át lehet állítani a fiókot ’Pay-as-you-go’ előfizetésre, vagy regisztrálni egy másik, ’Azure free account’-ot. Ehhez utóbbihoz is jár 200 USD, de ennek felhasználására már csak egy hónap áll rendelkezésre. A ’Pay-as-you-go’-hoz meg kell adni hitelkártya adatokat – akkor is ha csak ingyenes szolgáltatásokat akarunk igénybe venni. A kártya hitelességének ellenőrzéséhez egy minimális összeggel meg is terheli a kártyát, melyet, ha jól tudom, vissza is utal. 
