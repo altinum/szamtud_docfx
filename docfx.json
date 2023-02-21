@@ -49,14 +49,10 @@
       }
     ],
     "dest": "_site",
-    "globalMetadataFiles": [
-      "global/**.yml"
-    ],
     "template": [
       {
-        "name": "default",
-        "output": "_site",
-        "base": "_templates"
+        "default"
+        "_templates/default"
       }
     ],
     "postProcessors": [],
