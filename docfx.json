@@ -51,7 +51,7 @@
     "dest": "_site",
     "template": [
       {
-        "_templates/default"
+        "default"
       }
     ],
     "postProcessors": [],
