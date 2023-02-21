@@ -3,6 +3,7 @@ A játék szövegfájlból olvas fel szópárokat, melyeket színes címkékben 
 
 Melléklet: szavak.txt a  http://web.uni-corvinus.hu/~lmohacs/alfa/ oldalról
 
+
 ## Egérrel mozgatható címke készítése
 
 1.	Származtass `Szó` nevű osztályt a `Button` osztályból!
