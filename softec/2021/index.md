@@ -1,6 +1,7 @@
 # Szoftvertechnológia I feladatlap-gyűjtemény
 
 
+
 | #   | Cím                                                           | Link                                                      |
 |-----|---------------------------------------------------------------|-----------------------------------------------------------|
 | #1  | Első projekt; Másodfokú egyenlet megoldó program; Szorzótábla | [/szoft1/masodfoku/](/szoft1/masodfoku/)             |
