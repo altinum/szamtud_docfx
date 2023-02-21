@@ -59,7 +59,6 @@
     	"global/**"
     ],
     }
-    "fileMetadataFiles": [],
     "template": [
       "_templates/default"
     ],
