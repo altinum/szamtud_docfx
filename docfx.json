@@ -58,14 +58,6 @@
     "globalMetadataFiles": [
     	"global/**"
     ],
-	  "globalMetadata": {
-        "_appTitle": "My Documentation Site",
-        "_disableContribution": true,
-        "scripts": [
-            {
-                "src": "global/helper.js"
-            }
-        ]
     }
     "fileMetadataFiles": [],
     "template": [
