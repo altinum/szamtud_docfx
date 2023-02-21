@@ -29,7 +29,7 @@
           "*.md"
         ]
       },
-	{
+      {
         "files": [
           "softeng/**.yml",
           "softeng/**.md"
@@ -56,11 +56,14 @@
     ],
     "dest": "_site",
     "globalMetadataFiles": [
-    	"global/**"
+      "global/**.yml"
     ],
-    }
     "template": [
-      "_templates/default"
+      {
+        "name": "default",
+        "output": "_site",
+        "base": "_templates"
+      }
     ],
     "postProcessors": [],
     "markdownEngineName": "markdig",
@@ -68,5 +71,5 @@
     "keepFileLink": false,
     "cleanupCacheHistory": false,
     "disableGitFeatures": false
-  
+  }
 }
