@@ -26,7 +26,6 @@
 
 [12. videó](TAO12.mkv)
 
-
 ## Idegen kulcsok
 A relációs adatbázisokban a táblák közti kapcsolatok az idegen kulcsokon és a hozzájuk tartozó megkötéseken (**constraint**) keresztül valósulnak meg.
 
