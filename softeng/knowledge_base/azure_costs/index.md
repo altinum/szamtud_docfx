@@ -7,7 +7,6 @@ Igyekeztünk utánajárni, hogy mit lehet tenni, ha vészesen fogy az *Azure for
 Így néz ki a ’Pay-as-you-go’ előfizetés  költségelemzője:
 ![1614698473871.png](../../images/1614698473871.png)
 
-
 A költségszámításhoz használható az [Azure Picing Calculator](https://azure.microsoft.com/hu-hu/pricing/calculator/) oldal, de ez pont SQL szerver esetén nem sokat segít...
 
 ## Típushibák, melyek magas költségekhez vezetnek
