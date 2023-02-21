@@ -8,7 +8,6 @@
 Az első ZH nem tartogat meglepetéseket,  gyakorlással tökéletesen fel lehet készülni rá. 
 
 
-
 -  Kiinduló adatkét  minden csoport   megkapja egy adatbázis nevét a hozzátartozó jelszóval,  mely a  gyakorlatokon is megszokott bit.uni-corvinus.hu  SQL szerveren érhető el.
 -  Első lépésként létre kell hozni egy Windows Forms App-ot .NET 6-os  környezetbe a megadott Solution illetve Projekt elnevezési szabályok szerint.
 - `Scaffold-DbContext`  segítségével  a megadott mappába létre kell hozni   az adatbázis leképező O/RM  osztályokat.
