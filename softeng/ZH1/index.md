@@ -1,4 +1,4 @@
-# Felészülés az 1a ZH-ra
+# Felkészülés az 1a ZH-ra
 
 
  Az első blokk anyagát két ZH-ban Kérjük számon.  Ennek oka az, hogy az O/RM osztályok  elkészítése _reverse engineering_  megközelítéssel a további feladatok kiindulópontja is. 
