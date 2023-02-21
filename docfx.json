@@ -2,9 +2,15 @@
   "metadata": [
     {
       "src": [
-        "src/**.csproj"
+        {
+          "files": [
+            "src/**.csproj"
+          ]
+        }
       ],
-      "dest": "api"
+      "dest": "api",
+      "disableGitFeatures": false,
+      "disableDefaultFilter": false
     }
   ],
   "build": {
@@ -23,7 +29,7 @@
           "*.md"
         ]
       },
-      {
+	{
         "files": [
           "softeng/**.yml",
           "softeng/**.md"
@@ -49,10 +55,10 @@
       }
     ],
     "dest": "_site",
+    "globalMetadataFiles": [],
+    "fileMetadataFiles": [],
     "template": [
-      {
-        "name": "default"
-      }
+      "default"
     ],
     "postProcessors": [],
     "markdownEngineName": "markdig",
