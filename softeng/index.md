@@ -45,6 +45,7 @@ In memory adatbázisok, adatok mentése fájlba illetve visszatöltése fájlbó
 
 ### 3. hét
 
+
 - [Reguláris kifejezések](./3_elm_regularis_kifejezesek/)
 - [Adatok validálása űrlapon](./3_gyak_adatok_validalasa_urlapon/)
 
