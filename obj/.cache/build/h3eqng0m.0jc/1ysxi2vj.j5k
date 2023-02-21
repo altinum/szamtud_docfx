@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>A csoportos&#237;t&#225;s speci&#225;lis lehet&#337;s&#233;gei </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="A csoportos&#237;t&#225;s speci&#225;lis lehet&#337;s&#233;gei ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="a-csoportosítás-speciális-lehetőségei" sourcefile="adatb/gyak8/index.md" sourcestartlinenumber="1">A csoportosítás speciális lehetőségei</h1>
+
+<p sourcefile="adatb/gyak8/index.md" sourcestartlinenumber="2"><a href="gyak08_x264.mp4" sourcefile="adatb/gyak8/index.md" sourcestartlinenumber="2">Összefoglaló videó</a></p>
+<h2 id="rollup" sourcefile="adatb/gyak8/index.md" sourcestartlinenumber="3">ROLLUP</h2>
+<p sourcefile="adatb/gyak8/index.md" sourcestartlinenumber="4">Az oszlopneveket és a NULL értéket kombinálva csoportosít, és  megjeleníti a  részösszegeket valamint végösszeget. Csoportosításkor a nem NULL oszlopok száma jobbról balra csökken</p>
+<pre><code class="lang-sql" sourcefile="adatb/gyak8/index.md" sourcestartlinenumber="5">SELECT oszlopkifejezések, 
+             aggregálás
+FROM …
+GROUP BY ROLLUP(oszlopkifejezések)
+--Az oszlopkifejezések többnyire oszlopnevek listáját jelenti
+</code></pre>
+<p sourcefile="adatb/gyak8/index.md" sourcestartlinenumber="12">Például:</p>
+<pre><code class="lang-sql" sourcefile="adatb/gyak8/index.md" sourcestartlinenumber="13">SELECT oszlop1, oszlop2, oszlop3, SUM(oszlop4)
+FROM …GROUP BY ROLLUP (oszlop1, oszlop2, oszlop3)
+</code></pre>
+<p sourcefile="adatb/gyak8/index.md" sourcestartlinenumber="17">esetén a következő csoportok jönnek létre:</p>
+<table sourcefile="adatb/gyak8/index.md" sourcestartlinenumber="19">
+<thead>
+<tr sourcefile="adatb/gyak8/index.md" sourcestartlinenumber="19">
+<th sourcefile="adatb/gyak8/index.md" sourcestartlinenumber="19"></th>
+<th sourcefile="adatb/gyak8/index.md" sourcestartlinenumber="19"></th>
+<th sourcefile="adatb/gyak8/index.md" sourcestartlinenumber="1"></th>
+</tr>
+</thead>
+<tbody>
+<tr sourcefile="adatb/gyak8/index.md" sourcestartlinenumber="21">
+<td sourcefile="adatb/gyak8/index.md" sourcestartlinenumber="21">oszlop1</td>
+<td sourcefile="adatb/gyak8/index.md" sourcestartlinenumber="21">oszlop2</td>
+<td sourcefile="adatb/gyak8/index.md" sourcestartlinenumber="21">oszlop3</td>
+</tr>
+<tr sourcefile="adatb/gyak8/index.md" sourcestartlinenumber="22">
+<td sourcefile="adatb/gyak8/index.md" sourcestartlinenumber="22">oszlop1</td>
+<td sourcefile="adatb/gyak8/index.md" sourcestartlinenumber="22">oszlop2</td>
+<td sourcefile="adatb/gyak8/index.md" sourcestartlinenumber="22">NULL</td>
+</tr>
+<tr sourcefile="adatb/gyak8/index.md" sourcestartlinenumber="23">
+<td sourcefile="adatb/gyak8/index.md" sourcestartlinenumber="23">oszlop1</td>
+<td sourcefile="adatb/gyak8/index.md" sourcestartlinenumber="23">NULL</td>
+<td sourcefile="adatb/gyak8/index.md" sourcestartlinenumber="23">NULL</td>
+</tr>
+<tr sourcefile="adatb/gyak8/index.md" sourcestartlinenumber="24">
+<td sourcefile="adatb/gyak8/index.md" sourcestartlinenumber="24">NULL</td>
+<td sourcefile="adatb/gyak8/index.md" sourcestartlinenumber="24">NULL</td>
+<td sourcefile="adatb/gyak8/index.md" sourcestartlinenumber="24">NULL</td>
+</tr>
+</tbody>
+</table>
+<h2 id="cube" sourcefile="adatb/gyak8/index.md" sourcestartlinenumber="26">CUBE</h2>
+<p sourcefile="adatb/gyak8/index.md" sourcestartlinenumber="27">Az oszlopneveket és a NULL értéket kombinálva csoportosít, és  megjeleníti a  részösszegeket valamint végösszeget. A csoportosításhoz minden lehetséges kombinációt felhasznál.</p>
+<pre><code class="lang-sql" sourcefile="adatb/gyak8/index.md" sourcestartlinenumber="29">SELECT oszlopkifejezések, 
+             aggregálás
+FROM …
+GROUP BY CUBE(oszlopkifejezések)
+</code></pre>
+<p sourcefile="adatb/gyak8/index.md" sourcestartlinenumber="35">Például:</p>
+<pre><code class="lang-sql" sourcefile="adatb/gyak8/index.md" sourcestartlinenumber="36">SELECT oszlop1, oszlop2, oszlop3, SUM(oszlop4)
+FROM …GROUP BY CUBE (oszlop1, oszlop2, oszlop3)
+</code></pre>
+<p sourcefile="adatb/gyak8/index.md" sourcestartlinenumber="40">esetén a következő csoportok jönnek létre:</p>
+<table sourcefile="adatb/gyak8/index.md" sourcestartlinenumber="42">
+<thead>
+<tr sourcefile="adatb/gyak8/index.md" sourcestartlinenumber="42">
+<th sourcefile="adatb/gyak8/index.md" sourcestartlinenumber="42"></th>
+<th sourcefile="adatb/gyak8/index.md" sourcestartlinenumber="42"></th>
+<th sourcefile="adatb/gyak8/index.md" sourcestartlinenumber="1"></th>
+</tr>
+</thead>
+<tbody>
+<tr sourcefile="adatb/gyak8/index.md" sourcestartlinenumber="44">
+<td sourcefile="adatb/gyak8/index.md" sourcestartlinenumber="44">oszlop1</td>
+<td sourcefile="adatb/gyak8/index.md" sourcestartlinenumber="44">oszlop2</td>
+<td sourcefile="adatb/gyak8/index.md" sourcestartlinenumber="44">oszlop3</td>
+</tr>
+<tr sourcefile="adatb/gyak8/index.md" sourcestartlinenumber="45">
+<td sourcefile="adatb/gyak8/index.md" sourcestartlinenumber="45">oszlop1</td>
+<td sourcefile="adatb/gyak8/index.md" sourcestartlinenumber="45">oszlop2</td>
+<td sourcefile="adatb/gyak8/index.md" sourcestartlinenumber="45">NULL</td>
+</tr>
+<tr sourcefile="adatb/gyak8/index.md" sourcestartlinenumber="46">
+<td sourcefile="adatb/gyak8/index.md" sourcestartlinenumber="46">oszlop1</td>
+<td sourcefile="adatb/gyak8/index.md" sourcestartlinenumber="46">NULL</td>
+<td sourcefile="adatb/gyak8/index.md" sourcestartlinenumber="46">osszlop3</td>
+</tr>
+<tr sourcefile="adatb/gyak8/index.md" sourcestartlinenumber="47">
+<td sourcefile="adatb/gyak8/index.md" sourcestartlinenumber="47">oszlop1</td>
+<td sourcefile="adatb/gyak8/index.md" sourcestartlinenumber="47">NULL</td>
+<td sourcefile="adatb/gyak8/index.md" sourcestartlinenumber="47">NULL</td>
+</tr>
+<tr sourcefile="adatb/gyak8/index.md" sourcestartlinenumber="48">
+<td sourcefile="adatb/gyak8/index.md" sourcestartlinenumber="48">NULL</td>
+<td sourcefile="adatb/gyak8/index.md" sourcestartlinenumber="48">oszlop2</td>
+<td sourcefile="adatb/gyak8/index.md" sourcestartlinenumber="48">oszlop3</td>
+</tr>
+<tr sourcefile="adatb/gyak8/index.md" sourcestartlinenumber="49">
+<td sourcefile="adatb/gyak8/index.md" sourcestartlinenumber="49">NULL</td>
+<td sourcefile="adatb/gyak8/index.md" sourcestartlinenumber="49">oszlop2</td>
+<td sourcefile="adatb/gyak8/index.md" sourcestartlinenumber="49">NULL</td>
+</tr>
+<tr sourcefile="adatb/gyak8/index.md" sourcestartlinenumber="50">
+<td sourcefile="adatb/gyak8/index.md" sourcestartlinenumber="50">NULL</td>
+<td sourcefile="adatb/gyak8/index.md" sourcestartlinenumber="50">NULL</td>
+<td sourcefile="adatb/gyak8/index.md" sourcestartlinenumber="50">oszlop3</td>
+</tr>
+<tr sourcefile="adatb/gyak8/index.md" sourcestartlinenumber="51">
+<td sourcefile="adatb/gyak8/index.md" sourcestartlinenumber="51">NULL</td>
+<td sourcefile="adatb/gyak8/index.md" sourcestartlinenumber="51">NULL</td>
+<td sourcefile="adatb/gyak8/index.md" sourcestartlinenumber="51">NULL</td>
+</tr>
+</tbody>
+</table>
+<h2 id="grouping-sets" sourcefile="adatb/gyak8/index.md" sourcestartlinenumber="53">GROUPING SETS</h2>
+<p sourcefile="adatb/gyak8/index.md" sourcestartlinenumber="54">A GROUP BY parancs kiegészítve a GROUPING SETS taggal lehetővé teszi, hogy többféle csoportosítást is megadjunk.
+A csoportosításokat leíró oszlopkifejezéseket egymás után, zárójelek között , vesszővel elválasztva kell megadni. A GROUPING SETS-ek az egyes csoportokra kiadott SELECT-ek UNION ALL-jainak alternatívái</p>
+<pre><code class="lang-sql" sourcefile="adatb/gyak8/index.md" sourcestartlinenumber="56">SELECT oszlop1, oszlop2, SUM(oszlop3)
+FROM table
+GROUP BY GROUPING SETS(( oszlop1, oszlop2), (oszlop1)
+)
+</code></pre>
+<h2 id="a-grouping-és-grouping-_id--függvények" sourcefile="adatb/gyak8/index.md" sourcestartlinenumber="62">A GROUPING és GROUPING _ID  függvények</h2>
+<ul sourcefile="adatb/gyak8/index.md" sourcestartlinenumber="64">
+<li sourcefile="adatb/gyak8/index.md" sourcestartlinenumber="64">A GROUPING fv. értéke 1, ha az adott oszlopkifejezés szerint aggregálás (sum, min, max stb.) van, különben 0</li>
+<li sourcefile="adatb/gyak8/index.md" sourcestartlinenumber="65">A GROUPING_ID fv. értéke a paraméterként megkapott oszlopkifejezések aggregációs szintjének száma.</li>
+</ul>
+<blockquote sourcefile="adatb/gyak8/index.md" sourcestartlinenumber="66">
+<p sourcefile="adatb/gyak8/index.md" sourcestartlinenumber="66">A szintszám számítása úgy történik, hogy az oszloplistához egy bináris kódot rendelünk. Ennek i-ik eleme 1, ha az i-ik oszlop szerint van aggregálás, különben 0. A szintszám a bináris szám értéke lesz tízes számrendszerben.  Pl: ha a csoport (oszlop1, oszlop2), és mindkettő szerint van aggregálás, akkor a szintszám binárisan 11, decimálisan 3.</p>
+</blockquote>
+<ul sourcefile="adatb/gyak8/index.md" sourcestartlinenumber="67">
+<li sourcefile="adatb/gyak8/index.md" sourcestartlinenumber="67">Használhatók a SELECT, a HAVING és az ORDER BY részekben, amennyiben a GROUP BY is specifikálva van</li>
+<li sourcefile="adatb/gyak8/index.md" sourcestartlinenumber="68">Mindkét fv. legfontosabb alkalmazása, hogy megkülönböztessük a ROLLUP, CUBE és GROUPING SETS-ek által visszaadott NULL értékeket (részösszegek, végösszegek) a normál NULL értékektől</li>
+<li sourcefile="adatb/gyak8/index.md" sourcestartlinenumber="69">Ha egy oszlop(kifejezés) szerint csoportosítunk, akkor a két fv. ugyanazt az értéket adja vissza</li>
+</ul>
+<h1 id="példák" sourcefile="adatb/gyak8/index.md" sourcestartlinenumber="71">Példák</h1>
+<h2 id="rollup-1" sourcefile="adatb/gyak8/index.md" sourcestartlinenumber="72">ROLLUP</h2>
+<p sourcefile="adatb/gyak8/index.md" sourcestartlinenumber="73">Készítsünk listát a raktáron lévő termékek összértékéről raktárkód, azon belül kategóriakód, majd mennyiségi egység szerinti bontásban! A lista jelenítse meg a részösszegeket és a végösszeget is! A listát szűrjük az 5-ös és 9-es azonosítójú kategóriára! A csoportosításnál a ROLLUP záradékot használjuk!</p>
+<pre><code class="lang-sql" sourcefile="adatb/gyak8/index.md" sourcestartlinenumber="74">SELECT RAKTAR_KOD, KAT_ID, MEGYS, 
+       SUM(LISTAAR*KESZLET) AS 'Készlet értéke'
+FROM Termek
+WHERE kat_ID IN (5,9)
+GROUP BY ROLLUP (RAKTAR_KOD, KAT_ID, MEGYS)
+</code></pre>
+<h2 id="cube-1" sourcefile="adatb/gyak8/index.md" sourcestartlinenumber="81">CUBE</h2>
+<p sourcefile="adatb/gyak8/index.md" sourcestartlinenumber="82">Készítsünk listát a raktáron lévő termékek összértékéről raktárkód, azon belül kategóriakód, majd mennyiségi egység szerinti bontásban! A lista jelenítse meg a részösszegeket és a végösszeget is! A listát szűrjük az 5-ös és 9-es azonosítójú kategóriára! A csoportosításnál a CUBE záradékot használjuk!</p>
+<pre><code class="lang-sql" sourcefile="adatb/gyak8/index.md" sourcestartlinenumber="83">SELECT RAKTAR_KOD, KAT_ID, MEGYS, 
+       SUM(LISTAAR*KESZLET) AS 'Készlet értéke'
+FROM Termek
+WHERE kat_ID IN (5,9)
+GROUP BY CUBE (RAKTAR_KOD, KAT_ID, MEGYS)
+</code></pre>
+<h2 id="grouping-sets-1" sourcefile="adatb/gyak8/index.md" sourcestartlinenumber="90">GROUPING SETS</h2>
+<p sourcefile="adatb/gyak8/index.md" sourcestartlinenumber="91">Készítsünk listát az egyes ügyfelek átlagos életkoráról az ügyfél neme, illetve az ügyfél születési éve szerint csoportosítva! A listát szűrjük azon ügyfelekre, akik neve D-vel vagy E-vel kezdődik!(Az életkor legyen a születési évtől a jelenlegi évig eltelt évek száma)</p>
+<pre><code class="lang-sql" sourcefile="adatb/gyak8/index.md" sourcestartlinenumber="92">SELECT szulev, nem, 
+       AVG(YEAR(GETDATE())-SZULEV) AS 'Átlagos életkor'
+FROM Ugyfel
+WHERE NEV LIKE 'E%' OR NEV LIKE 'D%'
+GROUP BY GROUPING SETS((SZULEV),(NEM))
+</code></pre>
+<h2 id="grouping--grouping_id" sourcefile="adatb/gyak8/index.md" sourcestartlinenumber="99">GROUPING(),  GROUPING_ID()</h2>
+<p sourcefile="adatb/gyak8/index.md" sourcestartlinenumber="100">Listázzuk, hogy melyik évben hány db terméket rendeltek meg! A lista megfelelően jelölve jelenítse meg a rendelések teljes összegét is!</p>
+<pre><code class="lang-sql" sourcefile="adatb/gyak8/index.md" sourcestartlinenumber="101">SELECT  
+ (
+  CASE GROUPING(YEAR(REND_DATUM))   
+  WHEN 0 THEN CAST(YEAR(REND_DATUM) AS nvarchar(4))
+  WHEN 1 THEN 'Összesen' END
+  ) 
+  AS ÉV,  
+  COUNT(*) AS 'DB'
+FROM Rendeles
+GROUP BY ROLLUP(YEAR(REND_DATUM))
+</code></pre>
+<p sourcefile="adatb/gyak8/index.md" sourcestartlinenumber="113">Listázzuk, hogy naponta, azon belül fizetési mód szerint hány rendelés történt! A lista megfelelően jelölve jelenítse meg a részösszegeket és a végösszeget is!</p>
+<pre><code class="lang-sql" sourcefile="adatb/gyak8/index.md" sourcestartlinenumber="114">SELECT  IIF(GROUPING(REND_DATUM)=1,'Összesen',
+        CAST(REND_DATUM AS nvarchar(10))) AS 'Rendelés dátuma',
+ (  
+  CASE GROUPING_ID(REND_DATUM, FIZ_MOD)   
+   WHEN 0 THEN FIZ_MOD
+   WHEN 1 THEN '**Fizetési módok összesen**'   
+   WHEN 3 THEN 'Összesen'
+  END)   as 'FIZ_MOD',    
+   COUNT(*) as 'DB'
+FROM Rendeles
+GROUP BY ROLLUP(REND_DATUM, FIZ_MOD)
+</code></pre>
+<blockquote sourcefile="adatb/gyak8/index.md" sourcestartlinenumber="128">
+<p sourcefile="adatb/gyak8/index.md" sourcestartlinenumber="128">A GROUPING SETS, GROUPING / GROUPING_ID fv. és a ROLLUP / CUBE együtt is használhatók</p>
+<pre><code class="lang-sql" sourcefile="adatb/gyak8/index.md" sourcestartlinenumber="129">SELECT CASE WHEN GROUPING(szulev)=0 
+     THEN CAST(SZULEV AS nvarchar(4))
+     ELSE 'Minden év'
+    END AS 'Születési év',
+ CASE 
+      WHEN GROUPING(nem)=1 THEN 'Minden nem'
+      ELSE NEM
+    END AS 'Nem', 
+    AVG(YEAR(GETDATE())-SZULEV) 
+AS 'Átlagos életkor'
+FROM Ugyfel
+WHERE NEV LIKE 'E%' OR NEV LIKE 'D%'
+GROUP BY GROUPING SETS(ROLLUP(SZULEV), CUBE(nem))
+</code></pre>
+</blockquote>
+<h1 id="feladatok" sourcefile="adatb/gyak8/index.md" sourcestartlinenumber="145">Feladatok</h1>
+<p sourcefile="adatb/gyak8/index.md" sourcestartlinenumber="147">A feladatok a <em sourcefile="adatb/gyak8/index.md" sourcestartlinenumber="147">webshop</em> adatbázishoz készültek.  Készen elérhető a tanszéki kiszolgálón az alábbi kapcsolati adatokkal:</p>
+<table sourcefile="adatb/gyak8/index.md" sourcestartlinenumber="149">
+<thead>
+<tr sourcefile="adatb/gyak8/index.md" sourcestartlinenumber="149">
+<th sourcefile="adatb/gyak8/index.md" sourcestartlinenumber="149"></th>
+<th sourcefile="adatb/gyak8/index.md" sourcestartlinenumber="149"></th>
+</tr>
+</thead>
+<tbody>
+<tr sourcefile="adatb/gyak8/index.md" sourcestartlinenumber="151">
+<td sourcefile="adatb/gyak8/index.md" sourcestartlinenumber="151">Szerver</td>
+<td sourcefile="adatb/gyak8/index.md" sourcestartlinenumber="151">bit.uni-corvinus.hu</td>
+</tr>
+<tr sourcefile="adatb/gyak8/index.md" sourcestartlinenumber="152">
+<td sourcefile="adatb/gyak8/index.md" sourcestartlinenumber="152">Felhasználónév</td>
+<td sourcefile="adatb/gyak8/index.md" sourcestartlinenumber="152">hallgato</td>
+</tr>
+<tr sourcefile="adatb/gyak8/index.md" sourcestartlinenumber="153">
+<td sourcefile="adatb/gyak8/index.md" sourcestartlinenumber="153">Jelszó</td>
+<td sourcefile="adatb/gyak8/index.md" sourcestartlinenumber="153">Password123</td>
+</tr>
+<tr sourcefile="adatb/gyak8/index.md" sourcestartlinenumber="154">
+<td sourcefile="adatb/gyak8/index.md" sourcestartlinenumber="154">Adatbázis</td>
+<td sourcefile="adatb/gyak8/index.md" sourcestartlinenumber="154">webshop</td>
+</tr>
+</tbody>
+</table>
+<p sourcefile="adatb/gyak8/index.md" sourcestartlinenumber="156">(+/-)Melyek azok a termékek, amelyek neve az átlagosnál hosszabb?
+a. Csak a termékek kódja és megnevezése jelenjen meg!
+<a href="Gy08_01.mp4" sourcefile="adatb/gyak8/index.md" sourcestartlinenumber="158">Megoldás</a></p>
+<p sourcefile="adatb/gyak8/index.md" sourcestartlinenumber="160">(+/-)Melyek azok a termékek, amelyekből ugyanannyi van készleten, mint dvd-ből?
+a. Csak a termékek kódja és megnevezése jelenjen meg!
+b. A Dvd ne szerepeljen a listában!
+<a href="Gy08_02.mp4" sourcefile="adatb/gyak8/index.md" sourcestartlinenumber="163">Megoldás</a></p>
+<p sourcefile="adatb/gyak8/index.md" sourcestartlinenumber="165">(+/-)Melyek azok a raktárak, amelyekben nincs olyan termék, amelynek nevében a matrica szó benne van?
+a. A listában a raktárak minden adata jelenjen meg!
+<a href="Gy08_03.mp4" sourcefile="adatb/gyak8/index.md" sourcestartlinenumber="167">Megoldás</a></p>
+<p sourcefile="adatb/gyak8/index.md" sourcestartlinenumber="169">(+/-)Mely nap(ok)on történt a legkevesebb megrendelés?
+<a href="Gy08_04.mp4" sourcefile="adatb/gyak8/index.md" sourcestartlinenumber="170">Megoldás</a></p>
+<p sourcefile="adatb/gyak8/index.md" sourcestartlinenumber="172">(+/-)Listázzuk azon termékek adatait, amelyek listaára saját raktárukban a legkisebb!
+<a href="Gy08_05.mp4" sourcefile="adatb/gyak8/index.md" sourcestartlinenumber="173">Megoldás</a></p>
+<p sourcefile="adatb/gyak8/index.md" sourcestartlinenumber="175">(+/-)Készítsünk listát arról, hogy ügyfelenként (LOGIN), azon belül szállítási módonként hány megrendelés történt!
+a.  A lista tartalmazza a részösszegeket és a végösszeget is!
+b. Használjuk a ROLLUP záradékot!
+<a href="Gy08_06.mp4" sourcefile="adatb/gyak8/index.md" sourcestartlinenumber="178">Megoldás</a></p>
+<p sourcefile="adatb/gyak8/index.md" sourcestartlinenumber="180">(+/-)Készítsünk listát a termékek számáról a következő csoportosítási szempontok szerint: kategória azonosító, raktárkód, raktárkód+mennyiségi egység!
+a. A listát szűrjük azokra a csoportokra, ahol a termékek száma legalább 6!
+<a href="Gy08_07.mp4" sourcefile="adatb/gyak8/index.md" sourcestartlinenumber="182">Megoldás</a></p>
+<p sourcefile="adatb/gyak8/index.md" sourcestartlinenumber="184">(+/-)Készítsünk listát az egyes termékkategóriákban lévő termékek számáról!
+a.  Elég megjeleníteni a kategóriák azonosítóit és a darabszámokat!
+b.  A lista megfelelően jelölve tartalmazza a végösszeget is!
+c. Az oszlopokat nevezzük el értelemszerűen!
+d. A listát rendezzük a darabszám szerint növekvő sorrendbe!
+<a href="Gy08_08.mp4" sourcefile="adatb/gyak8/index.md" sourcestartlinenumber="189">Megoldás</a></p>
+<p sourcefile="adatb/gyak8/index.md" sourcestartlinenumber="191">(+/-)Készítsünk listát az ügyfelek számáról születési év szerint, azon belül nem szerinti bontásban!
+a. A lista megfelelően jelölve tartalmazza a részösszegeket és a végösszeget is!
+b. Az oszlopoknak adjunk nevet értelemszerűen!
+<a href="Gy08_09.mp4" sourcefile="adatb/gyak8/index.md" sourcestartlinenumber="194">Megoldás</a></p>
+<p sourcefile="adatb/gyak8/index.md" sourcestartlinenumber="196">(+/-)Készítsünk listát a termékek számáról a felvitel hónapja, azon belül napja szerint csoportosítva.
+a. A lista csak a részösszegeket és a végösszeget tartalmazza!
+b. Az oszlopoknak adjunk megfelelő nevet!
+c. Ötlet: HAVING + GROUPING_ID fv együttes használata
+<a href="Gy08_10.mp4" sourcefile="adatb/gyak8/index.md" sourcestartlinenumber="200">Megoldás</a></p>
+<p sourcefile="adatb/gyak8/index.md" sourcestartlinenumber="202">(+/-)Készítsünk listát éves bontásban norbert2 azonosítójú ügyfél rendeléseinek értékéről!
+a. A lista megfelelően jelölve tartalmazza a végösszeget is!
+b. Az oszlopokat nevezzük el értelemszerűen!
+<a href="Gy08_11.mp4" sourcefile="adatb/gyak8/index.md" sourcestartlinenumber="205">Megoldás</a></p>
+<p sourcefile="adatb/gyak8/index.md" sourcestartlinenumber="207">(+/-)Készítsünk listát szállítási dátumonként, azon belül szállítási módonként az egyes rendelések összmennyiségéről!
+a. Csak azokat a termékeket vegyük figyelembe, amelyek mennyiségi egysége db!
+b. A listát szűrjük úgy, hogy az csak a részösszeg sorokat és a végösszeget tartalmazza!
+<a href="Gy08_12.mp4" sourcefile="adatb/gyak8/index.md" sourcestartlinenumber="210">Megoldás</a></p>
+<p sourcefile="adatb/gyak8/index.md" sourcestartlinenumber="212">(+/-)Készítsünk listát a termékek átlagos listaárairól!
+a. A lista legyen csoportosítva a következő szempontok alapján: kategórianév, kategórianév + raktárnév
+b. A lista tartalmazzon végösszeget (az átlagos árat minden termékre) is!
+c. Az átlagos értéke max. két tizedesjeggyel legyen megjelenítve!
+<a href="Gy08_13.mp4" sourcefile="adatb/gyak8/index.md" sourcestartlinenumber="216">Megoldás</a></p>
+<p sourcefile="adatb/gyak8/index.md" sourcestartlinenumber="218">(+/-)Hány olyan ügyfél van, aki még nem rendelt semmit?
+a. Csoportosítsuk őket nem szerint, azon belül életkor szerint!
+b. A lista tartalmazza a részösszegeket és a végösszeget is!
+<a href="Gy08_14.mp4" sourcefile="adatb/gyak8/index.md" sourcestartlinenumber="221">Megoldás</a></p>
+<p sourcefile="adatb/gyak8/index.md" sourcestartlinenumber="223">(+/-)Készítsünk listát arról, hogy évente hányszor rendelték meg azokat a termékeket, amelyek kategóriájukban a legdrágábbak!
+a. A lista jelenítse meg az évet, a termék nevét és a rendelés számát!
+b. Jelenjenek meg a részösszegek és a végösszeg is!
+<a href="Gy08_15.mp4" sourcefile="adatb/gyak8/index.md" sourcestartlinenumber="226">Megoldás</a></p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/altinum/szamtud_docfx/blob/main/adatb/gyak8/index.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

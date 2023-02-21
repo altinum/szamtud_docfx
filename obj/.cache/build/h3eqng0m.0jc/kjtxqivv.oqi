@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Tant&#225;rgyi inform&#225;ci&#243;, k&#246;vetelm&#233;nyek </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Tant&#225;rgyi inform&#225;ci&#243;, k&#246;vetelm&#233;nyek ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="tantárgyi-információ-követelmények" sourcefile="softeng/tantargyi_informaciok/index.md" sourcestartlinenumber="1">Tantárgyi információ, követelmények</h1>
+
+<h2 id="a-tárgysorozat-célja" sourcefile="softeng/tantargyi_informaciok/index.md" sourcestartlinenumber="5">A tárgysorozat célja</h2>
+<p sourcefile="softeng/tantargyi_informaciok/index.md" sourcestartlinenumber="7">A szoftverfejlesztő eszközök újabb generációinak megjelenésével egyedi problémák megoldását célzó alkalmazások készítése egyre kevésbe a szoftverfejlesztők privilégiuma. A mindennapi munka során egyre többen használunk kisebb-nagyobb saját fejlesztésű programokat rutinfeladatok automatizálására vagy számítások elvégzésére. Ezek környezete és bonyolultsága igen változatos az Excel-makróktól az adatbázis- lekérdezéseken és automatizált jelentésgeneráláson keresztül a bonyolultabb számításokig és modellekig.</p>
+<p sourcefile="softeng/tantargyi_informaciok/index.md" sourcestartlinenumber="9">Gazdasági szakembereknél a feladatok jelentős része adatgyűjtéssel és -- feldolgozással kapcsolatos, így a két, egymásra épülő kurzusból álló tárgyfüzér is eköré épül. Az oktatásban a C# nyelvet használjuk MS-SQL adatbázisok elérésére. Reméljük, hogy a félév alatt alatt gyakorlatban is alkalmazható tudásra lehet szert tenni:</p>
+<ol start="2" sourcefile="softeng/tantargyi_informaciok/index.md" sourcestartlinenumber="11">
+<li sourcefile="softeng/tantargyi_informaciok/index.md" sourcestartlinenumber="11"><p sourcefile="softeng/tantargyi_informaciok/index.md" sourcestartlinenumber="11">félév: A <strong sourcefile="softeng/tantargyi_informaciok/index.md" sourcestartlinenumber="11">Szoftvertechnológia</strong> „learning by doing” megközelítéssel játékos feladatokon keresztül vezet be az objektumorientált programozásba .NET környezetben, C# nyelven, Visual Studio fejlesztőkörnyezetben. A cél a nyelv eleminek megismese.</p>
+</li>
+<li sourcefile="softeng/tantargyi_informaciok/index.md" sourcestartlinenumber="12"><p sourcefile="softeng/tantargyi_informaciok/index.md" sourcestartlinenumber="12">félév: A <em sourcefile="softeng/tantargyi_informaciok/index.md" sourcestartlinenumber="12">Szoftvertechnológiá</em>-ae épülő <strong sourcefile="softeng/tantargyi_informaciok/index.md" sourcestartlinenumber="12">Software Engineering</strong>-et érdemes az <strong sourcefile="softeng/tantargyi_informaciok/index.md" sourcestartlinenumber="12">Adatbázisok</strong> tárgy után felvenni -- így szerepel a mintatantervben is. A <em sourcefile="softeng/tantargyi_informaciok/index.md" sourcestartlinenumber="12">Software Engineering</em> már közelebb áll az üzleti életben előforduló problémákhoz: bemutatja, hogyan lehet SQL adatbázishoz kezelőfelületet építeni C# alapokon. A tárgy keretében adatbázisra épülő asztali és webalkalmazásokat fejleszthetünk, az utóbbiak Azure felhőben kerülnek hosztolásra.</p>
+</li>
+<li sourcefile="softeng/tantargyi_informaciok/index.md" sourcestartlinenumber="14"><p sourcefile="softeng/tantargyi_informaciok/index.md" sourcestartlinenumber="14">félév: Az <strong sourcefile="softeng/tantargyi_informaciok/index.md" sourcestartlinenumber="14">Informatikai rendszerek fejlesztése</strong> tárgy az alapvető adatbázis-kezelési és szoftverfejlesztési ismeretek birtokában már a projekt szemszögéből tekinti a szoftverfolyamatot. Szerepet kap a csapatmunka, a verziókezelés és a dokumentációkészítés is. Szóba kerülnek a fejlesztési metodológiák és a szervezési kérdések is.</p>
+</li>
+</ol>
+<h2 id="előadások-és-gyakorlatok" sourcefile="softeng/tantargyi_informaciok/index.md" sourcestartlinenumber="16">Előadások és gyakorlatok</h2>
+<p sourcefile="softeng/tantargyi_informaciok/index.md" sourcestartlinenumber="18">A tárgy erősen gyakorlatorientált, az előadások és a gyakorlatok szorosan kapcsolódnak egymáshoz. Az előadásokon bemutatott feladatmegoldások alapján önállóan kell a gyakorlatokra összeállított feladatsorok lépéseinek megfelelően felépíteni mintaalkalmazásokat. Ez azt jelenti, hogy a kiadott feladatokat alapvetően önállóan kell feldolgozni, de segítséget lehet kérni az oktatóktól.</p>
+<p sourcefile="softeng/tantargyi_informaciok/index.md" sourcestartlinenumber="20"><strong sourcefile="softeng/tantargyi_informaciok/index.md" sourcestartlinenumber="20">Az előadások követése elengedhetetlen a gyakorlatok teljesítéséhez.</strong>  A gyakorlatokon nincs mód az előadáson elhangzottak megismétlésére.</p>
+<p sourcefile="softeng/tantargyi_informaciok/index.md" sourcestartlinenumber="22">A gyakorlati feladatok az előadás kezdetéig elérhetővé válnak a tantárgy kezdőoldalán, és a gyakorlat végéig kell leadni őket a feladatsor végén megjelölt módon. Az elkészült feladatok leadása a jelenléti ív megfelelője, tehát legfeljebb 3 leadást lehet kihagyni. A késést is elmulasztott leadásnak tekintjük.</p>
+<blockquote sourcefile="softeng/tantargyi_informaciok/index.md" sourcestartlinenumber="24">
+<p sourcefile="softeng/tantargyi_informaciok/index.md" sourcestartlinenumber="24">A cél, hogy mindenki foglalkozzon a feladatok megoldásával, nem az, hogy az utolsó pillanatban kapkodva összecsapja. Ezért már a néhány perces késedelmet is hiányzásként kezeljük.</p>
+</blockquote>
+<p sourcefile="softeng/tantargyi_informaciok/index.md" sourcestartlinenumber="26">A leadott feladatok esetén elvárás, hogy működjenek az alapvető funkciók. Nem kell tökéletes feladatmegoldást leadni, de elfogadási kritérium, hogy legalább lefordítható legyen a beadott kód. Nem fogjuk minden héten átnézni az összes leadott feladatot, de szúrópróba szerűen bárki feladataira ránézhetünk. Ha egy leadott feladat nem megfelelő minőségű, akkor akár utólag is elutasíthatjuk, és ilyenkor elmulasztott leadásnak tekintjük az adott hetet. Ilyen esetben utólagos javításra nincs lehetőség.</p>
+<p sourcefile="softeng/tantargyi_informaciok/index.md" sourcestartlinenumber="28">A közös munka és a feladatok jellege miatt a hasonló leadott feladatok elkerülhetetlenek. Ezekkel nincs probléma, de karakterre pontosan megegyező projektek esetén mindegyiket elutasítjuk. Az ilyen jellegű gyanú eloszlatása érdekében javasoljuk, hogy a projektjeitek nevében szerepeljen a neptun kódotok is.</p>
+<p sourcefile="softeng/tantargyi_informaciok/index.md" sourcestartlinenumber="30"><strong sourcefile="softeng/tantargyi_informaciok/index.md" sourcestartlinenumber="30">FONTOS:</strong> A feladatok leadása után sem tesszük közzé a heti feladatok teljes megoldását letölthető formában. De bármilyen konkrét kérdés/fennakadás esetén örömmel segítünk.</p>
+<h2 id="kapcsolattartás-az-oktatókkal" sourcefile="softeng/tantargyi_informaciok/index.md" sourcestartlinenumber="32">Kapcsolattartás az oktatókkal</h2>
+<p sourcefile="softeng/tantargyi_informaciok/index.md" sourcestartlinenumber="34">Az oktatókkal történő kapcsolattartás elsődleges felülete a <strong sourcefile="softeng/tantargyi_informaciok/index.md" sourcestartlinenumber="34">Teams</strong>.  Kérünk mindenkit, hogy e-mailek helyett Teams-ben vegye fel velünk a kapcsolatot.  Itt lehetőségünk van hangalapú kommunikációra vagy képernyőmegosztásra váltani,  ha az hatékonyabb.</p>
+<p sourcefile="softeng/tantargyi_informaciok/index.md" sourcestartlinenumber="36">A mindenkit érintő kérdéseket az előadás  Teams csoportjában tegyétek fel, a gyakorlatokhoz köthető csoportokat nem használjuk.</p>
+<h2 id="osztályzás-és-ponthatárok" sourcefile="softeng/tantargyi_informaciok/index.md" sourcestartlinenumber="38">Osztályzás és ponthatárok</h2>
+<ul sourcefile="softeng/tantargyi_informaciok/index.md" sourcestartlinenumber="40">
+<li sourcefile="softeng/tantargyi_informaciok/index.md" sourcestartlinenumber="40"><p sourcefile="softeng/tantargyi_informaciok/index.md" sourcestartlinenumber="40">A tantárgy gyakorlati jeggyel zárul. A félév során <strong sourcefile="softeng/tantargyi_informaciok/index.md" sourcestartlinenumber="40">Három géptermi zárthelyi</strong> formájában kerül számonkérésre a tananyag, melyeken rendre 20,30 és 50 pont szerezhető egy a gyakorlati feladatsorokhoz hasonló fejlesztési példa megoldásával.</p>
+</li>
+<li sourcefile="softeng/tantargyi_informaciok/index.md" sourcestartlinenumber="42"><p sourcefile="softeng/tantargyi_informaciok/index.md" sourcestartlinenumber="42">A vizsgaidőszak első hetén --  ha a terembeosztás lehetővé teszi, pénteken délelőtt 10:00-kor --  egy zárthelyi  pótlására <strong sourcefile="softeng/tantargyi_informaciok/index.md" sourcestartlinenumber="42">vagy</strong> javítására van lehetőség. Több ZH javítására nincs mód.</p>
+</li>
+<li sourcefile="softeng/tantargyi_informaciok/index.md" sourcestartlinenumber="44"><p sourcefile="softeng/tantargyi_informaciok/index.md" sourcestartlinenumber="44">A meg nem írt,  illetve le nem adott ZH  is hiányzásnak minősül.</p>
+</li>
+<li sourcefile="softeng/tantargyi_informaciok/index.md" sourcestartlinenumber="46"><p sourcefile="softeng/tantargyi_informaciok/index.md" sourcestartlinenumber="46">A zárthelyiket mindenki a saját gyakorlatának időpontjában kell, hogy megírja.</p>
+</li>
+<li sourcefile="softeng/tantargyi_informaciok/index.md" sourcestartlinenumber="48"><p sourcefile="softeng/tantargyi_informaciok/index.md" sourcestartlinenumber="48">A zárthelyik során használható egy A4-es, kézzel írott, neptun kóddal és aláírással ellátott puskalap, melynek mindkét oldalára lehet írni. Már a lap összeállítása és átgondolása is segíti az anyag elsajátítását, ezért kérjük, hogy ennek a nem másolható formának az alkalmazását, és mindenki maga rakja össze a <em sourcefile="softeng/tantargyi_informaciok/index.md" sourcestartlinenumber="48">puskalapját</em>.</p>
+</li>
+</ul>
+<p sourcefile="softeng/tantargyi_informaciok/index.md" sourcestartlinenumber="50">Ponthatárok:</p>
+<table sourcefile="softeng/tantargyi_informaciok/index.md" sourcestartlinenumber="52">
+<thead>
+<tr sourcefile="softeng/tantargyi_informaciok/index.md" sourcestartlinenumber="52">
+<th sourcefile="softeng/tantargyi_informaciok/index.md" sourcestartlinenumber="52">-tól</th>
+<th sourcefile="softeng/tantargyi_informaciok/index.md" sourcestartlinenumber="52">-ig</th>
+<th sourcefile="softeng/tantargyi_informaciok/index.md" sourcestartlinenumber="52">Érdemjegy</th>
+</tr>
+</thead>
+<tbody>
+<tr sourcefile="softeng/tantargyi_informaciok/index.md" sourcestartlinenumber="54">
+<td sourcefile="softeng/tantargyi_informaciok/index.md" sourcestartlinenumber="54">0</td>
+<td sourcefile="softeng/tantargyi_informaciok/index.md" sourcestartlinenumber="54">50</td>
+<td sourcefile="softeng/tantargyi_informaciok/index.md" sourcestartlinenumber="54">elégtelen</td>
+</tr>
+<tr sourcefile="softeng/tantargyi_informaciok/index.md" sourcestartlinenumber="55">
+<td sourcefile="softeng/tantargyi_informaciok/index.md" sourcestartlinenumber="55">51</td>
+<td sourcefile="softeng/tantargyi_informaciok/index.md" sourcestartlinenumber="55">62</td>
+<td sourcefile="softeng/tantargyi_informaciok/index.md" sourcestartlinenumber="55">elégséges</td>
+</tr>
+<tr sourcefile="softeng/tantargyi_informaciok/index.md" sourcestartlinenumber="56">
+<td sourcefile="softeng/tantargyi_informaciok/index.md" sourcestartlinenumber="56">63</td>
+<td sourcefile="softeng/tantargyi_informaciok/index.md" sourcestartlinenumber="56">75</td>
+<td sourcefile="softeng/tantargyi_informaciok/index.md" sourcestartlinenumber="56">közepes</td>
+</tr>
+<tr sourcefile="softeng/tantargyi_informaciok/index.md" sourcestartlinenumber="57">
+<td sourcefile="softeng/tantargyi_informaciok/index.md" sourcestartlinenumber="57">76</td>
+<td sourcefile="softeng/tantargyi_informaciok/index.md" sourcestartlinenumber="57">88</td>
+<td sourcefile="softeng/tantargyi_informaciok/index.md" sourcestartlinenumber="57">jó</td>
+</tr>
+<tr sourcefile="softeng/tantargyi_informaciok/index.md" sourcestartlinenumber="58">
+<td sourcefile="softeng/tantargyi_informaciok/index.md" sourcestartlinenumber="58">89</td>
+<td sourcefile="softeng/tantargyi_informaciok/index.md" sourcestartlinenumber="58">100</td>
+<td sourcefile="softeng/tantargyi_informaciok/index.md" sourcestartlinenumber="58">jeles</td>
+</tr>
+</tbody>
+</table>
+<h2 id="jelenlét" sourcefile="softeng/tantargyi_informaciok/index.md" sourcestartlinenumber="60">Jelenlét</h2>
+<p sourcefile="softeng/tantargyi_informaciok/index.md" sourcestartlinenumber="62">A nappali képzésben résztvevő hallgatók esetén a TVSZ szerint <strong sourcefile="softeng/tantargyi_informaciok/index.md" sourcestartlinenumber="62">gyakorlatok látogatása kötelező</strong>, a gyakorlatok ¼-ét meghaladó, jelen esetben <strong sourcefile="softeng/tantargyi_informaciok/index.md" sourcestartlinenumber="62">3-nál több hiányzás esetén a tárgy nem teljesíthető</strong>. Külföldi ösztöndíj illetve igazolt tartós betegség esetén a tárgyfelelős a gyakorlatok ¼-ét meghaladó hiányzást engedélyezhet. Külföldi tanulmányok esetén a kedvezményes tanrendre vonatkozó kérvényt a félév elején kell leadni. Elmulasztott gyakorlat később nem pótolható. <strong sourcefile="softeng/tantargyi_informaciok/index.md" sourcestartlinenumber="62">A gyakoratokon való részvételt a határidőig feltöltött feladatok igazolják.</strong> A zárthelyiről való távolmaradás is hiányzásnak minősül, itt is a feltöltött megoldás igazolja a jelenlétet.</p>
+<p sourcefile="softeng/tantargyi_informaciok/index.md" sourcestartlinenumber="64"><strong sourcefile="softeng/tantargyi_informaciok/index.md" sourcestartlinenumber="64">Fontos:</strong> Covid fertőzés esetén sem tehetünk kivételt a fenti feltétel alól, ezért javasoljuk, hogy tényleg csak erősen indokolt esetben hagyjon ki bárki ZH alkalmat. Amennyiben valamilyen okból két ZH alkalmat is érint egy vagy több egészségügyi probléma, akkor az tartós betegségként könyvelhető el, de ennek megállapítása már nem az oktató, hanem a HSZ hatásköre. Ilyen esetben csak a megfelelő, elfogadott egyéni tanrend kérelem birtokában tudunk pótlási lehetőséget biztosítani.</p>
+<h2 id="erasmus-kedvezményes-tanrend" sourcefile="softeng/tantargyi_informaciok/index.md" sourcestartlinenumber="66">Erasmus, kedvezményes tanrend</h2>
+<p sourcefile="softeng/tantargyi_informaciok/index.md" sourcestartlinenumber="68">A leadási határidők azokra is vonatkoznak akik leadott kérelem alapján felmentést kaptak a gyakorlatok látogatása alól. Az ő esetükben azonban lehetőség van összevont ZH írására a vizsgaidőszakban, ha külföldi tanulmányuk nem teszi lehetővé a megjelenést.   A gyakorlati jeggyel záruló tárgyakra vonatkozó szabályok szerint a vizsgaidőszak első hetének végéig Neptunban rögzíteni kell a jegyet.</p>
+<blockquote sourcefile="softeng/tantargyi_informaciok/index.md" sourcestartlinenumber="70">
+<p sourcefile="softeng/tantargyi_informaciok/index.md" sourcestartlinenumber="70">Az ösztöndíjas és költségtérítéses helyek közötti tanulmányi eredménnyel alapuló átsorolási rendszerre való tekintettel a fent  lefektetett szabályok alól egyéni mérlegelés alapján nem adunk felmentést.  Elképzelhető, a versenyhelyzetben egy-egy engedmény valakit kilök az ösztöndíjas helyről.</p>
+</blockquote>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/altinum/szamtud_docfx/blob/main/softeng/tantargyi_informaciok/index.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

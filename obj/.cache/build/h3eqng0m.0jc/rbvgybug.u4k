@@ -1,0 +1,236 @@
+
+<div id="sidetoggle">
+  <div>
+    <div class="sidefilter">
+      <form class="toc-filter">
+        <span class="glyphicon glyphicon-filter filter-icon"></span>
+        <span class="glyphicon glyphicon-remove clear-icon" id="toc_filter_clear"></span>
+        <input type="text" id="toc_filter_input" placeholder="Enter here to filter..." onkeypress="if(event.keyCode==13) {return false;}">
+      </form>
+    </div>
+    <div class="sidetoc">
+      <div class="toc" id="toc">
+          
+          <ul class="nav level1">
+                <li>
+                    <a href="kovetelmenyek/index.html" name="" title="A t&#225;rgy c&#233;lja, k&#246;vetelm&#233;nyek">A t&#225;rgy c&#233;lja, k&#246;vetelm&#233;nyek</a>
+                </li>
+                <li>
+                    <span class="expand-stub"></span>
+                    <a>Tudásbázis</a>
+                    
+                    <ul class="nav level2">
+                          <li>
+                              <a href="vsinstall/index.html" name="" title="Visual Studi&#243; telep&#237;t&#233;se">Visual Studi&#243; telep&#237;t&#233;se</a>
+                          </li>
+                          <li>
+                              <a href="kovetelmenyek_levelezo/index.html" name="" title="Levelez&#337;s k&#246;vetelm&#233;nyek">Levelez&#337;s k&#246;vetelm&#233;nyek</a>
+                          </li>
+                          <li>
+                              <a href="levelezo_beadando/index.html" name="" title="M&#243;dos&#237;tott k&#246;vetelm&#233;nyek">M&#243;dos&#237;tott k&#246;vetelm&#233;nyek</a>
+                          </li>
+                          <li>
+                              <a href="projektfeltoltes/index.html" name="" title="&#218;tmutat&#243; projektek felt&#246;lt&#233;s&#233;hez">&#218;tmutat&#243; projektek felt&#246;lt&#233;s&#233;hez</a>
+                          </li>
+                    </ul>
+                </li>
+                <li>
+                    <span class="expand-stub"></span>
+                    <a>1. hét</a>
+                    
+                    <ul class="nav level2">
+                          <li>
+                              <a href="masodfoku/index.html" name="" title="Els&#337; h&#233;t">Els&#337; h&#233;t</a>
+                          </li>
+                    </ul>
+                </li>
+                <li>
+                    <span class="expand-stub"></span>
+                    <a>2. hét</a>
+                    
+                    <ul class="nav level2">
+                          <li>
+                              <a href="fuggvenyek/index.html" name="" title="F&#252;ggv&#233;nyek &#233;s vez&#233;rl&#337;szerkezetek">F&#252;ggv&#233;nyek &#233;s vez&#233;rl&#337;szerkezetek</a>
+                          </li>
+                    </ul>
+                </li>
+                <li>
+                    <span class="expand-stub"></span>
+                    <a>3. hét</a>
+                    
+                    <ul class="nav level2">
+                          <li>
+                              <a href="osztalyok/index.html" name="" title="Oszt&#225;lyok p&#233;ld&#225;nyos&#237;t&#225;sa">Oszt&#225;lyok p&#233;ld&#225;nyos&#237;t&#225;sa</a>
+                          </li>
+                    </ul>
+                </li>
+                <li>
+                    <span class="expand-stub"></span>
+                    <a>4. hét - 1. Géptermi ZH</a>
+                    
+                    <ul class="nav level2">
+                          <li>
+                              <a href="zh1checklist/index.html" name="" title="ZH Checklist">ZH Checklist</a>
+                          </li>
+                          <li>
+                              <a href="osszefoglalo_levelezo/index.html" name="" title="Szoftvertechnol&#243;gia I &#246;sszefoglal&#243; feladatsor">Szoftvertechnol&#243;gia I &#246;sszefoglal&#243; feladatsor</a>
+                          </li>
+                    </ul>
+                </li>
+                <li>
+                    <span class="expand-stub"></span>
+                    <a>5. hét</a>
+                    
+                    <ul class="nav level2">
+                          <li>
+                              <a href="kepkirakos/index.html" name="" title="K&#233;pkirak&#243;s j&#225;t&#233;k">K&#233;pkirak&#243;s j&#225;t&#233;k</a>
+                          </li>
+                    </ul>
+                </li>
+                <li>
+                    <span class="expand-stub"></span>
+                    <a>6. hét</a>
+                    
+                    <ul class="nav level2">
+                          <li>
+                              <a href="feleletvalasztos/index.html" name="" title="Feleltv&#225;laszt&#243;s j&#225;t&#233;k">Feleltv&#225;laszt&#243;s j&#225;t&#233;k</a>
+                          </li>
+                    </ul>
+                </li>
+                <li>
+                    <span class="expand-stub"></span>
+                    <a>7. hét</a>
+                    
+                    <ul class="nav level2">
+                          <li>
+                              <a href="kigyos/index.html" name="" title="K&#237;gy&#243;s j&#225;t&#233;k">K&#237;gy&#243;s j&#225;t&#233;k</a>
+                          </li>
+                    </ul>
+                </li>
+                <li>
+                    <span class="expand-stub"></span>
+                    <a>8. hét - 2. Géptermi ZH</a>
+                    
+                    <ul class="nav level2">
+                          <li>
+                              <a href="zh2checklist/index.html" name="" title="Checklist az m&#225;sodik ZH-hoz">Checklist az m&#225;sodik ZH-hoz</a>
+                          </li>
+                    </ul>
+                </li>
+                <li>
+                    <span class="expand-stub"></span>
+                    <a>9. hét</a>
+                    
+                    <ul class="nav level2">
+                          <li>
+                              <a href="emory/index.html" name="" title="Emory game">Emory game</a>
+                          </li>
+                    </ul>
+                </li>
+                <li>
+                    <span class="expand-stub"></span>
+                    <a>10. hét</a>
+                    
+                    <ul class="nav level2">
+                          <li>
+                              <a href="grafika_ifs_reszletes/index.html" name="" title="Grafika">Grafika</a>
+                          </li>
+                    </ul>
+                </li>
+                <li>
+                    <span class="expand-stub"></span>
+                    <a>11. hét</a>
+                    
+                    <ul class="nav level2">
+                          <li>
+                              <a href="bantumi/index.html" name="" title="Bantumi j&#225;t&#233;k">Bantumi j&#225;t&#233;k</a>
+                          </li>
+                    </ul>
+                </li>
+                <li>
+                    <span class="expand-stub"></span>
+                    <a>12. hét - 3. Géptermi ZH</a>
+                    
+                    <ul class="nav level2">
+                          <li>
+                              <a href="amoba/index.html" name="" title="El&#337;ad&#225;s: Aknakeres&#337;">El&#337;ad&#225;s: Aknakeres&#337;</a>
+                          </li>
+                          <li>
+                              <span class="expand-stub"></span>
+                              <a>Gyakorló feladatok ZH-ra</a>
+                              
+                              <ul class="nav level3">
+                                    <li>
+                                        <a href="quiz2/index.html" name="" title="Kv&#237;z j&#225;t&#233;k k&#233;rd&#233;slist&#225;val">Kv&#237;z j&#225;t&#233;k k&#233;rd&#233;slist&#225;val</a>
+                                    </li>
+                                    <li>
+                                        <a href="villamkerdesek/index.html" name="" title="Vill&#225;mk&#233;rd&#233;sek">Vill&#225;mk&#233;rd&#233;sek</a>
+                                    </li>
+                                    <li>
+                                        <a href="szoparoztatos/index.html" name="" title="Sz&#243;p&#225;roztat&#243;s j&#225;t&#233;k">Sz&#243;p&#225;roztat&#243;s j&#225;t&#233;k</a>
+                                    </li>
+                                    <li>
+                                        <a href="pixelart/index.html" name="" title="PixelArt">PixelArt</a>
+                                    </li>
+                              </ul>
+                          </li>
+                    </ul>
+                </li>
+                <li>
+                    <span class="expand-stub"></span>
+                    <a>13. hét - Projektfeladat bemutatók</a>
+                    
+                    <ul class="nav level2">
+                          <li>
+                              <a href="beadando/index.html" name="" title="A beadand&#243; feladatok &#233;rt&#233;kel&#233;se">A beadand&#243; feladatok &#233;rt&#233;kel&#233;se</a>
+                          </li>
+                          <li>
+                              <a href="teamsbeszamolok/index.html" name="" title="A besz&#225;mol&#243;k menete">A besz&#225;mol&#243;k menete</a>
+                          </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="2021/index.html" name="" title="Szoftvertechnol&#243;gia I feladatlap-gy&#369;jtem&#233;ny">Szoftvertechnol&#243;gia I feladatlap-gy&#369;jtem&#233;ny</a>
+                </li>
+                <li>
+                    <span class="expand-stub"></span>
+                    <a>Projektfeladatok</a>
+                    
+                    <ul class="nav level2">
+                          <li>
+                              <a href="beadando/index.html" name="" title="A beadand&#243; feladatok &#233;rt&#233;kel&#233;se">A beadand&#243; feladatok &#233;rt&#233;kel&#233;se</a>
+                          </li>
+                          <li>
+                              <a href="teamsbeszamolok/index.html" name="" title="A besz&#225;mol&#243;k menete">A besz&#225;mol&#243;k menete</a>
+                          </li>
+                          <li>
+                              <a href="beadando_game_of_life/index.html" name="" title="Projektfeladat: &#201;letj&#225;t&#233;k">Projektfeladat: &#201;letj&#225;t&#233;k</a>
+                          </li>
+                          <li>
+                              <a href="beadando_hajos/index.html" name="" title="Projektfeladat: Haj&#243;s oktat&#243;">Projektfeladat: Haj&#243;s oktat&#243;</a>
+                          </li>
+                          <li>
+                              <a href="beadando_quiz_numerikus/index.html" name="" title="Projektfeladat:  Mem&#243;riaj&#225;t&#233;k folytat&#225;sa">Projektfeladat:  Mem&#243;riaj&#225;t&#233;k folytat&#225;sa</a>
+                          </li>
+                          <li>
+                              <a href="beadando_szotanito/index.html" name="" title="Projektfeladat: Sz&#243;tan&#237;t&#243; j&#225;t&#233;k">Projektfeladat: Sz&#243;tan&#237;t&#243; j&#225;t&#233;k</a>
+                          </li>
+                          <li>
+                              <a href="beadando_hangman/index.html" name="" title="Projektfeladat:  Akaszt&#243;fa j&#225;t&#233;k">Projektfeladat:  Akaszt&#243;fa j&#225;t&#233;k</a>
+                          </li>
+                          <li>
+                              <a href="beadando_maze/index.html" name="" title="Projektfeladat:  Labirintus j&#225;t&#233;k">Projektfeladat:  Labirintus j&#225;t&#233;k</a>
+                          </li>
+                          <li>
+                              <a href="beadando_snake/index.html" name="" title="Projektfeladat:  K&#237;gy&#243;s j&#225;t&#233;k alm&#225;kkal">Projektfeladat:  K&#237;gy&#243;s j&#225;t&#233;k alm&#225;kkal</a>
+                          </li>
+                          <li>
+                              <a href="beadando_spot_the_difference/index.html" name="" title="Projektfeladat:  &#8222;Keresd a k&#252;l&#246;nbs&#233;get&#8221; j&#225;t&#233;k">Projektfeladat:  &#8222;Keresd a k&#252;l&#246;nbs&#233;get&#8221; j&#225;t&#233;k</a>
+                          </li>
+                    </ul>
+                </li>
+          </ul>
+      </div>
+    </div>
+  </div>
+</div>

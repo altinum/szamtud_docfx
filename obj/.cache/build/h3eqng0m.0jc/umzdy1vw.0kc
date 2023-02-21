@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>K&#233;pkirak&#243;s j&#225;t&#233;k </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="K&#233;pkirak&#243;s j&#225;t&#233;k ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="képkirakós-játék" sourcefile="softec/kepkirakos/index.md" sourcestartlinenumber="1">Képkirakós játék</h1>
+
+<h2 id="kiinduló-állományok-és-megoldás" sourcefile="softec/kepkirakos/index.md" sourcestartlinenumber="2">Kiinduló állományok és megoldás</h2>
+<table sourcefile="softec/kepkirakos/index.md" sourcestartlinenumber="3">
+<thead>
+<tr sourcefile="softec/kepkirakos/index.md" sourcestartlinenumber="3">
+<th sourcefile="softec/kepkirakos/index.md" sourcestartlinenumber="3"></th>
+<th sourcefile="softec/kepkirakos/index.md" sourcestartlinenumber="3"></th>
+</tr>
+</thead>
+<tbody>
+<tr sourcefile="softec/kepkirakos/index.md" sourcestartlinenumber="5">
+<td sourcefile="softec/kepkirakos/index.md" sourcestartlinenumber="5"><a href="lo.zip" sourcefile="softec/kepkirakos/index.md" sourcestartlinenumber="5">lo.zip</a></td>
+<td sourcefile="softec/kepkirakos/index.md" sourcestartlinenumber="5">Kiinduló képek</td>
+</tr>
+<tr sourcefile="softec/kepkirakos/index.md" sourcestartlinenumber="6">
+<td sourcefile="softec/kepkirakos/index.md" sourcestartlinenumber="6"><a href="Pascel_es_lo.docx" sourcefile="softec/kepkirakos/index.md" sourcestartlinenumber="6">Pascel_es_lo.docx</a></td>
+<td sourcefile="softec/kepkirakos/index.md" sourcestartlinenumber="6">Előadás handout</td>
+</tr>
+</tbody>
+</table>
+<h2 id="a-megoldás-menete-videón" sourcefile="softec/kepkirakos/index.md" sourcestartlinenumber="8">A megoldás menete videón</h2>
+<p sourcefile="softec/kepkirakos/index.md" sourcestartlinenumber="10"><a href="S1lo1-1.m4v" sourcefile="softec/kepkirakos/index.md" sourcestartlinenumber="10">1. Vonszolható gomb kíserlet</a></p>
+<p sourcefile="softec/kepkirakos/index.md" sourcestartlinenumber="12"><a href="S1lo2-2.m4v" sourcefile="softec/kepkirakos/index.md" sourcestartlinenumber="12">2. Képek kezelése, </a></p>
+<p sourcefile="softec/kepkirakos/index.md" sourcestartlinenumber="14"><a href="S1lo3-3.m4v" sourcefile="softec/kepkirakos/index.md" sourcestartlinenumber="14">3. 5x5 kiskép kirakása</a></p>
+<p sourcefile="softec/kepkirakos/index.md" sourcestartlinenumber="16"><a href="S1lo4-4.m4v" sourcefile="softec/kepkirakos/index.md" sourcestartlinenumber="16">4. Mozgatás</a></p>
+<p sourcefile="softec/kepkirakos/index.md" sourcestartlinenumber="18"><a href="S1lo5-5.m4v" sourcefile="softec/kepkirakos/index.md" sourcestartlinenumber="18">5. Keverés</a></p>
+<h3 id="ellenőrző-kérdések-az-előadáshoz" sourcefile="softec/kepkirakos/index.md" sourcestartlinenumber="20">Ellenőrző kérdések az előadáshoz</h3>
+<ol sourcefile="softec/kepkirakos/index.md" sourcestartlinenumber="22">
+<li sourcefile="softec/kepkirakos/index.md" sourcestartlinenumber="22"><p sourcefile="softec/kepkirakos/index.md" sourcestartlinenumber="22">Hány közvetlen őse lehet C#-ban egy osztálynak?</p>
+</li>
+<li sourcefile="softec/kepkirakos/index.md" sourcestartlinenumber="23"><p sourcefile="softec/kepkirakos/index.md" sourcestartlinenumber="23">Hol lehet átírni, hogy melyik űrlappal induljon az alkalmazás?</p>
+</li>
+<li sourcefile="softec/kepkirakos/index.md" sourcestartlinenumber="24"><p sourcefile="softec/kepkirakos/index.md" sourcestartlinenumber="24">Írd le azt a kódrésztelet, amit 10x10 gombot kirak az űrlapra!</p>
+</li>
+<li sourcefile="softec/kepkirakos/index.md" sourcestartlinenumber="25"><p sourcefile="softec/kepkirakos/index.md" sourcestartlinenumber="25">Sorolj fel 5-öt a Form osztály tulajdonságai közül!</p>
+</li>
+<li sourcefile="softec/kepkirakos/index.md" sourcestartlinenumber="26"><p sourcefile="softec/kepkirakos/index.md" sourcestartlinenumber="26">Sorolj fel 2-öt a Form osztály metódusai közül!</p>
+</li>
+<li sourcefile="softec/kepkirakos/index.md" sourcestartlinenumber="27"><p sourcefile="softec/kepkirakos/index.md" sourcestartlinenumber="27">Sorolj fel 5-öt a Form osztály eseményai közül!</p>
+</li>
+<li sourcefile="softec/kepkirakos/index.md" sourcestartlinenumber="28"><p sourcefile="softec/kepkirakos/index.md" sourcestartlinenumber="28">Melyik osztálytól ötököl a Példa osztály?  <code sourcefile="softec/kepkirakos/index.md" sourcestartlinenumber="28">class Példa {...}</code></p>
+</li>
+<li sourcefile="softec/kepkirakos/index.md" sourcestartlinenumber="29"><p sourcefile="softec/kepkirakos/index.md" sourcestartlinenumber="29">Mikor következnek be az alábbi események pl. egy gomb esetén?</p>
+<ul sourcefile="softec/kepkirakos/index.md" sourcestartlinenumber="30">
+<li sourcefile="softec/kepkirakos/index.md" sourcestartlinenumber="30">MouseUp</li>
+<li sourcefile="softec/kepkirakos/index.md" sourcestartlinenumber="31">MouseDown</li>
+<li sourcefile="softec/kepkirakos/index.md" sourcestartlinenumber="32">MouseMove</li>
+<li sourcefile="softec/kepkirakos/index.md" sourcestartlinenumber="33">MouseEnter</li>
+<li sourcefile="softec/kepkirakos/index.md" sourcestartlinenumber="34">MouseLeave</li>
+</ul>
+</li>
+<li sourcefile="softec/kepkirakos/index.md" sourcestartlinenumber="36"><p sourcefile="softec/kepkirakos/index.md" sourcestartlinenumber="36">Példaként adott az alábbi esemény-kiszolgáló függvény. Milyen információt hordoz az  <em sourcefile="softec/kepkirakos/index.md" sourcestartlinenumber="36">e</em>  paraméter?</p>
+</li>
+</ol>
+<pre><code class="lang-csharp" sourcefile="softec/kepkirakos/index.md" sourcestartlinenumber="37">void b_MouseDown(object sender, MouseEventArgs e)  
+{  
+...  
+}
+</code></pre>
+<h2 id="a-feladatmegoldás-lépései-gyakorlatra" sourcefile="softec/kepkirakos/index.md" sourcestartlinenumber="44">A feladatmegoldás lépései gyakorlatra</h2>
+<h3 id="első-fázis--új-osztály-származtatása" sourcefile="softec/kepkirakos/index.md" sourcestartlinenumber="46">Első fázis – új osztály származtatása</h3>
+<p sourcefile="softec/kepkirakos/index.md" sourcestartlinenumber="48">(+/-)  Származtass osztályt a <code sourcefile="softec/kepkirakos/index.md" sourcestartlinenumber="48">PictureBox</code> osztályból <code sourcefile="softec/kepkirakos/index.md" sourcestartlinenumber="48">Képkocka</code> néven!</p>
+<p sourcefile="softec/kepkirakos/index.md" sourcestartlinenumber="50">(+/-)  Az új <code sourcefile="softec/kepkirakos/index.md" sourcestartlinenumber="50">Képkocka</code> osztályt bővítsd konstruktorral!</p>
+<p sourcefile="softec/kepkirakos/index.md" sourcestartlinenumber="52">(+/-) A konstruktorban a <code sourcefile="softec/kepkirakos/index.md" sourcestartlinenumber="52">Képkocka</code> osztály színezze magát fukszia színűre, valamint állítsa be saját szélességét és magasságát 76 pixelre!</p>
+<p sourcefile="softec/kepkirakos/index.md" sourcestartlinenumber="54">(+/-) Fordítsd le az alkalmazást. Pl. futtasd és állítsd le. Fordítás után a Tollbox-on meg kell jelennie a <code sourcefile="softec/kepkirakos/index.md" sourcestartlinenumber="54">Képkocka</code> vezérlőnek, melyet a többihez hasonlóan tervező nézetben is elhelyezhetsz a űrlapon. Próbáld ki!</p>
+<h3 id="második-fázis--mozgatható-gomb" sourcefile="softec/kepkirakos/index.md" sourcestartlinenumber="56">Második fázis – mozgatható gomb</h3>
+<p sourcefile="softec/kepkirakos/index.md" sourcestartlinenumber="58">(+/-) A <code sourcefile="softec/kepkirakos/index.md" sourcestartlinenumber="58">Képkocka</code> konstruktorában rendelj esemélykiszolgáló függvényeket a <code sourcefile="softec/kepkirakos/index.md" sourcestartlinenumber="58">MouseDown</code>, a <code sourcefile="softec/kepkirakos/index.md" sourcestartlinenumber="58">MouseUp</code> és a <code sourcefile="softec/kepkirakos/index.md" sourcestartlinenumber="58">MouseMove</code> eseményekhez! (Ezeket a <code sourcefile="softec/kepkirakos/index.md" sourcestartlinenumber="58">Képkocka</code> osztály a <code sourcefile="softec/kepkirakos/index.md" sourcestartlinenumber="58">PictureBox</code> osztálytól örökölte.)</p>
+<p sourcefile="softec/kepkirakos/index.md" sourcestartlinenumber="60">(+/-) A <code sourcefile="softec/kepkirakos/index.md" sourcestartlinenumber="60">Képkocka</code> osztályt bővítsd egy <code sourcefile="softec/kepkirakos/index.md" sourcestartlinenumber="60">ox</code> és egy <code sourcefile="softec/kepkirakos/index.md" sourcestartlinenumber="60">oy</code> nevű <code sourcefile="softec/kepkirakos/index.md" sourcestartlinenumber="60">int</code> típusú változóval! Ebben tároljuk majd azt a koordinátát, ahol az egér a gomb lenyomásakor tartózkodott a gombon belül.</p>
+<p sourcefile="softec/kepkirakos/index.md" sourcestartlinenumber="62">(+/-) A Képkocka osztályt bővítsd egy <code sourcefile="softec/kepkirakos/index.md" sourcestartlinenumber="62">mozoge</code> nevű <code sourcefile="softec/kepkirakos/index.md" sourcestartlinenumber="62">bool</code> típusú változóval, melynek kezdőértéke <code sourcefile="softec/kepkirakos/index.md" sourcestartlinenumber="62">false</code>!</p>
+<p sourcefile="softec/kepkirakos/index.md" sourcestartlinenumber="64">(+/-) A <code sourcefile="softec/kepkirakos/index.md" sourcestartlinenumber="64">MouseDown</code> eseményhez tartozó eseménykiszolgálóban állítsd be <code sourcefile="softec/kepkirakos/index.md" sourcestartlinenumber="64">ox</code> és <code sourcefile="softec/kepkirakos/index.md" sourcestartlinenumber="64">oy</code> értékét <code sourcefile="softec/kepkirakos/index.md" sourcestartlinenumber="64">e.X</code> illetve <code sourcefile="softec/kepkirakos/index.md" sourcestartlinenumber="64">e.Y</code> érékére, és állítsd a <code sourcefile="softec/kepkirakos/index.md" sourcestartlinenumber="64">mozoge</code> változó értékét igazra!</p>
+<p sourcefile="softec/kepkirakos/index.md" sourcestartlinenumber="66">(+/-) A <code sourcefile="softec/kepkirakos/index.md" sourcestartlinenumber="66">MouseUp</code> eseményhez tartozó eseménykiszolgálóban nincs más teendő, mint a <code sourcefile="softec/kepkirakos/index.md" sourcestartlinenumber="66">mozoge</code> változó értékét hamisra állítani.</p>
+<p sourcefile="softec/kepkirakos/index.md" sourcestartlinenumber="68">(+/-) A <code sourcefile="softec/kepkirakos/index.md" sourcestartlinenumber="68">MouseMove</code> eseményhez tartozó eseménykiszolgálóban csak akkor csinálunk valamit, ha a <code sourcefile="softec/kepkirakos/index.md" sourcestartlinenumber="68">mozoge</code> változó értéke igaz. Hozd létre a feltételes szerkezetet! (<code sourcefile="softec/kepkirakos/index.md" sourcestartlinenumber="68">if..</code>)</p>
+<p sourcefile="softec/kepkirakos/index.md" sourcestartlinenumber="70">(+/-) Ha a fenti feltétel teljesül, tolja el (<code sourcefile="softec/kepkirakos/index.md" sourcestartlinenumber="70">+=</code>) a Képkocka az <code sourcefile="softec/kepkirakos/index.md" sourcestartlinenumber="70">X</code> koordinátáját (<code sourcefile="softec/kepkirakos/index.md" sourcestartlinenumber="70">Left</code> tulajdonság) <code sourcefile="softec/kepkirakos/index.md" sourcestartlinenumber="70">e.X-ox</code> képponttal, valamint az <code sourcefile="softec/kepkirakos/index.md" sourcestartlinenumber="70">Y</code> koordinátáját (Top tulajdonság) <code sourcefile="softec/kepkirakos/index.md" sourcestartlinenumber="70">e.Y-oy</code> képponttal!</p>
+<p sourcefile="softec/kepkirakos/index.md" sourcestartlinenumber="72">(+/-) Próbáld ki, mit csináltál: az előző fázis végén tervezőben kihelyezett gombnak most vonszolhatónak kéne lennie.</p>
+<h3 id="harmadik-fázis--lovas-kirakós" sourcefile="softec/kepkirakos/index.md" sourcestartlinenumber="74">Harmadik fázis – lovas kirakós</h3>
+<p sourcefile="softec/kepkirakos/index.md" sourcestartlinenumber="76">(+/-) Először rakj ki 5x5 Képkockát egymástól 76 pixeles távolságra! (Két egymásba ágyazott ciklus a <code sourcefile="softec/kepkirakos/index.md" sourcestartlinenumber="76">Form1</code> konstruktorában.)</p>
+<p sourcefile="softec/kepkirakos/index.md" sourcestartlinenumber="78">(+/-) Vezess be egy <code sourcefile="softec/kepkirakos/index.md" sourcestartlinenumber="78">int</code> típusú, <code sourcefile="softec/kepkirakos/index.md" sourcestartlinenumber="78">sorszám</code> nevű változót a ciklusok előtt <code sourcefile="softec/kepkirakos/index.md" sourcestartlinenumber="78">0</code> kezdőértékkel!</p>
+<p sourcefile="softec/kepkirakos/index.md" sourcestartlinenumber="80">(+/-) A <code sourcefile="softec/kepkirakos/index.md" sourcestartlinenumber="80">sorszám</code> változó értékét a belső ciklus törzsének utolsó lépéseként növeld egyel! Így, amikor kiraksz egy Képkockát, rendelkezésedre áll egy változó, melyből tudod, hogy épp hányadik képkockát rakod ki.</p>
+<p sourcefile="softec/kepkirakos/index.md" sourcestartlinenumber="82">(+/-) Töltsd le a <code sourcefile="softec/kepkirakos/index.md" sourcestartlinenumber="82">lo.zip</code> állományt, és csomagold ki egy mappába. A mappában lévő képetek másold be az projekten belül lévő <code sourcefile="softec/kepkirakos/index.md" sourcestartlinenumber="82">bin/debug</code> mappába, ide hozza majd létre a fordító a futtatható .exe állományt. Ha az alkalmazásban nem adsz elérési utat egy fájlnévhez, alapértelmezésben az .exe mellett keresi.</p>
+<ol start="17" sourcefile="softec/kepkirakos/index.md" sourcestartlinenumber="84">
+<li sourcefile="softec/kepkirakos/index.md" sourcestartlinenumber="84">Töltsd be a <code sourcefile="softec/kepkirakos/index.md" sourcestartlinenumber="84">Képkocka</code> <code sourcefile="softec/kepkirakos/index.md" sourcestartlinenumber="84">Load</code> metódusa segítségével a megfelelő lódarabot! A <code sourcefile="softec/kepkirakos/index.md" sourcestartlinenumber="84">Load</code> metódus paramétereként használható egy relatív hivatkozás a fájlra, mint pl. <code sourcefile="softec/kepkirakos/index.md" sourcestartlinenumber="84">kk.Load(&quot;./kepek/lo_1.jpg&quot;);</code>. Az URL-ben a <code sourcefile="softec/kepkirakos/index.md" sourcestartlinenumber="84">\</code> és a <code sourcefile="softec/kepkirakos/index.md" sourcestartlinenumber="84">/</code> karakterek egyaránt használhatóak.</li>
+</ol>
+<h3 id="negyedik-fázis--képkockák-összekeverése" sourcefile="softec/kepkirakos/index.md" sourcestartlinenumber="86">Negyedik fázis – képkockák összekeverése</h3>
+<p sourcefile="softec/kepkirakos/index.md" sourcestartlinenumber="88">(+/-)  Építsd be az alkalmazásba a keverő funkciót az alábbi kódrészlet alapján!</p>
+<pre><code class="lang-csharp" sourcefile="softec/kepkirakos/index.md" sourcestartlinenumber="90">public partial class Form1 : Form
+{
+    public Form1()
+    {
+      ....                 
+    }
+
+    int[] tömb = new int[25];
+
+    void Kever()
+    {
+        int n = 25;
+        for (int i = 0; i &lt; n; i++)
+        {
+            tömb[i] = i+1;
+        }
+        Random rnd = new Random();
+        for (int i = 0; i &lt; n; i++)
+        {
+            int egyik = rnd.Next(n);
+            int másik = rnd.Next(n);
+            int köztes = tömb[egyik];
+            tömb[egyik] = tömb[másik];
+            tömb[másik] = köztes;
+        }
+    }
+}
+</code></pre>
+<pre><code class="lang-csharp" sourcefile="softec/kepkirakos/index.md" sourcestartlinenumber="121">public partial class Form1 : Form
+{
+    public Form1()
+    {
+        InitializeComponent();
+        Kever();
+        int sorszám = 0;
+        for (int sor = 0; sor &lt; 5; sor++)
+            for (int oszlop = 0; oszlop &lt; 5; oszlop++)
+            {
+                Kepkocka k = new Kepkocka($&quot;lo_{tömb[sorszám]}.jpg&quot;, sor, oszlop);               
+                this.Controls.Add(k);
+                sorszám++;
+            }                      
+    }
+    ...
+}
+
+</code></pre>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/altinum/szamtud_docfx/blob/main/softec/kepkirakos/index.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

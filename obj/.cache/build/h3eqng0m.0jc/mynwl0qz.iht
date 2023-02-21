@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>A t&#225;rgy c&#233;lja, k&#246;vetelm&#233;nyek </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="A t&#225;rgy c&#233;lja, k&#246;vetelm&#233;nyek ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="a-tárgy-célja-követelmények" sourcefile="softec/kovetelmenyek/index.md" sourcestartlinenumber="1">A tárgy célja, követelmények</h1>
+
+<h2 id="a-tárgysorozat-célja" sourcefile="softec/kovetelmenyek/index.md" sourcestartlinenumber="3">A tárgysorozat célja</h2>
+<p sourcefile="softec/kovetelmenyek/index.md" sourcestartlinenumber="5">A mindennapi munka során egyre többen használunk kisebb-nagyobb saját fejlesztésű programokat rutinfeladatok automatizálására vagy számítások elvégzésére. Ezek környezete és bonyolultsága igen változatos az Excel-makróktól az adatbázis- lekérdezéseken és automatizált jelentésgeneráláson keresztül a bonyolultabb számításokig és modellekig. A szoftverfejlesztő eszközök újabb generációinak megjelenésével egyedi problémák megoldását célzó alkalmazások készítése egyre kevésbe a szoftverfejlesztők privilégiuma.</p>
+<p sourcefile="softec/kovetelmenyek/index.md" sourcestartlinenumber="7">Gazdasági szakembereknél a feladatok jelentős része adatgyűjtéssel és -- feldolgozással kapcsolatos, így a két, egymásra épülő kurzusból álló tárgyfüzér is eköré épül. Az oktatásban a C# nyelvet használjuk MS-SQL adatbázisok elérésére. Reméljük, hogy a következő két félév alatt alatt gyakorlatban is alkalmazható tudásra lehet szert tenni:</p>
+<ol start="2" sourcefile="softec/kovetelmenyek/index.md" sourcestartlinenumber="9">
+<li sourcefile="softec/kovetelmenyek/index.md" sourcestartlinenumber="9"><p sourcefile="softec/kovetelmenyek/index.md" sourcestartlinenumber="9">félév: A <strong sourcefile="softec/kovetelmenyek/index.md" sourcestartlinenumber="9">Szoftvertechnológia I</strong> „learning by doing” megközelítéssel játékos feladatokon keresztül vezet be az objektumorientált programozásba .NET környezetben, C# nyelven, Visual Studio fejlesztőkörnyezetben.</p>
+</li>
+<li sourcefile="softec/kovetelmenyek/index.md" sourcestartlinenumber="11"><p sourcefile="softec/kovetelmenyek/index.md" sourcestartlinenumber="11">félév: A <em sourcefile="softec/kovetelmenyek/index.md" sourcestartlinenumber="11">Szoftvertechnológia I</em>-re épülő <strong sourcefile="softec/kovetelmenyek/index.md" sourcestartlinenumber="11">Szoftvertechnológia II</strong>-t érdemes az <strong sourcefile="softec/kovetelmenyek/index.md" sourcestartlinenumber="11">Adatbázisok</strong> tárgy után felvenni - így van a mintatantervben is. A <em sourcefile="softec/kovetelmenyek/index.md" sourcestartlinenumber="11">Szoftvertechnológia II.</em> már közelebb áll az üzleti életben előforduló problémákhoz: bemutatja, hogyan lehet SQL adatbázishoz kezelőfelületet építeni C# alapokon. A tárgy keretében adatbázisra épülő webalkalmazásokat fejleszthetünk, melyek Azure felhőben kerülnek hosztolásra.</p>
+</li>
+<li sourcefile="softec/kovetelmenyek/index.md" sourcestartlinenumber="13"><p sourcefile="softec/kovetelmenyek/index.md" sourcestartlinenumber="13">félév: Az <strong sourcefile="softec/kovetelmenyek/index.md" sourcestartlinenumber="13">Informatikai rendszerek fejlesztése</strong> tárgy az alapvető adatbázis-kezelési és szoftverfejlesztési ismeretek birtokában már a projekt szemszögéből tekinti a szoftverfolyamatot. Szerepet kap a csapatmunka, a verziókezelés és a dokumentációkészítés is. Szóba kerülnek a fejlesztési metodológiák és a szervezési kérdések is.</p>
+</li>
+</ol>
+<h2 id="órák-rendje--osztályzás-menete" sourcefile="softec/kovetelmenyek/index.md" sourcestartlinenumber="15">Órák rendje,  osztályzás menete</h2>
+<h3 id="az-előadások-és-gyakorlatok-rendje" sourcefile="softec/kovetelmenyek/index.md" sourcestartlinenumber="17">Az előadások és gyakorlatok rendje</h3>
+<p sourcefile="softec/kovetelmenyek/index.md" sourcestartlinenumber="19">A kurzus a &quot;learning by doing&quot; elvet követi: minden hét egy-egy C# nyelven írt alkalmazás felépítése köré épül. Az előadásokon bemutatásra kerül az alkalmazás felépítésének menete magyarázatokkal, míg a gyakorlatokon lépésekre bontott útmutató alapján kell megépíteni az előadáson tárgyalt alkalmazást.</p>
+<p sourcefile="softec/kovetelmenyek/index.md" sourcestartlinenumber="21">Az előadások és a gyakorlatok is jelenléti formában kerülnek megtartásra. Az előadásokat nem rögzítjük, mivel a felvétel sokakat visszatart a hozzászólásoktól és a kérdezéstől. Ezek nélkül pedig nem sok választja el az élőben közvetített előadást az előre rögzített videótól. Mindemellett több tananyagnál segítik videóanyagok a felkészülést.</p>
+<h3 id="jelenlét" sourcefile="softec/kovetelmenyek/index.md" sourcestartlinenumber="23">Jelenlét</h3>
+<p sourcefile="softec/kovetelmenyek/index.md" sourcestartlinenumber="25">A nappali képzésben résztvevő hallgatók esetén a TVSZ szerint <strong sourcefile="softec/kovetelmenyek/index.md" sourcestartlinenumber="25">gyakorlatok látogatása kötelező</strong>, a gyakorlatok ¼-ét meghaladó, jelen esetben <strong sourcefile="softec/kovetelmenyek/index.md" sourcestartlinenumber="25">3-nál több hiányzás esetén a tárgy nem teljesíthető</strong>. Külföldi ösztöndíj illetve igazolt tartós betegség esetén a tárgyfelelős a gyakorlatok ¼-ét meghaladó hiányzást engedélyezhet.  Külföldi tanulmányok esetén a kedvezményes tanrendre vonatkozó kérvényt  a félév elején le kell adni. Elmulasztott gyakorlat később nem pótolható. <strong sourcefile="softec/kovetelmenyek/index.md" sourcestartlinenumber="25">A gyakoratokon való részvételt a Moodle rendszerbe határidőig feltöltött feladatok igazolják.</strong> A zárthelyiről való távolmaradás is hiányzásnak minősül, itt is a feltöltött megoldás igazolja a jelenlétet.</p>
+<h3 id="számonkérés" sourcefile="softec/kovetelmenyek/index.md" sourcestartlinenumber="27">Számonkérés</h3>
+<p sourcefile="softec/kovetelmenyek/index.md" sourcestartlinenumber="29">A jegy a félév során a 3 gépteremben írt, egyenként 27 pontos ZH és egy önállóan elkészített 20 pontos projektfeladat alapján kerül meghatározásra.</p>
+<ul sourcefile="softec/kovetelmenyek/index.md" sourcestartlinenumber="31">
+<li sourcefile="softec/kovetelmenyek/index.md" sourcestartlinenumber="31"><p sourcefile="softec/kovetelmenyek/index.md" sourcestartlinenumber="31">ZH-k a gyakorlatok idejében, gépteremben lesznek, gyakorlati programozási feladatot kell megoldani lépésekre bontott feladatsor mentén.</p>
+</li>
+<li sourcefile="softec/kovetelmenyek/index.md" sourcestartlinenumber="33"><p sourcefile="softec/kovetelmenyek/index.md" sourcestartlinenumber="33">A projekt feladatot az utolsó gyakorlatig Moodle-be fel kell tölteni, az utolsó gyakorlaton pedig be kell mutatni.</p>
+</li>
+</ul>
+<p sourcefile="softec/kovetelmenyek/index.md" sourcestartlinenumber="35">A jegyek az alábbi táblázat szerint alakulnak:</p>
+<ul sourcefile="softec/kovetelmenyek/index.md" sourcestartlinenumber="37">
+<li sourcefile="softec/kovetelmenyek/index.md" sourcestartlinenumber="37">0-59 elégtelen</li>
+<li sourcefile="softec/kovetelmenyek/index.md" sourcestartlinenumber="38">60-69 elégséges</li>
+<li sourcefile="softec/kovetelmenyek/index.md" sourcestartlinenumber="39">70-79 közepes</li>
+<li sourcefile="softec/kovetelmenyek/index.md" sourcestartlinenumber="40">80-89 jó</li>
+<li sourcefile="softec/kovetelmenyek/index.md" sourcestartlinenumber="41">90-101 jeles</li>
+</ul>
+<h3 id="pótlási-lehetőség" sourcefile="softec/kovetelmenyek/index.md" sourcestartlinenumber="43">Pótlási lehetőség</h3>
+<p sourcefile="softec/kovetelmenyek/index.md" sourcestartlinenumber="45"><strong sourcefile="softec/kovetelmenyek/index.md" sourcestartlinenumber="45">Egy meg nem írt ZH vagy projektbemutató pótlására van lehetőség a vizsgaidőszak első péntekén.</strong>  A késedelmesen feltöltött projektfeladatok nem kerülnek értékelésre, a bemutató pótolható.</p>
+<p sourcefile="softec/kovetelmenyek/index.md" sourcestartlinenumber="49">Jó felkészülést!
+<em sourcefile="softec/kovetelmenyek/index.md" sourcestartlinenumber="50">A tárgy oktatói</em></p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/altinum/szamtud_docfx/blob/main/softec/kovetelmenyek/index.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

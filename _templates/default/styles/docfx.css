@@ -3,6 +3,7 @@ html,
 body {
   font-family: 'Segoe UI', Tahoma, Helvetica, sans-serif;
   height: 100%;
+  background-color: fuchsia;
 }
 button,
 a {

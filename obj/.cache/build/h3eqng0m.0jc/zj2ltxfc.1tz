@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>5. gyakorlati feladatsor: LINQ lek&#233;rdez&#233;sek a  Studies adatb&#225;zis t&#225;blaira </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="5. gyakorlati feladatsor: LINQ lek&#233;rdez&#233;sek a  Studies adatb&#225;zis t&#225;blaira ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="5-gyakorlati-feladatsor-linq-lekérdezések-a--studies-adatbázis-táblaira" sourcefile="softeng/5_gyak_linq_lekerdezesek_-_studies_adatb/index.md" sourcestartlinenumber="1">5. gyakorlati feladatsor: LINQ lekérdezések a  Studies adatbázis táblaira</h1>
+
+<h2 id="a-feladat-háttere" sourcefile="softeng/5_gyak_linq_lekerdezesek_-_studies_adatb/index.md" sourcestartlinenumber="3">A feladat háttere</h2>
+<p sourcefile="softeng/5_gyak_linq_lekerdezesek_-_studies_adatb/index.md" sourcestartlinenumber="5">A gyakorlat célja olyan kliens építése, mely LINQ-lekérdezések segítségével szűri és jeleníti meg egy adott tábla tartalmát. A mintafeladat egy tanszék óráit tartalmazó adatbázis köré épül.</p>
+<p sourcefile="softeng/5_gyak_linq_lekerdezesek_-_studies_adatb/index.md" sourcestartlinenumber="7"><img src="../../images/1585069392831.png" sourcefile="softeng/5_gyak_linq_lekerdezesek_-_studies_adatb/index.md" sourcestartlinenumber="7" alt="1585069392831.png"></p>
+<p sourcefile="softeng/5_gyak_linq_lekerdezesek_-_studies_adatb/index.md" sourcestartlinenumber="9">Az <code sourcefile="softeng/5_gyak_linq_lekerdezesek_-_studies_adatb/index.md" sourcestartlinenumber="9">Instructor</code> tábla az oktatókat tartalmazza, az oktató státusza (Pl: <em sourcefile="softeng/5_gyak_linq_lekerdezesek_-_studies_adatb/index.md" sourcestartlinenumber="9">Adjunktus</em>, <em sourcefile="softeng/5_gyak_linq_lekerdezesek_-_studies_adatb/index.md" sourcestartlinenumber="9">Docens</em>, <em sourcefile="softeng/5_gyak_linq_lekerdezesek_-_studies_adatb/index.md" sourcestartlinenumber="9">Egyetemi tanár</em>, stb.) idegen kulcsként van tárolva, akárcsak az <code sourcefile="softeng/5_gyak_linq_lekerdezesek_-_studies_adatb/index.md" sourcestartlinenumber="9">Emplolyment</code> (Pl: <em sourcefile="softeng/5_gyak_linq_lekerdezesek_-_studies_adatb/index.md" sourcestartlinenumber="9">Főállású</em>, <em sourcefile="softeng/5_gyak_linq_lekerdezesek_-_studies_adatb/index.md" sourcestartlinenumber="9">félállású</em>, <em sourcefile="softeng/5_gyak_linq_lekerdezesek_-_studies_adatb/index.md" sourcestartlinenumber="9">óraadó</em>). A <code sourcefile="softeng/5_gyak_linq_lekerdezesek_-_studies_adatb/index.md" sourcestartlinenumber="9">Lesson</code> tábla a saját kulcsa mellett csak idegen kulcsokat tartalmaz. Itt kerül tárolásra, hogy  milyen tantárgyból melyik oktatónak a hét melyik napján, melyik sávban és melyik teremben van órája. <code sourcefile="softeng/5_gyak_linq_lekerdezesek_-_studies_adatb/index.md" sourcestartlinenumber="9">Cousre</code> például a <em sourcefile="softeng/5_gyak_linq_lekerdezesek_-_studies_adatb/index.md" sourcestartlinenumber="9">szoftvertechnológia</em>, amiből van 7 <code sourcefile="softeng/5_gyak_linq_lekerdezesek_-_studies_adatb/index.md" sourcestartlinenumber="9">Lesson</code> egy héten.</p>
+<p sourcefile="softeng/5_gyak_linq_lekerdezesek_-_studies_adatb/index.md" sourcestartlinenumber="11">A cél kliens felület építése, mely kétféle nézetben teszi lehetővé az adatbázisban tárolt adatok megjelenítését. A nézetek között gombokkal lehet választani.</p>
+<ul sourcefile="softeng/5_gyak_linq_lekerdezesek_-_studies_adatb/index.md" sourcestartlinenumber="12">
+<li sourcefile="softeng/5_gyak_linq_lekerdezesek_-_studies_adatb/index.md" sourcestartlinenumber="12">Az egyik nézet egy listában megjeleníti az oktatókat, és a kiválasztott oktatónak listázza az óráit, de úgy, hogy az idegen kulcsok helyén a csatolt táblában szereplő érték jelenjen meg. Az oktatók név szerint szűrhetők az oktatók listája felett lévő szövegdobozban.</li>
+<li sourcefile="softeng/5_gyak_linq_lekerdezesek_-_studies_adatb/index.md" sourcestartlinenumber="13">A másik gombhoz tartozó nézetben kurzusonként lehet megtekinteni az órákat.</li>
+</ul>
+<p sourcefile="softeng/5_gyak_linq_lekerdezesek_-_studies_adatb/index.md" sourcestartlinenumber="15"><img src="linq_studies.png" sourcefile="softeng/5_gyak_linq_lekerdezesek_-_studies_adatb/index.md" sourcestartlinenumber="15" alt="kep1"></p>
+<h2 id="gyakorlati-feladatsor" sourcefile="softeng/5_gyak_linq_lekerdezesek_-_studies_adatb/index.md" sourcestartlinenumber="17">Gyakorlati feladatsor</h2>
+<h3 id="1-projekt-létrehozása-és-elnevezése" sourcefile="softeng/5_gyak_linq_lekerdezesek_-_studies_adatb/index.md" sourcestartlinenumber="19">1. Projekt létrehozása és elnevezése</h3>
+<p sourcefile="softeng/5_gyak_linq_lekerdezesek_-_studies_adatb/index.md" sourcestartlinenumber="21">(+/-) Hozz létre egy *Widows Forms App (.NET Framework) típusú <strong sourcefile="softeng/5_gyak_linq_lekerdezesek_-_studies_adatb/index.md" sourcestartlinenumber="21">projekt</strong>et, melynek <strong sourcefile="softeng/5_gyak_linq_lekerdezesek_-_studies_adatb/index.md" sourcestartlinenumber="21">neve legyen gyak6_[neptun kód]</strong>!
+Az elkészült projekteket Moodle-ben a gyakorlatnál fel kell tölteni a jelenlét igazolásaként!</p>
+<h3 id="2-adatbázis-felépítése-és-orm" sourcefile="softeng/5_gyak_linq_lekerdezesek_-_studies_adatb/index.md" sourcestartlinenumber="24">2. Adatbázis felépítése és ORM</h3>
+<p sourcefile="softeng/5_gyak_linq_lekerdezesek_-_studies_adatb/index.md" sourcestartlinenumber="26">Dolgozz a saját Azure-os szervereden,
+-- vagy --
+hozz létre egy lokális adatbázist a projektedben!</p>
+<p sourcefile="softeng/5_gyak_linq_lekerdezesek_-_studies_adatb/index.md" sourcestartlinenumber="30">(+/-) Töltsd le és futtasd adatbázist felépítő SQL-t: <a href="Studies_CREATE_FILL.sql" sourcefile="softeng/5_gyak_linq_lekerdezesek_-_studies_adatb/index.md" sourcestartlinenumber="30">Studies_CREATE_FILL.sql</a> a választott adatbázison.</p>
+<p sourcefile="softeng/5_gyak_linq_lekerdezesek_-_studies_adatb/index.md" sourcestartlinenumber="32">Csak akkor használd az alábbi paraméterekkel elérhető adatbázist, ha valamilyen technikai okból nem sikerült felépíteni a sajátodat! Ez az adatbázis csak az egyetemi IP-tartományból vagy egyetemi VPN-el érhető el!</p>
+<table sourcefile="softeng/5_gyak_linq_lekerdezesek_-_studies_adatb/index.md" sourcestartlinenumber="34">
+<thead>
+<tr sourcefile="softeng/5_gyak_linq_lekerdezesek_-_studies_adatb/index.md" sourcestartlinenumber="34">
+<th sourcefile="softeng/5_gyak_linq_lekerdezesek_-_studies_adatb/index.md" sourcestartlinenumber="34"></th>
+<th sourcefile="softeng/5_gyak_linq_lekerdezesek_-_studies_adatb/index.md" sourcestartlinenumber="34"></th>
+</tr>
+</thead>
+<tbody>
+<tr sourcefile="softeng/5_gyak_linq_lekerdezesek_-_studies_adatb/index.md" sourcestartlinenumber="36">
+<td sourcefile="softeng/5_gyak_linq_lekerdezesek_-_studies_adatb/index.md" sourcestartlinenumber="36">Szerver</td>
+<td sourcefile="softeng/5_gyak_linq_lekerdezesek_-_studies_adatb/index.md" sourcestartlinenumber="36">bit.uni-corvinus.hu</td>
+</tr>
+<tr sourcefile="softeng/5_gyak_linq_lekerdezesek_-_studies_adatb/index.md" sourcestartlinenumber="37">
+<td sourcefile="softeng/5_gyak_linq_lekerdezesek_-_studies_adatb/index.md" sourcestartlinenumber="37">Felhasználónév</td>
+<td sourcefile="softeng/5_gyak_linq_lekerdezesek_-_studies_adatb/index.md" sourcestartlinenumber="37">hallgato</td>
+</tr>
+<tr sourcefile="softeng/5_gyak_linq_lekerdezesek_-_studies_adatb/index.md" sourcestartlinenumber="38">
+<td sourcefile="softeng/5_gyak_linq_lekerdezesek_-_studies_adatb/index.md" sourcestartlinenumber="38">Jelszó</td>
+<td sourcefile="softeng/5_gyak_linq_lekerdezesek_-_studies_adatb/index.md" sourcestartlinenumber="38">Password123</td>
+</tr>
+<tr sourcefile="softeng/5_gyak_linq_lekerdezesek_-_studies_adatb/index.md" sourcestartlinenumber="39">
+<td sourcefile="softeng/5_gyak_linq_lekerdezesek_-_studies_adatb/index.md" sourcestartlinenumber="39">Adatbázis</td>
+<td sourcefile="softeng/5_gyak_linq_lekerdezesek_-_studies_adatb/index.md" sourcestartlinenumber="39">Studies</td>
+</tr>
+</tbody>
+</table>
+<h3 id="3-adatkötött-objektumok-létrehozása" sourcefile="softeng/5_gyak_linq_lekerdezesek_-_studies_adatb/index.md" sourcestartlinenumber="42">3. Adatkötött objektumok létrehozása</h3>
+<p sourcefile="softeng/5_gyak_linq_lekerdezesek_-_studies_adatb/index.md" sourcestartlinenumber="44">Ebben a példában nincs szükség adat-kötött objektumokra. Lekérdezéseket fogunk megvalósítani és megjeleníteni. Mivel egyes megjelenítések során több tábla adatait fogjuk kombinálni, nem lesz értelmezhető az adatkötés. (Ezen a héten nem kell a <em sourcefile="softeng/5_gyak_linq_lekerdezesek_-_studies_adatb/index.md" sourcestartlinenumber="44">Data Sources</em> panel és az <em sourcefile="softeng/5_gyak_linq_lekerdezesek_-_studies_adatb/index.md" sourcestartlinenumber="44">Add new data source</em>.)</p>
+<h3 id="4-felhasználói-felület" sourcefile="softeng/5_gyak_linq_lekerdezesek_-_studies_adatb/index.md" sourcestartlinenumber="46">4. Felhasználói felület</h3>
+<p sourcefile="softeng/5_gyak_linq_lekerdezesek_-_studies_adatb/index.md" sourcestartlinenumber="48">Hozd létre a fenti ábrán látható felületet az alábbi lépésekben!</p>
+<p sourcefile="softeng/5_gyak_linq_lekerdezesek_-_studies_adatb/index.md" sourcestartlinenumber="50">(+/-) A <code sourcefile="softeng/5_gyak_linq_lekerdezesek_-_studies_adatb/index.md" sourcestartlinenumber="50">Form1</code>-en hozz létre két gombot és egy <code sourcefile="softeng/5_gyak_linq_lekerdezesek_-_studies_adatb/index.md" sourcestartlinenumber="50">Panel</code>-t! A <code sourcefile="softeng/5_gyak_linq_lekerdezesek_-_studies_adatb/index.md" sourcestartlinenumber="50">Panel</code>-t tervező nézetben a <em sourcefile="softeng/5_gyak_linq_lekerdezesek_-_studies_adatb/index.md" sourcestartlinenumber="50">Toolbox</em>-ból behúzhatod. A gombok fogják a UC-ket cserélgetni a paneleken, így tud majd a felhasználó váltogatni a nézetek között.
+(+/-) Állítsd be a panel horgonyait (<code sourcefile="softeng/5_gyak_linq_lekerdezesek_-_studies_adatb/index.md" sourcestartlinenumber="51">Anchor</code> a <em sourcefile="softeng/5_gyak_linq_lekerdezesek_-_studies_adatb/index.md" sourcestartlinenumber="51">Properties</em> panelen) úgy, hogy a panel kövesse az ablak méretét.
+(+/-) Adj a projekthez két <code sourcefile="softeng/5_gyak_linq_lekerdezesek_-_studies_adatb/index.md" sourcestartlinenumber="52">UserControl</code>-t is <code sourcefile="softeng/5_gyak_linq_lekerdezesek_-_studies_adatb/index.md" sourcestartlinenumber="52">UserControl1</code> és <code sourcefile="softeng/5_gyak_linq_lekerdezesek_-_studies_adatb/index.md" sourcestartlinenumber="52">UserControl2</code> néven. Az <code sourcefile="softeng/5_gyak_linq_lekerdezesek_-_studies_adatb/index.md" sourcestartlinenumber="52">UserControl</code>-ok háttérszínét tervezőből állítsd különbözőre, hogy könnyen ellenőrizhető legyen a funkciók működése.
+(+/-) A két <code sourcefile="softeng/5_gyak_linq_lekerdezesek_-_studies_adatb/index.md" sourcestartlinenumber="53">UserControl</code> a panelba kerüljön bele. Hozzál létre eseménykiszolgálót a gombok kattintás eseményéhez.
+(+/-) Az esemény-kiszolgálókban hozd létre a gombhoz tartozó <code sourcefile="softeng/5_gyak_linq_lekerdezesek_-_studies_adatb/index.md" sourcestartlinenumber="54">UserControl</code>-t, majd add hozzá a panelhez úgy, hogy töltse ki a rendelkezésére álló területet (a <code sourcefile="softeng/5_gyak_linq_lekerdezesek_-_studies_adatb/index.md" sourcestartlinenumber="54">UserControl</code> <code sourcefile="softeng/5_gyak_linq_lekerdezesek_-_studies_adatb/index.md" sourcestartlinenumber="54">Dock</code> tulajdonságának <code sourcefile="softeng/5_gyak_linq_lekerdezesek_-_studies_adatb/index.md" sourcestartlinenumber="54">DockStyles.Fill</code> értékre történő beállításával). Az esemény-kiszolgálóban még a <code sourcefile="softeng/5_gyak_linq_lekerdezesek_-_studies_adatb/index.md" sourcestartlinenumber="54">UserControl</code> létrehozása előtt töröljük a panel korábbi tartalmát, végül adjuk a <code sourcefile="softeng/5_gyak_linq_lekerdezesek_-_studies_adatb/index.md" sourcestartlinenumber="54">Panel</code> <code sourcefile="softeng/5_gyak_linq_lekerdezesek_-_studies_adatb/index.md" sourcestartlinenumber="54">Controls</code> gyűjteményéhez a <code sourcefile="softeng/5_gyak_linq_lekerdezesek_-_studies_adatb/index.md" sourcestartlinenumber="54">UserControl</code>-t.</p>
+<blockquote sourcefile="softeng/5_gyak_linq_lekerdezesek_-_studies_adatb/index.md" sourcestartlinenumber="56">
+<p sourcefile="softeng/5_gyak_linq_lekerdezesek_-_studies_adatb/index.md" sourcestartlinenumber="56">Dock: Az objektum szülőobjektumához való illeszkedését határozza meg. Így oldható meg legegyszerűbben, hogy a panel átméretezésével a benne lévő UC mindig vegye fel a panel méretét.</p>
+</blockquote>
+<p sourcefile="softeng/5_gyak_linq_lekerdezesek_-_studies_adatb/index.md" sourcestartlinenumber="58">◯ Példaként az első gombhoz tartozó eseménykiszolgáló:</p>
+<pre><code class="lang-csharp" sourcefile="softeng/5_gyak_linq_lekerdezesek_-_studies_adatb/index.md" sourcestartlinenumber="59">private void button1_Click(object sender, EventArgs e)  
+{  
+	// Kitöröljük az összes vezérlőt a panelről  
+	panel1.Controls.Clear();  
+  
+	// Létrehozzuk az 1. UserControlt  
+	UserControl userControl1 = new UserControl1();  
+  
+	// Hozzáadjuk a panelhez.  
+	panel1.Controls.Add(userControl1);  
+  
+	// Dock: Az objektum szülőobjektumához való illeszkedését határozza meg  
+	// DockStíle.Fill: A vezérlő mind a négy oldala illeszkedjen (és méreteződjön) a szülőobjektumhoz.  
+	userControl1.Dock = DockStyle.Fill;  
+}
+</code></pre>
+<p sourcefile="softeng/5_gyak_linq_lekerdezesek_-_studies_adatb/index.md" sourcestartlinenumber="76">(+/-) Az ábrán látható <code sourcefile="softeng/5_gyak_linq_lekerdezesek_-_studies_adatb/index.md" sourcestartlinenumber="76">TextBox</code>, <code sourcefile="softeng/5_gyak_linq_lekerdezesek_-_studies_adatb/index.md" sourcestartlinenumber="76">ListBox</code> és <code sourcefile="softeng/5_gyak_linq_lekerdezesek_-_studies_adatb/index.md" sourcestartlinenumber="76">DataGridView</code> vezérlőket az egyik <code sourcefile="softeng/5_gyak_linq_lekerdezesek_-_studies_adatb/index.md" sourcestartlinenumber="76">UserControl</code>-on helyezd el (a <em sourcefile="softeng/5_gyak_linq_lekerdezesek_-_studies_adatb/index.md" sourcestartlinenumber="76">Toolbox</em>ról behúzva)! A továbbiakban az első <code sourcefile="softeng/5_gyak_linq_lekerdezesek_-_studies_adatb/index.md" sourcestartlinenumber="76">UserControl</code>-ra dolgozz!</p>
+<h3 id="5-usercontorl1-oktatók-lekérdezése" sourcefile="softeng/5_gyak_linq_lekerdezesek_-_studies_adatb/index.md" sourcestartlinenumber="78">5. UserContorl1: Oktatók lekérdezése</h3>
+<h4 id="51-lista-feltöltése-az-oktatók-neveivel" sourcefile="softeng/5_gyak_linq_lekerdezesek_-_studies_adatb/index.md" sourcestartlinenumber="80">5.1 Lista feltöltése az oktatók neveivel</h4>
+<p sourcefile="softeng/5_gyak_linq_lekerdezesek_-_studies_adatb/index.md" sourcestartlinenumber="82">Fel kell tölteni adattal a <code sourcefile="softeng/5_gyak_linq_lekerdezesek_-_studies_adatb/index.md" sourcestartlinenumber="82">listBox1</code>-et az alábbiak szerint:</p>
+<p sourcefile="softeng/5_gyak_linq_lekerdezesek_-_studies_adatb/index.md" sourcestartlinenumber="84">(+/-) Példányosítsd a <code sourcefile="softeng/5_gyak_linq_lekerdezesek_-_studies_adatb/index.md" sourcestartlinenumber="84">context</code>-et az osztály szintjén!</p>
+<blockquote sourcefile="softeng/5_gyak_linq_lekerdezesek_-_studies_adatb/index.md" sourcestartlinenumber="86">
+<p sourcefile="softeng/5_gyak_linq_lekerdezesek_-_studies_adatb/index.md" sourcestartlinenumber="86"><strong sourcefile="softeng/5_gyak_linq_lekerdezesek_-_studies_adatb/index.md" sourcestartlinenumber="86">LINQ</strong>: a .NET keretrendszerbe épített lekérdező nyelv (szabálygyűjtemény), amely rendelkezik a hagyományos lekérdező nyelvek (pl.: MSSQL) funkcionalitásának egy részével, egyszersmind integrálva van a programozási nyelvekbe (C#, VB).</p>
+</blockquote>
+<p sourcefile="softeng/5_gyak_linq_lekerdezesek_-_studies_adatb/index.md" sourcestartlinenumber="88">(+/-) Az alábbi egyszerű lekérdezéssel, melyet a konstruktorban vagy a <code sourcefile="softeng/5_gyak_linq_lekerdezesek_-_studies_adatb/index.md" sourcestartlinenumber="88">Load</code> eseményhez tartozó eseménykiszolgálóban is elhelyezhetünk, megkapjuk az <code sourcefile="softeng/5_gyak_linq_lekerdezesek_-_studies_adatb/index.md" sourcestartlinenumber="88">Instructor</code> tábla tartalmát. A LINQ eredményét adjuk meg a <code sourcefile="softeng/5_gyak_linq_lekerdezesek_-_studies_adatb/index.md" sourcestartlinenumber="88">listBox1</code> adatforrásaként:</p>
+<pre><code class="lang-csharp" sourcefile="softeng/5_gyak_linq_lekerdezesek_-_studies_adatb/index.md" sourcestartlinenumber="90">var ilist = from i in context.Instructors
+            select i;
+listBox1.DataSource = ilist.ToList();
+</code></pre>
+<p sourcefile="softeng/5_gyak_linq_lekerdezesek_-_studies_adatb/index.md" sourcestartlinenumber="95">(+/-) Ahhoz, hogy a <code sourcefile="softeng/5_gyak_linq_lekerdezesek_-_studies_adatb/index.md" sourcestartlinenumber="95">listBox1</code>-ben csak az oktatók neve jelenjen meg, a <code sourcefile="softeng/5_gyak_linq_lekerdezesek_-_studies_adatb/index.md" sourcestartlinenumber="95">dataGridView</code> legördülő mezőihez hasonlóan be kell állítani a lista <code sourcefile="softeng/5_gyak_linq_lekerdezesek_-_studies_adatb/index.md" sourcestartlinenumber="95">DisplayMember</code> tulajdonságát. Ezt a kódban az alábbi utasítás végzi el:</p>
+<pre><code class="lang-csharp" sourcefile="softeng/5_gyak_linq_lekerdezesek_-_studies_adatb/index.md" sourcestartlinenumber="97">listBox1.DisplayMember = &quot;Name&quot;;
+</code></pre>
+<blockquote sourcefile="softeng/5_gyak_linq_lekerdezesek_-_studies_adatb/index.md" sourcestartlinenumber="101">
+<p sourcefile="softeng/5_gyak_linq_lekerdezesek_-_studies_adatb/index.md" sourcestartlinenumber="101">A <code sourcefile="softeng/5_gyak_linq_lekerdezesek_-_studies_adatb/index.md" sourcestartlinenumber="101">DisplayMember</code> értékét pontosan kell megadni, különben nem fog működni! Mindenképpen be kell gépelni, nincs kerülőút tervezőben. Ha rosszul van megadva, vagy nincs megadva a <code sourcefile="softeng/5_gyak_linq_lekerdezesek_-_studies_adatb/index.md" sourcestartlinenumber="101">DisplayMember</code>, a tábla sorait leképező osztály neve jelenik meg annyiszor, ahány eleme van a táblának.</p>
+</blockquote>
+<h4 id="52-oktatók-szűrése-névre" sourcefile="softeng/5_gyak_linq_lekerdezesek_-_studies_adatb/index.md" sourcestartlinenumber="103">5.2 Oktatók szűrése névre</h4>
+<p sourcefile="softeng/5_gyak_linq_lekerdezesek_-_studies_adatb/index.md" sourcestartlinenumber="104">A cél az, hogy ahogy a felhasználó gépel, úgy szűküljön az oktatók listája.</p>
+<p sourcefile="softeng/5_gyak_linq_lekerdezesek_-_studies_adatb/index.md" sourcestartlinenumber="106">A LINQ lekérdezésekben az SQL nyelvekhez hasonló módon lehet <code sourcefile="softeng/5_gyak_linq_lekerdezesek_-_studies_adatb/index.md" sourcestartlinenumber="106">WHERE</code> záradékokat írni. Az oktatók lekérdezéséhez használt lekérdezést az alábbi módon átalakítva a <code sourcefile="softeng/5_gyak_linq_lekerdezesek_-_studies_adatb/index.md" sourcestartlinenumber="106">textBox1</code>-be beírt szöveg alapján szűrve kerülnek az oktatók nevei az adatforrásba. Az alábbi kódrészletet a <code sourcefile="softeng/5_gyak_linq_lekerdezesek_-_studies_adatb/index.md" sourcestartlinenumber="106">textBox1</code> <code sourcefile="softeng/5_gyak_linq_lekerdezesek_-_studies_adatb/index.md" sourcestartlinenumber="106">TextChanged</code> eseményéhez létrehozott eseménykiszolgálóban célszerű elhelyezni:</p>
+<pre><code class="lang-csharp" sourcefile="softeng/5_gyak_linq_lekerdezesek_-_studies_adatb/index.md" sourcestartlinenumber="108">listBox1.DataSource = (from i in context.Instructors
+                       where i.Name.Contains(textBox1.Text)
+                       select i).ToList();
+</code></pre>
+<p sourcefile="softeng/5_gyak_linq_lekerdezesek_-_studies_adatb/index.md" sourcestartlinenumber="114">A <code sourcefile="softeng/5_gyak_linq_lekerdezesek_-_studies_adatb/index.md" sourcestartlinenumber="114">Contains()</code> helyett használható még a <code sourcefile="softeng/5_gyak_linq_lekerdezesek_-_studies_adatb/index.md" sourcestartlinenumber="114">StartsWith()</code> metódus is, ha csak név eleji egyezésekre akarunk összpontosítani.</p>
+<pre><code class="lang-csharp" sourcefile="softeng/5_gyak_linq_lekerdezesek_-_studies_adatb/index.md" sourcestartlinenumber="116">listBox1.DataSource = (from i in context.Instructors
+                       where i.Name.StartsWith(textBox1.Text)
+                       select i).ToList();
+</code></pre>
+<p sourcefile="softeng/5_gyak_linq_lekerdezesek_-_studies_adatb/index.md" sourcestartlinenumber="121">Ahhoz, hogy a lekérdezés szűrő jellege ténylegesen működjön, nem elég a konstruktorból meghívni. Szervezd ki a lekérdezést és az adatforrás feltöltését egy külön metódusba, amit aztán hívj meg a konstruktorból és a <code sourcefile="softeng/5_gyak_linq_lekerdezesek_-_studies_adatb/index.md" sourcestartlinenumber="121">textBox1</code> <code sourcefile="softeng/5_gyak_linq_lekerdezesek_-_studies_adatb/index.md" sourcestartlinenumber="121">TextChanged</code> eseményéhez rendelt eseménykezelőből is!</p>
+<p sourcefile="softeng/5_gyak_linq_lekerdezesek_-_studies_adatb/index.md" sourcestartlinenumber="123">Megoldás:</p>
+<pre><code class="lang-csharp" sourcefile="softeng/5_gyak_linq_lekerdezesek_-_studies_adatb/index.md" sourcestartlinenumber="125">public UserControl1()
+{
+    InitializeComponent();
+
+    FillDataSource();
+    listBox1.DisplayMember = &quot;Name&quot;;
+}
+
+private void FillDataSource()
+{
+    listBox1.DataSource = (from i in context.Instructors
+                           where i.Name.Contains(textBox1.Text)
+                           select i).ToList();
+}
+
+private void TextBox1_TextChanged(object sender, EventArgs e)
+{
+    FillDataSource();
+}
+</code></pre>
+<h4 id="53-a-kiválasztott-oktató-óráinak-lekérdezése" sourcefile="softeng/5_gyak_linq_lekerdezesek_-_studies_adatb/index.md" sourcestartlinenumber="147">5.3 A kiválasztott oktató óráinak lekérdezése</h4>
+<p sourcefile="softeng/5_gyak_linq_lekerdezesek_-_studies_adatb/index.md" sourcestartlinenumber="149">(+/-) Rendelj eseménykezelőt a <code sourcefile="softeng/5_gyak_linq_lekerdezesek_-_studies_adatb/index.md" sourcestartlinenumber="149">listBox1</code> <code sourcefile="softeng/5_gyak_linq_lekerdezesek_-_studies_adatb/index.md" sourcestartlinenumber="149">SelectedIndexChanged</code> eseményéhez! Az eseménykezelőben kérdezd le egy változóba kiválasztott oktató rekordját:</p>
+<pre><code class="lang-csharp" sourcefile="softeng/5_gyak_linq_lekerdezesek_-_studies_adatb/index.md" sourcestartlinenumber="151">Instructor instructor = (Instructor)listBox1.SelectedItem;
+</code></pre>
+<p sourcefile="softeng/5_gyak_linq_lekerdezesek_-_studies_adatb/index.md" sourcestartlinenumber="155">(+/-) Ezt a rekordot felhasználva megírható egy lekérdezés, ami visszaadja az adott oktató tanóráit. A <code sourcefile="softeng/5_gyak_linq_lekerdezesek_-_studies_adatb/index.md" sourcestartlinenumber="155">Lessons</code> tábla azonban kizárólag idegen kulcsokat tartalmaz. Így a pontos értékek megjelenítéséhez a táblák összekapcsolására (INNER JOIN) lenne szükség. A LINQ ennél egyszerűbb lehetőséget is ad a táblakapcsolatokon keresztüli lekérdezésekre:</p>
+<pre><code class="lang-csharp" sourcefile="softeng/5_gyak_linq_lekerdezesek_-_studies_adatb/index.md" sourcestartlinenumber="157">var lessons = from l in context.Lessons
+              where l.InstructorFK == instructor.InstructorSK
+              select new
+              {
+                  Kurzus = l.Course.Name,
+                  Nap = l.Day.Name,
+                  Sáv = l.Time.Name
+              };
+</code></pre>
+<p sourcefile="softeng/5_gyak_linq_lekerdezesek_-_studies_adatb/index.md" sourcestartlinenumber="168">A <code sourcefile="softeng/5_gyak_linq_lekerdezesek_-_studies_adatb/index.md" sourcestartlinenumber="168">select</code> után a <code sourcefile="softeng/5_gyak_linq_lekerdezesek_-_studies_adatb/index.md" sourcestartlinenumber="168">new</code> kulcsszó a három lekérdezett mezőt egy úgynevezett „névtelen típusú” objektumba gyűjti össze a fenti utasítás. A megfelelő kapcsolt táblákon keresztül hivatkozva pedig az idegen kulcsok helyett az egyes értékekhez tartozó neveket is meg tudjuk jeleníteni.</p>
+<p sourcefile="softeng/5_gyak_linq_lekerdezesek_-_studies_adatb/index.md" sourcestartlinenumber="170">(+/-) Töltsd be a LINQ-lekérdezés eredményét a dataGridView1-be! (Állítsd be a dataGridView1 adatforrását!)</p>
+<pre><code class="lang-csharp" sourcefile="softeng/5_gyak_linq_lekerdezesek_-_studies_adatb/index.md" sourcestartlinenumber="172">dataGridView1.DataSource = lessons.ToList();
+</code></pre>
+<h3 id="6-usercontrol2-oktató-kurzusainak-lekérdezése" sourcefile="softeng/5_gyak_linq_lekerdezesek_-_studies_adatb/index.md" sourcestartlinenumber="176">6. UserControl2: oktató kurzusainak lekérdezése</h3>
+<p sourcefile="softeng/5_gyak_linq_lekerdezesek_-_studies_adatb/index.md" sourcestartlinenumber="178">(+/-) A második <code sourcefile="softeng/5_gyak_linq_lekerdezesek_-_studies_adatb/index.md" sourcestartlinenumber="178">UserControl</code> felületén valósítsd meg a fent leírt szerkezetet, de most a kurzusok jelenjenek meg a <code sourcefile="softeng/5_gyak_linq_lekerdezesek_-_studies_adatb/index.md" sourcestartlinenumber="178">ListBox</code>-ban, és az adott kurzus órái legyenek a <code sourcefile="softeng/5_gyak_linq_lekerdezesek_-_studies_adatb/index.md" sourcestartlinenumber="178">DataGridView</code>-ban! <strong sourcefile="softeng/5_gyak_linq_lekerdezesek_-_studies_adatb/index.md" sourcestartlinenumber="178">Próbáld az alábbi megoldás használata nélkül megvalósítani a funkciót!</strong></p>
+<p sourcefile="softeng/5_gyak_linq_lekerdezesek_-_studies_adatb/index.md" sourcestartlinenumber="180">Megoldás</p>
+<pre><code class="lang-csharp" sourcefile="softeng/5_gyak_linq_lekerdezesek_-_studies_adatb/index.md" sourcestartlinenumber="181">StudiesEntities context = new StudiesEntities();
+
+public UserControl2()
+{
+    InitializeComponent();
+
+    FillDataSource();
+    listBox1.DisplayMember = &quot;Name&quot;;
+}
+
+private void FillDataSource()
+{
+    listBox1.DataSource = (from c in context.Courses
+                           where c.Name.Contains(textBox1.Text)
+                           select c).ToList();
+}
+
+private void TextBox1_TextChanged(object sender, EventArgs e)
+{
+    FillDataSource();
+}
+
+private void ListBox1_SelectedIndexChanged(object sender, EventArgs e)
+{
+    Course course = (Course)((ListBox)sender).SelectedItem;
+
+    dataGridView1.DataSource = (from l in context.Lessons
+                                where l.CourseFK == course.CourseSK
+                                select new
+                                {
+                                    Nap = l.Day.Name,
+                                    Sáv = l.Time.Name,
+                                    Oktató = l.Instructor.Name
+                                }).ToList();
+}
+</code></pre>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/altinum/szamtud_docfx/blob/main/softeng/5_gyak_linq_lekerdezesek_-_studies_adatb/index.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

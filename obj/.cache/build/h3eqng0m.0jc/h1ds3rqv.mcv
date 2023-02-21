@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>M&#243;dos&#237;tott k&#246;vetelm&#233;nyek </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="M&#243;dos&#237;tott k&#246;vetelm&#233;nyek ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="módosított-követelmények" sourcefile="softec/levelezo_beadando/index.md" sourcestartlinenumber="1">Módosított követelmények</h1>
+
+<p sourcefile="softec/levelezo_beadando/index.md" sourcestartlinenumber="3"><strong sourcefile="softec/levelezo_beadando/index.md" sourcestartlinenumber="3">Kedves Kollégák!</strong></p>
+<p sourcefile="softec/levelezo_beadando/index.md" sourcestartlinenumber="5">Az egyetemi épületek lezárása miatt Szoftvertechnológia I. tárgyból sem tudjuk a számonkérést a meghirdetett módon lebonyolítani. Mivel a tárgy erősen gyakorlati jellegű, az elmaradt géptermi vizsgákat egyénileg elkészítendő <strong sourcefile="softec/levelezo_beadando/index.md" sourcestartlinenumber="5">projektfeladat</strong> váltja ki, melyet szóban feltett <strong sourcefile="softec/levelezo_beadando/index.md" sourcestartlinenumber="5">villámkérdések</strong> egészítenek ki.<br>
+A pontozási skála változatlan. A projektfeladat témája előre meghatározott, a témák véletlenszerűen kerülnek szétosztásra.
+A projektfeladatban való elmélyülés javasolt, mivel a „Szoftvertechnológia II” és az „Informatikai rendszerek fejlesztések” tárgyak is az itt megszerzett gyakorlatra épülnek. A projektfeladatot egyénileg kell elkészíteni, mivel csoportmunkánál a résztvevők hozzájárulása távolról nehezen mérhető, nehéz lenne objektív értékelést adni.</p>
+<h2 id="a-projektfeladat-leadása" sourcefile="softec/levelezo_beadando/index.md" sourcestartlinenumber="9">A projektfeladat leadása</h2>
+<p sourcefile="softec/levelezo_beadando/index.md" sourcestartlinenumber="11">A <strong sourcefile="softec/levelezo_beadando/index.md" sourcestartlinenumber="11">Moodle-ben</strong> 2020. január 3 23:55-ig <strong sourcefile="softec/levelezo_beadando/index.md" sourcestartlinenumber="11">leadandó a forráskód</strong>. A meghirdetett vizsgaalkalmakkor az elkészített programról 3-5 perces bemutatót kell tartani, az alábbi tartalommal:</p>
+<ol sourcefile="softec/levelezo_beadando/index.md" sourcestartlinenumber="13">
+<li sourcefile="softec/levelezo_beadando/index.md" sourcestartlinenumber="13">A feladat bemutatása pár mondatban, melyre az elkészített program megoldást nyújt</li>
+<li sourcefile="softec/levelezo_beadando/index.md" sourcestartlinenumber="14">A program bemutatása működés közben a felhasználóknak</li>
+<li sourcefile="softec/levelezo_beadando/index.md" sourcestartlinenumber="15">A program bemutatása fejlesztői szemszögből:
+a.  Osztályok és forráskód bemutatása.
+b.  Tervezett időráfordítás összevetése tényleges időráfordítással.
+c.  Problémamegoldás során felmerülő esetleges kritikus pontok
+d.  Esetleges fejlesztési lehetőségek.</li>
+</ol>
+<p sourcefile="softec/levelezo_beadando/index.md" sourcestartlinenumber="21">Az előre beosztott intervallumokban a hallgatónak meg kell válaszolnia néhány, a kóddal kapcsolatos technikai kérdést is. Amennyiben a kérdésekre nem érkezik kielégítő válasz, illetve a megjelölt időpontba nem elérhető a hallgató, a vizsgára nem adható pont.</p>
+<p sourcefile="softec/levelezo_beadando/index.md" sourcestartlinenumber="23">A projektbemutatók villámkérdésekkel zárulnak, melyekre azonnal kell válaszolni. Olyan kérdésekre kell számítani, amelyekre ha valaki végig csinálta a gyakorlati feladatokat és a projektet, kapásból tud válaszolni.</p>
+<p sourcefile="softec/levelezo_beadando/index.md" sourcestartlinenumber="25"><strong sourcefile="softec/levelezo_beadando/index.md" sourcestartlinenumber="25">A feltöltési határidő január 3, vasárnap, 23:55.</strong> Késedelmes feltöltés esetén minden megkezdett nap után 15 pont kerül levonásra a projektfeladatra kapott pontszámból!</p>
+<p sourcefile="softec/levelezo_beadando/index.md" sourcestartlinenumber="27">A projektfeladatok értékelésének szempontrendszerét az alábbi táblázat foglalja össze, a <strong sourcefile="softec/levelezo_beadando/index.md" sourcestartlinenumber="27">projektfeladatra maximum 70 pont kapható, a villámkérdésekre további 30 pont</strong>.</p>
+<p sourcefile="softec/levelezo_beadando/index.md" sourcestartlinenumber="29">A projekt kapcsán és a bemutatón kapható pontokat az alábbi táblázat foglalja össze:</p>
+<table sourcefile="softec/levelezo_beadando/index.md" sourcestartlinenumber="32">
+<thead>
+<tr sourcefile="softec/levelezo_beadando/index.md" sourcestartlinenumber="1">
+<th sourcefile="softec/levelezo_beadando/index.md" sourcestartlinenumber="1"></th>
+<th sourcefile="softec/levelezo_beadando/index.md" sourcestartlinenumber="1"></th>
+</tr>
+</thead>
+<tbody>
+<tr sourcefile="softec/levelezo_beadando/index.md" sourcestartlinenumber="33">
+<td sourcefile="softec/levelezo_beadando/index.md" sourcestartlinenumber="33"><strong sourcefile="softec/levelezo_beadando/index.md" sourcestartlinenumber="33">Megvalósítás</strong>: az elkészült alkalmazás milyen mértékben nyújt megoldást a kapott feladatra – a program valóban alkalmas-e a kapott probléma kezelésére. Itt kerül értékelésre a forráskód olvashatósága – beszédes változónevek, kód tördelése, megfelelő behúzások, stb. A szemináriumvezető szúrópróba szerûen belekérdezhet az egyes funkciókat megvalósító kód mûködésébe. Ha a kód mûködését illetően nem érkezik kielégítő válasz, a projektfeladatra nem adható pont.</td>
+<td sourcefile="softec/levelezo_beadando/index.md" sourcestartlinenumber="33"><strong sourcefile="softec/levelezo_beadando/index.md" sourcestartlinenumber="33">30p</strong></td>
+</tr>
+<tr sourcefile="softec/levelezo_beadando/index.md" sourcestartlinenumber="34">
+<td sourcefile="softec/levelezo_beadando/index.md" sourcestartlinenumber="34"><strong sourcefile="softec/levelezo_beadando/index.md" sourcestartlinenumber="34">Vizuális megjelenés és kezelhetőség</strong> vezérlők kézre eső, áttekinthető elhelyezése, átméretezhető ablakok kezelése, stb. Ha egy felhasználó ránéz a programra, akkor segítség nélkül rá tudjon jönni, hogyan kell használni. Itt kerül értékelésre az igényes megjelenés. A szürke háttéren szürke gombok is lehetnek igényesek, de egy egyszerű design sokat javíthat a megjelenésen.</td>
+<td sourcefile="softec/levelezo_beadando/index.md" sourcestartlinenumber="34"><strong sourcefile="softec/levelezo_beadando/index.md" sourcestartlinenumber="34">10p</strong></td>
+</tr>
+<tr sourcefile="softec/levelezo_beadando/index.md" sourcestartlinenumber="35">
+<td sourcefile="softec/levelezo_beadando/index.md" sourcestartlinenumber="35"><strong sourcefile="softec/levelezo_beadando/index.md" sourcestartlinenumber="35">Az alkalmazás hibatűrő képessége</strong>: itt azt vizsgáljuk, hogy hibás adatok megadásával meg lehet-e akasztani a program működését, vagy egy hiányzó, esetleg hibás adatokat tartalmazó fájl kezeletlen kivételt generál-e. A <code sourcefile="softec/levelezo_beadando/index.md" sourcestartlinenumber="35">try</code> <code sourcefile="softec/levelezo_beadando/index.md" sourcestartlinenumber="35">catch</code> blokkok fontos szerepet játszanak ebben a kategóriában.</td>
+<td sourcefile="softec/levelezo_beadando/index.md" sourcestartlinenumber="35"><strong sourcefile="softec/levelezo_beadando/index.md" sourcestartlinenumber="35">10p</strong></td>
+</tr>
+<tr sourcefile="softec/levelezo_beadando/index.md" sourcestartlinenumber="36">
+<td sourcefile="softec/levelezo_beadando/index.md" sourcestartlinenumber="36"><strong sourcefile="softec/levelezo_beadando/index.md" sourcestartlinenumber="36">A bemutató értékelése</strong>: elsősorban felhasználói szempontból kell bemutatni a programot, de a kód működésére is ki kell térni.</td>
+<td sourcefile="softec/levelezo_beadando/index.md" sourcestartlinenumber="36"><strong sourcefile="softec/levelezo_beadando/index.md" sourcestartlinenumber="36">20p</strong></td>
+</tr>
+<tr sourcefile="softec/levelezo_beadando/index.md" sourcestartlinenumber="37">
+<td sourcefile="softec/levelezo_beadando/index.md" sourcestartlinenumber="37"><strong sourcefile="softec/levelezo_beadando/index.md" sourcestartlinenumber="37">Villámkérdésekre adott válasz</strong>: a kérdésekre nagyon egyértelmű választ lehet adni</td>
+<td sourcefile="softec/levelezo_beadando/index.md" sourcestartlinenumber="37"><strong sourcefile="softec/levelezo_beadando/index.md" sourcestartlinenumber="37">30p</strong></td>
+</tr>
+</tbody>
+</table>
+<h2 id="előrehozott-lehetőség" sourcefile="softec/levelezo_beadando/index.md" sourcestartlinenumber="39">Előrehozott lehetőség</h2>
+<p sourcefile="softec/levelezo_beadando/index.md" sourcestartlinenumber="40">Azoknak, akiknek adminisztratív okokból, pl. végzős hallgatók komplex vizsgája, szükségük van arra, hogy már idén, a komplexvizsga előtt jegyet szerezzenek, szervezünk egy előrehozott alkalmat.
+Aki ezzel élni szeretne, annak a projektfeladatot december 13. 23:55-ig kell leadnia.  A bemutató várható időpontja december 15, a várhatóan esti időpontot később tesszük közzé.</p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/altinum/szamtud_docfx/blob/main/softec/levelezo_beadando/index.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

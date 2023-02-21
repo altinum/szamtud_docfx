@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>2. gyakorlat &#8211; Egyszer&#369;, kifejez&#233;sek, f&#252;ggv&#233;nyek </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="2. gyakorlat &#8211; Egyszer&#369;, kifejez&#233;sek, f&#252;ggv&#233;nyek ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="2-gyakorlat--egyszerű-kifejezések-függvények" sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="1">2. gyakorlat – Egyszerű, kifejezések, függvények</h1>
+
+<h2 id="összefoglaló-videó" sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="3">Összefoglaló videó</h2>
+<p sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="4"><a href="gyak02_1_x264.mp4" sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="4">gyak02_1_x264.mp4</a></p>
+<h2 id="előkészületek" sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="6">Előkészületek</h2>
+<p sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="8">Diakmunka adatbázis telepítése a Moodle oldalon található diakmunka.sql script segítségével
+-- Vagy --
+Ha technikai okokból a saját adatbázis nem érhető el, csatlakozás a tanszéki kiszolgálóra</p>
+<table sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="12">
+<thead>
+<tr sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="12">
+<th sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="12"></th>
+<th sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="12"></th>
+</tr>
+</thead>
+<tbody>
+<tr sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="14">
+<td sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="14">Szerver</td>
+<td sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="14">bit.uni-corvinus.hu</td>
+</tr>
+<tr sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="15">
+<td sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="15">Felhasználónév</td>
+<td sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="15">hallgato</td>
+</tr>
+<tr sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="16">
+<td sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="16">Jelszó</td>
+<td sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="16">Password123</td>
+</tr>
+<tr sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="17">
+<td sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="17">Adatbázis</td>
+<td sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="17">diakmunka</td>
+</tr>
+</tbody>
+</table>
+<p sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="19">Válasszuk ki a diakmunka adatbázist!</p>
+<h2 id="elmélet" sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="22">Elmélet</h2>
+<h3 id="kifejezések" sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="24">Kifejezések</h3>
+<p sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="25">A kifejezések mindig egy, azaz 1 értéket adnak vissza. Az <strong sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="25">egyszerű</strong> kifejezések változókat, oszlopneveket és függvényeket tartalmazhatnak. Az <strong sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="25">összetett</strong> kifejezések operátorokat is tartalmaznak.</p>
+<h4 id="feltételes-kifejezés-case" sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="27">Feltételes kifejezés: CASE</h4>
+<p sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="28">Az egyszerű CASE kifejezés összehasonlít egy kifejezést egyszerű kifejezések halmazával az eredmény meghatározásához.</p>
+<pre><code class="lang-sql" sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="29">CASE kifejezés  --a vizsgált kifejezés
+WHEN érték_1 THEN kifejezés_1   --ha a kifejezés értéke érték_1, akkor az eredmény kifejezés_1
+WHEN érték_2 THEN kifejezés_2   
+…
+WHEN érték_n THEN kifejezés_n
+[ELSE kifejezés_e] END  --ha a kifejezés értéke egyik megadottal sem egyezik meg, az eredmény kifejezés_e
+</code></pre>
+<p sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="38">Az úgynevezett searched CASE kifejezés logikai kifejezések halmazát értékeli ki az eredmény meghatározásához.</p>
+<pre><code class="lang-sql" sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="40">CASE
+WHEN feltétel_1 THEN kifejezés_1  --ha feltétel_1 igaz, akkor az eredmény kifejezés_1
+WHEN feltétel_2 THEN kifejezés_2
+…
+WHEN feltétel_n THEN kifejezés_n
+[ELSE kifejezés_e]  --ha egyik kifejezés sem igaz, az eredmény kifejezés_e
+END
+</code></pre>
+<ul sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="49">
+<li sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="49">Ha nincs megadva ELSE ág, az eredmény NULL (lásd később).</li>
+<li sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="50">NE felejtkezzünk el a záró END-ről, ami a kifejezés szerves része</li>
+<li sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="51">CASE kifejezést ugyanúgy nevezünk el, mint bármely más oszlopot, de használatos az egyenlőségjeles forma is:</li>
+</ul>
+<pre><code class="lang-sql" sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="53">--Adjunk meg három árkategóriát a DVD-k számára!
+Select árkategória = CASE WHEN nettoar &gt; 1500 THEN 'drága' WHEN nettoar &lt; 500 THEN 'olcsó'  ELSE 'reális' END from dvd
+Select CASE WHEN nettoar &gt; 1500 THEN 'drága' WHEN nettoar &lt; 500 THEN 'olcsó'  ELSE 'reális' END as árkategória from dvd
+</code></pre>
+<h4 id="konstansok" sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="59">Konstansok</h4>
+<p sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="60">A konstansok olyan szimbólumok, amelyek valamilyen adat értékét ábrázolják. Az ábrázolás módja az adat típusától függ. Gyakoribb típusokat és ábrázolási formákat tartalmaz az alábbi táblázat.</p>
+<table sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="62">
+<thead>
+<tr sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="62">
+<th sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="62">Konstans</th>
+<th sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="62">Típus</th>
+<th sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="62">Példa</th>
+</tr>
+</thead>
+<tbody>
+<tr sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="64">
+<td sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="64">Szöveges konstans</td>
+<td sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="64">varchar(x)     (x: a szöveg max. hossza)</td>
+<td sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="64">'Budapest'</td>
+</tr>
+<tr sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="65">
+<td sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="65">Unicode szöveges     konstans</td>
+<td sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="65">nvarchar(x)     (x: a szöveg   max. hossza)</td>
+<td sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="65">N'Budapest'</td>
+</tr>
+<tr sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="66">
+<td sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="66">Egész konstans</td>
+<td sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="66">int</td>
+<td sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="66">25</td>
+</tr>
+<tr sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="67">
+<td sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="67">Bit konstans</td>
+<td sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="67">bit</td>
+<td sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="67">1</td>
+</tr>
+<tr sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="68">
+<td sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="68">Decimális konstans</td>
+<td sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="68">decimal(x, y)     (x: a számjegyek száma,    y: a tizedesjegyek száma)</td>
+<td sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="68">12.45</td>
+</tr>
+<tr sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="69">
+<td sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="69">Dátum/Idő konstans</td>
+<td sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="69">date,    datetime,  time</td>
+<td sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="69">'2012.01.15' ,    '2020.02.11 22:11:33',     '06:12:10'</td>
+</tr>
+</tbody>
+</table>
+<h4 id="operátorok" sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="71">Operátorok</h4>
+<p sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="72">Az operátorok egy vagy több kifejezésen értelmezett szimbólumok („műveletek”)  A gyakoribb operátor típusok és operátorokat az alábbi táblázat foglalja össze.</p>
+<table sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="74">
+<thead>
+<tr sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="74">
+<th sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="74">Típus</th>
+<th sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="74">Operátorok</th>
+<th sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="74">Megjegyzés</th>
+</tr>
+</thead>
+<tbody>
+<tr sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="76">
+<td sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="76">Aritmetikai operátorok</td>
+<td sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="76">+, -, *, /, %</td>
+<td sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="76">%: az egész osztás maradéka</td>
+</tr>
+<tr sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="77">
+<td sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="77">Logikai operátorok</td>
+<td sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="77">NOT, AND, OR</td>
+<td sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="77"></td>
+</tr>
+<tr sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="78">
+<td sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="78">Összehasonlító operátorok</td>
+<td sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="78">&lt;, &gt;, =, &lt;&gt;, &gt;=, &lt;=</td>
+<td sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="78"></td>
+</tr>
+<tr sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="79">
+<td sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="79">Szöveg operátorok</td>
+<td sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="79">+</td>
+<td sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="79">szövegek összefűzése</td>
+</tr>
+<tr sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="80">
+<td sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="80">Szöveg operátorok (LIKE)</td>
+<td sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="80">%, _</td>
+<td sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="80">%: helyettesítő operátor (egy vagy több  karakter vagy üres)<br>_: helyettesítő operátor (egy karakter)</td>
+</tr>
+</tbody>
+</table>
+<h4 id="függvények" sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="82">Függvények</h4>
+<p sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="83">A paramétereken végzett műveletek eredményét adják vissza egy vagy több érték formájában. Számos <strong sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="83">beépített függvény</strong> létezik, illetve <strong sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="83">felhasználó általi létrehozás</strong> is lehetséges (user function).</p>
+<p sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="85">A beépített függvények típusait foglalja össze az alábbi táblázat:</p>
+<table sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="87">
+<thead>
+<tr sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="87">
+<th sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="87">Típus</th>
+<th sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="87">Példa</th>
+</tr>
+</thead>
+<tbody>
+<tr sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="89">
+<td sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="89">Aggregáló függvények</td>
+<td sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="89">SUM(), MIN(), MAX()</td>
+</tr>
+<tr sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="90">
+<td sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="90">Analitikus függvények</td>
+<td sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="90">LAG(), LEAD(), FIRST_VALUE()</td>
+</tr>
+<tr sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="91">
+<td sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="91">Rangsor függvények</td>
+<td sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="91">RANK(), NTILE()</td>
+</tr>
+<tr sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="92">
+<td sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="92">Rowset függvények</td>
+<td sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="92">OPENROWSET()</td>
+</tr>
+<tr sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="93">
+<td sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="93">Skalár függvények</td>
+<td sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="93">YEAR(), LEFT(), ROUND()</td>
+</tr>
+<tr sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="94">
+<td sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="94">Egyéb függvények</td>
+<td sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="94">ISNULL()</td>
+</tr>
+</tbody>
+</table>
+<p sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="96">Az aggregáló, analitikus, rangsor és rowset függvényekkel később foglalkozunk.</p>
+<h6 id="fontosabb-matematikai-függvények" sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="98">Fontosabb matematikai függvények</h6>
+<table sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="100">
+<thead>
+<tr sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="100">
+<th sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="100">Függvény</th>
+<th sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="100">Kötelező paraméterek</th>
+<th sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="100">Funkció</th>
+</tr>
+</thead>
+<tbody>
+<tr sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="102">
+<td sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="102">POWER(x, y)</td>
+<td sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="102">x: a hatványalap  y: a kitevő     (mindkettő numerikus   kifejezés)</td>
+<td sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="102">Hatványozás adott kitevőre</td>
+</tr>
+<tr sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="103">
+<td sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="103">SQRT(x)</td>
+<td sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="103">x: numerikus   kifejezés</td>
+<td sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="103">A szám négyzetgyökének     számítása</td>
+</tr>
+<tr sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="104">
+<td sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="104">ROUND(x, y)</td>
+<td sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="104">x:   a kerekítendő valós szám  y: a kerekítés pontossága     (mindkettő numerikus   kifejezés)</td>
+<td sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="104">Adott pontosságú kerekítés</td>
+</tr>
+<tr sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="105">
+<td sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="105">ABS()</td>
+<td sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="105">x: numerikus kifejezés</td>
+<td sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="105">Az adott szám  abszolútértékét adja meg</td>
+</tr>
+</tbody>
+</table>
+<p sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="107"><strong sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="107">Példák</strong></p>
+<pre><code class="lang-sql" sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="108">SELECT POWER(3, 5)
+SELECT SQRT(2020)
+SELECT ABS(-210.3)
+SELECT ROUND(32.332, 1)
+SELECT ROUND(322, -2)
+SELECT ROUND(232.2, 0)
+</code></pre>
+<h5 id="fontosabb-dátumidő-függvények" sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="117">Fontosabb dátum/Idő függvények</h5>
+<table sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="119">
+<thead>
+<tr sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="119">
+<th sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="119">Függvény</th>
+<th sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="119">Kötelező paraméterek</th>
+<th sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="119">Funkció</th>
+</tr>
+</thead>
+<tbody>
+<tr sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="121">
+<td sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="121">GETDATE()</td>
+<td sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="121">--</td>
+<td sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="121">Az aktuális rendszeridőt adja   vissza</td>
+</tr>
+<tr sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="122">
+<td sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="122">DAY(d)    MONTH(d)  YEAR(d)</td>
+<td sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="122">d: dátum kifejezés</td>
+<td sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="122">Az adott dátumhoz tartozó nap, hónap  sorszámát, illetve az évszámot adja  vissza</td>
+</tr>
+<tr sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="123">
+<td sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="123">DATEADD(x, y, z)</td>
+<td sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="123">x: a hozzáadandó  dátumegység (day, week,    month, year stb.)     y: a hozzáadandó egységek    száma     z: dátum   kifejezés</td>
+<td sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="123">Adott dátumhoz   ad hozzá adott számú     napot, hetet, hónapot stb.</td>
+</tr>
+<tr sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="124">
+<td sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="124">DATEDIFF(x, y, z)</td>
+<td sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="124">x: dátumegység neve     y: start dátum, z: vég dátum</td>
+<td sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="124">A két dátum   között lévő dátumegységek     számát adja meg</td>
+</tr>
+</tbody>
+</table>
+<p sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="126"><strong sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="126">Példák</strong></p>
+<pre><code class="lang-sql" sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="127">SELECT GETDATE()
+SELECT MONTH(GETDATE())
+SELECT DATEADD(year, -1, GETDATE())
+SELECT DATEDIFF(day, ’2019.01.01’, GETDATE())
+</code></pre>
+<h5 id="fontosabb-szöveg-függvények" sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="134">Fontosabb szöveg függvények</h5>
+<table sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="136">
+<thead>
+<tr sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="136">
+<th sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="136">Függvény</th>
+<th sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="136">Kötelező paraméterek</th>
+<th sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="136">Funkció</th>
+</tr>
+</thead>
+<tbody>
+<tr sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="138">
+<td sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="138">LEN(x)</td>
+<td sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="138">x: szöveg (string)</td>
+<td sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="138">A szöveg hosszát adja meg  karakterekben</td>
+</tr>
+<tr sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="139">
+<td sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="139">LEFT(x,   y)  RIGHT(x, y)</td>
+<td sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="139">x:   szöveg (string)  y: egész kifejezés</td>
+<td sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="139">Az adott   szövegből balról, illetve  jobbról levág adott számú karaktert</td>
+</tr>
+<tr sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="140">
+<td sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="140">LOWER(x)  UPPER(x)</td>
+<td sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="140">x: szöveg</td>
+<td sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="140">A szöveget csupa kis-, illetve    nagybetűssé alakítja</td>
+</tr>
+<tr sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="141">
+<td sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="141">CHARINDEX(x, y)</td>
+<td sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="141">x: a keresett szöveg  y: a szöveg, amelyben  keresünk</td>
+<td sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="141">A keresett szöveg első  előfordulásának pozícióját adja meg.  Ha a keresett szöveg nem található,    0 lesz   a visszaadott érték.</td>
+</tr>
+</tbody>
+</table>
+<p sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="143"><strong sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="143">Példák</strong></p>
+<pre><code class="lang-sql" sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="144">SELECT LEN('Budapest')
+SELECT LEFT('Kiss Béla',4)
+SELECT LOWER('Nagy Laci')
+SELECT UPPER('Nagy Laci')
+SELECT CHARINDEX('al', ' Dalma')
+</code></pre>
+<h5 id="konverziós-függvények" sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="152">Konverziós függvények</h5>
+<p sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="154">A konverziós függvények használatára gyakran lehet szükség, például egy szöveg számmal való össszefűzésénél a számérték szöveggé konvertálása elengedhetetlen.</p>
+<table sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="156">
+<thead>
+<tr sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="156">
+<th sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="156">Függvény</th>
+<th sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="156">Kötelező paraméterek</th>
+<th sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="156">Funkció</th>
+</tr>
+</thead>
+<tbody>
+<tr sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="158">
+<td sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="158">CAST(x AS y)</td>
+<td sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="158">x: kifejezés<br>    y: típusnév</td>
+<td sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="158">Az x kifejezést y típusúra alakítja</td>
+</tr>
+<tr sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="159">
+<td sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="159">CONVERT(x, y, [, s])</td>
+<td sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="159">x:   típusnév<br>  y: kifejezés <br> s: formátumkód</td>
+<td sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="159">Az y kifejezést x típusúra alakítja, a formátum opcionális</td>
+</tr>
+</tbody>
+</table>
+<p sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="161">A CAST szabványos, ezért gyakrabban használt.
+A CONVERT függvény rendelkezik egy opcionális paraméterrel, amellyel formátumot is lehet beállítani, amely szükséges lehet például lebegőpontos számok, dátumok kívánt formátumának beállításához. A CONVERT a gyakorlati feladatokban nem fordul elő.</p>
+<p sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="164"><strong sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="164">Példák</strong></p>
+<pre><code class="lang-sql" sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="165">--Fűzzük össze a dvd-k nevét és ID-ját egy szóközzel megszakítva!
+select cim + ' ' + cast(ID as varchar) from dvd
+--Írjuk ki az aktuális rendszeridőt ÉÉÉÉ.HH.NN formátumban!
+--select CONVERT(VARCHAR, getdate(), 102)
+
+--További példák
+SELECT CIM + ' ' + CAST(ID AS VARCHAR) FROM DVD
+SELECT CAST(GETDATE() AS DATE)
+SELECT CAST('14.55' AS DECIMAL(5,2))
+SELECT CONVERT(INT, 5.32)
+SELECT CONVERT(VARCHAR(10), GETDATE(), 111)
+</code></pre>
+<h5 id="a-null-érték-az-is-null-az-is-not-null-és-az-isnull" sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="181">A NULL érték, az IS NULL, az IS NOT NULL és az ISNULL()</h5>
+<p sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="182">Amennyiben egy adott oszlop definíciója lehetővé teszi (erről később), előfordulhat, hogy bizonyos, vagy akár az összes sorban nincsen megadott érték, ezt jelzi az eredményhalmazban a NULL. Az érték hiánya nem összekeverendő az üres értékkel, és kezelése is speciális.</p>
+<p sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="184">NULL értékre való egyezőséget nem egyenlőségjellel, hanem az IS NULL szerkezettel vizsgálunk, ellentettje az IS NOT NULL.</p>
+<pre><code class="lang-sql" sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="185">--Listázzuk, mely DVD-k esetében nincs megadva stílus! A stílus hiányát az oszlop kitöltetlensége jelzi.
+select * from DVD where stilus IS NULL  //a STILUS=NULL feltétel üres eredményhalmazra vezet, próbáljuk ki!
+--Listázzuk, mely DVD-k esetében van megadva stílus! A stílus hiányát az oszlop kitöltetlensége jelzi.
+select * from DVD where stilus IS NOT NULL  //a STILUS&lt;&gt;NULL feltétel üres eredményhalmazra vezet, próbáljuk ki!
+</code></pre>
+<p sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="192">Az ISNULL függvény segítségével a NULL értékeket helyettesíthetjük vegy értékkel.
+Ezzel egyrészt már végezhetünk egyenlőségvizsgálatot:</p>
+<pre><code class="lang-sql" sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="194">/*Listázzuk, mely DVD-k esetében nincs megadva stílus! 
+A stílus hiányát az oszlop kitöltetlensége vagy üres karakterlánccal való kitöltöttége jelzi.*/
+select * from DVD where ISNULL(stilus,'')=''
+</code></pre>
+<p sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="199">Másrészt  elkerülhetjük, hogy az eredményalmazban NULL értékek jelenjenek meg</p>
+<pre><code class="lang-sql" sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="200">/*Listázzuk a címmel rendelkező DVD-kt stílusukkal együtt. 
+Ha nincs megadva stílus, &quot;&lt;nincs megadva&gt;&quot; szöveg szerepeljen!*/
+select cim, isnull(stilus, '&lt;nincs megadva&gt;') as stilus from dvd 
+--a függvényhívás okán a második oszlop neve az eredményhalmazban nem lesz megadva, ezért el is nevezzük
+where cim is not null  -- használhatnánk az isnull(cim, '')='' formát is
+</code></pre>
+<p sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="208"><strong sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="208">Példák</strong></p>
+<pre><code class="lang-sql" sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="209">SELECT ISNULL(nettóár, 0)
+SELECT ISNULL(vezetéknév, ' ')
+</code></pre>
+<h5 id="az-iif-függvény" sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="214">Az IIF függvény</h5>
+<p sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="215">Az IIF függvény segítségével egyszerűsített elágazást fogalmazhatunk meg. Formája: <code sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="215">IIF(x,y,z)</code> ahol <code sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="215">x</code> logikai kifejezés, <code sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="215">y</code> az eredmény ha igaz, <code sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="215">z</code> ha  hamis.</p>
+<pre><code class="lang-sql" sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="216">/*Listázzuk a kolcsonzesek tábla tartalmát! Egy külön oszlopban jelenítsük meg, 
+hogy az adott kölcsönzés esetében visszahozták-e már a kazettát (igen/nem)!*/
+SELECT *, iif(vissza_datum is not null, 'igen', 'nem') as [visszahozta?] from kolcsonzesek
+
+/*Vizsgáljuk meg, hogy egy tábla mobilszam oszlopában a megadott karakterlánc 9 karakter hosszú-e. 
+Jelenítsük meg a vizsgálat eredményét egy oszlopban (OK/Nem OK).*/
+SELECT IIF(LEN(mobilszam)=9, 'OK', 'Nem OK ') from tábla
+</code></pre>
+<p sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="226">Fontos megjegyezni, hogy az <code sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="226">IIF()</code> függvény nem minden SQL implementációban érhető el.</p>
+<h2 id="feladatok" sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="230">FELADATOK</h2>
+<p sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="231">(+/-) Listázzuk azon diákok nevét és születési idejét, akik 1984-ben vagy 1985-ben születtek!</p>
+<p sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="233">a.	A születési dátum csak az évet, hónapot és a napot tartalmazza!
+b.	A születési dátum oszlopát nevezzük el 'Születési idő'-nek!</p>
+<p sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="236"><a href="Gy2_1.mp4" sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="236">Megoldás</a></p>
+<p sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="238">(+/-) Készítsünk lekérdezést, amely a tanulók nevét és az ebből képzett felhasználói nevét tartalmazza.</p>
+<p sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="240">a.	A felhasználói név álljon a név első kettő, illetve utolsó kettő betűjének összefűzéséből!
+b.	A listát szűrjük azon tanulókra, akik teljes neve - szóközzel együtt - legalább 10 betűs!</p>
+<p sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="243"><a href="Gy2_2.mp4" sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="243">Megoldás</a></p>
+<p sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="245">(+/-) Készítsünk listát a diákok adatairól, ahol a diákok neve úgy jelenik meg, hogy először a keresztnév, majd a vezetéknév, közöttük szóközzel! 	
+a.	Ezen felül a születési idő három külön oszlopban jelenjen meg (év, hónap, nap).
+b.	Az oszlopokat nevezzük el értelemszerűen!</p>
+<p sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="249"><a href="Gy2_3.mp4" sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="249">Megoldás</a></p>
+<p sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="251">(+/-) Készítsünk listát a munkaadókról, amely a munkahely azonosítója mellett egy másik oszlopban a település nevét jeleníti meg, majd kettősponttal és szóközzel elválasztva a munkaadó nevét, pl: Cseprűfalva: Bicaj Futárszolgálat.</p>
+<p sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="253">a.	Az oszlop neve legyen 'Munkahely'.
+b.	Ne jelenjenek meg azok a munkaadók, akiknek a nevében a 'Kávé' szó benne van!</p>
+<p sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="256"><a href="Gy2_4.mp4" sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="256">Megoldás</a></p>
+<p sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="258">(+/-) Készítsünk listát a munkák azonosítójáról és megnevezéséről! Egy új oszlopban azt is jelenítsük meg, hogy melyik munka hetente mennyit fizet!
+a.	Az oszlop neve legyen Heti bér, az értéket kerekítsük 1000 forintra!
+b.	A listát szűrjük azon rekordokra, ahol a kerekített heti bér 10000 Ft felett van!</p>
+<p sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="262"><a href="Gy2_5.mp4" sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="262">Megoldás</a></p>
+<p sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="264">(+/-) Készítsünk lekérdezést, amely listázza azon munkaadók nevét, akik Szombati településen vannak!</p>
+<p sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="266">a.	A munkaadó neve csupa nagybetűvel jelenjen meg!
+b.	Egy új oszlopban jelenítsük meg a munkaadó nevének második részét 'Cégforma' néven!</p>
+<p sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="269"><a href="Gy2_6.mp4" sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="269">Megoldás</a></p>
+<p sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="271">(+/-) A diákok számára differenciált béremelést terveznek: a középiskolások esetében 33%, egyéb esetben 17% mértékben. Készítsünk listát, amely tartalmazza a munkák azonosítóját, az állás nevét, az eredeti óradíjat és a tervezett emelt óradíjat.</p>
+<p sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="273">a.	Az oszlopoknak adjuk nevet értelemszerűen!
+b.	Az emelt óradíj összegét kerekítsük egészre! (Az esetlegesen megjelenő 0 tizedesjegyekkel ne foglalkozzunk)</p>
+<p sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="276"><a href="Gy2_7.mp4" sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="276">Megoldás</a></p>
+<p sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="278">(+/-) Egy másik terv szerint a 4 órában dolgozó diákok egységesen 100 Ft, az 5 órában dolgozók 150 Ft, a többiek 200 Ft emelést kapnak óránként.</p>
+<p sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="280">a.	A listából maradjanak ki a takarítók! (ők már korábban kaptak emelést).
+b.	Jelenítsük meg a munkák azonosítóját, az állás nevét, óraszámát, és az óradíj emelés előtti és utáni összegét!
+c.	Az oszlopoknak adjunk nevet értelemszerűen!</p>
+<p sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="284"><a href="Gy2_8.mp4" sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="284">Megoldás</a></p>
+<p sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="286">(+/-) A diákok számára próbaidőt írnak elő, amely a munka kezdetétől számítva 3 hónapig tart.    Jelenítsük meg a munka tábla adatait egy új oszloppal kiegészítve, amelyik a próbaidő    végének dátumát mutatja!</p>
+<p sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="288">a.	Az oszlop neve Próbaidő vége legyen!
+b.	A lista ne tartalmazza azokat a munkákat, ahol a diákok azonosítója nincs megadva!</p>
+<p sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="291"><a href="Gy2_9.mp4" sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="291">Megoldás</a></p>
+<p sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="293">(+/-) Egy vezetői döntés szerint a munkák kezdetét mindig az adott hónap elsejétől kell számítani.Készítsünk lekérdezést, amely megjeleníti a munka tábla munkaId, allas és datum oszlopait, valamint egy új oszlopot 'Kezdő dátum' néven. Ez mindig azt a napot jelenítse meg, amikor a munka megkezdhető.</p>
+<p sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="295">a.	A döntés nem vonatkozik azokra, akik napi keresete 1500 Ft alatt van, őket   hagyjuk ki a listából!
+b.	ÖTLET: az időszámítás kezdő dátumához (aminek értéke 0) adjunk hozzá annyi hónapot, amely a datum oszlop értékéig eltelt
+c.	ÖTLET2: vágjuk le a dátum végéről a napot, majd tegyük hozzá az elsejét, utána konvertáljuk át dátummá</p>
+<p sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="299"><a href="Gy2_10.mp4" sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="299">Megoldás</a></p>
+<p sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="301">(+/-) Készítsünk listát a diákok adatairól, amely egy új oszlopban azt is tartalmazza, hogy melyik diák
+jelenleg (a mai nap) hány éves! Egy másik új oszlop jelenítse meg, hogy a diák 35 év alatti-e (Igen vagy Nem).</p>
+<p sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="304">a.	Az oszlopokat nevezzük el értelemszerűen!
+b.	A diákok neve két külön oszlopban jelenjen meg: vezetéknév és keresztnév, a vezetéknév csupa nagybetűs, a keresztnév csupa kisbetűs legyen!
+c.	A listából hagyjuk ki a Péter keresztnevű diákokat!</p>
+<p sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="308"><a href="Gy2_11.mp4" sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="308">Megoldás</a></p>
+<p sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="310">(+/-) Készítsünk listát a munkák azonosítójáról, megnevezéséről és az óraszámáról! Egy új oszlopban jelenítsük meg, hogy a munka kezdő dátuma tavaszra, nyárra, őszre, vagy télre esik-e!</p>
+<p sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="312">a.	Az oszlop neve legyen 'Idény'.
+b.	A listából hagyjuk ki azokat, ahol a munka azonosítója páratlan szám! (kettővel osztva 1 maradékot ad)</p>
+<p sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="315"><a href="Gy2_12.mp4" sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="315">Megoldás</a></p>
+<p sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="317">(+/-) Készítsünk listát a munkák azonosítóiról és a megnevezésükről! A megnevezés allas-óraszám formában jelenjen meg, pl: eladó-4.</p>
+<p sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="319">a.	Jelenítsük meg a dátumot is, de csak a évet és a hónapot, pl: 2003-07!
+b.	Ennek az oszlopnak 'Kezdés hónapja' legyen a neve! A listát szűrjük a nyári hónapokra!</p>
+<p sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="322"><a href="Gy2_13.mp4" sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="322">Megoldás</a></p>
+<p sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="324">(+/-) Készítsünk listát a diákok adatairól, amely a Nev oszlop helyén a diák monogramját jeleníti meg (keresztnév, illetve vezetéknév első betűje összefűzve).
+a.	A listát szűrjük 1983.01.01 és 1987.06.01 között született diákokra!</p>
+<p sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="327"><a href="Gy2_14.mp4" sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="327">Megoldás</a></p>
+<p sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="329">(+/-) A diákok a munkakezdés évének utolsó napján bónuszt kapnak, amennyiben az adott évben legalább 6 hónapot dolgoznak.</p>
+<p sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="331">a.	Jelenítsük meg, hogy az egyes munkák adatait, egy új oszlopban az éves bónusz napját is 'Bónusz dátum' néven!
+b.	A lista csak a bónuszra jogosultak adatait tartalmazza!</p>
+<p sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="334"><a href="Gy2_15.mp4" sourcefile="adatb/gyak2/index.md" sourcestartlinenumber="334">Megoldás</a></p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/altinum/szamtud_docfx/blob/main/adatb/gyak2/index.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

@@ -1,6 +1,6 @@
 {
   "homepages": [],
-  "source_base_path": "//Mac/Home/Desktop/docfx-teszt/docfx/docfx_project",
+  "source_base_path": "C:/work/szamtud_docfx/szamtud_docfx",
   "xrefmap": "xrefmap.yml",
   "files": [
     {
@@ -9,10 +9,10 @@
       "output": {
         ".html": {
           "relative_path": "README.html",
-          "hash": "6ttCAgf71lyMwZ3HBpilIeGQbC2OADkrvNvA/I/xaKw="
+          "hash": "Crn5OJu4ZUKCLAPeaVDhxA9WmOoq2GqH5atrKjxTyCw="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -24,10 +24,10 @@
       "output": {
         ".html": {
           "relative_path": "adatb/adatelemzo01/index.html",
-          "hash": "mVRMytwPHMIX05ehXpEOQOnIHtGhBcsnRgyYd4A03Pk="
+          "hash": "YtLqfMT1y6Eye6pdvaLll/Cd9wlLMnriAfjhAjksztQ="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -39,10 +39,10 @@
       "output": {
         ".html": {
           "relative_path": "adatb/gyak1/index.html",
-          "hash": "gjot+v3Sw6B1Z0Roj1mioSmVyhzopdBVSs8NnDMIKzc="
+          "hash": "tFfJtdmp9+vs8tn8TzOFZ6vfpQUBJHLRUbhyxxXflxQ="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -54,10 +54,10 @@
       "output": {
         ".html": {
           "relative_path": "adatb/gyak10/index.html",
-          "hash": "ElQKr0vSOvI4VH+8B2m5AKMovzVdjyj5tpFAMfmjyJc="
+          "hash": "Go5/RekKKVOUjuGLZSnIVziPhiBvqbhZzZ+djFd35AA="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -69,10 +69,10 @@
       "output": {
         ".html": {
           "relative_path": "adatb/gyak11/index.html",
-          "hash": "eDc3aFsSecfxUUMoYGue3Tren0G05S0ZvHT4SxZKw3k="
+          "hash": "xEE5aQ23hqNdLNB+GWsQrMWHuDTaDdKsPzRCzRtpQpA="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -84,10 +84,10 @@
       "output": {
         ".html": {
           "relative_path": "adatb/gyak2/index.html",
-          "hash": "PDaKnAIQbe3hceA3m7aPVuxWhy3Ne4hAk1f+G5HL/IY="
+          "hash": "BO7I6CNmhPXy6aWvYB5nLBBLxGovaohVXqThA9x0bNQ="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -99,10 +99,10 @@
       "output": {
         ".html": {
           "relative_path": "adatb/gyak3/index.html",
-          "hash": "fP8D4cK9dPhkhs7DoseVKPMFL6EY9jQ7emlrJcJmQXo="
+          "hash": "GAHbyEMU38nv6yGM88j2qO7IeCK1Y+RKR6+lVbaYNIY="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -114,10 +114,10 @@
       "output": {
         ".html": {
           "relative_path": "adatb/gyak4/index.html",
-          "hash": "V1wfFUaGa+8bhhiEoPYr1WdIB58xT1wYrGL+zLGQnW0="
+          "hash": "+TMD1scERb90qlpjRrPZmF1YoWh2so657hw7/qEIUmQ="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -129,10 +129,10 @@
       "output": {
         ".html": {
           "relative_path": "adatb/gyak5/index.html",
-          "hash": "XJVYU/8wQzyAcePXx40NqpSvbi3NjpzrMSgcMdaRUW8="
+          "hash": "tmucoIAoGC7WFtyNXtYih2my2bbSuJ4pHAJ2v5F/BeM="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -144,10 +144,10 @@
       "output": {
         ".html": {
           "relative_path": "adatb/gyak6/index.html",
-          "hash": "ZqSv5zx2X6nUQKc+P0pFbADCaaPp2Aqs7qqsJy5IYoU="
+          "hash": "Ic87GtjRIX0XK9HIoXcDR0NAxY17zchLF1PtS7dHyzw="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -159,10 +159,10 @@
       "output": {
         ".html": {
           "relative_path": "adatb/gyak7/index.html",
-          "hash": "MNUzk9qCy5+PEpn/B51IxZFVmZxZVXAPvzx6Mf5mRGk="
+          "hash": "59e1wOCfyAES5H/5fG+sti+QkvlQ2BObkJ8c1+Uuroc="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -174,10 +174,10 @@
       "output": {
         ".html": {
           "relative_path": "adatb/gyak8/index.html",
-          "hash": "9ZeS+WhYrLpW9jZhaOZcgGjgEK6EtMT7UH1DaMlui1I="
+          "hash": "J9d9/A+8dWVSPwB2UHC/yIIjbR9j0AjTggNyl7ECOMM="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -189,10 +189,10 @@
       "output": {
         ".html": {
           "relative_path": "adatb/gyak9/index.html",
-          "hash": "/usH6jhui+F74As2MhknsFii6uxszWFbU/QVcO1YJZE="
+          "hash": "59hUIVwDbZFshS37MPHZfh681iGXjv2HSE6yaCb9CNI="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -201,10 +201,10 @@
       "output": {
         ".html": {
           "relative_path": "adatb/index.html",
-          "hash": "SR3nvSHTAZLPdtsUx7ulm8O3dCbNIP4KIlIjS5i+2iQ="
+          "hash": "Gkw9H1vClxVfU61ODIbjAGfhn4s4OI5ivn98fnQWBxA="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -213,10 +213,10 @@
       "output": {
         ".html": {
           "relative_path": "adatb/kovetelmenyek/index.html",
-          "hash": "I5M/Q9ZWpF09Oz/mLvJhlp7uJvnr3pwOplMpwDYhfqs="
+          "hash": "89GmoBjPTOjqoNrw46zrMCpMu1afmkFxj2+Mfogkksg="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -225,10 +225,10 @@
       "output": {
         ".html": {
           "relative_path": "adatb/kovetelmenyek_INSA007NMBB/index.html",
-          "hash": "5pQ6ZLOsv5fp2n9MFf5jvghKOn0IzhpSmOEk+bp1fqo="
+          "hash": "Hob0M/G0uyiUNGcPtw/TlQpmzdWuo9/7ddnu6rmo1Q8="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -237,10 +237,10 @@
       "output": {
         ".html": {
           "relative_path": "adatb/kovetelmenyek_levelezo/index.html",
-          "hash": "qMcdKKSqsnVC7De2nXYLrTDfF5SOiBqArbRc/vjeDtE="
+          "hash": "LTMD+/gup9Py7g9vjnQaasRIO3IJbGnUpj4JZi2i074="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -249,7 +249,7 @@
       "output": {
         ".html": {
           "relative_path": "adatb/toc.html",
-          "hash": "YxGbLXuVylFiKXWORRO+CI/AoRyH12o4TKRDjUdhv0c="
+          "hash": "6xPw6DcLU9vbETlTKWI+BTTxTNDvlP1Gzm1xJr40DGA="
         }
       },
       "is_incremental": false,
@@ -987,10 +987,10 @@
       "output": {
         ".html": {
           "relative_path": "index.html",
-          "hash": "uQiOLckxmpguAW0I3wZ9MSJZhXIpk/qTLoh07UkkF3s="
+          "hash": "H1tpd6Hj95irjV0SHUt9IR1Wj3ncFowuin/TtK5G3cM="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -999,10 +999,10 @@
       "output": {
         ".html": {
           "relative_path": "softec/2021/index.html",
-          "hash": "p88fnYAEVTUX+QwxxPYHBItck6xSr+ok/SDR6VsMx/I="
+          "hash": "ic5HnvnGmF21sITwI1eB7SU0oTE0tPjfhbGkS5VPUXg="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -1014,10 +1014,10 @@
       "output": {
         ".html": {
           "relative_path": "softec/amoba/index.html",
-          "hash": "Qn5jpbXwy9YjM1WvLz+3D3uYAJ3g77AgUFDe5932vZg="
+          "hash": "SQAkfI7R4i1/0kkaARxojyjInRVX05VY2v8wBzWazBQ="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -1029,10 +1029,10 @@
       "output": {
         ".html": {
           "relative_path": "softec/bantumi/index.html",
-          "hash": "2MDw2ueWtsKdVc5VgusI+KTDYmwAgEj6VgONQBRRHZw="
+          "hash": "Ake5IOz5ccX09GRh3MCxKs2QxSRcvFaf1N0AlNeSfD4="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -1041,10 +1041,10 @@
       "output": {
         ".html": {
           "relative_path": "softec/beadando/index.html",
-          "hash": "epDWOd0FhHTbzCV04v3s6Cwn2n8EyfCnm/beWHvzW2U="
+          "hash": "sBf1ntWTTs5XdTxChfBQgJ04zqB6QiACOHWGSuJ4m+w="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -1053,10 +1053,10 @@
       "output": {
         ".html": {
           "relative_path": "softec/beadando_game_of_life/index.html",
-          "hash": "GTwGCyzEE0eumu1XGw2HlhS9C/7QgOPL12KkMGFRo3c="
+          "hash": "25BJbkxN1SBydnodzT4T8KcUOlrsqRv/4t13OPxVLqw="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -1068,10 +1068,10 @@
       "output": {
         ".html": {
           "relative_path": "softec/beadando_hajos/index.html",
-          "hash": "pziSjp6S0Xh9DEjCZZdnSQ0aUkiSJUXXhfLqjXS2y6Y="
+          "hash": "PT5DRR5JiwvLD4C/fjmJqDrudii1FR+omtnuLWsFx0M="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -1080,10 +1080,10 @@
       "output": {
         ".html": {
           "relative_path": "softec/beadando_hangman/index.html",
-          "hash": "DY/1oy+/2X5J3w73fuFZM+KSV8j0rNLU8UB4k/kLYyk="
+          "hash": "YRLGMxnUxaj64NsKNzZ3b96KetjF0MpVZMO9Md0aQg4="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -1092,10 +1092,10 @@
       "output": {
         ".html": {
           "relative_path": "softec/beadando_maze/index.html",
-          "hash": "76+319C8snfF/iMeQFvA0pqkuYDZY3xLyU98H2w7u8M="
+          "hash": "8M+1RRMU63fg+K6i9KR5ElhDJdfm8g3pqgULRtpmnQQ="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -1104,10 +1104,10 @@
       "output": {
         ".html": {
           "relative_path": "softec/beadando_quiz_numerikus/index.html",
-          "hash": "gG3zCfHee7dxVYFA9a2dOqEii5vJWjEXip9ygm2EkqY="
+          "hash": "AIHlzb8kY/R3tA4vdZ1j2W27JU2T2xnDOG8QbdpENEU="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -1116,10 +1116,10 @@
       "output": {
         ".html": {
           "relative_path": "softec/beadando_snake/index.html",
-          "hash": "VR/87JwvTEchR3FCOVGpZbcRy0sadFtXkCl9u+t3OnE="
+          "hash": "XZfCQiz5xyauP2jvX1V6a8o7KnlsKwoLzBFaXjES+IY="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -1128,10 +1128,10 @@
       "output": {
         ".html": {
           "relative_path": "softec/beadando_spot_the_difference/index.html",
-          "hash": "OUt4XTTbcWaB5oL3l8i2QmL9cKxfbnUgP+Tv77+6J40="
+          "hash": "coBK39EB2EyVzMMO2x8bWwlU8tLv5v+s6oXxltilSuI="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -1140,10 +1140,10 @@
       "output": {
         ".html": {
           "relative_path": "softec/beadando_szotanito/index.html",
-          "hash": "kkqAESZnuUqZamlsyLyGo/ZFvi0pn9naDktORy28rT4="
+          "hash": "RvwlwkTf/OYSkzHqfPtBYUfgVMHo4XDvFhmhhaLxujI="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -1155,10 +1155,10 @@
       "output": {
         ".html": {
           "relative_path": "softec/emory/index.html",
-          "hash": "PeU71nxD2j2h+EL3DOpGE0U+7AlluOxTFbK55wBRxcU="
+          "hash": "+L7CKNnVKAB6pj7JBn0+4A5hbb2hvm4LWI/iRW45AdI="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -1170,10 +1170,10 @@
       "output": {
         ".html": {
           "relative_path": "softec/feleletvalasztos/index.html",
-          "hash": "z6E3UGGeJPr2/+nkRZvJnBUdsQ23+133DJa/cEDANsU="
+          "hash": "TKHmZSuXnce5ayRd5epkyfFiBqn5wW03EgiOAS75frQ="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -1185,10 +1185,10 @@
       "output": {
         ".html": {
           "relative_path": "softec/fuggvenyek/index.html",
-          "hash": "mWLTOXZBwVoRQ48ZyS0NgFNmfLQnF3xTgUi0x6M1Rfw="
+          "hash": "VjQtxCXI28BqxM2CZaPlQY0wj2DV13U721M5YrQq5A4="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -1200,22 +1200,25 @@
       "output": {
         ".html": {
           "relative_path": "softec/grafika_ifs_reszletes/index.html",
-          "hash": "HKaKnBoLusbGIdCudXdD636t2BTj7RcPLGcq0LP22AI="
+          "hash": "M+IVp5WeI8VYSTfZU06JNaD5A0GZdgCC/uokfZM4odA="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
       "type": "Conceptual",
       "source_relative_path": "softec/index.md",
       "output": {
         ".html": {
           "relative_path": "softec/index.html",
-          "hash": "w2vXMG9Jcmlns1izZwDH0q2v1NL5aZ8YysBPkKHJ7hU="
+          "hash": "KgD+gIOLmllwn5GNNKvUUe1ZWloY9SCeNPBpjlup7VQ="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -1227,10 +1230,10 @@
       "output": {
         ".html": {
           "relative_path": "softec/kepkirakos/index.html",
-          "hash": "AE8O7NVB0RnYSrjJgtpmwmJGhW8RwCJipd2GHKTkvBQ="
+          "hash": "qvc3pteAInco2YHGT/o6tM5txPGYPwCxrryh+2wvrIY="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -1242,10 +1245,10 @@
       "output": {
         ".html": {
           "relative_path": "softec/kigyos/index.html",
-          "hash": "ez+kyCAl5ykMGmfiyqMtJe0z7C1J2bHRnDE57BXnjn0="
+          "hash": "MQw70AS2ovPI8H9gkNFgT44MNVc0SwdcWZ5ia+l3ZD4="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -1254,10 +1257,10 @@
       "output": {
         ".html": {
           "relative_path": "softec/kovetelmenyek/index.html",
-          "hash": "UsjtnqGvTgNaM+8r04Vs1P1wD85H3Mi9zTk52uUJN2k="
+          "hash": "5KIAm3aNRuvIB8AgAzVEEDZWWM9khMCwBfU/BG2c3AQ="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -1266,10 +1269,10 @@
       "output": {
         ".html": {
           "relative_path": "softec/kovetelmenyek_levelezo/index.html",
-          "hash": "7q8alchQ57MX8L0v85DjaGv21k3AwM1RetusaLA3F/E="
+          "hash": "RyDwt81bcghPnGecSaTDMzblLYgMZhyb+Pj7tw1Cplo="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -1278,10 +1281,10 @@
       "output": {
         ".html": {
           "relative_path": "softec/levelezo_beadando/index.html",
-          "hash": "ipEcz4bDl4WGlVvTRP3YLckRpk6RCDKMjU6R2dvYEW0="
+          "hash": "5G7OVE8pvqvO4WixOiNyXq2KSnG1CjoREQ0jc67aHQY="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -1293,10 +1296,10 @@
       "output": {
         ".html": {
           "relative_path": "softec/masodfoku/index.html",
-          "hash": "lx08mToPx8ldjqEkiifV3MbWNPgwj7pkc6n/N/TKIrc="
+          "hash": "05y2AsYXcrdrtcyz9ud7FWCP6qVXDaINsDEGNykpOK0="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -1305,10 +1308,10 @@
       "output": {
         ".html": {
           "relative_path": "softec/megoldasok/index.html",
-          "hash": "UvL1ptzQYNuHhLKKJLebItPZU70BmCbeDgWpFKUpcG0="
+          "hash": "pZrLLNVy2w5EeD8JKp3+ySXBjiwGIMeeq87LkbqpXdo="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -1317,10 +1320,10 @@
       "output": {
         ".html": {
           "relative_path": "softec/osszefoglalo_levelezo/index.html",
-          "hash": "EFEz3D81qcjifOQZkzUfDVNY78LYPTlt6Vx8NuDTzH4="
+          "hash": "Ydpq3qM+TZWvXJGvpYRtcqn1NbONsvIEmNTl2292Si4="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -1332,10 +1335,10 @@
       "output": {
         ".html": {
           "relative_path": "softec/osztalyok/index.html",
-          "hash": "GbvuGD7QOWMBzS5awnOG2ApBobrrVDRCkqvv/Q0E4Qk="
+          "hash": "T1OpaZO4UsOYbjcDeGaZnzWAXjRzPPP8LYWzGffd6R0="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -1347,10 +1350,10 @@
       "output": {
         ".html": {
           "relative_path": "softec/pixelart/index.html",
-          "hash": "P0x08I7XQBVt3pN+hkiB2jPUWnuLCVyqF7O3Cf3lt8E="
+          "hash": "tsGfs7C4tKkXfiTqqRk0epM3CkHOwsLS2iU222TfuHo="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -1362,10 +1365,10 @@
       "output": {
         ".html": {
           "relative_path": "softec/projektfeltoltes/index.html",
-          "hash": "0C0A8JAXfGpDBOEi4ENAgf/CcpSuj3vmmIspC6cX0xQ="
+          "hash": "xCOCdIBANYcP0G3xmrzVLw3A7lD6aKccKHHuuFIOs/s="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -1377,10 +1380,10 @@
       "output": {
         ".html": {
           "relative_path": "softec/quiz2/index.html",
-          "hash": "b/pb6AoM5R+XmrrkufoyDVn52t6Qf99kWc4u6/Hf9+4="
+          "hash": "Jp8VooH84Kg9IVtIkEmkjnR8353VuprPWgsi5qLfTd8="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -1389,10 +1392,10 @@
       "output": {
         ".html": {
           "relative_path": "softec/szoparoztatos/index.html",
-          "hash": "GoQOo+3WuAKr4I5wrGT2nirrianI3m69twOkf8KE3U4="
+          "hash": "D6GCWUETBTFQSgAiMfgnXLWKwnorCmE2fETcYc5Mqyg="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -1401,10 +1404,10 @@
       "output": {
         ".html": {
           "relative_path": "softec/teamsbeszamolok/index.html",
-          "hash": "rzbq8JQ+Jhwc3+EyeZwTubhAnJyAqmm2wxAElVvIkTs="
+          "hash": "alg4Jkd/ZR3EsAn6DkRg+bryNLYP07bo0HmGPdgQyUQ="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -1413,7 +1416,7 @@
       "output": {
         ".html": {
           "relative_path": "softec/toc.html",
-          "hash": "gCsmaR2QQIJwUIjVNokT51GRGQ4CUyDcLonTjQAJyJA="
+          "hash": "QKA8jV8W1c1hVG/0H5sPJZGFzwMddAVfN4/G7AwelBs="
         }
       },
       "is_incremental": false,
@@ -1428,10 +1431,10 @@
       "output": {
         ".html": {
           "relative_path": "softec/villamkerdesek/index.html",
-          "hash": "yWhPFLl+6iLk7zf6s2nI+lJQ56eYuVwY2DLMvhpjZqY="
+          "hash": "10GKMPKNmM8+IPdW7atmLWx81IGJmIIUNedCZSbPD4A="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -1443,10 +1446,10 @@
       "output": {
         ".html": {
           "relative_path": "softec/vsinstall/index.html",
-          "hash": "/jrkJXPSXK0xv6z+SD/F8b2n5rxIp4S7Dm0QNKXMZvA="
+          "hash": "rPjEU+WKxSoMdWtx8lLY+hWgj0ua88dyWWx5EWUHZP0="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -1455,10 +1458,10 @@
       "output": {
         ".html": {
           "relative_path": "softec/zh1checklist/index.html",
-          "hash": "iNoknweBvGOaLb8qBtMRE4XaKM/GBho8BmHEW1DYBkc="
+          "hash": "1BIne4HXDVXS1J/dDi2XyePMqIuJWts6Hcq9DJ5pxUY="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -1470,10 +1473,10 @@
       "output": {
         ".html": {
           "relative_path": "softec/zh2checklist/index.html",
-          "hash": "j/ZdSh4dBb6oBnbTTccNSBTPQTR1vLby73Bmu/3ifc4="
+          "hash": "NOmmq06guLtLwr5PCtrj+ovu0h9LQBwjtqyb8wYmin8="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -1485,10 +1488,10 @@
       "output": {
         ".html": {
           "relative_path": "softeng/1_gyak_in_memory_adatbazis/index.html",
-          "hash": "eOXC0nFacJposqmz+Vv4W52RBmdUJCrKjjxn+qnLI3U="
+          "hash": "sw9egkJL5B7IwU5t4reXMYArNSpJhdiAd71KIaTqHcU="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -1497,10 +1500,10 @@
       "output": {
         ".html": {
           "relative_path": "softeng/2a_gyak_tavoli_adatbazis_visual_studioban/index.html",
-          "hash": "Qk1EPc/3TnwdzJjmxtwsHbbYVlWy9rSFyz9A0i5r2ww="
+          "hash": "8dWBMmUpohnhvT7rFN7KpMKNrZR6sL3dyTNAj2S0xlM="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -1512,10 +1515,10 @@
       "output": {
         ".html": {
           "relative_path": "softeng/2b_gyak_lokalis_adatbazis_visual_studioban/index.html",
-          "hash": "KEXZZoTHZdSyBR54OaWZWzeyWZ8bxbArNKfPYrsRePU="
+          "hash": "edo1ymtq2SUczaLVJXB3zk3+niyqR7n7eC0tNYTFSJE="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -1524,10 +1527,10 @@
       "output": {
         ".html": {
           "relative_path": "softeng/3_elm_regularis_kifejezesek/index.html",
-          "hash": "IGZtzLp1gMn/kgK62DcbpxDduxeGnhcHvrJ0aQ2k9e0="
+          "hash": "bOF0q4TV91jLFAsjvrRIFx6ISGKzkAPWlmubOlSGfKg="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -1536,10 +1539,10 @@
       "output": {
         ".html": {
           "relative_path": "softeng/3_gyak_adatok_validalasa_urlapon/index.html",
-          "hash": "SIz18L0TmHQpKu0MCUPD4yfR9BQxNxhfwfcSEAD32vc="
+          "hash": "J3vOh6xwvwUZ4LIS4X2AH3HI3DPpvhSlIG3oh5JZ33M="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -1551,10 +1554,10 @@
       "output": {
         ".html": {
           "relative_path": "softeng/4_elm_tablakapcsolatok/index.html",
-          "hash": "b4CzhTNXLtNSFsbVxMZsZKewiIRxnsftQd5894xRnWw="
+          "hash": "lSWY/euTBlUrZ3AwE7Zi+v+iS0MjmDw99huXXE5gz+Y="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -1566,10 +1569,10 @@
       "output": {
         ".html": {
           "relative_path": "softeng/4_gyak_tobbtablas_adatbazis/index.html",
-          "hash": "BroThRkGUFiQcACvV+2WQSSjEFJDqEFQEWzB8lmkkKM="
+          "hash": "AU5Q7oRp3Y9IBEcAGiYS0NkZ7JhhCwHsfrqTS70yDMA="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -1578,7 +1581,7 @@
       "output": {
         ".html": {
           "relative_path": "softeng/5_elm_LINQ_osszeffoglalo/index.html",
-          "hash": "Zgy//qjcw2C19oSisQW5l7gDp5wug7NIJrkOGizhM5c="
+          "hash": "gNZDsRi0eIXvgO+G83L+Vp0XP27gFbEXoKilaCq4Z6U="
         }
       },
       "is_incremental": false,
@@ -1593,10 +1596,10 @@
       "output": {
         ".html": {
           "relative_path": "softeng/5_gyak_linq_lekerdezesek_-_studies_adatb/index.html",
-          "hash": "pGDqPrPO+XyWeRO2NZKCbDuBXz80On5uqmA4bT0LMYg="
+          "hash": "vE0GC/I1SYXjj/IIWhzS4GTw3KCsw8viTMltGJvyVDM="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -1608,10 +1611,10 @@
       "output": {
         ".html": {
           "relative_path": "softeng/6_elm_linq_extra/index.html",
-          "hash": "Mclf0gZEUAf+GfOinZqYawvH3ZhtvKyHDwtL8QRlEBM="
+          "hash": "JaGSdWg5oCKf5/VGJMoyei4TA5tGPMeDqjwjm4kB8fA="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -1623,10 +1626,10 @@
       "output": {
         ".html": {
           "relative_path": "softeng/6a_gyak_webshop/index.html",
-          "hash": "1MQ7nMM5vFivIiQAmni11XHIjbtth8rXYEkA9dzhxsE="
+          "hash": "czjcjGBcih1KMnc6x4MrZPZDMnwT9sfCD9dusWIaljY="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -1635,10 +1638,10 @@
       "output": {
         ".html": {
           "relative_path": "softeng/ZH1/index.html",
-          "hash": "fb+1bH62NM7s/pej9ChMBOMb5wZyDltZwxiqg3y0z4s="
+          "hash": "alcMTjGoTFyAnr45Aeh67FlyUA7J0jsb3EZ25wLkJhk="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -1650,10 +1653,10 @@
       "output": {
         ".html": {
           "relative_path": "softeng/index.html",
-          "hash": "eB4CwFiswaCNxYyWd6MXthjLInS6W5OmCSLihUyIYiU="
+          "hash": "Jvr4nq7P517T63LkJeuQ8zz3Id/Z3Cee1h4Bbuynapw="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -1662,10 +1665,10 @@
       "output": {
         ".html": {
           "relative_path": "softeng/knowledge_base/Murphy/index.html",
-          "hash": "8hRHEd/Vs+ZjsuBvRqFulRXHgYg+uakccohqTfDeSeE="
+          "hash": "AZHj5NHJKHUgAKfU/szeCnjALf4EZf+JRkubPVadEyA="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -1677,10 +1680,10 @@
       "output": {
         ".html": {
           "relative_path": "softeng/knowledge_base/azure_costs/index.html",
-          "hash": "/d9+ySL9AAJgX20r/So9kWVediY1RWyz5SRPWctOP/o="
+          "hash": "eU+rZ0NMXtvHiubbNwzSRRAlJhj4sReQeFk56KwzYqo="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -1692,10 +1695,10 @@
       "output": {
         ".html": {
           "relative_path": "softeng/knowledge_base/azure_sql_adatbazis_letrehozasa_2022/index.html",
-          "hash": "5KZpLuOcjamtPJNQq66ySKmi0ic33BOjsNLw5iS0qFY="
+          "hash": "hY69n+thAmM1KOlqtXGkQW4YbyVGi2DXKa7E5mUzdRk="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -1704,10 +1707,10 @@
       "output": {
         ".html": {
           "relative_path": "softeng/knowledge_base/honnet_lesz_sql_szerverem/index.html",
-          "hash": "m7Xrytn3FaWDgYC6/u3n0uKs2t2KOa95dSPEis7LJ3U="
+          "hash": "7Pn2oyrTYj8ACE1Z2hBZYyS4biHeGd5CLQ0Yde0Z9vo="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -1719,10 +1722,10 @@
       "output": {
         ".html": {
           "relative_path": "softeng/knowledge_base/ingyenes_hallgatoi_azure_fiok_regisztralasa/index.html",
-          "hash": "k1KbYOaqTc+lGtezeO7mIWTmb9s2hQ0KBky/RXNivK4="
+          "hash": "wisKmoR5/fiRgIl6tcHVfDMN/mXz94lo7UrQW/cSaJ4="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -1734,10 +1737,10 @@
       "output": {
         ".html": {
           "relative_path": "softeng/knowledge_base/lokalis_adatbazis_visual_studioban/index.html",
-          "hash": "YVKLSwz2nN2xkxmSQzRgGG7HV14pGuvkOReibkhqH5Y="
+          "hash": "Yk2bzEqk1Eh7OV44HDWH6LTqI9tfC0aRj155ChEm0Wc="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -1749,10 +1752,10 @@
       "output": {
         ".html": {
           "relative_path": "softeng/knowledge_base/sql_generalasa_ssms-bol_adatbazis_letrehozasara/index.html",
-          "hash": "MInwqUjpHhlhQmg7N0v8oc3Q9WvhuyLjLXftPc3ZPZY="
+          "hash": "7Xn8Q3oBadUDQe7h0oW/CUKxdOdIwsci94hQYIxwJWw="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -1764,10 +1767,10 @@
       "output": {
         ".html": {
           "relative_path": "softeng/knowledge_base/sql_server_sajat_gepre/index.html",
-          "hash": "bjPkIGU2NPsV5TuSmJL5SWRvLTaIOQKXyUiw4Ep0MlE="
+          "hash": "FrazPQHxm2hpf/0EC3sa9PoxjYCyQasbQ9X1o5Y/wFU="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -1776,10 +1779,10 @@
       "output": {
         ".html": {
           "relative_path": "softeng/tantargyi_informaciok/index.html",
-          "hash": "79XlN+zuVuqtLq9rHmcxew7wrOcGeUFyyYCogNSYHp4="
+          "hash": "E2yvAhrjMeHgG07KS1FrnMO7dwOBuZTMLMeS1HcgXRA="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -1791,7 +1794,7 @@
       "output": {
         ".html": {
           "relative_path": "softeng/toc.html",
-          "hash": "uiNfOp4cUC0DPvB4PkJd2U+d+7oUyt5Oiwi2SE9Rndw="
+          "hash": "eWbVvSUuJF0ouD4A6q6L22qxUx/lCfzuCn+xpCAHolA="
         }
       },
       "is_incremental": false,
@@ -1803,10 +1806,10 @@
       "output": {
         ".html": {
           "relative_path": "softeng/vsinstall/index.html",
-          "hash": "mtCTgHqRzKzFYruEJQ513e/Q3fvca5NSmI9HNwcqShM="
+          "hash": "8Gjf2XOV97/x2KGM3AxquzwdKZtN18xUdHj6T4EFHNo="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -1815,10 +1818,10 @@
       "output": {
         ".html": {
           "relative_path": "softeng/zh_ertekeles_szabalyai/index.html",
-          "hash": "Ul9RSC5eCif91oIYqE7GYWrphTEkKF5bFyJqq3ejG8M="
+          "hash": "FZKggmd/qYyxbGePh6salTW9r3avAdYoQ4GFdCNk/us="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -1827,7 +1830,7 @@
       "output": {
         ".html": {
           "relative_path": "toc.html",
-          "hash": "YaD67uQ84upDlEvHDqlspRlJ16OKQXsuFw4zhrT7icM="
+          "hash": "C1lXwACdrCslWgeuBErUHp+9oaWX17Zsq1273LsCqz8="
         }
       },
       "is_incremental": false,
@@ -1847,7 +1850,7 @@
           "can_incremental": true,
           "incrementalPhase": "build",
           "total_file_count": 77,
-          "skipped_file_count": 76
+          "skipped_file_count": 77
         },
         "ResourceDocumentProcessor": {
           "can_incremental": false,

@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Eg&#233;szen kicsi LINQ &#246;sszefoglal&#243; </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Eg&#233;szen kicsi LINQ &#246;sszefoglal&#243; ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="egészen-kicsi-linq-összefoglaló" sourcefile="softeng/5_elm_LINQ_osszeffoglalo/index.md" sourcestartlinenumber="1">Egészen kicsi LINQ összefoglaló</h1>
+
+<h2 id="mi-az-a-linq" sourcefile="softeng/5_elm_LINQ_osszeffoglalo/index.md" sourcestartlinenumber="2">Mi az a LINQ</h2>
+<p sourcefile="softeng/5_elm_LINQ_osszeffoglalo/index.md" sourcestartlinenumber="4">A LINQ NET keretrendszerbe épített lekérdező nyelv (szabálygyűjtemény), amely rendelkezik a hagyományos lekérdező nyelvek (pl.: MSSQL) funkcionalitásának egy részével, egyszersmind integrálva van a C# nyelvebe.</p>
+<p sourcefile="softeng/5_elm_LINQ_osszeffoglalo/index.md" sourcestartlinenumber="6">A gyakorlatban ez azt jelenti, hogy a programkódba közvetlenül írhatjuk a lekérdezéseket úgy, hogy az automatikus kódkiegészítés és a szintaxis ellenőrzés végig segít. Az <em sourcefile="softeng/5_elm_LINQ_osszeffoglalo/index.md" sourcestartlinenumber="6">Entity Framework</em> a korábbi hetekben bemutatott módon leképezi C# osztályok formájába az adatbázis tábláinak sémáját (ORM), így az Intellisense a C# kód írása közben tisztában van az adatbázis felépítésével.</p>
+<p sourcefile="softeng/5_elm_LINQ_osszeffoglalo/index.md" sourcestartlinenumber="8">Kettő féle szintaxis létezik, az előadásokon használt <code sourcefile="softeng/5_elm_LINQ_osszeffoglalo/index.md" sourcestartlinenumber="8">SQL-szerű</code> és a <code sourcefile="softeng/5_elm_LINQ_osszeffoglalo/index.md" sourcestartlinenumber="8">Lambda</code>. Mind a kettőnek meg van az előnye, bármelyiket lehet használni, akár vegyesen is.  A továbbiakban a két írásmód közül lehet választani a tabok segítségével, mindenki használja azt, amelyik jobban tetszik. Ha egy szintaxist szeretnél csak elsajátítani, akkor az SQL-es legyen az, mert az előadásokat könnyebb lesz követni.</p>
+<h2 id="linq-példák" sourcefile="softeng/5_elm_LINQ_osszeffoglalo/index.md" sourcestartlinenumber="10">LINQ példák</h2>
+<h3 id="a-legegyszerűbb-példa" sourcefile="softeng/5_elm_LINQ_osszeffoglalo/index.md" sourcestartlinenumber="12">A legegyszerűbb példa</h3>
+<p sourcefile="softeng/5_elm_LINQ_osszeffoglalo/index.md" sourcestartlinenumber="14">A klasszikus <code sourcefile="softeng/5_elm_LINQ_osszeffoglalo/index.md" sourcestartlinenumber="14">SELECT * FROM hallgatok</code> LINQ megfelelője:</p>
+<div class="tabGroup" id="tabgroup_bHGHmlrG6S" sourcefile="softeng/5_elm_LINQ_osszeffoglalo/index.md" sourcestartlinenumber="16">
+<ul role="tablist">
+<li role="presentation">
+<a href="#tabpanel_bHGHmlrG6S_sql" role="tab" aria-controls="tabpanel_bHGHmlrG6S_sql" data-tab="sql" tabindex="0" aria-selected="true" sourcefile="softeng/5_elm_LINQ_osszeffoglalo/index.md" sourcestartlinenumber="16">SQL szintaxis</a>
+</li>
+<li role="presentation">
+<a href="#tabpanel_bHGHmlrG6S_lambda" role="tab" aria-controls="tabpanel_bHGHmlrG6S_lambda" data-tab="lambda" tabindex="-1" sourcefile="softeng/5_elm_LINQ_osszeffoglalo/index.md" sourcestartlinenumber="21">Lambda szintaxis</a>
+</li>
+</ul>
+<section id="tabpanel_bHGHmlrG6S_sql" role="tabpanel" data-tab="sql">
+
+<pre><code class="lang-csharp" sourcefile="softeng/5_elm_LINQ_osszeffoglalo/index.md" sourcestartlinenumber="17">var eredmény = from x in context.Hallgatok select x;
+</code></pre>
+<p sourcefile="softeng/5_elm_LINQ_osszeffoglalo/index.md" sourcestartlinenumber="20">Ebben a példában az <code sourcefile="softeng/5_elm_LINQ_osszeffoglalo/index.md" sourcestartlinenumber="20">x</code> az úgynevezett soriterátor. Neve tetszőleges lehet -- az a lényeg, hogy következetesen használjuk -- de a tömörség miatt egybetűs neveket szokás adni.</p>
+</section>
+<section id="tabpanel_bHGHmlrG6S_lambda" role="tabpanel" data-tab="lambda" aria-hidden="true" hidden="hidden">
+
+<pre><code class="lang-csharp" sourcefile="softeng/5_elm_LINQ_osszeffoglalo/index.md" sourcestartlinenumber="22">var eredmény = context.Hallgatok.Select(h=&gt;h);
+</code></pre>
+<p sourcefile="softeng/5_elm_LINQ_osszeffoglalo/index.md" sourcestartlinenumber="25">Az olvashatóságot segíti, ha ez az egy betű tükrözi az entitást, amivel dolgozunk. Például hallgatókból kiválasztjuk a hallgatókat <code sourcefile="softeng/5_elm_LINQ_osszeffoglalo/index.md" sourcestartlinenumber="25">h</code>, ha csoportokat csináltunk belőlük és a csoportokon iterálunk, akkor pedig <code sourcefile="softeng/5_elm_LINQ_osszeffoglalo/index.md" sourcestartlinenumber="25">g</code> (mint group).</p>
+</section>
+</div>
+
+<div class="NOTE" sourcefile="softeng/5_elm_LINQ_osszeffoglalo/index.md" sourcestartlinenumber="28">
+<h5>Note</h5>
+<p sourcefile="softeng/5_elm_LINQ_osszeffoglalo/index.md" sourcestartlinenumber="29">Az SQL-ben a záradékok sorrendje a gépi adatfeldolgozás sorrendjét követi. Fogunk egy vagy több táblát (FROM), kiválasztjuk, hogy melyik rekordokra van szükségünk (WHERE), ami a szűrés után bent maradt, csoportosíthatjuk (GROUP BY), a csoportosítás eredményére is szűrhetünk (HAVING), és a legvégén rendezünk csak sorba (ORDER BY).  A SELECT kucsszó a lekérdezés elejére kerül. LINQ-ban a <code sourcefile="softeng/5_elm_LINQ_osszeffoglalo/index.md" sourcestartlinenumber="29">select</code> a végére kerül.</p>
+</div>
+<div class="tabGroup" id="tabgroup_bHGHmlrG6S-1" sourcefile="softeng/5_elm_LINQ_osszeffoglalo/index.md" sourcestartlinenumber="31">
+<ul role="tablist">
+<li role="presentation">
+<a href="#tabpanel_bHGHmlrG6S-1_sql" role="tab" aria-controls="tabpanel_bHGHmlrG6S-1_sql" data-tab="sql" tabindex="0" aria-selected="true" sourcefile="softeng/5_elm_LINQ_osszeffoglalo/index.md" sourcestartlinenumber="31">SQL szintaxis</a>
+</li>
+<li role="presentation">
+<a href="#tabpanel_bHGHmlrG6S-1_lambda" role="tab" aria-controls="tabpanel_bHGHmlrG6S-1_lambda" data-tab="lambda" tabindex="-1" sourcefile="softeng/5_elm_LINQ_osszeffoglalo/index.md" sourcestartlinenumber="42">Lambda szintaxis</a>
+</li>
+</ul>
+<section id="tabpanel_bHGHmlrG6S-1_sql" role="tabpanel" data-tab="sql">
+
+<p sourcefile="softeng/5_elm_LINQ_osszeffoglalo/index.md" sourcestartlinenumber="32">SQL-es szintaxis esetében a <code sourcefile="softeng/5_elm_LINQ_osszeffoglalo/index.md" sourcestartlinenumber="32">from</code>-mal kezdődik a kifejezés, melyet a soriterátor követ -- ami most éppen <code sourcefile="softeng/5_elm_LINQ_osszeffoglalo/index.md" sourcestartlinenumber="32">x</code>, de lehetne bármi--, majd az <code sourcefile="softeng/5_elm_LINQ_osszeffoglalo/index.md" sourcestartlinenumber="32">in</code> kulcsszó után következik a gyűjtemény neve, amiből kérdezni szeretnénk. Ez most épp a <code sourcefile="softeng/5_elm_LINQ_osszeffoglalo/index.md" sourcestartlinenumber="32">Context.Hallgatók</code>. A példát a <code sourcefile="softeng/5_elm_LINQ_osszeffoglalo/index.md" sourcestartlinenumber="32">select</code> zárja, amiben ki lehet kötni, hogy milyen adatokat jelenítsünk meg. A soriterátor szerepe a következő példából talán jobban megérthető:</p>
+<pre><code class="lang-csharp" sourcefile="softeng/5_elm_LINQ_osszeffoglalo/index.md" sourcestartlinenumber="35">var eredmény = from x in context.Hallgatok 
+               where x.Neptun == &quot;NEPTUN&quot;
+               select x;
+</code></pre>
+<p sourcefile="softeng/5_elm_LINQ_osszeffoglalo/index.md" sourcestartlinenumber="40">A fenti LINQ kifejezést talán így lehetne magyarra fordítani: &quot;Menj végig a <code sourcefile="softeng/5_elm_LINQ_osszeffoglalo/index.md" sourcestartlinenumber="40">context.Hallgatok</code> gyűjtemény minden egyes elemén. A <code sourcefile="softeng/5_elm_LINQ_osszeffoglalo/index.md" sourcestartlinenumber="40">where</code> kulcsszó után szereplő kifejezést futtasd le a gyűjtemény minden elemére, úgy hogy a soriterátorba (most épp <code sourcefile="softeng/5_elm_LINQ_osszeffoglalo/index.md" sourcestartlinenumber="40">x</code>) kerül az éppen vizsgált elem. Az eredményhalmazban azok az elemek maradnak bent, melyek megfeleltek a <code sourcefile="softeng/5_elm_LINQ_osszeffoglalo/index.md" sourcestartlinenumber="40">where</code>  után szereplő feltételnek.</p>
+</section>
+<section id="tabpanel_bHGHmlrG6S-1_lambda" role="tabpanel" data-tab="lambda" aria-hidden="true" hidden="hidden">
+
+<p sourcefile="softeng/5_elm_LINQ_osszeffoglalo/index.md" sourcestartlinenumber="43">A lambdás szintaxis közelebb áll a C#-os logikához. Ez kiterjesztés metódusként vannak meghívva az objektumon. <code sourcefile="softeng/5_elm_LINQ_osszeffoglalo/index.md" sourcestartlinenumber="43">objektum.metódus(lambdás kifejezés)</code> formátumot követi.
+Nézzünk egy példát:</p>
+<pre><code class="lang-csharp" sourcefile="softeng/5_elm_LINQ_osszeffoglalo/index.md" sourcestartlinenumber="46">List&lt;int&gt; lista=new List&lt;int&gt;{1,2,3,4,5}; //veszünk egy listát 1-től 5-ig számokkal
+List&lt;int&gt; eredmény = new List&lt;int&gt;(); //hozzunk létre egy listát, amiben az eredményt tároljuk
+
+eredmény=lista.Select(i =&gt; i).ToList(); //végigmegyünk a select-tel a listán és kiválasztjuk az összes elemet
+//itt az eredmény: 1;2;3;4;5
+</code></pre>
+<p sourcefile="softeng/5_elm_LINQ_osszeffoglalo/index.md" sourcestartlinenumber="53">De mi ez a <code sourcefile="softeng/5_elm_LINQ_osszeffoglalo/index.md" sourcestartlinenumber="53">i=&gt;i</code> lambdás dolog?
+Tulajdonképpen egy leegyszerűsített függvény, ami i-t kér be paraméternek és i-t is ad vissza.</p>
+<pre><code class="lang-csharp" sourcefile="softeng/5_elm_LINQ_osszeffoglalo/index.md" sourcestartlinenumber="55">int MintaFüggvény(int i)
+{
+    return i;
+}
+List&lt;int&gt; lista=new List&lt;int&gt;{1,2,3,4,5};
+List&lt;int&gt; eredmény = new List&lt;int&gt;();
+
+eredmény=lista.Select(MintaFüggvény).ToList(); //kicseréltük a lambdás kifejezést a vele egyenértékű függvényre
+//itt az eredmény: 1;2;3;4;5
+</code></pre>
+<p sourcefile="softeng/5_elm_LINQ_osszeffoglalo/index.md" sourcestartlinenumber="66">Egy újabb példa:</p>
+<pre><code class="lang-csharp" sourcefile="softeng/5_elm_LINQ_osszeffoglalo/index.md" sourcestartlinenumber="67">int MintaFüggvény(int i)
+{
+    return i*i;
+}
+List&lt;int&gt; lista=new List&lt;int&gt;{1,2,3,4,5};
+List&lt;int&gt; eredmény1 = new List&lt;int&gt;();
+List&lt;int&gt; eredmény2 = new List&lt;int&gt;();
+
+eredmény1=lista.Select(MintaFüggvény).ToList();
+eredmény2=lista.Select(i=&gt;i*i).ToList();
+//itt az eredmény1 és eredmény2: 1;4;9;16;25
+</code></pre>
+<p sourcefile="softeng/5_elm_LINQ_osszeffoglalo/index.md" sourcestartlinenumber="80"><code sourcefile="softeng/5_elm_LINQ_osszeffoglalo/index.md" sourcestartlinenumber="80">Where</code>-nél például egy olyan függvényt kér, ami igaz/hamis értéket ad vissza</p>
+<pre><code class="lang-csharp" sourcefile="softeng/5_elm_LINQ_osszeffoglalo/index.md" sourcestartlinenumber="81">bool MintaFüggvény(int i)
+{
+    return i&gt;2; //ha i nagyobb, mint kettő az eredmény igaz, ha nem, akkor hamis
+}
+List&lt;int&gt; lista=new List&lt;int&gt;{1,2,3,4,5};
+List&lt;int&gt; eredmény1 = new List&lt;int&gt;();
+List&lt;int&gt; eredmény2 = new List&lt;int&gt;();
+
+eredmény1=lista.Where(MintaFüggvény).ToList();
+eredmény2=lista.Where(i=&gt;i&gt;2).ToList();
+//itt az eredmény1 és eredmény2: 3;4;5
+</code></pre>
+<p sourcefile="softeng/5_elm_LINQ_osszeffoglalo/index.md" sourcestartlinenumber="94">Az SQL-es szintaxisnak megfelelő Lambdás pedig:</p>
+<pre><code class="lang-csharp" sourcefile="softeng/5_elm_LINQ_osszeffoglalo/index.md" sourcestartlinenumber="95">var eredmény=context.Hallgatok.Where(h=&gt;h.Neptun==&quot;NEPTUN&quot;);
+</code></pre>
+</section>
+</div>
+<h3 id="egyszerű-lekérdezés-where-záradékkal-szelekció" sourcefile="softeng/5_elm_LINQ_osszeffoglalo/index.md" sourcestartlinenumber="100">Egyszerű lekérdezés where záradékkal (szelekció)</h3>
+<p sourcefile="softeng/5_elm_LINQ_osszeffoglalo/index.md" sourcestartlinenumber="102">A fenti példa az eredményhalmazba beteszti az összes olyan objektumot, ami megfelel a feltételnek, de a következő példa már csak a neveket gyűjti ki:</p>
+<div class="tabGroup" id="tabgroup_bHGHmlrG6S-2" sourcefile="softeng/5_elm_LINQ_osszeffoglalo/index.md" sourcestartlinenumber="103">
+<ul role="tablist">
+<li role="presentation">
+<a href="#tabpanel_bHGHmlrG6S-2_sql" role="tab" aria-controls="tabpanel_bHGHmlrG6S-2_sql" data-tab="sql" tabindex="0" aria-selected="true" sourcefile="softeng/5_elm_LINQ_osszeffoglalo/index.md" sourcestartlinenumber="103">SQL szintaxis</a>
+</li>
+<li role="presentation">
+<a href="#tabpanel_bHGHmlrG6S-2_lambda" role="tab" aria-controls="tabpanel_bHGHmlrG6S-2_lambda" data-tab="lambda" tabindex="-1" sourcefile="softeng/5_elm_LINQ_osszeffoglalo/index.md" sourcestartlinenumber="109">Lambda szintaxis</a>
+</li>
+</ul>
+<section id="tabpanel_bHGHmlrG6S-2_sql" role="tabpanel" data-tab="sql">
+
+<pre><code class="lang-csharp" sourcefile="softeng/5_elm_LINQ_osszeffoglalo/index.md" sourcestartlinenumber="104">var eredmény = from x in context.Hallgatok 
+               where x.Neptun == &quot;NEPTUN&quot;
+               select x.Nev;
+</code></pre>
+</section>
+<section id="tabpanel_bHGHmlrG6S-2_lambda" role="tabpanel" data-tab="lambda" aria-hidden="true" hidden="hidden">
+
+<pre><code class="lang-csharp" sourcefile="softeng/5_elm_LINQ_osszeffoglalo/index.md" sourcestartlinenumber="110">var eredmény = context.Hallgatok.Where(h=&gt;h.Neptun==&quot;NEPTUN&quot;).Select(h=&gt;h.Nev);
+</code></pre>
+</section>
+</div>
+
+<p sourcefile="softeng/5_elm_LINQ_osszeffoglalo/index.md" sourcestartlinenumber="114">A szűrési feltétel lehet bonyolult kifejezés is C# szintaktikával -- majd az Entity Framework  a motorháztető alatt lefordítja SQL-re ha szükséges.</p>
+<div class="tabGroup" id="tabgroup_bHGHmlrG6S-3" sourcefile="softeng/5_elm_LINQ_osszeffoglalo/index.md" sourcestartlinenumber="115">
+<ul role="tablist">
+<li role="presentation">
+<a href="#tabpanel_bHGHmlrG6S-3_sql" role="tab" aria-controls="tabpanel_bHGHmlrG6S-3_sql" data-tab="sql" tabindex="0" aria-selected="true" sourcefile="softeng/5_elm_LINQ_osszeffoglalo/index.md" sourcestartlinenumber="115">SQL szintaxis</a>
+</li>
+<li role="presentation">
+<a href="#tabpanel_bHGHmlrG6S-3_lambda" role="tab" aria-controls="tabpanel_bHGHmlrG6S-3_lambda" data-tab="lambda" tabindex="-1" sourcefile="softeng/5_elm_LINQ_osszeffoglalo/index.md" sourcestartlinenumber="121">Lambda szintaxis</a>
+</li>
+</ul>
+<section id="tabpanel_bHGHmlrG6S-3_sql" role="tabpanel" data-tab="sql">
+
+<pre><code class="lang-csharp" sourcefile="softeng/5_elm_LINQ_osszeffoglalo/index.md" sourcestartlinenumber="116">var eredmény = from x in context.Hallgatok 
+               where x.Neptun != null &amp;&amp; x.Nev.StartsWith(&quot;Moh&quot;)
+               select x;
+</code></pre>
+</section>
+<section id="tabpanel_bHGHmlrG6S-3_lambda" role="tabpanel" data-tab="lambda" aria-hidden="true" hidden="hidden">
+
+<pre><code class="lang-csharp" sourcefile="softeng/5_elm_LINQ_osszeffoglalo/index.md" sourcestartlinenumber="122">var eredmény = context.Hallgatok.Where(h=&gt;h.Neptun!=null &amp;&amp; x.Nev.StartsWith(&quot;Moh&quot;));
+</code></pre>
+</section>
+</div>
+<h3 id="több-mezővel-a-select-után" sourcefile="softeng/5_elm_LINQ_osszeffoglalo/index.md" sourcestartlinenumber="126">Több mezővel a select után</h3>
+<div class="tabGroup" id="tabgroup_bHGHmlrG6S-4" sourcefile="softeng/5_elm_LINQ_osszeffoglalo/index.md" sourcestartlinenumber="127">
+<ul role="tablist">
+<li role="presentation">
+<a href="#tabpanel_bHGHmlrG6S-4_sql" role="tab" aria-controls="tabpanel_bHGHmlrG6S-4_sql" data-tab="sql" tabindex="0" aria-selected="true" sourcefile="softeng/5_elm_LINQ_osszeffoglalo/index.md" sourcestartlinenumber="127">SQL szintaxis</a>
+</li>
+<li role="presentation">
+<a href="#tabpanel_bHGHmlrG6S-4_lambda" role="tab" aria-controls="tabpanel_bHGHmlrG6S-4_lambda" data-tab="lambda" tabindex="-1" sourcefile="softeng/5_elm_LINQ_osszeffoglalo/index.md" sourcestartlinenumber="136">Lambda szintaxis</a>
+</li>
+</ul>
+<section id="tabpanel_bHGHmlrG6S-4_sql" role="tabpanel" data-tab="sql">
+
+<pre><code class="lang-csharp" sourcefile="softeng/5_elm_LINQ_osszeffoglalo/index.md" sourcestartlinenumber="128">var eredmény = from x in context.Hallgatok 
+               select new 
+               { 
+                   x.Nev, 
+                   x.Hallgato_id 
+               };
+</code></pre>
+</section>
+<section id="tabpanel_bHGHmlrG6S-4_lambda" role="tabpanel" data-tab="lambda" aria-hidden="true" hidden="hidden">
+
+<pre><code class="lang-csharp" sourcefile="softeng/5_elm_LINQ_osszeffoglalo/index.md" sourcestartlinenumber="137">var eredmény = context.Hallgatok.Select(h=&gt;new{x.Nev, x.Hallgato_id });
+</code></pre>
+</section>
+</div>
+
+<p sourcefile="softeng/5_elm_LINQ_osszeffoglalo/index.md" sourcestartlinenumber="141">Ebben az esetben egy úgynevezett anonym típus jön létre két tulajdonsággal: <code sourcefile="softeng/5_elm_LINQ_osszeffoglalo/index.md" sourcestartlinenumber="141">Nev</code> és <code sourcefile="softeng/5_elm_LINQ_osszeffoglalo/index.md" sourcestartlinenumber="141">Hallgato_id</code>. (Létre lehetne hozni egy külön osztály ezzel a két tulajdonsággal, de ez unalmas favágás, és legtöbbször felesleges is.)</p>
+<h3 id="egymásba-ágyazott-lekérdezések" sourcefile="softeng/5_elm_LINQ_osszeffoglalo/index.md" sourcestartlinenumber="143">Egymásba ágyazott lekérdezések</h3>
+<p sourcefile="softeng/5_elm_LINQ_osszeffoglalo/index.md" sourcestartlinenumber="145">Egy lekérdezés eredményéből gond nélkül kérdezhetünk tovább:</p>
+<div class="tabGroup" id="tabgroup_bHGHmlrG6S-5" sourcefile="softeng/5_elm_LINQ_osszeffoglalo/index.md" sourcestartlinenumber="146">
+<ul role="tablist">
+<li role="presentation">
+<a href="#tabpanel_bHGHmlrG6S-5_sql" role="tab" aria-controls="tabpanel_bHGHmlrG6S-5_sql" data-tab="sql" tabindex="0" aria-selected="true" sourcefile="softeng/5_elm_LINQ_osszeffoglalo/index.md" sourcestartlinenumber="146">SQL szintaxis</a>
+</li>
+<li role="presentation">
+<a href="#tabpanel_bHGHmlrG6S-5_lambda" role="tab" aria-controls="tabpanel_bHGHmlrG6S-5_lambda" data-tab="lambda" tabindex="-1" sourcefile="softeng/5_elm_LINQ_osszeffoglalo/index.md" sourcestartlinenumber="156">Lambda szintaxis</a>
+</li>
+</ul>
+<section id="tabpanel_bHGHmlrG6S-5_sql" role="tabpanel" data-tab="sql">
+
+<pre><code class="lang-csharp" sourcefile="softeng/5_elm_LINQ_osszeffoglalo/index.md" sourcestartlinenumber="147">var eredmény = from x in context.Hallgatok 
+               where x.Nev.StartsWith(&quot;A&quot;)
+               select x;
+
+var második = from y in eredmény
+              orderby y.Nev
+              select y;
+</code></pre>
+</section>
+<section id="tabpanel_bHGHmlrG6S-5_lambda" role="tabpanel" data-tab="lambda" aria-hidden="true" hidden="hidden">
+
+<pre><code class="lang-csharp" sourcefile="softeng/5_elm_LINQ_osszeffoglalo/index.md" sourcestartlinenumber="157">var eredmény = context.Hallgatok.Where(h=&gt;h.Nev.StartsWith(&quot;A&quot;));
+
+var második = eredmény.OrderBy(h=&gt;h.Nev);
+</code></pre>
+<p sourcefile="softeng/5_elm_LINQ_osszeffoglalo/index.md" sourcestartlinenumber="162">Kettő együtt:</p>
+<pre><code class="lang-csharp" sourcefile="softeng/5_elm_LINQ_osszeffoglalo/index.md" sourcestartlinenumber="163">var eredmény = context.Hallgatok.Where(h=&gt;h.Nev.StartsWith(&quot;A&quot;)).OrderBy(h=&gt;h.Nev);
+</code></pre>
+</section>
+</div>
+
+<blockquote sourcefile="softeng/5_elm_LINQ_osszeffoglalo/index.md" sourcestartlinenumber="167">
+<p sourcefile="softeng/5_elm_LINQ_osszeffoglalo/index.md" sourcestartlinenumber="167">Az SQL szerveren majd csak akkor fut le a lekérdezés, ha használni akarjuk az eredményét. Tehát az első lekérdezés eredménye nem kerül rögtön a memóriába.</p>
+</blockquote>
+<h3 id="saját-új-mezők-képzése-projekció-mezők-elnevezése-as" sourcefile="softeng/5_elm_LINQ_osszeffoglalo/index.md" sourcestartlinenumber="169">Saját új mezők képzése (projekció), mezők elnevezése (AS)</h3>
+<div class="tabGroup" id="tabgroup_bHGHmlrG6S-6" sourcefile="softeng/5_elm_LINQ_osszeffoglalo/index.md" sourcestartlinenumber="170">
+<ul role="tablist">
+<li role="presentation">
+<a href="#tabpanel_bHGHmlrG6S-6_sql" role="tab" aria-controls="tabpanel_bHGHmlrG6S-6_sql" data-tab="sql" tabindex="0" aria-selected="true" sourcefile="softeng/5_elm_LINQ_osszeffoglalo/index.md" sourcestartlinenumber="170">SQL szintaxis</a>
+</li>
+<li role="presentation">
+<a href="#tabpanel_bHGHmlrG6S-6_lambda" role="tab" aria-controls="tabpanel_bHGHmlrG6S-6_lambda" data-tab="lambda" tabindex="-1" sourcefile="softeng/5_elm_LINQ_osszeffoglalo/index.md" sourcestartlinenumber="179">Lambda szintaxis</a>
+</li>
+</ul>
+<section id="tabpanel_bHGHmlrG6S-6_sql" role="tabpanel" data-tab="sql">
+
+<pre><code class="lang-csharp" sourcefile="softeng/5_elm_LINQ_osszeffoglalo/index.md" sourcestartlinenumber="171">var eredmény = from x in context.Hallgatok 
+               select new 
+               {
+                   nev_es_neptun = x.Nev + &quot; - &quot; + x.Neptun,
+                   x.Hallgato_id 
+               };
+</code></pre>
+</section>
+<section id="tabpanel_bHGHmlrG6S-6_lambda" role="tabpanel" data-tab="lambda" aria-hidden="true" hidden="hidden">
+
+<pre><code class="lang-csharp" sourcefile="softeng/5_elm_LINQ_osszeffoglalo/index.md" sourcestartlinenumber="180">var eredmény = context.Hallgatok.Select(h=&gt;new 
+               {
+                   nev_es_neptun = h.Nev + &quot; - &quot; + h.Neptun,
+                   h.Hallgato_id 
+               });
+</code></pre>
+</section>
+</div>
+
+<p sourcefile="softeng/5_elm_LINQ_osszeffoglalo/index.md" sourcestartlinenumber="188">Ennek a példának az eredményeképp is létrejön egy anonym típus, de mivel itt nem csak az eredeti mezőket használjuk, a kifejezés eredményét el is kell nevezni: <code sourcefile="softeng/5_elm_LINQ_osszeffoglalo/index.md" sourcestartlinenumber="188">nev_es_neptun =</code>.</p>
+<h3 id="többtáblás-lekérdezések" sourcefile="softeng/5_elm_LINQ_osszeffoglalo/index.md" sourcestartlinenumber="190">Többtáblás lekérdezések</h3>
+<pre><code class="lang-csharp" sourcefile="softeng/5_elm_LINQ_osszeffoglalo/index.md" sourcestartlinenumber="192">var eredmény = from k in context.Konyvek
+               join r in context.Rendelesek
+               on k.Konyv_id equals r.Konyv
+               select new 
+               {
+                   r.Hallgato, 
+                   r.Konyv, 
+                   k.Cim
+               };
+</code></pre>
+<p sourcefile="softeng/5_elm_LINQ_osszeffoglalo/index.md" sourcestartlinenumber="203">Itt már külön soriterátor van a lekérdezésen szereplő két táblához,</p>
+<p sourcefile="softeng/5_elm_LINQ_osszeffoglalo/index.md" sourcestartlinenumber="205">De a helyzet általában nem ennyire bonyolult. Ha az adatbázis tervezésénél be voltak állítva a kényszerek (táblák közti kapcsolatok), akkor az idegen kulcsok mentén <code sourcefile="softeng/5_elm_LINQ_osszeffoglalo/index.md" sourcestartlinenumber="205">join</code> írása nélkül is el lehet 'lépkedni'. Nézzünk erre egy példát:</p>
+<h2 id="lekérdezés-eredményének-megjelenítése-bejárása" sourcefile="softeng/5_elm_LINQ_osszeffoglalo/index.md" sourcestartlinenumber="208">Lekérdezés eredményének megjelenítése, bejárása</h2>
+<h3 id="megjelenítés-datagridview-ban" sourcefile="softeng/5_elm_LINQ_osszeffoglalo/index.md" sourcestartlinenumber="210">Megjelenítés DataGridView-ban</h3>
+<p sourcefile="softeng/5_elm_LINQ_osszeffoglalo/index.md" sourcestartlinenumber="211">Az eredményeket megjeleníthetem pl. egy rácsban:</p>
+<pre><code class="lang-csharp" sourcefile="softeng/5_elm_LINQ_osszeffoglalo/index.md" sourcestartlinenumber="212">dataGridView1.DataSource = eredmény;
+</code></pre>
+<p sourcefile="softeng/5_elm_LINQ_osszeffoglalo/index.md" sourcestartlinenumber="215">Ez a legegyszerűbb, hiszen a rács tetszőleges számú oszlopot meg tud jeleníteni.</p>
+<h3 id="megjelenítés-listbox-ban" sourcefile="softeng/5_elm_LINQ_osszeffoglalo/index.md" sourcestartlinenumber="217">Megjelenítés ListBox-ban</h3>
+<pre><code class="lang-csharp" sourcefile="softeng/5_elm_LINQ_osszeffoglalo/index.md" sourcestartlinenumber="219">listBoxHallgatók.DataSource = eredmény;
+listBoxHallgatók.DisplayMember = &quot;nev&quot;;
+listBoxHallgatók.ValueMember = &quot;hallgato_id&quot;;
+</code></pre>
+<p sourcefile="softeng/5_elm_LINQ_osszeffoglalo/index.md" sourcestartlinenumber="225">A <code sourcefile="softeng/5_elm_LINQ_osszeffoglalo/index.md" sourcestartlinenumber="225">DataGridView</code>-val ellentétben a <code sourcefile="softeng/5_elm_LINQ_osszeffoglalo/index.md" sourcestartlinenumber="225">ListBox</code> csak egyetlen oszlopot tud megjeleníteni, ezért a <code sourcefile="softeng/5_elm_LINQ_osszeffoglalo/index.md" sourcestartlinenumber="225">DisplayMember</code>  tulajdonságában meg kell neki adni, hogy melyik legyen az. Sajnos itt be kell gépelni egy string literálba a mező nevét. Ha elírjuk, az oszály neve jelenik meg benne annyiszor, ahány elemű az adatforrásként használt gyűjtemény.</p>
+<p sourcefile="softeng/5_elm_LINQ_osszeffoglalo/index.md" sourcestartlinenumber="227">A <code sourcefile="softeng/5_elm_LINQ_osszeffoglalo/index.md" sourcestartlinenumber="227">ListBox</code> <code sourcefile="softeng/5_elm_LINQ_osszeffoglalo/index.md" sourcestartlinenumber="227">SelectedItem</code> tulajdonságából olvasható ki a felhasználó által kiválasztott elemhez tartozó objektum. A <code sourcefile="softeng/5_elm_LINQ_osszeffoglalo/index.md" sourcestartlinenumber="227">SelectedItem</code>  <code sourcefile="softeng/5_elm_LINQ_osszeffoglalo/index.md" sourcestartlinenumber="227">object</code> típusú, ezért ha használni akarjuk a kiolvasott értéket, cast-olni kell:</p>
+<pre><code class="lang-csharp" sourcefile="softeng/5_elm_LINQ_osszeffoglalo/index.md" sourcestartlinenumber="229">Hallgato kiválasztottHallgato = (Hallgato)listBox1.SelectedItem;
+</code></pre>
+<p sourcefile="softeng/5_elm_LINQ_osszeffoglalo/index.md" sourcestartlinenumber="233">A <code sourcefile="softeng/5_elm_LINQ_osszeffoglalo/index.md" sourcestartlinenumber="233">ValueMember</code> tulajdonságban a gyakolatban szinte mindig a saját kulcsot tartalmazó mező nevét állítjuk be. Ebben az esetben  <code sourcefile="softeng/5_elm_LINQ_osszeffoglalo/index.md" sourcestartlinenumber="233">ListBox</code> <code sourcefile="softeng/5_elm_LINQ_osszeffoglalo/index.md" sourcestartlinenumber="233">SelectedValue</code> tulajdonságából kiolvsható a felhasználó által kiválasztott elemhez tartozó kulcsérték.</p>
+<h3 id="megjelenítés-combobox-ban" sourcefile="softeng/5_elm_LINQ_osszeffoglalo/index.md" sourcestartlinenumber="235">Megjelenítés ComboBox-ban</h3>
+<p sourcefile="softeng/5_elm_LINQ_osszeffoglalo/index.md" sourcestartlinenumber="237">A <code sourcefile="softeng/5_elm_LINQ_osszeffoglalo/index.md" sourcestartlinenumber="237">ComboBox</code> szinte tökéletesen úgy működik, mint a <code sourcefile="softeng/5_elm_LINQ_osszeffoglalo/index.md" sourcestartlinenumber="237">ListBox</code>, csak máshogy néz ki. A <code sourcefile="softeng/5_elm_LINQ_osszeffoglalo/index.md" sourcestartlinenumber="237">ListBox</code>-ban viszont be lehet állítani, hogy több elemet is választhasson a felhasználó.</p>
+<h3 id="az-eredmény-bejárása" sourcefile="softeng/5_elm_LINQ_osszeffoglalo/index.md" sourcestartlinenumber="239">Az eredmény bejárása</h3>
+<p sourcefile="softeng/5_elm_LINQ_osszeffoglalo/index.md" sourcestartlinenumber="241">Az eredmény bejárható egyszerű foreach-el. (Trace -&gt; resolve)</p>
+<pre><code class="lang-csharp" sourcefile="softeng/5_elm_LINQ_osszeffoglalo/index.md" sourcestartlinenumber="242">foreach (Hallgatok x in eredmény)
+{
+    Trace.WriteLine(x.Nev);
+}
+</code></pre>
+<p sourcefile="softeng/5_elm_LINQ_osszeffoglalo/index.md" sourcestartlinenumber="248">Ugyanígy lehet fájlba is írni az eredményt.</p>
+<p sourcefile="softeng/5_elm_LINQ_osszeffoglalo/index.md" sourcestartlinenumber="250">Ha nem ismerem az entitástípust -- vagy csak szimplán lusta vagyok--, használhatok var-t is:</p>
+<pre><code class="lang-csharp" sourcefile="softeng/5_elm_LINQ_osszeffoglalo/index.md" sourcestartlinenumber="252">foreach (var x in eredmény)
+{
+    Trace.WriteLine(x.Nev);
+}
+</code></pre>
+<h2 id="miért-linq" sourcefile="softeng/5_elm_LINQ_osszeffoglalo/index.md" sourcestartlinenumber="259">Miért LINQ?</h2>
+<p sourcefile="softeng/5_elm_LINQ_osszeffoglalo/index.md" sourcestartlinenumber="261">Van lehetőség arra is, hogy az SQL mondatokat string formájában írjuk meg és küldjük el a szervernek, de ebben az esetben csak futás közben derül ki a hiba -- például el van gépelve egy mezőnév vagy táblanév. A gyakorlatban ritka (értsd: nincs) olyan összetettebb projekt, ahol ne válotzna az adatbázis sémája a fejlesztés során. Ha az SQL mondatok string formában vannak, nagyon körülményes annak lekövetése, hogy a sémaváltozás hol okoz gondot.</p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/altinum/szamtud_docfx/blob/main/softeng/5_elm_LINQ_osszeffoglalo/index.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

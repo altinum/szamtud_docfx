@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Bantumi j&#225;t&#233;k </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Bantumi j&#225;t&#233;k ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="bantumi-játék" sourcefile="softec/bantumi/index.md" sourcestartlinenumber="2">Bantumi játék</h1>
+
+<h2 id="videók" sourcefile="softec/bantumi/index.md" sourcestartlinenumber="4">Videók</h2>
+<p sourcefile="softec/bantumi/index.md" sourcestartlinenumber="6"><a href="S1value_Ref1.m4v" sourcefile="softec/bantumi/index.md" sourcestartlinenumber="6">e1. videó</a> -- Érték és referencia típusok</p>
+<p sourcefile="softec/bantumi/index.md" sourcestartlinenumber="8"><a href="S1value_Ref2.m4v" sourcefile="softec/bantumi/index.md" sourcestartlinenumber="8">e2. videó</a></p>
+<p sourcefile="softec/bantumi/index.md" sourcestartlinenumber="10"><a href="S1bantumi1.m4v" sourcefile="softec/bantumi/index.md" sourcestartlinenumber="10">1. videó</a></p>
+<p sourcefile="softec/bantumi/index.md" sourcestartlinenumber="12"><a href="S1bantumi2.m4v" sourcefile="softec/bantumi/index.md" sourcestartlinenumber="12">2. videó</a></p>
+<p sourcefile="softec/bantumi/index.md" sourcestartlinenumber="14"><a href="S1bantumi3.m4v" sourcefile="softec/bantumi/index.md" sourcestartlinenumber="14">3. videó</a></p>
+<p sourcefile="softec/bantumi/index.md" sourcestartlinenumber="16"><a href="S1bantumi4.m4v" sourcefile="softec/bantumi/index.md" sourcestartlinenumber="16">4. videó</a></p>
+<p sourcefile="softec/bantumi/index.md" sourcestartlinenumber="18"><a href="S1bantumi5.m4v" sourcefile="softec/bantumi/index.md" sourcestartlinenumber="18">5. videó</a></p>
+<p sourcefile="softec/bantumi/index.md" sourcestartlinenumber="20"><a href="S1bantumi6.m4v" sourcefile="softec/bantumi/index.md" sourcestartlinenumber="20">6. videó</a></p>
+<p sourcefile="softec/bantumi/index.md" sourcestartlinenumber="22">A játéknak nagyon sok változata létezik elérő szabályokkal. A nyerést éppen ezért nem implementáljuk, csak a játéktáblát.</p>
+<h2 id="feladatmegoldás-lépésről-lépésre" sourcefile="softec/bantumi/index.md" sourcestartlinenumber="24">Feladatmegoldás lépésről lépésre</h2>
+<p sourcefile="softec/bantumi/index.md" sourcestartlinenumber="26">(+/-)  Származtass egy osztályt <code sourcefile="softec/bantumi/index.md" sourcestartlinenumber="26">Lyuk</code> néven a <code sourcefile="softec/bantumi/index.md" sourcestartlinenumber="26">Button</code> osztályból!</p>
+<pre><code class="lang-csharp" sourcefile="softec/bantumi/index.md" sourcestartlinenumber="28">public class Lyuk: Button
+{
+}
+</code></pre>
+<p sourcefile="softec/bantumi/index.md" sourcestartlinenumber="34">(+/-)  A Lyuk konstruktorában méretezze magát <code sourcefile="softec/bantumi/index.md" sourcestartlinenumber="34">50x50</code> képpontosra!</p>
+<pre><code class="lang-csharp" sourcefile="softec/bantumi/index.md" sourcestartlinenumber="36">	public Lyuk()
+	{
+		this.Height = 50;
+		this.Width = 50;
+	}
+</code></pre>
+<p sourcefile="softec/bantumi/index.md" sourcestartlinenumber="43">(+/-) Bővítsd a Lyuk osztályt teljesen kifejtett getter-setter metódusokkal ellátott <code sourcefile="softec/bantumi/index.md" sourcestartlinenumber="43">BabokSzáma</code> tulajdonsággal! (<em sourcefile="softec/bantumi/index.md" sourcestartlinenumber="43">propfull-tab-tab</em>)</p>
+<pre><code class="lang-csharp" sourcefile="softec/bantumi/index.md" sourcestartlinenumber="45">class Lyuk : Button
+{
+    private int babokSzáma;
+    public int BabokSzáma
+    {
+        get { return babokSzáma; }
+        set { babokSzáma = value; }
+    }
+    ...
+</code></pre>
+<p sourcefile="softec/bantumi/index.md" sourcestartlinenumber="58">(+/-) A setter metódusban állítsd be a <code sourcefile="softec/bantumi/index.md" sourcestartlinenumber="58">Lyuk</code> <code sourcefile="softec/bantumi/index.md" sourcestartlinenumber="58">Button</code>-tól örökölt <code sourcefile="softec/bantumi/index.md" sourcestartlinenumber="58">Text</code> tulajdonságát a beállított babok számának megfelelően!</p>
+<pre><code class="lang-csharp" sourcefile="softec/bantumi/index.md" sourcestartlinenumber="60">class Lyuk : Button
+{
+    private int babokSzáma;
+    public int BabokSzáma
+    {
+        get { return babokSzáma; }
+        set { 
+            babokSzáma = value;
+            Text = babokSzáma.ToString(); 
+        }
+    }
+    ...
+</code></pre>
+<p sourcefile="softec/bantumi/index.md" sourcestartlinenumber="75">(+/-) Fordítsd le az alkalmazást, majd helyezz el néhány példányt tervező nézetből a <code sourcefile="softec/bantumi/index.md" sourcestartlinenumber="75">Fomr1</code>-en! A <em sourcefile="softec/bantumi/index.md" sourcestartlinenumber="75">Properties</em> ablakban be kell tudni állítani a <code sourcefile="softec/bantumi/index.md" sourcestartlinenumber="75">BabokSzáma</code> tulajdonságot, ami azonnal megjelenik a <code sourcefile="softec/bantumi/index.md" sourcestartlinenumber="75">Lyuk</code> felirataként.</p>
+<p sourcefile="softec/bantumi/index.md" sourcestartlinenumber="77">(+/-) Bővítsd a <code sourcefile="softec/bantumi/index.md" sourcestartlinenumber="77">Lyuk</code> osztályt szintén <code sourcefile="softec/bantumi/index.md" sourcestartlinenumber="77">Lyuk</code> típusú, <code sourcefile="softec/bantumi/index.md" sourcestartlinenumber="77">KövetkezőLyuk</code> nevű tulajdonsággal, melyben minden lyuknál beállítható, ki a soron következő lyuk. A getter-setter metódusokat itt nem kell kifejteni. (<em sourcefile="softec/bantumi/index.md" sourcestartlinenumber="77">prop-tab-tab</em>)</p>
+<pre><code class="lang-csharp" sourcefile="softec/bantumi/index.md" sourcestartlinenumber="79">     public Lyuk KövetkezőLyuk { get; set; }
+</code></pre>
+<p sourcefile="softec/bantumi/index.md" sourcestartlinenumber="83">(+/-) Az űrlapon helyezz el tervező nézetben lyukakat, és az óramutató járásával ellentétes irányban haladva a <em sourcefile="softec/bantumi/index.md" sourcestartlinenumber="83">Properties</em> ablakon keresztül minden <code sourcefile="softec/bantumi/index.md" sourcestartlinenumber="83">Lyuk</code>nál állítsd be a <code sourcefile="softec/bantumi/index.md" sourcestartlinenumber="83">KövetkezőLyuk</code> értékét! (Egyértelmű lesz, ha oda jutsz.)</p>
+<p sourcefile="softec/bantumi/index.md" sourcestartlinenumber="85">(+/-) Bővítsd a <code sourcefile="softec/bantumi/index.md" sourcestartlinenumber="85">Lyuk</code> osztályt <code sourcefile="softec/bantumi/index.md" sourcestartlinenumber="85">void</code> típusú <code sourcefile="softec/bantumi/index.md" sourcestartlinenumber="85">BabotKap</code> nevű publikus metódussal, mely paraméterként <code sourcefile="softec/bantumi/index.md" sourcestartlinenumber="85">mennyiBabot</code> nevű égész típusú paramétert kap! Ha a <code sourcefile="softec/bantumi/index.md" sourcestartlinenumber="85">mennyiBabot&gt; 0,</code></p>
+<ul sourcefile="softec/bantumi/index.md" sourcestartlinenumber="86">
+<li sourcefile="softec/bantumi/index.md" sourcestartlinenumber="86">növelje a <code sourcefile="softec/bantumi/index.md" sourcestartlinenumber="86">Lyuk</code> saját babjainak számát egyel a <code sourcefile="softec/bantumi/index.md" sourcestartlinenumber="86">BabokSzáma</code> tulajdonságának beállításával, majd</li>
+<li sourcefile="softec/bantumi/index.md" sourcestartlinenumber="87">hívja meg a <code sourcefile="softec/bantumi/index.md" sourcestartlinenumber="87">KövetkezőLyuk</code> <code sourcefile="softec/bantumi/index.md" sourcestartlinenumber="87">BabotKap</code> függvényét <code sourcefile="softec/bantumi/index.md" sourcestartlinenumber="87">mennyiBabot-1</code> paraméterrel!<br>
+(Egy babot megtart magának, a többit tovább adja a következő Lyuknak. Ha már nincs mit tovább adni, nem csinál semmit.)</li>
+</ul>
+<pre><code class="lang-csharp" sourcefile="softec/bantumi/index.md" sourcestartlinenumber="90">    public void BabotKap(int mennyiBabot)
+    {
+        if (mennyiBabot&gt;0) BabokSzáma++;
+            
+        if (mennyiBabot-1 &gt;0)
+        {                
+            KövetkezőLyuk.BabotKap(mennyiBabot - 1);
+        }
+    }
+</code></pre>
+<p sourcefile="softec/bantumi/index.md" sourcestartlinenumber="103">(+/-) A <code sourcefile="softec/bantumi/index.md" sourcestartlinenumber="103">Lyuk</code> konstruktorában rendelj esemény-kiszolgálót a <code sourcefile="softec/bantumi/index.md" sourcestartlinenumber="103">Button</code>-tól örökölt <code sourcefile="softec/bantumi/index.md" sourcestartlinenumber="103">Click</code> eseményhez.</p>
+<p sourcefile="softec/bantumi/index.md" sourcestartlinenumber="105">(+/-) Az esemény-kiszolgáló hívja meg <code sourcefile="softec/bantumi/index.md" sourcestartlinenumber="105">KövetkezőLyuk</code> <code sourcefile="softec/bantumi/index.md" sourcestartlinenumber="105">BabotKap</code> metódusát <code sourcefile="softec/bantumi/index.md" sourcestartlinenumber="105">BabokSzáma</code> paraméterrel, majd nullázza saját <code sourcefile="softec/bantumi/index.md" sourcestartlinenumber="105">BabokSzáma</code> tulajdonságát!   (A megkattintott <code sourcefile="softec/bantumi/index.md" sourcestartlinenumber="105">Lyuk</code> minden babját odaadja a következő <code sourcefile="softec/bantumi/index.md" sourcestartlinenumber="105">Lyuk</code>-nak.)</p>
+<pre><code class="lang-csharp" sourcefile="softec/bantumi/index.md" sourcestartlinenumber="107">    private void Lyuk_Click(object sender, EventArgs e)
+    {
+        KövetkezőLyuk.BabotKap(this.BabokSzáma);
+        this.BabokSzáma = 0;
+    }
+</code></pre>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/altinum/szamtud_docfx/blob/main/softec/bantumi/index.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

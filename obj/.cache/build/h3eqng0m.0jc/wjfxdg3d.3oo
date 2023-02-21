@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Lok&#225;lis adatb&#225;zis haszn&#225;lata </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Lok&#225;lis adatb&#225;zis haszn&#225;lata ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="lokális-adatbázis-használata" sourcefile="softeng/2b_gyak_lokalis_adatbazis_visual_studioban/index.md" sourcestartlinenumber="1">Lokális adatbázis használata</h1>
+
+<h2 id="a-feladat-célja" sourcefile="softeng/2b_gyak_lokalis_adatbazis_visual_studioban/index.md" sourcestartlinenumber="2">A feladat célja</h2>
+<p sourcefile="softeng/2b_gyak_lokalis_adatbazis_visual_studioban/index.md" sourcestartlinenumber="4">A fejlesztés korai fázisában, vagy egy kísérleti projektnél körülményes lehet adatbázis-szerveren kialakítani a tesztadatbázist. EFCore alatt lehetőség van lokális fájlrendszerben tárolt <code sourcefile="softeng/2b_gyak_lokalis_adatbazis_visual_studioban/index.md" sourcestartlinenumber="4">.mdf</code> kiterjesztésű adatbázis fájlt használni, mely később elhelyezhető adatbázis szerveren. A lokális adatbázis egyértelmű hátránya, hogy nem tudja egyszerre több felhasználó elérni az adatokat, de erre fejlesztés közben valószínűleg nincs is szükség. Viszont nincs szükség internet elérésre és/vagy szerver üzemeltetésére. Lokális adatbázis használata <em sourcefile="softeng/2b_gyak_lokalis_adatbazis_visual_studioban/index.md" sourcestartlinenumber="4">production</em>, azaz éles környezetben nem javasolt, fejlesztéshez és prototípus készítéshez viszont kiváló eszköz.</p>
+<p sourcefile="softeng/2b_gyak_lokalis_adatbazis_visual_studioban/index.md" sourcestartlinenumber="8">Ebben a feladatsorban:</p>
+<ol sourcefile="softeng/2b_gyak_lokalis_adatbazis_visual_studioban/index.md" sourcestartlinenumber="10">
+<li sourcefile="softeng/2b_gyak_lokalis_adatbazis_visual_studioban/index.md" sourcestartlinenumber="10"><p sourcefile="softeng/2b_gyak_lokalis_adatbazis_visual_studioban/index.md" sourcestartlinenumber="10">Létrehozunk egy új, Windows Froms App-ot .NET 6 alá</p>
+</li>
+<li sourcefile="softeng/2b_gyak_lokalis_adatbazis_visual_studioban/index.md" sourcestartlinenumber="12"><p sourcefile="softeng/2b_gyak_lokalis_adatbazis_visual_studioban/index.md" sourcestartlinenumber="12">A porjektben létrehozunk egy adatbázis állományt</p>
+</li>
+<li sourcefile="softeng/2b_gyak_lokalis_adatbazis_visual_studioban/index.md" sourcestartlinenumber="14"><p sourcefile="softeng/2b_gyak_lokalis_adatbazis_visual_studioban/index.md" sourcestartlinenumber="14">Az adatbázisban  SQL script futtatásával kialakítjuk  az adatbázis sémát, melyet feltöltünk adatokkal</p>
+</li>
+<li sourcefile="softeng/2b_gyak_lokalis_adatbazis_visual_studioban/index.md" sourcestartlinenumber="16"><p sourcefile="softeng/2b_gyak_lokalis_adatbazis_visual_studioban/index.md" sourcestartlinenumber="16">Telepítjük az EntityFrameworkCore használatához szükséges csomagokat NuGet segítségével</p>
+</li>
+<li sourcefile="softeng/2b_gyak_lokalis_adatbazis_visual_studioban/index.md" sourcestartlinenumber="18"></li>
+</ol>
+<p sourcefile="softeng/2b_gyak_lokalis_adatbazis_visual_studioban/index.md" sourcestartlinenumber="22">A feladatsor nagyon hasonlít az előző,  [A távoli adatbázis elérése](A távoli adatbázis elérése)  című feladatsorhoz, így egyben gyakorló feladatként is szolgál.</p>
+<h2 id="1-windows-forms-app-létrehozása-net-6-alatt" sourcefile="softeng/2b_gyak_lokalis_adatbazis_visual_studioban/index.md" sourcestartlinenumber="25">1. Windows Forms App létrehozása .NET 6 alatt</h2>
+<p sourcefile="softeng/2b_gyak_lokalis_adatbazis_visual_studioban/index.md" sourcestartlinenumber="26">(+/-) Hozz létre egy <code sourcefile="softeng/2b_gyak_lokalis_adatbazis_visual_studioban/index.md" sourcestartlinenumber="26">Windows Forms App</code> típusú alkalmazást Visual Studio-ban. A Solution és a Project neve tetszőleges, a példában a <code sourcefile="softeng/2b_gyak_lokalis_adatbazis_visual_studioban/index.md" sourcestartlinenumber="26">LocalDbTest</code> nevet használjuk.</p>
+<p sourcefile="softeng/2b_gyak_lokalis_adatbazis_visual_studioban/index.md" sourcestartlinenumber="30"><img src="../../images/create_a_new_project.png" sourcefile="softeng/2b_gyak_lokalis_adatbazis_visual_studioban/index.md" sourcestartlinenumber="30" alt="image-20220826161152390"></p>
+<hr sourcefile="softeng/2b_gyak_lokalis_adatbazis_visual_studioban/index.md" sourcestartlinenumber="32">
+<p sourcefile="softeng/2b_gyak_lokalis_adatbazis_visual_studioban/index.md" sourcestartlinenumber="34"><strong sourcefile="softeng/2b_gyak_lokalis_adatbazis_visual_studioban/index.md" sourcestartlinenumber="34">Vigyázz:</strong> <code sourcefile="softeng/2b_gyak_lokalis_adatbazis_visual_studioban/index.md" sourcestartlinenumber="34">Windows Forms App (.NET Framework)</code> template a régi .NET Framework 4.7 vagy 4.8 keretrendszert használja, nem a .NET 6.0-át! Ne keverd össze! Ha jól csináltad ez látszik:</p>
+<p sourcefile="softeng/2b_gyak_lokalis_adatbazis_visual_studioban/index.md" sourcestartlinenumber="38"><img src="../../images/create_a_new_project_60.png" sourcefile="softeng/2b_gyak_lokalis_adatbazis_visual_studioban/index.md" sourcestartlinenumber="38" alt="image-20220826161951275"></p>
+<h2 id="2-lokális-adatbázis-létrehozásának-lépései-egy-visual-studio-projektben" sourcefile="softeng/2b_gyak_lokalis_adatbazis_visual_studioban/index.md" sourcestartlinenumber="42">2. Lokális adatbázis létrehozásának lépései egy Visual Studio projektben</h2>
+<h3 id="21-adatbázis-állomány-létrehozása" sourcefile="softeng/2b_gyak_lokalis_adatbazis_visual_studioban/index.md" sourcestartlinenumber="44">2.1 Adatbázis állomány létrehozása</h3>
+<p sourcefile="softeng/2b_gyak_lokalis_adatbazis_visual_studioban/index.md" sourcestartlinenumber="46">(+/-) Adj egy <code sourcefile="softeng/2b_gyak_lokalis_adatbazis_visual_studioban/index.md" sourcestartlinenumber="46">Service based database</code> objektumot a projekthez, az objektum neve lesz az adatbázis neve! (A képen látható ablak a <em sourcefile="softeng/2b_gyak_lokalis_adatbazis_visual_studioban/index.md" sourcestartlinenumber="46">Solution Explorer</em>-ben jobb egérgombra megjelenő menüben az <em sourcefile="softeng/2b_gyak_lokalis_adatbazis_visual_studioban/index.md" sourcestartlinenumber="46">Add new item</em> menüpontra kattintva jelenik meg.)</p>
+<p sourcefile="softeng/2b_gyak_lokalis_adatbazis_visual_studioban/index.md" sourcestartlinenumber="50"><img src="../../images/add_service_based_database.png" sourcefile="softeng/2b_gyak_lokalis_adatbazis_visual_studioban/index.md" sourcestartlinenumber="50" alt="image-20220826162146589"></p>
+<p sourcefile="softeng/2b_gyak_lokalis_adatbazis_visual_studioban/index.md" sourcestartlinenumber="54">Ez két új fájlt fog létrehozni a Solution Explorerben:</p>
+<ul sourcefile="softeng/2b_gyak_lokalis_adatbazis_visual_studioban/index.md" sourcestartlinenumber="56">
+<li sourcefile="softeng/2b_gyak_lokalis_adatbazis_visual_studioban/index.md" sourcestartlinenumber="56">A .mdf kiterjesztésű maga az adatbázis</li>
+<li sourcefile="softeng/2b_gyak_lokalis_adatbazis_visual_studioban/index.md" sourcestartlinenumber="57">Az .ldf kiterjesztésű az adatbázishoz kapcsolódó log fájl. (Ez  utóbbit büntetlenül lehet törölni is, legfeljebb újra létrejön.)</li>
+</ul>
+<p sourcefile="softeng/2b_gyak_lokalis_adatbazis_visual_studioban/index.md" sourcestartlinenumber="59"><img src="../../images/service-based-db-files.png" sourcefile="softeng/2b_gyak_lokalis_adatbazis_visual_studioban/index.md" sourcestartlinenumber="59" alt="image-20220826162333092"></p>
+<h3 id="22-csatlakozás-server-explorer-ben-az-új-adatbázishoz" sourcefile="softeng/2b_gyak_lokalis_adatbazis_visual_studioban/index.md" sourcestartlinenumber="61">2.2 Csatlakozás Server Explorer-ben az új adatbázishoz</h3>
+<p sourcefile="softeng/2b_gyak_lokalis_adatbazis_visual_studioban/index.md" sourcestartlinenumber="63"><strong sourcefile="softeng/2b_gyak_lokalis_adatbazis_visual_studioban/index.md" sourcestartlinenumber="63">Figyelem:</strong> A  <em sourcefile="softeng/2b_gyak_lokalis_adatbazis_visual_studioban/index.md" sourcestartlinenumber="63">Server Explorer</em>-nek semmi köze nincs az épp megnyitott projekthez. A Visual Studio egy integrált fejlesztőkörnyezet,  és mint ilyen rendelkezik beépített funkcióval alapvető adatbázis műveletek elvégzésére.  A fejlesztőnek így nem kell elhagyni a VS-t, és más  alkalmazást telepíteni, ha egyszerű adatbázis műveleteket szeretne végrehajtani.  A Server Explorer ablakban  akkor is csatlakozhatunk adatbázishoz, ha a Visual Studio-ban éppen nincsen  projekt megnyitva.</p>
+<ul sourcefile="softeng/2b_gyak_lokalis_adatbazis_visual_studioban/index.md" sourcestartlinenumber="65">
+<li sourcefile="softeng/2b_gyak_lokalis_adatbazis_visual_studioban/index.md" sourcestartlinenumber="65"><p sourcefile="softeng/2b_gyak_lokalis_adatbazis_visual_studioban/index.md" sourcestartlinenumber="65">A <em sourcefile="softeng/2b_gyak_lokalis_adatbazis_visual_studioban/index.md" sourcestartlinenumber="65">Server Explorer</em>-be legegyszerűbben úgy tudod felvenni az új kapcsolatot, ha kettőt kattintasz az <code sourcefile="softeng/2b_gyak_lokalis_adatbazis_visual_studioban/index.md" sourcestartlinenumber="65">.mdf</code> állományra a Solution Explorer-ben.</p>
+</li>
+<li sourcefile="softeng/2b_gyak_lokalis_adatbazis_visual_studioban/index.md" sourcestartlinenumber="67"><p sourcefile="softeng/2b_gyak_lokalis_adatbazis_visual_studioban/index.md" sourcestartlinenumber="67">Ha ez valami miatt nem működik, a <em sourcefile="softeng/2b_gyak_lokalis_adatbazis_visual_studioban/index.md" sourcestartlinenumber="67">Server Explorer</em> <code sourcefile="softeng/2b_gyak_lokalis_adatbazis_visual_studioban/index.md" sourcestartlinenumber="67">Connect To Databese</code> ikonjával is fel lehet venni az új adatbáziskapcsoaltot.</p>
+</li>
+</ul>
+<p sourcefile="softeng/2b_gyak_lokalis_adatbazis_visual_studioban/index.md" sourcestartlinenumber="69">Tipp: Ha nincs kedved kitallózni a fájlrendszerben az adatbázis elérési útját, a <em sourcefile="softeng/2b_gyak_lokalis_adatbazis_visual_studioban/index.md" sourcestartlinenumber="69">Solution Explorer</em>-ben kattints az <code sourcefile="softeng/2b_gyak_lokalis_adatbazis_visual_studioban/index.md" sourcestartlinenumber="69">.mdf</code> állományra, és a <em sourcefile="softeng/2b_gyak_lokalis_adatbazis_visual_studioban/index.md" sourcestartlinenumber="69">Properties</em> ablakból másold vágólapra az elérési utat.</p>
+<p sourcefile="softeng/2b_gyak_lokalis_adatbazis_visual_studioban/index.md" sourcestartlinenumber="71"><img src="../../images/image-20220826164317104.png" sourcefile="softeng/2b_gyak_lokalis_adatbazis_visual_studioban/index.md" sourcestartlinenumber="71" alt="image-20220826164317104"></p>
+<p sourcefile="softeng/2b_gyak_lokalis_adatbazis_visual_studioban/index.md" sourcestartlinenumber="73">Az <em sourcefile="softeng/2b_gyak_lokalis_adatbazis_visual_studioban/index.md" sourcestartlinenumber="73">OK</em> gomb után ilyesminek kéne megjelennie a <em sourcefile="softeng/2b_gyak_lokalis_adatbazis_visual_studioban/index.md" sourcestartlinenumber="73">Server Explorer</em>-ben:</p>
+<p sourcefile="softeng/2b_gyak_lokalis_adatbazis_visual_studioban/index.md" sourcestartlinenumber="75"><img src="../../images/server_explorer_with_db.png" sourcefile="softeng/2b_gyak_lokalis_adatbazis_visual_studioban/index.md" sourcestartlinenumber="75" alt="image-20220826164002114"></p>
+<h3 id="23-adatbázis--séma-létrehozása--adatok-feltöltése" sourcefile="softeng/2b_gyak_lokalis_adatbazis_visual_studioban/index.md" sourcestartlinenumber="81">2.3 Adatbázis  séma létrehozása,  adatok feltöltése</h3>
+<p sourcefile="softeng/2b_gyak_lokalis_adatbazis_visual_studioban/index.md" sourcestartlinenumber="83">A következő lépésben <em sourcefile="softeng/2b_gyak_lokalis_adatbazis_visual_studioban/index.md" sourcestartlinenumber="83">Server Explorer</em> segítségével felépítünk egy többtáblás adatbázist  az előbb létrehozott <code sourcefile="softeng/2b_gyak_lokalis_adatbazis_visual_studioban/index.md" sourcestartlinenumber="83">.mdf</code> adatbázis állományban.  Kattintgatás helyett most egyenlőre legenerált SQL scriptet fogunk használni,  mely létrehozza a táblákat,  majd INSERT INTO-k  segítségével  feltölti őket adatokkal.</p>
+<p sourcefile="softeng/2b_gyak_lokalis_adatbazis_visual_studioban/index.md" sourcestartlinenumber="85">(+/- ) Töltsd le a <a href="Studies_CREATE_FILL.sql" sourcefile="softeng/2b_gyak_lokalis_adatbazis_visual_studioban/index.md" sourcestartlinenumber="85">Studies_CREATE_FILL.sql</a>  állományt, és nyisd meg  Notepad-ben, vagy Notepad++-ban.</p>
+<p sourcefile="softeng/2b_gyak_lokalis_adatbazis_visual_studioban/index.md" sourcestartlinenumber="87">(+/- ) Mielőtt vágólapra másolt a fájl teljes tartalmát,  érdemes megnézni hogy épül fel.</p>
+<p sourcefile="softeng/2b_gyak_lokalis_adatbazis_visual_studioban/index.md" sourcestartlinenumber="89">(+/- ) A <em sourcefile="softeng/2b_gyak_lokalis_adatbazis_visual_studioban/index.md" sourcestartlinenumber="89">Server Explorer</em>-ben kattints jobb gombbal az adatbázisra, majd a <em sourcefile="softeng/2b_gyak_lokalis_adatbazis_visual_studioban/index.md" sourcestartlinenumber="89">New query</em>  menüpont kiválasztása után megjelenő ablakba másold be az SQL scriptet.</p>
+<p sourcefile="softeng/2b_gyak_lokalis_adatbazis_visual_studioban/index.md" sourcestartlinenumber="91">(+/- ) Futtasd az SQL szkriptet  az SQL szerkesztő toolbar-ján  lévő kis üres zöld háromszög lenyomásával.  (Ezt könnyű összekeverni a projekt futtatására szolgáló teli zöld háromszöggel...)</p>
+<p sourcefile="softeng/2b_gyak_lokalis_adatbazis_visual_studioban/index.md" sourcestartlinenumber="93">(+/- ) Ha minden sikerült,  és kinyitod a <em sourcefile="softeng/2b_gyak_lokalis_adatbazis_visual_studioban/index.md" sourcestartlinenumber="93">Tables</em>  csoportot,  megjelennek az adatbázis táblák,  és a kiválasztott táblára jobb egérrel kattintva a <em sourcefile="softeng/2b_gyak_lokalis_adatbazis_visual_studioban/index.md" sourcestartlinenumber="93">Show Table Data</em>  menüponttal megtekintheted a tábla adatait.</p>
+<p sourcefile="softeng/2b_gyak_lokalis_adatbazis_visual_studioban/index.md" sourcestartlinenumber="95"><img src="../../images/show_table_data.png" sourcefile="softeng/2b_gyak_lokalis_adatbazis_visual_studioban/index.md" sourcestartlinenumber="95" alt="image-20220826171044850"></p>
+<h3 id="24-connection-string-kinyerése" sourcefile="softeng/2b_gyak_lokalis_adatbazis_visual_studioban/index.md" sourcestartlinenumber="97">2.4 Connection String kinyerése</h3>
+<p sourcefile="softeng/2b_gyak_lokalis_adatbazis_visual_studioban/index.md" sourcestartlinenumber="99">Mint ahogy arról már korábban esett szó, a <em sourcefile="softeng/2b_gyak_lokalis_adatbazis_visual_studioban/index.md" sourcestartlinenumber="99">Server Explorer</em>-nek semmi köze nincs az éppen megnyitott projekthez.  Eddig arra használtuk,  hogy a projektben lévő <code sourcefile="softeng/2b_gyak_lokalis_adatbazis_visual_studioban/index.md" sourcestartlinenumber="99">.mdf</code> adatbázis állományban felépítjük az adatbázist. Ahhoz hogy olyan C# programot tudjunk írni,  szükségünk lesz az úgynevezett <em sourcefile="softeng/2b_gyak_lokalis_adatbazis_visual_studioban/index.md" sourcestartlinenumber="99">connection string</em>-re.</p>
+<p sourcefile="softeng/2b_gyak_lokalis_adatbazis_visual_studioban/index.md" sourcestartlinenumber="101">A <em sourcefile="softeng/2b_gyak_lokalis_adatbazis_visual_studioban/index.md" sourcestartlinenumber="101">connection string</em>-ben mező--érték párokat találunk, ez az információ szükséges egy adatbázisba bejelentkezéshez, és egy meghatározott adatbázis eléréséhez. A következő lépésben erre a <em sourcefile="softeng/2b_gyak_lokalis_adatbazis_visual_studioban/index.md" sourcestartlinenumber="101">connection string</em>-re  lesz szükségünk ahhoz,  hogy legeneráljuk az adatbázis eléréséhez szükséges C# osztályokat.</p>
+<p sourcefile="softeng/2b_gyak_lokalis_adatbazis_visual_studioban/index.md" sourcestartlinenumber="103">Ha a <em sourcefile="softeng/2b_gyak_lokalis_adatbazis_visual_studioban/index.md" sourcestartlinenumber="103">Server Explorer</em>-ben  az adatbázisra kattintasz, a <em sourcefile="softeng/2b_gyak_lokalis_adatbazis_visual_studioban/index.md" sourcestartlinenumber="103">Properties</em>  ablakban megjelenik a <em sourcefile="softeng/2b_gyak_lokalis_adatbazis_visual_studioban/index.md" sourcestartlinenumber="103">connection string</em>.  Attól függően hogy a fájlrendszerben hol hoztad létre a Solution-t, valami ilyesmi:</p>
+<pre><code sourcefile="softeng/2b_gyak_lokalis_adatbazis_visual_studioban/index.md" sourcestartlinenumber="105">Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\TFS\SotwareEngineering\LocalDbTest\LocalDbTest\Database1.mdf;Integrated Security=True;Connect Timeout=30
+</code></pre>
+<p sourcefile="softeng/2b_gyak_lokalis_adatbazis_visual_studioban/index.md" sourcestartlinenumber="109">(+/-)  Jegyezd meg, hogy hol találod a <em sourcefile="softeng/2b_gyak_lokalis_adatbazis_visual_studioban/index.md" sourcestartlinenumber="109">connection string</em>-et később kelleni fog!</p>
+<h2 id="3-reverse-engineering" sourcefile="softeng/2b_gyak_lokalis_adatbazis_visual_studioban/index.md" sourcestartlinenumber="113">3. Reverse engineering</h2>
+<p sourcefile="softeng/2b_gyak_lokalis_adatbazis_visual_studioban/index.md" sourcestartlinenumber="115">A Microsoft-os terminológiában <em sourcefile="softeng/2b_gyak_lokalis_adatbazis_visual_studioban/index.md" sourcestartlinenumber="115">Revrese Engineering</em>-nek  hívjuk azt a folyamatot,  ami egy meglévő adatbázis séma alapján legenerálja azokat az osztályokat,  amelyek leképezik az adatbázist táblákat, a köztük lévő kapcsolatokat, illetve lehetőséget biztosítanak  adatok mozgatására  a kliens és a szerver között.</p>
+<h3 id="31-nuget-csomagok-hozzáadása-a-projekthez" sourcefile="softeng/2b_gyak_lokalis_adatbazis_visual_studioban/index.md" sourcestartlinenumber="117">3.1 NuGet csomagok hozzáadása a projekthez</h3>
+<p sourcefile="softeng/2b_gyak_lokalis_adatbazis_visual_studioban/index.md" sourcestartlinenumber="119">(+/-) Nyisdmeg a NuGet csomagkezelőt,  és add az alábbi csomagokat  a projekthez:</p>
+<p sourcefile="softeng/2b_gyak_lokalis_adatbazis_visual_studioban/index.md" sourcestartlinenumber="121"><img src="../../images/nuget.png" sourcefile="softeng/2b_gyak_lokalis_adatbazis_visual_studioban/index.md" sourcestartlinenumber="121" alt="image-20220826172723611"></p>
+<p sourcefile="softeng/2b_gyak_lokalis_adatbazis_visual_studioban/index.md" sourcestartlinenumber="124">A <code sourcefile="softeng/2b_gyak_lokalis_adatbazis_visual_studioban/index.md" sourcestartlinenumber="124">Microsoft.EntityFrameworkCore.Tools</code> és a <code sourcefile="softeng/2b_gyak_lokalis_adatbazis_visual_studioban/index.md" sourcestartlinenumber="124">Microsoft.EntityFrameworkCore.SqlServer</code> a NuGet konzolán keresztül ezzel a két paranccsal is hozzáadható a projekthez:</p>
+<pre><code class="lang-powershell" sourcefile="softeng/2b_gyak_lokalis_adatbazis_visual_studioban/index.md" sourcestartlinenumber="125">Install-Package Microsoft.EntityFrameworkCore.SqlServer
+Install-Package Microsoft.EntityFrameworkCore.Tools
+</code></pre>
+<h3 id="osztályok-generálása" sourcefile="softeng/2b_gyak_lokalis_adatbazis_visual_studioban/index.md" sourcestartlinenumber="131">Osztályok generálása</h3>
+<p sourcefile="softeng/2b_gyak_lokalis_adatbazis_visual_studioban/index.md" sourcestartlinenumber="133">Sajnos .NET Core alatt nem áll rendelkezésre grafikus eszköz és varázsló az adatbázis sémája alapját leképező C# osztályok előállítására. Ezt is a <em sourcefile="softeng/2b_gyak_lokalis_adatbazis_visual_studioban/index.md" sourcestartlinenumber="133">Package Manager Console</em>-ból kell megoldani parancssorból, de nem olyan veszélyes, mint első hallásra tűnik. (<code sourcefile="softeng/2b_gyak_lokalis_adatbazis_visual_studioban/index.md" sourcestartlinenumber="133">Tools</code>/<code sourcefile="softeng/2b_gyak_lokalis_adatbazis_visual_studioban/index.md" sourcestartlinenumber="133">NuGet Package Manager</code>)</p>
+<p sourcefile="softeng/2b_gyak_lokalis_adatbazis_visual_studioban/index.md" sourcestartlinenumber="135">A <code sourcefile="softeng/2b_gyak_lokalis_adatbazis_visual_studioban/index.md" sourcestartlinenumber="135">Scaffold-DbContext</code> parancs használata egyszerű, meg kell neki adni a <em sourcefile="softeng/2b_gyak_lokalis_adatbazis_visual_studioban/index.md" sourcestartlinenumber="135">Connection String</em>-et, és a projekten belül azt a mappát, ahova dolgozhat. A mappa neve tipikusan a <code sourcefile="softeng/2b_gyak_lokalis_adatbazis_visual_studioban/index.md" sourcestartlinenumber="135">Models</code>, ha csak egy adatbázisunk van.</p>
+<pre><code class="lang-powershell" sourcefile="softeng/2b_gyak_lokalis_adatbazis_visual_studioban/index.md" sourcestartlinenumber="137">Scaffold-DbContext &quot;[Connection String]&quot; Microsoft.EntityFrameworkCore.SqlServer -OutputDir [Mappa]
+</code></pre>
+<p sourcefile="softeng/2b_gyak_lokalis_adatbazis_visual_studioban/index.md" sourcestartlinenumber="141">Az adatbázis elérési útja  valószínűleg eltér az alábbi példától:</p>
+<pre><code class="lang-powershell" sourcefile="softeng/2b_gyak_lokalis_adatbazis_visual_studioban/index.md" sourcestartlinenumber="142">Scaffold-DbContext &quot;Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\TFS\SotwareEngineering\LocalDbTest\LocalDbTest\Database1.mdf;Integrated Security=True;Connect Timeout=30&quot; Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models
+</code></pre>
+<blockquote sourcefile="softeng/2b_gyak_lokalis_adatbazis_visual_studioban/index.md" sourcestartlinenumber="146">
+<p sourcefile="softeng/2b_gyak_lokalis_adatbazis_visual_studioban/index.md" sourcestartlinenumber="146">Fontos: ha a projektet nem lehet lefordítani, amikor kiadjuk a <code sourcefile="softeng/2b_gyak_lokalis_adatbazis_visual_studioban/index.md" sourcestartlinenumber="146">Scaffold-DbContext</code> parancsot, csak egy mérsékelten beszédes &quot;Bulid Failed.&quot;
+üzenetet kapunk. Ha nem ez a baj, használható a parancs végére a <code sourcefile="softeng/2b_gyak_lokalis_adatbazis_visual_studioban/index.md" sourcestartlinenumber="147">-Verbose</code> kapcsoló.</p>
+</blockquote>
+<p sourcefile="softeng/2b_gyak_lokalis_adatbazis_visual_studioban/index.md" sourcestartlinenumber="149">(+/-) Állítsd össze a <code sourcefile="softeng/2b_gyak_lokalis_adatbazis_visual_studioban/index.md" sourcestartlinenumber="149">Scaffold-DbContext</code>  parancsot saját <em sourcefile="softeng/2b_gyak_lokalis_adatbazis_visual_studioban/index.md" sourcestartlinenumber="149">connection string</em>-ed alapján,  majd futtasd  a <em sourcefile="softeng/2b_gyak_lokalis_adatbazis_visual_studioban/index.md" sourcestartlinenumber="149">Package Manager Console</em>-ban.</p>
+<p sourcefile="softeng/2b_gyak_lokalis_adatbazis_visual_studioban/index.md" sourcestartlinenumber="151">Ezután meglelenik a SolutionExplorer-ben egy <code sourcefile="softeng/2b_gyak_lokalis_adatbazis_visual_studioban/index.md" sourcestartlinenumber="151">Models</code> mappa benne a fájlokkal:</p>
+<p sourcefile="softeng/2b_gyak_lokalis_adatbazis_visual_studioban/index.md" sourcestartlinenumber="153"><img src="../../images/orm_files.png" sourcefile="softeng/2b_gyak_lokalis_adatbazis_visual_studioban/index.md" sourcestartlinenumber="153" alt="image-20220826174645290"></p>
+<p sourcefile="softeng/2b_gyak_lokalis_adatbazis_visual_studioban/index.md" sourcestartlinenumber="157">Érdemes megfigyelni az egyik osztály neve céltalanul borzasztó -- a feladatsor összeállításakor <code sourcefile="softeng/2b_gyak_lokalis_adatbazis_visual_studioban/index.md" sourcestartlinenumber="157">CTFSSOTWAREENGINEERINGLOCALDBTESTLOCALDBTESTDATABASE1MDFContext.cs</code>  lett.  Az osztály nevet az a bázis elérési útjából képezte <code sourcefile="softeng/2b_gyak_lokalis_adatbazis_visual_studioban/index.md" sourcestartlinenumber="157">Scaffold-DbContext</code>.</p>
+<ul sourcefile="softeng/2b_gyak_lokalis_adatbazis_visual_studioban/index.md" sourcestartlinenumber="159">
+<li sourcefile="softeng/2b_gyak_lokalis_adatbazis_visual_studioban/index.md" sourcestartlinenumber="159"><p sourcefile="softeng/2b_gyak_lokalis_adatbazis_visual_studioban/index.md" sourcestartlinenumber="159">A <code sourcefile="softeng/2b_gyak_lokalis_adatbazis_visual_studioban/index.md" sourcestartlinenumber="159">-Context</code>  kapcsoló  segítségével megadhatjuk  az adatbázis eléréséhez szükséges osztály nevét.  Microsoft  által javasolt elnevezési konvenció szerint  az osztály neve  az adatbázis nevéből és a <code sourcefile="softeng/2b_gyak_lokalis_adatbazis_visual_studioban/index.md" sourcestartlinenumber="159">Context</code> szóból áll össze.   Esetünkben például <code sourcefile="softeng/2b_gyak_lokalis_adatbazis_visual_studioban/index.md" sourcestartlinenumber="159">-Context Database1Context</code>.</p>
+</li>
+<li sourcefile="softeng/2b_gyak_lokalis_adatbazis_visual_studioban/index.md" sourcestartlinenumber="161"><p sourcefile="softeng/2b_gyak_lokalis_adatbazis_visual_studioban/index.md" sourcestartlinenumber="161">Ha az <code sourcefile="softeng/2b_gyak_lokalis_adatbazis_visual_studioban/index.md" sourcestartlinenumber="161">-OutputDir</code>  kapcsoló után megadott mappában  már ott vannak a fájlok, a <code sourcefile="softeng/2b_gyak_lokalis_adatbazis_visual_studioban/index.md" sourcestartlinenumber="161">-f</code>  kapcsolóval lehet rávenni <code sourcefile="softeng/2b_gyak_lokalis_adatbazis_visual_studioban/index.md" sourcestartlinenumber="161">Scaffold-DbContext</code>-et  a  már meglévő fájlok felülírására.</p>
+</li>
+</ul>
+<p sourcefile="softeng/2b_gyak_lokalis_adatbazis_visual_studioban/index.md" sourcestartlinenumber="163">A fentiek alapján a parancs a következőképp alakul:</p>
+<pre><code class="lang-powershell" sourcefile="softeng/2b_gyak_lokalis_adatbazis_visual_studioban/index.md" sourcestartlinenumber="165">Scaffold-DbContext &quot;Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\TFS\SotwareEngineering\LocalDbTest\LocalDbTest\Database1.mdf;Integrated Security=True;Connect Timeout=30&quot; Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models -Context Database1Context -f
+</code></pre>
+<ul sourcefile="softeng/2b_gyak_lokalis_adatbazis_visual_studioban/index.md" sourcestartlinenumber="169">
+<li sourcefile="softeng/2b_gyak_lokalis_adatbazis_visual_studioban/index.md" sourcestartlinenumber="169">Amíg nem hivatkozunk rá a <code sourcefile="softeng/2b_gyak_lokalis_adatbazis_visual_studioban/index.md" sourcestartlinenumber="169">CTFSSOTWAREENGINEERINGLOCALDBTESTLOCALDBTESTDATABASE1MDFContext.cs</code>   büntetlenül törölhető a projektből.</li>
+</ul>
+<p sourcefile="softeng/2b_gyak_lokalis_adatbazis_visual_studioban/index.md" sourcestartlinenumber="171">Érdemes megnézni egy osztályt, példáil az <code sourcefile="softeng/2b_gyak_lokalis_adatbazis_visual_studioban/index.md" sourcestartlinenumber="171">Instructor.cs</code>-t -- az SQL szerveren lévő <code sourcefile="softeng/2b_gyak_lokalis_adatbazis_visual_studioban/index.md" sourcestartlinenumber="171">Question</code> tábla leképezését tartalmazza:</p>
+<pre><code class="lang-csharp" sourcefile="softeng/2b_gyak_lokalis_adatbazis_visual_studioban/index.md" sourcestartlinenumber="173">using System;
+using System.Collections.Generic;
+
+namespace LocalDbTest.Models
+{
+    public partial class Instructor
+    {
+        public Instructor()
+        {
+            Lessons = new HashSet&lt;Lesson&gt;();
+        }
+
+        public int InstructorSk { get; set; }
+        public string? Salutation { get; set; }
+        public string Name { get; set; } = null!;
+        public byte? StatusFk { get; set; }
+        public string? EmployementFk { get; set; }
+
+        public virtual Employement? EmployementFkNavigation { get; set; }
+        public virtual Status? StatusFkNavigation { get; set; }
+        public virtual ICollection&lt;Lesson&gt; Lessons { get; set; }
+    }
+}
+</code></pre>
+<h2 id="4-forms-alapú-felhasználói-felület-készítése" sourcefile="softeng/2b_gyak_lokalis_adatbazis_visual_studioban/index.md" sourcestartlinenumber="201">4. Forms alapú felhasználói felület készítése</h2>
+<p sourcefile="softeng/2b_gyak_lokalis_adatbazis_visual_studioban/index.md" sourcestartlinenumber="203">A továbbiakban csak az elvégzendő feladat fog szerepelni ellenőrző listaként az előző feladatsorban elvégzett lépésekről. Ha elakadsz, ott találsz majd segítséget.</p>
+<h3 id="41-elvégzendő-feladatok" sourcefile="softeng/2b_gyak_lokalis_adatbazis_visual_studioban/index.md" sourcestartlinenumber="205">4.1 Elvégzendő feladatok</h3>
+<p sourcefile="softeng/2b_gyak_lokalis_adatbazis_visual_studioban/index.md" sourcestartlinenumber="207">(+/-)  Hozz létre egy <code sourcefile="softeng/2b_gyak_lokalis_adatbazis_visual_studioban/index.md" sourcestartlinenumber="207">DataGridView</code>-t, az ablak átméretezésével a <code sourcefile="softeng/2b_gyak_lokalis_adatbazis_visual_studioban/index.md" sourcestartlinenumber="207">DataGridView</code> is nőjön/csökkenjen</p>
+<p sourcefile="softeng/2b_gyak_lokalis_adatbazis_visual_studioban/index.md" sourcestartlinenumber="209">(+/-)  Hozz létre egy adatbáziskontextust (<code sourcefile="softeng/2b_gyak_lokalis_adatbazis_visual_studioban/index.md" sourcestartlinenumber="209">Database1Context</code>) és kösd hozzá a <code sourcefile="softeng/2b_gyak_lokalis_adatbazis_visual_studioban/index.md" sourcestartlinenumber="209">DataGridView</code>-hoz</p>
+<p sourcefile="softeng/2b_gyak_lokalis_adatbazis_visual_studioban/index.md" sourcestartlinenumber="211">(+/-)  Hozz létre egy mentés gombot, a kattintás eseménykezelőjében mentsed el a <code sourcefile="softeng/2b_gyak_lokalis_adatbazis_visual_studioban/index.md" sourcestartlinenumber="211">Database1Context</code> változásait (ügyelj a hibakezelésre)</p>
+<p sourcefile="softeng/2b_gyak_lokalis_adatbazis_visual_studioban/index.md" sourcestartlinenumber="213">(+/-)  Hozz létre egy <code sourcefile="softeng/2b_gyak_lokalis_adatbazis_visual_studioban/index.md" sourcestartlinenumber="213">BindingSource</code>-t és állítsd be a <code sourcefile="softeng/2b_gyak_lokalis_adatbazis_visual_studioban/index.md" sourcestartlinenumber="213">DataGridView</code> adatforrásának</p>
+<h2 id="-bónusz-az-érdeklődőknek" sourcefile="softeng/2b_gyak_lokalis_adatbazis_visual_studioban/index.md" sourcestartlinenumber="215">+ Bónusz az érdeklődőknek</h2>
+<p sourcefile="softeng/2b_gyak_lokalis_adatbazis_visual_studioban/index.md" sourcestartlinenumber="217">Eddig csak az egyik tábla adatait tudtuk megjeleníteni a <code sourcefile="softeng/2b_gyak_lokalis_adatbazis_visual_studioban/index.md" sourcestartlinenumber="217">DataGridView</code>-ban, de egy <code sourcefile="softeng/2b_gyak_lokalis_adatbazis_visual_studioban/index.md" sourcestartlinenumber="217">ListBox</code> és néhány sor kód segítségével át tudjuk állítani a <code sourcefile="softeng/2b_gyak_lokalis_adatbazis_visual_studioban/index.md" sourcestartlinenumber="217">DataGridView</code> adatforrását.</p>
+<p sourcefile="softeng/2b_gyak_lokalis_adatbazis_visual_studioban/index.md" sourcestartlinenumber="219">(+/-)  Hozz létre egy <code sourcefile="softeng/2b_gyak_lokalis_adatbazis_visual_studioban/index.md" sourcestartlinenumber="219">string</code> listát és pakold bele a táblák neveit</p>
+<pre><code class="lang-csharp" sourcefile="softeng/2b_gyak_lokalis_adatbazis_visual_studioban/index.md" sourcestartlinenumber="220">List&lt;string&gt; tableNames = new List&lt;string&gt; {&quot;Courses&quot;,&quot;Days&quot;,&quot;Employements&quot;,&quot;Instructors&quot;,&quot;Lessons&quot;,&quot;Rooms&quot;,&quot;Statuses&quot;,&quot;Times&quot;};
+</code></pre>
+<p sourcefile="softeng/2b_gyak_lokalis_adatbazis_visual_studioban/index.md" sourcestartlinenumber="224">(+/-)  Hozz létre egy <code sourcefile="softeng/2b_gyak_lokalis_adatbazis_visual_studioban/index.md" sourcestartlinenumber="224">ListBox</code>-ot és tedd a mentés gomb alá</p>
+<p sourcefile="softeng/2b_gyak_lokalis_adatbazis_visual_studioban/index.md" sourcestartlinenumber="226">(+/-)  A <code sourcefile="softeng/2b_gyak_lokalis_adatbazis_visual_studioban/index.md" sourcestartlinenumber="226">Form1</code> konstruktorában rendeld hozzá a táblanevek listát <code sourcefile="softeng/2b_gyak_lokalis_adatbazis_visual_studioban/index.md" sourcestartlinenumber="226">ListBox</code> adatforrásához</p>
+<pre><code class="lang-csharp" sourcefile="softeng/2b_gyak_lokalis_adatbazis_visual_studioban/index.md" sourcestartlinenumber="227">listBox1.DataSource = tableNames;
+</code></pre>
+<p sourcefile="softeng/2b_gyak_lokalis_adatbazis_visual_studioban/index.md" sourcestartlinenumber="231">(+/-)  Ha van <code sourcefile="softeng/2b_gyak_lokalis_adatbazis_visual_studioban/index.md" sourcestartlinenumber="231">BindingSource</code> beállítva a <code sourcefile="softeng/2b_gyak_lokalis_adatbazis_visual_studioban/index.md" sourcestartlinenumber="231">DataGridView</code> adatforrásának, akkor töröld ki a <code sourcefile="softeng/2b_gyak_lokalis_adatbazis_visual_studioban/index.md" sourcestartlinenumber="231">BindingSource</code>-t a <code sourcefile="softeng/2b_gyak_lokalis_adatbazis_visual_studioban/index.md" sourcestartlinenumber="231">Form1.cs [Design]</code>-ból és írd vissza az eredeti sorodat</p>
+<pre><code class="lang-csharp" sourcefile="softeng/2b_gyak_lokalis_adatbazis_visual_studioban/index.md" sourcestartlinenumber="232">        Models.Database1Context context = new(); //Érdekesség: ha üres konstruktorral hozol létre egy objektumot lehet rövidebben írni úgy, hogy egyszerűen csak annyit mondunk, hogy =new();
+        List&lt;string&gt; tableNames = new List&lt;string&gt; {&quot;Courses&quot;,&quot;Days&quot;,&quot;Employements&quot;,&quot;Instructors&quot;,&quot;Lessons&quot;,&quot;Rooms&quot;,&quot;Statuses&quot;,&quot;Times&quot;};
+        public Form1()
+        {
+            InitializeComponent();
+            dataGridView1.DataSource = context.Courses.ToList();
+            listBox1.DataSource = tableNames;
+        }
+</code></pre>
+<p sourcefile="softeng/2b_gyak_lokalis_adatbazis_visual_studioban/index.md" sourcestartlinenumber="243">(+/-)  Hozz létre egy eseménykezelőt a <code sourcefile="softeng/2b_gyak_lokalis_adatbazis_visual_studioban/index.md" sourcestartlinenumber="243">ListBox</code>-hoz</p>
+<p sourcefile="softeng/2b_gyak_lokalis_adatbazis_visual_studioban/index.md" sourcestartlinenumber="245">(+/-)  Nyerd ki a <code sourcefile="softeng/2b_gyak_lokalis_adatbazis_visual_studioban/index.md" sourcestartlinenumber="245">sender</code>-ből a kiválasztott elemet</p>
+<pre><code class="lang-csharp" sourcefile="softeng/2b_gyak_lokalis_adatbazis_visual_studioban/index.md" sourcestartlinenumber="246">         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string selectedTable = (sender as ListBox).SelectedItem.ToString();
+            //Castoljuk a sender objektumot ListBox-á, hogy legyen SelectedItem tulajdonsága
+        }
+</code></pre>
+<p sourcefile="softeng/2b_gyak_lokalis_adatbazis_visual_studioban/index.md" sourcestartlinenumber="254">Egy <code sourcefile="softeng/2b_gyak_lokalis_adatbazis_visual_studioban/index.md" sourcestartlinenumber="254">switch</code> statement-tel végig lehet menni minden egyes lehetőségen és attól függően be lehet állítani az új adatforrást</p>
+<pre><code class="lang-csharp" sourcefile="softeng/2b_gyak_lokalis_adatbazis_visual_studioban/index.md" sourcestartlinenumber="255">     private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string selectedTable = (sender as ListBox).SelectedItem.ToString();
+            switch (selectedTable)
+            {
+                case &quot;Courses&quot;:
+                    dataGridView1.DataSource = context.Courses.ToList();
+                    break;
+                case &quot;Days&quot;:
+                    dataGridView1.DataSource = context.Days.ToList();
+                    break;
+                case &quot;Employements&quot;:
+                    dataGridView1.DataSource = context.Employements.ToList();
+                    break;
+                case &quot;Instructors&quot;:
+                    dataGridView1.DataSource = context.Instructors.ToList();
+                    break;
+                    //...
+                    //...
+                    //...
+                default:
+                    break;
+            }
+        }
+    }
+</code></pre>
+<p sourcefile="softeng/2b_gyak_lokalis_adatbazis_visual_studioban/index.md" sourcestartlinenumber="282">De ennél van egy sokkal elegánsabb megoldás:
+A C#-ban lehet módosítani és elérni objektumok tulajdonságát úgy, hogy a tulajdonság nevét egy változóban tároljuk.
+Ezt a reflekciónak köszönhetjük, ami lehetővé teszi az osztály struktúrájának kifejezését kóddal.</p>
+<pre><code class="lang-csharp" sourcefile="softeng/2b_gyak_lokalis_adatbazis_visual_studioban/index.md" sourcestartlinenumber="286">using system.Reflection;
+//...
+     private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string selectedTable = (sender as ListBox).SelectedItem.ToString(); //listBox1 kiválasztott eleme
+
+            Type type = context.GetType(); //a type változóban eltároljuk azt, hogy a context (Models.Database1Context) milyen típusú - itt Models.Database1Context lesz a típus
+            PropertyInfo propertyInfo = type.GetProperty(selectedTable); //a propertyInfo-ban eltároljuk a tulajdonságot úgy, mint ahogy az előbb az eltároltuk osztály típusát a type-ban
+            object value = propertyInfo.GetValue(context); //az eltárolt tulajdonság kivonatán meghívjuk a GetValue-t, ami egy létező példányt kér egy olyan objektumból, aminek van a tulajdonsága a propertyInfo által reprezentált tulajdonság és ez visszaadja a context.Courses-t, a context.Instuctors-t attól függően, hogy mi van a selectedTable-ben
+
+            dataGridView1.DataSource = (value as IEnumerable&lt;object&gt;).ToList(); //végül pedig beállítjuk az új adatforrást, de ahhoz, hogy listává tudjuk alakítani először biztosítanunk kell róla a C#-ot, hogy ez az objektum (ami most a value) az listává alakítható. Mivel tudjuk, hogy a context.Courses ... mind átalakítható, így itt nem lesz gond. Ha rámegyünk az egérrel a .ToList()-re, akkor azt látjuk, hogy egy IEnumerable&lt;bármi&gt; kell neki, így mi adunk neki egy IEnumerable&lt;object&gt;-et, mert a value egy object.
+        }
+</code></pre>
+<p sourcefile="softeng/2b_gyak_lokalis_adatbazis_visual_studioban/index.md" sourcestartlinenumber="301">Ez az &quot;elegáns&quot; megoldás egy sorban:</p>
+<pre><code class="lang-csharp" sourcefile="softeng/2b_gyak_lokalis_adatbazis_visual_studioban/index.md" sourcestartlinenumber="302">    private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            dataGridView1.DataSource = (context.GetType().GetProperty((sender as ListBox).SelectedItem.ToString()).GetValue(context) as IEnumerable&lt;object&gt;).ToList();
+        }
+</code></pre>
+<p sourcefile="softeng/2b_gyak_lokalis_adatbazis_visual_studioban/index.md" sourcestartlinenumber="309">(+/-)  Valósítsd meg az egyik módszert és próbáld ki, hogy működik-e</p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/altinum/szamtud_docfx/blob/main/softeng/2b_gyak_lokalis_adatbazis_visual_studioban/index.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

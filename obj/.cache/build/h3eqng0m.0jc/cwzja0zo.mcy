@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>T&#225;bl&#225;k &#246;sszekapcsol&#225;sa </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="T&#225;bl&#225;k &#246;sszekapcsol&#225;sa ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="táblák-összekapcsolása" sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="1">Táblák összekapcsolása</h1>
+
+<p sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="3">Elméleti összefoglaló videó:
+<a href="gyak04-x264.mp4" sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="4">gyak04-x264.mp4</a></p>
+<h2 id="felvezető-anyag-egyen-összekapcsolás" sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="5">Felvezető anyag: Egyen-összekapcsolás</h2>
+<p sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="8">Összekapcsolás segítségével több táblából kérdezhetünk le adatokat.
+Tételezzük fel, hogy létezik az alábbi két tábla egy adatbázisban:</p>
+<p sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="12">A <code sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="12">fiu</code> tábla tartalma:</p>
+<table sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="14">
+<thead>
+<tr sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="14">
+<th sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="14">ID</th>
+<th sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="14">nev</th>
+</tr>
+</thead>
+<tbody>
+<tr sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="16">
+<td sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="16">1</td>
+<td sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="16">András</td>
+</tr>
+<tr sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="17">
+<td sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="17">2</td>
+<td sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="17">Attila</td>
+</tr>
+<tr sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="18">
+<td sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="18">3</td>
+<td sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="18">Albert</td>
+</tr>
+</tbody>
+</table>
+<p sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="20">A <code sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="20">lany</code> tábla tartalma:</p>
+<table sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="22">
+<thead>
+<tr sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="22">
+<th sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="22">ID</th>
+<th sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="22">nev</th>
+</tr>
+</thead>
+<tbody>
+<tr sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="24">
+<td sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="24">1</td>
+<td sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="24">Bori</td>
+</tr>
+<tr sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="25">
+<td sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="25">2</td>
+<td sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="25">Bea</td>
+</tr>
+<tr sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="26">
+<td sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="26">3</td>
+<td sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="26">Barbara</td>
+</tr>
+</tbody>
+</table>
+<p sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="28">Tekintsük az alábbi lekérdezést:</p>
+<pre><code class="lang-sql" sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="29">SELECT fiu.nev, lany.nev FROM fiu, lany
+</code></pre>
+<p sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="32">A lekérdezés a két tábla direkt szorzatát képezi, azaz eredményül az összes létező fiu-lány párosítást kapjuk:</p>
+<table sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="34">
+<thead>
+<tr sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="34">
+<th sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="34">fiu.nev</th>
+<th sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="34">lany.nev</th>
+</tr>
+</thead>
+<tbody>
+<tr sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="36">
+<td sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="36">András</td>
+<td sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="36">Bori</td>
+</tr>
+<tr sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="37">
+<td sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="37">Attila</td>
+<td sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="37">Bori</td>
+</tr>
+<tr sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="38">
+<td sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="38">Albert</td>
+<td sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="38">Bori</td>
+</tr>
+<tr sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="39">
+<td sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="39">András</td>
+<td sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="39">Bea</td>
+</tr>
+<tr sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="40">
+<td sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="40">Attila</td>
+<td sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="40">Bea</td>
+</tr>
+<tr sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="41">
+<td sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="41">Albert</td>
+<td sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="41">Bea</td>
+</tr>
+<tr sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="42">
+<td sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="42">András</td>
+<td sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="42">Barbara</td>
+</tr>
+<tr sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="43">
+<td sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="43">Attila</td>
+<td sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="43">Barbara</td>
+</tr>
+<tr sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="44">
+<td sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="44">Albert</td>
+<td sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="44">Barbara</td>
+</tr>
+</tbody>
+</table>
+<blockquote sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="46">
+<p sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="46">Ha több táblából kérdezünk le adatokat, a mezőnév elé írjuk ki a mezőhöz tartozó tábla nevét, pl. <code sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="46">fiu.nev</code>. Ha egy mezőnév a lekérdezésben szereplő táblák közül csak egyben fordul elő, a táblanév elhagyható. Az áttekinthetőség miatt mindenképpen érdemes megadni a táblanevet!</p>
+</blockquote>
+<p sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="48">A következő példa kedvéért egészítsük ki a <code sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="48">fiu</code> táblát <code sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="48">feleseg</code> mezővel, ahol a fiú feleségének azonosítóját tároljuk, majd rendeljük hozzá a fiukhoz a lányokat.</p>
+<p sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="50">A módosított <code sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="50">fiu</code> tábla tartalma:</p>
+<table sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="52">
+<thead>
+<tr sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="52">
+<th sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="52">ID</th>
+<th sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="52">nev</th>
+<th sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="52">feleseg</th>
+</tr>
+</thead>
+<tbody>
+<tr sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="54">
+<td sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="54">1</td>
+<td sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="54">András</td>
+<td sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="54">2</td>
+</tr>
+<tr sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="55">
+<td sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="55">2</td>
+<td sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="55">Attila</td>
+<td sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="55">3</td>
+</tr>
+<tr sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="56">
+<td sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="56">3</td>
+<td sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="56">Albert</td>
+<td sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="56">1</td>
+</tr>
+</tbody>
+</table>
+<pre><code class="lang-sql" sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="58">SELECT fiu.nev, fiu.feleseg, lany.id, lany.nev FROM fiu, lany
+</code></pre>
+<p sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="62">A lekérdezés a következő eredményt adja:</p>
+<table sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="64">
+<thead>
+<tr sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="64">
+<th sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="64">fiuk.nev</th>
+<th sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="64">fiu.feleseg</th>
+<th sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="64">lany. id</th>
+<th sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="64">lany.nev</th>
+</tr>
+</thead>
+<tbody>
+<tr sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="66">
+<td sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="66">András</td>
+<td sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="66">2</td>
+<td sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="66">1</td>
+<td sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="66">Bori</td>
+</tr>
+<tr sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="67">
+<td sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="67">Attila</td>
+<td sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="67">3</td>
+<td sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="67">1</td>
+<td sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="67">Bori</td>
+</tr>
+<tr sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="68">
+<td sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="68">Albert</td>
+<td sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="68">1</td>
+<td sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="68">1</td>
+<td sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="68">Bori</td>
+</tr>
+<tr sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="69">
+<td sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="69">András</td>
+<td sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="69">2</td>
+<td sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="69">2</td>
+<td sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="69">Bea</td>
+</tr>
+<tr sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="70">
+<td sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="70">Attila</td>
+<td sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="70">3</td>
+<td sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="70">2</td>
+<td sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="70">Bea</td>
+</tr>
+<tr sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="71">
+<td sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="71">Albert</td>
+<td sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="71">1</td>
+<td sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="71">2</td>
+<td sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="71">Bea</td>
+</tr>
+<tr sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="72">
+<td sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="72">András</td>
+<td sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="72">2</td>
+<td sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="72">3</td>
+<td sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="72">Barbara</td>
+</tr>
+<tr sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="73">
+<td sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="73">Attila</td>
+<td sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="73">3</td>
+<td sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="73">3</td>
+<td sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="73">Barbara</td>
+</tr>
+<tr sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="74">
+<td sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="74">Albert</td>
+<td sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="74">1</td>
+<td sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="74">3</td>
+<td sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="74">Barbara</td>
+</tr>
+</tbody>
+</table>
+<p sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="76">Ezek közül a sorok közül csak azok párok, ahol a <code sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="76">fiu.feleség</code> és a <code sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="76">lány.id</code> mező megegyeznek. Ha <code sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="76">WHERE</code> záradékban feltételként szabjuk a két mező azonosságát, csak a párokat adja eredményül a lekérdezés:</p>
+<pre><code class="lang-sql" sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="77">SELECT fiu.nev, fiuk.feleseg, lany.id, lany.nev FROM fiu, lany 
+WHERE fiu.feleseg = lany.id
+</code></pre>
+<p sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="81">fiu.nev|fiu.feleseg|lany .id|lany.nev
+-|-|-|-
+András|2|2|Bea
+Attila|3|3|Barbara
+Albert|1|1|Bori
+A táblák kapcsolásához használt mezők ki is hagyhatók az eredményből, ha nincs szükségünk rá:</p>
+<pre><code class="lang-sql" sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="88">SELECT fiu.nev, lany.nev FROM fiu, lany 
+WHERE fiu.feleseg = lany.id
+</code></pre>
+<table sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="92">
+<thead>
+<tr sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="92">
+<th sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="92">fiu.nev</th>
+<th sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="92">lany.nev</th>
+</tr>
+</thead>
+<tbody>
+<tr sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="94">
+<td sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="94">András</td>
+<td sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="94">Bea</td>
+</tr>
+<tr sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="95">
+<td sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="95">Attila</td>
+<td sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="95">Barbara</td>
+</tr>
+<tr sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="96">
+<td sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="96">Albert</td>
+<td sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="96">Bori</td>
+</tr>
+</tbody>
+</table>
+<blockquote sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="98">
+<p sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="98">Fontos megjegyezni, hogy az eredményhalmazból kimaradnak azok a fiuk, akiknek nincs megadva a feleségük.</p>
+</blockquote>
+<h2 id="másodlagos-táblanevek-aliasok" sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="100">Másodlagos táblanevek: aliasok</h2>
+<p sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="102">Az oszlopnevek táblanevekkel való minősítése meglehetősen sok időt vesz igénybe - főként,  ha a táblanevek hosszúak. A táblák neve helyett ilyenkor célszerűbb másodlagos táblaneveket használni. Ahogy az oszlop másodlagos neve más nevet ad az oszlopnak, a tábla másodlagos nevével is más néven hivatkozhatunk a táblára. Másodlagos táblanevek használatával
+az SQL-kód sokkal rövidebbé tehető</p>
+<pre><code class="lang-sql" sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="105">SELECT f.nev, l.nev FROM fiu AS f, lany AS l;
+</code></pre>
+<h1 id="mintafeladat-társkereső" sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="109">Mintafeladat: társkereső</h1>
+<p sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="111">Készítsd el egy társkereső iroda nyilvántartását! A keretsztori a következő: az irodát emelt díjas vonalon keresztül hívhatják a magányűzésre vágyó ifjak és leányzók. A jelentkezők bediktálják saját adataikat, majd megadják az ideális partnerrel szemben támasztott követelményeket. Az operátor a fent említett adatokat adatbázisban rögzíti, majd gombnyomásra lekérdezheti az adatbázis alapján megfelelő párosításokat.</p>
+<p sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="113">Nyilvántartandó adatok:</p>
+<ul sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="115">
+<li sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="115">Név</li>
+<li sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="116">Életkor</li>
+<li sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="117">e-mail</li>
+<li sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="118">csillagjegy</li>
+<li sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="119">Ideális partner minimális életkora</li>
+<li sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="120">Ideális partner maximális életkora</li>
+</ul>
+<blockquote sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="122">
+<p sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="122">Tipp: érdemes a fiukat és a lányokat külön táblában rögzíteni, mert így a későbbiekben más paramétereket tudunk a fiukról és a lányokról nyilvántartani, valamint többtáblás lekérdezéssel könnyű az összeillő párokat leszűrni:</p>
+<pre><code class="lang-sql" sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="123">SELECT fiuk.nev, lanyok.nev FROM fiuk, lanyok WHERE …
+</code></pre>
+</blockquote>
+<p sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="127"><code sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="127">Fiu</code> tábla tartalma:
+ID|nev	|email|	kor|p_kor_min|	p_kor_max
+-|-|-|-|-|-
+1	|András	||	25|	20	|25      |
+2	|Attila	||	30|	25	|32      |</p>
+<p sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="133"><code sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="133">Lány</code> tábla tartalma:
+ID|nev	email	|kor|	P_kor_min|	p_kor_max
+-|-|-|-|-|-
+3|Bori		||100	|10|	30|
+4|Barbara	||22|20|	26|</p>
+<pre><code class="lang-sql" sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="139">SELECT
+f.nev, l.nev FROM fiuk AS f, lanyok AS l 
+WHERE
+f.kor BETWEEN l.p_kor_min AND l.p_kor_max
+AND
+l.kor BETWEEN f.p_kor_min AND f.p_kor_max;
+</code></pre>
+<p sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="148">A lekérdezés a fenti táblákra eredményül egy párt ad:</p>
+<table sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="150">
+<thead>
+<tr sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="150">
+<th sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="150">f.nev</th>
+<th sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="150">l.nev</th>
+</tr>
+</thead>
+<tbody>
+<tr sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="152">
+<td sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="152">András</td>
+<td sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="152">Barbara</td>
+</tr>
+</tbody>
+</table>
+<p sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="155">Ha ezekkel megvagyunk, bővíthetjük az adatbázist: testmagasság, legmagasabb iskolai végzettség, stb.</p>
+<p sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="157">TIPP: a legmagasabb iskolai végzettséget érdemes számmal jelölni, mert így értelmezhetők a <code sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="157">&lt;=</code>, <code sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="157">&gt;=</code> relációk.</p>
+<p sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="159">Extra feladat: Egészítsétek ki a rendszert úgy, hogy figyelembe vegye a zodiákus jegyek összeférhetetlenségeit is!</p>
+<p sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="161">Tudományos szakirodalom egybehangzó véleménye: az azonos elemhez tartozó zodiákus jegyek harmóniában vannak egymással (120 fok).</p>
+<p sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="163">Mindegyik kategóriába három csillagjegy tartozik:
+Tüzes: Kos, Oroszlán, Nyilas.
+Vizes: Rák, Skorpió, Halak.
+Levegős: Ikrek, Mérleg, Vízöntő.
+Földies: Bika, Szűz, Bak.</p>
+<h1 id="mintafeladat-tábla-összekapcsolása-saját-magával" sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="169">Mintafeladat: tábla összekapcsolása saját magával</h1>
+<p sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="171">Oldjuk meg az előző társkeresős problémát úgy, hogy a fiukat és a lányokat egy táblában tároljuk!</p>
+<p sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="173">Tételezzünk fel egy ‘tag’ táblát, mely az eddigi mezőkön felül tartalmaz egy ‘neme’ mezőt, melynek értéke lehet F vagy L.</p>
+<p sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="175">Bizonyos esetben a táblát saját magával kell összekapcsolnunk. Ahhoz, hogy a táblában szereplőknek párt találjunk, a táblát önmagával kell összekapcsolni. Ebben az eljárásban kétszer használjuk fel ugyanazt a táblát.</p>
+<pre><code class="lang-sql" sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="177">SELECT f.*, l.* FROM tag AS f, tag AS l WHERE f.neme&lt;&gt;l.neme …
+</code></pre>
+<h1 id="mintafeladat-tanulmányi-adatbázis" sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="181">Mintafeladat: tanulmányi adatbázis</h1>
+<p sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="184">Feladat: készíts lekérdezést a TAO adatbázis teremfoglalásairól a tanár, az óra neve, a nap, a sáv és a terem feltüntetésével!</p>
+<p sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="186">Todo: ADATB. ELÉRHETŐSÉGE</p>
+<pre><code class="lang-sql" sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="188">SELECT 
+Oktatók.Név, Tantárgyak.Tantárgynév, Sávok.Időpont, Napok.Nap, Termek.Terem, Órák.Ókód
+FROM 
+oktatók, tantárgyak, termek, sávok, napok, órák
+WHERE 
+oktatók.okód=órák.tanár 
+AND
+tantárgyak.tkód=órák.tantárgy
+AND
+Órák.terem=Termek.tkód
+AND
+órák.nap=napok.nkód
+AND
+sávok.Skód=órák.sáv;
+</code></pre>
+<p sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="205">Feladat: készíts lekérdezést az ütköző teremfoglalásokról!</p>
+<pre><code class="lang-sql" sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="207">SELECT 
+a.*,b.*
+FROM órák a, órák b
+WHERE
+a.ókód&lt;&gt;b.ókód
+AND
+a.nap=b.nap
+AND
+a.sáv=b.sáv
+AND
+a.terem=b.terem;
+</code></pre>
+<h1 id="táblák-összekapcsolása-join-művelettel" sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="223">Táblák összekapcsolása JOIN művelettel</h1>
+<p sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="225">Mintafeladat: Készítsünk lekérdezést a tanulmányi adatbázis orak táblájából, mely tárgy szerinti ABC sorrendbe rendezi a rekordokat.</p>
+<pre><code class="lang-sql" sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="227">SELECT  *  FROM Orak ORDER BY orak.targy
+</code></pre>
+<p sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="230">Eredmény: A sorba rendezés nem sikerült, mert az <code sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="230">orak</code> táblában a <code sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="230">targy</code> mezőben idegen kulcsok vannak.</p>
+<p sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="233">Megoldás: Feladatot egy olyan lekérdezéssel lehet megoldani, melyben mindkét tábla szerepel. Az előzőek alapján:</p>
+<pre><code class="lang-sql" sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="235">SELECT  *  FROM orak, targy
+WHERE orak.targy = targyak.tkód
+</code></pre>
+<p sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="240">A fenti megoldással ekvivalens eredményt ad a következő lekérdezés:</p>
+<pre><code class="lang-sql" sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="242">SELECT * FROM orak INNER JOIN targy ON orak.targy=targyak.tkód
+</code></pre>
+<p sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="246">Az INNER JOIN használatára nézzünk egy másik példát! Listázzuk a dvd adatbázisból a filmek címeit és a nyelvüket, nyelv, majd cím szerinti abc sorrendben!</p>
+<pre><code class="lang-sql" sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="248">SELECT  * FROM nyelvek INNER JOIN dvd ON nyelvek.nyelv_id = dvd.nyelv
+ORDER BY nyelvek.nyelv, dvd.cim
+</code></pre>
+<p sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="253">A fenti lekérdezésből hiányoznak</p>
+<ul sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="254">
+<li sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="254">azok a DVD-k, melyek melyeknél nincs kitöltve a <code sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="254">nyelv</code> mező, valamint</li>
+<li sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="255">azok a nyelvek, amilyen nyelvű DVD nincs a <code sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="255">dvd</code> táblában.</li>
+</ul>
+<p sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="257">JOIN-ok típusai:</p>
+<ul sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="258">
+<li sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="258">INNER JOIN</li>
+<li sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="259">LEFT JOIN</li>
+<li sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="260">RIGHT JOIN (helyettesíthető left joinnal, ha a táblák nevét felcseréljük)</li>
+<li sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="261">FULL JOIN</li>
+</ul>
+<h2 id="feladatok" sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="264">Feladatok</h2>
+<p sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="265">A feladatok a <em sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="265">tanulmanyi</em> adatbázishoz készültek.  Készen elérhető a tanszéki kiszolgálón az alábbi kapcsolati adatokkal:</p>
+<table sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="267">
+<thead>
+<tr sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="267">
+<th sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="267"></th>
+<th sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="267"></th>
+</tr>
+</thead>
+<tbody>
+<tr sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="269">
+<td sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="269">Szerver</td>
+<td sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="269">bit.uni-corvinus.hu</td>
+</tr>
+<tr sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="270">
+<td sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="270">Felhasználónév</td>
+<td sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="270">hallgato</td>
+</tr>
+<tr sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="271">
+<td sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="271">Jelszó</td>
+<td sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="271">Password123</td>
+</tr>
+<tr sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="272">
+<td sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="272">Adatbázis</td>
+<td sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="272">tanulmanyi</td>
+</tr>
+</tbody>
+</table>
+<p sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="274">(+/-)1.	Jelenítsük meg az oktatók azonosítóját, titulusát és nevét!
+a.	A név két külön oszlopban jelenjen meg (vezetéknév és keresztnév– feltételezzük, hogy pontosan egy szóköz választja el őket).
+b.	A lista ne tartalmazza azokat a sorokat, ahol a titulus nincs megadva!</p>
+<p sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="278"><a href="Gy4_1.mp4" sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="278">Megoldás</a></p>
+<p sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="280">(+/-)2.	Készítsünk listát arról, hogy melyik teremben hány óra van!
+a.	Jelenítsük meg a termek azonosítóit és a teremben tartott órák számát!
+b.	Az oszlopokat nevezzük el értelemszerűen!
+c.	Szűrjünk azokra a termekre, ahol az órák száma legalább 3!</p>
+<p sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="285"><a href="Gy4_2.mp4" sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="285">Megoldás</a></p>
+<p sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="287">(+/-)3.	Készítsünk lekérdezést, amely megadja, hogy minimálian és maximálisan hány kreditet ér egy tantárgy!
+a.	Az oszlopokat nevezzük el értelemszerűen!
+b.	Ne vegyük figyelembe azokat a tantárgyakat, amelyek nevében az „alapjai” szó szerepel, vagy a tantárgy neve 10 karakternél rövidebb!</p>
+<p sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="291"><a href="Gy4_3.mp4" sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="291">Megoldás</a></p>
+<p sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="293">(+/-)4.	Melyek azok a sávok, amelyek délután (12:00 után) vannak?
+a.	Jelenítsük meg az adott sávok minden adatát!
+ÖTLET: az időpontot alakítsuk át óra:perc formára, majd konvertáljuk át time típusra</p>
+<p sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="297"><a href="Gy4_4.mp4" sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="297">Megoldás</a></p>
+<p sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="299">(+/-)5.	A tapasztalat alapján a tanársegédeknek 8, az óraadóknak 10 órájuk van egy héten. A többiek annyi órát tartanak, amennyi az elvárt óraszámuk. Készítsünk lekérdezést, amely minden beosztáshoz megjeleníti, hogy hetente hány túlóra tartozik hozzá!
+a.	A lekérdezés csak a beosztások nevét és a heti túlórák számát jelenítse meg!</p>
+<p sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="302"><a href="Gy4_5.mp4" sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="302">Megoldás</a></p>
+<p sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="304">(+/-)<strong sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="304">6.	Készítsünk listát arról, hogy melyik óra melyik teremben van!</strong>
+a.	Jelenítsük meg az óra azonosítóját és a terem nevét!
+b.	A listát szűrjük a 3 karakter hosszú, [100;199] zárt intervallumba eső termekre!
+Feltesszük, hogy a 3 karakter hosszú terem nevek csak számjegyeket tartalmaznak.</p>
+<p sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="309"><a href="Gy4_6.mp4" sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="309">Megoldás</a></p>
+<p sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="311">(+/-)<strong sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="311">7.	Hány óra van összesen az egyes napokon?</strong>
+a.	Jelenítsük meg a napok nevét és az órák számát az adott napon!
+b.	Az oszlopokat nevezzük el értelemszerűen!
+c.	A listát rendezzük óraszám szerint növekvő sorrendbe!</p>
+<p sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="316"><a href="Gy4_7.mp4" sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="316">Megoldás</a></p>
+<p sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="318">(+/-)<strong sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="318">8.	Melyek azok az oktatók, akiknek nincs órájuk?</strong>
+a.	Csak az oktatók neve jelenjen meg!
+b.	ÖTLET: használjunk LEFT JOIN-t, és szűrjünk azokra a rekordokra, ahol NULL érték van a JOIN utáni feltétel jobb oldalán!</p>
+<p sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="322"><a href="Gy4_8.mp4" sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="322">Megoldás</a></p>
+<p sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="324">(+/-)<strong sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="324">9.	Készítsünk lekérdezést, amely részletesen megjeleníti az egyes órák fontosabb adatait, azaz</strong>
+a.	Az órák azonosítóit, a tanár nevét, a tantárgy nevét, a terem nevét és a kezdési időpontot!
+b.	Az oszlopokat nevezzük el értelemszerűen!</p>
+<p sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="328"><a href="Gy4_9.mp4" sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="328">Megoldás</a></p>
+<p sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="330">(+/-)<strong sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="330">10.	Készítsünk listát arról, hogy melyik oktatónak hány órája van az Órák táblában!</strong>
+a.	A lista jelenítse meg az oktatók nevét, és az órák számát!
+b.	Az oszlopokat nevezzük el értelemszerűen!
+c.	A listából hagyjuk ki az óraadókat!</p>
+<p sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="335"><a href="Gy4_10.mp4" sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="335">Megoldás</a></p>
+<p sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="337">(+/-)11.	Készítsünk listát, amely tartalmazza az egyes órák azonosítóit, és az órán oktatott tantárgy felelősének nevét!
+a.	Rendezzük a listát a tantárgyfelelős neve szerint csökkenő sorrendbe!</p>
+<p sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="340"><a href="Gy4_11.mp4" sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="340">Megoldás</a></p>
+<p sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="342">(+/-)12.	Van-e olyan tantárgy, amelyből nincs óra?
+a.	Jelentsük meg a tantárgy nevét és a tantárgyfelelős nevét!</p>
+<p sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="345"><a href="Gy4_12.mp4" sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="345">Megoldás</a></p>
+<p sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="347">(+/-)13.	Készítsünk listát, amely megjeleníti, hogy az Orak táblában lévő órák közül hányat tart Dr., illetve nem Dr. titulusú tanár!
+a.	Az oszlopokat nevezzük el értelemszerűen!</p>
+<p sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="350"><a href="Gy4_13.mp4" sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="350">Megoldás</a></p>
+<p sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="352">(+/-)14.	Készítsünk listát arról, hogy beosztásonként hány óra szerepel az Orak táblában!
+a.	Jelenítsük meg a beosztások nevét és az órák számát!
+b.	A listát szűrjük azokra a beosztásokra, ahol ez az óraszám 10 feletti!</p>
+<p sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="356"><a href="Gy4_14.mp4" sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="356">Megoldás</a></p>
+<p sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="358">(+/-)15.	Melyek azok az órák, amelyek kezdési időpontja olyan sávba esik, amely a mostani időpont (óra:perc) után van?
+a.	Listázzuk az órák azonosítóit, valamint az órakezdés napját és időpontját!
+b.	A listát rendezzük az időpont szerint növekvő sorrendbe!</p>
+<p sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="362"><a href="Gy4_15.mp4" sourcefile="adatb/gyak4/index.md" sourcestartlinenumber="362">Megoldás</a></p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/altinum/szamtud_docfx/blob/main/adatb/gyak4/index.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

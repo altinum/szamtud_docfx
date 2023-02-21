@@ -1,0 +1,315 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Lok&#225;lis adatb&#225;zis haszn&#225;lata </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Lok&#225;lis adatb&#225;zis haszn&#225;lata ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="lokális-adatbázis-használata">Lokális adatbázis használata</h1>
+
+<h2 id="a-feladat-célja">A feladat célja</h2>
+<p>A fejlesztés korai fázisában, vagy egy kísérleti projektnél körülményes lehet adatbázis-szerveren kialakítani a tesztadatbázist. EFCore alatt lehetőség van lokális fájlrendszerben tárolt <code>.mdf</code> kiterjesztésű adatbázis fájlt használni, mely később elhelyezhető adatbázis szerveren. A lokális adatbázis egyértelmű hátránya, hogy nem tudja egyszerre több felhasználó elérni az adatokat, de erre fejlesztés közben valószínűleg nincs is szükség. Viszont nincs szükség internet elérésre és/vagy szerver üzemeltetésére. Lokális adatbázis használata <em>production</em>, azaz éles környezetben nem javasolt, fejlesztéshez és prototípus készítéshez viszont kiváló eszköz.</p>
+<p>Ebben a feladatsorban:</p>
+<ol>
+<li><p>Létrehozunk egy új, Windows Froms App-ot .NET 6 alá</p>
+</li>
+<li><p>A porjektben létrehozunk egy adatbázis állományt</p>
+</li>
+<li><p>Az adatbázisban  SQL script futtatásával kialakítjuk  az adatbázis sémát, melyet feltöltünk adatokkal</p>
+</li>
+<li><p>Telepítjük az EntityFrameworkCore használatához szükséges csomagokat NuGet segítségével</p>
+</li>
+<li></li>
+</ol>
+<p>A feladatsor nagyon hasonlít az előző,  [A távoli adatbázis elérése](A távoli adatbázis elérése)  című feladatsorhoz, így egyben gyakorló feladatként is szolgál.</p>
+<h2 id="1-windows-forms-app-létrehozása-net-6-alatt">1. Windows Forms App létrehozása .NET 6 alatt</h2>
+<p>(+/-) Hozz létre egy <code>Windows Forms App</code> típusú alkalmazást Visual Studio-ban. A Solution és a Project neve tetszőleges, a példában a <code>LocalDbTest</code> nevet használjuk.</p>
+<p><img src="../../images/create_a_new_project.png" alt="image-20220826161152390"></p>
+<hr>
+<p><strong>Vigyázz:</strong> <code>Windows Forms App (.NET Framework)</code> template a régi .NET Framework 4.7 vagy 4.8 keretrendszert használja, nem a .NET 6.0-át! Ne keverd össze! Ha jól csináltad ez látszik:</p>
+<p><img src="../../images/create_a_new_project_60.png" alt="image-20220826161951275"></p>
+<h2 id="2-lokális-adatbázis-létrehozásának-lépései-egy-visual-studio-projektben">2. Lokális adatbázis létrehozásának lépései egy Visual Studio projektben</h2>
+<h3 id="21-adatbázis-állomány-létrehozása">2.1 Adatbázis állomány létrehozása</h3>
+<p>(+/-) Adj egy <code>Service based database</code> objektumot a projekthez, az objektum neve lesz az adatbázis neve! (A képen látható ablak a <em>Solution Explorer</em>-ben jobb egérgombra megjelenő menüben az <em>Add new item</em> menüpontra kattintva jelenik meg.)</p>
+<p><img src="../../images/add_service_based_database.png" alt="image-20220826162146589"></p>
+<p>Ez két új fájlt fog létrehozni a Solution Explorerben:</p>
+<ul>
+<li>A .mdf kiterjesztésű maga az adatbázis</li>
+<li>Az .ldf kiterjesztésű az adatbázishoz kapcsolódó log fájl. (Ez  utóbbit büntetlenül lehet törölni is, legfeljebb újra létrejön.)</li>
+</ul>
+<p><img src="../../images/service-based-db-files.png" alt="image-20220826162333092"></p>
+<h3 id="22-csatlakozás-server-explorer-ben-az-új-adatbázishoz">2.2 Csatlakozás Server Explorer-ben az új adatbázishoz</h3>
+<p><strong>Figyelem:</strong> A  <em>Server Explorer</em>-nek semmi köze nincs az épp megnyitott projekthez. A Visual Studio egy integrált fejlesztőkörnyezet,  és mint ilyen rendelkezik beépített funkcióval alapvető adatbázis műveletek elvégzésére.  A fejlesztőnek így nem kell elhagyni a VS-t, és más  alkalmazást telepíteni, ha egyszerű adatbázis műveleteket szeretne végrehajtani.  A Server Explorer ablakban  akkor is csatlakozhatunk adatbázishoz, ha a Visual Studio-ban éppen nincsen  projekt megnyitva.</p>
+<ul>
+<li><p>A <em>Server Explorer</em>-be legegyszerűbben úgy tudod felvenni az új kapcsolatot, ha kettőt kattintasz az <code>.mdf</code> állományra a Solution Explorer-ben.</p>
+</li>
+<li><p>Ha ez valami miatt nem működik, a <em>Server Explorer</em> <code>Connect To Databese</code> ikonjával is fel lehet venni az új adatbáziskapcsoaltot.</p>
+</li>
+</ul>
+<p>Tipp: Ha nincs kedved kitallózni a fájlrendszerben az adatbázis elérési útját, a <em>Solution Explorer</em>-ben kattints az <code>.mdf</code> állományra, és a <em>Properties</em> ablakból másold vágólapra az elérési utat.</p>
+<p><img src="../../images/image-20220826164317104.png" alt="image-20220826164317104"></p>
+<p>Az <em>OK</em> gomb után ilyesminek kéne megjelennie a <em>Server Explorer</em>-ben:</p>
+<p><img src="../../images/server_explorer_with_db.png" alt="image-20220826164002114"></p>
+<h3 id="23-adatbázis--séma-létrehozása--adatok-feltöltése">2.3 Adatbázis  séma létrehozása,  adatok feltöltése</h3>
+<p>A következő lépésben <em>Server Explorer</em> segítségével felépítünk egy többtáblás adatbázist  az előbb létrehozott <code>.mdf</code> adatbázis állományban.  Kattintgatás helyett most egyenlőre legenerált SQL scriptet fogunk használni,  mely létrehozza a táblákat,  majd INSERT INTO-k  segítségével  feltölti őket adatokkal.</p>
+<p>(+/- ) Töltsd le a <a href="Studies_CREATE_FILL.sql">Studies_CREATE_FILL.sql</a>  állományt, és nyisd meg  Notepad-ben, vagy Notepad++-ban.</p>
+<p>(+/- ) Mielőtt vágólapra másolt a fájl teljes tartalmát,  érdemes megnézni hogy épül fel.</p>
+<p>(+/- ) A <em>Server Explorer</em>-ben kattints jobb gombbal az adatbázisra, majd a <em>New query</em>  menüpont kiválasztása után megjelenő ablakba másold be az SQL scriptet.</p>
+<p>(+/- ) Futtasd az SQL szkriptet  az SQL szerkesztő toolbar-ján  lévő kis üres zöld háromszög lenyomásával.  (Ezt könnyű összekeverni a projekt futtatására szolgáló teli zöld háromszöggel...)</p>
+<p>(+/- ) Ha minden sikerült,  és kinyitod a <em>Tables</em>  csoportot,  megjelennek az adatbázis táblák,  és a kiválasztott táblára jobb egérrel kattintva a <em>Show Table Data</em>  menüponttal megtekintheted a tábla adatait.</p>
+<p><img src="../../images/show_table_data.png" alt="image-20220826171044850"></p>
+<h3 id="24-connection-string-kinyerése">2.4 Connection String kinyerése</h3>
+<p>Mint ahogy arról már korábban esett szó, a <em>Server Explorer</em>-nek semmi köze nincs az éppen megnyitott projekthez.  Eddig arra használtuk,  hogy a projektben lévő <code>.mdf</code> adatbázis állományban felépítjük az adatbázist. Ahhoz hogy olyan C# programot tudjunk írni,  szükségünk lesz az úgynevezett <em>connection string</em>-re.</p>
+<p>A <em>connection string</em>-ben mező--érték párokat találunk, ez az információ szükséges egy adatbázisba bejelentkezéshez, és egy meghatározott adatbázis eléréséhez. A következő lépésben erre a <em>connection string</em>-re  lesz szükségünk ahhoz,  hogy legeneráljuk az adatbázis eléréséhez szükséges C# osztályokat.</p>
+<p>Ha a <em>Server Explorer</em>-ben  az adatbázisra kattintasz, a <em>Properties</em>  ablakban megjelenik a <em>connection string</em>.  Attól függően hogy a fájlrendszerben hol hoztad létre a Solution-t, valami ilyesmi:</p>
+<pre><code>Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\TFS\SotwareEngineering\LocalDbTest\LocalDbTest\Database1.mdf;Integrated Security=True;Connect Timeout=30
+</code></pre>
+<p>(+/-)  Jegyezd meg, hogy hol találod a <em>connection string</em>-et később kelleni fog!</p>
+<h2 id="3-reverse-engineering">3. Reverse engineering</h2>
+<p>A Microsoft-os terminológiában <em>Revrese Engineering</em>-nek  hívjuk azt a folyamatot,  ami egy meglévő adatbázis séma alapján legenerálja azokat az osztályokat,  amelyek leképezik az adatbázist táblákat, a köztük lévő kapcsolatokat, illetve lehetőséget biztosítanak  adatok mozgatására  a kliens és a szerver között.</p>
+<h3 id="31-nuget-csomagok-hozzáadása-a-projekthez">3.1 NuGet csomagok hozzáadása a projekthez</h3>
+<p>(+/-) Nyisdmeg a NuGet csomagkezelőt,  és add az alábbi csomagokat  a projekthez:</p>
+<p><img src="../../images/nuget.png" alt="image-20220826172723611"></p>
+<p>A <code>Microsoft.EntityFrameworkCore.Tools</code> és a <code>Microsoft.EntityFrameworkCore.SqlServer</code> a NuGet konzolán keresztül ezzel a két paranccsal is hozzáadható a projekthez:</p>
+<pre><code class="lang-powershell">Install-Package Microsoft.EntityFrameworkCore.SqlServer
+Install-Package Microsoft.EntityFrameworkCore.Tools
+</code></pre>
+<h3 id="osztályok-generálása">Osztályok generálása</h3>
+<p>Sajnos .NET Core alatt nem áll rendelkezésre grafikus eszköz és varázsló az adatbázis sémája alapját leképező C# osztályok előállítására. Ezt is a <em>Package Manager Console</em>-ból kell megoldani parancssorból, de nem olyan veszélyes, mint első hallásra tűnik. (<code>Tools</code>/<code>NuGet Package Manager</code>)</p>
+<p>A <code>Scaffold-DbContext</code> parancs használata egyszerű, meg kell neki adni a <em>Connection String</em>-et, és a projekten belül azt a mappát, ahova dolgozhat. A mappa neve tipikusan a <code>Models</code>, ha csak egy adatbázisunk van.</p>
+<pre><code class="lang-powershell">Scaffold-DbContext &quot;[Connection String]&quot; Microsoft.EntityFrameworkCore.SqlServer -OutputDir [Mappa]
+</code></pre>
+<p>Az adatbázis elérési útja  valószínűleg eltér az alábbi példától:</p>
+<pre><code class="lang-powershell">Scaffold-DbContext &quot;Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\TFS\SotwareEngineering\LocalDbTest\LocalDbTest\Database1.mdf;Integrated Security=True;Connect Timeout=30&quot; Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models
+</code></pre>
+<blockquote>
+<p>Fontos: ha a projektet nem lehet lefordítani, amikor kiadjuk a <code>Scaffold-DbContext</code> parancsot, csak egy mérsékelten beszédes &quot;Bulid Failed.&quot;
+üzenetet kapunk. Ha nem ez a baj, használható a parancs végére a <code>-Verbose</code> kapcsoló.</p>
+</blockquote>
+<p>(+/-) Állítsd össze a <code>Scaffold-DbContext</code>  parancsot saját <em>connection string</em>-ed alapján,  majd futtasd  a <em>Package Manager Console</em>-ban.</p>
+<p>Ezután meglelenik a SolutionExplorer-ben egy <code>Models</code> mappa benne a fájlokkal:</p>
+<p><img src="../../images/orm_files.png" alt="image-20220826174645290"></p>
+<p>Érdemes megfigyelni az egyik osztály neve céltalanul borzasztó -- a feladatsor összeállításakor <code>CTFSSOTWAREENGINEERINGLOCALDBTESTLOCALDBTESTDATABASE1MDFContext.cs</code>  lett.  Az osztály nevet az a bázis elérési útjából képezte <code>Scaffold-DbContext</code>.</p>
+<ul>
+<li><p>A <code>-Context</code>  kapcsoló  segítségével megadhatjuk  az adatbázis eléréséhez szükséges osztály nevét.  Microsoft  által javasolt elnevezési konvenció szerint  az osztály neve  az adatbázis nevéből és a <code>Context</code> szóból áll össze.   Esetünkben például <code>-Context Database1Context</code>.</p>
+</li>
+<li><p>Ha az <code>-OutputDir</code>  kapcsoló után megadott mappában  már ott vannak a fájlok, a <code>-f</code>  kapcsolóval lehet rávenni <code>Scaffold-DbContext</code>-et  a  már meglévő fájlok felülírására.</p>
+</li>
+</ul>
+<p>A fentiek alapján a parancs a következőképp alakul:</p>
+<pre><code class="lang-powershell">Scaffold-DbContext &quot;Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\TFS\SotwareEngineering\LocalDbTest\LocalDbTest\Database1.mdf;Integrated Security=True;Connect Timeout=30&quot; Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models -Context Database1Context -f
+</code></pre>
+<ul>
+<li>Amíg nem hivatkozunk rá a <code>CTFSSOTWAREENGINEERINGLOCALDBTESTLOCALDBTESTDATABASE1MDFContext.cs</code>   büntetlenül törölhető a projektből.</li>
+</ul>
+<p>Érdemes megnézni egy osztályt, példáil az <code>Instructor.cs</code>-t -- az SQL szerveren lévő <code>Question</code> tábla leképezését tartalmazza:</p>
+<pre><code class="lang-csharp">using System;
+using System.Collections.Generic;
+
+namespace LocalDbTest.Models
+{
+    public partial class Instructor
+    {
+        public Instructor()
+        {
+            Lessons = new HashSet&lt;Lesson&gt;();
+        }
+
+        public int InstructorSk { get; set; }
+        public string? Salutation { get; set; }
+        public string Name { get; set; } = null!;
+        public byte? StatusFk { get; set; }
+        public string? EmployementFk { get; set; }
+
+        public virtual Employement? EmployementFkNavigation { get; set; }
+        public virtual Status? StatusFkNavigation { get; set; }
+        public virtual ICollection&lt;Lesson&gt; Lessons { get; set; }
+    }
+}
+</code></pre>
+<h2 id="4-forms-alapú-felhasználói-felület-készítése">4. Forms alapú felhasználói felület készítése</h2>
+<p>A továbbiakban csak az elvégzendő feladat fog szerepelni ellenőrző listaként az előző feladatsorban elvégzett lépésekről. Ha elakadsz, ott találsz majd segítséget.</p>
+<h3 id="41-elvégzendő-feladatok">4.1 Elvégzendő feladatok</h3>
+<p>(+/-)  Hozz létre egy <code>DataGridView</code>-t, az ablak átméretezésével a <code>DataGridView</code> is nőjön/csökkenjen</p>
+<p>(+/-)  Hozz létre egy adatbáziskontextust (<code>Database1Context</code>) és kösd hozzá a <code>DataGridView</code>-hoz</p>
+<p>(+/-)  Hozz létre egy mentés gombot, a kattintás eseménykezelőjében mentsed el a <code>Database1Context</code> változásait (ügyelj a hibakezelésre)</p>
+<p>(+/-)  Hozz létre egy <code>BindingSource</code>-t és állítsd be a <code>DataGridView</code> adatforrásának</p>
+<h2 id="-bónusz-az-érdeklődőknek">+ Bónusz az érdeklődőknek</h2>
+<p>Eddig csak az egyik tábla adatait tudtuk megjeleníteni a <code>DataGridView</code>-ban, de egy <code>ListBox</code> és néhány sor kód segítségével át tudjuk állítani a <code>DataGridView</code> adatforrását.</p>
+<p>(+/-)  Hozz létre egy <code>string</code> listát és pakold bele a táblák neveit</p>
+<pre><code class="lang-csharp">List&lt;string&gt; tableNames = new List&lt;string&gt; {&quot;Courses&quot;,&quot;Days&quot;,&quot;Employements&quot;,&quot;Instructors&quot;,&quot;Lessons&quot;,&quot;Rooms&quot;,&quot;Statuses&quot;,&quot;Times&quot;};
+</code></pre>
+<p>(+/-)  Hozz létre egy <code>ListBox</code>-ot és tedd a mentés gomb alá</p>
+<p>(+/-)  A <code>Form1</code> konstruktorában rendeld hozzá a táblanevek listát <code>ListBox</code> adatforrásához</p>
+<pre><code class="lang-csharp">listBox1.DataSource = tableNames;
+</code></pre>
+<p>(+/-)  Ha van <code>BindingSource</code> beállítva a <code>DataGridView</code> adatforrásának, akkor töröld ki a <code>BindingSource</code>-t a <code>Form1.cs [Design]</code>-ból és írd vissza az eredeti sorodat</p>
+<pre><code class="lang-csharp">        Models.Database1Context context = new(); //Érdekesség: ha üres konstruktorral hozol létre egy objektumot lehet rövidebben írni úgy, hogy egyszerűen csak annyit mondunk, hogy =new();
+        List&lt;string&gt; tableNames = new List&lt;string&gt; {&quot;Courses&quot;,&quot;Days&quot;,&quot;Employements&quot;,&quot;Instructors&quot;,&quot;Lessons&quot;,&quot;Rooms&quot;,&quot;Statuses&quot;,&quot;Times&quot;};
+        public Form1()
+        {
+            InitializeComponent();
+            dataGridView1.DataSource = context.Courses.ToList();
+            listBox1.DataSource = tableNames;
+        }
+</code></pre>
+<p>(+/-)  Hozz létre egy eseménykezelőt a <code>ListBox</code>-hoz</p>
+<p>(+/-)  Nyerd ki a <code>sender</code>-ből a kiválasztott elemet</p>
+<pre><code class="lang-csharp">         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string selectedTable = (sender as ListBox).SelectedItem.ToString();
+            //Castoljuk a sender objektumot ListBox-á, hogy legyen SelectedItem tulajdonsága
+        }
+</code></pre>
+<p>Egy <code>switch</code> statement-tel végig lehet menni minden egyes lehetőségen és attól függően be lehet állítani az új adatforrást</p>
+<pre><code class="lang-csharp">     private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string selectedTable = (sender as ListBox).SelectedItem.ToString();
+            switch (selectedTable)
+            {
+                case &quot;Courses&quot;:
+                    dataGridView1.DataSource = context.Courses.ToList();
+                    break;
+                case &quot;Days&quot;:
+                    dataGridView1.DataSource = context.Days.ToList();
+                    break;
+                case &quot;Employements&quot;:
+                    dataGridView1.DataSource = context.Employements.ToList();
+                    break;
+                case &quot;Instructors&quot;:
+                    dataGridView1.DataSource = context.Instructors.ToList();
+                    break;
+                    //...
+                    //...
+                    //...
+                default:
+                    break;
+            }
+        }
+    }
+</code></pre>
+<p>De ennél van egy sokkal elegánsabb megoldás:
+A C#-ban lehet módosítani és elérni objektumok tulajdonságát úgy, hogy a tulajdonság nevét egy változóban tároljuk.
+Ezt a reflekciónak köszönhetjük, ami lehetővé teszi az osztály struktúrájának kifejezését kóddal.</p>
+<pre><code class="lang-csharp">using system.Reflection;
+//...
+     private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string selectedTable = (sender as ListBox).SelectedItem.ToString(); //listBox1 kiválasztott eleme
+
+            Type type = context.GetType(); //a type változóban eltároljuk azt, hogy a context (Models.Database1Context) milyen típusú - itt Models.Database1Context lesz a típus
+            PropertyInfo propertyInfo = type.GetProperty(selectedTable); //a propertyInfo-ban eltároljuk a tulajdonságot úgy, mint ahogy az előbb az eltároltuk osztály típusát a type-ban
+            object value = propertyInfo.GetValue(context); //az eltárolt tulajdonság kivonatán meghívjuk a GetValue-t, ami egy létező példányt kér egy olyan objektumból, aminek van a tulajdonsága a propertyInfo által reprezentált tulajdonság és ez visszaadja a context.Courses-t, a context.Instuctors-t attól függően, hogy mi van a selectedTable-ben
+
+            dataGridView1.DataSource = (value as IEnumerable&lt;object&gt;).ToList(); //végül pedig beállítjuk az új adatforrást, de ahhoz, hogy listává tudjuk alakítani először biztosítanunk kell róla a C#-ot, hogy ez az objektum (ami most a value) az listává alakítható. Mivel tudjuk, hogy a context.Courses ... mind átalakítható, így itt nem lesz gond. Ha rámegyünk az egérrel a .ToList()-re, akkor azt látjuk, hogy egy IEnumerable&lt;bármi&gt; kell neki, így mi adunk neki egy IEnumerable&lt;object&gt;-et, mert a value egy object.
+        }
+</code></pre>
+<p>Ez az &quot;elegáns&quot; megoldás egy sorban:</p>
+<pre><code class="lang-csharp">    private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            dataGridView1.DataSource = (context.GetType().GetProperty((sender as ListBox).SelectedItem.ToString()).GetValue(context) as IEnumerable&lt;object&gt;).ToList();
+        }
+</code></pre>
+<p>(+/-)  Valósítsd meg az egyik módszert és próbáld ki, hogy működik-e</p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/altinum/szamtud_docfx/blob/main/softeng/2b_gyak_lokalis_adatbazis_visual_studioban/index.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>1. gyakorlati feladatsor: In memory adatb&#225;zis </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="1. gyakorlati feladatsor: In memory adatb&#225;zis ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="1-gyakorlati-feladatsor-in-memory-adatbázis" sourcefile="softeng/1_gyak_in_memory_adatbazis/index.md" sourcestartlinenumber="3">1. gyakorlati feladatsor: In memory adatbázis</h1>
+
+<h2 id="gyakorlat-célja" sourcefile="softeng/1_gyak_in_memory_adatbazis/index.md" sourcestartlinenumber="5">Gyakorlat célja</h2>
+<p sourcefile="softeng/1_gyak_in_memory_adatbazis/index.md" sourcestartlinenumber="6">A <em sourcefile="softeng/1_gyak_in_memory_adatbazis/index.md" sourcestartlinenumber="6">Software Engineering</em> tárgy során a korábban megszokotthoz képest szignifikánsan nagyobb adathalmazokkal fogunk dolgozni. Az előző félévben felépítettünk egy kvízjátékot, aminek a tartalmait egy szöveges fájlból olvastuk ki egy-egy <code sourcefile="softeng/1_gyak_in_memory_adatbazis/index.md" sourcestartlinenumber="6">UserControl</code>-ba. A feladat a memóriában végzett adatkezelés témakörét készítette elő.</p>
+<p sourcefile="softeng/1_gyak_in_memory_adatbazis/index.md" sourcestartlinenumber="8">A mai gyakorlaton egy standardizáltabb megoldást választunk, és az adatainkat CSV (Comma Seperated Values) formátumú fájlokban fogjuk tárolni. Ebben a fájltípusban az egyes sorokban vesszővel elválasztva szerepelnek az adatok. Néhány nyelv azonban (köztük a magyar is) a számokban tizedesvesszőt használ pont helyett, így nem ideális a vesszővel történő elválasztás. Emiatt a nyelvi beállításoktól függően érdemes meghatározni, hogy vesszőt vagy pontosvesszőt használunk a CSV fájljainkban. Az egyszerűség kedvéért mi minden esetben pontosvesszőt használunk majd.</p>
+<p sourcefile="softeng/1_gyak_in_memory_adatbazis/index.md" sourcestartlinenumber="10">A szoftverünkben külön osztályt hozunk létre az adataink tárolására, és ezt az osztályt felhasználva jelenítjük majd meg az adatainkat. Ebben a példában fájlból olvasás mellett a fájlba írásra is nézünk példát.</p>
+<h2 id="1-hallgató-osztály-létrehozása" sourcefile="softeng/1_gyak_in_memory_adatbazis/index.md" sourcestartlinenumber="14">1. Hallgató osztály létrehozása</h2>
+<p sourcefile="softeng/1_gyak_in_memory_adatbazis/index.md" sourcestartlinenumber="16">A <code sourcefile="softeng/1_gyak_in_memory_adatbazis/index.md" sourcestartlinenumber="16">Student</code> osztályt  minden példánya egy-egy hallgató adatait tartalmazza majd.  Ez az osztály írja le, hogy milyen tulajdonságokkal rendelkezzen egy-egy hallgató. Egy <code sourcefile="softeng/1_gyak_in_memory_adatbazis/index.md" sourcestartlinenumber="16">Student</code>   típusú elemekből álló lista  gyakorlatilag egy  memóriában tárolt adatbázistáblának feleltethető meg.</p>
+<p sourcefile="softeng/1_gyak_in_memory_adatbazis/index.md" sourcestartlinenumber="18">(+/-) A <em sourcefile="softeng/1_gyak_in_memory_adatbazis/index.md" sourcestartlinenumber="18">SolutionExplorer</em>-ben hozz létre egy <code sourcefile="softeng/1_gyak_in_memory_adatbazis/index.md" sourcestartlinenumber="18">Models</code> nevű mappát! (A mappa neve egyébként tetszőleges.)</p>
+<p sourcefile="softeng/1_gyak_in_memory_adatbazis/index.md" sourcestartlinenumber="20">(+/-) A <code sourcefile="softeng/1_gyak_in_memory_adatbazis/index.md" sourcestartlinenumber="20">Models</code> nevű mappában hozz létre egy osztályt <code sourcefile="softeng/1_gyak_in_memory_adatbazis/index.md" sourcestartlinenumber="20">Student</code> néven egy külön fájlba! Ezt az osztályt kizárólag hallgatói adatok tárolására fogjuk használni.</p>
+<p sourcefile="softeng/1_gyak_in_memory_adatbazis/index.md" sourcestartlinenumber="22">A létrejövő kódban érdemes megfigyelni, hogy a névtérbe bekerült a projekt és a mappa neve is! Az osztályra a <code sourcefile="softeng/1_gyak_in_memory_adatbazis/index.md" sourcestartlinenumber="22">Models.Student</code> néven lehet az <code sourcefile="softeng/1_gyak_in_memory_adatbazis/index.md" sourcestartlinenumber="22">InMemoryDB</code> névtérből hivatkozni.</p>
+<pre><code class="lang-csharp" sourcefile="softeng/1_gyak_in_memory_adatbazis/index.md" sourcestartlinenumber="24">...
+namespace InMemoryDB.Models
+{
+    internal class Student
+    {
+
+    }
+}
+</code></pre>
+<p sourcefile="softeng/1_gyak_in_memory_adatbazis/index.md" sourcestartlinenumber="36">(+/-) Hozd létre az alábbi tulajdonságokat a <code sourcefile="softeng/1_gyak_in_memory_adatbazis/index.md" sourcestartlinenumber="36">Student</code> osztályon belül, és állítsd <em sourcefile="softeng/1_gyak_in_memory_adatbazis/index.md" sourcestartlinenumber="36">access modifier</em>-t <code sourcefile="softeng/1_gyak_in_memory_adatbazis/index.md" sourcestartlinenumber="36">public</code>-ra:</p>
+<table sourcefile="softeng/1_gyak_in_memory_adatbazis/index.md" sourcestartlinenumber="38">
+<thead>
+<tr sourcefile="softeng/1_gyak_in_memory_adatbazis/index.md" sourcestartlinenumber="38">
+<th sourcefile="softeng/1_gyak_in_memory_adatbazis/index.md" sourcestartlinenumber="38">Megnevezés</th>
+<th sourcefile="softeng/1_gyak_in_memory_adatbazis/index.md" sourcestartlinenumber="38">Adattípus</th>
+<th sourcefile="softeng/1_gyak_in_memory_adatbazis/index.md" sourcestartlinenumber="38">Leírás</th>
+</tr>
+</thead>
+<tbody>
+<tr sourcefile="softeng/1_gyak_in_memory_adatbazis/index.md" sourcestartlinenumber="40">
+<td sourcefile="softeng/1_gyak_in_memory_adatbazis/index.md" sourcestartlinenumber="40">Neptun</td>
+<td sourcefile="softeng/1_gyak_in_memory_adatbazis/index.md" sourcestartlinenumber="40">string</td>
+<td sourcefile="softeng/1_gyak_in_memory_adatbazis/index.md" sourcestartlinenumber="40">Neptun-kód</td>
+</tr>
+<tr sourcefile="softeng/1_gyak_in_memory_adatbazis/index.md" sourcestartlinenumber="41">
+<td sourcefile="softeng/1_gyak_in_memory_adatbazis/index.md" sourcestartlinenumber="41">Name</td>
+<td sourcefile="softeng/1_gyak_in_memory_adatbazis/index.md" sourcestartlinenumber="41">string</td>
+<td sourcefile="softeng/1_gyak_in_memory_adatbazis/index.md" sourcestartlinenumber="41">teljes név</td>
+</tr>
+<tr sourcefile="softeng/1_gyak_in_memory_adatbazis/index.md" sourcestartlinenumber="42">
+<td sourcefile="softeng/1_gyak_in_memory_adatbazis/index.md" sourcestartlinenumber="42">BirthDate</td>
+<td sourcefile="softeng/1_gyak_in_memory_adatbazis/index.md" sourcestartlinenumber="42">DateTime?</td>
+<td sourcefile="softeng/1_gyak_in_memory_adatbazis/index.md" sourcestartlinenumber="42">születési dátum</td>
+</tr>
+<tr sourcefile="softeng/1_gyak_in_memory_adatbazis/index.md" sourcestartlinenumber="43">
+<td sourcefile="softeng/1_gyak_in_memory_adatbazis/index.md" sourcestartlinenumber="43">AverageGrade</td>
+<td sourcefile="softeng/1_gyak_in_memory_adatbazis/index.md" sourcestartlinenumber="43">decimal?</td>
+<td sourcefile="softeng/1_gyak_in_memory_adatbazis/index.md" sourcestartlinenumber="43">tanulmányi átlag</td>
+</tr>
+<tr sourcefile="softeng/1_gyak_in_memory_adatbazis/index.md" sourcestartlinenumber="44">
+<td sourcefile="softeng/1_gyak_in_memory_adatbazis/index.md" sourcestartlinenumber="44">IsActive</td>
+<td sourcefile="softeng/1_gyak_in_memory_adatbazis/index.md" sourcestartlinenumber="44">bool</td>
+<td sourcefile="softeng/1_gyak_in_memory_adatbazis/index.md" sourcestartlinenumber="44">aktív-e a hallgató az adott félévben</td>
+</tr>
+</tbody>
+</table>
+<blockquote sourcefile="softeng/1_gyak_in_memory_adatbazis/index.md" sourcestartlinenumber="47">
+<p sourcefile="softeng/1_gyak_in_memory_adatbazis/index.md" sourcestartlinenumber="47"><strong sourcefile="softeng/1_gyak_in_memory_adatbazis/index.md" sourcestartlinenumber="47">Nullable type</strong>
+A C# nyelvben a változótípus után tett kérdőjellel jelöljük az úgynevezett nullable type-okat. Az ilyen típusú változók a megszokott értékeken kívül felvehetik a null értéket is. Ezzel lehetőséget adunk a felhasználónak, hogy bizonyos értékeket ne állítson be, a példában tehát a születési dátum és a tanulmányi átlag lehet ismeretlen.</p>
+</blockquote>
+<p sourcefile="softeng/1_gyak_in_memory_adatbazis/index.md" sourcestartlinenumber="50">Megoldás:</p>
+<pre><code class="lang-csharp" sourcefile="softeng/1_gyak_in_memory_adatbazis/index.md" sourcestartlinenumber="51">public class Student
+{
+    public string Neptun { get; set; }
+    public string Name { get; set; }
+    public DateTime? BirthDate { get; set; }
+    public decimal? AverageGrade { get; set; }
+    public bool IsActive { get; set; }
+}
+</code></pre>
+<h2 id="2-űrlap-felépítése" sourcefile="softeng/1_gyak_in_memory_adatbazis/index.md" sourcestartlinenumber="61">2. Űrlap felépítése</h2>
+<p sourcefile="softeng/1_gyak_in_memory_adatbazis/index.md" sourcestartlinenumber="63">(+/-) Hozz létre egy <code sourcefile="softeng/1_gyak_in_memory_adatbazis/index.md" sourcestartlinenumber="63">DataGridView</code>-t a <code sourcefile="softeng/1_gyak_in_memory_adatbazis/index.md" sourcestartlinenumber="63">Form1</code> design nézetében, és nevezd át <code sourcefile="softeng/1_gyak_in_memory_adatbazis/index.md" sourcestartlinenumber="63">dgv</code>-re!</p>
+<p sourcefile="softeng/1_gyak_in_memory_adatbazis/index.md" sourcestartlinenumber="65">(+/-) Hozz létre egy <em sourcefile="softeng/1_gyak_in_memory_adatbazis/index.md" sourcestartlinenumber="65">Save</em> és egy <em sourcefile="softeng/1_gyak_in_memory_adatbazis/index.md" sourcestartlinenumber="65">Load</em> feliratú gombot is a <code sourcefile="softeng/1_gyak_in_memory_adatbazis/index.md" sourcestartlinenumber="65">Form1</code> design nézetében és nevezd el őket rendre <code sourcefile="softeng/1_gyak_in_memory_adatbazis/index.md" sourcestartlinenumber="65">btnSave</code>-nek és <code sourcefile="softeng/1_gyak_in_memory_adatbazis/index.md" sourcestartlinenumber="65">btnLoad</code>-nak!</p>
+<p sourcefile="softeng/1_gyak_in_memory_adatbazis/index.md" sourcestartlinenumber="67">(+/-) Gondoskodj róla, hogy a gombok mindig a Form jobb felső sarkában legyenek, a <code sourcefile="softeng/1_gyak_in_memory_adatbazis/index.md" sourcestartlinenumber="67">DataGridView</code> pedig töltse ki a rendelkezésre álló helyet!</p>
+<blockquote sourcefile="softeng/1_gyak_in_memory_adatbazis/index.md" sourcestartlinenumber="69">
+<p sourcefile="softeng/1_gyak_in_memory_adatbazis/index.md" sourcestartlinenumber="69">Az <strong sourcefile="softeng/1_gyak_in_memory_adatbazis/index.md" sourcestartlinenumber="69">Anchor</strong>, azaz horgony a &quot;szülő&quot; objektum (jelen esetben a <code sourcefile="softeng/1_gyak_in_memory_adatbazis/index.md" sourcestartlinenumber="69">Form</code>) négy oldalához (Top, Bottom, Left, Right) tudja rögzíteni az érintett vezérlőt. Ha egy Anchor aktív, akkor a vezérlőnek az őt tartalmazó objektum adott oldalától vett távolsága állandó. A jelen példában ez a form átméretezésekor is érvényes. Alapértelmezetten minden vezérlő Top és Left horgonya aktív, ezért van értelme az ennek megfelelő tulajdonságokkal meghatározni egy vezérlő pozícióját a <code sourcefile="softeng/1_gyak_in_memory_adatbazis/index.md" sourcestartlinenumber="69">Form</code>-on. Ha például a Top és Right horgonyok aktívak, és kihelyezünk egy gombot a jobb felső sarokba, akkor az átméretezéskor is mindig ott fog maradni. Az Anchorok akkor is aktívak maradnak, ha két ellentétes oldalhoz állítjuk be őket. Ebben az esetben a fix távolságot úgy biztosítja a rendszer, hogy a &quot;szülő&quot; objektum átméretezésének megfelelően átméretezi a vezérlőt is. Ha mind a négy Anchort beállítjuk, akkor a vezérlőnk mindig kitölti a rendelkezésre álló helyet, és csak annyi szabad hely marad körülötte, amennyi eredetileg is volt. Az Anchor tulajdonság kódból történő beállítása körülményes, ezért javasolt a tervező nézet használata, de utólag a Designer.cs-ben meg lehet nézni az automatikusan generált mintakódot.</p>
+<p sourcefile="softeng/1_gyak_in_memory_adatbazis/index.md" sourcestartlinenumber="71"><img src="in-memory-db-1.png" sourcefile="softeng/1_gyak_in_memory_adatbazis/index.md" sourcestartlinenumber="71" alt="kep1"></p>
+</blockquote>
+<h2 id="3-hallgató-lista-létrehozása" sourcefile="softeng/1_gyak_in_memory_adatbazis/index.md" sourcestartlinenumber="73">3. Hallgató lista létrehozása</h2>
+<h3 id="31-adatkötött-lista-létrehozása" sourcefile="softeng/1_gyak_in_memory_adatbazis/index.md" sourcestartlinenumber="75">3.1 Adatkötött lista létrehozása</h3>
+<p sourcefile="softeng/1_gyak_in_memory_adatbazis/index.md" sourcestartlinenumber="77">(+/-) Hozz létre egy adatkötött listát (<code sourcefile="softeng/1_gyak_in_memory_adatbazis/index.md" sourcestartlinenumber="77">BindingList</code>) a hallgatók tárolására a <code sourcefile="softeng/1_gyak_in_memory_adatbazis/index.md" sourcestartlinenumber="77">Form1</code>-ben, osztály szinten!</p>
+<p sourcefile="softeng/1_gyak_in_memory_adatbazis/index.md" sourcestartlinenumber="79">▶ Megoldás:</p>
+<pre><code class="lang-csharp" sourcefile="softeng/1_gyak_in_memory_adatbazis/index.md" sourcestartlinenumber="80">using System.ComponentModel; //névtér, ahol a BindingList megtalálható
+
+// Adatkötött lista
+BindingList&lt;Models.Student&gt; students = new BindingList&lt;Models.Student&gt;();
+</code></pre>
+<blockquote sourcefile="softeng/1_gyak_in_memory_adatbazis/index.md" sourcestartlinenumber="86">
+<p sourcefile="softeng/1_gyak_in_memory_adatbazis/index.md" sourcestartlinenumber="86">Megjegyzés:
+Ez a példa projekt &quot;normál&quot; lista használata esetén is működik, érdemes kipróbálni. Az egyetlen különbség, hogy adatkötés hiányában nem fogjuk tudni szerkeszteni a listánkat a felhasználói felületen, de az adatok megjelennek:</p>
+<pre><code class="lang-csharp" sourcefile="softeng/1_gyak_in_memory_adatbazis/index.md" sourcestartlinenumber="89">// Normál lista
+List&lt;Models.Student&gt; students = new List&lt;Models.Student&gt;();
+</code></pre>
+</blockquote>
+<h3 id="32-adatkötött-lista-adatforrásának-beállítása" sourcefile="softeng/1_gyak_in_memory_adatbazis/index.md" sourcestartlinenumber="94">3.2 Adatkötött lista adatforrásának beállítása</h3>
+<blockquote sourcefile="softeng/1_gyak_in_memory_adatbazis/index.md" sourcestartlinenumber="96">
+<p sourcefile="softeng/1_gyak_in_memory_adatbazis/index.md" sourcestartlinenumber="96">A DataGridView az adatforrásként megadott lista (felsorolás) sorait jeleníti meg. Az oszlopai szerkeszthetők kódból, de alapértelmezetten a lista összes publikus Property-jét jeleníti meg oszloponként az eredeti nevekkel.</p>
+</blockquote>
+<p sourcefile="softeng/1_gyak_in_memory_adatbazis/index.md" sourcestartlinenumber="98">(+/-) A Form konstruktorában állítsd be, hogy a <code sourcefile="softeng/1_gyak_in_memory_adatbazis/index.md" sourcestartlinenumber="98">dgv</code> adatforrása (<code sourcefile="softeng/1_gyak_in_memory_adatbazis/index.md" sourcestartlinenumber="98">DataSource</code>) a students lista legyen!</p>
+<p sourcefile="softeng/1_gyak_in_memory_adatbazis/index.md" sourcestartlinenumber="100">Adatkötött lista esetén a lista elemei szerkeszthetők és a listaelemek automatikusan mentődnek a memóriába, ha átállunk egy másik sorra. A <code sourcefile="softeng/1_gyak_in_memory_adatbazis/index.md" sourcestartlinenumber="100">DataGridView</code> azonnal figyelmeztet, ha egy oszlopba nem az annak megfelelő értéket próbáljuk beállítani.</p>
+<p sourcefile="softeng/1_gyak_in_memory_adatbazis/index.md" sourcestartlinenumber="102"><img src="in-memory-db-2.png" sourcefile="softeng/1_gyak_in_memory_adatbazis/index.md" sourcestartlinenumber="102" alt="kep2"></p>
+<p sourcefile="softeng/1_gyak_in_memory_adatbazis/index.md" sourcestartlinenumber="104">▶ Megoldás:</p>
+<pre><code class="lang-csharp" sourcefile="softeng/1_gyak_in_memory_adatbazis/index.md" sourcestartlinenumber="105">// Konstruktor
+public Form1()
+{
+    InitializeComponent();           
+
+    // A hallgató lista összekötése a DataGridView-al
+    // Innentől már nem kell foglalkoznunk a dgv kezelésével, a felhasználó ezen keresztül el fogja érni a students listát        
+    // A kód oldalról pedig csak magát a students listát fogjuk szerkeszteni
+    dgv.DataSource = students;
+}
+</code></pre>
+<h2 id="4-adatkötött-vezérlők-használata" sourcefile="softeng/1_gyak_in_memory_adatbazis/index.md" sourcestartlinenumber="117">4. Adatkötött vezérlők használata</h2>
+<h3 id="41-űrlap-újratervezése" sourcefile="softeng/1_gyak_in_memory_adatbazis/index.md" sourcestartlinenumber="119">4.1 Űrlap újratervezése</h3>
+<p sourcefile="softeng/1_gyak_in_memory_adatbazis/index.md" sourcestartlinenumber="121">(+/-) Tervezd át az űrlapot  az alábbi ábrának megfelelően:</p>
+<p sourcefile="softeng/1_gyak_in_memory_adatbazis/index.md" sourcestartlinenumber="123"><img src="../../images/image-20220827150347600.png" sourcefile="softeng/1_gyak_in_memory_adatbazis/index.md" sourcestartlinenumber="123" alt="image-20220827150347600"></p>
+<blockquote sourcefile="softeng/1_gyak_in_memory_adatbazis/index.md" sourcestartlinenumber="125">
+<p sourcefile="softeng/1_gyak_in_memory_adatbazis/index.md" sourcestartlinenumber="125">A &quot;details&quot; felirattal rendelkező elem egy <code sourcefile="softeng/1_gyak_in_memory_adatbazis/index.md" sourcestartlinenumber="125">GroupBox</code>, ami megkönnyítheti a későbbiekben a benne lévő elemek együtt mozgatását</p>
+</blockquote>
+<h3 id="42-új-adatforrás-felvétele" sourcefile="softeng/1_gyak_in_memory_adatbazis/index.md" sourcestartlinenumber="127">4.2 Új adatforrás felvétele</h3>
+<p sourcefile="softeng/1_gyak_in_memory_adatbazis/index.md" sourcestartlinenumber="129"><img src="../../images/add_data_source.gif" sourcefile="softeng/1_gyak_in_memory_adatbazis/index.md" sourcestartlinenumber="129" alt=""></p>
+<p sourcefile="softeng/1_gyak_in_memory_adatbazis/index.md" sourcestartlinenumber="131">(+/-) A <code sourcefile="softeng/1_gyak_in_memory_adatbazis/index.md" sourcestartlinenumber="131">DataGridView</code> vezérlő &quot;fülében&quot; kattints a legördülőre, majd a megjelenő panelen választ az <em sourcefile="softeng/1_gyak_in_memory_adatbazis/index.md" sourcestartlinenumber="131">Add Object Data Source</em> gombot!</p>
+<p sourcefile="softeng/1_gyak_in_memory_adatbazis/index.md" sourcestartlinenumber="133">(+/-) A párbeszédablakban válaszd ki a <code sourcefile="softeng/1_gyak_in_memory_adatbazis/index.md" sourcestartlinenumber="133">Student</code> osztályt. Fontos: a <code sourcefile="softeng/1_gyak_in_memory_adatbazis/index.md" sourcestartlinenumber="133">Student</code> osztály csak akkor jelenik meg a párbeszédablakban, ha a létrehozása után már le lett fordítva (build) az alkalmazás. Innentől az adatforrások között a fában már elérhető a <code sourcefile="softeng/1_gyak_in_memory_adatbazis/index.md" sourcestartlinenumber="133">Students</code> osztály. (Ha futtatás után sem jelenik meg a párbeszédablakban, próbáld meg a <code sourcefile="softeng/1_gyak_in_memory_adatbazis/index.md" sourcestartlinenumber="133">Form1.cs</code>-t szerkeszteni és megpróbálni megint.)</p>
+<p sourcefile="softeng/1_gyak_in_memory_adatbazis/index.md" sourcestartlinenumber="135">(+/-) A <code sourcefile="softeng/1_gyak_in_memory_adatbazis/index.md" sourcestartlinenumber="135">DataGridView</code> adatforrásaként válaszd ki a <code sourcefile="softeng/1_gyak_in_memory_adatbazis/index.md" sourcestartlinenumber="135">Student</code> osztályt.</p>
+<p sourcefile="softeng/1_gyak_in_memory_adatbazis/index.md" sourcestartlinenumber="137">Mi történt?</p>
+<ul sourcefile="softeng/1_gyak_in_memory_adatbazis/index.md" sourcestartlinenumber="139">
+<li sourcefile="softeng/1_gyak_in_memory_adatbazis/index.md" sourcestartlinenumber="139">Ezzel a lépéssorozattal létrejött egy <code sourcefile="softeng/1_gyak_in_memory_adatbazis/index.md" sourcestartlinenumber="139">studentBindingSource</code>, mely az űrlap alatt jelenik meg a tervezőben, mivel nincs külön vizuális reprezentációja.</li>
+<li sourcefile="softeng/1_gyak_in_memory_adatbazis/index.md" sourcestartlinenumber="140">A <code sourcefile="softeng/1_gyak_in_memory_adatbazis/index.md" sourcestartlinenumber="140">studentBindingSource</code> adatforrásaként már a tervezőben be van állítva a <code sourcefile="softeng/1_gyak_in_memory_adatbazis/index.md" sourcestartlinenumber="140">Student</code> osztály.</li>
+<li sourcefile="softeng/1_gyak_in_memory_adatbazis/index.md" sourcestartlinenumber="141">A <code sourcefile="softeng/1_gyak_in_memory_adatbazis/index.md" sourcestartlinenumber="141">DataGridView</code> adatforrása a <code sourcefile="softeng/1_gyak_in_memory_adatbazis/index.md" sourcestartlinenumber="141">studentBindingSource</code>, és mivel a <code sourcefile="softeng/1_gyak_in_memory_adatbazis/index.md" sourcestartlinenumber="141">studentBindingSource</code> &quot;tudja&quot;, hogy <code sourcefile="softeng/1_gyak_in_memory_adatbazis/index.md" sourcestartlinenumber="141">Student</code> típusú elemekből álló listát jelenítünk majd meg, a rácsban is megjelennek a <code sourcefile="softeng/1_gyak_in_memory_adatbazis/index.md" sourcestartlinenumber="141">Student</code> osztály tulajdonságai.</li>
+<li sourcefile="softeng/1_gyak_in_memory_adatbazis/index.md" sourcestartlinenumber="142">A <em sourcefile="softeng/1_gyak_in_memory_adatbazis/index.md" sourcestartlinenumber="142">Solution Explorer</em>-ben létrejött egy <code sourcefile="softeng/1_gyak_in_memory_adatbazis/index.md" sourcestartlinenumber="142">DataSources</code> elem, amelyben megtalálható az adatforrásként felvett <code sourcefile="softeng/1_gyak_in_memory_adatbazis/index.md" sourcestartlinenumber="142">Student</code> osztály. Ha valamit tévedésből vettünk fel, innét lehet törölni.</li>
+</ul>
+<h3 id="43-vezérlők-adatkötésének-megváltoztatása" sourcefile="softeng/1_gyak_in_memory_adatbazis/index.md" sourcestartlinenumber="144">4.3 Vezérlők adatkötésének megváltoztatása</h3>
+<p sourcefile="softeng/1_gyak_in_memory_adatbazis/index.md" sourcestartlinenumber="146">(+/-) A rácsba az adatokat a <code sourcefile="softeng/1_gyak_in_memory_adatbazis/index.md" sourcestartlinenumber="146">studentBindingSource</code>-on keresztül töltsd.</p>
+<p sourcefile="softeng/1_gyak_in_memory_adatbazis/index.md" sourcestartlinenumber="148">Cseréld re ezt a sort:</p>
+<pre><code class="lang-csharp" sourcefile="softeng/1_gyak_in_memory_adatbazis/index.md" sourcestartlinenumber="150">dgv.DataSource = students;
+</code></pre>
+<p sourcefile="softeng/1_gyak_in_memory_adatbazis/index.md" sourcestartlinenumber="154">erre a sorra:</p>
+<pre><code class="lang-csharp" sourcefile="softeng/1_gyak_in_memory_adatbazis/index.md" sourcestartlinenumber="156">studentBindingSource.DataSource = students;
+</code></pre>
+<h3 id="44-további-vezérlők-bekötése" sourcefile="softeng/1_gyak_in_memory_adatbazis/index.md" sourcestartlinenumber="160">4.4 További vezérlők bekötése</h3>
+<p sourcefile="softeng/1_gyak_in_memory_adatbazis/index.md" sourcestartlinenumber="162">(+/-)  Állíts be egy adatkötést a Neptun kódhoz tartozó <code sourcefile="softeng/1_gyak_in_memory_adatbazis/index.md" sourcestartlinenumber="162">TextBox</code> <code sourcefile="softeng/1_gyak_in_memory_adatbazis/index.md" sourcestartlinenumber="162">Text</code> tulajdonságára  az animáció szerint:</p>
+<p sourcefile="softeng/1_gyak_in_memory_adatbazis/index.md" sourcestartlinenumber="164"><img src="../../images/add_textbox_binding.gif" sourcefile="softeng/1_gyak_in_memory_adatbazis/index.md" sourcestartlinenumber="164" alt=""></p>
+<h2 id="5-mentés-funkció-megvalósítása" sourcefile="softeng/1_gyak_in_memory_adatbazis/index.md" sourcestartlinenumber="168">5. Mentés funkció megvalósítása</h2>
+<p sourcefile="softeng/1_gyak_in_memory_adatbazis/index.md" sourcestartlinenumber="170">(+/-) Rendelj eseménykezelőt a <em sourcefile="softeng/1_gyak_in_memory_adatbazis/index.md" sourcestartlinenumber="170">Save</em> gomb <code sourcefile="softeng/1_gyak_in_memory_adatbazis/index.md" sourcestartlinenumber="170">Click</code> eseményéhez!</p>
+<p sourcefile="softeng/1_gyak_in_memory_adatbazis/index.md" sourcestartlinenumber="172">(+/-) Az eseménykezelőben hozz létre egy példányt a <code sourcefile="softeng/1_gyak_in_memory_adatbazis/index.md" sourcestartlinenumber="172">SaveFileDialog</code> osztályból!</p>
+<p sourcefile="softeng/1_gyak_in_memory_adatbazis/index.md" sourcestartlinenumber="174">(+/-) Jelenítsd meg ezt a dialógus ablakot (<code sourcefile="softeng/1_gyak_in_memory_adatbazis/index.md" sourcestartlinenumber="174">ShowDialog</code>), de ha az ablak végül nem az <em sourcefile="softeng/1_gyak_in_memory_adatbazis/index.md" sourcestartlinenumber="174">OK</em> gombbal zárul be, akkor ne engedd tovább futni a metódust!</p>
+<p sourcefile="softeng/1_gyak_in_memory_adatbazis/index.md" sourcestartlinenumber="176">(+/-) A <code sourcefile="softeng/1_gyak_in_memory_adatbazis/index.md" sourcestartlinenumber="176">StreamWriter</code> osztály felhasználásával írd ki a <code sourcefile="softeng/1_gyak_in_memory_adatbazis/index.md" sourcestartlinenumber="176">students</code> lista sorait a dialógus ablakban megadott nevű fájlba!</p>
+<p sourcefile="softeng/1_gyak_in_memory_adatbazis/index.md" sourcestartlinenumber="178">(+/-) Futtasd a programot, tölts ki néhány sort a táblázatból, és mentsd el a listát. Ez hasznos lesz a betöltés funkció tesztelésekor.</p>
+<p sourcefile="softeng/1_gyak_in_memory_adatbazis/index.md" sourcestartlinenumber="180">▶ Megoldás:</p>
+<pre><code class="lang-csharp" sourcefile="softeng/1_gyak_in_memory_adatbazis/index.md" sourcestartlinenumber="182">using System.Text; //névtér, ami a karakterkódolást tartalmazza
+
+// Save gomb eseménykezelője
+private void btnSave_Click(object sender, EventArgs e)
+{
+    // Példányosít egyet a windows standard mentés ablakából
+    SaveFileDialog sfd = new SaveFileDialog();
+
+    // Opcionális rész
+    sfd.InitialDirectory = Application.StartupPath; // Alapértelmezetten az exe fájlunk mappája fog megnyílni a dialógus ablakban
+    sfd.Filter = &quot;Comma Seperated Values (*.csv)|*.csv&quot;; // A kiválasztható fájlformátumokat adjuk meg ezzel a sorral. Jelen esetben csak a csv-t fogadjuk el
+    sfd.DefaultExt = &quot;csv&quot;; // A csv lesz az alapértelmezetten kiválasztott kiterjesztés
+    sfd.AddExtension = true; // Ha ez igaz, akkor hozzáírja a megadott fájlnévhez a kiválasztott kiterjesztést, de érzékeli, ha a felhasználó azt is beírta és nem fogja duplán hozzáírni
+
+    // Ez a sor megnyitja a dialógus ablakot és csak akkor engedi tovább futni a kódot, ha az ablakot az OK gombbal zárták be
+    if (sfd.ShowDialog() != DialogResult.OK) return;
+
+    // Az előző kódsor az alábbi két sor rövidített írásmódja
+    // DialogResult eredmény = sfd.ShowDialog(); // A dialógusablak bezárása után visszakapunk egy DialogResult típusú értéket, mely az ablak bezárásnak körülményeit tárolja
+    // if (eredmény != DialogResult.OK) return; // Ha a bezárás nem az OK gomb lenyomására következett be, akkor kilépünk a metódusból és nem hajtjuk végre a mentést
+
+    // Ha a using blokk használatával példányosítunk egy osztályt akkor a példány csak a using blokk végéig létezik, utána törlésre kerül
+    // StreamWriter és StreamReader használata esetén ezzel a módszerrel megspórolhatjuk a Close() metódus használatát és az írás / olvasási hibák egy részét is lekezeljük
+    // A StreamWriter paraméterei:
+    //    1) Fájlnév: mi itt azt a fájlnevet adjuk át, amit a felhasználó az sfd dialógusban megadott
+    //    2) Append: ha igaz és már létezik ilyen fájl, akkor a végéhez fűzi a sorokat, ha hamis, akkor felülírja a létező fájlt
+    //    3) Karakterkódolás: a magyar nyelvnek is megfelelő legáltalánosabb karakterkódolás az UTF8
+    using (StreamWriter sw = new StreamWriter(sfd.FileName, false, Encoding.UTF8))
+    {
+        // Végigmegyünk a hallgató lista elemein
+        foreach (var s in students)
+        {
+            // Egy ciklus iterációban egy sor tartalmát írjuk a fájlba
+            // A StreamWriter Write metódusa a WriteLine-al szemben nem nyit új sort
+            // Így darabokból építhetjük fel a csv fájl pontosvesszővel elválasztott sorait
+            sw.Write(s.Neptun);
+            sw.Write(&quot;;&quot;);
+            sw.Write(s.Name);
+            sw.Write(&quot;;&quot;);
+            sw.Write(s.BirthDate.ToString());
+            sw.Write(&quot;;&quot;);
+            sw.Write(s.AverageGrade.ToString());
+            sw.Write(&quot;;&quot;);
+            sw.Write(s.IsActive.ToString());
+            sw.WriteLine(); // Ez a sor az alábbi módon is írható: sr.Write(&quot;\n&quot;);
+        }
+    }
+}
+</code></pre>
+<p sourcefile="softeng/1_gyak_in_memory_adatbazis/index.md" sourcestartlinenumber="232">Foreach rövidebben:</p>
+<pre><code class="lang-csharp" sourcefile="softeng/1_gyak_in_memory_adatbazis/index.md" sourcestartlinenumber="233">foreach (var s in students)
+        {
+            sw.WriteLine($&quot;{s.Neptun};{s.Name};{s.BirthDate};{s.AverageGrade};{s.IsActive}&quot;);
+        }
+</code></pre>
+<h2 id="5-betöltés-funkció-megvalósítása" sourcefile="softeng/1_gyak_in_memory_adatbazis/index.md" sourcestartlinenumber="240">5. Betöltés funkció megvalósítása</h2>
+<p sourcefile="softeng/1_gyak_in_memory_adatbazis/index.md" sourcestartlinenumber="242">(+/-) Rendelj eseménykezelőt a <em sourcefile="softeng/1_gyak_in_memory_adatbazis/index.md" sourcestartlinenumber="242">Load</em> gomb <code sourcefile="softeng/1_gyak_in_memory_adatbazis/index.md" sourcestartlinenumber="242">Click</code> eseményéhez!</p>
+<p sourcefile="softeng/1_gyak_in_memory_adatbazis/index.md" sourcestartlinenumber="244">(+/-) Az eseménykezelőben hozz létre egy példányt az <code sourcefile="softeng/1_gyak_in_memory_adatbazis/index.md" sourcestartlinenumber="244">OpenFileDialog</code> osztályból!</p>
+<p sourcefile="softeng/1_gyak_in_memory_adatbazis/index.md" sourcestartlinenumber="246">(+/-) Jelenítsd meg ezt a dialógus ablakot (<code sourcefile="softeng/1_gyak_in_memory_adatbazis/index.md" sourcestartlinenumber="246">ShowDialog</code>), de ha az ablak végül nem az <em sourcefile="softeng/1_gyak_in_memory_adatbazis/index.md" sourcestartlinenumber="246">OK</em> gombbal zárul be, akkor ne engedd tovább futni a metódust!</p>
+<p sourcefile="softeng/1_gyak_in_memory_adatbazis/index.md" sourcestartlinenumber="248">(+/-) A <code sourcefile="softeng/1_gyak_in_memory_adatbazis/index.md" sourcestartlinenumber="248">StreamReader</code> osztály felhasználásával menj végig a fájl sorain!</p>
+<p sourcefile="softeng/1_gyak_in_memory_adatbazis/index.md" sourcestartlinenumber="250">(+/-) Minden sorra hozz létre egy új elemet a <code sourcefile="softeng/1_gyak_in_memory_adatbazis/index.md" sourcestartlinenumber="250">students</code> listában!</p>
+<ul sourcefile="softeng/1_gyak_in_memory_adatbazis/index.md" sourcestartlinenumber="252">
+<li sourcefile="softeng/1_gyak_in_memory_adatbazis/index.md" sourcestartlinenumber="252">Bontsd fel a beolvasott sort a <code sourcefile="softeng/1_gyak_in_memory_adatbazis/index.md" sourcestartlinenumber="252">Split</code> metódus segítségével!</li>
+<li sourcefile="softeng/1_gyak_in_memory_adatbazis/index.md" sourcestartlinenumber="253">Hozz létre egy új <code sourcefile="softeng/1_gyak_in_memory_adatbazis/index.md" sourcestartlinenumber="253">Student</code> példányt!</li>
+<li sourcefile="softeng/1_gyak_in_memory_adatbazis/index.md" sourcestartlinenumber="254">A felbontott szövegdarabokat megfelelően konvertálva töltsd fel értékekkel a létrehozott <code sourcefile="softeng/1_gyak_in_memory_adatbazis/index.md" sourcestartlinenumber="254">Student</code> objektum tulajdonságait! (Figyelj a potenciális <code sourcefile="softeng/1_gyak_in_memory_adatbazis/index.md" sourcestartlinenumber="254">null</code> értékekre!)</li>
+<li sourcefile="softeng/1_gyak_in_memory_adatbazis/index.md" sourcestartlinenumber="255">Add hozzá a létrehozott <code sourcefile="softeng/1_gyak_in_memory_adatbazis/index.md" sourcestartlinenumber="255">Student</code> példányt a <code sourcefile="softeng/1_gyak_in_memory_adatbazis/index.md" sourcestartlinenumber="255">students</code> listához!</li>
+</ul>
+<p sourcefile="softeng/1_gyak_in_memory_adatbazis/index.md" sourcestartlinenumber="257">▶ Megoldás:</p>
+<pre><code class="lang-csharp" sourcefile="softeng/1_gyak_in_memory_adatbazis/index.md" sourcestartlinenumber="259">using System.Text; //névtér, ami a karakterkódolást tartalmazza
+
+// Load gomb eseménykezelője
+private void btnLoad_Click(object sender, EventArgs e)
+{
+    // Példányosít egyet a windows standard fájlmegnyitó ablakából
+    OpenFileDialog ofd = new OpenFileDialog();
+
+    // Opcionális rész
+    ofd.InitialDirectory = Application.StartupPath; // Alapértelmezetten az exe fájlunk mappája fog megnyílni a dialógus ablakban
+    ofd.Filter = &quot;Comma Seperated Values (*.csv)|*.csv&quot;; // A kiválasztható fájlformátumokat adjuk meg ezzel a sorral. Jelen esetben csak a csv-t fogadjuk el
+    ofd.DefaultExt = &quot;csv&quot;; // A csv lesz az alapértelmezetten kiválasztott kiterjesztés
+    ofd.AddExtension = true; // Ha ez igaz, akkor hozzáírja a megadott fájlnévhez a kiválasztott kiterjesztést, de érzékeli, ha a felhasználó azt is beírta és nem fogja duplán hozzáírni
+
+    // Ez a sor megnyitja a dialógus ablakot és csak akkor engedi tovább futni a kódot, ha az ablakot az OK gombbal zárták be
+    if (ofd.ShowDialog() != DialogResult.OK) return;
+
+    // Ha a using blokk használatával példányosítunk egy osztályt akkor a példány csak a using blokk végéig létezik, utána törlésre kerül
+    // StreamWriter és StreamReader használata esetén ezzel a módszerre megspórolhatjuk a Close() metódus használatát és az írás / olvasási hibák egy részét is lekezeljük
+    // A StreamReader paraméterei:
+    //    1) Fájlnév: mi itt azt a fájlnevet adjuk át, amit a felhasználó az ofd dialógusban megadott            
+    //    2) Karakterkódolás: megadható fixen, de érdemes inkább a Default opciót megadni, mert ez kiolvassa a fájlból, hogy milyen karakterkódolással lett eredetileg lementve
+    using (StreamReader sr = new StreamReader(ofd.FileName, Encoding.Default))
+    {
+	// Ebben a példában nincs fejléc a csv-ben, de gyakran előfordul, hogy szerepel olyan fejléc, amire a kódban nincs szükségünk
+	// Az alábbi kódsor beolvassa ugyan a csv első sorát, de nem tárolja el változóban a tartalmát, hanem egyszerűen eldobja azt
+	// sr.ReadLine()
+	// Ettől a StreamReader továbblép a következő sorba, és a lenti ciklus a második sortól kezdve fogja felolvasni a sorokat
+	
+        // Addig ismételjük a ciklust, míg el nem érjük a fájl végét
+        while (!sr.EndOfStream)
+        {
+            // Ez a sor egy sor nevű tömbbe olvassa be a fájl következő sorát úgy, hogy a pontosvesszők mentén feldarabolja azt
+            string[] sor = sr.ReadLine().Split(';');
+
+            // Az előző sor részletesebben kifejtve:                    
+            // string következőSor = sr.ReadLine(); // Először beolvassuk a következő sort
+            //    VIGYÁZAT: Ha a ciklusban egy ReadLine() sem szerepel, akkor a végtelenségig fog futni
+            //    Ha egynél több ReadLine() szerepel, akkor egy ciklus lépésre több sort is beolvasunk - Ilyenkor könnyen hibára futhat a program, ha azután próbálunk sort beolvasni, hogy elértük a fájl végét
+            // string[] sor = következőSor.Split(';'); // Ezután feldaraboljuk a következő sort a pontosvesszők mentén és a szöveges darabokból létrehozunk egy string típusú tömböt, amit később fel tudunk használni 
+
+            // Példányosítjuk a következő Student-et
+            Student s = new Student();
+
+            // A szöveges mezők egyszerűen feltölthetők
+            s.Neptun = sor[0];
+            s.Name = sor[1];                    
+
+            // A másik három mező nem szöveges ezért  megfelelő módon kell konvertálni őket
+            // A nullable mezők problémásak, ugyanis, ha nincs bennük tartalom, akkor a save metódusunk üres értéket fog kiírni a fájlba
+            // Ezt a konvertálás nem tudja kezelni ezért biztosan hibát fog eredményezni
+            // Az alábbi try-catch blokkok nem a legszebb megoldások, de cserébe nagyon egyszerűek
+            // Amennyiben az adott property beolvasása során hiba történik, egyszerűen nem csinálunk semmit és így üres marad az értéke
+            // VIGYÁZAT: Üres catch ágat csak rendkívül ellenőrzött körülmények között szabad írni a gyakorlásra szánt programokban
+            // Egy éles szoftverben SOHA nem szabad üres catch ágat hagyni, legalább az Exception logolást biztosítani kell!
+            try
+            {
+                s.BirthDate = Convert.ToDateTime(sor[2]);
+            }
+            catch { }                    
+            try
+            {
+                s.AverageGrade = decimal.Parse(sor[3]);
+            }
+            catch { }            
+            s.IsActive = bool.Parse(sor[4]);
+
+            // Az újonnan létrehozott Student-et hozzáadjuk a students listához
+            students.Add(s);
+        }
+    }
+}
+</code></pre>
+<h2 id="összefoglalás" sourcefile="softeng/1_gyak_in_memory_adatbazis/index.md" sourcestartlinenumber="336">Összefoglalás</h2>
+<h4 id="adatkötött-objektumok" sourcefile="softeng/1_gyak_in_memory_adatbazis/index.md" sourcestartlinenumber="338">Adatkötött objektumok</h4>
+<p sourcefile="softeng/1_gyak_in_memory_adatbazis/index.md" sourcestartlinenumber="340">Adatkötések (Binding) segítségével elérhető, hogy két különböző változó értéke mindig megegyezzen egymással. Ha például egy <code sourcefile="softeng/1_gyak_in_memory_adatbazis/index.md" sourcestartlinenumber="340">string</code> típusú változót egy <code sourcefile="softeng/1_gyak_in_memory_adatbazis/index.md" sourcestartlinenumber="340">TextBox</code> <code sourcefile="softeng/1_gyak_in_memory_adatbazis/index.md" sourcestartlinenumber="340">Text</code> property-jével kötünk össze, akkor nem kell folyton átírni a változót, ha megváltozik a <code sourcefile="softeng/1_gyak_in_memory_adatbazis/index.md" sourcestartlinenumber="340">TextBox</code> tartalma.</p>
+<h4 id="bindinglist" sourcefile="softeng/1_gyak_in_memory_adatbazis/index.md" sourcestartlinenumber="342">BindingList</h4>
+<p sourcefile="softeng/1_gyak_in_memory_adatbazis/index.md" sourcestartlinenumber="344">Az adatkötött listák (<code sourcefile="softeng/1_gyak_in_memory_adatbazis/index.md" sourcestartlinenumber="344">BindingList</code>) elsősorban olyan vezérlőkben használhatók fel, melyek alkalmasak több elem megjelenítésére is (pl.: <code sourcefile="softeng/1_gyak_in_memory_adatbazis/index.md" sourcestartlinenumber="344">ListBox</code>, <code sourcefile="softeng/1_gyak_in_memory_adatbazis/index.md" sourcestartlinenumber="344">DataGridView</code>). Ilyenkor lehetőség van arra is, hogy a felhasználó egy megfelelő vezérlőn keresztül szerkessze az általunk létrehozott listát. Ehhez mindössze be kell állítani, hogy az adatkötött lista legyen a vezérlő adatforrása (<code sourcefile="softeng/1_gyak_in_memory_adatbazis/index.md" sourcestartlinenumber="344">DataSource</code>).</p>
+<h4 id="bindingsource" sourcefile="softeng/1_gyak_in_memory_adatbazis/index.md" sourcestartlinenumber="346">BindingSource</h4>
+<p sourcefile="softeng/1_gyak_in_memory_adatbazis/index.md" sourcestartlinenumber="348">A <code sourcefile="softeng/1_gyak_in_memory_adatbazis/index.md" sourcestartlinenumber="348">BindingSource</code> egy speciális adatkötött objektum. Egyszerre több vezérlő adatforrásaként is be lehet állítani, és van saját adatforrása is. Lényegében egy köztes szereplő, melynek segítségével más adatkötött objektumokat több különböző vezérlőhöz is hozzá tudunk rendelni. A <code sourcefile="softeng/1_gyak_in_memory_adatbazis/index.md" sourcestartlinenumber="348">BindingSource</code> képes kezelni a kiválasztott elemeket is, így ha az egyik vezérlőben kiválasztunk egy elemet egy listából, a másikban is megváltozik a kijelölés.</p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/altinum/szamtud_docfx/blob/main/softeng/1_gyak_in_memory_adatbazis/index.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

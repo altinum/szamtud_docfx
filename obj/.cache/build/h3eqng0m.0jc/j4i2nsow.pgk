@@ -1,0 +1,157 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Szoftvertechnol&#243;gia I &#246;sszefoglal&#243; feladatsor </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Szoftvertechnol&#243;gia I &#246;sszefoglal&#243; feladatsor ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="szoftvertechnológia-i-összefoglaló-feladatsor">Szoftvertechnológia I összefoglaló feladatsor</h1>
+
+<p>Az alábbi feladatsor célkitűzése, hogy a félév során érintett valamennyi feladatra mutasson valamilyen formában példát. Nem MintaZH, annál jóval nehezebb és több feladatot tartalmaz, gyakorláshoz melegen ajánlott.</p>
+<ol>
+<li>Hozz létre egy osztályt <code>Ember</code> néven. Származtasd a <code>Button</code> osztályból.</li>
+<li>Az osztályban vegyél fel egy-egy nem kifejtett propertyt a keresztnév és a vezetéknév számára.</li>
+<li>Vegyél fel egy propertyt a születési dátum számára. Típusa legyen <code>DateTime</code>.</li>
+<li>Vegyél fel egy propertyt Nem néven. Típusa legyen <code>char</code>.</li>
+<li>Vegyél fel egy kifejtett propertyt Teljesnév néven. A property ne legyen írható, a getter-ben add vissza a vezetéknevet és a keresztnevet egy szóközzel összefűzve.</li>
+<li>Vegyél fel egy kifejtett propertyt Kor néven. A property ne legyen írható, a getterben add vissza a mai dátum és a születési dátum években vett különbségét. Ehhez venned kell a DateTime beépített osztály Now tulajdonságának Year tulajdonságát, és ebből levonni a születési dátum property Year tulajdonságát.</li>
+<li>Készíts paraméterezett konstruktort az Ember számára,  paraméterül kapja a vezetéknevet, a keresztnevet, a nemet és a születési dátumot. Vigyázz, hogy ne legyen a bemenő paraméterek neve azonos a propertykével (vagy kezeld ezt a problémát)</li>
+<li>A konstruktorban add értékül a tulajdonságoknak a kapott paramétereket, állítsd be, hogy a gomb szélessége és a magassága egyaránt 60-60 pixel legyen. A férfi nemű emberek esetén kék, a nőnemű emberek esetében rózsaszín háttérszínt állíts be. Figyelj arra, hogy a Nem tulajdonság nem string, hanem karakter, karakterkonstansként kell az egyenlőséget vizsgálni, aposztófjelekkel, lásd: Split tagfüggvény paramétere)</li>
+<li>Szintén a konstruktorban rendelj Click eseménykezelőt az Emberhez. Az eseménykezelőben írd ki a teljes nevet és a kort szabványos üzenetablakban.</li>
+<li>Készíts az ember osztályában GetMonogram néven egy karakterlánc visszatérési értékű függvényt, bemenő paraméter nem szükséges.</li>
+<li>A függvény adja vissza nagybetűssé alakítva a vezetéknév és a keresztnév első karakterét összefűzve. (ehhez a Substring és  ToUpper tagfüggvényekre lesz szükséged)</li>
+<li>Valósíts meg egy egyszerű adatbeviteli felületet a Form1-en, ahol megadható a vezetéknév, a keresztnév, a születési dátum és a nem egy-egy textboxban. A felülethez labeleket is adj, illetve nevezd a kontrollokat értelemszerűen.</li>
+<li>Készíts Leave eseményt a születési dátum szövegmezőjéhez. A Datetime.Parse függvény segítségével próbáld date-té alakítani a beírt adatot, ha ez nem sikerül, töröld a textbox tartalmát. A sikertelen értelmezés kivételt okoz, a problémát try-catch hibakezeléssel vagy a TryParse függvény használatával kezeld.</li>
+<li>Készíts az előzőhöz hasonló hibakezelést a nem mező számára, csak nagy F és nagy N betűket fogadjon el. Állítsd be a textbox számára hogy csak maximum 1 karakter hosszú szöveget lehessen beleírni (MaxLength tulajdonság)</li>
+<li>Hozz létre egy emberekből álló listát <code>(List&lt;Ember&gt;)</code>a Form1 osztály szintjén.</li>
+<li>Adj egy gombot a formhoz.</li>
+<li>A gombhoz rendelj Click eseménykezelőt.</li>
+<li>Az eseménykezelőben vizsgáld meg, hogy minden szükséges adat meg van-e adva, és ha igen, példányosíts egy Ember-t, állítsd be a tulajdonságait a megadott adatok alapján, majd add az emberlistához. Ezt követően töröld a beviteli mezőket. Ha nem helyesek az értékek, akkor írd ezt ki egy szabványos üzenetablakban. (A művelethez érdemes tudni, hogy egy karakterlánc első karakterét az s[0] formában nyerhetjük ki.)</li>
+<li>Adj a formhoz egy panelt. Állítsd be az Autoscroll tulajdonságát true-re.</li>
+<li>Adj a formhoz egy másik gombot Betölt szöveggel. Adj hozzá Click eseménykezelőt.</li>
+<li>Az eseménykezelőben egy megfelelő ciklussal haladj végig az emberlistán és add a panel kontrolljainak listájához a benne szereplő embereket. Az egyes gombok Text tulajdonsága legyen az adott ember monogramja, amit a korábban megírt GetMonogram függvény segítségével kaphatsz meg. A gombok egymás alatt helyezkedjenek el! Próbáld megvalósítani a sakktábla elrendezést is, illetve próbáld többféle ciklussal is megoldani a problémát!</li>
+<li>A cikllusban rendelj közös eseménykezelőt a MouseEnter és a MouseLeave eseményhez.</li>
+<li>Az Enter eseménykezelő állítsa be a textboxok adatait az aktuális példány segítségével. A Leave eseménykezelő törölje az adatokat. (Ehhez a „sender” castolására lesz szükség - <code>as</code> operátor )</li>
+<li>Egészítsd ki az alkalmazást fájl beolvasással. Kétféle input formátumot kezelj: az egyikben soronként a másikban pontosvesszővel elválasztott formátumban legyenek az <code>Ember</code> adatok. A fájlokat manuálisan hozd létre, pl. Jegyzettömb segítségével.</li>
+<li>Mindkét fájl típusohoz helyezz el egy-egy gombot a formon.</li>
+<li>A fájlok megnyitását <code>OpenFileDialog</code> segítségével végezd, majd a beolvasó ciklusban hozz létre ember példányokat és add a listához.</li>
+<li>Adj egy nem engedélyezett időzítőt a Form1-hez, lehet kódból vagy tervezőnézetből is.  Állítsd az időközt 1 másodpercre.</li>
+<li>A Form1 konstruktorában engedélyezd az időzítőt.</li>
+<li>Írd meg a Tick eseménykezelőt, minden Tick esemény írja ki a Form fejlécébe (Text tulajdonság) az aktuális időpontot. (<code>DateTime.Now.ToString()</code>)</li>
+<li>Adj két gombot a formhoz nőkszáma és férfiakszáma felirattal. Mindkettőhöz rendelj eseménykezelőt. Az eseménykezelő egy megfelelő ciklussal járja be az ember példányokat a panelen és számolja meg a nőket illetve a férfiakat. Végül üzenetablakban írja ki a férfiak illetve nők számát. Próbáld meg a problémát közös eseménykezelővel is megoldani!</li>
+<li>Keress két képfájlt az interneten. A képek férfiak és nők szimbolizálására legyenek alkalmasak (pl gender jel, toalett jel), és legyenek kis méretűek.</li>
+<li>Add a képeket  projekthez, állítsd be, hogy automatikusan kimásolódjanak a projekt bin\Debug mappájába.</li>
+<li>Alakítsd át az ember osztályt úgy, hogy ne Buttonból hanem PictureBoxból örököljön.</li>
+<li>Egészítsd ki az Ember osztály konstruktorát úgy, hogy háttérképének beállítsa ezeket a képeket.
+(A két előző lépés nyomán a gombra kiírt monogram eltűnik, mivel a PictureBox Text tulajdonsága más célt szolgál. Ezt  problémát orvosolhatod például úgy, hogy az Embert nem alakítod Picturebox-szá, hanem Button marad, és a Button BackgroundImage tulajdonságát állítod be, pl:<br>
+<code>this.BackgroundImage = Image.FromFile(&quot;Névtelen.png&quot;); </code>
+Ha szeretnéd, hogy a gomb felirata ne lógjon bele a képbe, a gomb <code>TextAlign</code> tulajdonságát lehet beállítani.)</li>
+<li>Helyezz ki a formra egy másik panelt. Állítsd be, hogy a háttérszíne fehér legyen.</li>
+<li>Készíts két visszatérési érték nélkül függvényt a form1-re, amely erre az új panelre kirajzol egy egyszerű férfi illetve női vonalrajzot (grafika használatával, vonalak és ellipszisek segítségével, például).</li>
+<li>A korábban megírt MouseEnter eseményeket egészítsd ki a nemtől függően vagy az egyik, vagy a másik meghívásával. Ha szeretnéd, hogy a MouseLeave esemény törölje a rajzpanelt, akkor az új panel <code>Invalidate</code> tagfüggvényének meghívásával ezt megteheted.</li>
+<li>Helyezz el egy új gombot a Form1-en &quot;Sorsolás&quot; felirattal, rendelj hozzá Click eseménykezelőt. Az eseménykezelőben generálj egy véletlenszámot az Ember lista méretének megfelelően, majd írd ki szabványos üzenetablakban a kisorsolt ember nevét. A sorsolás ne csináljon semmit, ha az emberek lista üres! Figyelj rá, hogy a lista indexelése 0-tól indul!</li>
+<li>Próbáld megoldani, hogy a sorsolás ne csak megjelenítse, hanem törölje is ki a véletlenszerűen kiválasztott embert a Control listából.</li>
+<li>Egy újabb gomb segítségével töröld a gombokat tartalmazó panelt, illetve az emberek lista tartalmát.</li>
+</ol>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/altinum/szamtud_docfx/blob/main/softec/osszefoglalo_levelezo/index.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

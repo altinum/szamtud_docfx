@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Be&#225;gyazott SQL lek&#233;rdez&#233;sek </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Be&#225;gyazott SQL lek&#233;rdez&#233;sek ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="beágyazott-sql-lekérdezések" sourcefile="adatb/gyak7/index.md" sourcestartlinenumber="1">Beágyazott SQL lekérdezések</h1>
+
+<p sourcefile="adatb/gyak7/index.md" sourcestartlinenumber="2"><a href="gyak07_x264.mp4" sourcefile="adatb/gyak7/index.md" sourcestartlinenumber="2">Összefoglaló videó</a></p>
+<h2 id="alapfogalmak" sourcefile="adatb/gyak7/index.md" sourcestartlinenumber="3">Alapfogalmak</h2>
+<p sourcefile="adatb/gyak7/index.md" sourcestartlinenumber="4">A beágyazott SQL lekérdezés (subuery) lekérdezés a lekérdezésen belül.</p>
+<ul sourcefile="adatb/gyak7/index.md" sourcestartlinenumber="5">
+<li sourcefile="adatb/gyak7/index.md" sourcestartlinenumber="5">Rendszerint egy (külső) SELECT utasításon belüli (belső) SELECT  utasítást jelent (INSERT, DELETE és UPDATE utasításokba is beágyazható)</li>
+<li sourcefile="adatb/gyak7/index.md" sourcestartlinenumber="6">Először a belső SELECT fut le, majd annak  eredményét megkapva a külső SELECT hajtódik végre. Korrelált allekérdezéseknél (lásd később) ez soronként történik.</li>
+<li sourcefile="adatb/gyak7/index.md" sourcestartlinenumber="7">Egy külső SELECT-be több belső SELECT is beágyazható.</li>
+</ul>
+<p sourcefile="adatb/gyak7/index.md" sourcestartlinenumber="9">Tipikus formája:</p>
+<pre><code class="lang-sql" sourcefile="adatb/gyak7/index.md" sourcestartlinenumber="10">Select &lt;oszlopnév-lista&gt; from &lt;táblanév&gt; 
+where (Select &lt;oszlopnév-lista&gt; from &lt;táblanév&gt;)
+</code></pre>
+<p sourcefile="adatb/gyak7/index.md" sourcestartlinenumber="14">pl: melyek azok a termékek, amelyeknek az átlagosnál nagyobb a listaára?</p>
+<pre><code class="lang-sql" sourcefile="adatb/gyak7/index.md" sourcestartlinenumber="15">select * from termek where listaar&gt;(select avg(listaar) from termek)
+</code></pre>
+<h3 id="korrelált-és-önálló-allekérdezések" sourcefile="adatb/gyak7/index.md" sourcestartlinenumber="18">Korrelált és önálló allekérdezések</h3>
+<p sourcefile="adatb/gyak7/index.md" sourcestartlinenumber="19">Ha az allekérdezés hivatkozik a külső select valamely oszlopára, <strong sourcefile="adatb/gyak7/index.md" sourcestartlinenumber="19">korrelált</strong> allekérdezésről beszélünk.</p>
+<pre><code class="lang-sql" sourcefile="adatb/gyak7/index.md" sourcestartlinenumber="20">select * from termek 
+where termek.listaar= (select max(listaar) from termek t2 where t2.kat_id=termek.kat_id)
+</code></pre>
+<p sourcefile="adatb/gyak7/index.md" sourcestartlinenumber="24">Ha nem, az allekérdezés <strong sourcefile="adatb/gyak7/index.md" sourcestartlinenumber="24">önálló</strong>.</p>
+<pre><code class="lang-sql" sourcefile="adatb/gyak7/index.md" sourcestartlinenumber="25">select * from termek where listaar&gt;(select avg(listaar) from termek)
+</code></pre>
+<h2 id="csoportosítás-eredmény-szerint" sourcefile="adatb/gyak7/index.md" sourcestartlinenumber="28">Csoportosítás eredmény szerint</h2>
+<p sourcefile="adatb/gyak7/index.md" sourcestartlinenumber="29">Az allekérdezés visszaadhat egy értéket, ekkor <strong sourcefile="adatb/gyak7/index.md" sourcestartlinenumber="29">skalár</strong> lekérdezésről beszélünk.</p>
+<pre><code class="lang-sql" sourcefile="adatb/gyak7/index.md" sourcestartlinenumber="30">select * from termek where listaar&gt;(select avg(listaar) from termek)
+</code></pre>
+<p sourcefile="adatb/gyak7/index.md" sourcestartlinenumber="33">Visszaadhat több értéket, akkor <strong sourcefile="adatb/gyak7/index.md" sourcestartlinenumber="33">multi-valued</strong> lekérdezésről van szó:</p>
+<pre><code class="lang-sql" sourcefile="adatb/gyak7/index.md" sourcestartlinenumber="34">select * from termek where termekkod in (select termekkod from rendeles_tetel)
+</code></pre>
+<p sourcefile="adatb/gyak7/index.md" sourcestartlinenumber="37">Visszaadhat <strong sourcefile="adatb/gyak7/index.md" sourcestartlinenumber="37">táblát</strong> is, amely nem tananyag. Allekérdezést a from záradékban is használhatunk, ekkor táblát visszaadó allekérdezésről van szó.</p>
+<h2 id="allekérdezések-használata" sourcefile="adatb/gyak7/index.md" sourcestartlinenumber="38">Allekérdezések használata</h2>
+<h3 id="hová-kerülhet-az-allekérdezés" sourcefile="adatb/gyak7/index.md" sourcestartlinenumber="39">Hová kerülhet az allekérdezés?</h3>
+<p sourcefile="adatb/gyak7/index.md" sourcestartlinenumber="40">Select záradékba:</p>
+<pre><code class="lang-sql" sourcefile="adatb/gyak7/index.md" sourcestartlinenumber="41">select termekkod, 
+(select count(*) from rendeles_tetel where termekkod=termek.termekkod) as [Eladott darabszám] 
+from termek
+</code></pre>
+<p sourcefile="adatb/gyak7/index.md" sourcestartlinenumber="46">From záradékba:</p>
+<pre><code class="lang-sql" sourcefile="adatb/gyak7/index.md" sourcestartlinenumber="47">select * from  (select * from termek) as T
+</code></pre>
+<p sourcefile="adatb/gyak7/index.md" sourcestartlinenumber="50">Where záradékba:</p>
+<pre><code class="lang-sql" sourcefile="adatb/gyak7/index.md" sourcestartlinenumber="51">select * from termek where listaar&gt;(select avg(listaar) from termek)
+</code></pre>
+<p sourcefile="adatb/gyak7/index.md" sourcestartlinenumber="54">Having záradékba:</p>
+<pre><code class="lang-sql" sourcefile="adatb/gyak7/index.md" sourcestartlinenumber="55">select * from rendeles_tetel where mennyiseg&gt;(select avg(mennyiseg) from rendeles_tetel)
+</code></pre>
+<h3 id="operátorok" sourcefile="adatb/gyak7/index.md" sourcestartlinenumber="58">Operátorok</h3>
+<h4 id="any" sourcefile="adatb/gyak7/index.md" sourcestartlinenumber="59">ANY</h4>
+<p sourcefile="adatb/gyak7/index.md" sourcestartlinenumber="60">Az ANY operátor igaz értéket ad vissza, ha az összehasonlítás eredménye az alkérdés legalább egy eredménysorára teljesül. Az alábbi lekérdezés a legolcsóbb terméken kívül mindegyiket visszaadja.</p>
+<pre><code class="lang-sql" sourcefile="adatb/gyak7/index.md" sourcestartlinenumber="61">SELECT *
+FROM termek
+WHERE listaar &gt; ANY (select listaar from termek);
+</code></pre>
+<h4 id="all" sourcefile="adatb/gyak7/index.md" sourcestartlinenumber="66">ALL</h4>
+<p sourcefile="adatb/gyak7/index.md" sourcestartlinenumber="67">Az ALL operátor igaz értéket ad vissza, ha az összehasonlítás eredménye az alkérdés minden eredménysorára teljesül. Az alábbi lekérdezés a legdrágább termék(ek)et adja vissza:</p>
+<pre><code class="lang-sql" sourcefile="adatb/gyak7/index.md" sourcestartlinenumber="68">SELECT *
+FROM termek
+WHERE listaar &gt;= ALL (select listaar from termek);
+</code></pre>
+<h4 id="in" sourcefile="adatb/gyak7/index.md" sourcestartlinenumber="73">IN</h4>
+<p sourcefile="adatb/gyak7/index.md" sourcestartlinenumber="74">Az IN segítségével azt ellenőrízhetjük, a vizsgált érték eleme-e az eredményhalmaznak. Pl. melyek azok az ügyfelek, akik adtak már le rendelést?</p>
+<pre><code class="lang-sql" sourcefile="adatb/gyak7/index.md" sourcestartlinenumber="75">select * from ugyfel where login in (select login from rendeles)
+</code></pre>
+<h4 id="exists" sourcefile="adatb/gyak7/index.md" sourcestartlinenumber="78">EXISTS</h4>
+<p sourcefile="adatb/gyak7/index.md" sourcestartlinenumber="79">Az EXISTS operátor igaz értéket ad vissza, ha a beágyazott SELECT eredményhalmaza nem üres. Az előző feladat EXISTS operátorral:</p>
+<pre><code class="lang-sql" sourcefile="adatb/gyak7/index.md" sourcestartlinenumber="80">select * from ugyfel where exists (select * from rendeles where rendeles.login=ugyfel.login)
+</code></pre>
+<h3 id="mikor-használjuk" sourcefile="adatb/gyak7/index.md" sourcestartlinenumber="83">Mikor használjuk?</h3>
+<ul sourcefile="adatb/gyak7/index.md" sourcestartlinenumber="84">
+<li sourcefile="adatb/gyak7/index.md" sourcestartlinenumber="84">Ha szeretnénk összehasonlítani egy kifejezés értékét a beágyazott lekérdezés eredményével (legtöbbször &lt;, &gt;, = )</li>
+<li sourcefile="adatb/gyak7/index.md" sourcestartlinenumber="85">Ha szeretnénk eldönteni, hogy egy kifejezés eredménye benne van-e a beágyazott lekérdezés eredményhalmazában (IN)</li>
+<li sourcefile="adatb/gyak7/index.md" sourcestartlinenumber="86">Ha szeretnénk eldönteni, hogy a beágyazott lekérdezés eredményhalmaza üres-e (EXISTS)</li>
+</ul>
+<h3 id="korlátozások" sourcefile="adatb/gyak7/index.md" sourcestartlinenumber="87">Korlátozások</h3>
+<p sourcefile="adatb/gyak7/index.md" sourcestartlinenumber="88">Az ANSI SQL több korlátozást is megfogalmaz az allekérdezésekkel kapcsolatban, többségüket tapasztalhatjuk MSSQL-ben is:</p>
+<ul sourcefile="adatb/gyak7/index.md" sourcestartlinenumber="89">
+<li sourcefile="adatb/gyak7/index.md" sourcestartlinenumber="89">Mindig zárójelbe kell tenni</li>
+<li sourcefile="adatb/gyak7/index.md" sourcestartlinenumber="90">Összehasonlítás esetén mindig a reláció jobb oldalán áll</li>
+<li sourcefile="adatb/gyak7/index.md" sourcestartlinenumber="91">Nem lehet benne ORDER BY (leszámítva a TOP, FOR XML, OFFSET esetét), INTO</li>
+<li sourcefile="adatb/gyak7/index.md" sourcestartlinenumber="92">Ha van benne GROUP BY, akkor nem lehet benne DISTINCT</li>
+<li sourcefile="adatb/gyak7/index.md" sourcestartlinenumber="93">Ha csak egy értéket ad vissza, akkor nem lehet benne GROUP BY és HAVING sem</li>
+<li sourcefile="adatb/gyak7/index.md" sourcestartlinenumber="94">A visszaadott érték(ek)nek (join) kompatibilisnek kell lennie a külső SELECT WHERE feltételével</li>
+<li sourcefile="adatb/gyak7/index.md" sourcestartlinenumber="95">Bizonyos adattípusok nem használhatók (ntext, text, image)</li>
+</ul>
+<h3 id="megjegyzések" sourcefile="adatb/gyak7/index.md" sourcestartlinenumber="96">Megjegyzések</h3>
+<ul sourcefile="adatb/gyak7/index.md" sourcestartlinenumber="97">
+<li sourcefile="adatb/gyak7/index.md" sourcestartlinenumber="97">A beágyazott lekérdezések helyett többnyire más megoldást is használhatunk (pl: JOIN)</li>
+<li sourcefile="adatb/gyak7/index.md" sourcestartlinenumber="98">A beágyazott lekérdezések átláthatóbbá teszik a kódot, viszont performacia szempontjából nem a legjobbak</li>
+<li sourcefile="adatb/gyak7/index.md" sourcestartlinenumber="99">Ugyanaz a feladat sokszor többféle operátor használatával is megoldható (pl: IN, EXISTS).</li>
+<li sourcefile="adatb/gyak7/index.md" sourcestartlinenumber="100">Nagyobb rekordszám esetén performancia szempontjából legtöbbször az EXISTS a legjobb választás</li>
+<li sourcefile="adatb/gyak7/index.md" sourcestartlinenumber="101">Az IN és az EXISTS operátorok tagadhatók is (NOT IN, NOT EXISTS)</li>
+<li sourcefile="adatb/gyak7/index.md" sourcestartlinenumber="102">A beágyazott lekérdezések  egymásba is ágyazhatók</li>
+</ul>
+<h2 id="példák" sourcefile="adatb/gyak7/index.md" sourcestartlinenumber="103">Példák</h2>
+<h3 id="önálló-alkérdés---összehasonlítás" sourcefile="adatb/gyak7/index.md" sourcestartlinenumber="104">Önálló alkérdés - összehasonlítás</h3>
+<p sourcefile="adatb/gyak7/index.md" sourcestartlinenumber="105">Melyek azok a rendelési tételek, amelyek rendelési mennyisége az átlagos rendelési mennyiségnél nagyobb?</p>
+<pre><code class="lang-sql" sourcefile="adatb/gyak7/index.md" sourcestartlinenumber="106">SELECT * FROM rendeles_tetel
+WHERE mennyiseg &gt; (SELECT AVG(mennyiseg) FROM rendeles_tetel)
+</code></pre>
+<h3 id="önálló-alkérdés--összehasonlítás--any-all" sourcefile="adatb/gyak7/index.md" sourcestartlinenumber="110">Önálló alkérdés – összehasonlítás + ANY, ALL</h3>
+<p sourcefile="adatb/gyak7/index.md" sourcestartlinenumber="111">Melyek azok a termékek, amelyek nem a legolcsóbbak (listaáruk nem a legkisebb)</p>
+<pre><code class="lang-sql" sourcefile="adatb/gyak7/index.md" sourcestartlinenumber="112">SELECT megnevezes
+FROM Termek
+WHERE listaar &gt; ANY
+(
+ SELECT listaar
+ FROM Termek
+)
+</code></pre>
+<p sourcefile="adatb/gyak7/index.md" sourcestartlinenumber="121">Melyek a legdrágább termékek?</p>
+<pre><code class="lang-sql" sourcefile="adatb/gyak7/index.md" sourcestartlinenumber="122">SELECT megnevezes
+FROM Termek
+WHERE listaar &gt;= ALL
+(
+ SELECT listaar
+ FROM Termek
+)
+</code></pre>
+<h3 id="önálló-alkérdés---in" sourcefile="adatb/gyak7/index.md" sourcestartlinenumber="131">Önálló alkérdés - IN</h3>
+<p sourcefile="adatb/gyak7/index.md" sourcestartlinenumber="132">Melyek azok az ügyfelek, akik már adtak le rendelést?</p>
+<pre><code class="lang-sql" sourcefile="adatb/gyak7/index.md" sourcestartlinenumber="133">SELECT Nev
+ FROM Ugyfel 
+WHERE [login] IN 
+(
+SELECT DISTINCT [login] 
+FROM rendeles
+)
+</code></pre>
+<h3 id="korrelált-alkérdés---összehasonlítás" sourcefile="adatb/gyak7/index.md" sourcestartlinenumber="142">Korrelált alkérdés - Összehasonlítás</h3>
+<p sourcefile="adatb/gyak7/index.md" sourcestartlinenumber="143">Melyek azok a termékek, amelyek listaára kategóriájukban a legmagasabb?</p>
+<pre><code class="lang-sql" sourcefile="adatb/gyak7/index.md" sourcestartlinenumber="144">SELECT t.termekkod, t.MEGNEVEZES
+FROM Termek t
+WHERE t.LISTAAR = 
+(
+ SELECT max(t2.LISTAAR)
+ FROM Termek t2
+ WHERE t.KAT_ID = t2.KAT_ID
+)
+</code></pre>
+<h3 id="korrelált-alkérdés--összehasonlítás--any-all" sourcefile="adatb/gyak7/index.md" sourcestartlinenumber="154">Korrelált alkérdés – Összehasonlítás + ANY, ALL</h3>
+<p sourcefile="adatb/gyak7/index.md" sourcestartlinenumber="155">Melyek azok az a termékek, amelyek saját raktárukban a legolcsóbbak?</p>
+<pre><code class="lang-sql" sourcefile="adatb/gyak7/index.md" sourcestartlinenumber="156">SELECT t.TERMEKKOD, t.megnevezes
+FROM Termek t
+WHERE t.listaar &lt;= ALL
+(
+ SELECT t2.listaar
+ FROM Termek t2
+ WHERE t.RAKTAR_KOD = t2.RAKTAR_KOD
+)
+</code></pre>
+<h3 id="korrelált-alkérdés---in" sourcefile="adatb/gyak7/index.md" sourcestartlinenumber="166">Korrelált alkérdés - IN</h3>
+<pre><code class="lang-sql" sourcefile="adatb/gyak7/index.md" sourcestartlinenumber="167">SELECT u.NEV
+FROM Ugyfel u
+WHERE 'Esküvői meghívó' IN
+(
+  SELECT t.megnevezes
+  FROM Rendeles r        JOIN Rendeles_Tetel rt ON r.SORSZAM = rt.SORSZAM
+       JOIN Termek t ON rt.TERMEKKOD = t.TERMEKKOD
+  WHERE u.LOGIN = r.LOGIN
+)
+</code></pre>
+<h3 id="korrelált-alkérdés---exists" sourcefile="adatb/gyak7/index.md" sourcestartlinenumber="178">Korrelált alkérdés - EXISTS</h3>
+<p sourcefile="adatb/gyak7/index.md" sourcestartlinenumber="179">Melyek azok a termékek, amelyekből legalább egyszer rendeltek már 50 darabnál többet?</p>
+<pre><code class="lang-sql" sourcefile="adatb/gyak7/index.md" sourcestartlinenumber="180">SELECT t.megnevezes
+from Termek t
+where EXISTS
+(
+  SELECT *
+  FROM Rendeles_tetel rt 
+  WHERE rt.TERMEKKOD = t.TERMEKKOD 
+        AND rt.MENNYISEG &gt; 50
+)
+</code></pre>
+<h3 id="alkérdés---having" sourcefile="adatb/gyak7/index.md" sourcestartlinenumber="191">Alkérdés - HAVING</h3>
+<p sourcefile="adatb/gyak7/index.md" sourcestartlinenumber="192">Melyek azok az ügyfelek, amelyek 2017-ben többször rendeltek, mint 2016-ban? Elég az ügyfelek azonosítóját (LOGIN) megjeleníteni!</p>
+<pre><code class="lang-sql" sourcefile="adatb/gyak7/index.md" sourcestartlinenumber="193">SELECT u.LOGIN
+FROM Rendeles r JOIN Ugyfel u ON r.LOGIN = u.LOGIN
+WHERE YEAR(rend_datum)=2017 
+GROUP BY u.login
+HAVING COUNT(*)&gt;
+(
+  SELECT COUNT(*)
+  FROM Rendeles r2 JOIN Ugyfel u2 ON r2.LOGIN = u2.LOGIN
+  WHERE YEAR(rend_datum)=2016 AND u2.LOGIN = u.LOGIN
+)
+</code></pre>
+<h1 id="feladatok" sourcefile="adatb/gyak7/index.md" sourcestartlinenumber="206">Feladatok</h1>
+<h2 id="előkészületek" sourcefile="adatb/gyak7/index.md" sourcestartlinenumber="207">Előkészületek</h2>
+<p sourcefile="adatb/gyak7/index.md" sourcestartlinenumber="208">• Csatlakozás a tanszéki kiszolgálóra
+A gyakorlathoz tartozó adatbázis az egyetemen kívülről csak VPN-en keresztül érhető el.</p>
+<table sourcefile="adatb/gyak7/index.md" sourcestartlinenumber="211">
+<thead>
+<tr sourcefile="adatb/gyak7/index.md" sourcestartlinenumber="211">
+<th sourcefile="adatb/gyak7/index.md" sourcestartlinenumber="211"></th>
+<th sourcefile="adatb/gyak7/index.md" sourcestartlinenumber="211"></th>
+</tr>
+</thead>
+<tbody>
+<tr sourcefile="adatb/gyak7/index.md" sourcestartlinenumber="213">
+<td sourcefile="adatb/gyak7/index.md" sourcestartlinenumber="213">Szerver</td>
+<td sourcefile="adatb/gyak7/index.md" sourcestartlinenumber="213">bit.uni-corvinus.hu</td>
+</tr>
+<tr sourcefile="adatb/gyak7/index.md" sourcestartlinenumber="214">
+<td sourcefile="adatb/gyak7/index.md" sourcestartlinenumber="214">Felhasználónév</td>
+<td sourcefile="adatb/gyak7/index.md" sourcestartlinenumber="214">hallgato</td>
+</tr>
+<tr sourcefile="adatb/gyak7/index.md" sourcestartlinenumber="215">
+<td sourcefile="adatb/gyak7/index.md" sourcestartlinenumber="215">Jelszó</td>
+<td sourcefile="adatb/gyak7/index.md" sourcestartlinenumber="215">Password123</td>
+</tr>
+<tr sourcefile="adatb/gyak7/index.md" sourcestartlinenumber="216">
+<td sourcefile="adatb/gyak7/index.md" sourcestartlinenumber="216">Adatbázis</td>
+<td sourcefile="adatb/gyak7/index.md" sourcestartlinenumber="216">webshop</td>
+</tr>
+</tbody>
+</table>
+<p sourcefile="adatb/gyak7/index.md" sourcestartlinenumber="219">Válasszuk ki a webshop adatbázist!
+-- Vagy --
+•	Webshop adatbázis telepítése a webshop.sql script segítségével. Figyelem, nagy méretű állomány, lefuttatása néhány percet is igénybe vehet.</p>
+<p sourcefile="adatb/gyak7/index.md" sourcestartlinenumber="223"><em sourcefile="adatb/gyak7/index.md" sourcestartlinenumber="223"><strong sourcefile="adatb/gyak7/index.md" sourcestartlinenumber="223">A 3,4,5,16 feladatokhoz mindenképpen saját (Azure vagy telepített) SQL szerverre van szükség, mivel adatdefiníciós és -manipulációs parancsok futtatása a tanszéki kiszolgálón nem megengedett.</strong></em></p>
+<h2 id="feladatsor" sourcefile="adatb/gyak7/index.md" sourcestartlinenumber="225">Feladatsor</h2>
+<p sourcefile="adatb/gyak7/index.md" sourcestartlinenumber="226">(+/-) Melyek azok a rendelések, ahol a rendelés postai úton történt, és a megrendelés és a szállítás dátuma között több, mint egy hét telt el?
+a.	Csak a rendelések sorszámait listázzuk!
+<a href="Gy07_01.mp4" sourcefile="adatb/gyak7/index.md" sourcestartlinenumber="228">Megoldás</a></p>
+<p sourcefile="adatb/gyak7/index.md" sourcestartlinenumber="230">(+/-) Listázzuk veronika4 azonosítójú (LOGIN) felhasználó összes rendelését!
+a.	Csak a rendelés sorszámát, dátumát, a termékkódot és a mennyiséget jelenítsük meg!
+<a href="Gy07_02.mp4" sourcefile="adatb/gyak7/index.md" sourcestartlinenumber="232">Megoldás</a></p>
+<p sourcefile="adatb/gyak7/index.md" sourcestartlinenumber="234">(+/-) Egy spórolós ügyfél saját árlistát szeretne készíteni, amelyet egy külön táblában tárol.
+Ebben a megvásárolni kívánt termékek kódját és a más webshopokban elérhető legalacsonyabb árát tárolja. Első lépésként létrehoz egy táblát NEPTUNKOD_ARLISTA néven, amelynek szerkezete a következő:
+(
+ID egész szám,
+TERMEKKOD szöveg(255),
+MIN_LISTAAR valós szám
+)
+Az ID legyen elsődleges kulcs, a LISTAAR csak 0 és 50000 között lehet.
+a.	Hozzuk létre az új táblát és a megadott kényszereket!
+<a href="Gy07_03.mp4" sourcefile="adatb/gyak7/index.md" sourcestartlinenumber="243">Megoldás</a></p>
+<p sourcefile="adatb/gyak7/index.md" sourcestartlinenumber="245">(+/-) Töltsük fel manuálisan a NEPTUNKOD_ARLISTA táblát a következő adatokkal:
+a.	 1, '01100070T', 80
+b.	 2, '02040403T', 1200
+c.	 3, '03080031T', 100
+d.	 4, '07040047T', 35
+<a href="Gy07_04.mp4" sourcefile="adatb/gyak7/index.md" sourcestartlinenumber="250">Megoldás</a></p>
+<p sourcefile="adatb/gyak7/index.md" sourcestartlinenumber="252">(+/-) Listázzuk a NEPTUNKOD_ARLISTA tábla sorait! A lista tartalmazzon két új oszlopot is.
+a.	Az első a Termek táblában található listaár legyen ugyanerre a termékre 'Webshop_listaár' néven!
+b.	A második 'Megéri_e' néven egy bit típusú oszlop legyen. Ennek értéke 1, ha a listaár kisebb, vagy egyenlő, mint a Termek táblában található listaár, 0 ha magasabb.
+<a href="Gy07_05.mp4" sourcefile="adatb/gyak7/index.md" sourcestartlinenumber="255">Megoldás</a></p>
+<p sourcefile="adatb/gyak7/index.md" sourcestartlinenumber="257">(+/-)  <strong sourcefile="adatb/gyak7/index.md" sourcestartlinenumber="257">Listázzuk azon termékeket, amelyekből az átlagosnál kevesebb van raktáron!</strong>
+a.	Csak a termék kódja és megnevezése jelenjen meg!
+<a href="Gy07_06.mp4" sourcefile="adatb/gyak7/index.md" sourcestartlinenumber="259">Megoldás</a></p>
+<p sourcefile="adatb/gyak7/index.md" sourcestartlinenumber="261">(+/-) ** Listázzuk azon ügyfeleket, akik még nem fizettek bankkártyával!**
+a.	Csak az ügyfelek neve jelenjen meg!
+<a href="Gy07_07.mp4" sourcefile="adatb/gyak7/index.md" sourcestartlinenumber="263">Megoldás</a></p>
+<p sourcefile="adatb/gyak7/index.md" sourcestartlinenumber="265">(+/-) <strong sourcefile="adatb/gyak7/index.md" sourcestartlinenumber="265">Mennyibe kerül a második legnagyobb listaárú termék?</strong>
+<a href="Gy07_08.mp4" sourcefile="adatb/gyak7/index.md" sourcestartlinenumber="266">Megoldás</a></p>
+<p sourcefile="adatb/gyak7/index.md" sourcestartlinenumber="268">(+/-) <strong sourcefile="adatb/gyak7/index.md" sourcestartlinenumber="268">Melyik raktár(ak)ban van az a termék, amelyből a legnagyobb készlet van?</strong>
+a.	 Csak a raktár(ak) neve jelenjen meg!
+<a href="Gy07_09.mp4" sourcefile="adatb/gyak7/index.md" sourcestartlinenumber="270">Megoldás</a></p>
+<p sourcefile="adatb/gyak7/index.md" sourcestartlinenumber="272">(+/-) <strong sourcefile="adatb/gyak7/index.md" sourcestartlinenumber="272">Melyek azok a termékek, amelyek listaára nagyobb, mint bármelyik olyan terméké, amelynek nevében az Ajándék szó szerepel?</strong>
+a.	A termékek kódját és nevét is jelenítsük meg!
+<a href="Gy07_10.mp4" sourcefile="adatb/gyak7/index.md" sourcestartlinenumber="274">Megoldás</a></p>
+<p sourcefile="adatb/gyak7/index.md" sourcestartlinenumber="276">(+/-) Melyik hónapokban adtak le az ügyfelek több rendelést, mint januárban?
+a.	Elég a hónapok sorszámait megjeleníteni.
+b.	A listát rendezzük a hónapok száma szerint növekvő sorrendbe!
+<a href="Gy07_11.mp4" sourcefile="adatb/gyak7/index.md" sourcestartlinenumber="279">Megoldás</a></p>
+<p sourcefile="adatb/gyak7/index.md" sourcestartlinenumber="281">(+/-) Melyek azok a termékek, amelyek listaára az átlagostól max. 20%-kal tér el?
+a.	A termék kódját és nevét is jelenítsük meg!
+<a href="Gy07_12.mp4" sourcefile="adatb/gyak7/index.md" sourcestartlinenumber="283">Megoldás</a></p>
+<p sourcefile="adatb/gyak7/index.md" sourcestartlinenumber="285">(+/-) Készítsünk listát (sorszámonként) az egyes rendelések teljes összegéről!
+a.	Szűrjünk azon tételekre, ahol ez az érték nagyobb, mint Viktor Éva rendeléseinek teljes összege!
+b.	 A teljes összeg oszlopot nevezzük el értelemszerűen!
+<a href="Gy07_13.mp4" sourcefile="adatb/gyak7/index.md" sourcestartlinenumber="288">Megoldás</a></p>
+<p sourcefile="adatb/gyak7/index.md" sourcestartlinenumber="290">(+/-) Listázzuk azokat a termékkategóriákat, amelyből 2017 januárban nem történt rendelés!
+a.	Elég a kategóriák nevét megjeleníteni!
+<a href="Gy07_14.mp4" sourcefile="adatb/gyak7/index.md" sourcestartlinenumber="292">Megoldás</a></p>
+<p sourcefile="adatb/gyak7/index.md" sourcestartlinenumber="294">(+/-) Listázzuk azon rendelési tételeket, amelynek értéke nagyobb, mint a legdrágább termék listaára azon termékek közül, amelyek szülő kategóriája a ruha!
+<a href="Gy07_15.mp4" sourcefile="adatb/gyak7/index.md" sourcestartlinenumber="295">Megoldás</a></p>
+<p sourcefile="adatb/gyak7/index.md" sourcestartlinenumber="297">(+/-) Plusz feladat: töröljük a NEPTUN_LISTAAR táblát</p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/altinum/szamtud_docfx/blob/main/adatb/gyak7/index.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

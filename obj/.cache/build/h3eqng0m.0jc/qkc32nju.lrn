@@ -1,0 +1,525 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>&#214;sszefoglal&#225;s </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="&#214;sszefoglal&#225;s ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="összefoglalás">Összefoglalás</h1>
+
+<h2 id="a-select-utasítás-felépítése">A SELECT utasítás felépítése</h2>
+<p>Az SQL lekérdező utasítása, alapformája a következő:</p>
+<pre><code class="lang-sql">SELECT*…       -- oszlopok kiválasztása
+FROM …         -- táblák kiválasztása
+WHERE …        -- szűrőfeltétel megadása a sorokra
+GROUP BY …     -- csoportosítás
+HAVING …       -- szűrőfeltétel a csoportokra
+ORDER BY…      -- sorbarendezés
+</code></pre>
+<p><strong>Kiegészítés:</strong>  Az eredménysorok számát a TOP (n) [PERCENT] záradék megadásával befolyásolhatjuk:
+pl:</p>
+<pre><code class="lang-sql">SELECT TOP 5 * FROM Szoba 
+</code></pre>
+<p>az első 5 szoba adatait jeleníti meg</p>
+<h2 id="kifejezések">Kifejezések</h2>
+<p>Az egyszerű kifejezések konstansokat, változókat, oszlopneveket és függvényeket tartalmazhatnak, pl:</p>
+<ul>
+<li>'Dr.'              (szöveges konstans)</li>
+<li>Nettóbér           (oszlopnév)</li>
+<li>YEAR('2010.01.011') (függvény, dátum konstans)</li>
+</ul>
+<p>Az összetett kifejezések operátorokat is tartalmazhatnak, pl:</p>
+<ul>
+<li>'Dr.' + Vezetéknév + Keresztnév (összefűzés)</li>
+<li>Nettóbér * 1.27                    (szorzás)</li>
+</ul>
+<p>A kifejezések mindig egy értéket adnak vissza</p>
+<h3 id="case">CASE</h3>
+<p>Többirányú elágazás megvalósítása, két formája van:</p>
+<pre><code class="lang-sql">CASE 
+     WHEN feltétel1 THEN kifjezés1
+     WHEN feltétel2 THEN kifejezés2
+     …
+	WHEN feltételn THEN kifejezésn
+      [ELSE kifejezés]
+END
+</code></pre>
+<pre><code class="lang-sql">CASE kifejezés
+     WHEN érték1 THEN kifjezés1
+     WHEN érték2 THEN kifejezés2
+     …
+	WHEN értékn THEN kifejezésn
+      [ELSE kifejezés]
+END
+</code></pre>
+<h3 id="konstansok-és-típusok">Konstansok és típusok</h3>
+<table>
+<thead>
+<tr>
+<th>Konstans</th>
+<th>Típus</th>
+<th>Példa</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Szöveges   konstans</td>
+<td>varchar(x)   (x:   a szöveg max.   hossza)</td>
+<td>’Budapest’</td>
+</tr>
+<tr>
+<td>Unicode   szöveges konstans</td>
+<td>nvarchar(x)   (x:   a szöveg max.   hossza)</td>
+<td>N’Budapest’</td>
+</tr>
+<tr>
+<td>Egész   konstans</td>
+<td>int</td>
+<td>25</td>
+</tr>
+<tr>
+<td>Bit   konstans</td>
+<td>bit</td>
+<td>1</td>
+</tr>
+<tr>
+<td>Decimális   konstans</td>
+<td>decimal(x,   y)   (x:   a számjegyek száma,    y: a tizedesjegyek száma)</td>
+<td>12.45</td>
+</tr>
+<tr>
+<td>Dátum/Idő   konstans</td>
+<td>date,      datetime,      time</td>
+<td>’2012.01.15’   ’2020.02.11   22:11:33’   ’06:12:10’</td>
+</tr>
+</tbody>
+</table>
+<h3 id="fontosabb-függvények-operátorok">Fontosabb függvények, operátorok</h3>
+<h4 id="függvények">Függvények</h4>
+<table>
+<thead>
+<tr>
+<th>Függvénytípus</th>
+<th>Függvény</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DÁTUM/IDŐ</td>
+<td>GETDATE(),   DAY(d), MONTH(d), YEAR(d),       DATEADD(x, y, z), DATEDIFF(x, y, z)</td>
+</tr>
+<tr>
+<td>KONVERZIÓS</td>
+<td>CAST(x   AS y), CONVERT(x, y)</td>
+</tr>
+<tr>
+<td>MATEMATIKAI</td>
+<td>POWER(x,   y), SQRT(x), ROUND(x, y), ABS(x)</td>
+</tr>
+<tr>
+<td>SZÖVEG</td>
+<td>LEN(x),   LEFT(x, y), RIGHT(x, y), LOWER(x), UPPER(x), CHARINDEX(x, y)</td>
+</tr>
+<tr>
+<td>EGYÉB</td>
+<td>ISNULL(x,   y), IIF(x, y, z)</td>
+</tr>
+</tbody>
+</table>
+<h4 id="operátorok">Operátorok</h4>
+<table>
+<thead>
+<tr>
+<th>Operátor típus</th>
+<th>Operátor</th>
+<th>Megjegyzés</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Aritmetikai   operátorok</td>
+<td>+,   -, *, /, %</td>
+<td>%:   az egész osztás maradéka</td>
+</tr>
+<tr>
+<td>Logikai   operátorok</td>
+<td>NOT,   AND, OR</td>
+<td></td>
+</tr>
+<tr>
+<td>Összehasonlító   operátorok</td>
+<td>&lt;,   &gt;, =, &lt;&gt;, &gt;=, &lt;=</td>
+<td></td>
+</tr>
+<tr>
+<td>Szöveg   operátorok</td>
+<td>+,   %, _</td>
+<td>+:   szövegek összefűzése   %:   helyettesítő operátor (egy vagy több karakter vagy üres)   _:   helyettesítő operátor (egy karakter)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="összesítés-aggregálás">Összesítés (aggregálás)</h2>
+<ul>
+<li>Az összesítő függvények értékek egy halmazán végeznek számítást, és egyetlen értéket adnak vissza.</li>
+<li>Alapesetben a halmaz a tábla összes sorát jelenti</li>
+<li>A számítás egy kifejezés kiértékelését jelenti</li>
+<li>Az összesítő függvények (kivéve: COUNT(*)) nem veszik figyelembe a NULL értékeket</li>
+</ul>
+<p>Fontosabb összesítő függvények és szerepük:</p>
+<ul>
+<li>SUM(): egy adott kifejezés értékeit összegét adja vissza</li>
+<li>AVG(): egy adott kifejezés értékeinek átlagát adja vissza</li>
+<li>MIN() és MAX(): egy adott kifejezés értékei közül a legkisebbet, illetve legnagyobbat adja vissza</li>
+<li>COUNT(): egy adott halmaz elemeinek számát adja vissza</li>
+</ul>
+<h2 id="csoportosítás">Csoportosítás</h2>
+<pre><code class="lang-sql">SELECT…        -- oszlopok kiválasztása
+FROM …         -- táblák kiválasztása
+WHERE …        -- szűrőfeltétel megadása a sorokra
+GROUP BY …     --  csoportosítás
+HAVING …       -- szűrőfeltétel a csoportokra
+ORDER BY…          -- sorbarendezés
+</code></pre>
+<p>A GROUP BY részben felsorolt mezők vagy kifejezések szerint csoportokat képezhetünk, és a SELECT részben alkalmazott számításokat ezekre a csoportokra alkalmazhatjuk. A HAVING részben a csoportokra adhatunk meg szűrőfeltételt.
+Csoportosítás esetén a SELECT részben lévő oszlopoknak szerepelniük kell a GROUP BY felsorolásában, vagy egy összesítésben (mint az összesítő függvény paramétere)</p>
+<h2 id="táblák-összekapcsolása--join-típusok">Táblák összekapcsolása – JOIN típusok</h2>
+<p><img src="../../images/1587964457825.png" alt="1587964457825.png"></p>
+<ul>
+<li>(INNER) JOIN: Az A tábla idegen kulcsa megegyezik a B tábla kulcsával</li>
+<li>LEFT (OUTER) JOIN: Az INNER JOIN eredményéhez hozzá veszi az A tábla minden további sorát is</li>
+<li>RIGHT (OUTER) JOIN: Az INNER JOIN eredményéhez hozzá veszi az B tábla minden további sorát is</li>
+<li>FULL (OUTER) JOINT: Az INNER JOIN eredményéhez hozzá veszi az A és B tábla minden további sorait is</li>
+</ul>
+<p>Az OUTER szó használata nem kötelező</p>
+<h2 id="halmazműveletek">Halmazműveletek</h2>
+<h3 id="lekérdezések-uniója-sql-ben">Lekérdezések uniója SQL-ben:</h3>
+<pre><code class="lang-sql">SELECT oszlopnevek
+FROM ….
+UNION (ALL)
+SELECT oszlopnevek
+FROM …
+</code></pre>
+<blockquote>
+<p>UNION esetén az eredményhalmazban a duplikált (mindegyik lekérdezésben előforduló) sorok csak egyszer szerepelnek, UNION ALL esetén pedig annyiszor, ahányszor előfordulnak</p>
+</blockquote>
+<h3 id="lekérdezések-metszete-sql-ben">Lekérdezések metszete SQL-ben:</h3>
+<pre><code class="lang-sql">SELECT oszlopnevek
+FROM ……
+INTERSECT
+SELECT oszlopnevek
+FROM …….
+</code></pre>
+<h3 id="lekérdezések-különbsége-sql-ben">Lekérdezések különbsége SQL-ben:</h3>
+<pre><code class="lang-sql">SELECT oszlopnevek
+FROM ……
+EXCEPT
+SELECT oszlopnevek
+FROM ……
+</code></pre>
+<h2 id="adatdefiníciós-parancsok">Adatdefiníciós parancsok</h2>
+<h3 id="tábla-létrehozása">Tábla létrehozása</h3>
+<pre><code class="lang-sql">CREATE TABLE táblanév* 
+(
+ oszlopnév1  típusnév1 [oszlopkényszerek1],
+ oszlopnév2  típusnév2 [oszlopkényszerek2],
+
+   …    oszlopnévn  típusnévn [oszlopkényszerekn]
+    [, táblakényszerek]
+)
+</code></pre>
+<blockquote>
+<p>Ha a táblanév # karakterrel kezdődik, akkor un. Ideiglenes tábla jön létre. Ez csak az adott kapcsolat (munkamenet, session) időtartalma alatt létezik. Ha a táblanév ## karakterekkel kezdődik, akkor több egyidejű kapcsolat esetén az ideiglenes tábla mindegyikben elérhető lesz.</p>
+</blockquote>
+<h3 id="oszlop-hozzáadása-módosítása-törlése">Oszlop hozzáadása, módosítása, törlése</h3>
+<pre><code class="lang-sql">ALTER TABLE táblanév 
+ADD oszlopnév típus
+</code></pre>
+<pre><code class="lang-sql">
+ALTER TABLE táblanév
+ALTER COLUMN 
+oszlopnév típus
+</code></pre>
+<pre><code class="lang-sql">ALTER TABLE táblanév
+DROP COLUMN oszlopnév
+</code></pre>
+<h3 id="kényszer-törlése">Kényszer törlése</h3>
+<pre><code class="lang-sql">ALTER TABLE táblanév
+DROP CONSTRAINT kényszernév
+</code></pre>
+<h3 id="az-egész-tábla-törlése">Az egész tábla törlése</h3>
+<pre><code class="lang-sql">DROP TABLE táblanév
+</code></pre>
+<blockquote>
+<p>A tábla törlése a szerkezet meghagyásával</p>
+</blockquote>
+<pre><code class="lang-sql">TRUNCATE TABLE táblanév
+</code></pre>
+<h2 id="kényszerek">Kényszerek</h2>
+<p>A kényszerek a lehetséges adatok halmazát leíró, korlátozó szabályok.
+A kényszerek (a NULL/NOT NULL és a Default kivételével) megadhatók oszlop, illetve tábla szinten is (oszlopkényszerek, táblakényszerek)</p>
+<ul>
+<li>Not Null Constraint: kötelező-e kitölteni az adott oszlopot?</li>
+<li>Check Constraint: teljesül-e az adott logikai feltétel?</li>
+<li>Default Constraint: mi legyen az adott oszlop alapértelmezett értéke?</li>
+<li>Unique Constraint: az adott oszlop vagy oszlopok értékei egyediek legyenek</li>
+<li>Primary Key Constraint: az adott oszlop vagy több oszlop együtt elsődleges kulcs legyen</li>
+<li>Foreign Key Constraint: az adott oszlop vagy több oszlop együtt idegen kulcs legyen</li>
+</ul>
+<h2 id="adatmanipulációs-parancsok">Adatmanipulációs parancsok</h2>
+<h3 id="új-sor-beszúrása">Új sor beszúrása</h3>
+<pre><code class="lang-sql">INSERT INTO táblanév 
+(
+   oszlopnév lista
+)
+VALUES
+(
+  értéklista
+)
+</code></pre>
+<blockquote>
+<p>Ha egy SELECT eredménysorait egy új táblába szeretnénk menteni, akkor használhatjuk a
+SELECT oszlopnév lista INTO táblanév FROM … parancsot is.</p>
+</blockquote>
+<h3 id="sorok-törlése">Sorok törlése</h3>
+<pre><code class="lang-sql">DELETE FROM táblanév 
+WHERE feltétel
+</code></pre>
+<h3 id="értékek-módosítása">Értékek módosítása</h3>
+<pre><code class="lang-sql">UPDATE táblanév 
+SET   oszlop1 = érték1,
+        oszlop2 = érték2,
+        ….
+WHERE feltétel
+</code></pre>
+<h2 id="beágyazott-lekérdezések">Beágyazott lekérdezések</h2>
+<pre><code class="lang-sql">SELECT select_list  
+FROM table  
+WHERE expr operator  
+(SELECT select_list FROM table)
+</code></pre>
+<pre><code class="lang-sql">SELECT ProductID, Name, ListPrice  
+FROM production.Product  
+WHERE ListPrice &gt; (SELECT AVG(ListPrice)  FROM Production.Product) --subquery 
+</code></pre>
+<p>Tipikus használat</p>
+<ul>
+<li>Ha szeretnénk összehasonlítani egy kifejezés értékét a beágyazott lekérdezés eredményével (legtöbbször &lt;, &gt;, = )</li>
+<li>Ha szeretnénk eldönteni, hogy egy kifejezés eredménye benne van-e a beágyazott lekérdezés eredményhalmazában (IN)-</li>
+<li>Ha szeretnénk eldönteni, hogy a beágyazott lekérdezés eredményhalmaza üres-e (EXISTS)</li>
+</ul>
+<h2 id="részösszegek">Részösszegek</h2>
+<p>Az oszlopneveket és a NULL értéket kombinálva csoportosít, és  megjeleníti a  részösszegeket valamint végösszeget. ROLLUP esetén a nem NULL oszlopok száma jobbról balra csökken, CUBE esetén a csoportosítás minden lehetséges kombinációt tartalmaz</p>
+<pre><code class="lang-sql">SELECT oszlopkifejezések*, 
+             aggregálás
+FROM …
+GROUP BY ROLLUP(oszlopkifejezések*)
+</code></pre>
+<pre><code class="lang-sql">SELECT oszlopkifejezések, 
+             aggregálás
+FROM …
+GROUP BY CUBE(oszlopkifejezések)
+</code></pre>
+<h2 id="grouping-sets">GROUPING SETS</h2>
+<p>A GROUP BY parancs kiegészítve a GROUPING SETS taggal lehetővé teszi, hogy többféle csoportosítást is megadjunk.
+A csoportosításokat leíró oszlopkifejezéseket egymás után, zárójelek között , vesszővel elválasztva kell megadni.</p>
+<p>Pl:</p>
+<pre><code class="lang-sql">SELECT oszlop1, oszlop2, SUM(oszlop3)
+FROM table
+GROUP BY GROUPING SETS(( oszlop1, oszlop2), (oszlop1)
+)
+</code></pre>
+<h2 id="ablakok-partíciók-analitikus-függvények">Ablakok, partíciók, analitikus függvények</h2>
+<p>Formája:</p>
+<pre><code class="lang-sql">Függvény()*
+OVER(
+[PARTITION BY kifejezés] 
+[ORDER BY kifejezés]
+[ROWS | RANGE BETWEEN kezdőpont AND végpont])
+</code></pre>
+<p>A függvény lehet</p>
+<ul>
+<li>Aggregáló függvény (SUM, AVG, MIN, MAX, COUNT)</li>
+<li>Analitikus függvény (LAG, LEAD, FIRST_VALUE, LAST_VALUE)</li>
+<li>Ranking függvény (RANK, DENS_RANK, NTILE, ROW_NUMBER)</li>
+</ul>
+<h2 id="nézetek-tárolt-eljárások-függvények">Nézetek, tárolt eljárások, függvények</h2>
+<pre><code class="lang-sql">CREATE VIEW view_név
+[(oszlopnevek listája)] [WITH view_attribútumok]
+AS SELECT_utasítás
+[WITH CHECK OPTION]*
+</code></pre>
+<pre><code class="lang-sql">CREATE PROCEDURE eljárás_név
+[paraméterek listája][WITH eljárás_opciók]
+AS 
+[BEGIN]
+Utasítások
+[END]
+</code></pre>
+<pre><code class="lang-sql">CREATE FUNCTION fv_név
+([paraméterek listája])RETURNS adattípus_név
+[WITH fv_opciók]
+[AS]
+BEGIN
+Utasítások
+RETURN skalár_kifejezés
+END
+</code></pre>
+<pre><code class="lang-sql">CREATE FUNCTION fv_név
+([paraméterek listája])RETURNS TABLE
+[WITH fv_opciók]
+[AS] 
+RETURN select_kifejezés
+</code></pre>
+<h1 id="hogyan-tovább--az-sql-tudás-bővítése">Hogyan tovább? – Az SQL tudás bővítése</h1>
+<ul>
+<li>A tanult témakörök elmélyítése (pl: függvények esetén opcionális paraméterek kipróbálása és/vagy újabb függvények megismerése)</li>
+<li>Ismerkedés újabb témákkal (pl: dinamikus SQL, triggerek, rekurzió stb.)</li>
+<li>Más relációs adatbázis rendszerek megismerése(elsősorban Oracle, DB2, MySQL)</li>
+<li>Tapasztalat szerzés a gyakorlatban (Junior szint: 1-3 év, Medior szint: 3-5 év, Senior szint: &gt;5 év)</li>
+</ul>
+<h1 id="feladatok">Feladatok</h1>
+<p>A feladatok a szallashely adatbázishoz készültek,  létrehozásához szükséges script elérhető itt:
+<a href="szallas.sql">szallas.sql</a></p>
+<p>(+/-)	Készítsen tárolt eljárást NEPTUNKÓD_SPFEROHELYEK néven, amely paraméterként kap egy egész számot, és listázza azon szobák adatait, ahol a férőhelyek száma (pótággyal együtt!) megegyezik a paraméter értékével!
+a)	Teszteljük a tárolt eljárás működését, pl: EXEC UJAENB_FEROHELYEK 4
+<a href="gy11_01.mp4">Megoldás</a></p>
+<p>(+/-)	Készítsen függvényt NEPTUNKÓD_UDFFoglalasszam néven, amely a paraméterként megadott ügyfél azonosítót felhasználva visszaadja, hogy az adott ügyfél eddig hányszor foglalt!
+a)	Teszteljük a fv. működését, pl: SELECT dbo.UJAENB_UDFFoglalasszam('kata')
+<a href="gy11_02.mp4">Megoldás</a></p>
+<p>(+/-)	Készítsen nézetet NEPTUNKÓD_VVendeghazSzobak néven, amely azon szobák adatait jeleníti meg, amelyek vendégházban vannak!
+a)	Egy új oszlopban jelenjen meg a szálláshely neve és zárójelben a helye is, pl: Gold Hotel (Budapest)!
+b)	Teszteljük a nézet működését, pl: SELECT * FROM UJAENB_VVendeghazSzobak
+<a href="gy11_03.mp4">Megoldás</a></p>
+<p>(+/-)	Készítsen nézetet NEPTUNKÓD_VHaviFoglalasszam néven, amely évenkénti, azon belül havi bontásban listázza a foglalások számát!
+a)	A foglalás dátumánál a METTOL oszlop értékét vegyük alapul!
+b)	Az oszlopokat nevezzük el értelemszerűen!
+c)	Teszteljük a nézet működését, pl: SELECT * FROM UJAENB_VHaviFoglalaszszam
+<a href="gy11_04.mp4">Megoldás</a></p>
+<p>(+/-)	Készítsen tárolt eljárást NEPTUNKÓD_SPPotagyasUGyfelek néven, amely azon vendégek adatait listázza, akik MINDIG pótágyas foglalást adtak le!
+a)	Az eredménylista ne tartalmazzon duplikált sorokat!
+b)	Teszteljük a tárolt eljárás működését, pl: EXEC UJAENB_SPPotagyasUgyfelek
+<a href="gy11_05.mp4">Megoldás</a></p>
+<p>(+/-)	<strong>Készítsen lekérdezést, amely listázza a foglalások azonosítóját, a foglalások időtartamát napokban, valamint a felnőttek és gyermekek számát!</strong>
+a)	A listát szűrjük azokra az ügyfelekre, akik azonosítója 'a' vagy 'b' betűvel kezdődik!
+b)	Az oszlopokat nevezzük el értelemszerűen!</p>
+<p>(+/-)	<strong>Készítsen lekérdezést, amely típusonként, azon belül csillagok száma szerinti bontásban megjeleníti a szálláshelyek számát!</strong>
+a)	A listát szűrjük azokra a rekordokra, ahol a szálláshelyek száma 4-nél kisebb!
+b)	A listából hagyjuk ki a budapesti szálláshelyeket!</p>
+<p>(+/-)	<strong>Listázzuk a foglalások adatait! A gyermekkel érkezők külön ajándékot kapnak.</strong>
+a)	Ezért egy új oszlopban jelenítsük meg, hogy az adott foglaláshoz jár-e ajándék (Igen-Nem).
+b)	A listát szűrjük a 3 csillagos szállásokra!</p>
+<p>(+/-)	<strong>Melyek azok a vendégek, akiknek már volt gyermekes és gyermek nélküli foglalásuk is?</strong>
+a)	Csak az ügyfelek azonosítója és neve jelenjen meg!
+b)	Az oszlopok neve legyen 'Azonosító' és 'Ügyfél'
+c)	A listát rendezzük név szerint növekvő sorrendbe!</p>
+<p>(+/-)	<strong>Melyek azok a szálláshelyek, ahol a legtöbb főre foglaltak?</strong>
+a)	Csak a szálláshelyek azonosítója, neve és helye jelenjen meg!
+b)	A lista ne tartalmazzon ismétlődő sorokat!</p>
+<p>(+/-)	<strong>Készítsünk lekérdezést, amely a szállás helye szerint, azon belül a foglalás éve szerint megjeleníti, hogy hány foglalás történt! (A foglalás időpontjánál a METTOL dátummal számoljunk).</strong>
+a)	A lista jelenítse meg a részösszegeket és a végösszeget is!
+b)	A végösszeget jelöljük megfelelően!
+c)	Az oszlopokat nevezzük el értelemszerűen!</p>
+<p>(+/-)	Listázzuk a szálláshelyek adatait a rögzítési idejének sorrendjében!
+a)	Egy-egy új oszlopban jelenjen meg az eddig rögzített szálláshelyek minimális és maximális csillagszáma is (az aktuálisat is beleértve) a szálláshely helyén belül!</p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/altinum/szamtud_docfx/blob/main/adatb/gyak11/index.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

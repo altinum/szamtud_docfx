@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>1. gyakorlat &#8211; Egyszer&#369;, egyt&#225;bl&#225;s lek&#233;rdez&#233;sek </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="1. gyakorlat &#8211; Egyszer&#369;, egyt&#225;bl&#225;s lek&#233;rdez&#233;sek ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="1-gyakorlat--egyszerű-egytáblás-lekérdezések" sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="1">1. gyakorlat – Egyszerű, egytáblás lekérdezések</h1>
+
+<h2 id="előkészületek" sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="3">Előkészületek</h2>
+<ul sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="5">
+<li sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="5">A gyakorlatvezető Azure-előfizetésének használata
+-- VAGY --</li>
+<li sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="7">DVD adatbázis telepítése a dvd.sql script segítségével saját, Azure-ban létrehozott adatbázisba</li>
+</ul>
+<p sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="9">A gyakorlathoz tartozó adatbázis az egyetemen kívülről csak VPN-en keresztül érhető el.</p>
+<table sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="11">
+<thead>
+<tr sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="11">
+<th sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="11"></th>
+<th sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="11"></th>
+</tr>
+</thead>
+<tbody>
+<tr sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="13">
+<td sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="13">Szerver</td>
+<td sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="13">bit.uni-corvinus.hu</td>
+</tr>
+<tr sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="14">
+<td sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="14">Felhasználónév</td>
+<td sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="14">hallgato</td>
+</tr>
+<tr sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="15">
+<td sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="15">Jelszó</td>
+<td sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="15">Password123</td>
+</tr>
+<tr sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="16">
+<td sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="16">Adatbázis</td>
+<td sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="16">dvd_magyar</td>
+</tr>
+</tbody>
+</table>
+<p sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="18"><strong sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="18">Adatbázis elérése Visual Studio-ból</strong></p>
+<p sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="20">A Visual Studio rendelkezik egy <em sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="20">Server Explorer</em> panellel, mely egy olyan segédeszköz, mellyel projekttől függetlenül lehet SQL adatbázisokhoz csatlakozni. A panel a <em sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="20">View</em> menüből a <em sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="20">Server Exprlorer</em> menüpont kiválasztása után jelenik meg. (Nem összekeverendő az <em sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="20">SQL Server Object Explorer</em>rel.)</p>
+<p sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="22">◯ A panelen a kis ikonra kattintval lehet csatlakozni egy új adatbázishoz.</p>
+<p sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="25">◯ A megjelenő lehetőségek közül az <strong sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="25">SQL Server</strong>t kell választani.</p>
+<p sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="27">◯ A felugró ablakban meg kell adni az adatbázis eléréséhet szükséges adatokat a fenti táblázat szerint.</p>
+<ul sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="28">
+<li sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="28">Fontos, hogy az <strong sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="28">Windows Authentication</strong> helyett az <strong sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="28">SQL Server Authentication</strong>-t válaszd! A <strong sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="28">Windows Authentication</strong> Windows-ba történő bejelentkezéshez használt <em sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="28">credential</em>-öket használja az SQL szerver felé is, míg az  <strong sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="28">SQL Server Authentication</strong> az SQL szerverben felvett <em sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="28">login</em> és <em sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="28">jelszó</em> alapján végzi el az autentikációt.</li>
+<li sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="29">Érdemes odafigyelni arra, hogy a szerver domain (sql.2rpi. hu) neve és a port (7000) <code sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="29">,</code> karakterrel vannak elválasztva, nem az URL-ben megszokott <code sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="29">:</code> használatos az elválasztásra.</li>
+</ul>
+<p sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="31"><img src="../../images/vs_sql_connect2.png" sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="31" alt=""></p>
+<p sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="33">◯ A megjelenő fában a <strong sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="33">Tables</strong>-t kinyitva láthatóvá válnak az adatbázis táblái, jobb egérgombbal kattintva bármelyik táblára a <strong sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="33">New Query</strong>  menüpont hozza elő azt a panelt, melyben az SQL mondatok futtathatók. (Teljesen mindegy, melyik táblán kattintasz, ugyanaz a lekérdezésszerkesztő panel jelenik meg.)</p>
+<h2 id="adatok-lekérdezése--select-utasítás" sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="35">ADATOK LEKÉRDEZÉSE – SELECT UTASÍTÁS</h2>
+<h3 id="lekérdezések-oszlopainak-megváltoztatása" sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="37">LEKÉRDEZÉSEK OSZLOPAINAK MEGVÁLTOZTATÁSA</h3>
+<p sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="38"><strong sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="38">Legegyszerűbb példa</strong></p>
+<pre><code class="lang-sql" sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="40">SELECT 1+1
+</code></pre>
+<p sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="43">A <code sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="43">SELECT</code> kulcsszó után tetszőleges algebrai kifejezés megadható, a lekérdezés a kifejezés eredményét adja vissza. Ez nem egy tipikus felhasználási mód, de  a teljesség kedvéért érdemes megemlíteni.</p>
+<p sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="45"><strong sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="45">A megjelenítendő oszlopok kiválasztása</strong></p>
+<pre><code class="lang-sql" sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="46">SELECT * FROM dvd;
+</code></pre>
+<pre><code class="lang-sql" sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="49">SELECT cim, stilus FROM dvd;
+</code></pre>
+<p sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="52">A <code sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="52">SELECT</code> utasításrész után a megjelenítendő oszlopok nevei kerülnek egymástól vesszővel elválasztva, a * az összes oszlopot jelenti. A <code sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="52">FROM</code> utasításrész után adhatjuk meg a tábla nevét, melyből kérdezni akarunk.</p>
+<p sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="54"><strong sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="54">Oszlopfejléc feliratának megváltoztatása</strong></p>
+<pre><code class="lang-sql" sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="56">SELECT szam AS [Nyilvántartási szám], cim AS Filmcím FROM Dvd;
+</code></pre>
+<p sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="60">Ha egy elnevezés több szóból áll, szögletes zárójelbe kell tenni, különben az SQL szerver a második szót ismeretlen kifejezésnek értelmezi. Természetesen egyszavas oszlopnév körül is szerepeltethető szögletes zárójel. Ugyanez vonatkozik a mezőnevekre. A betűközzel tagolt mezőnevek használata nem javasolt, de nem tilos. A betűközzel tagolt mezőneveket mindenképpen szögletes zárójelbe kell tenni.</p>
+<p sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="62"><strong sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="62">Számított oszlopértékek</strong></p>
+<p sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="64">Magyar billentyűzetet használóknál gyakori hiba, hogy a numerikus billentyűzeten az SQL-ben használt tizedes pont helyett vesszőt ütnek. Az SQL a vesszőt felsorolások tagolására használja. Az aritmetikai műveletek közül használható a <code sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="64">+</code> <code sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="64">-</code> <code sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="64">*</code> <code sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="64">/</code> , hatványozás a <code sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="64">^</code> operátorral történik.</p>
+<pre><code class="lang-sql" sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="66">SELECT cim,nettoar AS [nettó ár], nettoar*1.25 AS [bruttó ár] FROM Dvd;
+</code></pre>
+<pre><code class="lang-sql" sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="69">SELECT cim,nettoar * (1+(1.27/100)) AS [bruttó ár] FROM Dvd;
+</code></pre>
+<pre><code class="lang-sql" sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="72">SELECT nev + ', ' + cim AS [Kölcsönző] FROM tagok;
+</code></pre>
+<p sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="75">Az <code sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="75">+</code> operátorral fűzhetünk össze szövegrészleteket illetve több értéket egy oszlopba.</p>
+<p sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="77"><strong sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="77">A kiválasztott sorok számának korlátozása, a WHERE záradék</strong></p>
+<p sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="79">A kívánt sorokat a <code sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="79">WHERE</code> záradék használatával választhatjuk ki. A <code sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="79">WHERE</code> záradék a <code sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="79">FROM</code> záradékot követi.
+Feltételek szöveg és feljegyzés típusú mezőkre</p>
+<pre><code class="lang-sql" sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="82">SELECT  cim, stilus FROM dvd WHERE stilus='számítástechnika';
+</code></pre>
+<p sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="85">Karakterláncok</p>
+<ul sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="86">
+<li sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="86">A lekérdezésben szereplő karakterláncokat aposztrófok (') közé foglaljuk.</li>
+<li sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="87">A karakterláncokban a kis- és nagybetűk különbözőnek számíthatnak.</li>
+</ul>
+<p sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="89"><strong sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="89">A LIKE operátor</strong></p>
+<p sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="91">Előfordulhat, hogy nem ismerjük pontosan a keresendő értéket, illetve egy szövegben szereplő szövegrészletre keresünk. A mezőnév='valami' módszerrel csak teljes szövegegyezésre tudunk feltételt szabni.</p>
+<p sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="93">A 'LIKE' operátorral kiválaszthatjuk azokat a sorokat, amelyekben szereplő értékek megfelelnek egy karaktermintának.  A karaktermintának való megfelelést ellenőrző műveletet helyettesítő karakteres keresésnek is nevezzük. A behelyettesítéshez használt szimbólumok:</p>
+<p sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="95"><code sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="95">_</code>  	- Egyetlen karaktert jelképez
+<code sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="96">%</code> 	- Nulla vagy több tetszőleges karakter sorozatát jelképezi</p>
+<pre><code class="lang-sql" sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="98">SELECT  cim, stilus FROM dvd WHERE Cim LIKE 'A%';
+</code></pre>
+<p sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="101">A fenti példa az A betűvel kezdődő címeket listázza ki.</p>
+<pre><code class="lang-sql" sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="102">SELECT  cim, stilus FROM dvd WHERE Cim LIKE '_z%';
+</code></pre>
+<p sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="105">A fenti példa azokat a sorokat adja eredményül, ahol a cím második karaktere z.</p>
+<pre><code class="lang-sql" sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="106">SELECT  cim, stilus FROM dvd WHERE Cim LIKE '%kutya%';
+</code></pre>
+<p sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="109">Eredményül azokat a filmeket kapjuk, melyek címében szerepel a ‘kutya’ szó – előtte és utána tetszőleges karaktersorozattal.</p>
+<blockquote sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="111">
+<p sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="111">A szövegműveletek az adatbázis alapértelmezett beállításai szerint nem tesznek különbséget a kis- és nagybetűk közözött. Az adatbázis létrehozásánál a <strong sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="111">collation</strong> beállítás adja meg, hogy legyen-e különbség a kis- és nagybetűk között, illetve mely nyelv szabályai szerint történjen a szövegek sorba rendezése. Pl. magyarban ...,o ,ó ,ö ,ő ,p, ...  vagy ...,s, sz, t, ...</p>
+</blockquote>
+<p sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="113"><strong sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="113">Az ESCAPE opció (nagyon haladóknak)</strong></p>
+<p sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="115">Előfordulhat, hogy a <code sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="115">LIKE</code> operátorral  éppen<code sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="115">%</code> vagy <code sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="115">_</code> jelet szeretnénk kerestetni. Az <code sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="115">ESCAPE</code> opció után kijelölhetünk egy ún. escape karaktert. Az escape karakter után következő karaktert a LIKE hagyományos karakterként és nem vezérlőkarakterként értelmezi.</p>
+<pre><code class="lang-sql" sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="116">SELECT  cim, stilus FROM dvd WHERE Cim LIKE '%\_%' ESCAPE '\';
+</code></pre>
+<p sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="119">A fenti példa azon címeket listázza, melyekben szerepel az _ karakter. Magát az escape karaktert az escape karakter dupla leütésével érhetjük el:</p>
+<pre><code class="lang-sql" sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="121">…Cim LIKE ‘C:\\%’ ESCAPE ‘\’;
+</code></pre>
+<p sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="124"><strong sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="124">Feltételek számot vagy pénznemet tartalmazó mezőkre</strong></p>
+<p sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="126">A következő aritmetikai operátorokat használhatjuk: <code sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="126">&lt;</code>, <code sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="126">&gt;</code>, <code sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="126">=</code>, <code sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="126">&lt;=</code>, <code sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="126">&gt;=</code>, <code sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="126">&lt;&gt;</code></p>
+<pre><code class="lang-sql" sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="127">SELECT * FROM dvd WHERE nettoar&gt;=3000
+</code></pre>
+<p sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="130"><strong sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="130">Feltételek dátumot tartalmazó mezőkre</strong></p>
+<p sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="132">Az SQL szerver többféle dátumtípust kezel. A minta adatbázisban szereplő <code sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="132">date</code> adattípus nem tartalmaz időadatot.
+A <code sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="133">getdate()</code> függvény mindig az aznapi dátumot adja vissza. Ha kivonunk belőle egy dátum típusú értéket, megkapjuk az eltelt időt:</p>
+<pre><code class="lang-sql" sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="134">SELECT getdate()-ki_datum AS [Mióta kölcsönözve] FROM kolcsonzes
+</code></pre>
+<p sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="137">Az eredmény azonban nehezen olvasható, mert szintén dátumformátumban van, az 1900. január 1 óta eltelt napok számának megfelelően. Az eredményt alávethetjük típuskonverziónak, vagy használhatjuk a DATEDIFF függvényt. Ezekről később lesz szó.
+Az SQL kifejezésekben szereplő dátumokat ' jelek közé kell tenni, és célszerű angol dátumformátumban megadni.</p>
+<pre><code class="lang-sql" sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="139">SELECT * FROM kolcsonzes WHERE ki_datum&gt;='02/19/2000'
+</code></pre>
+<p sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="142"><strong sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="142">Feltételek logikai típusú mezőkre</strong></p>
+<p sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="144">A Microsoft SQL Server nem rendelkezik valódi (TRUE, FALSE) logikai adattípussal, erre a <code sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="144">bit</code>  (0,1) értékkészletű típus használatos.</p>
+<ul sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="145">
+<li sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="145">igaz  	1</li>
+<li sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="146">hamis 	0</li>
+</ul>
+<p sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="148">Listázzuk a korhatáros filmeket:</p>
+<pre><code class="lang-sql" sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="149">SELECT * FROM dvd WHERE korhatár=1
+</code></pre>
+<p sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="152">Listázzuk a nem korhatáros filmeket:</p>
+<pre><code class="lang-sql" sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="153">SELECT * FROM dvd WHERE korhatár=0
+</code></pre>
+<p sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="156"><strong sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="156">Kitöltetlen mezők keresése - <code sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="156">IS NULL</code> operátor</strong></p>
+<p sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="158">Az <code sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="158">IS NULL</code> operátor <code sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="158">NULL</code> értékeket keres. A <code sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="158">NULL</code> érték olyan értéket jelöl, amely nem érhető  el, nem ismert, nincs megadva vagy nem értelmezhető.</p>
+<pre><code class="lang-sql" sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="159">SELECT  cim, stilus FROM dvd WHERE stilus IS NULL;
+</code></pre>
+<p sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="162">Eredményül azokat a sorokat kapjuk, akol a stílus mező nincs kitöltve.</p>
+<p sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="164"><strong sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="164">Összetett feltételek - Logikai operátorok</strong></p>
+<p sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="166">Az SQL nyelv három logikai operátor használatát támogatja: <code sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="166">AND</code>, <code sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="166">OR</code> és <code sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="166">NOT</code></p>
+<pre><code class="lang-sql" sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="168">SELECT cim, stilus FROM dvd WHERE stilus='számítástechnika' OR stilus='ismeretterjesztő';
+</code></pre>
+<pre><code class="lang-sql" sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="171">SELECT cim, stilus FROM dvd WHERE NOT stilus='számítástechnika';
+</code></pre>
+<p sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="174">A <code sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="174">WHERE</code> záradékban szereplő összetett feltételek rekordonként kerülnek kiértékelésre. Az SQL szerver végigmegy a <code sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="174">FROM</code> záradékban szereplő táblán, és rekordonként eldönti, hogy az adott rekord megfelel-e a <code sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="174">WHERE</code> záradékban megadott feltételeknek.</p>
+<p sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="176"><strong sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="176">A teljesség kedvéért</strong></p>
+<p sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="178">Az <code sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="178">AND</code> operátor igazságtáblázata
+||TRUE|FALSE|NULL
+-|-|-|-
+TRUE|TRUE|FALSE|NULL
+FALSE|FALSE|FALSE|FALSE
+NULL|NULL|FALSE|NULL</p>
+<p sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="186">Az <code sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="186">OR</code> operátor igazságtáblázata</p>
+<table sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="188">
+<thead>
+<tr sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="188">
+<th sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="1"></th>
+<th sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="188">TRUE</th>
+<th sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="188">FALSE</th>
+<th sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="188">NULL</th>
+</tr>
+</thead>
+<tbody>
+<tr sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="190">
+<td sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="190">TRUE</td>
+<td sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="190">TRUE</td>
+<td sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="190">TRUE</td>
+<td sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="190">TRUE</td>
+</tr>
+<tr sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="191">
+<td sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="191">FALSE</td>
+<td sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="191">TRUE</td>
+<td sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="191">FALSE</td>
+<td sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="191">NULL</td>
+</tr>
+<tr sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="192">
+<td sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="192">NULL</td>
+<td sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="192">TRUE</td>
+<td sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="192">NULL</td>
+<td sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="192">NULL</td>
+</tr>
+</tbody>
+</table>
+<p sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="194">A <code sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="194">NOT</code> operátor igazságtáblázata</p>
+<table sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="196">
+<thead>
+<tr sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="196">
+<th sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="196">TRUE</th>
+<th sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="196">FALSE</th>
+<th sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="196">NULL</th>
+</tr>
+</thead>
+<tbody>
+<tr sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="198">
+<td sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="198">FALSE</td>
+<td sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="198">TRUE</td>
+<td sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="198">NULL</td>
+</tr>
+</tbody>
+</table>
+<p sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="201">Vigyázzunk az <code sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="201">AND</code> művelet magasabb rendű, mint az <code sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="201">OR</code>! Vegyük példának a következő lekérdezést:</p>
+<pre><code class="lang-sql" sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="202">SELECT * FROM magyarok WHERE 
+Neme='lany' AND tulajdonsag='szép' OR tulajdonsag='Okos'
+</code></pre>
+<p sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="206">A lekérdezés eredményül nem a szép és okos lányokat adja eredményül, mert az AND magasabb rendű művelet, mint az OR. A feltételt következő rekordok elégítik ki:</p>
+<ul sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="207">
+<li sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="207">szép lányok</li>
+<li sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="208">nemtől függetlenül mindenki, aki okoks</li>
+</ul>
+<p sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="210">A kívánt eredményt (szép és okos) megfelelő zárójelezéssel érhetjük el:</p>
+<pre><code class="lang-sql" sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="211">SELECT * FROM magyarok WHERE 
+Neme='lany' AND (tulajdonsag='szép' OR tulajdonsag='Okos')
+</code></pre>
+<p sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="216"><strong sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="216">A BETWEEN .. AND</strong></p>
+<p sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="218">A <code sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="218">BETWEEN</code> művelet használatával értéktartomány alapján szabhatunk feltételt.  A tartományt alsó és felső határértékével adhatjuk meg. A <code sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="218">BETWEEN</code> operátorral megadott határértékek beletartoznak a tartományba – zárt intervallumról beszélünk. Először az alsó határértéket kell megadnunk.</p>
+<pre><code class="lang-sql" sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="220">SELECT cim, nettoar FROM dvd WHERE nettoar BETWEEN 1000 AND 5000;
+</code></pre>
+<p sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="223">Használata kiváltható egy összetett lekérdezéssel:</p>
+<pre><code class="lang-sql" sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="224">SELECT cim, nettoar FROM dvd WHERE nettoar&gt;=1000 AND nettoar&lt;=5000;
+</code></pre>
+<p sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="227"><strong sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="227">Az IN operáror</strong></p>
+<pre><code class="lang-sql" sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="229">SELECT cim, stilus  FROM dvd WHERE stilus IN ('ismeretterjesztő', 'számítástechnika');
+</code></pre>
+<p sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="232">A <code sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="232">WHERE</code> záradékban lévő feltétel azoknál a rekordoknál teljesül, ahol a stílus mező értéke szerepel az IN utáni felsorolásban.</p>
+<p sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="234">Még két példa:</p>
+<pre><code class="lang-sql" sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="235">SELECT  cim, stilus FROM dvd WHERE stílus='számítástechnika' OR stílus='ismeretterjesztő' 
+</code></pre>
+<pre><code class="lang-sql" sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="238">SELECT  cim, stilus FROM dvd WHERE NOT (stílus='számítástechnika' OR stílus='ismeretterjesztő')
+</code></pre>
+<p sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="241"><strong sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="241">A DISTINCT predikátum</strong></p>
+<p sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="243">A <code sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="243">DISTINCT</code> kihagyja eredményül kapott táblából az ismétlődő sorokat. A dvd táblában például több filmnek lehet azonos a stílusa. Ha a ‘rajzfilm’ két rekord stílus mezőjében szerepel, akkor a következő SQL-utasítás csak az egyik rekordot adja vissza:</p>
+<pre><code class="lang-sql" sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="245">SELECT DISTINCT stilus FROM dvd;
+</code></pre>
+<p sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="249">A DISTINCT predikátumot használó lekérdezés eredménye nem frissíthető.</p>
+<h2 id="gyakorló-feladatok" sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="252">Gyakorló feladatok</h2>
+<h3 id="mezők-listázása" sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="253">Mezők listázása</h3>
+<p sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="254">(+/-) Mennyi 6*8?</p>
+<p sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="256"><a href="Gy1_1.mp4" sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="256">Megoldás</a></p>
+<p sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="258">(+/-) Listázd az összes mezőt a <code sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="258">dvd</code> táblából</p>
+<p sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="260"><a href="Gy1_2.mp4" sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="260">Megoldás</a></p>
+<p sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="262">(+/-) Listázd a <code sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="262">cim</code> mező tartalmát a <code sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="262">dvd</code> táblából!</p>
+<p sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="264"><a href="Gy1_3.mp4" sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="264">Megoldás</a></p>
+<p sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="266">(+/-) Listázd a <code sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="266">cim</code> és a  <code sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="266">stilus</code> mező tartalmát a <code sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="266">dvd</code> táblából!</p>
+<p sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="268"><a href="Gy1_4.mp4" sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="268">Megoldás</a></p>
+<p sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="270">(+/-) Listázzuk a <code sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="270">kolcsonzes</code> tábla következő oszlopait: ID, ki_datum, vissza_datum!</p>
+<p sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="272">a.	Az ID oszlop neve legyen Azonosító
+b.	A ki_datum oszlop neve legyen Kölcsönzés_dátuma
+c.	A vissza_datum oszlop neve legyen Visszahozatal_dátuma</p>
+<p sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="276"><a href="Gy1_5.mp4" sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="276">Megoldás</a></p>
+<p sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="278">(+/-) Listázd az 4000 forintnál drágább filmeket! (A táblázatban az árak forintban szerepelnek.)</p>
+<p sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="280">a. Listázd az 5000 forintnál olcsóbb filmeket!
+b. Listázd az 5000 forintnál olcsóbb, de 4000 forintnál drágább filmeket!</p>
+<p sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="283"><a href="Gy1_6.mp4" sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="283">Megoldás</a></p>
+<p sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="285">(+/-)	Melyek a 12-es azonosítójú kölcsönzések adatai?</p>
+<p sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="287">a.	Csak a ki, mit, és ki_datum oszlopok jelenjenek meg</p>
+<p sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="289"><a href="Gy1_7.mp4" sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="289">Megoldás</a></p>
+<p sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="291">(+/-)	<strong sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="291">Melyek azok a kölcsönzések, amelyek 2005.01.01 és 2007.01.01 között történtek?</strong></p>
+<p sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="293"><a href="Gy1_8.mp4" sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="293">Megoldás</a></p>
+<p sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="295">(+/-)	Melyek azok a kölcsönzések, ahol a kölcsönző az 1-es, 2-es, vagy a 3-as azonosítójú tag?</p>
+<p sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="297">a.	A kölcsönző tag azonosítója ne legyen benne az oszlopok listájában</p>
+<p sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="299"><a href="Gy1_9.mp4" sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="299">Megoldás</a></p>
+<p sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="301">(+/-)	<strong sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="301">Melyek azok a tagok, akiknek kedvenc stílusa a játék, és nevük a-ra végződik?</strong></p>
+<p sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="303">a.	Csak a tagok neve jelenjen meg, az oszlop neve Név legyen</p>
+<p sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="305"><a href="Gy1_10.mp4" sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="305">Megoldás</a></p>
+<p sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="307">(+/-)	Melyek azok a tagok, akik nevében nincs b betű, de címükben van?</p>
+<p sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="309"><a href="Gy1_11.mp4" sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="309">Megoldás</a></p>
+<p sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="311">(+/-)	<strong sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="311">Melyek azok a tagok, akiknek kedvenc nyelve 1, 2 vagy 5-ös azonosítójú?</strong></p>
+<p sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="313"><a href="Gy1_12.mp4" sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="313">Megoldás</a></p>
+<p sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="315">(+/-)	Melyek azok a dvd-k, amelyek nem magyar nyelvűek?</p>
+<p sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="317">Megjegyzés: itt most két lekérdezés kell, először meg kell keresni a magyar nyelv kódját, majd leszűrni a dvd táblát. Később majd meg tudjuk oldani egyben is.</p>
+<p sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="319"><a href="Gy1_13.mp4" sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="319">Megoldás</a></p>
+<p sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="321">(+/-)	<strong sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="321">Listázzuk egy oszlopban a tagok nevét, címét és kedvenc stílusát összefűzve!</strong></p>
+<p sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="323">a.	A nevet, címet és a stílust kötőjellel válasszuk el
+b.	A kötőjelek előtt és után legyen 1-1 szóköz
+c.	Az oszlop neve legyen TAG
+d.	Kinga keresztnevű tagok ne legyenek benne a listában</p>
+<p sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="328"><a href="Gy1_14.mp4" sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="328">Megoldás</a></p>
+<p sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="330">(+/-)	Mennyi lenne a dvd-k nettó ára, ha 20%-kal csökkenne?</p>
+<p sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="332">a.	Csak a dvd-k címét és a csökkentett árat jelenítsük meg
+b.	A csökkentett árat nevezzük el diszkont_ar-nak</p>
+<pre><code sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="335">[Megoldás](Gy1_15.mp4)
+</code></pre>
+<p sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="337">(+/-)	<strong sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="337">Vannak-e bizonyos ellentmondások a kolcsonzesek táblában? (ugyanazon tag ugyanazt a konyvet ugyanazon nap többször is kivette)?</strong></p>
+<p sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="339">a.	Listázzuk a szükséges oszlopokat
+b.	Adjuk ki ugyanazt a lekérdezést DISTINCT kulcsszóval is
+c.	Hasonlítsuk össze a 2 eredményhalmazt, egyformák-e?</p>
+<p sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="343"><a href="Gy1_16.mp4" sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="343">Megoldás</a></p>
+<p sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="345">(+/-)	Van-e olyan dvd, amely orosz nyelvű?</p>
+<p sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="347"><a href="Gy1_17.mp4" sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="347">Megoldás</a></p>
+<p sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="349">a.	Először keresse meg a nyelvek táblában az orosz nyelv azonosítóját
+b.	Majd szűrje le az adott nyelv azonosítójú dvd-ket</p>
+<p sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="352">(+/-)	Melyek azok a kölcsönzések, ahol még nem hozták vissza a dvd-t?</p>
+<p sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="354"><a href="Gy1_18.mp4" sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="354">Megoldás</a></p>
+<p sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="356">(+/-) Melyek azok a kölcsönzések, ahol a dvd-t már visszahozták, vagy nem hozták vissza, és a 3-as vagy 4-es azonosítójú tag vette ki?</p>
+<p sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="358">Megjegyzés: a logikai <em sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="358">AND</em> magasabb rendű művelet, mint az <em sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="358">OR</em>. Erre érdemes odafigyelni a zárójelezésnél!</p>
+<p sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="360"><a href="Gy1_19.mp4" sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="360">Megoldás</a></p>
+<p sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="362">(+/-) Listázd a filmeket cím abc szerinti sorrendben!</p>
+<p sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="364"><a href="Gy1_20.mp4" sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="364">Megoldás</a></p>
+<p sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="366">(+/-) Az előző lekérdezést bővíts úgy, hogy a film címe mellett a stílus is szerepeljen zárójelben. Az oszlopot nevezd is el.</p>
+<p sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="368"><a href="Gy1_21.mp4" sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="368">Megoldás</a></p>
+<p sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="370">(+/-) Listázd azokat a filmeket, melyek címében szerepel az „angol” vagy a „példatár” szavak valamelyike!</p>
+<p sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="372"><a href="Gy1_22.mp4" sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="372">Megoldás</a></p>
+<p sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="374">(+/-) Listázd a filmek címét úgy, hogy a cím után, vele egy mezőben, zárójelek között szerepeljen az ára áfával!</p>
+<p sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="376"><a href="Gy1_23.mp4" sourcefile="adatb/gyak1/index.md" sourcestartlinenumber="376">Megoldás</a></p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/altinum/szamtud_docfx/blob/main/adatb/gyak1/index.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

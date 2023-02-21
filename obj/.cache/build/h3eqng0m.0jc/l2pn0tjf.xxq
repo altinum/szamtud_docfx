@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Azure fi&#243;k regisztr&#225;l&#225;sa </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Azure fi&#243;k regisztr&#225;l&#225;sa ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../../../favicon.ico">
+    <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../styles/docfx.css">
+    <link rel="stylesheet" href="../../../styles/main.css">
+    <meta property="docfx:navrel" content="../../../toc.html">
+    <meta property="docfx:tocrel" content="../../toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../../index.html">
+                <img id="logo" class="svg" src="../../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="azure-fiók-regisztrálása" sourcefile="softeng/knowledge_base/ingyenes_hallgatoi_azure_fiok_regisztralasa/index.md" sourcestartlinenumber="2">Azure fiók regisztrálása</h1>
+
+<h2 id="áttekintés" sourcefile="softeng/knowledge_base/ingyenes_hallgatoi_azure_fiok_regisztralasa/index.md" sourcestartlinenumber="4">Áttekintés</h2>
+<p sourcefile="softeng/knowledge_base/ingyenes_hallgatoi_azure_fiok_regisztralasa/index.md" sourcestartlinenumber="6"><strong sourcefile="softeng/knowledge_base/ingyenes_hallgatoi_azure_fiok_regisztralasa/index.md" sourcestartlinenumber="6">A félév során több alkalommal is szükség lesz a saját Azure fiók használatára!</strong>  Ha még nincs, az alábbiak szerint hozhatsz létre <strong sourcefile="softeng/knowledge_base/ingyenes_hallgatoi_azure_fiok_regisztralasa/index.md" sourcestartlinenumber="6">Azure for Students</strong> fiókot.</p>
+<p sourcefile="softeng/knowledge_base/ingyenes_hallgatoi_azure_fiok_regisztralasa/index.md" sourcestartlinenumber="8">Azure fiókra Adatbázisrendszerek, Software Engineering,  és IT Architektúrák tárgyakból is szükség lesz. Mivel a tárgyakat nem kötelező az operatív tanterv szerint felvenni, a leírás első részével több tárgynál is találkozhattok.</p>
+<p sourcefile="softeng/knowledge_base/ingyenes_hallgatoi_azure_fiok_regisztralasa/index.md" sourcestartlinenumber="10">Az Azure fiókót több dologra is használjuk a kurzus során:</p>
+<ul sourcefile="softeng/knowledge_base/ingyenes_hallgatoi_azure_fiok_regisztralasa/index.md" sourcestartlinenumber="12">
+<li sourcefile="softeng/knowledge_base/ingyenes_hallgatoi_azure_fiok_regisztralasa/index.md" sourcestartlinenumber="12">Azure-ban lehetőségünk van saját <strong sourcefile="softeng/knowledge_base/ingyenes_hallgatoi_azure_fiok_regisztralasa/index.md" sourcestartlinenumber="12">SQL szerver</strong>t  létrehozni.</li>
+<li sourcefile="softeng/knowledge_base/ingyenes_hallgatoi_azure_fiok_regisztralasa/index.md" sourcestartlinenumber="13">A Software Engineering tárgy második blokkjában fejlesztendő webalkalmazást <strong sourcefile="softeng/knowledge_base/ingyenes_hallgatoi_azure_fiok_regisztralasa/index.md" sourcestartlinenumber="13">Azure WebApp</strong> formájában fogjuk majd közzétenni.</li>
+</ul>
+<h2 id="azure-előfizetési-konstrukciók" sourcefile="softeng/knowledge_base/ingyenes_hallgatoi_azure_fiok_regisztralasa/index.md" sourcestartlinenumber="15">Azure előfizetési konstrukciók</h2>
+<p sourcefile="softeng/knowledge_base/ingyenes_hallgatoi_azure_fiok_regisztralasa/index.md" sourcestartlinenumber="17">Az Azure szolgáltatásai többféle fizetési konstrukcióban vehetők igénybe:</p>
+<ul sourcefile="softeng/knowledge_base/ingyenes_hallgatoi_azure_fiok_regisztralasa/index.md" sourcestartlinenumber="18">
+<li sourcefile="softeng/knowledge_base/ingyenes_hallgatoi_azure_fiok_regisztralasa/index.md" sourcestartlinenumber="18"><strong sourcefile="softeng/knowledge_base/ingyenes_hallgatoi_azure_fiok_regisztralasa/index.md" sourcestartlinenumber="18">Azure free account</strong> azoknak, akiknek ez az első regisztrációjuk. Minden újonnan regisztráló felhasználhat 200USD-t 12 hónap alatt. Bővebben <a href="https://azure.microsoft.com/en-us/free/search/?&amp;ef_id=Cj0KCQiArvX_BRCyARIsAKsnTxNdf0D2Zw-Vym1piGbIiyCUva1ICRrl6I3aIA46TOgVPUAk7JF0hX8aApBtEALw_wcB:G:s&amp;OCID=AID2100641_SEM_Cj0KCQiArvX_BRCyARIsAKsnTxNdf0D2Zw-Vym1piGbIiyCUva1ICRrl6I3aIA46TOgVPUAk7JF0hX8aApBtEALw_wcB:G:s" sourcefile="softeng/knowledge_base/ingyenes_hallgatoi_azure_fiok_regisztralasa/index.md" sourcestartlinenumber="18">itt</a></li>
+<li sourcefile="softeng/knowledge_base/ingyenes_hallgatoi_azure_fiok_regisztralasa/index.md" sourcestartlinenumber="19"><strong sourcefile="softeng/knowledge_base/ingyenes_hallgatoi_azure_fiok_regisztralasa/index.md" sourcestartlinenumber="19">Pay-as-you-go</strong>: meg kell adni a hitelkártya adatait, az MS havonta terheli az igénybevett szolgáltatások költségeit. A kártyaadatokat akkor meg kell adni, ha csak ingyenes szolgáltatásokat veszünk igénybe, és nem merül fel kiszámlázandó költség.</li>
+<li sourcefile="softeng/knowledge_base/ingyenes_hallgatoi_azure_fiok_regisztralasa/index.md" sourcestartlinenumber="20"><strong sourcefile="softeng/knowledge_base/ingyenes_hallgatoi_azure_fiok_regisztralasa/index.md" sourcestartlinenumber="20">Enterprise agreement</strong>: nagy, vállalati felhasználók külön szerződést kötnek. Bizonyos  erőforrásigény felett a Pay-as-you-go konstrukció már nem használható. Itt már az ár is megegyezés kérdése.</li>
+<li sourcefile="softeng/knowledge_base/ingyenes_hallgatoi_azure_fiok_regisztralasa/index.md" sourcestartlinenumber="21"><strong sourcefile="softeng/knowledge_base/ingyenes_hallgatoi_azure_fiok_regisztralasa/index.md" sourcestartlinenumber="21">Azure for students</strong>: diákoknak szóló ajánlat. Addig, amig diák vagy évente 100 USD keretet biztosít a Microsoft.</li>
+</ul>
+<h2 id="azure-for-students-fiók-regisztrálása" sourcefile="softeng/knowledge_base/ingyenes_hallgatoi_azure_fiok_regisztralasa/index.md" sourcestartlinenumber="25">Azure for students fiók regisztrálása</h2>
+<p sourcefile="softeng/knowledge_base/ingyenes_hallgatoi_azure_fiok_regisztralasa/index.md" sourcestartlinenumber="27">◯ Készítsd elő az egyetemi e-mail címed!</p>
+<blockquote sourcefile="softeng/knowledge_base/ingyenes_hallgatoi_azure_fiok_regisztralasa/index.md" sourcestartlinenumber="28">
+<p sourcefile="softeng/knowledge_base/ingyenes_hallgatoi_azure_fiok_regisztralasa/index.md" sourcestartlinenumber="28">Ha nem tudod, mi az egyetemi címed, a <a href="https://cusmanweb.uni-corvinus.hu/" sourcefile="softeng/knowledge_base/ingyenes_hallgatoi_azure_fiok_regisztralasa/index.md" sourcestartlinenumber="28">Cusman</a>-on megnézheted, és a ez egyetemi <a href="https://webmail.uni-corvinus.hu/" sourcefile="softeng/knowledge_base/ingyenes_hallgatoi_azure_fiok_regisztralasa/index.md" sourcestartlinenumber="28">webmail</a> felületen el is olvashatod a leveleidet.</p>
+</blockquote>
+<p sourcefile="softeng/knowledge_base/ingyenes_hallgatoi_azure_fiok_regisztralasa/index.md" sourcestartlinenumber="30">◯ <a href="https://azure.microsoft.com/hu-hu/free/students" sourcefile="softeng/knowledge_base/ingyenes_hallgatoi_azure_fiok_regisztralasa/index.md" sourcestartlinenumber="30">Ezen a linken</a> érhető el a Microsoft Azure ingyenes, hallgatók számára biztosított előfizetésének regisztrációs felülete. Az egyetemi e-mail címeddel kell regisztrálni, mert a címhez tartozó domain-ből tudja az MS, hogy diákhoz tartozik.</p>
+<p sourcefile="softeng/knowledge_base/ingyenes_hallgatoi_azure_fiok_regisztralasa/index.md" sourcestartlinenumber="32">◯ Az zöld <strong sourcefile="softeng/knowledge_base/ingyenes_hallgatoi_azure_fiok_regisztralasa/index.md" sourcestartlinenumber="32">aktiválás</strong> gombra kattintva felugrik a Microsoft bejelentkező felülete.<br>
+Az <code sourcefile="softeng/knowledge_base/ingyenes_hallgatoi_azure_fiok_regisztralasa/index.md" sourcestartlinenumber="33">stud.uni-corvinus.hu</code> domain regisztrálva van Microsoftnál is, így egyetemi e-mail címet használva igényelhetjük az ingyenes <strong sourcefile="softeng/knowledge_base/ingyenes_hallgatoi_azure_fiok_regisztralasa/index.md" sourcestartlinenumber="33">Azure for Students</strong> szolgáltatást.</p>
+<p sourcefile="softeng/knowledge_base/ingyenes_hallgatoi_azure_fiok_regisztralasa/index.md" sourcestartlinenumber="35">◯ Töltsd ki a regisztrációs űrlapot!</p>
+<ul sourcefile="softeng/knowledge_base/ingyenes_hallgatoi_azure_fiok_regisztralasa/index.md" sourcestartlinenumber="36">
+<li sourcefile="softeng/knowledge_base/ingyenes_hallgatoi_azure_fiok_regisztralasa/index.md" sourcestartlinenumber="36">Meg kell adni egy telefonszámot is, amire egy kódot fognak küldeni SMS-ben.</li>
+<li sourcefile="softeng/knowledge_base/ingyenes_hallgatoi_azure_fiok_regisztralasa/index.md" sourcestartlinenumber="37">A telefonszámot semmilyen más módon nem használják fel, nyugodtan meg lehet adni.</li>
+</ul>
+<p sourcefile="softeng/knowledge_base/ingyenes_hallgatoi_azure_fiok_regisztralasa/index.md" sourcestartlinenumber="39">◯ Ha sikerült a regisztráció, akkor automatikusan az <a href="https://portal.azure.com" sourcefile="softeng/knowledge_base/ingyenes_hallgatoi_azure_fiok_regisztralasa/index.md" sourcestartlinenumber="39">portal.azure.com</a>-ra kerülünk -- a címet érdemes megjegyezni. Az első lap, ami a regisztrációt követő bejelentkezés után megjelenik a <em sourcefile="softeng/knowledge_base/ingyenes_hallgatoi_azure_fiok_regisztralasa/index.md" sourcestartlinenumber="39">Home / Education</em>. Érdemes eltölteni azzal egy kis időt, hogy átnézzük, milyen szoftvereket és oktatási anyagokat kínál a Microsoft. Ezek köre időről időre bővülni szokott. A <em sourcefile="softeng/knowledge_base/ingyenes_hallgatoi_azure_fiok_regisztralasa/index.md" sourcestartlinenumber="39">Home</em> linkre kattintva megjelenik az Azure kezdőoldala:</p>
+<p sourcefile="softeng/knowledge_base/ingyenes_hallgatoi_azure_fiok_regisztralasa/index.md" sourcestartlinenumber="41"><img src="../../images/1610903788811.png" sourcefile="softeng/knowledge_base/ingyenes_hallgatoi_azure_fiok_regisztralasa/index.md" sourcestartlinenumber="41" alt="1610903788811.png"></p>
+<p sourcefile="softeng/knowledge_base/ingyenes_hallgatoi_azure_fiok_regisztralasa/index.md" sourcestartlinenumber="43">Technikai probléma esetén Teams-ben kérhető segítség a regisztrációval és/vagy a konfigurációval kapcsolatban.</p>
+<h2 id="azure-for-students-előfizetés-megújítása" sourcefile="softeng/knowledge_base/ingyenes_hallgatoi_azure_fiok_regisztralasa/index.md" sourcestartlinenumber="45">Azure for students előfizetés megújítása</h2>
+<p sourcefile="softeng/knowledge_base/ingyenes_hallgatoi_azure_fiok_regisztralasa/index.md" sourcestartlinenumber="47">Az Azure for students előfizetéssel rendelkezők minden évben a regisztráció évfordulóján új költségkeretet igényelhetnek,  ameddig él az egyetemi e-mail címük.  A fel nem használt keret elveszik.</p>
+<h2 id="nem-működik-az-azure-for-students-előfizetésem-mit-tehetek" sourcefile="softeng/knowledge_base/ingyenes_hallgatoi_azure_fiok_regisztralasa/index.md" sourcestartlinenumber="49">Nem működik az Azure for students előfizetésem... Mit tehetek?</h2>
+<p sourcefile="softeng/knowledge_base/ingyenes_hallgatoi_azure_fiok_regisztralasa/index.md" sourcestartlinenumber="51">Regisztrálhatsz 12 hónapra egy <strong sourcefile="softeng/knowledge_base/ingyenes_hallgatoi_azure_fiok_regisztralasa/index.md" sourcestartlinenumber="51">Azure free account</strong>ot <a href="%5Bhttps://azure.microsoft.com/en-us/free/sql-database/search/?&amp;ef_id=EAIaIQobChMImN_Wha3H5wIVDIuyCh1zvAwsEAAYASAAEgImifD_BwE:G:s&amp;OCID=AID2000597_SEM_QLQnZjIQ&amp;MarinID=QLQnZjIQ_364688946710_azure%20database%20pricing_e_c__75854089146_kwd-326879019023&amp;lnkd=Google_Azure_Brand&amp;dclid=CM_JhIitx-cCFYu_dwodnyoAcw%5D(https://azure.microsoft.com/en-us/free/sql-database/search/?&amp;ef_id=EAIaIQobChMImN_Wha3H5wIVDIuyCh1zvAwsEAAYASAAEgImifD_BwE:G:s&amp;OCID=AID2000597_SEM_QLQnZjIQ&amp;MarinID=QLQnZjIQ_364688946710_azure%20database%20pricing_e_c__75854089146_kwd-326879019023&amp;lnkd=Google_Azure_Brand&amp;dclid=CM_JhIitx-cCFYu_dwodnyoAcw)" sourcefile="softeng/knowledge_base/ingyenes_hallgatoi_azure_fiok_regisztralasa/index.md" sourcestartlinenumber="51">itt</a>. Ebben az esetben már meg kell adni bankkártya számot, melyet a Microsoft az érvényesség ellenőrzése végett megterhel néhány dollárral, melyet később visszautal. Itt már nagyon kell vigyázni, mert az igénybe vett szolgáltatásokat könyörtelenül kiszámlázzák. Viszont kis odafigyeléssel a költségek alacsonyan tarthatók, vagy elkerülhetők.</p>
+<p sourcefile="softeng/knowledge_base/ingyenes_hallgatoi_azure_fiok_regisztralasa/index.md" sourcestartlinenumber="53">Bárki regisztrálhat <strong sourcefile="softeng/knowledge_base/ingyenes_hallgatoi_azure_fiok_regisztralasa/index.md" sourcestartlinenumber="53">Pay-as-you-go</strong> előfizetést. Itt is az igénybe vett szolgáltatások alapján számláznak.</p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/altinum/szamtud_docfx/blob/main/softeng/knowledge_base/ingyenes_hallgatoi_azure_fiok_regisztralasa/index.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../styles/main.js"></script>
+  </body>
+</html>

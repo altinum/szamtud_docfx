@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Checklist az m&#225;sodik ZH-hoz </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Checklist az m&#225;sodik ZH-hoz ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="checklist-az-második-zh-hoz" sourcefile="softec/zh2checklist/index.md" sourcestartlinenumber="1">Checklist az második ZH-hoz</h1>
+
+<h2 id="témakörök" sourcefile="softec/zh2checklist/index.md" sourcestartlinenumber="3">Témakörök</h2>
+<p sourcefile="softec/zh2checklist/index.md" sourcestartlinenumber="5">Az elmúlt három gyakorlaton a következő témakörök kerültek elő:</p>
+<ul sourcefile="softec/zh2checklist/index.md" sourcestartlinenumber="6">
+<li sourcefile="softec/zh2checklist/index.md" sourcestartlinenumber="6">Szövegfájlok beolvasása soronként</li>
+<li sourcefile="softec/zh2checklist/index.md" sourcestartlinenumber="7">Tömbök használata</li>
+<li sourcefile="softec/zh2checklist/index.md" sourcestartlinenumber="8">string darabolása elválasztó karkter mentén tömbbe, pl: <code sourcefile="softec/zh2checklist/index.md" sourcestartlinenumber="8">string[] darabok = egész.Split(';');</code></li>
+<li sourcefile="softec/zh2checklist/index.md" sourcestartlinenumber="9">Űrlapon szereplő vezérlők listájának bejárása</li>
+<li sourcefile="softec/zh2checklist/index.md" sourcestartlinenumber="10">Billentyű lenyomások kezelése, pl. kígyó vagy játékos mozgatása</li>
+</ul>
+<p sourcefile="softec/zh2checklist/index.md" sourcestartlinenumber="12">ZH-ra bemelegítésül a következő feladatokat javasoljuk:</p>
+<h2 id="gyakorlófeladatok-zh-ra" sourcefile="softec/zh2checklist/index.md" sourcestartlinenumber="14">Gyakorlófeladatok ZH-ra</h2>
+<h3 id="képernyőbillentyűzet" sourcefile="softec/zh2checklist/index.md" sourcestartlinenumber="16">Képernyőbillentyűzet</h3>
+<p sourcefile="softec/zh2checklist/index.md" sourcestartlinenumber="18">Melléklet: <a href="kbd_hun.txt" sourcefile="softec/zh2checklist/index.md" sourcestartlinenumber="18">kbd_hun.txt</a></p>
+<p sourcefile="softec/zh2checklist/index.md" sourcestartlinenumber="20">Töltsd le a kbd_hun.txt állományt! Az állomány egy képernyőre kirakható billentyűzetet ír le, minden billentyűhöz adottak a billentyű x és y koordinátái, szélessége, magassága valamint a billentyűn szereplő szimbólum. (Minden billentyűhöz 5 sor tartozik a fájlban.) Építsd fel a képernyőn a billentyűzetet, úgy hogy egy érintőképernyőt feltételezve a billentyűkre kattintással gépelni lehessen egy szövegdobozba. (Érdemes lehet először az összes feladatot végigolvasni, hogy összeálljon a teljes kép.)</p>
+<ol sourcefile="softec/zh2checklist/index.md" sourcestartlinenumber="22">
+<li sourcefile="softec/zh2checklist/index.md" sourcestartlinenumber="22">Származtass osztályt <code sourcefile="softec/zh2checklist/index.md" sourcestartlinenumber="22">Billentyű</code> néven a <code sourcefile="softec/zh2checklist/index.md" sourcestartlinenumber="22">Button</code> osztályból!</li>
+<li sourcefile="softec/zh2checklist/index.md" sourcestartlinenumber="23">A származtatott osztályt bővítsd konstruktorral, melyben eseménykiszolgáló függvényt rendelsz a <code sourcefile="softec/zh2checklist/index.md" sourcestartlinenumber="23">MouseEnter</code> és <code sourcefile="softec/zh2checklist/index.md" sourcestartlinenumber="23">MouseLeave</code> eseményekhez. Az eseménykiszolgálók színezzék át a magát a gombot <code sourcefile="softec/zh2checklist/index.md" sourcestartlinenumber="23">Fuchsia</code> színűre, ha az egér fölé ér, majd színezék vissza a Windows témában megadott gomb-színre, ha az egér távozott. (Ezt csak úgy megszokásból :)</li>
+<li sourcefile="softec/zh2checklist/index.md" sourcestartlinenumber="24">Add a letöltött fájlt a projekthez úgy, hogy minden futtatáskor a lefordított állomány mellé kerüljön! (Copy to output directory)</li>
+<li sourcefile="softec/zh2checklist/index.md" sourcestartlinenumber="25">A <code sourcefile="softec/zh2checklist/index.md" sourcestartlinenumber="25">Form1</code> osztály <code sourcefile="softec/zh2checklist/index.md" sourcestartlinenumber="25">Load</code>  eseményéhez rendelt eseménykiszolgálóban hozz létre egy példányt a <code sourcefile="softec/zh2checklist/index.md" sourcestartlinenumber="25">StreamReader</code> osztályból, melynek segítségével megnyitod az állományt!</li>
+<li sourcefile="softec/zh2checklist/index.md" sourcestartlinenumber="26"><code sourcefile="softec/zh2checklist/index.md" sourcestartlinenumber="26">While</code> ciklus segítségével addig olvasd a fájlt, amíg a végére nem ér. A ciklustörzsben
+a.	olvass ki öt sort a fájlból egy-egy értelemszerűen elnevezett <code sourcefile="softec/zh2checklist/index.md" sourcestartlinenumber="27">string</code> típusú változóba!
+b.	Hozz létre egy példányt a <code sourcefile="softec/zh2checklist/index.md" sourcestartlinenumber="28">Billentyű</code> osztályból, és ezt add az űrlap vezérlőinek listájához!
+c.	A fájlból olvasott adatok alapján pozícionáld a billentyűt az űrlapon, állítsd be a méretét, és a feliratát! (Elképzelhető, hogy szöveg típusú változókat helyenként számmá kell konvertálni.)
+d.	Rendelj közös esemény-kiszolgáló függvényt a gombok kattintás eseményéhez!</li>
+<li sourcefile="softec/zh2checklist/index.md" sourcestartlinenumber="31">Hozz létre tervezőből egy szövegdobozt az űrlapon! (Ebbe lehet lesz majd írni a gombokra kattintgatva.)</li>
+<li sourcefile="softec/zh2checklist/index.md" sourcestartlinenumber="32">Az előző lépésben létrehozott esemény kiszolgálóban castold a sender-t Billentyű típusúvá, majd szövegét add a szövegdoboz szövegéhez. (A += oprtátor szövegekre is működik.)</li>
+</ol>
+<p sourcefile="softec/zh2checklist/index.md" sourcestartlinenumber="34">A 7. pont egy magyarázatot igényel, erről feltöltök egy videót, nem lesz a ZH-ban, viszont így teljes a példa.</p>
+<p sourcefile="softec/zh2checklist/index.md" sourcestartlinenumber="36"><a href="S1kbdhun1.m4v" sourcefile="softec/zh2checklist/index.md" sourcestartlinenumber="36">Megoldás videó 1. része</a></p>
+<p sourcefile="softec/zh2checklist/index.md" sourcestartlinenumber="38"><a href="S1kbdhun2.m4v" sourcefile="softec/zh2checklist/index.md" sourcestartlinenumber="38">Megoldás videó 2. része</a></p>
+<h2 id="gombokkal-mozgatható-játékos" sourcefile="softec/zh2checklist/index.md" sourcestartlinenumber="40">Gombokkal mozgatható játékos</h2>
+<p sourcefile="softec/zh2checklist/index.md" sourcestartlinenumber="42">Képzeljetek el egy billentyűkkel négy irányba mozgatható játékost, ami most az egyszerűség okán egy kis négyzet lesz!</p>
+<ol sourcefile="softec/zh2checklist/index.md" sourcestartlinenumber="44">
+<li sourcefile="softec/zh2checklist/index.md" sourcestartlinenumber="44">Származtass osztályt a <code sourcefile="softec/zh2checklist/index.md" sourcestartlinenumber="44">PictureBox</code>-ból <code sourcefile="softec/zh2checklist/index.md" sourcestartlinenumber="44">Négyzet</code> néven.</li>
+<li sourcefile="softec/zh2checklist/index.md" sourcestartlinenumber="45">A <code sourcefile="softec/zh2checklist/index.md" sourcestartlinenumber="45">Négyzet</code> osztály konstruktorában színezze magát fuksziára, és méretezze magát 30x30 képpontosra.</li>
+<li sourcefile="softec/zh2checklist/index.md" sourcestartlinenumber="46">Build-eld a projektet -- vagy futtasd és állítsd le.</li>
+<li sourcefile="softec/zh2checklist/index.md" sourcestartlinenumber="47">Ha minden jól ment, a tervezőben lesz egy <code sourcefile="softec/zh2checklist/index.md" sourcestartlinenumber="47">Négyzet</code> nevű vezérlő: helyezz el belőle egyet az űrlapon, majd nevezd el <code sourcefile="softec/zh2checklist/index.md" sourcestartlinenumber="47">játékos</code>-nak.</li>
+<li sourcefile="softec/zh2checklist/index.md" sourcestartlinenumber="48">Az űrlap <code sourcefile="softec/zh2checklist/index.md" sourcestartlinenumber="48">KeyDown</code> eseményéhez rendelj eseménykiszolgáló függvényt.</li>
+<li sourcefile="softec/zh2checklist/index.md" sourcestartlinenumber="49">A <code sourcefile="softec/zh2checklist/index.md" sourcestartlinenumber="49">KeyDown</code> eseménykiszolgálóban annak függvényében, hogy melyik billentyűt nyomták meg, a <code sourcefile="softec/zh2checklist/index.md" sourcestartlinenumber="49">játékos</code> <code sourcefile="softec/zh2checklist/index.md" sourcestartlinenumber="49">Top</code> illetve <code sourcefile="softec/zh2checklist/index.md" sourcestartlinenumber="49">Left</code> tulajdonságát növeld vagy csökkentsd 30-al értelemszerűen.</li>
+</ol>
+<p sourcefile="softec/zh2checklist/index.md" sourcestartlinenumber="51"><a href="S1movingPlayer.m4v" sourcefile="softec/zh2checklist/index.md" sourcestartlinenumber="51">Megoldás videó</a></p>
+<h2 id="véletlenszerűen-mozgó-ellenségek" sourcefile="softec/zh2checklist/index.md" sourcestartlinenumber="53">Véletlenszerűen mozgó ellenségek</h2>
+<ol sourcefile="softec/zh2checklist/index.md" sourcestartlinenumber="55">
+<li sourcefile="softec/zh2checklist/index.md" sourcestartlinenumber="55">Származtass osztályt a <code sourcefile="softec/zh2checklist/index.md" sourcestartlinenumber="55">PictureBox</code>-ból <code sourcefile="softec/zh2checklist/index.md" sourcestartlinenumber="55">Gonosz</code> néven.</li>
+<li sourcefile="softec/zh2checklist/index.md" sourcestartlinenumber="56">A <code sourcefile="softec/zh2checklist/index.md" sourcestartlinenumber="56">Gonosz</code> osztály konstruktorában színezze magát fuksziára, és méretezze magát 30x30 képpontosra.</li>
+<li sourcefile="softec/zh2checklist/index.md" sourcestartlinenumber="57">A <code sourcefile="softec/zh2checklist/index.md" sourcestartlinenumber="57">Form1</code> szintjén hozz létre egy példányt a <code sourcefile="softec/zh2checklist/index.md" sourcestartlinenumber="57">Random</code> osztályból.</li>
+<li sourcefile="softec/zh2checklist/index.md" sourcestartlinenumber="58">A <code sourcefile="softec/zh2checklist/index.md" sourcestartlinenumber="58">Form1</code> <code sourcefile="softec/zh2checklist/index.md" sourcestartlinenumber="58">Load</code> eseményéhez rendelt eseménykiszolgálóban helyezz el 30 gonoszt az űrlapon, de úgy, hogy a koordinátáik 30 többszörösei legyenek.</li>
+<li sourcefile="softec/zh2checklist/index.md" sourcestartlinenumber="59">Hozz létre egy <code sourcefile="softec/zh2checklist/index.md" sourcestartlinenumber="59">Timer</code>-t tetszőleges módszerrel, melynek fél másodpercenként sül el a <code sourcefile="softec/zh2checklist/index.md" sourcestartlinenumber="59">Tick</code> eseménye.</li>
+<li sourcefile="softec/zh2checklist/index.md" sourcestartlinenumber="60">A <code sourcefile="softec/zh2checklist/index.md" sourcestartlinenumber="60">Tick</code> eseményhez tartozó eseménykiszolgálóban járd be <code sourcefile="softec/zh2checklist/index.md" sourcestartlinenumber="60">foreach</code> ciklussal a <code sourcefile="softec/zh2checklist/index.md" sourcestartlinenumber="60">Controls</code> gyűjteményben szereplő elemeket <code sourcefile="softec/zh2checklist/index.md" sourcestartlinenumber="60">Gonosz</code>-szá castolva, és mozgass minden gonoszt vétlenszerű irányba.</li>
+<li sourcefile="softec/zh2checklist/index.md" sourcestartlinenumber="61">Ha egy <code sourcefile="softec/zh2checklist/index.md" sourcestartlinenumber="61">Gonosz</code>-t olyan pozícióba tennél, ahol már van gonosz, színezd át mind a kettőt tetszőleges színűre.</li>
+</ol>
+<p sourcefile="softec/zh2checklist/index.md" sourcestartlinenumber="64">Folyt. köv :)</p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/altinum/szamtud_docfx/blob/main/softec/zh2checklist/index.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

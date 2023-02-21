@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>F&#252;ggv&#233;nyek &#233;s vez&#233;rl&#337;szerkezetek </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="F&#252;ggv&#233;nyek &#233;s vez&#233;rl&#337;szerkezetek ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="függvények-és-vezérlőszerkezetek" sourcefile="softec/fuggvenyek/index.md" sourcestartlinenumber="1">Függvények és vezérlőszerkezetek</h1>
+
+<h2 id="videók" sourcefile="softec/fuggvenyek/index.md" sourcestartlinenumber="3">Videók</h2>
+<p sourcefile="softec/fuggvenyek/index.md" sourcestartlinenumber="5"><a href="S1fgv1-1.m4v" sourcefile="softec/fuggvenyek/index.md" sourcestartlinenumber="5">1. videó</a></p>
+<p sourcefile="softec/fuggvenyek/index.md" sourcestartlinenumber="7"><a href="S1fgv2-2.m4v" sourcefile="softec/fuggvenyek/index.md" sourcestartlinenumber="7">2. videó</a></p>
+<p sourcefile="softec/fuggvenyek/index.md" sourcestartlinenumber="9"><a href="S1fgv3-3.m4v" sourcefile="softec/fuggvenyek/index.md" sourcestartlinenumber="9">3. videó</a></p>
+<p sourcefile="softec/fuggvenyek/index.md" sourcestartlinenumber="11"><a href="S1fgv4-4.m4v" sourcefile="softec/fuggvenyek/index.md" sourcestartlinenumber="11">4. videó</a></p>
+<h2 id="0-feladat-solution-létrehozása" sourcefile="softec/fuggvenyek/index.md" sourcestartlinenumber="13">0. feladat: Solution létrehozása</h2>
+<p sourcefile="softec/fuggvenyek/index.md" sourcestartlinenumber="15">Ezen a gyakorlaton azt kérjük, hogy a két felépítendő feladatot -- Fibonacci sor és Pascal háromszög -- egy közös solution-ön belül hozzátok létre két külön projektként:</p>
+<p sourcefile="softec/fuggvenyek/index.md" sourcestartlinenumber="17">(+/-) Hozzatok létre egy új projektet a megszokott módon, de most a solution neve nem az alapértelmezésben felkínált projektnév legyen, hanem <code sourcefile="softec/fuggvenyek/index.md" sourcestartlinenumber="17">MasodikHet_NEPTUN</code> fromátumú:</p>
+<p sourcefile="softec/fuggvenyek/index.md" sourcestartlinenumber="19"><img src="../../images/1600008026941.png" sourcefile="softec/fuggvenyek/index.md" sourcestartlinenumber="19" alt="1600008026941.png"></p>
+<p sourcefile="softec/fuggvenyek/index.md" sourcestartlinenumber="21">(+/-) Ezután a Solution felett jobb egérgombra megjelenő helyi menüből új projektet lehet adni a Solution-höz. Ennek neve legyen <strong sourcefile="softec/fuggvenyek/index.md" sourcestartlinenumber="21">Pascal</strong>.</p>
+<p sourcefile="softec/fuggvenyek/index.md" sourcestartlinenumber="23"><img src="../../images/1600005026998.png" sourcefile="softec/fuggvenyek/index.md" sourcestartlinenumber="23" alt="1600005026998.png"></p>
+<p sourcefile="softec/fuggvenyek/index.md" sourcestartlinenumber="25">(+/-) Ezután a <strong sourcefile="softec/fuggvenyek/index.md" sourcestartlinenumber="25">MasodikHet_NEPTUN</strong> nevű solution tartalmaz egy <strong sourcefile="softec/fuggvenyek/index.md" sourcestartlinenumber="25">Fibonacci</strong> és egy <strong sourcefile="softec/fuggvenyek/index.md" sourcestartlinenumber="25">Pascal</strong> nevű projektet. Az <code sourcefile="softec/fuggvenyek/index.md" sourcestartlinenumber="25">F5</code> billentyű lenyomására mindig a félkövér betűvel szedett projekt indul el, ez az alapértelmezett projekt. Ezt is a projekt nevéhez tartozó helyi menüből lehet átállítani:<br>
+<img src="../../images/1600007423489.png" sourcefile="softec/fuggvenyek/index.md" sourcestartlinenumber="26" alt="1600007423489.png"></p>
+<p sourcefile="softec/fuggvenyek/index.md" sourcestartlinenumber="28">(+/-) A végén a teljes solution-t adjátok le betömörítve!</p>
+<div class="CAUTION" sourcefile="softec/fuggvenyek/index.md" sourcestartlinenumber="30">
+<h5>Caution</h5>
+<p sourcefile="softec/fuggvenyek/index.md" sourcestartlinenumber="31">A solution és a projekt nevében nem lehet szóköz, tartalmazhat számot, de nem kezdődhet számmal! Ékezetet a ZIP miatt nem érdemes használni, de nem tilos. A pont használatát megengedi, de rossz gyakorlat, mert megzavarja a programot. (A névterek tagolása is ponttal történik)</p>
+</div>
+<h2 id="1-feladat-fibonacci-sor-kirakása-gombokból" sourcefile="softec/fuggvenyek/index.md" sourcestartlinenumber="33">1. feladat: Fibonacci sor kirakása gombokból</h2>
+<p sourcefile="softec/fuggvenyek/index.md" sourcestartlinenumber="35">(+/-)  Rakjátok ki a  <a href="https://hu.wikipedia.org/wiki/Fibonacci-sz%C3%A1mok" sourcefile="softec/fuggvenyek/index.md" sourcestartlinenumber="35">Fibonacci-sor</a>  első tíz elemét gombokból az űrlapra.</p>
+<p sourcefile="softec/fuggvenyek/index.md" sourcestartlinenumber="37">Segítségül:</p>
+<p sourcefile="softec/fuggvenyek/index.md" sourcestartlinenumber="39"><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/47f0f322e5c0d6f9ef56bd8236e4163f8816e870" sourcefile="softec/fuggvenyek/index.md" sourcestartlinenumber="39" alt=""></p>
+<p sourcefile="softec/fuggvenyek/index.md" sourcestartlinenumber="42">A fentiek alapján a Fibonacci sor <em sourcefile="softec/fuggvenyek/index.md" sourcestartlinenumber="42">n</em>-edik elemét megadó függvény:</p>
+<pre><code class="lang-csharp" sourcefile="softec/fuggvenyek/index.md" sourcestartlinenumber="44">int Fibonacci(int n)
+{
+    if (n == 0) return 0;
+    if (n == 1) return 1;
+    return Fibonacci(n - 1) + Fibonacci(n - 2);
+}
+</code></pre>
+<div class="NOTE" sourcefile="softec/fuggvenyek/index.md" sourcestartlinenumber="53">
+<h5>Note</h5>
+<p sourcefile="softec/fuggvenyek/index.md" sourcestartlinenumber="54">Rekurzív függvényeknek azokat a függvényeket nevezzük, melyek saját magukat meghívják. A fenti függvény jó példa erre.</p>
+</div>
+<p sourcefile="softec/fuggvenyek/index.md" sourcestartlinenumber="56">A gombok kihelyezése elvégezhető az űrlap konstruktorában, de létrehozhattunk volna eseménykiszolgálót az űrlap <code sourcefile="softec/fuggvenyek/index.md" sourcestartlinenumber="56">Load</code> eseményéhez is:</p>
+<pre><code class="lang-csharp" sourcefile="softec/fuggvenyek/index.md" sourcestartlinenumber="58">public Form1()
+{
+    InitializeComponent();
+    for (int i = 1; i &lt; 10; i++)
+    { 
+        Button b = new Button();
+        b.Top = i * 30;
+        b.Text = Fibonacci(i).ToString();
+        Controls.Add(b);
+    }
+}      
+</code></pre>
+<h2 id="2-feladat-pascal-háromszög-kirakása-gombokból" sourcefile="softec/fuggvenyek/index.md" sourcestartlinenumber="72">2. feladat: Pascal-háromszög kirakása gombokból</h2>
+<p sourcefile="softec/fuggvenyek/index.md" sourcestartlinenumber="74">A feladat a  <a href="https://hu.wikipedia.org/wiki/Pascal-h%C3%A1romsz%C3%B6g" sourcefile="softec/fuggvenyek/index.md" sourcestartlinenumber="74">Pascal-háromszög</a>  első néhány sorának kirakása gombokból.</p>
+<p sourcefile="softec/fuggvenyek/index.md" sourcestartlinenumber="76">A Pascal háromszögben szereplő binomiális együtthatók kifejezhetők a faktoriálissal:</p>
+<p sourcefile="softec/fuggvenyek/index.md" sourcestartlinenumber="78"><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/c42a41f48e94296543f7f82ae26e19f69cc73ece" sourcefile="softec/fuggvenyek/index.md" sourcestartlinenumber="78" alt="{\displaystyle {n \choose k}={\frac {n!}{k!,(n-k)!}}}"></p>
+<h3 id="21-faktoriális-kiszámolása" sourcefile="softec/fuggvenyek/index.md" sourcestartlinenumber="80">2.1 Faktoriális kiszámolása</h3>
+<p sourcefile="softec/fuggvenyek/index.md" sourcestartlinenumber="82">A .NET keretrendszer nem tartalmaz kész függvényt a faktoriális kiszámítására, ezért első lépésként nekünk kell megírnunk. Kétféle úton is el lehet indulni, bármelyik megoldást választhatjátok.</p>
+<h4 id="1-lehetőség-faktroiális-kiszámítása-iterációval" sourcefile="softec/fuggvenyek/index.md" sourcestartlinenumber="84">1. lehetőség: faktroiális kiszámítása iterációval</h4>
+<p sourcefile="softec/fuggvenyek/index.md" sourcestartlinenumber="86"><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/4234ee890533fa15c15af33b07648b46ef87f08a" sourcefile="softec/fuggvenyek/index.md" sourcestartlinenumber="86" alt=""></p>
+<p sourcefile="softec/fuggvenyek/index.md" sourcestartlinenumber="88">A C# függvény a fenti szorzatösszeget képezi:</p>
+<pre><code class="lang-csharp" sourcefile="softec/fuggvenyek/index.md" sourcestartlinenumber="90">int Faktorialis(int n)
+{
+    int eredmény = 1;
+    for (int i = 1; i &lt;= n; i++) eredmény *= i;
+    return eredmény;
+}
+
+</code></pre>
+<ul sourcefile="softec/fuggvenyek/index.md" sourcestartlinenumber="100">
+<li sourcefile="softec/fuggvenyek/index.md" sourcestartlinenumber="100">A <code sourcefile="softec/fuggvenyek/index.md" sourcestartlinenumber="100">*=</code> operátor megszorozza a változó értékét az operátor után szereplő értékkel. Hasonlóképpen működnek a <code sourcefile="softec/fuggvenyek/index.md" sourcestartlinenumber="100">+=</code>,<code sourcefile="softec/fuggvenyek/index.md" sourcestartlinenumber="100">-=</code> és a <code sourcefile="softec/fuggvenyek/index.md" sourcestartlinenumber="100">/=</code> operátorok.</li>
+<li sourcefile="softec/fuggvenyek/index.md" sourcestartlinenumber="101">A <code sourcefile="softec/fuggvenyek/index.md" sourcestartlinenumber="101">++</code> operátor növeli a változó értékét 1-el, míg a <code sourcefile="softec/fuggvenyek/index.md" sourcestartlinenumber="101">--</code> csökkenti.</li>
+</ul>
+<h4 id="2-lehetőség-faktoriális-kiszámítása-rekurzióval" sourcefile="softec/fuggvenyek/index.md" sourcestartlinenumber="103">2 lehetőség: faktoriális kiszámítása rekurzióval</h4>
+<p sourcefile="softec/fuggvenyek/index.md" sourcestartlinenumber="105">Mint korábban írtuk, rekurzív függvényeknek azokat a függvényeket nevezzük, melyek saját magukat meghívják. Ebben a megközelítésben abból indulunk ki, hogy ha $n&gt;0$ akkor $n!=(n-1)!$, ha viszont $n\leq0$, akkor $n=1$.</p>
+<p sourcefile="softec/fuggvenyek/index.md" sourcestartlinenumber="107">C#-ul:</p>
+<pre><code class="lang-csharp" sourcefile="softec/fuggvenyek/index.md" sourcestartlinenumber="109">int Faktorialis2(int n)
+{ 
+    if (n == 0) return 1;
+    return n * Faktorialis2(n - 1);            
+}
+</code></pre>
+<h2 id="22-a-háromszög-kirakása" sourcefile="softec/fuggvenyek/index.md" sourcestartlinenumber="117">2.2 A háromszög kirakása</h2>
+<p sourcefile="softec/fuggvenyek/index.md" sourcestartlinenumber="119">(+/-)  Rakjátok ki a binomiális együtthatókat egy 10x10-es négyzetrácsba gomb (<code sourcefile="softec/fuggvenyek/index.md" sourcestartlinenumber="119">Button</code>) vezérlőkből az alábbi összefüggés alapján:</p>
+<p sourcefile="softec/fuggvenyek/index.md" sourcestartlinenumber="121"><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/c42a41f48e94296543f7f82ae26e19f69cc73ece" sourcefile="softec/fuggvenyek/index.md" sourcestartlinenumber="121" alt="{\displaystyle {n \choose k}={\frac {n!}{k!,(n-k)!}}}"></p>
+<p sourcefile="softec/fuggvenyek/index.md" sourcestartlinenumber="123">A <em sourcefile="softec/fuggvenyek/index.md" sourcestartlinenumber="123">n</em> helyére a sor számát, <em sourcefile="softec/fuggvenyek/index.md" sourcestartlinenumber="123">k</em> helyére az oszlopét helyettesítsd!</p>
+<p sourcefile="softec/fuggvenyek/index.md" sourcestartlinenumber="125">Először egy négyzetrácsba tesszük az elemeket, majd később csináljuk meg azt, hogy ne jelenjenek meg a főátló felettiek, és később rendezzük őket piramis alakba:</p>
+<pre><code class="lang-csharp" sourcefile="softec/fuggvenyek/index.md" sourcestartlinenumber="127">namespace Pascal
+{
+    public partial class Form1 : Form
+    { 
+        public Form1()
+        {
+            InitializeComponent();
+            for (int sor = 0; sor &lt; 10; sor++)
+            {
+                for (int oszlop = 0; oszlop &lt;= 10; oszlop++)
+                {
+                    Button b = new Button();
+                    b.Top = sor * 60;
+                    b.Left = oszlop * 60;
+                    b.Height = 60;
+                    b.Width = 60;
+                    this.Controls.Add(b);
+                    int p = Faktorialis(sor) / (Faktorialis(oszlop) * (Faktorialis(sor-oszlop)));
+                    b.Text = p.ToString();
+                }
+            }
+        }
+
+        int Faktorialis(int n)
+        {
+            int eredmény = 1;
+            for (int i = 1; i &lt;= n; i++) eredmény *=  i; 
+                       
+            return eredmény;
+        }
+
+        int Faktorialis2(int n)
+        { 
+            if (n == 0) return 1;
+            return n * Faktoriális2(n - 1);            
+        }
+    }
+} 
+</code></pre>
+<p sourcefile="softec/fuggvenyek/index.md" sourcestartlinenumber="168">(+/-) Oldjátok meg, hogy csak a főátló, és a főátló alatti “kockák” jelennenek meg.</p>
+<div class="TIP" sourcefile="softec/fuggvenyek/index.md" sourcestartlinenumber="170">
+<h5>Tip</h5>
+<p sourcefile="softec/fuggvenyek/index.md" sourcestartlinenumber="171">A főátló alatt azok az elemek vannak, amelyeknél az oszlop száma nagyobb, vagy egyenlő, mint a sor száma. A Pascal-háromszög háromszög, és nem négyzet  Egyenlőre most derékszögű háromszögünk lesz.</p>
+</div>
+<p sourcefile="softec/fuggvenyek/index.md" sourcestartlinenumber="173">(+/-) Az elemek jelenjenek meg piramis-szerűen.</p>
+<div class="TIP" sourcefile="softec/fuggvenyek/index.md" sourcestartlinenumber="175">
+<h5>Tip</h5>
+<p sourcefile="softec/fuggvenyek/index.md" sourcestartlinenumber="176">Minden sorban egy kicsit jobban balra kell tolni az elemeket, mint az előző sorben. Egész pontosan minden sorban az elemeket egy fél elemnyivel balrább kell kell tolni, mint az előző sor elemeit.</p>
+</div>
+<div class="TIP" sourcefile="softec/fuggvenyek/index.md" sourcestartlinenumber="178">
+<h5>Tip</h5>
+<p sourcefile="softec/fuggvenyek/index.md" sourcestartlinenumber="179">A ClientRectangle.Width kifejezés értéke az ablak belső mérete – keretek nélkül – pixelekben. (Ablak esetén a Width és a Height a keretet is magában foglalja, ami függ Windows verziótól és a beállított témától is.) Az első sort az ablak szélességének felével érdemes jobbra tolni, amiből – ha nagyon szőrszálhasokgatunk – ki kell vonni egy fél elemszélességnyit.</p>
+</div>
+<h2 id="extra-feladat-versenyen-kívül" sourcefile="softec/fuggvenyek/index.md" sourcestartlinenumber="181">Extra feladat “versenyen kívül”</h2>
+<p sourcefile="softec/fuggvenyek/index.md" sourcestartlinenumber="183">(+/-) Csináljatok sakktáblát. Azaz csak minden második négyzetet jelenítsétek meg.</p>
+<div class="TIP" sourcefile="softec/fuggvenyek/index.md" sourcestartlinenumber="185">
+<h5>Tip</h5>
+<p sourcefile="softec/fuggvenyek/index.md" sourcestartlinenumber="186">A <code sourcefile="softec/fuggvenyek/index.md" sourcestartlinenumber="186">%</code> (modulo) operátor az osztási maradékot képzi. Az alábbi kódrészlet eldönti egy számról, hogy páros-e:</p>
+</div>
+<pre><code class="lang-csharp" sourcefile="softec/fuggvenyek/index.md" sourcestartlinenumber="188">if (a % 2 == 0)
+{
+	//páros
+}
+else
+{
+	//páratlan
+}
+</code></pre>
+<h2 id="offtopic" sourcefile="softec/fuggvenyek/index.md" sourcestartlinenumber="199">Offtopic</h2>
+<p sourcefile="softec/fuggvenyek/index.md" sourcestartlinenumber="201"><a href="https://joshworth.com/dev/pixelspace/pixelspace_solarsystem.html" sourcefile="softec/fuggvenyek/index.md" sourcestartlinenumber="201">If the Moon were only 1 pixel</a> - a naprendszer méretarányainak bemutatása hosszú-hosszú görgethető oldalon keresztül</p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/altinum/szamtud_docfx/blob/main/softec/fuggvenyek/index.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

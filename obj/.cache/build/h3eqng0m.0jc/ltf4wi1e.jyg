@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Feleltv&#225;laszt&#243;s j&#225;t&#233;k </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Feleltv&#225;laszt&#243;s j&#225;t&#233;k ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="feleltválasztós-játék" sourcefile="softec/feleletvalasztos/index.md" sourcestartlinenumber="1">Feleltválasztós játék</h1>
+
+<p sourcefile="softec/feleletvalasztos/index.md" sourcestartlinenumber="2">A példaalkalmazás az alábbi témákat érinti:</p>
+<ul sourcefile="softec/feleletvalasztos/index.md" sourcestartlinenumber="3">
+<li sourcefile="softec/feleletvalasztos/index.md" sourcestartlinenumber="3">Szövegfájlok megnyitása és soromként történő olvasása</li>
+<li sourcefile="softec/feleletvalasztos/index.md" sourcestartlinenumber="4">Szövegfájl karakterkódolásának megadása</li>
+<li sourcefile="softec/feleletvalasztos/index.md" sourcestartlinenumber="5">UserControlok használata</li>
+<li sourcefile="softec/feleletvalasztos/index.md" sourcestartlinenumber="6">Metódusok túlterhelése</li>
+</ul>
+<h2 id="kiinduló-állományok-és-megoldás" sourcefile="softec/feleletvalasztos/index.md" sourcestartlinenumber="8">Kiinduló állományok és megoldás</h2>
+<table sourcefile="softec/feleletvalasztos/index.md" sourcestartlinenumber="10">
+<thead>
+<tr sourcefile="softec/feleletvalasztos/index.md" sourcestartlinenumber="1">
+<th sourcefile="softec/feleletvalasztos/index.md" sourcestartlinenumber="1"></th>
+<th sourcefile="softec/feleletvalasztos/index.md" sourcestartlinenumber="1"></th>
+</tr>
+</thead>
+<tbody>
+<tr sourcefile="softec/feleletvalasztos/index.md" sourcestartlinenumber="11">
+<td sourcefile="softec/feleletvalasztos/index.md" sourcestartlinenumber="11"><a href="jatek.csv" sourcefile="softec/feleletvalasztos/index.md" sourcestartlinenumber="11">jatek.csv</a></td>
+<td sourcefile="softec/feleletvalasztos/index.md" sourcestartlinenumber="11">Kérdések - pontosvesszővel tagolt sorokban</td>
+</tr>
+<tr sourcefile="softec/feleletvalasztos/index.md" sourcestartlinenumber="12">
+<td sourcefile="softec/feleletvalasztos/index.md" sourcestartlinenumber="12"><a href="jatek2.txt" sourcefile="softec/feleletvalasztos/index.md" sourcestartlinenumber="12">jatek2.txt</a></td>
+<td sourcefile="softec/feleletvalasztos/index.md" sourcestartlinenumber="12">Kérdések - külön sorokba fejtve</td>
+</tr>
+<tr sourcefile="softec/feleletvalasztos/index.md" sourcestartlinenumber="13">
+<td sourcefile="softec/feleletvalasztos/index.md" sourcestartlinenumber="13"><a href="handout.docx" sourcefile="softec/feleletvalasztos/index.md" sourcestartlinenumber="13">handout.docx</a></td>
+<td sourcefile="softec/feleletvalasztos/index.md" sourcestartlinenumber="13">Előadás handout</td>
+</tr>
+<tr sourcefile="softec/feleletvalasztos/index.md" sourcestartlinenumber="14">
+<td sourcefile="softec/feleletvalasztos/index.md" sourcestartlinenumber="14"><a href="Jatek.zip" sourcefile="softec/feleletvalasztos/index.md" sourcestartlinenumber="14">Jatek.zip</a></td>
+<td sourcefile="softec/feleletvalasztos/index.md" sourcestartlinenumber="14">Előadás handout</td>
+</tr>
+</tbody>
+</table>
+<h2 id="a-megoldás-menete-videókon" sourcefile="softec/feleletvalasztos/index.md" sourcestartlinenumber="15">A megoldás menete videókon</h2>
+<p sourcefile="softec/feleletvalasztos/index.md" sourcestartlinenumber="17"><a href="S1quiz1Filehandling-1.m4v" sourcefile="softec/feleletvalasztos/index.md" sourcestartlinenumber="17">Fájlkezelés</a></p>
+<p sourcefile="softec/feleletvalasztos/index.md" sourcestartlinenumber="19"><a href="S1quiz2Uc-2.m4v" sourcefile="softec/feleletvalasztos/index.md" sourcestartlinenumber="19">UserControl építése</a></p>
+<p sourcefile="softec/feleletvalasztos/index.md" sourcestartlinenumber="21"><a href="S1quiz3Ucfromon-3.m4v" sourcefile="softec/feleletvalasztos/index.md" sourcestartlinenumber="21">UserControl-ok kirakása</a></p>
+<p sourcefile="softec/feleletvalasztos/index.md" sourcestartlinenumber="23"><a href="S1quiz4Overload-4.m4v" sourcefile="softec/feleletvalasztos/index.md" sourcestartlinenumber="23">Túlterhelt konstruktor</a></p>
+<p sourcefile="softec/feleletvalasztos/index.md" sourcestartlinenumber="25"><a href="S1quiz5Coloring-5.m4v" sourcefile="softec/feleletvalasztos/index.md" sourcestartlinenumber="25">Válaszok színezése</a></p>
+<p sourcefile="softec/feleletvalasztos/index.md" sourcestartlinenumber="27"><a href="S1quiz6Csv-6.m4v" sourcefile="softec/feleletvalasztos/index.md" sourcestartlinenumber="27">CSV fájl kezelése</a></p>
+<p sourcefile="softec/feleletvalasztos/index.md" sourcestartlinenumber="29"><a href="S1quiz7Utf-7.m4v" sourcefile="softec/feleletvalasztos/index.md" sourcestartlinenumber="29">Karakterkódolások</a></p>
+<h3 id="ellenőrző-kérdések" sourcefile="softec/feleletvalasztos/index.md" sourcestartlinenumber="32">Ellenőrző kérdések</h3>
+<ol sourcefile="softec/feleletvalasztos/index.md" sourcestartlinenumber="34">
+<li sourcefile="softec/feleletvalasztos/index.md" sourcestartlinenumber="34">A StreamReader osztály mely tulajdonságából tudható meg, hogy tudunk-e még olvasni a fájlból?</li>
+<li sourcefile="softec/feleletvalasztos/index.md" sourcestartlinenumber="35">Írd le azt a kódrészletet, mely megnyit egy tetszőleges szövegfájlt olvasásra, majd soronként beolvassa a tartalmát!</li>
+<li sourcefile="softec/feleletvalasztos/index.md" sourcestartlinenumber="36">Írd le azt a kódrészletet, mely ciklusból kirak egy űrlapra egymás alá 10 gombot!</li>
+<li sourcefile="softec/feleletvalasztos/index.md" sourcestartlinenumber="37">Mi a hiba a következő kódrészletbe: <code sourcefile="softec/feleletvalasztos/index.md" sourcestartlinenumber="37">StreamReader sr = new StreamReader(&quot;c:\tmp\valami.txt&quot;)</code>;</li>
+<li sourcefile="softec/feleletvalasztos/index.md" sourcestartlinenumber="38">Mit jelöl a <code sourcefile="softec/feleletvalasztos/index.md" sourcestartlinenumber="38">@</code> karakter stringek előtt?</li>
+<li sourcefile="softec/feleletvalasztos/index.md" sourcestartlinenumber="39">Hogyan lehet <code sourcefile="softec/feleletvalasztos/index.md" sourcestartlinenumber="39">string</code> típust <code sourcefile="softec/feleletvalasztos/index.md" sourcestartlinenumber="39">int</code>-é konvertálni? (Írj példát!)</li>
+<li sourcefile="softec/feleletvalasztos/index.md" sourcestartlinenumber="40">Hogyan lehet <code sourcefile="softec/feleletvalasztos/index.md" sourcestartlinenumber="40">int</code> típust <code sourcefile="softec/feleletvalasztos/index.md" sourcestartlinenumber="40">string</code>-é konvertálni? (Írj példát!)</li>
+</ol>
+<h2 id="feleltválasztós-játék-felépítése-lépésről-lépésre" sourcefile="softec/feleletvalasztos/index.md" sourcestartlinenumber="42">Feleltválasztós játék felépítése lépésről lépésre</h2>
+<blockquote sourcefile="softec/feleletvalasztos/index.md" sourcestartlinenumber="44">
+<p sourcefile="softec/feleletvalasztos/index.md" sourcestartlinenumber="44">Azt tanácsoljuk, hogy a videók után önálóan probáljátok felépíteni a játékot az alábbi lépések mentén. Arra kérnénk mindenkit, hogy jelöljétek azokat a lépéseket, amivel kész vagytok, vagy ahol elakadtatok.</p>
+</blockquote>
+<h3 id="kiinduló-adatok-hozzáadása-a-projekthez" sourcefile="softec/feleletvalasztos/index.md" sourcestartlinenumber="46">Kiinduló adatok hozzáadása a projekthez</h3>
+<p sourcefile="softec/feleletvalasztos/index.md" sourcestartlinenumber="48">(+/-) Töltsd le a honlapról a <code sourcefile="softec/feleletvalasztos/index.md" sourcestartlinenumber="48">jatek2.txt</code> állományt, és vizsgáld meg a tartalmát!</p>
+<p sourcefile="softec/feleletvalasztos/index.md" sourcestartlinenumber="50">(+/-) A fájlt húzd be a projektbe és a <em sourcefile="softec/feleletvalasztos/index.md" sourcestartlinenumber="50">Properties</em> ablakban a <em sourcefile="softec/feleletvalasztos/index.md" sourcestartlinenumber="50">Copy to output directory</em> beállítást állítsd „Copy if newer”-re!</p>
+<h3 id="usercontrol-létrehozása" sourcefile="softec/feleletvalasztos/index.md" sourcestartlinenumber="52">UserControl létrehozása</h3>
+<p sourcefile="softec/feleletvalasztos/index.md" sourcestartlinenumber="54">(+/-) Hozz létre <code sourcefile="softec/feleletvalasztos/index.md" sourcestartlinenumber="54">UserControl</code>-t <code sourcefile="softec/feleletvalasztos/index.md" sourcestartlinenumber="54">KérdésUserControl</code> néven. A <code sourcefile="softec/feleletvalasztos/index.md" sourcestartlinenumber="54">KérdésUserControl</code>-ban helyezz el négy gombot és egy címkét a kérdésnek! A fenti vezérlők <code sourcefile="softec/feleletvalasztos/index.md" sourcestartlinenumber="54">Modifiers</code> tulajdonságát állítsd <code sourcefile="softec/feleletvalasztos/index.md" sourcestartlinenumber="54">public</code>-ra!</p>
+<h3 id="fájl-felolvasása" sourcefile="softec/feleletvalasztos/index.md" sourcestartlinenumber="56">Fájl felolvasása</h3>
+<p sourcefile="softec/feleletvalasztos/index.md" sourcestartlinenumber="58">(+/-) A <code sourcefile="softec/feleletvalasztos/index.md" sourcestartlinenumber="58">Form1</code> osztály konstruktorában a <code sourcefile="softec/feleletvalasztos/index.md" sourcestartlinenumber="58">StreamReader</code> osztály segítségével nyiss d meg a <code sourcefile="softec/feleletvalasztos/index.md" sourcestartlinenumber="58">jatek2.txt</code> fájlt.</p>
+<p sourcefile="softec/feleletvalasztos/index.md" sourcestartlinenumber="60">(+/-) A <code sourcefile="softec/feleletvalasztos/index.md" sourcestartlinenumber="60">StreamReader</code> osztály segítségével nyisd meg a fájlt, és egy <code sourcefile="softec/feleletvalasztos/index.md" sourcestartlinenumber="60">while</code> ciklus segítségével olvass be cikluslépésenként hat sort találó nevű és megfelelő típusú változókba:
+-   az első sor a kérdés
+-   az ezt kévető négy sor a négy lehetséges választ tartalmazza
+-   a hatodik sor a helyes válasz sorszámát tartalmazó egész szám</p>
+<p sourcefile="softec/feleletvalasztos/index.md" sourcestartlinenumber="65">(+/-) A ciklus törzsében hozz létre példányt a <code sourcefile="softec/feleletvalasztos/index.md" sourcestartlinenumber="65">KérdésUserControl-ból</code>, és add az űrlap vezélőiek listájához!</p>
+<p sourcefile="softec/feleletvalasztos/index.md" sourcestartlinenumber="67">(+/-) Oldd meg, hogy a <code sourcefile="softec/feleletvalasztos/index.md" sourcestartlinenumber="67">KérdésUserControl</code>-ból létrehozott példányok egymás alá kerüljenek!</p>
+<p sourcefile="softec/feleletvalasztos/index.md" sourcestartlinenumber="69">(+/-) Állítsd be <code sourcefile="softec/feleletvalasztos/index.md" sourcestartlinenumber="69">KérdésUserControl</code>-ból létrehozott példányban lévő címke és gomb szövegét értelemszerűen!</p>
+<h3 id="játékos-válaszainak-ellenőrzése" sourcefile="softec/feleletvalasztos/index.md" sourcestartlinenumber="71">Játékos válaszainak ellenőrzése</h3>
+<p sourcefile="softec/feleletvalasztos/index.md" sourcestartlinenumber="73">(+/-) Hozz létre egy publikus egész típusú változót a <code sourcefile="softec/feleletvalasztos/index.md" sourcestartlinenumber="73">KérdésUserControl</code> osztályban <code sourcefile="softec/feleletvalasztos/index.md" sourcestartlinenumber="73">JóVálasz</code> néven. Ebből tudja majd ellenőrizni a <code sourcefile="softec/feleletvalasztos/index.md" sourcestartlinenumber="73">KérdésUserControl</code>, hogy a felhasználó jó gombra kattintott-e.</p>
+<ol start="10" sourcefile="softec/feleletvalasztos/index.md" sourcestartlinenumber="75">
+<li sourcefile="softec/feleletvalasztos/index.md" sourcestartlinenumber="75">A sorokat olvasó ciklus törzsében a <code sourcefile="softec/feleletvalasztos/index.md" sourcestartlinenumber="75">KérdésUserControl</code> <code sourcefile="softec/feleletvalasztos/index.md" sourcestartlinenumber="75">JóVálasz</code> változóját is állítsd be!</li>
+<li sourcefile="softec/feleletvalasztos/index.md" sourcestartlinenumber="76"><code sourcefile="softec/feleletvalasztos/index.md" sourcestartlinenumber="76">KérdésUserControl</code>-ban rendelj eseménykiszolgálókat a gombokhoz. Minden eseménykiszolgáló színezze pirosra a hozzá tartozó gombot!</li>
+<li sourcefile="softec/feleletvalasztos/index.md" sourcestartlinenumber="77">Ezután a helyes válaszhoz tartozó gombot színezd zöldre!</li>
+</ol>
+<h3 id="megoldás" sourcefile="softec/feleletvalasztos/index.md" sourcestartlinenumber="79">Megoldás</h3>
+<p sourcefile="softec/feleletvalasztos/index.md" sourcestartlinenumber="81">Kérdés UserControl code-behind</p>
+<pre><code class="lang-csharp" sourcefile="softec/feleletvalasztos/index.md" sourcestartlinenumber="82">public partial class KérdésUserControl : UserControl
+{
+    int jóválasz;
+    public bool eltaláta = false;
+
+    public Kérdés()
+    {
+	    InitializeComponent();
+    }
+
+    public Kérdés(string kédés, string v1, string v2, string v3, string v4, int jóválasz)
+    {
+	    InitializeComponent();
+	    label1.Text = kédés;
+	    button1.Text = v1;
+	    button2.Text = v2;
+	    button3.Text = v3;
+	    button4.Text = v4;
+	    this.jóválasz = jóválasz;
+    }
+
+    private void button1_Click(object sender, EventArgs e)
+    {
+	    button1.BackColor = Color.Red;
+	    Színezd();
+	    if (jóválasz == 1) eltaláta = true;
+    }
+
+    private void button2_Click(object sender, EventArgs e) (...)
+    private void button3_Click(object sender, EventArgs e) (...)
+    private void button4_Click(object sender, EventArgs e) (...)
+
+    void Színezd()
+    {
+	    if (jóválasz == 1) button1.BackColor = Color.Green;
+	    if (jóválasz == 2) button2.BackColor = Color.Green;
+	    if (jóválasz == 3) button3.BackColor = Color.Green;
+	    if (jóválasz == 4) button4.BackColor = Color.Green;
+    }
+}
+</code></pre>
+<p sourcefile="softec/feleletvalasztos/index.md" sourcestartlinenumber="125">Form1 code-behind</p>
+<pre><code class="lang-csharp" sourcefile="softec/feleletvalasztos/index.md" sourcestartlinenumber="126">private void Form1_Load(object sender, EventArgs e)
+{
+    StreamReader sr = new StreamReader(&quot;jatek.csv&quot;, Encoding.Default);
+    int kérdésszám = 0;
+    while (!sr.EndOfStream)
+    {
+        string sor = sr.ReadLine();
+        string[] s = sor.Split(';');
+        string kérdés = s[0];
+        string v1 = s[1];
+        string v2 = s[2];
+        string v3 = s[3];
+        string v4 = s[4];
+        byte jó = byte.Parse(s[5]);
+
+        KerdesUserControl kuc = new KerdesUserControl(kérdés, v1,v2,v3,v4,jó);
+        kuc.Top = kuc.Height * kérdésszám;
+        Controls.Add(kuc);
+
+        if (kérdésszám == 100) break;
+
+        kérdésszám++;
+    }
+
+    sr.Close();
+}
+</code></pre>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/altinum/szamtud_docfx/blob/main/softec/feleletvalasztos/index.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

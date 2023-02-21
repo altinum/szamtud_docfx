@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Regul&#225;ris kifejez&#233;sek </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Regul&#225;ris kifejez&#233;sek ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="reguláris-kifejezések" sourcefile="softeng/3_elm_regularis_kifejezesek/index.md" sourcestartlinenumber="1">Reguláris kifejezések</h1>
+
+<p sourcefile="softeng/3_elm_regularis_kifejezesek/index.md" sourcestartlinenumber="2">Ez a dokumentum az <a href="http://vbence.web.elte.hu/regex_leiras.html" sourcefile="softeng/3_elm_regularis_kifejezesek/index.md" sourcestartlinenumber="2">itt</a> található cikk kivonatolt változata. A linken további példákat is találsz.</p>
+<h2 id="segítség-a-regex-használatához" sourcefile="softeng/3_elm_regularis_kifejezesek/index.md" sourcestartlinenumber="4">Segítség a RegEx használatához</h2>
+<p sourcefile="softeng/3_elm_regularis_kifejezesek/index.md" sourcestartlinenumber="6">A <strong sourcefile="softeng/3_elm_regularis_kifejezesek/index.md" sourcestartlinenumber="6">RegEx</strong> vagy <strong sourcefile="softeng/3_elm_regularis_kifejezesek/index.md" sourcestartlinenumber="6">RegExp</strong> a <strong sourcefile="softeng/3_elm_regularis_kifejezesek/index.md" sourcestartlinenumber="6">Regular Expression</strong> rövid formája. Magyarul talán a &quot;szabályos kifejezés&quot; lenne a megfelelő fordítás. Ez a leírás azért született, hogy elindítson a technika megismerésében, de korántsem tekinthető teljesnek -- a cikk végén található URL-eken lehet folytatni a barangolást a &quot;szabályos kifejezések&quot; világában.</p>
+<blockquote sourcefile="softeng/3_elm_regularis_kifejezesek/index.md" sourcestartlinenumber="8">
+<p sourcefile="softeng/3_elm_regularis_kifejezesek/index.md" sourcestartlinenumber="8">&quot;<em sourcefile="softeng/3_elm_regularis_kifejezesek/index.md" sourcestartlinenumber="8">Mindig babonás félelemmel néztem a RegEx mintáira. Volt dolgom egykét nyelvvel, de ez valami egészen bizarr dolog volt. Nem hinném, hogy létezik olyan tapasztalat aminek birtokában felfedezhető a RegEx sajátos logikája, szintaktikája, viszont az operátorok elolvasása után szinte arcul csap a felismerés: &quot;ennyi az egész?&quot; Legalább is ez lenne a cikk célja :)</em>&quot;</p>
+</blockquote>
+<p sourcefile="softeng/3_elm_regularis_kifejezesek/index.md" sourcestartlinenumber="10">A RegEx lehetőséget ad szabályok, azaz minták egyszerű leírására. Ezekkel a mintákkal aztán sok hasznos dolgot tehetünk. Kereshetünk rájuk egy stringben, vagy kicserélhetjük őket valamilyen szabály szerint. Használhatjuk adatellenőrzésre vagy szerkezetek (pl. dátum) szétdarabolására, értelmezésére.</p>
+<p sourcefile="softeng/3_elm_regularis_kifejezesek/index.md" sourcestartlinenumber="12">Essünk túl a kötelező analógián: a DOS-ból jól ismert joker karakterek is kifejezéseket írnak le, amiknek fájlokat feleltetünk meg, vagy van egyezés, vagy nem. A <code sourcefile="softeng/3_elm_regularis_kifejezesek/index.md" sourcestartlinenumber="12">ka*.doc</code> és <code sourcefile="softeng/3_elm_regularis_kifejezesek/index.md" sourcestartlinenumber="12">ka???.doc</code> kifejezések közül a <code sourcefile="softeng/3_elm_regularis_kifejezesek/index.md" sourcestartlinenumber="12">kalap.doc</code> mindkettőnek, még a <code sourcefile="softeng/3_elm_regularis_kifejezesek/index.md" sourcestartlinenumber="12">kapa.doc</code> csak az elsőnek felel meg.</p>
+<p sourcefile="softeng/3_elm_regularis_kifejezesek/index.md" sourcestartlinenumber="14">Hogy még egy kicsit rosszabb legyen, mielőtt jobb lesz: DOS-os <code sourcefile="softeng/3_elm_regularis_kifejezesek/index.md" sourcestartlinenumber="14">ka*.doc</code> RegEx megfelelője: <code sourcefile="softeng/3_elm_regularis_kifejezesek/index.md" sourcestartlinenumber="14">ka.*\.doc</code> a <code sourcefile="softeng/3_elm_regularis_kifejezesek/index.md" sourcestartlinenumber="14">ka???.doc</code> pedig nem más, mint <code sourcefile="softeng/3_elm_regularis_kifejezesek/index.md" sourcestartlinenumber="14">ka.{3}\.doc</code></p>
+<h2 id="regex-operátorok" sourcefile="softeng/3_elm_regularis_kifejezesek/index.md" sourcestartlinenumber="16">RegEx operátorok</h2>
+<h3 id="karakter-megfeleltetés" sourcefile="softeng/3_elm_regularis_kifejezesek/index.md" sourcestartlinenumber="18">Karakter megfeleltetés</h3>
+<table sourcefile="softeng/3_elm_regularis_kifejezesek/index.md" sourcestartlinenumber="19">
+<thead>
+<tr sourcefile="softeng/3_elm_regularis_kifejezesek/index.md" sourcestartlinenumber="19">
+<th sourcefile="softeng/3_elm_regularis_kifejezesek/index.md" sourcestartlinenumber="19">jel</th>
+<th sourcefile="softeng/3_elm_regularis_kifejezesek/index.md" sourcestartlinenumber="19">leírás</th>
+</tr>
+</thead>
+<tbody>
+<tr sourcefile="softeng/3_elm_regularis_kifejezesek/index.md" sourcestartlinenumber="21">
+<td sourcefile="softeng/3_elm_regularis_kifejezesek/index.md" sourcestartlinenumber="21"><strong sourcefile="softeng/3_elm_regularis_kifejezesek/index.md" sourcestartlinenumber="21">. (pont)</strong></td>
+<td sourcefile="softeng/3_elm_regularis_kifejezesek/index.md" sourcestartlinenumber="21">Bármilyen karakter: A  <strong sourcefile="softeng/3_elm_regularis_kifejezesek/index.md" sourcestartlinenumber="21">b.ka</strong>kifejezésnek megfelel a  <strong sourcefile="softeng/3_elm_regularis_kifejezesek/index.md" sourcestartlinenumber="21">béka</strong>  és  <strong sourcefile="softeng/3_elm_regularis_kifejezesek/index.md" sourcestartlinenumber="21">bika</strong>  szó is</td>
+</tr>
+<tr sourcefile="softeng/3_elm_regularis_kifejezesek/index.md" sourcestartlinenumber="22">
+<td sourcefile="softeng/3_elm_regularis_kifejezesek/index.md" sourcestartlinenumber="22"><strong sourcefile="softeng/3_elm_regularis_kifejezesek/index.md" sourcestartlinenumber="22">[karakterek]</strong></td>
+<td sourcefile="softeng/3_elm_regularis_kifejezesek/index.md" sourcestartlinenumber="22">A kapcsoszárójelek között felsorolt karakterek valamelyikével megegyező karakter: A  <strong sourcefile="softeng/3_elm_regularis_kifejezesek/index.md" sourcestartlinenumber="22">b[éa]ka</strong>  kifejezésnek megfelel a béka és baka szó, a bika viszont nem. A - (minusz) jellel tartományt is megadhatunk. Például  <strong sourcefile="softeng/3_elm_regularis_kifejezesek/index.md" sourcestartlinenumber="22">[0-9]</strong>  megfelel bármely számjegynek vagy  <strong sourcefile="softeng/3_elm_regularis_kifejezesek/index.md" sourcestartlinenumber="22">[a-zA-Z]</strong> bármely kis vagy nagybetűnek.</td>
+</tr>
+<tr sourcefile="softeng/3_elm_regularis_kifejezesek/index.md" sourcestartlinenumber="23">
+<td sourcefile="softeng/3_elm_regularis_kifejezesek/index.md" sourcestartlinenumber="23"><strong sourcefile="softeng/3_elm_regularis_kifejezesek/index.md" sourcestartlinenumber="23">[^karakterek]</strong></td>
+<td sourcefile="softeng/3_elm_regularis_kifejezesek/index.md" sourcestartlinenumber="23">A kapcsoszárójelek között felsorolt karakterek egyikével sem egyező karakter (az előző operátor tagadása): A  <strong sourcefile="softeng/3_elm_regularis_kifejezesek/index.md" sourcestartlinenumber="23">b[^é]ka</strong>  kifejezésnek  <strong sourcefile="softeng/3_elm_regularis_kifejezesek/index.md" sourcestartlinenumber="23">nem</strong>  megoldása a  <strong sourcefile="softeng/3_elm_regularis_kifejezesek/index.md" sourcestartlinenumber="23">béka</strong>. A  <strong sourcefile="softeng/3_elm_regularis_kifejezesek/index.md" sourcestartlinenumber="23">baka</strong>  és  <strong sourcefile="softeng/3_elm_regularis_kifejezesek/index.md" sourcestartlinenumber="23">bika</strong>  viszont igen.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="többszörözés" sourcefile="softeng/3_elm_regularis_kifejezesek/index.md" sourcestartlinenumber="25">Többszörözés</h3>
+<table sourcefile="softeng/3_elm_regularis_kifejezesek/index.md" sourcestartlinenumber="26">
+<thead>
+<tr sourcefile="softeng/3_elm_regularis_kifejezesek/index.md" sourcestartlinenumber="26">
+<th sourcefile="softeng/3_elm_regularis_kifejezesek/index.md" sourcestartlinenumber="26">jel</th>
+<th sourcefile="softeng/3_elm_regularis_kifejezesek/index.md" sourcestartlinenumber="26">leírás</th>
+</tr>
+</thead>
+<tbody>
+<tr sourcefile="softeng/3_elm_regularis_kifejezesek/index.md" sourcestartlinenumber="28">
+<td sourcefile="softeng/3_elm_regularis_kifejezesek/index.md" sourcestartlinenumber="28"><strong sourcefile="softeng/3_elm_regularis_kifejezesek/index.md" sourcestartlinenumber="28">?</strong></td>
+<td sourcefile="softeng/3_elm_regularis_kifejezesek/index.md" sourcestartlinenumber="28">A megelőző minta 0 vagy 1 alkalommal fordul elő: A  <strong sourcefile="softeng/3_elm_regularis_kifejezesek/index.md" sourcestartlinenumber="28">borda.?</strong>  kifejezés igaz a  <strong sourcefile="softeng/3_elm_regularis_kifejezesek/index.md" sourcestartlinenumber="28">borda</strong>  és a  <strong sourcefile="softeng/3_elm_regularis_kifejezesek/index.md" sourcestartlinenumber="28">bordal</strong>  szavakra is.</td>
+</tr>
+<tr sourcefile="softeng/3_elm_regularis_kifejezesek/index.md" sourcestartlinenumber="29">
+<td sourcefile="softeng/3_elm_regularis_kifejezesek/index.md" sourcestartlinenumber="29"><strong sourcefile="softeng/3_elm_regularis_kifejezesek/index.md" sourcestartlinenumber="29">+</strong></td>
+<td sourcefile="softeng/3_elm_regularis_kifejezesek/index.md" sourcestartlinenumber="29">A megelőző minta 1 vagy több alkalommal fordul elő: A  <strong sourcefile="softeng/3_elm_regularis_kifejezesek/index.md" sourcestartlinenumber="29">bo.+ka</strong>  kifejezésnek megfelel a  <strong sourcefile="softeng/3_elm_regularis_kifejezesek/index.md" sourcestartlinenumber="29">boróka</strong>, a  <strong sourcefile="softeng/3_elm_regularis_kifejezesek/index.md" sourcestartlinenumber="29">boka</strong>  viszont  <strong sourcefile="softeng/3_elm_regularis_kifejezesek/index.md" sourcestartlinenumber="29">nem</strong>.</td>
+</tr>
+<tr sourcefile="softeng/3_elm_regularis_kifejezesek/index.md" sourcestartlinenumber="30">
+<td sourcefile="softeng/3_elm_regularis_kifejezesek/index.md" sourcestartlinenumber="30">*</td>
+<td sourcefile="softeng/3_elm_regularis_kifejezesek/index.md" sourcestartlinenumber="30">A megelőző minta 0 vagy több alkalommal fordul elő: A  <strong sourcefile="softeng/3_elm_regularis_kifejezesek/index.md" sourcestartlinenumber="30">bo.*ka</strong>  kifejezésnek már megfelel a  <strong sourcefile="softeng/3_elm_regularis_kifejezesek/index.md" sourcestartlinenumber="30">boka</strong>  és  <strong sourcefile="softeng/3_elm_regularis_kifejezesek/index.md" sourcestartlinenumber="30">boróka</strong>  is.</td>
+</tr>
+<tr sourcefile="softeng/3_elm_regularis_kifejezesek/index.md" sourcestartlinenumber="31">
+<td sourcefile="softeng/3_elm_regularis_kifejezesek/index.md" sourcestartlinenumber="31"><strong sourcefile="softeng/3_elm_regularis_kifejezesek/index.md" sourcestartlinenumber="31">{m,n}</strong></td>
+<td sourcefile="softeng/3_elm_regularis_kifejezesek/index.md" sourcestartlinenumber="31">Segítségével megadható minimum és maximum vagy pontosan megadott számú előfordulás - {*3} pontosan 3 előfordulás; {3,} legalább 3 előfordulás; {2,5} legalább 2 legfeljebb 5 előfordulás; {0,10} legfeljebb 10 előfordulás. A <strong sourcefile="softeng/3_elm_regularis_kifejezesek/index.md" sourcestartlinenumber="31">d.{0,5}ány</strong> igaz minden esetben, ha <strong sourcefile="softeng/3_elm_regularis_kifejezesek/index.md" sourcestartlinenumber="31">legfeljebb</strong> 5 karaktert kell helyettesíteni, például a <strong sourcefile="softeng/3_elm_regularis_kifejezesek/index.md" sourcestartlinenumber="31">dolmány</strong> esetén. A <strong sourcefile="softeng/3_elm_regularis_kifejezesek/index.md" sourcestartlinenumber="31">diszkópatkány</strong> viszont már nem akad fenn rajta.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="horgonyok" sourcefile="softeng/3_elm_regularis_kifejezesek/index.md" sourcestartlinenumber="33">Horgonyok</h3>
+<p sourcefile="softeng/3_elm_regularis_kifejezesek/index.md" sourcestartlinenumber="35">Az előzőekben nem szemléltettem, de a felsorolt kifejezések akkor is igazak ha a vizsgált string belsejében találhatók meg. A b.ka igaz a bikaviadal mintára is.</p>
+<table sourcefile="softeng/3_elm_regularis_kifejezesek/index.md" sourcestartlinenumber="37">
+<thead>
+<tr sourcefile="softeng/3_elm_regularis_kifejezesek/index.md" sourcestartlinenumber="37">
+<th sourcefile="softeng/3_elm_regularis_kifejezesek/index.md" sourcestartlinenumber="37">jel</th>
+<th sourcefile="softeng/3_elm_regularis_kifejezesek/index.md" sourcestartlinenumber="37">leírás</th>
+</tr>
+</thead>
+<tbody>
+<tr sourcefile="softeng/3_elm_regularis_kifejezesek/index.md" sourcestartlinenumber="39">
+<td sourcefile="softeng/3_elm_regularis_kifejezesek/index.md" sourcestartlinenumber="39">^</td>
+<td sourcefile="softeng/3_elm_regularis_kifejezesek/index.md" sourcestartlinenumber="39">A minta eleje: Ezzel jelezhetjük, hogy a kifejezést a minta elején keressük. A  <strong sourcefile="softeng/3_elm_regularis_kifejezesek/index.md" sourcestartlinenumber="39">^béka</strong>  kifejezésnek megfelel a  <strong sourcefile="softeng/3_elm_regularis_kifejezesek/index.md" sourcestartlinenumber="39">békanyál</strong>  minta, a  <strong sourcefile="softeng/3_elm_regularis_kifejezesek/index.md" sourcestartlinenumber="39">kecskebéka</strong>  viszont  <strong sourcefile="softeng/3_elm_regularis_kifejezesek/index.md" sourcestartlinenumber="39">nem</strong>.</td>
+</tr>
+<tr sourcefile="softeng/3_elm_regularis_kifejezesek/index.md" sourcestartlinenumber="40">
+<td sourcefile="softeng/3_elm_regularis_kifejezesek/index.md" sourcestartlinenumber="40">$</td>
+<td sourcefile="softeng/3_elm_regularis_kifejezesek/index.md" sourcestartlinenumber="40">A minta vége: Az előző horgonyhoz hasonlóan a minta végét testesíti meg. A  <strong sourcefile="softeng/3_elm_regularis_kifejezesek/index.md" sourcestartlinenumber="40">ék$</strong>  mintának megfelel minden erre végződő szó (<strong sourcefile="softeng/3_elm_regularis_kifejezesek/index.md" sourcestartlinenumber="40">kerék</strong>,  <strong sourcefile="softeng/3_elm_regularis_kifejezesek/index.md" sourcestartlinenumber="40">pék</strong>).</td>
+</tr>
+</tbody>
+</table>
+<p sourcefile="softeng/3_elm_regularis_kifejezesek/index.md" sourcestartlinenumber="42">Természetesen kombinálhatók is. A  <strong sourcefile="softeng/3_elm_regularis_kifejezesek/index.md" sourcestartlinenumber="42">^p.k$</strong>  kifejezés csak akkor igaz, ha az input pontosan egy hárombetűs szó. A <strong sourcefile="softeng/3_elm_regularis_kifejezesek/index.md" sourcestartlinenumber="42">legpikánsabb</strong> nem megoldása, ahogy a <strong sourcefile="softeng/3_elm_regularis_kifejezesek/index.md" sourcestartlinenumber="42">pikáns</strong> sem. A  <strong sourcefile="softeng/3_elm_regularis_kifejezesek/index.md" sourcestartlinenumber="42">pék</strong>  vagy  <strong sourcefile="softeng/3_elm_regularis_kifejezesek/index.md" sourcestartlinenumber="42">pók</strong>  viszont jó.</p>
+<h3 id="logika" sourcefile="softeng/3_elm_regularis_kifejezesek/index.md" sourcestartlinenumber="44">Logika</h3>
+<table sourcefile="softeng/3_elm_regularis_kifejezesek/index.md" sourcestartlinenumber="46">
+<thead>
+<tr sourcefile="softeng/3_elm_regularis_kifejezesek/index.md" sourcestartlinenumber="46">
+<th sourcefile="softeng/3_elm_regularis_kifejezesek/index.md" sourcestartlinenumber="46">jel</th>
+<th sourcefile="softeng/3_elm_regularis_kifejezesek/index.md" sourcestartlinenumber="46">leírás</th>
+</tr>
+</thead>
+<tbody>
+<tr sourcefile="softeng/3_elm_regularis_kifejezesek/index.md" sourcestartlinenumber="48">
+<td sourcefile="softeng/3_elm_regularis_kifejezesek/index.md" sourcestartlinenumber="48"><strong sourcefile="softeng/3_elm_regularis_kifejezesek/index.md" sourcestartlinenumber="48">|</strong></td>
+<td sourcefile="softeng/3_elm_regularis_kifejezesek/index.md" sourcestartlinenumber="48">Vagylagos egyezés: Két lehetőség közé téve bármelyikkel való egyezés találatot produkál. Gyakorlati példához picit előre kell ugorjunk, a normál (kerek) zárójelekre, jelen felhasználás viszont nem kíván különösebb magyarázatot:  <strong sourcefile="softeng/3_elm_regularis_kifejezesek/index.md" sourcestartlinenumber="48">ka(lap|bát)</strong></td>
+</tr>
+<tr sourcefile="softeng/3_elm_regularis_kifejezesek/index.md" sourcestartlinenumber="49">
+<td sourcefile="softeng/3_elm_regularis_kifejezesek/index.md" sourcestartlinenumber="49"><strong sourcefile="softeng/3_elm_regularis_kifejezesek/index.md" sourcestartlinenumber="49">( )</strong></td>
+<td sourcefile="softeng/3_elm_regularis_kifejezesek/index.md" sourcestartlinenumber="49">Kifejezések csoportosítása: Nem csak a vagylagos egyezés az egyetlen lehetséges felhazsnálás. Egy csoportot létrehozva elláthatjuk paraméterrel például a  <strong sourcefile="softeng/3_elm_regularis_kifejezesek/index.md" sourcestartlinenumber="49">(hókusz)?pók</strong>  segítségével a  <strong sourcefile="softeng/3_elm_regularis_kifejezesek/index.md" sourcestartlinenumber="49">hókuszpók</strong>  és  <strong sourcefile="softeng/3_elm_regularis_kifejezesek/index.md" sourcestartlinenumber="49">pók</strong>  szavak is megtalálhatók. A csoportokra később hivatkozhatunk is, ez cserénél vagy stringek értelmezésénél lesz hasznos.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="mintaprogram-reguláris-kifejezések-kipróbálására" sourcefile="softeng/3_elm_regularis_kifejezesek/index.md" sourcestartlinenumber="51">Mintaprogram reguláris kifejezések kipróbálására</h2>
+<p sourcefile="softeng/3_elm_regularis_kifejezesek/index.md" sourcestartlinenumber="53"><img src="../../images/1615368531680.png" sourcefile="softeng/3_elm_regularis_kifejezesek/index.md" sourcestartlinenumber="53" alt="1615368531680.png"></p>
+<pre><code class="lang-csharp" sourcefile="softeng/3_elm_regularis_kifejezesek/index.md" sourcestartlinenumber="55">public partial class Form1 : Form
+{
+    public Form1()
+    {
+        InitializeComponent();
+    }
+
+    private void textBoxText_TextChanged(object sender, EventArgs e)
+    {
+        DoCheck();
+    }
+
+    private void textBoxRegEx_TextChanged(object sender, EventArgs e)
+    {
+        DoCheck();
+    }
+
+    void DoCheck() {
+        try
+        {
+            Regex regex = new Regex(textBoxRegEx.Text);
+            if (regex.IsMatch(textBoxText.Text))
+            {
+                textBoxText.BackColor = Color.LightGreen;
+            }
+            else
+            {
+                textBoxText.BackColor = Color.LightCoral;
+            }
+        }
+        catch (Exception)
+        {
+            textBoxRegEx.BackColor = Color.LightCoral;
+            return;
+        }
+        textBoxRegEx.BackColor = Color.LightGreen;          
+    }
+}
+</code></pre>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/altinum/szamtud_docfx/blob/main/softeng/3_elm_regularis_kifejezesek/index.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

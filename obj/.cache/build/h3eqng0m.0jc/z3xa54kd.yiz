@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Oszt&#225;lyok p&#233;ld&#225;nyos&#237;t&#225;sa </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Oszt&#225;lyok p&#233;ld&#225;nyos&#237;t&#225;sa ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="osztályok-példányosítása" sourcefile="softec/osztalyok/index.md" sourcestartlinenumber="1">Osztályok példányosítása</h1>
+
+<h2 id="videók" sourcefile="softec/osztalyok/index.md" sourcestartlinenumber="3">Videók</h2>
+<p sourcefile="softec/osztalyok/index.md" sourcestartlinenumber="5"><a href="S2_2a_Speech-2.m4v" sourcefile="softec/osztalyok/index.md" sourcestartlinenumber="5">2a Speech</a></p>
+<p sourcefile="softec/osztalyok/index.md" sourcestartlinenumber="7"><a href="S2_3a_Timer_Bemutatasa-3.m4v" sourcefile="softec/osztalyok/index.md" sourcestartlinenumber="7">3a Timer Bemutatása</a></p>
+<p sourcefile="softec/osztalyok/index.md" sourcestartlinenumber="9"><a href="S2_3b_Sajat_Osztaly-4.m4v" sourcefile="softec/osztalyok/index.md" sourcestartlinenumber="9">3b Sajat Osztály</a></p>
+<p sourcefile="softec/osztalyok/index.md" sourcestartlinenumber="11"><a href="S2_3c_Egyszeru_Orokles-5.m4v" sourcefile="softec/osztalyok/index.md" sourcestartlinenumber="11">3c Egyszerű örökles</a></p>
+<p sourcefile="softec/osztalyok/index.md" sourcestartlinenumber="13"><a href="S2_3d_Szarmaztatas-6.m4v" sourcefile="softec/osztalyok/index.md" sourcestartlinenumber="13">3d Származtatás</a></p>
+<p sourcefile="softec/osztalyok/index.md" sourcestartlinenumber="15"><a href="S2_3e_Konstruktor-7.m4v" sourcefile="softec/osztalyok/index.md" sourcestartlinenumber="15">3e Konstruktor</a></p>
+<p sourcefile="softec/osztalyok/index.md" sourcestartlinenumber="17"><a href="S1_BEV_P1_7a2.m4v" sourcefile="softec/osztalyok/index.md" sourcestartlinenumber="17">3f Projekt Felépítése</a></p>
+<p sourcefile="softec/osztalyok/index.md" sourcestartlinenumber="19"><a href="S2_3g_csfile.m4v" sourcefile="softec/osztalyok/index.md" sourcestartlinenumber="19">3g Cs Fájl</a></p>
+<h2 id="ellenőrző-kérések-a-videókhoz" sourcefile="softec/osztalyok/index.md" sourcestartlinenumber="21">Ellenőrző kérések a videókhoz</h2>
+<ol sourcefile="softec/osztalyok/index.md" sourcestartlinenumber="23">
+<li sourcefile="softec/osztalyok/index.md" sourcestartlinenumber="23">Mire való az űrlap konstruktorában az <code sourcefile="softec/osztalyok/index.md" sourcestartlinenumber="23">InitializeComponent()</code> metódushívás?</li>
+<li sourcefile="softec/osztalyok/index.md" sourcestartlinenumber="24">Írd le azt a néhány kódsort, mely <code sourcefile="softec/osztalyok/index.md" sourcestartlinenumber="24">Gomb</code> néven osztályt származtat a <code sourcefile="softec/osztalyok/index.md" sourcestartlinenumber="24">Button</code> osztályból!</li>
+<li sourcefile="softec/osztalyok/index.md" sourcestartlinenumber="25">Mikor fut le egy osztály konstruktora?</li>
+<li sourcefile="softec/osztalyok/index.md" sourcestartlinenumber="26">Hogyan készítesz konstruktort egy osztályhoz?</li>
+<li sourcefile="softec/osztalyok/index.md" sourcestartlinenumber="27">Írd le azt a néhány kódsort, mely létrehozza a <code sourcefile="softec/osztalyok/index.md" sourcestartlinenumber="27">Button</code> osztály egy példányát, majd elhelyezi az űrlapon!</li>
+<li sourcefile="softec/osztalyok/index.md" sourcestartlinenumber="28">Írd le azt a néhány kódsort, mely <code sourcefile="softec/osztalyok/index.md" sourcestartlinenumber="28">SajátGomb</code> néven származtat egy osztályt a <code sourcefile="softec/osztalyok/index.md" sourcestartlinenumber="28">Button</code> osztályból!</li>
+<li sourcefile="softec/osztalyok/index.md" sourcestartlinenumber="29">Írj példát <code sourcefile="softec/osztalyok/index.md" sourcestartlinenumber="29">for</code> ciklusra!</li>
+</ol>
+<p sourcefile="softec/osztalyok/index.md" sourcestartlinenumber="31">Ezeket érdemes fejből tudni.</p>
+<h2 id="heti-feladatok" sourcefile="softec/osztalyok/index.md" sourcestartlinenumber="33">Heti feladatok</h2>
+<p sourcefile="softec/osztalyok/index.md" sourcestartlinenumber="35">Ezen a héten az első négy feladatot kell felépíteni egy közös Solution-ben, és feltölteni Moodle-be. Az 1. ZH-n feladatok az 1-4 feladatokhoz hasonlóan <em sourcefile="softec/osztalyok/index.md" sourcestartlinenumber="35">step-by-step</em> formában lesznek megfogalmazva. Az 5. és 6. feladatokat érdemes gyakorlásképpen megoldani pénteken, hogy ha esetleg elakadtok, legyen oktatói segítség. Pénteken a 2. 3. és 4. sávban  Mohácsi László is folyamatosan várja hívásaitokat [<a href="https://teams.microsoft.com/l/call/0/0?users=laszlo.mohacsi@uni-corvinus.hu" sourcefile="softec/osztalyok/index.md" sourcestartlinenumber="35">Teams hívás link</a>]!</p>
+<p sourcefile="softec/osztalyok/index.md" sourcestartlinenumber="37">A jövő hétnél Moodle-ben van további információ ZH-val kapcsolatban.</p>
+<h3 id="1-feladat" sourcefile="softec/osztalyok/index.md" sourcestartlinenumber="40">1. feladat</h3>
+<div class="tabGroup" id="tabgroup_bHGHmlrG6S" sourcefile="softec/osztalyok/index.md" sourcestartlinenumber="41">
+<ul role="tablist">
+<li role="presentation">
+<a href="#tabpanel_bHGHmlrG6S_fel1" role="tab" aria-controls="tabpanel_bHGHmlrG6S_fel1" data-tab="fel1" tabindex="0" aria-selected="true" sourcefile="softec/osztalyok/index.md" sourcestartlinenumber="41">feladat</a>
+</li>
+<li role="presentation">
+<a href="#tabpanel_bHGHmlrG6S_meg1" role="tab" aria-controls="tabpanel_bHGHmlrG6S_meg1" data-tab="meg1" tabindex="-1" sourcefile="softec/osztalyok/index.md" sourcestartlinenumber="66">megoldás</a>
+</li>
+</ul>
+<section id="tabpanel_bHGHmlrG6S_fel1" role="tabpanel" data-tab="fel1">
+
+<p sourcefile="softec/osztalyok/index.md" sourcestartlinenumber="43">(+/-) Hozz létre KÓDBÓL <code sourcefile="softec/osztalyok/index.md" sourcestartlinenumber="43">gomb</code> néven egy példányt a <code sourcefile="softec/osztalyok/index.md" sourcestartlinenumber="43">Button</code> osztályból, és add hozzá az űrlap vezérlőinek listájához!</p>
+<p sourcefile="softec/osztalyok/index.md" sourcestartlinenumber="45">(+/-)  Állíts be méretet a gombnak!</p>
+<p sourcefile="softec/osztalyok/index.md" sourcestartlinenumber="47">(+/-)  Állítsd be a gomb <code sourcefile="softec/osztalyok/index.md" sourcestartlinenumber="47">Left</code> és <code sourcefile="softec/osztalyok/index.md" sourcestartlinenumber="47">Top</code> tulajdonságát úgy, hogy pont középre kerüljön az ablakban!</p>
+<p sourcefile="softec/osztalyok/index.md" sourcestartlinenumber="49">(+/-)  Rakj ki 10 gombot egymás mellé az űrlapra <code sourcefile="softec/osztalyok/index.md" sourcestartlinenumber="49">for</code> ciklusból!</p>
+<p sourcefile="softec/osztalyok/index.md" sourcestartlinenumber="51">(+/-)  Egészítsd ki az előző feladatot úgy, hogy 10x10 gomb legye kint!</p>
+<p sourcefile="softec/osztalyok/index.md" sourcestartlinenumber="53">(+/-)  Csinálj szorzótáblát; jelenítsd meg a gombokon a számokat.</p>
+<p sourcefile="softec/osztalyok/index.md" sourcestartlinenumber="55">(+/-)  Származtass <code sourcefile="softec/osztalyok/index.md" sourcestartlinenumber="55">VillogóGomb</code> néven osztályt a <code sourcefile="softec/osztalyok/index.md" sourcestartlinenumber="55">Button</code> osztályból! (A kódot írhatod a <code sourcefile="softec/osztalyok/index.md" sourcestartlinenumber="55">Form1</code> osztály alá.)</p>
+<p sourcefile="softec/osztalyok/index.md" sourcestartlinenumber="57">(+/-)  Hozz létre konstruktort a <code sourcefile="softec/osztalyok/index.md" sourcestartlinenumber="57">VillogóGomb</code> osztályban! (ctor - tab - tab)</p>
+<p sourcefile="softec/osztalyok/index.md" sourcestartlinenumber="59">(+/-)  A konstruktorban rendelj eseménykiszolgálót a <code sourcefile="softec/osztalyok/index.md" sourcestartlinenumber="59">MouseEnter</code> és a <code sourcefile="softec/osztalyok/index.md" sourcestartlinenumber="59">MouseLeave</code> eseményekhez!  (+=  - tab - tab)</p>
+<p sourcefile="softec/osztalyok/index.md" sourcestartlinenumber="61">(+/-)  Az eseménykiszolgálókban állítsd be a gomb színét.</p>
+<p sourcefile="softec/osztalyok/index.md" sourcestartlinenumber="63">(+/-)  Cseréld le a szorzótábla gombjait <code sourcefile="softec/osztalyok/index.md" sourcestartlinenumber="63">VillogóGomb</code>-ra!</p>
+<p sourcefile="softec/osztalyok/index.md" sourcestartlinenumber="65">(+/-)  :)</p>
+</section>
+<section id="tabpanel_bHGHmlrG6S_meg1" role="tabpanel" data-tab="meg1" aria-hidden="true" hidden="hidden">
+
+<p sourcefile="softec/osztalyok/index.md" sourcestartlinenumber="67"><a href="S1_BEV_P1%201-3.m4v" sourcefile="softec/osztalyok/index.md" sourcestartlinenumber="67">1-3. pontok megoldása</a>
+<a href="S1_BEV_P1%205-6.m4v" sourcefile="softec/osztalyok/index.md" sourcestartlinenumber="68">5-6. pontok megoldása</a>
+<a href="S1_BEV_P1%207a1.m4v" sourcefile="softec/osztalyok/index.md" sourcestartlinenumber="69">7. pont megoldása</a>
+<a href="S1_BEV_P1%207a2.m4v" sourcefile="softec/osztalyok/index.md" sourcestartlinenumber="70">7. pont megoldása, kiegészítés</a>
+<a href="S1_BEV_P1%208-12.m4v" sourcefile="softec/osztalyok/index.md" sourcestartlinenumber="71">8-12. pontok megoldása</a></p>
+<pre><code class="lang-csharp" sourcefile="softec/osztalyok/index.md" sourcestartlinenumber="73">class VillogoGomb : Button
+{
+    public VillogoGomb()
+    {
+        BackColor = Color.Fuchsia;
+        MouseEnter += VillogoGomb_MouseEnter;
+        MouseLeave += VillogoGomb_MouseLeave;
+    }
+
+    private void VillogoGomb_MouseLeave(object sender, EventArgs e)
+    {
+        BackColor = SystemColors.ButtonFace;
+    }
+
+    private void VillogoGomb_MouseEnter(object sender, EventArgs e)
+    {
+        BackColor = Color.Yellow;
+    }
+}
+</code></pre>
+</section>
+</div>
+<h3 id="2-feladat-színeződő-gomb---önálló-munka" sourcefile="softec/osztalyok/index.md" sourcestartlinenumber="96">2. feladat: színeződő gomb - önálló munka</h3>
+<p sourcefile="softec/osztalyok/index.md" sourcestartlinenumber="98">(+/-)  Származtass osztályt a <code sourcefile="softec/osztalyok/index.md" sourcestartlinenumber="98">Button</code> osztályból <code sourcefile="softec/osztalyok/index.md" sourcestartlinenumber="98">SzíneződőGomb</code> néven!</p>
+<p sourcefile="softec/osztalyok/index.md" sourcestartlinenumber="100">(+/-)  Konstruktorbán a <code sourcefile="softec/osztalyok/index.md" sourcestartlinenumber="100">SzíneződőGomb</code> méretezze át magát 20x20 pixelesre a <code sourcefile="softec/osztalyok/index.md" sourcestartlinenumber="100">Button</code> osztálytól örökölt <code sourcefile="softec/osztalyok/index.md" sourcestartlinenumber="100">Height</code> és <code sourcefile="softec/osztalyok/index.md" sourcestartlinenumber="100">Width</code> tulajdonságának beállításával!</p>
+<p sourcefile="softec/osztalyok/index.md" sourcestartlinenumber="102">(+/-)  A <code sourcefile="softec/osztalyok/index.md" sourcestartlinenumber="102">SzíneződőGomb</code> konstruktorában rendelj eseménykiszolgáló függvényt a kattintás (<code sourcefile="softec/osztalyok/index.md" sourcestartlinenumber="102">Click</code>) eseményhez!</p>
+<p sourcefile="softec/osztalyok/index.md" sourcestartlinenumber="104">(+/-) Kattintásra a <code sourcefile="softec/osztalyok/index.md" sourcestartlinenumber="104">SzíneződőGomb</code> színezze magát fukszia színűre.</p>
+<h3 id="3-feladat-számoló-gomb---videó-alapján" sourcefile="softec/osztalyok/index.md" sourcestartlinenumber="106">3. feladat: számoló gomb - videó alapján</h3>
+<div class="tabGroup" id="tabgroup_bHGHmlrG6S-1" sourcefile="softec/osztalyok/index.md" sourcestartlinenumber="107">
+<ul role="tablist">
+<li role="presentation">
+<a href="#tabpanel_bHGHmlrG6S-1_fel3" role="tab" aria-controls="tabpanel_bHGHmlrG6S-1_fel3" data-tab="fel3" tabindex="0" aria-selected="true" sourcefile="softec/osztalyok/index.md" sourcestartlinenumber="107">feladat</a>
+</li>
+<li role="presentation">
+<a href="#tabpanel_bHGHmlrG6S-1_meg3" role="tab" aria-controls="tabpanel_bHGHmlrG6S-1_meg3" data-tab="meg3" tabindex="-1" sourcefile="softec/osztalyok/index.md" sourcestartlinenumber="130">megoldás</a>
+</li>
+</ul>
+<section id="tabpanel_bHGHmlrG6S-1_fel3" role="tabpanel" data-tab="fel3">
+
+<p sourcefile="softec/osztalyok/index.md" sourcestartlinenumber="108">(+/-) Származtass osztályt a <code sourcefile="softec/osztalyok/index.md" sourcestartlinenumber="108">Button</code> osztályból <code sourcefile="softec/osztalyok/index.md" sourcestartlinenumber="108">SzámolóGomb</code> néven!</p>
+<p sourcefile="softec/osztalyok/index.md" sourcestartlinenumber="110">(+/-) A <code sourcefile="softec/osztalyok/index.md" sourcestartlinenumber="110">SzámolóGomb</code> osztályt bővítsd konstruktorral!</p>
+<p sourcefile="softec/osztalyok/index.md" sourcestartlinenumber="112">(+/-)  Konstruktorbán a <code sourcefile="softec/osztalyok/index.md" sourcestartlinenumber="112">SzámolóGomb</code> méretezze át magát 20x20 pixelesre a <code sourcefile="softec/osztalyok/index.md" sourcestartlinenumber="112">Button</code> osztálytól örökölt Height és Width tulajdonságának beállításával!</p>
+<p sourcefile="softec/osztalyok/index.md" sourcestartlinenumber="114">(+/-)  Bővítsd a <code sourcefile="softec/osztalyok/index.md" sourcestartlinenumber="114">SzámolóGomb</code> osztályt <code sourcefile="softec/osztalyok/index.md" sourcestartlinenumber="114">int</code> típusú „<code sourcefile="softec/osztalyok/index.md" sourcestartlinenumber="114">szám</code>” nevű mezővel!</p>
+<p sourcefile="softec/osztalyok/index.md" sourcestartlinenumber="116">(+/-)  A <code sourcefile="softec/osztalyok/index.md" sourcestartlinenumber="116">SzámolóGomb</code> konstruktorában rendelj eseménykiszolgáló függvényt a kattintás (<code sourcefile="softec/osztalyok/index.md" sourcestartlinenumber="116">Click</code>) eseményhez!</p>
+<p sourcefile="softec/osztalyok/index.md" sourcestartlinenumber="118">(+/-)  Az előbb létrehozott eseménykiszolgáló függvényben növeld egyel a <code sourcefile="softec/osztalyok/index.md" sourcestartlinenumber="118">szám</code> mező értékét, majd jelenítsd meg az új értéket a gomb felirataként (<code sourcefile="softec/osztalyok/index.md" sourcestartlinenumber="118">Text</code> tulajdonság beállítása.)</p>
+<p sourcefile="softec/osztalyok/index.md" sourcestartlinenumber="120">(+/-)  Végül helyezz el az űrlapon 10x10 számológombot.</p>
+<p sourcefile="softec/osztalyok/index.md" sourcestartlinenumber="122">(+/-)  Módosítsd a <code sourcefile="softec/osztalyok/index.md" sourcestartlinenumber="122">SzámolóGomb</code> osztályt úgy, hogy az 1-es értékről induljon a számolás!</p>
+<p sourcefile="softec/osztalyok/index.md" sourcestartlinenumber="124">(+/-)  Módosítsd a <code sourcefile="softec/osztalyok/index.md" sourcestartlinenumber="124">SzámolóGomb</code> osztályt úgy, hogy az 5-ös szám után az 1-es jelenjen meg!</p>
+<p sourcefile="softec/osztalyok/index.md" sourcestartlinenumber="126"><a href="S1_BEV_P3%201-7.m4v" sourcefile="softec/osztalyok/index.md" sourcestartlinenumber="126">1-7. pontok megoldása</a>
+<a href="S1_BEV_P3%207lifecycle.m4v" sourcefile="softec/osztalyok/index.md" sourcestartlinenumber="127">változók érvenyessége</a>
+<a href="S1_BEV_P3%208-9.m4v" sourcefile="softec/osztalyok/index.md" sourcestartlinenumber="128">8-9. pont megoldása</a></p>
+</section>
+<section id="tabpanel_bHGHmlrG6S-1_meg3" role="tabpanel" data-tab="meg3" aria-hidden="true" hidden="hidden">
+
+<p sourcefile="softec/osztalyok/index.md" sourcestartlinenumber="131">A <code sourcefile="softec/osztalyok/index.md" sourcestartlinenumber="131">SzámolóGomb</code> osztály:</p>
+<pre><code class="lang-csharp" sourcefile="softec/osztalyok/index.md" sourcestartlinenumber="133">class SzámolóGomb : Button
+{
+    int szám;
+
+    public SzámolóGomb()
+    {            
+        Width = 20;
+        Height = 20;
+        Click += SzámolóGomb_Click;
+        szám = 1;
+        Text = szám.ToString();
+    }
+
+    private void SzámolóGomb_Click(object sender, EventArgs e)
+    {
+        szám++;
+        if (szám==6)
+        {
+            szám = 1;
+        }
+        Text = szám.ToString();
+    }
+}
+</code></pre>
+<p sourcefile="softec/osztalyok/index.md" sourcestartlinenumber="159">A <code sourcefile="softec/osztalyok/index.md" sourcestartlinenumber="159">Form1</code> osztály <code sourcefile="softec/osztalyok/index.md" sourcestartlinenumber="159">Load</code> eseményéhez tartozó eseménykiszolgáló:</p>
+<pre><code class="lang-csharp" sourcefile="softec/osztalyok/index.md" sourcestartlinenumber="161">private void Form1_Load(object sender, EventArgs e)
+{
+    for (int s = 0; s &lt; 10; s++)
+    {
+        for (int o = 0; o &lt; 10; o++)
+        {
+            SzámolóGomb számolóGomb = new SzámolóGomb();
+            számolóGomb.Height = 20;
+            számolóGomb.Width = 20;
+            számolóGomb.Top = s * 20;
+            számolóGomb.Left = o * 20;
+
+            Controls.Add(számolóGomb);
+        }
+    }
+}
+</code></pre>
+</section>
+</div>
+<h3 id="4-feladat-gombok-kirakása-véletlenszerűen" sourcefile="softec/osztalyok/index.md" sourcestartlinenumber="180">4. feladat: gombok kirakása véletlenszerűen</h3>
+<div class="tabGroup" id="tabgroup_bHGHmlrG6S-2" sourcefile="softec/osztalyok/index.md" sourcestartlinenumber="181">
+<ul role="tablist">
+<li role="presentation">
+<a href="#tabpanel_bHGHmlrG6S-2_fel4" role="tab" aria-controls="tabpanel_bHGHmlrG6S-2_fel4" data-tab="fel4" tabindex="0" aria-selected="true" sourcefile="softec/osztalyok/index.md" sourcestartlinenumber="181">feladat</a>
+</li>
+<li role="presentation">
+<a href="#tabpanel_bHGHmlrG6S-2_meg4" role="tab" aria-controls="tabpanel_bHGHmlrG6S-2_meg4" data-tab="meg4" tabindex="-1" sourcefile="softec/osztalyok/index.md" sourcestartlinenumber="188">megoldás</a>
+</li>
+</ul>
+<section id="tabpanel_bHGHmlrG6S-2_fel4" role="tabpanel" data-tab="fel4">
+
+<p sourcefile="softec/osztalyok/index.md" sourcestartlinenumber="182">(+/-)  Szervezz <code sourcefile="softec/osztalyok/index.md" sourcestartlinenumber="182">for</code> ciklust 100 iterációs lépéssel. Minden lépésben rakj ki egy gombot a képernyőn véletlenszerű, de az ablakba eső pozícióba.</p>
+<p sourcefile="softec/osztalyok/index.md" sourcestartlinenumber="184">(+/-)  A méret is legyen véletlen.</p>
+<p sourcefile="softec/osztalyok/index.md" sourcestartlinenumber="186">(+/-)  A szín is.</p>
+</section>
+<section id="tabpanel_bHGHmlrG6S-2_meg4" role="tabpanel" data-tab="meg4" aria-hidden="true" hidden="hidden">
+
+<p sourcefile="softec/osztalyok/index.md" sourcestartlinenumber="189">Gombok véletlenszerű kirajzolása</p>
+<pre><code class="lang-csharp" sourcefile="softec/osztalyok/index.md" sourcestartlinenumber="191">// A véletlenszámokhoz szükség van egy generátorra (RNG = Random Number Generator)
+// AZ alábbi sor csak ezt hozza létre, tényleges véletlen számot még nem generál
+// A konstruktoron kívül érdemes példányosítani, mert ebből csak 1-et akarunk létrehozni 
+// (Bonyolultabb problémák esetén van értelme többet létrehozni, de ahhoz nagyon érteni kell a működésüket, egyszerűbb követni azt a szabályt, hogy ebből MINDIG csak 1 legyen)
+Random rng = new Random();
+
+public Form1()
+{
+    InitializeComponent();
+
+    // Ciklus, ami létrehozza majd a gombokat
+    for (int i = 0; i &lt; 1000; i++)
+    {
+        // A tényleges randomszám generáláshoz a random generátor Next metódusát kell használnunk
+        // Ennek két bemenő paramétere van, melyek megadják, hogy mely két érték között legyen a véletlenszám
+        // Vigyázat a felső korlát exkluzív, tehát ezt az értéket már nem veheti fel a véletlenszám
+        // Pl.: rng.Next(1, 10) esetén 1-től 9-ig bármelyik számot kaphatjuk eredményként, de a 10-et már nem
+        // Az első paraméter elhagyható, ekkor a minimum 0 lesz és csak a maximumot kell megadni
+        // Ha tört számra van szükség, akkor a NextDouble() metódus visszaad egy 0 és 1 közti tizedes törtet
+        // Ezt felszorozva bármilyen két érték közti racionális számot elő lehet állítani
+
+        // Az átláthatóság érdekében létrehozunk változókat a véletlen számok tárolására
+        // Ezeknek a változóknak létrehozása kihagyható, az értékadásuk egyszerűen beírható oda, ahol később hivatkozunk rájuk
+
+        // Aktuális gomb mérete
+        // Ebben a példában a gomb szélessége és magassága véletlen szerűen 20 és 50 között van               
+        int width = rng.Next(20, 51);
+        int height = rng.Next(20, 51);
+
+        // Aktuális gomb pozíciója
+        // A pozíciók minimuma nulla, ezért használható a Next azon változata, ahol csak a maximum értéket kell megadni
+        // A szélesség maximum értéke a Form szélessége, de ebből le kell vonni az aktuális gomb szélességét, különben előfordulhatna, hogy a gomb kilóg a Form-ról
+        // A ClientSize.Width a Form belső méretét adja míg a sima Width a külső keretet is számba veszi ezért pontatlanabb
+        int left = rng.Next(this.ClientSize.Width - width);
+        int top = rng.Next(this.ClientSize.Height - height);
+
+        // Aktuális gomb színe
+        // A szín meghatározásához az RGB kódra van szükségünk
+        // Ez három darab 0-255 közti számból áll
+        int r = rng.Next(256);
+        int g = rng.Next(256);
+        int b = rng.Next(256);
+
+        // A véletlen számok legenerálása után egyszerűen létrehozható a gomb
+        Button gomb = new Button();
+        gomb.Width = width;
+        gomb.Height = height;
+        gomb.Left = left;
+        gomb.Top = top;
+        gomb.BackColor = Color.FromArgb(r, g, b);
+        this.Controls.Add(gomb);
+    }
+}
+</code></pre>
+</section>
+</div>
+<h3 id="5-gyakorló-feladat-gombok-kirakása-háromszögben-ismétlés" sourcefile="softec/osztalyok/index.md" sourcestartlinenumber="248">5. Gyakorló feladat: gombok kirakása háromszögben (ismétlés)</h3>
+<p sourcefile="softec/osztalyok/index.md" sourcestartlinenumber="250">Rakd ki egy 10x10-es gombokból álló mátrix gombjait úgy, hogy csak a főátlóban lévők és a főátló alattiak jelenjenek meg!</p>
+<div class="TIP" sourcefile="softec/osztalyok/index.md" sourcestartlinenumber="251">
+<h5>Tip</h5>
+<p sourcefile="softec/osztalyok/index.md" sourcestartlinenumber="252">Itt azt érdemes vizsgálni egy feltételes elágazásban az belső ciklus törzsében, hogy az oszlop száma kisebb-e a sor számánál.</p>
+</div>
+<h3 id="6-gyakorló-feladat-gombok-kirakása-karácsonyfában-ismétlés" sourcefile="softec/osztalyok/index.md" sourcestartlinenumber="254">6. Gyakorló feladat: gombok kirakása &quot;karácsonyfában&quot; (ismétlés)</h3>
+<p sourcefile="softec/osztalyok/index.md" sourcestartlinenumber="256">(+/-) Helyezz el gombokat 10 sorban úgy, hogy minden sorban egyel több gomb legyen: az elsőbe egy, a másodikban kettő, a harmadikban három, stb. Tipp: a belső ciklus bennmaradási feltételében felhasználhatod a külső ciklus ciklusváltozójának értékét.</p>
+<p sourcefile="softec/osztalyok/index.md" sourcestartlinenumber="258">(+/-) Minden gomb legyen 20x20 pixel méretű.</p>
+<p sourcefile="softec/osztalyok/index.md" sourcestartlinenumber="260">(+/-) Told el a gombok <code sourcefile="softec/osztalyok/index.md" sourcestartlinenumber="260">Left</code> tulajdonságon keresztül beállított vízszintes koordinátáját úgy, hogy a gombokból álló háromszög bal széle az ablak középvonalába essen. Tipp: az ablak szélességét a <code sourcefile="softec/osztalyok/index.md" sourcestartlinenumber="260">Width</code> tulajdonságán keresztül tudod kiolvasni. Ha a gombok <code sourcefile="softec/osztalyok/index.md" sourcestartlinenumber="260">Left</code> tulajdonságának beállításánál <code sourcefile="softec/osztalyok/index.md" sourcestartlinenumber="260">Width/2</code> értéket hozzáadsz a korábban számított értékhez.</p>
+<p sourcefile="softec/osztalyok/index.md" sourcestartlinenumber="262">(+/-) Minden sorban egyre jobban húzd balra a koordinátákat úgy, hogy kijöjjön a karácsonyfa.</p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/altinum/szamtud_docfx/blob/main/softec/osztalyok/index.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

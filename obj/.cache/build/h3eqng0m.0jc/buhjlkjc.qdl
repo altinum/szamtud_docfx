@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Adatok valid&#225;l&#225;sa &#369;rlapon </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Adatok valid&#225;l&#225;sa &#369;rlapon ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="adatok-validálása-űrlapon" sourcefile="softeng/3_gyak_adatok_validalasa_urlapon/index.md" sourcestartlinenumber="1">Adatok validálása űrlapon</h1>
+
+<p sourcefile="softeng/3_gyak_adatok_validalasa_urlapon/index.md" sourcestartlinenumber="3"><strong sourcefile="softeng/3_gyak_adatok_validalasa_urlapon/index.md" sourcestartlinenumber="3">Ez a dokumentum a <code sourcefile="softeng/3_gyak_adatok_validalasa_urlapon/index.md" sourcestartlinenumber="3">Validation</code> és <code sourcefile="softeng/3_gyak_adatok_validalasa_urlapon/index.md" sourcestartlinenumber="3">Validated</code> események valamint az <code sourcefile="softeng/3_gyak_adatok_validalasa_urlapon/index.md" sourcestartlinenumber="3">ErrorProvider</code> magyarázataként szolgál, a megoldást feltölteni nem kell.</strong></p>
+<p sourcefile="softeng/3_gyak_adatok_validalasa_urlapon/index.md" sourcestartlinenumber="5">A cél egy olyan felugró űrlap készítése, melyen keresztül a felhasználó adatokat vihet fel, majd az <em sourcefile="softeng/3_gyak_adatok_validalasa_urlapon/index.md" sourcestartlinenumber="5">OK</em> illetve <em sourcefile="softeng/3_gyak_adatok_validalasa_urlapon/index.md" sourcestartlinenumber="5">Mégse</em> gomb megnyomásával dönt a sorsukról - azaz rögzíti az adatbázisban, vagy nem. Az űrlap csak akkor lehet bezárható az <em sourcefile="softeng/3_gyak_adatok_validalasa_urlapon/index.md" sourcestartlinenumber="5">OK</em> gombal, ha minden felvitt adat megfelel a formai követelményeknek.</p>
+<h2 id="a-ok-és-mégse-gombbal-bezárt-űrlapok-közti-különbségtétel" sourcefile="softeng/3_gyak_adatok_validalasa_urlapon/index.md" sourcestartlinenumber="7">A &quot;OK&quot; és &quot;Mégse&quot; gombbal bezárt űrlapok közti különbségtétel</h2>
+<h3 id="form1" sourcefile="softeng/3_gyak_adatok_validalasa_urlapon/index.md" sourcestartlinenumber="9">Form1</h3>
+<p sourcefile="softeng/3_gyak_adatok_validalasa_urlapon/index.md" sourcestartlinenumber="11">(+/-) Hozz létre egy <code sourcefile="softeng/3_gyak_adatok_validalasa_urlapon/index.md" sourcestartlinenumber="11">Form</code>-ot <code sourcefile="softeng/3_gyak_adatok_validalasa_urlapon/index.md" sourcestartlinenumber="11">newUserForm</code> néven!</p>
+<p sourcefile="softeng/3_gyak_adatok_validalasa_urlapon/index.md" sourcestartlinenumber="13">(+/-) A <code sourcefile="softeng/3_gyak_adatok_validalasa_urlapon/index.md" sourcestartlinenumber="13">Form1</code>-en helyezz el egy gombot, majd a gombhoz rendelj eseménykiszolgálót.</p>
+<p sourcefile="softeng/3_gyak_adatok_validalasa_urlapon/index.md" sourcestartlinenumber="15">(+/-) Az eseménykiszolgálóban nyisd meg a <code sourcefile="softeng/3_gyak_adatok_validalasa_urlapon/index.md" sourcestartlinenumber="15">NewUserForm</code>-ot és attól függően, hogy a felhasználó melyik gombbal zárta be a <code sourcefile="softeng/3_gyak_adatok_validalasa_urlapon/index.md" sourcestartlinenumber="15">NewUserForm</code>-ot, jeleníts meg eltérő szöveget. (A bezáró gombok később készülnek majd.)</p>
+<pre><code class="lang-csharp" sourcefile="softeng/3_gyak_adatok_validalasa_urlapon/index.md" sourcestartlinenumber="17">private void button1_Click(object sender, EventArgs e)
+{
+    NewUserForm newUserForm = new NewUserForm();
+    if (newUserForm.ShowDialog() == DialogResult.OK)
+    {
+        MessageBox.Show(&quot;OK-al zárult&quot;);
+    }
+    else
+    {
+        MessageBox.Show(&quot;Nem OK-al zárult&quot;);
+    }          
+}
+</code></pre>
+<h3 id="a-newuserform" sourcefile="softeng/3_gyak_adatok_validalasa_urlapon/index.md" sourcestartlinenumber="32">A <code sourcefile="softeng/3_gyak_adatok_validalasa_urlapon/index.md" sourcestartlinenumber="32">newUserForm</code></h3>
+<p sourcefile="softeng/3_gyak_adatok_validalasa_urlapon/index.md" sourcestartlinenumber="33">(+/-) Az űrlapon helyezd el a képnek megfelelő vezérlőket!</p>
+<p sourcefile="softeng/3_gyak_adatok_validalasa_urlapon/index.md" sourcestartlinenumber="35"><img src="../../images/input_form.png" sourcefile="softeng/3_gyak_adatok_validalasa_urlapon/index.md" sourcestartlinenumber="35" alt="input_form.png"></p>
+<p sourcefile="softeng/3_gyak_adatok_validalasa_urlapon/index.md" sourcestartlinenumber="37">(+/-) Húzz az űrlapra még egy <code sourcefile="softeng/3_gyak_adatok_validalasa_urlapon/index.md" sourcestartlinenumber="37">ErrorProvider</code> vezérlőt is - ez jelenít majd meg kis piros X-et a hibásan kitöltött vezérlők (jelenleg csak TextBox) mellett.</p>
+<p sourcefile="softeng/3_gyak_adatok_validalasa_urlapon/index.md" sourcestartlinenumber="39">(+/-) Az <em sourcefile="softeng/3_gyak_adatok_validalasa_urlapon/index.md" sourcestartlinenumber="39">Cancel</em> gomb tulajdonságai között állítsd be az alábbiakat a <em sourcefile="softeng/3_gyak_adatok_validalasa_urlapon/index.md" sourcestartlinenumber="39">Prpoerties</em> panelen: <code sourcefile="softeng/3_gyak_adatok_validalasa_urlapon/index.md" sourcestartlinenumber="39">DialogResult</code>:<code sourcefile="softeng/3_gyak_adatok_validalasa_urlapon/index.md" sourcestartlinenumber="39">Cancel</code>. Innentől fogva, ha a felhasználó ezt a gombot nyomja meg, az űrlap automatikusan bezáródik, és a <code sourcefile="softeng/3_gyak_adatok_validalasa_urlapon/index.md" sourcestartlinenumber="39">Form1</code>-en a <code sourcefile="softeng/3_gyak_adatok_validalasa_urlapon/index.md" sourcestartlinenumber="39">ShowDialog()</code> metódus <code sourcefile="softeng/3_gyak_adatok_validalasa_urlapon/index.md" sourcestartlinenumber="39">DialogResult.Cancel</code> értékkel tér vissza. Próbáld ki!</p>
+<p sourcefile="softeng/3_gyak_adatok_validalasa_urlapon/index.md" sourcestartlinenumber="41">(+/-) Az <em sourcefile="softeng/3_gyak_adatok_validalasa_urlapon/index.md" sourcestartlinenumber="41">OK</em> gomb esetén NE állítsd be ugyanezt a tulajdonságot a <code sourcefile="softeng/3_gyak_adatok_validalasa_urlapon/index.md" sourcestartlinenumber="41">Properties</code>-ben, mert problémákhoz fog vezetni. Helyette a gomb <em sourcefile="softeng/3_gyak_adatok_validalasa_urlapon/index.md" sourcestartlinenumber="41">Click</em> eseménykezelőjében kódból állítsd be az értéket. A beállítás pillanatában is be fog záródni a Form, és hasonló hatást érsz el, mint a Mégse gomb esetén.</p>
+<pre><code class="lang-csharp" sourcefile="softeng/3_gyak_adatok_validalasa_urlapon/index.md" sourcestartlinenumber="43">this.DialogResult = DialogResult.OK;
+</code></pre>
+<h2 id="űralapon-szereplő-adatok-ellenőrzése" sourcefile="softeng/3_gyak_adatok_validalasa_urlapon/index.md" sourcestartlinenumber="47">Űralapon szereplő adatok ellenőrzése</h2>
+<p sourcefile="softeng/3_gyak_adatok_validalasa_urlapon/index.md" sourcestartlinenumber="49">(+/-) Ezután készítsd el az eseménykiszolgálóat mindkét <code sourcefile="softeng/3_gyak_adatok_validalasa_urlapon/index.md" sourcestartlinenumber="49">TextBox</code> <code sourcefile="softeng/3_gyak_adatok_validalasa_urlapon/index.md" sourcestartlinenumber="49">Validating</code> és <code sourcefile="softeng/3_gyak_adatok_validalasa_urlapon/index.md" sourcestartlinenumber="49">Validated</code> eseményeihez, és ellenőrizd, hogy <em sourcefile="softeng/3_gyak_adatok_validalasa_urlapon/index.md" sourcestartlinenumber="49">OK</em> gomb <code sourcefile="softeng/3_gyak_adatok_validalasa_urlapon/index.md" sourcestartlinenumber="49">CausesValidation</code> tulajdonsága az az alapértelmezett értéknek megfelelően <code sourcefile="softeng/3_gyak_adatok_validalasa_urlapon/index.md" sourcestartlinenumber="49">True</code>-e.</p>
+<p sourcefile="softeng/3_gyak_adatok_validalasa_urlapon/index.md" sourcestartlinenumber="51">A <code sourcefile="softeng/3_gyak_adatok_validalasa_urlapon/index.md" sourcestartlinenumber="51">Validating</code> esemény akkor következik be, ha valamilyen oknál fogva az érintett mezőben szereplő adatok érvényességének ellenőrzése szükségessé válik. Ilyen ok, ha a felhasználó egy olyan vezérlőre kattintott, aminek a <code sourcefile="softeng/3_gyak_adatok_validalasa_urlapon/index.md" sourcestartlinenumber="51">CausesValidation</code> tulajdonsága <code sourcefile="softeng/3_gyak_adatok_validalasa_urlapon/index.md" sourcestartlinenumber="51">True</code>.  Ilyen jelen pillanatban az <em sourcefile="softeng/3_gyak_adatok_validalasa_urlapon/index.md" sourcestartlinenumber="51">OK</em> gomb, de mindkét szövegdoboz is, mert  <code sourcefile="softeng/3_gyak_adatok_validalasa_urlapon/index.md" sourcestartlinenumber="51">CausesValidation</code> tulajdonságuk alapértelmezetten <code sourcefile="softeng/3_gyak_adatok_validalasa_urlapon/index.md" sourcestartlinenumber="51">True</code>.</p>
+<p sourcefile="softeng/3_gyak_adatok_validalasa_urlapon/index.md" sourcestartlinenumber="53">A <em sourcefile="softeng/3_gyak_adatok_validalasa_urlapon/index.md" sourcestartlinenumber="53">Mégse</em> gomb <code sourcefile="softeng/3_gyak_adatok_validalasa_urlapon/index.md" sourcestartlinenumber="53">CausesValidation</code> tulajdonságát viszont állítsd <code sourcefile="softeng/3_gyak_adatok_validalasa_urlapon/index.md" sourcestartlinenumber="53">False</code>-ra, különben később, amikor megírjuk az ellenőrzésekhez tartozó kódot, nem fogod tudni bezárni az ablakot, ha valamelyik validáció nem sikerül. Ez pedig bosszantó lehet, mert sokszor pont azért akarjuk bezárni az ablakot, mert rájövünk, hogy nincs meg minden adatunk a helyes kitöltéshez.</p>
+<p sourcefile="softeng/3_gyak_adatok_validalasa_urlapon/index.md" sourcestartlinenumber="55">A <code sourcefile="softeng/3_gyak_adatok_validalasa_urlapon/index.md" sourcestartlinenumber="55">Validated</code>  esemény akkor következik be, ha az ellenőrzés sikerrel zárult. Az osztály vélhetően most így néz ki:</p>
+<pre><code class="lang-csharp" sourcefile="softeng/3_gyak_adatok_validalasa_urlapon/index.md" sourcestartlinenumber="56">public Form2()
+    {
+        InitializeComponent();
+    }
+
+    private void nameTextBox_Validating(object sender, CancelEventArgs e)
+    {
+    }
+
+    private void nameTextBox_Validated(object sender, EventArgs e)
+    {
+    }
+
+    private void neptunTextBox_Validating(object sender, CancelEventArgs e)
+    {
+    }
+
+    private void neptunTextBox_Validated(object sender, EventArgs e)
+    {
+    }
+}
+</code></pre>
+<p sourcefile="softeng/3_gyak_adatok_validalasa_urlapon/index.md" sourcestartlinenumber="80">(+/-) Próbáld ki, ha valamelyik <code sourcefile="softeng/3_gyak_adatok_validalasa_urlapon/index.md" sourcestartlinenumber="80">Validatig</code> eseményhez tartozó kiszolgálót az alábbiak szerint módosítod, akkor a TextBox-ba való gépelést követően nem elhagyni a TextBox-ot egészen addig míg helyes értéket nem ír be a felhasználó:</p>
+<pre><code class="lang-csharp" sourcefile="softeng/3_gyak_adatok_validalasa_urlapon/index.md" sourcestartlinenumber="82">	private void nameTextBox_Validating(object sender, CancelEventArgs e)
+	{
+	        e.Cancel = true;
+	}
+</code></pre>
+<p sourcefile="softeng/3_gyak_adatok_validalasa_urlapon/index.md" sourcestartlinenumber="89">(+/-) Az ellenőrzés megvalósításához készíts egy-egy függvényt a kétféle érték ellenőrzéséhez:</p>
+<pre><code class="lang-csharp" sourcefile="softeng/3_gyak_adatok_validalasa_urlapon/index.md" sourcestartlinenumber="91">    private bool CheckName(string név)
+    {
+        return !string.IsNullOrEmpty(név);
+    }
+
+    private bool CheckNeptun(string neptun)
+    {
+        Regex r = new Regex(&quot;^[A-Z0-9]{6}$&quot;);
+        return r.IsMatch(neptun);
+    }
+</code></pre>
+<p sourcefile="softeng/3_gyak_adatok_validalasa_urlapon/index.md" sourcestartlinenumber="103">(+/-) Majd a <code sourcefile="softeng/3_gyak_adatok_validalasa_urlapon/index.md" sourcestartlinenumber="103">Validating</code> eseményekhez tartozó kiszolgálókban ellenőrizd az értékeket:</p>
+<pre><code class="lang-csharp" sourcefile="softeng/3_gyak_adatok_validalasa_urlapon/index.md" sourcestartlinenumber="105">public partial class NewUserForm : Form
+{
+    public NewUserForm()
+    {
+        InitializeComponent();
+    }
+
+    private bool CheckName(string név)
+    {
+        return !string.IsNullOrEmpty(név);
+    }
+
+    private bool CheckNeptun(string neptun)
+    {
+        Regex r = new Regex(&quot;^[A-Z0-9]{6}$&quot;);
+        return r.IsMatch(neptun);
+    }
+    private void nameTextBox_Validating(object sender, CancelEventArgs e)
+    {
+        if (!CheckName(nameTextBox.Text))
+        {
+            e.Cancel = true;
+            errorProvider1.SetError(nameTextBox, &quot;A név nem lehet üres&quot;);
+        }
+    }
+
+    private void nameTextBox_Validated(object sender, EventArgs e)
+    {
+        errorProvider1.SetError(nameTextBox, &quot;&quot;);
+    }
+
+
+    private void neptunTextBox_Validating(object sender, CancelEventArgs e)
+    {
+        //Ha kell, megnézzük, érvényes-e a tartalom
+        if (!CheckNeptun(neptunTextBox.Text))
+        {
+            e.Cancel = true;
+            errorProvider1.SetError(neptunTextBox, &quot;Érvénytelen Neptun kód&quot;);
+        }
+    }
+
+    private void neptunTextBox_Validated(object sender, EventArgs e)
+    {
+        errorProvider1.SetError(neptunTextBox, &quot;&quot;);
+    }
+
+    private void button1_Click(object sender, EventArgs e)
+    {
+        if (this.ValidateChildren())
+        {
+            this.DialogResult = DialogResult.OK;
+            this.Close();
+        }
+    }
+}
+</code></pre>
+<p sourcefile="softeng/3_gyak_adatok_validalasa_urlapon/index.md" sourcestartlinenumber="163">A fenti megoldással még van egy kis probléma. Ha ugyanis egyáltalán nem írunk semmi a cellákba, akkor nem indul el a validálási folyamat, így semmi nem akadályozza meg a belőlük való kikattintást. Gond nélkül rá tudunk nyomni az OK gombra, és be tudjuk zárni az ablakot.</p>
+<p sourcefile="softeng/3_gyak_adatok_validalasa_urlapon/index.md" sourcestartlinenumber="165">Ezért szükség van egy végső ellenőrző lépésre, amivel a bezárás előtt megbizonyosodhatunk arról, hogy valóban minden beviteli mezőben helyes érték szerepel. Ehhez a <code sourcefile="softeng/3_gyak_adatok_validalasa_urlapon/index.md" sourcestartlinenumber="165">Form</code> összes vezérlőjét egyszerre kell validálnunk. A <code sourcefile="softeng/3_gyak_adatok_validalasa_urlapon/index.md" sourcestartlinenumber="165">this.ValidateChildren()</code> függvény ezt teszi meg helyettünk, és csak akkor tér vissza igaz értékkel, ha minden validálás rendben megtörtént (nem volt <code sourcefile="softeng/3_gyak_adatok_validalasa_urlapon/index.md" sourcestartlinenumber="165">e.Cancel = true</code>).</p>
+<p sourcefile="softeng/3_gyak_adatok_validalasa_urlapon/index.md" sourcestartlinenumber="167">(+/-) Írd meg az ennek megfelelő feltételt az OK gomb Click eseménykezelőjébe.</p>
+<p sourcefile="softeng/3_gyak_adatok_validalasa_urlapon/index.md" sourcestartlinenumber="169">Érdemes továbbá átállítani az ErrorProvider <code sourcefile="softeng/3_gyak_adatok_validalasa_urlapon/index.md" sourcestartlinenumber="169">BlinkStyle</code> tulajdonságát <code sourcefile="softeng/3_gyak_adatok_validalasa_urlapon/index.md" sourcestartlinenumber="169">NeverBlink</code>-re. A vezérlők ugyanis nem teljesen egyező pillanatban kezdenek villogni, és emiatt ilyenkor hibás működés hatását keltik (úgy tűnik, mintha felváltva villognának).</p>
+<pre><code class="lang-csharp" sourcefile="softeng/3_gyak_adatok_validalasa_urlapon/index.md" sourcestartlinenumber="171">private void button1_Click(object sender, EventArgs e)    
+{
+    // Bezárás előtt minden vezérlőt újra validálunk
+    if (this.ValidateChildren())
+        this.DialogResult = DialogResult.OK;
+}
+</code></pre>
+<h2 id="tooltip" sourcefile="softeng/3_gyak_adatok_validalasa_urlapon/index.md" sourcestartlinenumber="180">ToolTip</h2>
+<p sourcefile="softeng/3_gyak_adatok_validalasa_urlapon/index.md" sourcestartlinenumber="182">A <code sourcefile="softeng/3_gyak_adatok_validalasa_urlapon/index.md" sourcestartlinenumber="182">ToolTip</code> segítségével a felhasználót segítő üzenetet lehet rendelni a vezérlőkhöz.</p>
+<p sourcefile="softeng/3_gyak_adatok_validalasa_urlapon/index.md" sourcestartlinenumber="184"><img src="../../images/1615051267868.png" sourcefile="softeng/3_gyak_adatok_validalasa_urlapon/index.md" sourcestartlinenumber="184" alt="1615051267868.png"></p>
+<p sourcefile="softeng/3_gyak_adatok_validalasa_urlapon/index.md" sourcestartlinenumber="186">(+/-) Az űrlapon egyetlen <code sourcefile="softeng/3_gyak_adatok_validalasa_urlapon/index.md" sourcestartlinenumber="186">ToolTip</code> típusú objektumot érdemes elhelyezni, ez fogja kezelni az összes vezérlőhöz tartozó szöveget. A <em sourcefile="softeng/3_gyak_adatok_validalasa_urlapon/index.md" sourcestartlinenumber="186">Properties</em> panelben a megjelenés késleltetését, időtartamát, méretét, stb. egységesen a <code sourcefile="softeng/3_gyak_adatok_validalasa_urlapon/index.md" sourcestartlinenumber="186">toolTip1</code> tulajdonsági között lehet beállítani.</p>
+<p sourcefile="softeng/3_gyak_adatok_validalasa_urlapon/index.md" sourcestartlinenumber="188"><img src="../../images/1615051616183.png" sourcefile="softeng/3_gyak_adatok_validalasa_urlapon/index.md" sourcestartlinenumber="188" alt="1615051616183.png"></p>
+<p sourcefile="softeng/3_gyak_adatok_validalasa_urlapon/index.md" sourcestartlinenumber="190">(+/-) Ha van <code sourcefile="softeng/3_gyak_adatok_validalasa_urlapon/index.md" sourcestartlinenumber="190">ToolTip</code> az űrlapon, minden vezérlőhöz be lehet állítani a szöveget:</p>
+<p sourcefile="softeng/3_gyak_adatok_validalasa_urlapon/index.md" sourcestartlinenumber="192"><img src="../../images/1615051851465.png" sourcefile="softeng/3_gyak_adatok_validalasa_urlapon/index.md" sourcestartlinenumber="192" alt="1615051851465.png"></p>
+<p sourcefile="softeng/3_gyak_adatok_validalasa_urlapon/index.md" sourcestartlinenumber="194">Érdemes a Label-ekre is beállítani a ToolTip-eket, mert a TextBox-ok esetén elég nehéz egérrel eltaláni azt a pontot, amikor feljönnek.</p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/altinum/szamtud_docfx/blob/main/softeng/3_gyak_adatok_validalasa_urlapon/index.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

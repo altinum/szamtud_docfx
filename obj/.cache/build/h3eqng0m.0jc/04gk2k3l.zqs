@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Honn&#233;t lesz SQL szerverem? </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Honn&#233;t lesz SQL szerverem? ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../../../favicon.ico">
+    <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../styles/docfx.css">
+    <link rel="stylesheet" href="../../../styles/main.css">
+    <meta property="docfx:navrel" content="../../../toc.html">
+    <meta property="docfx:tocrel" content="../../toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../../index.html">
+                <img id="logo" class="svg" src="../../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="honnét-lesz-sql-szerverem" sourcefile="softeng/knowledge_base/honnet_lesz_sql_szerverem/index.md" sourcestartlinenumber="1">Honnét lesz SQL szerverem?</h1>
+
+<p sourcefile="softeng/knowledge_base/honnet_lesz_sql_szerverem/index.md" sourcestartlinenumber="2">Mindenkiben felmerülhet a kérdés, hogy az egyetem elvégzése után hogyan építhető fel az a szoftveres környezet, amelyben megtanult technológiák a gyakorlatban, üzleti környezetben is használhatók. Ez a dokumentum ebben nyújt segítséget.</p>
+<p sourcefile="softeng/knowledge_base/honnet_lesz_sql_szerverem/index.md" sourcestartlinenumber="4">A félév tananyagához kapcsolódó MS-SQL szerver üzemeltetésére az alábbi lehetőségek kínálkoznak:</p>
+<ol sourcefile="softeng/knowledge_base/honnet_lesz_sql_szerverem/index.md" sourcestartlinenumber="6">
+<li sourcefile="softeng/knowledge_base/honnet_lesz_sql_szerverem/index.md" sourcestartlinenumber="6">Vállalati / egyetemi MS-SQL szerver</li>
+<li sourcefile="softeng/knowledge_base/honnet_lesz_sql_szerverem/index.md" sourcestartlinenumber="7">Azure infrastruktúrában futó SQL szerver</li>
+<li sourcefile="softeng/knowledge_base/honnet_lesz_sql_szerverem/index.md" sourcestartlinenumber="8">MS-SQL Express vagy Developer Edition</li>
+<li sourcefile="softeng/knowledge_base/honnet_lesz_sql_szerverem/index.md" sourcestartlinenumber="9">MySQL</li>
+<li sourcefile="softeng/knowledge_base/honnet_lesz_sql_szerverem/index.md" sourcestartlinenumber="10">Lokális adatbázis-fájl használata</li>
+</ol>
+<h2 id="vállalati--egyetemi-ms-sql-szerver" sourcefile="softeng/knowledge_base/honnet_lesz_sql_szerverem/index.md" sourcestartlinenumber="12">Vállalati / egyetemi MS-SQL szerver</h2>
+<p sourcefile="softeng/knowledge_base/honnet_lesz_sql_szerverem/index.md" sourcestartlinenumber="14">Az <a href="https://www.microsoft.com/en-us/sql-server/sql-server-downloads" sourcefile="softeng/knowledge_base/honnet_lesz_sql_szerverem/index.md" sourcestartlinenumber="14">SQL Server Downloads</a> oldalról letölthető az <strong sourcefile="softeng/knowledge_base/honnet_lesz_sql_szerverem/index.md" sourcestartlinenumber="14">SQL Server 2019 on-premises</strong> változat, melyben az <em sourcefile="softeng/knowledge_base/honnet_lesz_sql_szerverem/index.md" sourcestartlinenumber="14">on-premises</em> kifejezés azt jeleni, hogy vállalat a saját infrastruktúrájában üzemelteti a szervert. A legtöbb vállalt IT Policy-jába nem fér bele, hogy az üzleti szempontból kritikus adatok a vállalat IT infrastruktúráján kívül kerüljenek tárolásra. A kevésbé kritikus szolgáltatások mögött lévő adatbázisok viszont egyre gyakrabban költöznek a felhőbe.</p>
+<p sourcefile="softeng/knowledge_base/honnet_lesz_sql_szerverem/index.md" sourcestartlinenumber="16">Az MS-SQL szerver telepítéséhez a Windows szerver változatára van szükség, melynek licencköltségeivel szintén számolni kell.</p>
+<h2 id="azure-infrastruktúrában-futó-sql-szerver" sourcefile="softeng/knowledge_base/honnet_lesz_sql_szerverem/index.md" sourcestartlinenumber="18">Azure infrastruktúrában futó SQL szerver</h2>
+<p sourcefile="softeng/knowledge_base/honnet_lesz_sql_szerverem/index.md" sourcestartlinenumber="20">A másik lehetőség MS-SQL szerver és adatbázis Azure infrastruktúrában történő bérlése.</p>
+<p sourcefile="softeng/knowledge_base/honnet_lesz_sql_szerverem/index.md" sourcestartlinenumber="22">Az <strong sourcefile="softeng/knowledge_base/honnet_lesz_sql_szerverem/index.md" sourcestartlinenumber="22">Azure for students</strong> előfizetés keretében minden hallgató kap egy 100 dolláros keretet, melyet Azure szolgáltatások egy korlátozott körére költhet el. SQL adatbázisból illetve MS-SQL szerverből nem áll rendelkezésre ingyenes, korlátozott kapacitású változat. Gyakorláshoz és tanuláshoz érdemes a legkisebb elérhető szerver kapacitást választani, és ha nincs szükség a szerverre, az <a href="https://portal.azure.com" sourcefile="softeng/knowledge_base/honnet_lesz_sql_szerverem/index.md" sourcestartlinenumber="22">Azure portál</a>on keresztül leállítani. A szerver használatért idő alapon kell fizetni.</p>
+<p sourcefile="softeng/knowledge_base/honnet_lesz_sql_szerverem/index.md" sourcestartlinenumber="24">Sajnos az <em sourcefile="softeng/knowledge_base/honnet_lesz_sql_szerverem/index.md" sourcestartlinenumber="24">Azure for students</em> előfizetés csak egyetemi e-mail címről aktiválható. A szabályozás megváltozott, régebben csak egyszer, egy éves időtartamra járt a keret, a tanulmányok teljes ideje alatt. Ha valaki valamilyen okból nem tud  <em sourcefile="softeng/knowledge_base/honnet_lesz_sql_szerverem/index.md" sourcestartlinenumber="24">Azure for students</em> előfizetést regisztrálni, vagy nem diák, két lehetősége marad:</p>
+<ul sourcefile="softeng/knowledge_base/honnet_lesz_sql_szerverem/index.md" sourcestartlinenumber="25">
+<li sourcefile="softeng/knowledge_base/honnet_lesz_sql_szerverem/index.md" sourcestartlinenumber="25">Regisztrálahat újabb 12 hónapra egy <strong sourcefile="softeng/knowledge_base/honnet_lesz_sql_szerverem/index.md" sourcestartlinenumber="25">Azure free account</strong>ot <a href="https://azure.microsoft.com/en-us/free/sql-database/search/?&amp;ef_id=EAIaIQobChMImN_Wha3H5wIVDIuyCh1zvAwsEAAYASAAEgImifD_BwE:G:s&amp;OCID=AID2000597_SEM_QLQnZjIQ&amp;MarinID=QLQnZjIQ_364688946710_azure%20database%20pricing_e_c__75854089146_kwd-326879019023&amp;lnkd=Google_Azure_Brand&amp;dclid=CM_JhIitx-cCFYu_dwodnyoAcw" sourcefile="softeng/knowledge_base/honnet_lesz_sql_szerverem/index.md" sourcestartlinenumber="25">itt</a>).</li>
+<li sourcefile="softeng/knowledge_base/honnet_lesz_sql_szerverem/index.md" sourcestartlinenumber="26">Bárki regisztrálhat <strong sourcefile="softeng/knowledge_base/honnet_lesz_sql_szerverem/index.md" sourcestartlinenumber="26">Pay-as-you-go</strong> előfizetést. Ebben az esetben már meg kell adni bankkártya számot, melyet a Microsoft az érvényesség ellenőrzése végett megterhel néhány dollárral, melyet később visszautal. Itt már nagyon kell vigyázni, mert az igénybe vett szolgáltatásokat könyörtelenül kiszámlázzák. Viszont kis odafigyeléssel a költségek alacsonyan tarthatók.</li>
+</ul>
+<p sourcefile="softeng/knowledge_base/honnet_lesz_sql_szerverem/index.md" sourcestartlinenumber="28">Érdemes vetni egy pillantást az <a href="https://azure.microsoft.com/en-us/pricing/calculator/" sourcefile="softeng/knowledge_base/honnet_lesz_sql_szerverem/index.md" sourcestartlinenumber="28">Azure Pricing Calculator</a> oldalra. Ha kiválasztjuk az <em sourcefile="softeng/knowledge_base/honnet_lesz_sql_szerverem/index.md" sourcestartlinenumber="28">Azure SQL Database</em> opciót, alapértelmezett beállításokkal az oldal írásának pillanatában kijött egy <strong sourcefile="softeng/knowledge_base/honnet_lesz_sql_szerverem/index.md" sourcestartlinenumber="28">368 USD</strong>-s havi költség. Ha a <em sourcefile="softeng/knowledge_base/honnet_lesz_sql_szerverem/index.md" sourcestartlinenumber="28">COMPUTE TIER</em> opciót <em sourcefile="softeng/knowledge_base/honnet_lesz_sql_szerverem/index.md" sourcestartlinenumber="28">Provisoned</em>-ről <em sourcefile="softeng/knowledge_base/honnet_lesz_sql_szerverem/index.md" sourcestartlinenumber="28">Serverless</em>-re állítjuk, a költség visszazuhan <strong sourcefile="softeng/knowledge_base/honnet_lesz_sql_szerverem/index.md" sourcestartlinenumber="28">4,2 USD</strong>-re! A különbség annyi, hogy nem foglaljuk le a felajánlott 2 CPU magot magunknak teljesen, egész hónapra.</p>
+<h2 id="ms-sql-express--develper-edition" sourcefile="softeng/knowledge_base/honnet_lesz_sql_szerverem/index.md" sourcestartlinenumber="31">MS-SQL Express / Develper Edition</h2>
+<p sourcefile="softeng/knowledge_base/honnet_lesz_sql_szerverem/index.md" sourcestartlinenumber="33">A Microsoft SQL Servernek van egy <strong sourcefile="softeng/knowledge_base/honnet_lesz_sql_szerverem/index.md" sourcestartlinenumber="33">Express</strong> kiadásra is, mely többek között a kezelhető adatbázis méretében és az egyidejűleg csatlakozott felhasználók számában is korlátozott. A korlátozás azért elég megengedő, egy kisvállalkozás könyvelése és raktárkészlet nyilvántartása gond nélkül kezelhető az expressz változattal is. változat telepítéséhez nincsen szükség szerver Windowsra, egy sima Professional változat is megteszi.</p>
+<p sourcefile="softeng/knowledge_base/honnet_lesz_sql_szerverem/index.md" sourcestartlinenumber="35">A Microsoft SQL Server <strong sourcefile="softeng/knowledge_base/honnet_lesz_sql_szerverem/index.md" sourcestartlinenumber="35">Developer</strong> kiadása a teljes változatéval azonos funkcionalitással bír, viszont a licenc feltételei szerint csak fejlesztésre használható, éles környezetben nem.</p>
+<p sourcefile="softeng/knowledge_base/honnet_lesz_sql_szerverem/index.md" sourcestartlinenumber="37"><a href="https://www.microsoft.com/en-us/sql-server/sql-server-downloads" sourcefile="softeng/knowledge_base/honnet_lesz_sql_szerverem/index.md" sourcestartlinenumber="37">SQL Server Downloads</a></p>
+<h2 id="mysql-oracle-stb" sourcefile="softeng/knowledge_base/honnet_lesz_sql_szerverem/index.md" sourcestartlinenumber="39">MySQL, Oracle, stb.</h2>
+<p sourcefile="softeng/knowledge_base/honnet_lesz_sql_szerverem/index.md" sourcestartlinenumber="41">Az Entity Framework Core dokunetációjának részét képező [Database Providers](<a href="https://docs.microsoft.com/en-us/ef/core/" sourcefile="softeng/knowledge_base/honnet_lesz_sql_szerverem/index.md" sourcestartlinenumber="41">https://docs.microsoft.com/en-us/ef/core/</a> providers/?tabs=dotnet-core-cli) oldal  felsorolja azokat az adatbázisszervereket,  melyekhez létezik kapcsolódást biztosító Microsoft vagy third party <em sourcefile="softeng/knowledge_base/honnet_lesz_sql_szerverem/index.md" sourcestartlinenumber="41">provider</em>.  A listában szerepel a MySQL, az Oracle és a PostgreSQL is.  Így ezek is használhatók a fejlesztés során.</p>
+<h2 id="lokális-adatbázis-fájl-használata" sourcefile="softeng/knowledge_base/honnet_lesz_sql_szerverem/index.md" sourcestartlinenumber="43">Lokális adatbázis-fájl használata</h2>
+<p sourcefile="softeng/knowledge_base/honnet_lesz_sql_szerverem/index.md" sourcestartlinenumber="45">Egy adatbázis-szerver üzemeltetése erőforrás-igényes feladat.  A C# projekten belül létrehozható lokális adatbázis egyértelmű hátránya, hogy nem igazán tudja egyszerre több felhasználó elérni az adatbázisban tárolt adatokat. Viszont nincs szükség internet elérésre és/vagy szerver üzemeltetésére a használatához. Lokális adatbázis használata <em sourcefile="softeng/knowledge_base/honnet_lesz_sql_szerverem/index.md" sourcestartlinenumber="45">produciton</em>, azaz éles környezetben nem javasolt, fejlesztéshez és prototípus készítéshez viszont kiváló eszköz.</p>
+<p sourcefile="softeng/knowledge_base/honnet_lesz_sql_szerverem/index.md" sourcestartlinenumber="47">A lokális adatbázis létrehozásának lépései külön dokumentumban mutatjuk be! A lényeg az, hogy egy <code sourcefile="softeng/knowledge_base/honnet_lesz_sql_szerverem/index.md" sourcestartlinenumber="47">Service based database</code> objektum adható a projekthez  a <em sourcefile="softeng/knowledge_base/honnet_lesz_sql_szerverem/index.md" sourcestartlinenumber="47">Solution Explorer</em>-ben jobb egérgombra megjelenő menüben az <em sourcefile="softeng/knowledge_base/honnet_lesz_sql_szerverem/index.md" sourcestartlinenumber="47">Add new item</em> menüpontra kattintva. Ezután létrejön egy .mdf kiterjesztésű állomány, adatbázis állomány, mely a projektből használható.</p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/altinum/szamtud_docfx/blob/main/softeng/knowledge_base/honnet_lesz_sql_szerverem/index.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../styles/main.js"></script>
+  </body>
+</html>

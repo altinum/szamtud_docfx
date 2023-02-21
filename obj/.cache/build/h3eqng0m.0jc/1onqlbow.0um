@@ -1,0 +1,97 @@
+﻿
+<div id="sidetoggle">
+  <div>
+    <div class="sidefilter">
+      <form class="toc-filter">
+        <span class="glyphicon glyphicon-filter filter-icon"></span>
+        <span class="glyphicon glyphicon-remove clear-icon" id="toc_filter_clear"></span>
+        <input type="text" id="toc_filter_input" placeholder="Enter here to filter..." onkeypress="if(event.keyCode==13) {return false;}">
+      </form>
+    </div>
+    <div class="sidetoc">
+      <div class="toc" id="toc">
+          
+          <ul class="nav level1">
+                <li>
+                    <a href="tantargyi_informaciok/index.html" name="" title="T&#225;j&#233;koztat&#243;">T&#225;j&#233;koztat&#243;</a>
+                </li>
+                <li>
+                    <span class="expand-stub"></span>
+                    <a>1. hét</a>
+                    
+                    <ul class="nav level2">
+                          <li>
+                              <a href="1_gyak_in_memory_adatbazis/index.html" name="" title="Feladat: In-memory adatb&#225;zis">Feladat: In-memory adatb&#225;zis</a>
+                          </li>
+                    </ul>
+                </li>
+                <li>
+                    <span class="expand-stub"></span>
+                    <a>2. hét</a>
+                    
+                    <ul class="nav level2">
+                          <li>
+                              <a href="2a_gyak_tavoli_adatbazis_visual_studioban/index.html" name="" title="2a.gyak: T&#225;voli adatb&#225;zis visual studioban">2a.gyak: T&#225;voli adatb&#225;zis visual studioban</a>
+                          </li>
+                          <li>
+                              <a href="2b_gyak_lokalis_adatbazis_visual_studioban/index.html" name="" title="2b.gyak: Lok&#225;lis adatb&#225;zis visual studioban">2b.gyak: Lok&#225;lis adatb&#225;zis visual studioban</a>
+                          </li>
+                    </ul>
+                </li>
+                <li>
+                    <span class="expand-stub"></span>
+                    <a>3. hét</a>
+                    
+                    <ul class="nav level2">
+                          <li>
+                              <a href="3_elm_regularis_kifejezesek/index.html" name="" title="Regul&#225;ris Kifejez&#233;sek">Regul&#225;ris Kifejez&#233;sek</a>
+                          </li>
+                          <li>
+                              <a href="3_gyak_adatok_validalasa_urlapon/index.html" name="" title="3.gyak: Adatok valid&#225;l&#225;sa &#369;rlapon">3.gyak: Adatok valid&#225;l&#225;sa &#369;rlapon</a>
+                          </li>
+                    </ul>
+                </li>
+                <li>
+                    <span class="expand-stub"></span>
+                    <a>4. hét</a>
+                    
+                    <ul class="nav level2">
+                          <li>
+                              <a href="4_elm_tablakapcsolatok/index.html" name="" title="Elm&#233;let: T&#225;blakapcsolatok">Elm&#233;let: T&#225;blakapcsolatok</a>
+                          </li>
+                          <li>
+                              <a href="4_gyak_tobbtablas_adatbazis/index.html" name="" title="Feladat: T&#246;bbt&#225;bl&#225;s adatb&#225;zis">Feladat: T&#246;bbt&#225;bl&#225;s adatb&#225;zis</a>
+                          </li>
+                    </ul>
+                </li>
+                <li>
+                    <span class="expand-stub"></span>
+                    <a>5. hét</a>
+                    
+                    <ul class="nav level2">
+                          <li>
+                              <a href="5_elm_LINQ_osszeffoglalo/index.html" name="" title="5.elm LINQ &#246;sszefoglal&#243;">5.elm LINQ &#246;sszefoglal&#243;</a>
+                          </li>
+                          <li>
+                              <a href="5_gyak_linq_lekerdezesek_-_studies_adatb/index.html" name="" title="5.gyak: LINQ lek&#233;rdez&#233;sek">5.gyak: LINQ lek&#233;rdez&#233;sek</a>
+                          </li>
+                    </ul>
+                </li>
+                <li>
+                    <span class="expand-stub"></span>
+                    <a>6. hét</a>
+                    
+                    <ul class="nav level2">
+                          <li>
+                              <a href="6_elm_linq_extra/index.html" name="" title="6.elm: LINQ extra">6.elm: LINQ extra</a>
+                          </li>
+                          <li>
+                              <a href="6a_gyak_webshop\index.html" name="" title="6a.gyak: Webshop">6a.gyak: Webshop</a>
+                          </li>
+                    </ul>
+                </li>
+          </ul>
+      </div>
+    </div>
+  </div>
+</div>

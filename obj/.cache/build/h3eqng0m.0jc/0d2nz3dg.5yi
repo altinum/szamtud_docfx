@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Az oszt&#225;lyz&#225;s rendje, k&#246;vetelm&#233;nyek 3 </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Az oszt&#225;lyz&#225;s rendje, k&#246;vetelm&#233;nyek 3 ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="az-osztályzás-rendje-követelmények-3" sourcefile="adatb/kovetelmenyek/index.md" sourcestartlinenumber="1">Az osztályzás rendje, követelmények 3</h1>
+
+<h2 id="a-tantárgy-célja" sourcefile="adatb/kovetelmenyek/index.md" sourcestartlinenumber="3">A tantárgy célja</h2>
+<p sourcefile="adatb/kovetelmenyek/index.md" sourcestartlinenumber="5">A kurzust sikeresen teljesítő hallgató képes lesz az adatbázis-támogatást igénylő üzleti problémák felismerésére, megoldási javaslatok előkészítésére és azok implementálására. A döntés-előkészítés produktumaként technológiai érvekkel alátámasztott, de a gazdasági döntéshozók számára is könnyen érthető dokumentumot állít elő, melynek megvalósítása során egy olyan adatbázis megtervezésére lesz képes, mely mind technikai-, mind üzleti szempontból optimális a szervezet számára. Összességében a hallgató a félév végén tudja használni az adatbázis-kezelő rendszerek, és értse az üzemeltetése, működése mögött levő üzleti folyamatokat, döntési felelősségeket, és a döntések esetleges következményeit.</p>
+<p sourcefile="adatb/kovetelmenyek/index.md" sourcestartlinenumber="7">A tárgyhoz szorosan kötődnek a Szoftvertechnológia II. és a Számítógéphálózatok tárgyak is.</p>
+<h2 id="értékelési-rendszer" sourcefile="adatb/kovetelmenyek/index.md" sourcestartlinenumber="9">Értékelési rendszer</h2>
+<p sourcefile="adatb/kovetelmenyek/index.md" sourcestartlinenumber="11"><strong sourcefile="adatb/kovetelmenyek/index.md" sourcestartlinenumber="11">A kurzus vizsgajeggyel zárul.</strong> Vizsgát akkor tehet a hallgató, ha az évközi teljesítménye alapján megszerezte az aláírást.</p>
+<h3 id="az-előadások" sourcefile="adatb/kovetelmenyek/index.md" sourcestartlinenumber="13">Az előadások</h3>
+<p sourcefile="adatb/kovetelmenyek/index.md" sourcestartlinenumber="15">Az előadások anyaga az egyetemi rendelkezésnek megfelelően <strong sourcefile="adatb/kovetelmenyek/index.md" sourcestartlinenumber="15">előre rögzített videók</strong> formájában kerül közzétételre hétről hétre. Az előadás sávjában <strong sourcefile="adatb/kovetelmenyek/index.md" sourcestartlinenumber="15">az előadó rendelkezésetekre áll Teams-ben</strong>.</p>
+<p sourcefile="adatb/kovetelmenyek/index.md" sourcestartlinenumber="17">Az  előadás sávok első fél órájában <strong sourcefile="adatb/kovetelmenyek/index.md" sourcestartlinenumber="17">Kahoot verseny</strong> zajlik, a legjobban teljesítő kollégák <strong sourcefile="adatb/kovetelmenyek/index.md" sourcestartlinenumber="17">elővizsga lehetőség</strong>et kapnak.</p>
+<h3 id="gyakorlatok" sourcefile="adatb/kovetelmenyek/index.md" sourcestartlinenumber="19">Gyakorlatok</h3>
+<p sourcefile="adatb/kovetelmenyek/index.md" sourcestartlinenumber="21">A gyakorlatok ideje alatt az oktató rendelkezésére áll, mindenkit bátorítunk, hogy forduljanak hozzánk kérdéseikkel!</p>
+<p sourcefile="adatb/kovetelmenyek/index.md" sourcestartlinenumber="23">Az aláírás megszerzésének feltétele a gyakorlatokon való részvétel, melyet távoktatásban a gyakorlati feladatok Moodle felületen határidőig történő hiánytalan leadása igazol.</p>
+<ul sourcefile="adatb/kovetelmenyek/index.md" sourcestartlinenumber="25">
+<li sourcefile="adatb/kovetelmenyek/index.md" sourcestartlinenumber="25">A feladatok egy részét - alapértelmezésben legalább 5 feladatot - a gyakorlat végéig fel kell tölteni,</li>
+<li sourcefile="adatb/kovetelmenyek/index.md" sourcestartlinenumber="26">míg a maradékkal legkésőbb a következő gyakorlat kezdetéig kell végezni.</li>
+<li sourcefile="adatb/kovetelmenyek/index.md" sourcestartlinenumber="27">A hibás feladatmegoldás is leadásnak számít.</li>
+</ul>
+<p sourcefile="adatb/kovetelmenyek/index.md" sourcestartlinenumber="29">A hiányzások száma a TVSZ-nek megfelelően nem érheti el gyakorlatok 25%-át. Speciális indok esetén – például igazolt kórházi kezelés, tartós betegség – a foglalkozások felét meg nem haladó hiányzás mellett a tárgyfelelős pótlási lehetőséget adhat.</p>
+<p sourcefile="adatb/kovetelmenyek/index.md" sourcestartlinenumber="31">A legjobban teljesítő hallgatóknak a gyakorlatvezető felajánlhatja az elővizsga lehetőségét.</p>
+<h3 id="a-vizsga" sourcefile="adatb/kovetelmenyek/index.md" sourcestartlinenumber="33">A vizsga</h3>
+<p sourcefile="adatb/kovetelmenyek/index.md" sourcestartlinenumber="35">A vizsgán elméleti és gyakorlati kérdések is szerepelnek. A vizsgán összesen 100 pont érhető el, az értékelés a következőképpen történik:
+|||
+|-|-|
+0-49|elégtelen
+50-61|elégséges
+62-73|közepes
+74-85|jó
+86-100|jeles</p>
+<p sourcefile="adatb/kovetelmenyek/index.md" sourcestartlinenumber="44">A legalább elégséges osztályzat megszerzéséhez az is szükséges, hogy mind az elméleti, mind pedig a gyakorlati vizsgarészből legalább az elérhető pontok felét megszerezze a hallgató.</p>
+<p sourcefile="adatb/kovetelmenyek/index.md" sourcestartlinenumber="46">Az elővizsgára az utolsó szorgalmi héten kerül sor.</p>
+<p sourcefile="adatb/kovetelmenyek/index.md" sourcestartlinenumber="48">A vizsga menete függ a járványügyi korlátozások alakulásától. Ha lesz rá lehetőség, gépteremben tartjuk meg. Ha jelenléti vizsgára nem lesz lehetőség, kamerán keresztül kell szóbeli vizsgát tenni, melynek pontos menetéről külön tájékoztatót töltöttünk fel.</p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/altinum/szamtud_docfx/blob/main/adatb/kovetelmenyek/index.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

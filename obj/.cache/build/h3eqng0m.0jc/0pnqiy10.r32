@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Sz&#243;p&#225;roztat&#243;s j&#225;t&#233;k </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Sz&#243;p&#225;roztat&#243;s j&#225;t&#233;k ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="szópároztatós-játék" sourcefile="softec/szoparoztatos/index.md" sourcestartlinenumber="1">Szópároztatós játék</h1>
+
+<p sourcefile="softec/szoparoztatos/index.md" sourcestartlinenumber="2">A játék szövegfájlból olvas fel szópárokat, melyeket színes címkékben helyez el. A szövegfájl minden sorai párosával egy-egy összetartozó magyar és angol szót tartalmaznak. A játékos az egérrel tologathatja a szavakat a képernyőn. Ha a játokos egymás után kattint egy szópárra, mindkét szó eltűnik. A játék célja az összes szó eltűntetése.</p>
+<p sourcefile="softec/szoparoztatos/index.md" sourcestartlinenumber="4">Melléklet: szavak.txt a  <a href="http://web.uni-corvinus.hu/%7Elmohacs/alfa/" sourcefile="softec/szoparoztatos/index.md" sourcestartlinenumber="4">http://web.uni-corvinus.hu/~lmohacs/alfa/</a> oldalról</p>
+<h2 id="egérrel-mozgatható-címke-készítése" sourcefile="softec/szoparoztatos/index.md" sourcestartlinenumber="7">Egérrel mozgatható címke készítése</h2>
+<ol sourcefile="softec/szoparoztatos/index.md" sourcestartlinenumber="9">
+<li sourcefile="softec/szoparoztatos/index.md" sourcestartlinenumber="9">Származtass <code sourcefile="softec/szoparoztatos/index.md" sourcestartlinenumber="9">Szó</code> nevű osztályt a <code sourcefile="softec/szoparoztatos/index.md" sourcestartlinenumber="9">Button</code> osztályból!</li>
+<li sourcefile="softec/szoparoztatos/index.md" sourcestartlinenumber="10">Az osztályt egészítsd ki konstruktorral!</li>
+<li sourcefile="softec/szoparoztatos/index.md" sourcestartlinenumber="11">Az osztály szintjén vezess be egy <code sourcefile="softec/szoparoztatos/index.md" sourcestartlinenumber="11">mozoge</code> nevű logikai változót <code sourcefile="softec/szoparoztatos/index.md" sourcestartlinenumber="11">hamis</code> kezdőértékkel!</li>
+<li sourcefile="softec/szoparoztatos/index.md" sourcestartlinenumber="12">Vezess be <code sourcefile="softec/szoparoztatos/index.md" sourcestartlinenumber="12">ox</code> és <code sourcefile="softec/szoparoztatos/index.md" sourcestartlinenumber="12">oy</code> nevű egész típusú változókat is az osztály szintjén!</li>
+<li sourcefile="softec/szoparoztatos/index.md" sourcestartlinenumber="13">A konstruktorban rendelj esemény-kiszolgáló függvényt az egér lenyomásához, felengedéséhez illetve mozgatásához tartozó eseményekhez!</li>
+<li sourcefile="softec/szoparoztatos/index.md" sourcestartlinenumber="14">Az egérgomb lenyomásakor az <code sourcefile="softec/szoparoztatos/index.md" sourcestartlinenumber="14">ox</code>, és <code sourcefile="softec/szoparoztatos/index.md" sourcestartlinenumber="14">oy</code> változók értékét állítsd be az egér aktuális koordinátáinak megfelelően! A <code sourcefile="softec/szoparoztatos/index.md" sourcestartlinenumber="14">mozoge</code> változó értéke legyen igaz!</li>
+<li sourcefile="softec/szoparoztatos/index.md" sourcestartlinenumber="15">Az egérgomb felengedésére <code sourcefile="softec/szoparoztatos/index.md" sourcestartlinenumber="15">mozoge</code> változó kapjon hamis értéket!</li>
+<li sourcefile="softec/szoparoztatos/index.md" sourcestartlinenumber="16">Ha az egér megmozdul, vizsgáld meg, a <code sourcefile="softec/szoparoztatos/index.md" sourcestartlinenumber="16">mozoge</code> változó értékét! Ha igaz, állítsd be <code sourcefile="softec/szoparoztatos/index.md" sourcestartlinenumber="16">Szó</code> koordinátáit értelemszerűen! Tipp: pl. <code sourcefile="softec/szoparoztatos/index.md" sourcestartlinenumber="16">Left += e.X - ox</code>;</li>
+<li sourcefile="softec/szoparoztatos/index.md" sourcestartlinenumber="17">Egészítsd ki az osztályt publikus <code sourcefile="softec/szoparoztatos/index.md" sourcestartlinenumber="17">string</code> típusú <code sourcefile="softec/szoparoztatos/index.md" sourcestartlinenumber="17">MásikSzó</code> nevű tulajdonsággal, melyben a szó jelentését tároljuk majd a másik nyelven. (A párok megtalálásánál lesz jelentősége.)
+Szópárok felolvasása fájlból, és szétszórásuk az ablakban</li>
+<li sourcefile="softec/szoparoztatos/index.md" sourcestartlinenumber="19">A <code sourcefile="softec/szoparoztatos/index.md" sourcestartlinenumber="19">Form1</code> konstruktorában vagy <code sourcefile="softec/szoparoztatos/index.md" sourcestartlinenumber="19">Load</code> eseményéhez tartozó eseménykiszolgálóban hozz létre egy példányt a <code sourcefile="softec/szoparoztatos/index.md" sourcestartlinenumber="19">Random</code> osztályból!</li>
+<li sourcefile="softec/szoparoztatos/index.md" sourcestartlinenumber="20">Hozz létre egy példányt a <code sourcefile="softec/szoparoztatos/index.md" sourcestartlinenumber="20">StreamReader-ből</code> is, mely megnyitja a <em sourcefile="softec/szoparoztatos/index.md" sourcestartlinenumber="20">szavak.txt</em> fájlt!</li>
+<li sourcefile="softec/szoparoztatos/index.md" sourcestartlinenumber="21">Nem előírt lépésszámú ciklussal olvasd végig a fájlt, mely felváltva tartalmaz angol és magyar szavakat, melyek szópárokat alkotnak:</li>
+<li sourcefile="softec/szoparoztatos/index.md" sourcestartlinenumber="22">Minden cikluslépésben két sort olvass be a fájlból egy-egy <code sourcefile="softec/szoparoztatos/index.md" sourcestartlinenumber="22">string</code> típusú változóba, és két <code sourcefile="softec/szoparoztatos/index.md" sourcestartlinenumber="22">Szó</code> címkét pakolj véletlenszerű pozícióba az űrlapra.</li>
+<li sourcefile="softec/szoparoztatos/index.md" sourcestartlinenumber="23">Az egyik címkén a magyar, a másikon az angol szó jelenjen meg. A <code sourcefile="softec/szoparoztatos/index.md" sourcestartlinenumber="23">Szó</code> típusú objektumok <code sourcefile="softec/szoparoztatos/index.md" sourcestartlinenumber="23">MásikSzó</code> tulajdonsága kapja meg az éppen feldolgozott szópár másik tagját.</li>
+<li sourcefile="softec/szoparoztatos/index.md" sourcestartlinenumber="24">Az angol és a magyar szavakat tartalmazó címkéket különböztesd meg eltérő háttérszínnel!
+ </li>
+</ol>
+<h2 id="párok-megtalálása" sourcefile="softec/szoparoztatos/index.md" sourcestartlinenumber="26">Párok megtalálása</h2>
+<ol start="16" sourcefile="softec/szoparoztatos/index.md" sourcestartlinenumber="28">
+<li sourcefile="softec/szoparoztatos/index.md" sourcestartlinenumber="28">Bővítsd a <code sourcefile="softec/szoparoztatos/index.md" sourcestartlinenumber="28">Form1</code> osztályt <code sourcefile="softec/szoparoztatos/index.md" sourcestartlinenumber="28">Szó előző = new Szó();</code> referenciával, melyben az utoljára megkattintott szó referenciáját tárolod majd! (A <code sourcefile="softec/szoparoztatos/index.md" sourcestartlinenumber="28">new..</code> azért szerencsés, hogy az első kattintásnál se legyen <code sourcefile="softec/szoparoztatos/index.md" sourcestartlinenumber="28">null</code> az előző értéke.)</li>
+<li sourcefile="softec/szoparoztatos/index.md" sourcestartlinenumber="29">A fájl feldolgozásáért felelős ciklusban rendelj közös eseménykiszolgálót az összes <code sourcefile="softec/szoparoztatos/index.md" sourcestartlinenumber="29">Szó</code> típusú objektum <code sourcefile="softec/szoparoztatos/index.md" sourcestartlinenumber="29">Click</code> eseményéhez. Az angol és a magyar jelentéshez tartozó <code sourcefile="softec/szoparoztatos/index.md" sourcestartlinenumber="29">Szó</code> objektumok is közös eseménykiszolgálót kapjanak.</li>
+<li sourcefile="softec/szoparoztatos/index.md" sourcestartlinenumber="30"><code sourcefile="softec/szoparoztatos/index.md" sourcestartlinenumber="30">Click</code> eseményéhez tartozó közös eseménykiszolgálóban vizsgáld, hogy az utoljára kattintott, előző nevű referencia által hivatkozott szó <code sourcefile="softec/szoparoztatos/index.md" sourcestartlinenumber="30">MásikSzó</code> tulajdonságában tárolt érték megegyezik-e az éppen megkattintott szó feliratával! Ha igen, tüntesd el mindkettőt!</li>
+<li sourcefile="softec/szoparoztatos/index.md" sourcestartlinenumber="31">A <code sourcefile="softec/szoparoztatos/index.md" sourcestartlinenumber="31">Click</code> eseményéhez tartozó eseménykiszolgálóban ne felejtsd el beállítani a előző nevű referenciát az épp megkattintott szóra!</li>
+</ol>
+<p sourcefile="softec/szoparoztatos/index.md" sourcestartlinenumber="36"> </p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/altinum/szamtud_docfx/blob/main/softec/szoparoztatos/index.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

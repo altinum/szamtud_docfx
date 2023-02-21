@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>K&#237;gy&#243;s j&#225;t&#233;k </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="K&#237;gy&#243;s j&#225;t&#233;k ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="kígyós-játék" sourcefile="softec/kigyos/index.md" sourcestartlinenumber="1">Kígyós játék</h1>
+
+<h2 id="videók" sourcefile="softec/kigyos/index.md" sourcestartlinenumber="3">Videók</h2>
+<p sourcefile="softec/kigyos/index.md" sourcestartlinenumber="5"><a href="S1snake1.m4v" sourcefile="softec/kigyos/index.md" sourcestartlinenumber="5">1. rész</a></p>
+<p sourcefile="softec/kigyos/index.md" sourcestartlinenumber="7"><a href="S1sanke2.m4v" sourcefile="softec/kigyos/index.md" sourcestartlinenumber="7">2. rész</a></p>
+<p sourcefile="softec/kigyos/index.md" sourcestartlinenumber="9"><a href="S1sake3.m4v" sourcefile="softec/kigyos/index.md" sourcestartlinenumber="9">3. rész</a></p>
+<p sourcefile="softec/kigyos/index.md" sourcestartlinenumber="11"><a href="S1snake4.m4v" sourcefile="softec/kigyos/index.md" sourcestartlinenumber="11">4. rész</a></p>
+<p sourcefile="softec/kigyos/index.md" sourcestartlinenumber="13"><a href="S1snake5.m4v" sourcefile="softec/kigyos/index.md" sourcestartlinenumber="13">5. rész</a></p>
+<p sourcefile="softec/kigyos/index.md" sourcestartlinenumber="15"><a href="S1snake6.m4v" sourcefile="softec/kigyos/index.md" sourcestartlinenumber="15">6. rész</a></p>
+<h2 id="játék-felépítése-lépésenként" sourcefile="softec/kigyos/index.md" sourcestartlinenumber="17">Játék felépítése lépésenként</h2>
+<h3 id="lépések-a-kígyós-játék-felépítéséhez" sourcefile="softec/kigyos/index.md" sourcestartlinenumber="19">Lépések a kígyós játék felépítéséhez</h3>
+<p sourcefile="softec/kigyos/index.md" sourcestartlinenumber="21">(+/-)  Származtass a <code sourcefile="softec/kigyos/index.md" sourcestartlinenumber="21">PictureBox</code> osztálytól egy új osztályt <code sourcefile="softec/kigyos/index.md" sourcestartlinenumber="21">KígyóElem</code> néven!</p>
+<p sourcefile="softec/kigyos/index.md" sourcestartlinenumber="23">(+/-) A <code sourcefile="softec/kigyos/index.md" sourcestartlinenumber="23">KígyóElem</code> osztályt bővítsd egy méret statikus egész konstanssal, melynek értéke legyen <code sourcefile="softec/kigyos/index.md" sourcestartlinenumber="23">20</code>.</p>
+<p sourcefile="softec/kigyos/index.md" sourcestartlinenumber="25">(+/-) A <code sourcefile="softec/kigyos/index.md" sourcestartlinenumber="25">KígyóElem</code> osztályt bővítsd konstruktorral, melyben az a fenti konstansnak megfelelően 20x20 képpontosra méretezi magát.</p>
+<p sourcefile="softec/kigyos/index.md" sourcestartlinenumber="27">(+/-) A <code sourcefile="softec/kigyos/index.md" sourcestartlinenumber="27">Form1</code> osztályt bővítsd <code sourcefile="softec/kigyos/index.md" sourcestartlinenumber="27">fejX</code> és <code sourcefile="softec/kigyos/index.md" sourcestartlinenumber="27">fejY</code> változókkal, melyekben az utoljára kirakott kígyófej koordinátáit tárolod! Állíts be értelemszerű kezdőéréket! (Pl. 100, 100)</p>
+<p sourcefile="softec/kigyos/index.md" sourcestartlinenumber="29">(+/-) A <code sourcefile="softec/kigyos/index.md" sourcestartlinenumber="29">Form1</code> osztályt bővítsd <code sourcefile="softec/kigyos/index.md" sourcestartlinenumber="29">irányX</code> és <code sourcefile="softec/kigyos/index.md" sourcestartlinenumber="29">irányY</code> változókkal, melyekben kígyó haladási irályát tárolod! (<code sourcefile="softec/kigyos/index.md" sourcestartlinenumber="29">-1</code>,<code sourcefile="softec/kigyos/index.md" sourcestartlinenumber="29">0</code>,<code sourcefile="softec/kigyos/index.md" sourcestartlinenumber="29">1</code> értékeket vehet fel.) Állíts be kezdőértéket -- ettől függ majd, hogy merre indul a kígyónk!</p>
+<p sourcefile="softec/kigyos/index.md" sourcestartlinenumber="31">(+/-) A <code sourcefile="softec/kigyos/index.md" sourcestartlinenumber="31">Form1</code> osztályt bővítsd <code sourcefile="softec/kigyos/index.md" sourcestartlinenumber="31">sorszám</code> nevű, <code sourcefile="softec/kigyos/index.md" sourcestartlinenumber="31">0</code> kezdőértékű változóval!</p>
+<p sourcefile="softec/kigyos/index.md" sourcestartlinenumber="33">(+/-) A <code sourcefile="softec/kigyos/index.md" sourcestartlinenumber="33">Form1</code>-en helyezz el egy engedélyezett számlálót fél másodperces intervallummal, majd rendelj a <code sourcefile="softec/kigyos/index.md" sourcestartlinenumber="33">Tick</code> eseményéhez esemény-kiszolgáló függvényt!</p>
+<p sourcefile="softec/kigyos/index.md" sourcestartlinenumber="35">(+/-) Az esemény-kiszolgálóban hozz létre egy új példányt a <code sourcefile="softec/kigyos/index.md" sourcestartlinenumber="35">KígyóElem</code> osztályból, majd az iránynak és a méretnek megfelelően változtasd a <code sourcefile="softec/kigyos/index.md" sourcestartlinenumber="35">fejX</code> és <code sourcefile="softec/kigyos/index.md" sourcestartlinenumber="35">fejY</code> változók értékeit! Ezután már mozogni kell a kígyóknak.</p>
+<p sourcefile="softec/kigyos/index.md" sourcestartlinenumber="37">(+/-) Rendelj esemény-kiszolgálót az űrlap <code sourcefile="softec/kigyos/index.md" sourcestartlinenumber="37">KeyDown</code> eseményhez.</p>
+<p sourcefile="softec/kigyos/index.md" sourcestartlinenumber="39">(+/-) Változtasd a kígyó irányát az esemény-kiszolgáló paramétereként kapott <code sourcefile="softec/kigyos/index.md" sourcestartlinenumber="39">e.KeyValue</code> (vagy <code sourcefile="softec/kigyos/index.md" sourcestartlinenumber="39">KeyCode</code>) értéke alapján!</p>
+<p sourcefile="softec/kigyos/index.md" sourcestartlinenumber="41">(+/-) Valósítsd meg az ütközésvizsgálatot! Járd be az űrlap <code sourcefile="softec/kigyos/index.md" sourcestartlinenumber="41">Controls</code> listáját <code sourcefile="softec/kigyos/index.md" sourcestartlinenumber="41">foreach</code> ciklussal, és vizsgálj meg minden <code sourcefile="softec/kigyos/index.md" sourcestartlinenumber="41">KígyóElemet</code> <code sourcefile="softec/kigyos/index.md" sourcestartlinenumber="41">ke</code> néven. Ha van olyan, melynek <code sourcefile="softec/kigyos/index.md" sourcestartlinenumber="41">Top</code> illetve <code sourcefile="softec/kigyos/index.md" sourcestartlinenumber="41">Left</code> tulajdonságai megegyeznek a <code sourcefile="softec/kigyos/index.md" sourcestartlinenumber="41">fejY</code> illetve <code sourcefile="softec/kigyos/index.md" sourcestartlinenumber="41">fejX</code> változók értékeivel, a kígyó farkába harapott.</p>
+<p sourcefile="softec/kigyos/index.md" sourcestartlinenumber="43">(+/-) Rövidüljön a kígyó. Ehhez először bővítsd egy <code sourcefile="softec/kigyos/index.md" sourcestartlinenumber="43">hossz</code> nevű változóval az osztályt, melyben a kígyó aktuális hosszát tárolod! Ha az űrlapon lévő vezérlők száma meghaladja a hossz változó értékét, vedd ki az űrlap <code sourcefile="softec/kigyos/index.md" sourcestartlinenumber="43">Controls</code> listájának nulladik elemét!</p>
+<p sourcefile="softec/kigyos/index.md" sourcestartlinenumber="45">(+/-) A kígyóelem konstruktorában páros és a páratlan sorszámú kígyóelemeket színezd eltérően!</p>
+<h3 id="ellenőrző-kérdések" sourcefile="softec/kigyos/index.md" sourcestartlinenumber="47">Ellenőrző kérdések</h3>
+<ol sourcefile="softec/kigyos/index.md" sourcestartlinenumber="49">
+<li sourcefile="softec/kigyos/index.md" sourcestartlinenumber="49">Egy űrlapon csak a <code sourcefile="softec/kigyos/index.md" sourcestartlinenumber="49">Button</code> osztály példányai vannak. Írd le azt a <code sourcefile="softec/kigyos/index.md" sourcestartlinenumber="49">foreach</code> ciklust, mely bejárja az űrlap <code sourcefile="softec/kigyos/index.md" sourcestartlinenumber="49">Controls</code> listáját és minden gomb <code sourcefile="softec/kigyos/index.md" sourcestartlinenumber="49">Visible</code> tulajdonságát hamis értékűre állítja!</li>
+<li sourcefile="softec/kigyos/index.md" sourcestartlinenumber="50">Hogyan lehet az űrlap <code sourcefile="softec/kigyos/index.md" sourcestartlinenumber="50">Contrlos</code> listájának egy meghatároztt sorszámú elemét törölni?</li>
+<li sourcefile="softec/kigyos/index.md" sourcestartlinenumber="51">Hogyan lehet megtudni, hogy egy lista hány elemet tartalmaz?</li>
+<li sourcefile="softec/kigyos/index.md" sourcestartlinenumber="52">Írd le azt a kódrészletet, mely egy számról eldönti, hogy páros-e!</li>
+<li sourcefile="softec/kigyos/index.md" sourcestartlinenumber="53">Származtass egy osztályt a <code sourcefile="softec/kigyos/index.md" sourcestartlinenumber="53">Button</code> osztályból, mely automatikusan átmétetezi magát 30x30 pixelesre!</li>
+</ol>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/altinum/szamtud_docfx/blob/main/softec/kigyos/index.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

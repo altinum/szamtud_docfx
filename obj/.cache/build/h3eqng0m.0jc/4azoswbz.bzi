@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Webshop sz&#225;ml&#225;i - gyakorlati feladatsor </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Webshop sz&#225;ml&#225;i - gyakorlati feladatsor ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="webshop-számlái---gyakorlati-feladatsor" sourcefile="softeng/6a_gyak_webshop/index.md" sourcestartlinenumber="1">Webshop számlái - gyakorlati feladatsor</h1>
+
+<p sourcefile="softeng/6a_gyak_webshop/index.md" sourcestartlinenumber="3">Adott egy adatbázis, melyben egy webshop a vásárlásokat tartja nyilván. Az <code sourcefile="softeng/6a_gyak_webshop/index.md" sourcestartlinenumber="3">Ugyfel</code> táblában tárolt ügyfelek rendeléseit a <code sourcefile="softeng/6a_gyak_webshop/index.md" sourcestartlinenumber="3">Rendeles</code> tábla tartalmazza. Minden rendelés több rendelési tételből állhat. A rendelés gyakorlatilag egy számlának felel meg, a számlához pedig tételek tartoznak. A rendelés és a termék tábla között <em sourcefile="softeng/6a_gyak_webshop/index.md" sourcestartlinenumber="3">több a több</em> kapcsolat áll fenn: egy rendelés során több terméket is megrendelhet az ügyfél, míg ugyanaz a termék több megrendelésben is szerepelhet. A <code sourcefile="softeng/6a_gyak_webshop/index.md" sourcestartlinenumber="3">Termek</code> és <code sourcefile="softeng/6a_gyak_webshop/index.md" sourcestartlinenumber="3">Rendeles</code> táblák között a több a többes kapcsolat a <code sourcefile="softeng/6a_gyak_webshop/index.md" sourcestartlinenumber="3">Rendeles_tetel</code> táblán keresztül valósul meg. Érdekesség, hogy a <code sourcefile="softeng/6a_gyak_webshop/index.md" sourcestartlinenumber="3">Rendeles_tetel</code> táblában is szerepel egy egységár mező, és emellet a termék táblában is van egy listaár mező. Ez első ránézésre sérti az <em sourcefile="softeng/6a_gyak_webshop/index.md" sourcestartlinenumber="3">&quot;az igazság egy helyen van&quot;</em> (<em sourcefile="softeng/6a_gyak_webshop/index.md" sourcestartlinenumber="3">&quot;Single point of truth&quot;</em>) elvet, ami azt jelenti, hogy egy adatbázisban minden adatot csak egy helyen rögzítünk. Az adatbázist azonban azért tervezték ilyenre, mert a termék listaára változhat, a megrendeléshez tartozó rendelési tételben viszont azt a pillanatnyi árat rögzítjük, amelyen a termék értékesítésre került (ez pedig például egy ideiglenes akció miatt eltérhet a listaártól).</p>
+<p sourcefile="softeng/6a_gyak_webshop/index.md" sourcestartlinenumber="5"><img src="../../images/1585724543414.png" sourcefile="softeng/6a_gyak_webshop/index.md" sourcestartlinenumber="5" alt="1585724543414.png"></p>
+<h2 id="a-megoldás-menete-videókon----előadás" sourcefile="softeng/6a_gyak_webshop/index.md" sourcestartlinenumber="7">A megoldás menete videókon -- előadás</h2>
+<p sourcefile="softeng/6a_gyak_webshop/index.md" sourcestartlinenumber="10"><a href="WS1.mkv" sourcefile="softeng/6a_gyak_webshop/index.md" sourcestartlinenumber="10">1. videó</a></p>
+<p sourcefile="softeng/6a_gyak_webshop/index.md" sourcestartlinenumber="12"><a href="WS2.mkv" sourcefile="softeng/6a_gyak_webshop/index.md" sourcestartlinenumber="12">2. videó</a></p>
+<p sourcefile="softeng/6a_gyak_webshop/index.md" sourcestartlinenumber="14"><a href="WS3.mkv" sourcefile="softeng/6a_gyak_webshop/index.md" sourcestartlinenumber="14">3. videó</a></p>
+<p sourcefile="softeng/6a_gyak_webshop/index.md" sourcestartlinenumber="16"><a href="WS4.mkv" sourcefile="softeng/6a_gyak_webshop/index.md" sourcestartlinenumber="16">4. videó</a></p>
+<p sourcefile="softeng/6a_gyak_webshop/index.md" sourcestartlinenumber="18"><a href="WS5.mkv" sourcefile="softeng/6a_gyak_webshop/index.md" sourcestartlinenumber="18">5. videó</a></p>
+<p sourcefile="softeng/6a_gyak_webshop/index.md" sourcestartlinenumber="20"><a href="WS6.mkv" sourcefile="softeng/6a_gyak_webshop/index.md" sourcestartlinenumber="20">6. videó</a></p>
+<p sourcefile="softeng/6a_gyak_webshop/index.md" sourcestartlinenumber="22"><a href="WS7.mkv" sourcefile="softeng/6a_gyak_webshop/index.md" sourcestartlinenumber="22">7. videó</a></p>
+<p sourcefile="softeng/6a_gyak_webshop/index.md" sourcestartlinenumber="24"><a href="WS8.mkv" sourcefile="softeng/6a_gyak_webshop/index.md" sourcestartlinenumber="24">8. videó</a></p>
+<p sourcefile="softeng/6a_gyak_webshop/index.md" sourcestartlinenumber="26"><a href="WS9.mkv" sourcefile="softeng/6a_gyak_webshop/index.md" sourcestartlinenumber="26">9. videó</a></p>
+<h2 id="adatbázis-felépítése" sourcefile="softeng/6a_gyak_webshop/index.md" sourcestartlinenumber="28">Adatbázis felépítése</h2>
+<p sourcefile="softeng/6a_gyak_webshop/index.md" sourcestartlinenumber="29">A <a href="webshop.sql" sourcefile="softeng/6a_gyak_webshop/index.md" sourcestartlinenumber="29">webshop.sql</a> script alapján építs fel egy lokális <em sourcefile="softeng/6a_gyak_webshop/index.md" sourcestartlinenumber="29">Service based database</em>-t a projektedben! A script közel 200 000 sorból áll, így a futtatás időbe telhet.</p>
+<h2 id="a-felhasználói-felület-felépítése" sourcefile="softeng/6a_gyak_webshop/index.md" sourcestartlinenumber="31">A felhasználói felület felépítése</h2>
+<p sourcefile="softeng/6a_gyak_webshop/index.md" sourcestartlinenumber="33"><img src="../../images/1585726196537.png" sourcefile="softeng/6a_gyak_webshop/index.md" sourcestartlinenumber="33" alt="1585726196537.png"></p>
+<p sourcefile="softeng/6a_gyak_webshop/index.md" sourcestartlinenumber="35">(+/-) Hozzátok létre az ábrán látható vezérlőket egy űrlapon!</p>
+<ul sourcefile="softeng/6a_gyak_webshop/index.md" sourcestartlinenumber="37">
+<li sourcefile="softeng/6a_gyak_webshop/index.md" sourcestartlinenumber="37">A baloldali <code sourcefile="softeng/6a_gyak_webshop/index.md" sourcestartlinenumber="37">ListBox</code>-ba kerülnek majd az ügyfelek nevei.</li>
+<li sourcefile="softeng/6a_gyak_webshop/index.md" sourcestartlinenumber="38">Miután a felhasználó kiválasztott egy ügyfelet, a második <code sourcefile="softeng/6a_gyak_webshop/index.md" sourcestartlinenumber="38">ListBox</code>-ba kerülnek majd a<code sourcefile="softeng/6a_gyak_webshop/index.md" sourcestartlinenumber="38">Rendeles</code> táblából az adott ügyfélhez tartozó megrendelések dátumai.</li>
+<li sourcefile="softeng/6a_gyak_webshop/index.md" sourcestartlinenumber="39">Ha felhasználó a megrendelés dátumra kattintva kiválasztott egy megrendelést, rácsban megjelennek a rendeléshez tartozó rendelési tételek.</li>
+</ul>
+<h2 id="ügyfelek-neveinek-kereshető-megjelenítése" sourcefile="softeng/6a_gyak_webshop/index.md" sourcestartlinenumber="41">Ügyfelek neveinek kereshető megjelenítése</h2>
+<p sourcefile="softeng/6a_gyak_webshop/index.md" sourcestartlinenumber="43">(+/-) Első lépésben hozz létre <code sourcefile="softeng/6a_gyak_webshop/index.md" sourcestartlinenumber="43">ÜgyfélSzűrés</code> néven egy <code sourcefile="softeng/6a_gyak_webshop/index.md" sourcestartlinenumber="43">void</code> típusú függvényt, mely a <code sourcefile="softeng/6a_gyak_webshop/index.md" sourcestartlinenumber="43">textBox1</code>-be írt szöveg alapján LINQ lekérdezéssel leszűri az <code sourcefile="softeng/6a_gyak_webshop/index.md" sourcestartlinenumber="43">Ugyfel</code> táblát, majd az eredményt megjeleníti a <code sourcefile="softeng/6a_gyak_webshop/index.md" sourcestartlinenumber="43">listBox1</code>-ben! Ne felejtsétek beállítani a <code sourcefile="softeng/6a_gyak_webshop/index.md" sourcestartlinenumber="43">listBox1</code> <code sourcefile="softeng/6a_gyak_webshop/index.md" sourcestartlinenumber="43">DisplayMember</code> tulajdonságát!</p>
+<blockquote sourcefile="softeng/6a_gyak_webshop/index.md" sourcestartlinenumber="45">
+<p sourcefile="softeng/6a_gyak_webshop/index.md" sourcestartlinenumber="45">Tipp: <code sourcefile="softeng/6a_gyak_webshop/index.md" sourcestartlinenumber="45">DisplayMember</code> és a <code sourcefile="softeng/6a_gyak_webshop/index.md" sourcestartlinenumber="45">ValueMember</code> tulajdonságokat azelőtt szoktuk beállítani, mielőtt a <code sourcefile="softeng/6a_gyak_webshop/index.md" sourcestartlinenumber="45">ListBox</code> <code sourcefile="softeng/6a_gyak_webshop/index.md" sourcestartlinenumber="45">DataSourece</code> tulajdonságához hozzárendeltük az adatforrást.</p>
+</blockquote>
+<p sourcefile="softeng/6a_gyak_webshop/index.md" sourcestartlinenumber="47">(+/-) <code sourcefile="softeng/6a_gyak_webshop/index.md" sourcestartlinenumber="47">textBox1</code> <code sourcefile="softeng/6a_gyak_webshop/index.md" sourcestartlinenumber="47">TextChanged</code> eseményhez rendelj eseménykiszolgáló függvényt, melyben meghívod az <code sourcefile="softeng/6a_gyak_webshop/index.md" sourcestartlinenumber="47">ÜgyfélSzűrés()</code>-t.</p>
+<p sourcefile="softeng/6a_gyak_webshop/index.md" sourcestartlinenumber="49">(+/-) Annak érdekében, hogy az alkalmazás indítása után rögtön legyenek adatok a listában, <code sourcefile="softeng/6a_gyak_webshop/index.md" sourcestartlinenumber="49">ÜgyfélSzűrés()</code> metódust érdemes a konstruktorból az <code sourcefile="softeng/6a_gyak_webshop/index.md" sourcestartlinenumber="49">InitializeComponent();</code> után is meghívni.</p>
+<h2 id="a-kiválasztott-ügyfél-rendeléseinek-listázása" sourcefile="softeng/6a_gyak_webshop/index.md" sourcestartlinenumber="51">A kiválasztott ügyfél rendeléseinek listázása</h2>
+<p sourcefile="softeng/6a_gyak_webshop/index.md" sourcestartlinenumber="53">(+/-) Rendelj eseménykiszolgálót a <code sourcefile="softeng/6a_gyak_webshop/index.md" sourcestartlinenumber="53">listBox1</code> <code sourcefile="softeng/6a_gyak_webshop/index.md" sourcestartlinenumber="53">SelectedIndexChanged</code> eseményhez. Az eseménykiszolgálóban állapítsd meg a listában kiválasztott elemhez tartozó kulcs értékét!</p>
+<blockquote sourcefile="softeng/6a_gyak_webshop/index.md" sourcestartlinenumber="55">
+<p sourcefile="softeng/6a_gyak_webshop/index.md" sourcestartlinenumber="55">Tipp: a <code sourcefile="softeng/6a_gyak_webshop/index.md" sourcestartlinenumber="55">listBox1</code> adat forrása <code sourcefile="softeng/6a_gyak_webshop/index.md" sourcestartlinenumber="55">Ugyfel</code> típusú elemeket tartalmaz. Innentől fogva biztosak lehetünk abban, hogy a <code sourcefile="softeng/6a_gyak_webshop/index.md" sourcestartlinenumber="55">listBox1.SelectedItem</code> tulajdonságból kiolvasott érték is <code sourcefile="softeng/6a_gyak_webshop/index.md" sourcestartlinenumber="55">Ugyfel</code> típusú, vagy <code sourcefile="softeng/6a_gyak_webshop/index.md" sourcestartlinenumber="55">null</code> is lehet, ha éppen nincs kiválasztott elem a listában.</p>
+</blockquote>
+<p sourcefile="softeng/6a_gyak_webshop/index.md" sourcestartlinenumber="57">Ebből következik, hogy a <code sourcefile="softeng/6a_gyak_webshop/index.md" sourcestartlinenumber="57">listBox1.SelectedItem</code> tulajdonsága <code sourcefile="softeng/6a_gyak_webshop/index.md" sourcestartlinenumber="57">Ugyfel</code> típusúvá castolható:</p>
+<pre><code class="lang-csharp" sourcefile="softeng/6a_gyak_webshop/index.md" sourcestartlinenumber="58">(Ugyfel)listBox1.SelectedItem
+</code></pre>
+<p sourcefile="softeng/6a_gyak_webshop/index.md" sourcestartlinenumber="61">Ezután már könnyen megállapítható kiválasztott elemhez tartozó keresett kulcs értéke:</p>
+<pre><code class="lang-csharp" sourcefile="softeng/6a_gyak_webshop/index.md" sourcestartlinenumber="62">var LOGIN = ((Ugyfel)listBox1.SelectedItem).LOGIN;
+</code></pre>
+<p sourcefile="softeng/6a_gyak_webshop/index.md" sourcestartlinenumber="65">Az hogy melyik a kulcs mező, az adatmodell alapján könnyedén megállapítható. A kulcs mező adattípusát, úgy lehet a legkönnyebben megállapítani, hogy fölé visszük az egeret. Ha nincs kedvünk bajlódni a típus megállapításával, használható a <code sourcefile="softeng/6a_gyak_webshop/index.md" sourcestartlinenumber="65">var</code> kulcsszó kulcsszó, hiszen a fordító számára a kifejezés jobb oldalából egyértelműen következik, milyen típust kell használni.</p>
+<p sourcefile="softeng/6a_gyak_webshop/index.md" sourcestartlinenumber="67">(+/-) A listában kiválasztott elemhez tartozó kulcs ismeretében már szűrhető a rendelési tételek tábla.</p>
+<pre><code class="lang-csharp" sourcefile="softeng/6a_gyak_webshop/index.md" sourcestartlinenumber="69">private void ListBox1_SelectedIndexChanged(object sender, EventArgs e)
+{
+	var LOGIN = ((Ugyfel)listBox1.SelectedItem).LOGIN;
+	var rendelések = from x in context.Rendeles where x.LOGIN == LOGIN select x;
+	listBox2.DisplayMember = &quot;REND_DATUM&quot;;
+	listBox2.DataSource = rendelések.ToList();
+}
+</code></pre>
+<h2 id="rendelési-tételek-megjelenítése-a-rendelés-kiválasztása-után" sourcefile="softeng/6a_gyak_webshop/index.md" sourcestartlinenumber="78">Rendelési tételek megjelenítése a rendelés kiválasztása után</h2>
+<p sourcefile="softeng/6a_gyak_webshop/index.md" sourcestartlinenumber="80">(+/-) Rendelj eseménykiszolgálót a <code sourcefile="softeng/6a_gyak_webshop/index.md" sourcestartlinenumber="80">listBox2</code> <code sourcefile="softeng/6a_gyak_webshop/index.md" sourcestartlinenumber="80">SelectedIndexChanged</code> eseményhez. Az eseménykiszolgálóban állapítsd meg a listában kiválasztott elemhez tartozó kulcs értékét.</p>
+<blockquote sourcefile="softeng/6a_gyak_webshop/index.md" sourcestartlinenumber="82">
+<p sourcefile="softeng/6a_gyak_webshop/index.md" sourcestartlinenumber="82">A megoldás hasonló mint az előbb -- annyi különbséggel, hogy a <code sourcefile="softeng/6a_gyak_webshop/index.md" sourcestartlinenumber="82">listBox2</code> adatforrása <code sourcefile="softeng/6a_gyak_webshop/index.md" sourcestartlinenumber="82">Rendeles</code> típusú elemeket tartalmaz, és biztosak lehetünk abban<code sourcefile="softeng/6a_gyak_webshop/index.md" sourcestartlinenumber="82">listBox1.SelectedItem</code> <code sourcefile="softeng/6a_gyak_webshop/index.md" sourcestartlinenumber="82">Rendeles</code> típusúra castolható. Az adatmodellből megállapítható, hogy a kulcs a  <code sourcefile="softeng/6a_gyak_webshop/index.md" sourcestartlinenumber="82">Rendeles</code> táblában a <code sourcefile="softeng/6a_gyak_webshop/index.md" sourcestartlinenumber="82">SORSZAM</code>.</p>
+</blockquote>
+<p sourcefile="softeng/6a_gyak_webshop/index.md" sourcestartlinenumber="84">Első megközelítésben jelenítjük meg a <code sourcefile="softeng/6a_gyak_webshop/index.md" sourcestartlinenumber="84">Rendeles_tetel</code> tábla összes oszlopát a rácsban.</p>
+<pre><code class="lang-csharp" sourcefile="softeng/6a_gyak_webshop/index.md" sourcestartlinenumber="85">private void ListBox2_SelectedIndexChanged(object sender, EventArgs e)
+{
+	var SORSZAM = ((Rendeles)listBox2.SelectedItem).SORSZAM;
+	var rendelésiTételek = from x in context.Rendeles_tetel
+	where x.SORSZAM == SORSZAM
+	select x;
+	dataGridView4.DataSource = rendelésiTételek.ToList();
+}
+</code></pre>
+<p sourcefile="softeng/6a_gyak_webshop/index.md" sourcestartlinenumber="97">Futtatás után látható, hogy a rácsban több idegen kulcs található, megyek feloldása nélkül a felhasználó számára nem értelmezhető az eredmény. Alakítsuk át a LINQ lekérdezést úgy, hogy értelmezhető legyen a rács tartalma:</p>
+<pre><code class="lang-csharp" sourcefile="softeng/6a_gyak_webshop/index.md" sourcestartlinenumber="99">private void ListBox2_SelectedIndexChanged(object sender, EventArgs e)
+{
+	var SORSZAM = ((Rendele)listBox2.SelectedItem).SORSZAM;
+	var rendelésiTételek = from x in context.Rendeles_tetel
+	where x.SORSZAM == SORSZAM
+	select new {
+		Teméknév = x.Termek.MEGNEVEZES,
+		Kategória = x.Termek.Termekkategoria.KAT_NEV,
+		Egységár = x.EGYSEGAR,
+		Megység = x.Termek.MEGYS,
+		Mennyiség = x.MENNYISEG
+	};
+	dataGridView4.DataSource = rendelésiTételek.ToList();
+}
+</code></pre>
+<p sourcefile="softeng/6a_gyak_webshop/index.md" sourcestartlinenumber="116">A fenti lekérdezést úgy érdemes összeállítani, hogy közben nézzük az adatmodellt. Az idegen kulcsok irányába el lehet &quot; lépkedni&quot; a lekérdezésben. A példában a <code sourcefile="softeng/6a_gyak_webshop/index.md" sourcestartlinenumber="116">Rendeles_tetel</code> táblából kérdezünk. A <code sourcefile="softeng/6a_gyak_webshop/index.md" sourcestartlinenumber="116">Rendeles_tetel</code> táblában <code sourcefile="softeng/6a_gyak_webshop/index.md" sourcestartlinenumber="116">TERMEKKOD</code> egy idegen kulcs, mely a <code sourcefile="softeng/6a_gyak_webshop/index.md" sourcestartlinenumber="116">Termek</code> táblában lévő <code sourcefile="softeng/6a_gyak_webshop/index.md" sourcestartlinenumber="116">TERMEKKOD</code> nevű kulccsal kapcsolatban. Az anonim típusban az egyenlőségjel bal oldalán szereplő tulajdonságnév tetszőleges lehet, arra kell odafigyelni, hogy két egyforma ne legyen.</p>
+<p sourcefile="softeng/6a_gyak_webshop/index.md" sourcestartlinenumber="118">(+/-) Egészítsd ki a fenti feladatban lévő lekérdezést úgy, hogy egy <em sourcefile="softeng/6a_gyak_webshop/index.md" sourcestartlinenumber="118">Ár</em> nevű oszlopban jelenjen meg az egységár is rendelt mennyiség szorzata.</p>
+<p sourcefile="softeng/6a_gyak_webshop/index.md" sourcestartlinenumber="120">(+/-) Készíts LINQ lekérdezést, mely kiszámolja rendelésben szereplő rendelési tételek összértékét! Az eredményt jelentsd meg egy címkében!</p>
+<pre><code class="lang-csharp" sourcefile="softeng/6a_gyak_webshop/index.md" sourcestartlinenumber="122">var összesen = (from x in rendelésiTételek select x.Ár).Sum();
+</code></pre>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/altinum/szamtud_docfx/blob/main/softeng/6a_gyak_webshop/index.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

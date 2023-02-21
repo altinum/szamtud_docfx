@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>4. gyakorlati feladatsor: T&#246;bbt&#225;bl&#225;s adatb&#225;zis </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="4. gyakorlati feladatsor: T&#246;bbt&#225;bl&#225;s adatb&#225;zis ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="4-gyakorlati-feladatsor-többtáblás-adatbázis" sourcefile="softeng/4_gyak_tobbtablas_adatbazis/index.md" sourcestartlinenumber="1">4. gyakorlati feladatsor: Többtáblás adatbázis</h1>
+
+<h2 id="a-gyakorlat-célja" sourcefile="softeng/4_gyak_tobbtablas_adatbazis/index.md" sourcestartlinenumber="3">A gyakorlat célja</h2>
+<p sourcefile="softeng/4_gyak_tobbtablas_adatbazis/index.md" sourcestartlinenumber="5">A feladat: több egyszerű tábla és a köztük levő kapcsolatok megvalósítása, illetve a táblákhoz tartozó űrlapok felépítése:</p>
+<ul sourcefile="softeng/4_gyak_tobbtablas_adatbazis/index.md" sourcestartlinenumber="6">
+<li sourcefile="softeng/4_gyak_tobbtablas_adatbazis/index.md" sourcestartlinenumber="6">A gyakorlat első részeben felépítjük az adatbázist saját szerverünkön, vagy lokális adatbázisban,</li>
+<li sourcefile="softeng/4_gyak_tobbtablas_adatbazis/index.md" sourcestartlinenumber="7">a gyakorlat második részében az adatokkal feltöltött oktatói szerveren lévő adatbázishoz építünk felhasználói felületet.</li>
+</ul>
+<h2 id="1-rész-adatbázistáblák-felépítése-ssms-ben-vagy-visual-studio-ban-lokális-adatbázisban" sourcefile="softeng/4_gyak_tobbtablas_adatbazis/index.md" sourcestartlinenumber="9">1. rész: Adatbázistáblák felépítése SSMS-ben, vagy Visual Studio-ban lokális adatbázisban</h2>
+<p sourcefile="softeng/4_gyak_tobbtablas_adatbazis/index.md" sourcestartlinenumber="11">Az adatbázis sémáját az alábbi ábra tartalmazza.</p>
+<p sourcefile="softeng/4_gyak_tobbtablas_adatbazis/index.md" sourcestartlinenumber="13"><img src="edmx.png" sourcefile="softeng/4_gyak_tobbtablas_adatbazis/index.md" sourcestartlinenumber="13" alt="kep2"></p>
+<h4 id="jelölések" sourcefile="softeng/4_gyak_tobbtablas_adatbazis/index.md" sourcestartlinenumber="15">Jelölések</h4>
+<table sourcefile="softeng/4_gyak_tobbtablas_adatbazis/index.md" sourcestartlinenumber="17">
+<thead>
+<tr sourcefile="softeng/4_gyak_tobbtablas_adatbazis/index.md" sourcestartlinenumber="1">
+<th sourcefile="softeng/4_gyak_tobbtablas_adatbazis/index.md" sourcestartlinenumber="1"></th>
+<th sourcefile="softeng/4_gyak_tobbtablas_adatbazis/index.md" sourcestartlinenumber="1"></th>
+<th sourcefile="softeng/4_gyak_tobbtablas_adatbazis/index.md" sourcestartlinenumber="1"></th>
+</tr>
+</thead>
+<tbody>
+<tr sourcefile="softeng/4_gyak_tobbtablas_adatbazis/index.md" sourcestartlinenumber="18">
+<td sourcefile="softeng/4_gyak_tobbtablas_adatbazis/index.md" sourcestartlinenumber="18">_SK</td>
+<td sourcefile="softeng/4_gyak_tobbtablas_adatbazis/index.md" sourcestartlinenumber="18">surrogate key</td>
+<td sourcefile="softeng/4_gyak_tobbtablas_adatbazis/index.md" sourcestartlinenumber="18">Helyettesítő kulcs, automata számláló (Elsődleges kulcs)</td>
+</tr>
+<tr sourcefile="softeng/4_gyak_tobbtablas_adatbazis/index.md" sourcestartlinenumber="19">
+<td sourcefile="softeng/4_gyak_tobbtablas_adatbazis/index.md" sourcestartlinenumber="19">_ID</td>
+<td sourcefile="softeng/4_gyak_tobbtablas_adatbazis/index.md" sourcestartlinenumber="19">identification</td>
+<td sourcefile="softeng/4_gyak_tobbtablas_adatbazis/index.md" sourcestartlinenumber="19">Azonosító (Elsődleges kulcs)</td>
+</tr>
+<tr sourcefile="softeng/4_gyak_tobbtablas_adatbazis/index.md" sourcestartlinenumber="20">
+<td sourcefile="softeng/4_gyak_tobbtablas_adatbazis/index.md" sourcestartlinenumber="20">_FK</td>
+<td sourcefile="softeng/4_gyak_tobbtablas_adatbazis/index.md" sourcestartlinenumber="20">foreign key</td>
+<td sourcefile="softeng/4_gyak_tobbtablas_adatbazis/index.md" sourcestartlinenumber="20">Idegen kulcs</td>
+</tr>
+</tbody>
+</table>
+<h4 id="hozd-létre-az-alábbi-táblákat-a-megadott-mezőkkel" sourcefile="softeng/4_gyak_tobbtablas_adatbazis/index.md" sourcestartlinenumber="23">Hozd létre az alábbi táblákat a megadott mezőkkel:</h4>
+<p sourcefile="softeng/4_gyak_tobbtablas_adatbazis/index.md" sourcestartlinenumber="25">Dolgozz az <a href="/szoft2/azure_sql_adatbazis_letrehozasa/" sourcefile="softeng/4_gyak_tobbtablas_adatbazis/index.md" sourcestartlinenumber="25">Azure-ban telepített SQL szervereden</a> a már meglévő adatbázissal vagy hozz létre egy <a href="/szoft2/lokalis_adatbazis_visual_studioban/" sourcefile="softeng/4_gyak_tobbtablas_adatbazis/index.md" sourcestartlinenumber="25">lokális adatbázist</a> a projektedbe! Ahol nincs kitöltve a mezőtípus, ott a megadott adatok alapján kell kikövetkeztetni.</p>
+<p sourcefile="softeng/4_gyak_tobbtablas_adatbazis/index.md" sourcestartlinenumber="27"><strong sourcefile="softeng/4_gyak_tobbtablas_adatbazis/index.md" sourcestartlinenumber="27">Status</strong> tábla:</p>
+<table sourcefile="softeng/4_gyak_tobbtablas_adatbazis/index.md" sourcestartlinenumber="30">
+<thead>
+<tr sourcefile="softeng/4_gyak_tobbtablas_adatbazis/index.md" sourcestartlinenumber="1">
+<th sourcefile="softeng/4_gyak_tobbtablas_adatbazis/index.md" sourcestartlinenumber="1"></th>
+<th sourcefile="softeng/4_gyak_tobbtablas_adatbazis/index.md" sourcestartlinenumber="1"></th>
+</tr>
+</thead>
+<tbody>
+<tr sourcefile="softeng/4_gyak_tobbtablas_adatbazis/index.md" sourcestartlinenumber="31">
+<td sourcefile="softeng/4_gyak_tobbtablas_adatbazis/index.md" sourcestartlinenumber="31">StatusID</td>
+<td sourcefile="softeng/4_gyak_tobbtablas_adatbazis/index.md" sourcestartlinenumber="31">kézzel kitöltendő kis szám</td>
+</tr>
+<tr sourcefile="softeng/4_gyak_tobbtablas_adatbazis/index.md" sourcestartlinenumber="32">
+<td sourcefile="softeng/4_gyak_tobbtablas_adatbazis/index.md" sourcestartlinenumber="32">Name</td>
+<td sourcefile="softeng/4_gyak_tobbtablas_adatbazis/index.md" sourcestartlinenumber="32">a státusz megnevezése, pl: &quot;tanársegéd&quot;, &quot;adjunktus&quot;, &quot;docens&quot;</td>
+</tr>
+</tbody>
+</table>
+<blockquote sourcefile="softeng/4_gyak_tobbtablas_adatbazis/index.md" sourcestartlinenumber="34">
+<p sourcefile="softeng/4_gyak_tobbtablas_adatbazis/index.md" sourcestartlinenumber="34">A <code sourcefile="softeng/4_gyak_tobbtablas_adatbazis/index.md" sourcestartlinenumber="34">StatusID</code>  mező értéke egyfajta sorrendiséget is jelenthet a fokozatok között, mely később egy sorba rendezés alapjául is szolgálhat. Ezért nem érdemes automatikus számlálót használni.</p>
+</blockquote>
+<p sourcefile="softeng/4_gyak_tobbtablas_adatbazis/index.md" sourcestartlinenumber="36"><strong sourcefile="softeng/4_gyak_tobbtablas_adatbazis/index.md" sourcestartlinenumber="36">Employment</strong> tábla:</p>
+<table sourcefile="softeng/4_gyak_tobbtablas_adatbazis/index.md" sourcestartlinenumber="39">
+<thead>
+<tr sourcefile="softeng/4_gyak_tobbtablas_adatbazis/index.md" sourcestartlinenumber="1">
+<th sourcefile="softeng/4_gyak_tobbtablas_adatbazis/index.md" sourcestartlinenumber="1"></th>
+<th sourcefile="softeng/4_gyak_tobbtablas_adatbazis/index.md" sourcestartlinenumber="1"></th>
+</tr>
+</thead>
+<tbody>
+<tr sourcefile="softeng/4_gyak_tobbtablas_adatbazis/index.md" sourcestartlinenumber="40">
+<td sourcefile="softeng/4_gyak_tobbtablas_adatbazis/index.md" sourcestartlinenumber="40">EmploymentID</td>
+<td sourcefile="softeng/4_gyak_tobbtablas_adatbazis/index.md" sourcestartlinenumber="40">egy betű: értéke lehet &quot;F&quot; vagy &quot;R&quot;</td>
+</tr>
+<tr sourcefile="softeng/4_gyak_tobbtablas_adatbazis/index.md" sourcestartlinenumber="41">
+<td sourcefile="softeng/4_gyak_tobbtablas_adatbazis/index.md" sourcestartlinenumber="41">Name</td>
+<td sourcefile="softeng/4_gyak_tobbtablas_adatbazis/index.md" sourcestartlinenumber="41">a típus megnevezése, pl.: F - főállású, R - részmunkaidős</td>
+</tr>
+</tbody>
+</table>
+<p sourcefile="softeng/4_gyak_tobbtablas_adatbazis/index.md" sourcestartlinenumber="43"><strong sourcefile="softeng/4_gyak_tobbtablas_adatbazis/index.md" sourcestartlinenumber="43">Instructor</strong> tábla (Oktatók tárolására):</p>
+<table sourcefile="softeng/4_gyak_tobbtablas_adatbazis/index.md" sourcestartlinenumber="46">
+<thead>
+<tr sourcefile="softeng/4_gyak_tobbtablas_adatbazis/index.md" sourcestartlinenumber="1">
+<th sourcefile="softeng/4_gyak_tobbtablas_adatbazis/index.md" sourcestartlinenumber="1"></th>
+<th sourcefile="softeng/4_gyak_tobbtablas_adatbazis/index.md" sourcestartlinenumber="1"></th>
+</tr>
+</thead>
+<tbody>
+<tr sourcefile="softeng/4_gyak_tobbtablas_adatbazis/index.md" sourcestartlinenumber="47">
+<td sourcefile="softeng/4_gyak_tobbtablas_adatbazis/index.md" sourcestartlinenumber="47">InstructorSK</td>
+<td sourcefile="softeng/4_gyak_tobbtablas_adatbazis/index.md" sourcestartlinenumber="1"></td>
+</tr>
+<tr sourcefile="softeng/4_gyak_tobbtablas_adatbazis/index.md" sourcestartlinenumber="48">
+<td sourcefile="softeng/4_gyak_tobbtablas_adatbazis/index.md" sourcestartlinenumber="48">Salutation</td>
+<td sourcefile="softeng/4_gyak_tobbtablas_adatbazis/index.md" sourcestartlinenumber="48">titulus, pl. &quot;Dr&quot;, &quot;Prof.&quot;</td>
+</tr>
+<tr sourcefile="softeng/4_gyak_tobbtablas_adatbazis/index.md" sourcestartlinenumber="49">
+<td sourcefile="softeng/4_gyak_tobbtablas_adatbazis/index.md" sourcestartlinenumber="49">Name</td>
+<td sourcefile="softeng/4_gyak_tobbtablas_adatbazis/index.md" sourcestartlinenumber="49">Az oktató teljes neve</td>
+</tr>
+<tr sourcefile="softeng/4_gyak_tobbtablas_adatbazis/index.md" sourcestartlinenumber="50">
+<td sourcefile="softeng/4_gyak_tobbtablas_adatbazis/index.md" sourcestartlinenumber="50">StatusFK</td>
+<td sourcefile="softeng/4_gyak_tobbtablas_adatbazis/index.md" sourcestartlinenumber="1"></td>
+</tr>
+<tr sourcefile="softeng/4_gyak_tobbtablas_adatbazis/index.md" sourcestartlinenumber="51">
+<td sourcefile="softeng/4_gyak_tobbtablas_adatbazis/index.md" sourcestartlinenumber="51">EmploymentFK</td>
+<td sourcefile="softeng/4_gyak_tobbtablas_adatbazis/index.md" sourcestartlinenumber="1"></td>
+</tr>
+</tbody>
+</table>
+<p sourcefile="softeng/4_gyak_tobbtablas_adatbazis/index.md" sourcestartlinenumber="54"><strong sourcefile="softeng/4_gyak_tobbtablas_adatbazis/index.md" sourcestartlinenumber="54">Day</strong> tábla (Nap):</p>
+<table sourcefile="softeng/4_gyak_tobbtablas_adatbazis/index.md" sourcestartlinenumber="57">
+<thead>
+<tr sourcefile="softeng/4_gyak_tobbtablas_adatbazis/index.md" sourcestartlinenumber="1">
+<th sourcefile="softeng/4_gyak_tobbtablas_adatbazis/index.md" sourcestartlinenumber="1"></th>
+<th sourcefile="softeng/4_gyak_tobbtablas_adatbazis/index.md" sourcestartlinenumber="1"></th>
+</tr>
+</thead>
+<tbody>
+<tr sourcefile="softeng/4_gyak_tobbtablas_adatbazis/index.md" sourcestartlinenumber="58">
+<td sourcefile="softeng/4_gyak_tobbtablas_adatbazis/index.md" sourcestartlinenumber="58">DayID</td>
+<td sourcefile="softeng/4_gyak_tobbtablas_adatbazis/index.md" sourcestartlinenumber="1"></td>
+</tr>
+<tr sourcefile="softeng/4_gyak_tobbtablas_adatbazis/index.md" sourcestartlinenumber="59">
+<td sourcefile="softeng/4_gyak_tobbtablas_adatbazis/index.md" sourcestartlinenumber="59">Name</td>
+<td sourcefile="softeng/4_gyak_tobbtablas_adatbazis/index.md" sourcestartlinenumber="59">1: &quot;hétfő&quot;, 2: &quot;kedd&quot;, …</td>
+</tr>
+</tbody>
+</table>
+<p sourcefile="softeng/4_gyak_tobbtablas_adatbazis/index.md" sourcestartlinenumber="61"><strong sourcefile="softeng/4_gyak_tobbtablas_adatbazis/index.md" sourcestartlinenumber="61">Time</strong> tábla (Sáv):</p>
+<table sourcefile="softeng/4_gyak_tobbtablas_adatbazis/index.md" sourcestartlinenumber="64">
+<thead>
+<tr sourcefile="softeng/4_gyak_tobbtablas_adatbazis/index.md" sourcestartlinenumber="1">
+<th sourcefile="softeng/4_gyak_tobbtablas_adatbazis/index.md" sourcestartlinenumber="1"></th>
+<th sourcefile="softeng/4_gyak_tobbtablas_adatbazis/index.md" sourcestartlinenumber="1"></th>
+</tr>
+</thead>
+<tbody>
+<tr sourcefile="softeng/4_gyak_tobbtablas_adatbazis/index.md" sourcestartlinenumber="65">
+<td sourcefile="softeng/4_gyak_tobbtablas_adatbazis/index.md" sourcestartlinenumber="65">TimeID</td>
+<td sourcefile="softeng/4_gyak_tobbtablas_adatbazis/index.md" sourcestartlinenumber="65">sáv száma</td>
+</tr>
+<tr sourcefile="softeng/4_gyak_tobbtablas_adatbazis/index.md" sourcestartlinenumber="66">
+<td sourcefile="softeng/4_gyak_tobbtablas_adatbazis/index.md" sourcestartlinenumber="66">Name</td>
+<td sourcefile="softeng/4_gyak_tobbtablas_adatbazis/index.md" sourcestartlinenumber="66">&quot;08:00-09:30&quot; formátumú string</td>
+</tr>
+</tbody>
+</table>
+<blockquote sourcefile="softeng/4_gyak_tobbtablas_adatbazis/index.md" sourcestartlinenumber="68">
+<p sourcefile="softeng/4_gyak_tobbtablas_adatbazis/index.md" sourcestartlinenumber="68">A <code sourcefile="softeng/4_gyak_tobbtablas_adatbazis/index.md" sourcestartlinenumber="68">Name</code> mező fixen 13 karakterből áll, melyek között nem lehet ékezetes.</p>
+</blockquote>
+<p sourcefile="softeng/4_gyak_tobbtablas_adatbazis/index.md" sourcestartlinenumber="70"><strong sourcefile="softeng/4_gyak_tobbtablas_adatbazis/index.md" sourcestartlinenumber="70">Room</strong> tábla (tanterem):</p>
+<table sourcefile="softeng/4_gyak_tobbtablas_adatbazis/index.md" sourcestartlinenumber="73">
+<thead>
+<tr sourcefile="softeng/4_gyak_tobbtablas_adatbazis/index.md" sourcestartlinenumber="1">
+<th sourcefile="softeng/4_gyak_tobbtablas_adatbazis/index.md" sourcestartlinenumber="1"></th>
+<th sourcefile="softeng/4_gyak_tobbtablas_adatbazis/index.md" sourcestartlinenumber="1"></th>
+</tr>
+</thead>
+<tbody>
+<tr sourcefile="softeng/4_gyak_tobbtablas_adatbazis/index.md" sourcestartlinenumber="74">
+<td sourcefile="softeng/4_gyak_tobbtablas_adatbazis/index.md" sourcestartlinenumber="74">RoomSK</td>
+<td sourcefile="softeng/4_gyak_tobbtablas_adatbazis/index.md" sourcestartlinenumber="1"></td>
+</tr>
+<tr sourcefile="softeng/4_gyak_tobbtablas_adatbazis/index.md" sourcestartlinenumber="75">
+<td sourcefile="softeng/4_gyak_tobbtablas_adatbazis/index.md" sourcestartlinenumber="75">Name</td>
+<td sourcefile="softeng/4_gyak_tobbtablas_adatbazis/index.md" sourcestartlinenumber="75">Pl: &quot;S116&quot;</td>
+</tr>
+</tbody>
+</table>
+<p sourcefile="softeng/4_gyak_tobbtablas_adatbazis/index.md" sourcestartlinenumber="77"><strong sourcefile="softeng/4_gyak_tobbtablas_adatbazis/index.md" sourcestartlinenumber="77">Lesson</strong> tábla:</p>
+<table sourcefile="softeng/4_gyak_tobbtablas_adatbazis/index.md" sourcestartlinenumber="80">
+<thead>
+<tr sourcefile="softeng/4_gyak_tobbtablas_adatbazis/index.md" sourcestartlinenumber="1">
+<th sourcefile="softeng/4_gyak_tobbtablas_adatbazis/index.md" sourcestartlinenumber="1"></th>
+<th sourcefile="softeng/4_gyak_tobbtablas_adatbazis/index.md" sourcestartlinenumber="1"></th>
+</tr>
+</thead>
+<tbody>
+<tr sourcefile="softeng/4_gyak_tobbtablas_adatbazis/index.md" sourcestartlinenumber="81">
+<td sourcefile="softeng/4_gyak_tobbtablas_adatbazis/index.md" sourcestartlinenumber="81">LessonSK</td>
+<td sourcefile="softeng/4_gyak_tobbtablas_adatbazis/index.md" sourcestartlinenumber="1"></td>
+</tr>
+<tr sourcefile="softeng/4_gyak_tobbtablas_adatbazis/index.md" sourcestartlinenumber="82">
+<td sourcefile="softeng/4_gyak_tobbtablas_adatbazis/index.md" sourcestartlinenumber="82">Name</td>
+<td sourcefile="softeng/4_gyak_tobbtablas_adatbazis/index.md" sourcestartlinenumber="82">A tárgy címe</td>
+</tr>
+<tr sourcefile="softeng/4_gyak_tobbtablas_adatbazis/index.md" sourcestartlinenumber="83">
+<td sourcefile="softeng/4_gyak_tobbtablas_adatbazis/index.md" sourcestartlinenumber="83">InstructorFK</td>
+<td sourcefile="softeng/4_gyak_tobbtablas_adatbazis/index.md" sourcestartlinenumber="83"></td>
+</tr>
+<tr sourcefile="softeng/4_gyak_tobbtablas_adatbazis/index.md" sourcestartlinenumber="84">
+<td sourcefile="softeng/4_gyak_tobbtablas_adatbazis/index.md" sourcestartlinenumber="84">DayFK</td>
+<td sourcefile="softeng/4_gyak_tobbtablas_adatbazis/index.md" sourcestartlinenumber="1"></td>
+</tr>
+<tr sourcefile="softeng/4_gyak_tobbtablas_adatbazis/index.md" sourcestartlinenumber="85">
+<td sourcefile="softeng/4_gyak_tobbtablas_adatbazis/index.md" sourcestartlinenumber="85">TimeFK</td>
+<td sourcefile="softeng/4_gyak_tobbtablas_adatbazis/index.md" sourcestartlinenumber="1"></td>
+</tr>
+<tr sourcefile="softeng/4_gyak_tobbtablas_adatbazis/index.md" sourcestartlinenumber="86">
+<td sourcefile="softeng/4_gyak_tobbtablas_adatbazis/index.md" sourcestartlinenumber="86">RoomFK</td>
+<td sourcefile="softeng/4_gyak_tobbtablas_adatbazis/index.md" sourcestartlinenumber="1"></td>
+</tr>
+</tbody>
+</table>
+<p sourcefile="softeng/4_gyak_tobbtablas_adatbazis/index.md" sourcestartlinenumber="88">(+/-) Építsd fel a fenti adatbázistáblákat.</p>
+<p sourcefile="softeng/4_gyak_tobbtablas_adatbazis/index.md" sourcestartlinenumber="90">(+/-) Állítsd be a táblák közti kapcsolatokat!</p>
+<h3 id="adatbázis-feltöltése-adatokkal" sourcefile="softeng/4_gyak_tobbtablas_adatbazis/index.md" sourcestartlinenumber="92">Adatbázis feltöltése adatokkal</h3>
+<p sourcefile="softeng/4_gyak_tobbtablas_adatbazis/index.md" sourcestartlinenumber="94">(+/-) Töltsd fel a táblákat néhány mintaadattal! Figyelj, hogy az idegen kulcsokban csak létező adatok szerepeljenek! (Jobbklikk a kész táblára, majd: <em sourcefile="softeng/4_gyak_tobbtablas_adatbazis/index.md" sourcestartlinenumber="94">Edit top 200 rows</em>)</p>
+<p sourcefile="softeng/4_gyak_tobbtablas_adatbazis/index.md" sourcestartlinenumber="96">A következő feladatokban megvalósítandó alkalmazás az előbb létrehozott adatbázisra épül. Ha szeretnéd, hogy az adatbázisodban több adat legyen a teszteléshez, vagy csak bizonytalan vagy a felépítésével kapcsolatban, akkor választhatod az alábbi opciók egyikét is.</p>
+<p sourcefile="softeng/4_gyak_tobbtablas_adatbazis/index.md" sourcestartlinenumber="98">a) Csatlakozz az adatokkal feltöltött, közös adatbázishoz. A <em sourcefile="softeng/4_gyak_tobbtablas_adatbazis/index.md" sourcestartlinenumber="98">Visual Studio Server Explorer</em>-ben állítsd be a paramétereket az alábbiak szerint:</p>
+<table sourcefile="softeng/4_gyak_tobbtablas_adatbazis/index.md" sourcestartlinenumber="100">
+<thead>
+<tr sourcefile="softeng/4_gyak_tobbtablas_adatbazis/index.md" sourcestartlinenumber="100">
+<th sourcefile="softeng/4_gyak_tobbtablas_adatbazis/index.md" sourcestartlinenumber="100"></th>
+<th sourcefile="softeng/4_gyak_tobbtablas_adatbazis/index.md" sourcestartlinenumber="100"></th>
+</tr>
+</thead>
+<tbody>
+<tr sourcefile="softeng/4_gyak_tobbtablas_adatbazis/index.md" sourcestartlinenumber="102">
+<td sourcefile="softeng/4_gyak_tobbtablas_adatbazis/index.md" sourcestartlinenumber="102">Szerver</td>
+<td sourcefile="softeng/4_gyak_tobbtablas_adatbazis/index.md" sourcestartlinenumber="102">bit.uni-corvinus.hu</td>
+</tr>
+<tr sourcefile="softeng/4_gyak_tobbtablas_adatbazis/index.md" sourcestartlinenumber="103">
+<td sourcefile="softeng/4_gyak_tobbtablas_adatbazis/index.md" sourcestartlinenumber="103">Felhasználónév</td>
+<td sourcefile="softeng/4_gyak_tobbtablas_adatbazis/index.md" sourcestartlinenumber="103">hallgato</td>
+</tr>
+<tr sourcefile="softeng/4_gyak_tobbtablas_adatbazis/index.md" sourcestartlinenumber="104">
+<td sourcefile="softeng/4_gyak_tobbtablas_adatbazis/index.md" sourcestartlinenumber="104">Jelszó</td>
+<td sourcefile="softeng/4_gyak_tobbtablas_adatbazis/index.md" sourcestartlinenumber="104">Password123</td>
+</tr>
+<tr sourcefile="softeng/4_gyak_tobbtablas_adatbazis/index.md" sourcestartlinenumber="105">
+<td sourcefile="softeng/4_gyak_tobbtablas_adatbazis/index.md" sourcestartlinenumber="105">Adatbázis</td>
+<td sourcefile="softeng/4_gyak_tobbtablas_adatbazis/index.md" sourcestartlinenumber="105">Studies <strong sourcefile="softeng/4_gyak_tobbtablas_adatbazis/index.md" sourcestartlinenumber="105">--Vigyázat, nem Student, mint a múlt héten!</strong></td>
+</tr>
+</tbody>
+</table>
+<p sourcefile="softeng/4_gyak_tobbtablas_adatbazis/index.md" sourcestartlinenumber="107">Ez az adatbázis csak az egyetemi IP tartományból érhető el, tehát otthonról VPN kell hozzá!</p>
+<p sourcefile="softeng/4_gyak_tobbtablas_adatbazis/index.md" sourcestartlinenumber="109">b) Hozz létre egy új adatbázist (Azure-ban vagy lokálisan), és egyszerűen futtasd benne <a href="studies.sql" sourcefile="softeng/4_gyak_tobbtablas_adatbazis/index.md" sourcestartlinenumber="109">ezt az sql scriptet</a>.</p>
+<h2 id="2-rész-felhasználói-felület-építése-visual-studio-ban" sourcefile="softeng/4_gyak_tobbtablas_adatbazis/index.md" sourcestartlinenumber="112">2. rész: Felhasználói felület építése Visual Studio-ban</h2>
+<h3 id="adattáblák-mappelése-orm" sourcefile="softeng/4_gyak_tobbtablas_adatbazis/index.md" sourcestartlinenumber="114">Adattáblák <em sourcefile="softeng/4_gyak_tobbtablas_adatbazis/index.md" sourcestartlinenumber="114">mappelése</em> (ORM)</h3>
+<p sourcefile="softeng/4_gyak_tobbtablas_adatbazis/index.md" sourcestartlinenumber="115">(+/-) Hozz létre új projektet a Visual Studio-ban (akkor is, ha lokális adatbázist hoztál létre)</p>
+<p sourcefile="softeng/4_gyak_tobbtablas_adatbazis/index.md" sourcestartlinenumber="117">(+/-) A <em sourcefile="softeng/4_gyak_tobbtablas_adatbazis/index.md" sourcestartlinenumber="117">Server Explorer</em>-ben kapcsolódj az adatbázisodhoz</p>
+<blockquote sourcefile="softeng/4_gyak_tobbtablas_adatbazis/index.md" sourcestartlinenumber="118">
+<p sourcefile="softeng/4_gyak_tobbtablas_adatbazis/index.md" sourcestartlinenumber="118">A <em sourcefile="softeng/4_gyak_tobbtablas_adatbazis/index.md" sourcestartlinenumber="118">Server Explorer</em>-nek semmi köze a projekthez, a <em sourcefile="softeng/4_gyak_tobbtablas_adatbazis/index.md" sourcestartlinenumber="118">Server Explorer</em> egy segédeszköz az adatbázis adatainak áttekintésére és kezelésére.</p>
+</blockquote>
+<p sourcefile="softeng/4_gyak_tobbtablas_adatbazis/index.md" sourcestartlinenumber="120">(+/-) majd hozz létre új &quot;ADO. NET Entity Data Model&quot; elemet! A varázslóban válaszd a fenti adatbázist, majd jelöld ki az összes tábláját! Ha mindent jól csináltál, az alábbi sémához hasonló jelenik meg, esetleg más elrendezésben:</p>
+<p sourcefile="softeng/4_gyak_tobbtablas_adatbazis/index.md" sourcestartlinenumber="122"><img src="edmx.png" sourcefile="softeng/4_gyak_tobbtablas_adatbazis/index.md" sourcestartlinenumber="122" alt="kep2"></p>
+<h3 id="adkötött-objektumok-hozzáadása-a-projekthez" sourcefile="softeng/4_gyak_tobbtablas_adatbazis/index.md" sourcestartlinenumber="124">Adkötött objektumok hozzáadása a projekthez</h3>
+<p sourcefile="softeng/4_gyak_tobbtablas_adatbazis/index.md" sourcestartlinenumber="126">(+/-) Build-ed a projektet, különben a következő lépésben nem fognak megjelenni az adatbázissal kapcsolatos osztályok.</p>
+<p sourcefile="softeng/4_gyak_tobbtablas_adatbazis/index.md" sourcestartlinenumber="128">(+/-) <a href="/szoft2/data_binding/" sourcefile="softeng/4_gyak_tobbtablas_adatbazis/index.md" sourcestartlinenumber="128">Hozd létre a megfelelő adatkötött objektumokat.</a> <em sourcefile="softeng/4_gyak_tobbtablas_adatbazis/index.md" sourcestartlinenumber="128">Data Sources</em> panel: <em sourcefile="softeng/4_gyak_tobbtablas_adatbazis/index.md" sourcestartlinenumber="128">Add New Data Source</em> - <em sourcefile="softeng/4_gyak_tobbtablas_adatbazis/index.md" sourcestartlinenumber="128">Object</em>. Itt nyisd ki a listát, és válaszd ki a tábláidat, majd nyomj a <em sourcefile="softeng/4_gyak_tobbtablas_adatbazis/index.md" sourcestartlinenumber="128">Finish</em>-re.</p>
+<p sourcefile="softeng/4_gyak_tobbtablas_adatbazis/index.md" sourcestartlinenumber="130"><img src="AddNewDatasource.png" sourcefile="softeng/4_gyak_tobbtablas_adatbazis/index.md" sourcestartlinenumber="130" alt="kep3"></p>
+<h3 id="felhasználói-felület-felépítése" sourcefile="softeng/4_gyak_tobbtablas_adatbazis/index.md" sourcestartlinenumber="132">Felhasználói felület felépítése</h3>
+<p sourcefile="softeng/4_gyak_tobbtablas_adatbazis/index.md" sourcestartlinenumber="134">(+/-) Az eredeti <code sourcefile="softeng/4_gyak_tobbtablas_adatbazis/index.md" sourcestartlinenumber="134">Form1</code>-en hozz létre két gombot!</p>
+<p sourcefile="softeng/4_gyak_tobbtablas_adatbazis/index.md" sourcestartlinenumber="136">(+/-) Hozz létre két új <code sourcefile="softeng/4_gyak_tobbtablas_adatbazis/index.md" sourcestartlinenumber="136">Form</code>-ot! Az egyes gombok ezeket a <code sourcefile="softeng/4_gyak_tobbtablas_adatbazis/index.md" sourcestartlinenumber="136">Form</code>-okat nyissák meg a <code sourcefile="softeng/4_gyak_tobbtablas_adatbazis/index.md" sourcestartlinenumber="136">ShowDialog()</code> metódussal! Az egyiken az oktatókat, a másikon az órákat kezelő <code sourcefile="softeng/4_gyak_tobbtablas_adatbazis/index.md" sourcestartlinenumber="136">DataGridView</code> szerepeljen. Ezeket a <code sourcefile="softeng/4_gyak_tobbtablas_adatbazis/index.md" sourcestartlinenumber="136">Data Sources</code> ablakból tudod behúzni.</p>
+<pre><code class="lang-csharp" sourcefile="softeng/4_gyak_tobbtablas_adatbazis/index.md" sourcestartlinenumber="137">private void button1_Click(object sender, EventArgs e)
+{
+    Form2 f2 = new Form2();
+    f2.Show();
+}
+</code></pre>
+<p sourcefile="softeng/4_gyak_tobbtablas_adatbazis/index.md" sourcestartlinenumber="145">(+/-) Húzd az egyik űrlap felületére a <code sourcefile="softeng/4_gyak_tobbtablas_adatbazis/index.md" sourcestartlinenumber="145">Instructors</code> táblát, a másikra az <code sourcefile="softeng/4_gyak_tobbtablas_adatbazis/index.md" sourcestartlinenumber="145">Lessons</code> táblát! (A <em sourcefile="softeng/4_gyak_tobbtablas_adatbazis/index.md" sourcestartlinenumber="145">Data Sources</em> ablakból)</p>
+<p sourcefile="softeng/4_gyak_tobbtablas_adatbazis/index.md" sourcestartlinenumber="147">(+/-) Az új <code sourcefile="softeng/4_gyak_tobbtablas_adatbazis/index.md" sourcestartlinenumber="147">Form</code>okban osztály szinten példányosítsd az <code sourcefile="softeng/4_gyak_tobbtablas_adatbazis/index.md" sourcestartlinenumber="147">StudiesEntities</code> osztályt <code sourcefile="softeng/4_gyak_tobbtablas_adatbazis/index.md" sourcestartlinenumber="147">context</code> néven, és kösd hozzá a <code sourcefile="softeng/4_gyak_tobbtablas_adatbazis/index.md" sourcestartlinenumber="147">BindingSource</code> <code sourcefile="softeng/4_gyak_tobbtablas_adatbazis/index.md" sourcestartlinenumber="147">DataSource</code> tulajdonságához a megfelelő táblát! (Enélkül nem jelennek meg az előre feltöltött adatok a <code sourcefile="softeng/4_gyak_tobbtablas_adatbazis/index.md" sourcestartlinenumber="147">DataGridView</code>-ban.)</p>
+<p sourcefile="softeng/4_gyak_tobbtablas_adatbazis/index.md" sourcestartlinenumber="149"><img src="InstructorsRaw.png" sourcefile="softeng/4_gyak_tobbtablas_adatbazis/index.md" sourcestartlinenumber="149" alt="kep4"></p>
+<p sourcefile="softeng/4_gyak_tobbtablas_adatbazis/index.md" sourcestartlinenumber="151">(+/-) Állítsd be értelemszerűen az összes <em sourcefile="softeng/4_gyak_tobbtablas_adatbazis/index.md" sourcestartlinenumber="151">foreign key</em> mezőre a legördülő menüket. Jobbklikk a <code sourcefile="softeng/4_gyak_tobbtablas_adatbazis/index.md" sourcestartlinenumber="151">DataGridView</code>-ra és <em sourcefile="softeng/4_gyak_tobbtablas_adatbazis/index.md" sourcestartlinenumber="151">Edit Columns</em>, ahol: <code sourcefile="softeng/4_gyak_tobbtablas_adatbazis/index.md" sourcestartlinenumber="151">ColumnType = DataGridViewComboBoxColumn</code>. Ügyelj a Value- és Display memberek helyes megválasztására! Végül töltsd fel a legördülő menükhöz használt <code sourcefile="softeng/4_gyak_tobbtablas_adatbazis/index.md" sourcestartlinenumber="151">BindingSource</code>-ok <code sourcefile="softeng/4_gyak_tobbtablas_adatbazis/index.md" sourcestartlinenumber="151">DataSource</code> tulajdonságait is!</p>
+<blockquote sourcefile="softeng/4_gyak_tobbtablas_adatbazis/index.md" sourcestartlinenumber="153">
+<p sourcefile="softeng/4_gyak_tobbtablas_adatbazis/index.md" sourcestartlinenumber="153">Az <em sourcefile="softeng/4_gyak_tobbtablas_adatbazis/index.md" sourcestartlinenumber="153">Edit Columns</em>-ban látni fogsz olyan mezőket, amik nincsenek az adatbázisban. Ezek tipikusan a ORM során létrejövő segéd mezők, melyek a táblakapcsolatokat segítenek kezelni (lásd későbbi anyag). Például a StatusFK-hoz tartozik egy Status mező, ami egy ilyen technikai oszlop. A tartalma nem igazán értelmezhető a felhasználónak, ezért illik elrejteni előle. A <em sourcefile="softeng/4_gyak_tobbtablas_adatbazis/index.md" sourcestartlinenumber="153">Remove</em> gombbal egyszerűen eltávolítható (ez csak a megjelenítésből távolítja el a mezőket, nem a táblából).</p>
+</blockquote>
+<p sourcefile="softeng/4_gyak_tobbtablas_adatbazis/index.md" sourcestartlinenumber="155"><img src="StatusBindingSource.png" sourcefile="softeng/4_gyak_tobbtablas_adatbazis/index.md" sourcestartlinenumber="155" alt="kep5"></p>
+<pre><code class="lang-csharp" sourcefile="softeng/4_gyak_tobbtablas_adatbazis/index.md" sourcestartlinenumber="157">public partial class Form2 : Form
+{
+    StudiesEntities context = new StudiesEntities();
+    public Form2()
+    {
+        InitializeComponent();
+
+        context.Instructors.Load();
+        context.Status.Load();
+        context.Employements.Load();
+        instructorBindingSource.DataSource = context.Instructors.Local;
+        statusBindingSource.DataSource = context.Status.Local;
+        employementBindingSource.DataSource = context.Employements.Local;
+    }
+}
+</code></pre>
+<p sourcefile="softeng/4_gyak_tobbtablas_adatbazis/index.md" sourcestartlinenumber="175"><img src="InstructorsWithComboBoxes.png" sourcefile="softeng/4_gyak_tobbtablas_adatbazis/index.md" sourcestartlinenumber="175" alt="kep6"></p>
+<p sourcefile="softeng/4_gyak_tobbtablas_adatbazis/index.md" sourcestartlinenumber="177">(+/-) Engedélyezd a <code sourcefile="softeng/4_gyak_tobbtablas_adatbazis/index.md" sourcestartlinenumber="177">BindingNavigator</code>-ok <em sourcefile="softeng/4_gyak_tobbtablas_adatbazis/index.md" sourcestartlinenumber="177">Mentés</em> gombját, és a kattintáshoz rendelt eseménykezelő metódusban mentsd le az adatbázisba a változtatásokat (<code sourcefile="softeng/4_gyak_tobbtablas_adatbazis/index.md" sourcestartlinenumber="177">context.SaveChanges()</code>)!</p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/altinum/szamtud_docfx/blob/main/softeng/4_gyak_tobbtablas_adatbazis/index.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

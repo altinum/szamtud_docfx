@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>SQL Express telep&#237;t&#233;se </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="SQL Express telep&#237;t&#233;se ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../../../favicon.ico">
+    <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../styles/docfx.css">
+    <link rel="stylesheet" href="../../../styles/main.css">
+    <meta property="docfx:navrel" content="../../../toc.html">
+    <meta property="docfx:tocrel" content="../../toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../../index.html">
+                <img id="logo" class="svg" src="../../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="sql-express-telepítése" sourcefile="softeng/knowledge_base/sql_server_sajat_gepre/index.md" sourcestartlinenumber="1">SQL Express telepítése</h1>
+
+<h2 id="1-telepítőkészletek-letöltése--downloading-installation-media" sourcefile="softeng/knowledge_base/sql_server_sajat_gepre/index.md" sourcestartlinenumber="3">1. Telepítőkészletek letöltése // Downloading installation media</h2>
+<ul sourcefile="softeng/knowledge_base/sql_server_sajat_gepre/index.md" sourcestartlinenumber="5">
+<li sourcefile="softeng/knowledge_base/sql_server_sajat_gepre/index.md" sourcestartlinenumber="5">Az SQL Szerver különböző változatai letölthetők <a href="https://www.microsoft.com/en-us/sql-server/sql-server-downloads" sourcefile="softeng/knowledge_base/sql_server_sajat_gepre/index.md" sourcestartlinenumber="5">innét</a></li>
+<li sourcefile="softeng/knowledge_base/sql_server_sajat_gepre/index.md" sourcestartlinenumber="6">Ha valaki még nem telepítette volna az <em sourcefile="softeng/knowledge_base/sql_server_sajat_gepre/index.md" sourcestartlinenumber="6">SQL Server Management Studio</em>-t, <a href="https://docs.microsoft.com/en-us/sql/ssms" sourcefile="softeng/knowledge_base/sql_server_sajat_gepre/index.md" sourcestartlinenumber="6">innét</a> letöltheti.</li>
+</ul>
+<h2 id="2-sql-express-telepítése--installing-sql-express" sourcefile="softeng/knowledge_base/sql_server_sajat_gepre/index.md" sourcestartlinenumber="8">2. SQL Express telepítése // Installing SQL Express</h2>
+<h3 id="21-telepítési-mód--installation-type" sourcefile="softeng/knowledge_base/sql_server_sajat_gepre/index.md" sourcestartlinenumber="9">2.1 Telepítési mód // Installation type</h3>
+<p sourcefile="softeng/knowledge_base/sql_server_sajat_gepre/index.md" sourcestartlinenumber="11"><img src="../../images/sqlexp01.png" sourcefile="softeng/knowledge_base/sql_server_sajat_gepre/index.md" sourcestartlinenumber="11" alt="">
+<img src="../../images/sqlexp02.png" sourcefile="softeng/knowledge_base/sql_server_sajat_gepre/index.md" sourcestartlinenumber="12" alt=""></p>
+<h3 id="22-letöltések-helye--download-location" sourcefile="softeng/knowledge_base/sql_server_sajat_gepre/index.md" sourcestartlinenumber="14">2.2 Letöltések helye // Download location</h3>
+<p sourcefile="softeng/knowledge_base/sql_server_sajat_gepre/index.md" sourcestartlinenumber="15"><img src="../../images/sqlexp03.png" sourcefile="softeng/knowledge_base/sql_server_sajat_gepre/index.md" sourcestartlinenumber="15" alt=""></p>
+<h3 id="23-fájlok-letöltése-folyamatban--downloading-install-package" sourcefile="softeng/knowledge_base/sql_server_sajat_gepre/index.md" sourcestartlinenumber="17">2.3 Fájlok letöltése folyamatban // Downloading install package</h3>
+<p sourcefile="softeng/knowledge_base/sql_server_sajat_gepre/index.md" sourcestartlinenumber="19"><img src="../../images/sqlexp04.png" sourcefile="softeng/knowledge_base/sql_server_sajat_gepre/index.md" sourcestartlinenumber="19" alt=""></p>
+<h3 id="24-a-telepítő-elindult--installation-center-is-launched" sourcefile="softeng/knowledge_base/sql_server_sajat_gepre/index.md" sourcestartlinenumber="21">2.4 A telepítő elindult // Installation Center is launched</h3>
+<p sourcefile="softeng/knowledge_base/sql_server_sajat_gepre/index.md" sourcestartlinenumber="22"><img src="../../images/sqlexp05.png" sourcefile="softeng/knowledge_base/sql_server_sajat_gepre/index.md" sourcestartlinenumber="22" alt=""></p>
+<h3 id="25-licenszfeltételek--license-terms" sourcefile="softeng/knowledge_base/sql_server_sajat_gepre/index.md" sourcestartlinenumber="24">2.5 Licenszfeltételek // License terms</h3>
+<p sourcefile="softeng/knowledge_base/sql_server_sajat_gepre/index.md" sourcestartlinenumber="26"><img src="../../images/sqlexp06.png" sourcefile="softeng/knowledge_base/sql_server_sajat_gepre/index.md" sourcestartlinenumber="26" alt="">
+ </p>
+<h3 id="26-frissítések--updates" sourcefile="softeng/knowledge_base/sql_server_sajat_gepre/index.md" sourcestartlinenumber="28">2.6 Frissítések // Updates</h3>
+<p sourcefile="softeng/knowledge_base/sql_server_sajat_gepre/index.md" sourcestartlinenumber="30">Megjegyzés: eleve a legfrissebb telepítőkészletet töltöttük le. // Note: an already up-to-date installation package was downloaded.</p>
+<p sourcefile="softeng/knowledge_base/sql_server_sajat_gepre/index.md" sourcestartlinenumber="32"><img src="../../images/sqlexp07.png" sourcefile="softeng/knowledge_base/sql_server_sajat_gepre/index.md" sourcestartlinenumber="32" alt=""></p>
+<h3 id="27-telepítési-szabályok-ellenőrzése--install-rules" sourcefile="softeng/knowledge_base/sql_server_sajat_gepre/index.md" sourcestartlinenumber="34">2.7 Telepítési szabályok ellenőrzése // Install rules</h3>
+<p sourcefile="softeng/knowledge_base/sql_server_sajat_gepre/index.md" sourcestartlinenumber="36"><img src="../../images/sqlexp08.png" sourcefile="softeng/knowledge_base/sql_server_sajat_gepre/index.md" sourcestartlinenumber="36" alt="">
+ </p>
+<h3 id="28-telepítendő-komponensek--feature-selection" sourcefile="softeng/knowledge_base/sql_server_sajat_gepre/index.md" sourcestartlinenumber="38">2.8 Telepítendő komponensek // Feature selection</h3>
+<p sourcefile="softeng/knowledge_base/sql_server_sajat_gepre/index.md" sourcestartlinenumber="40"><img src="../../images/sqlexp09.png" sourcefile="softeng/knowledge_base/sql_server_sajat_gepre/index.md" sourcestartlinenumber="40" alt=""></p>
+<p sourcefile="softeng/knowledge_base/sql_server_sajat_gepre/index.md" sourcestartlinenumber="42">A komponensekről bővebben lásd: // Feature details:
+<a href="https://docs.microsoft.com/en-us/sql/sql-server/install/feature-selection?view=sql-server-2014&amp;viewFallbackFrom=sql-server-ver15" sourcefile="softeng/knowledge_base/sql_server_sajat_gepre/index.md" sourcestartlinenumber="43">https://docs.microsoft.com/en-us/sql/sql-server/install/feature-selection?view=sql-server-2014&amp;viewFallbackFrom=sql-server-ver15</a></p>
+<h3 id="29-azonosító--instance-id" sourcefile="softeng/knowledge_base/sql_server_sajat_gepre/index.md" sourcestartlinenumber="45">2.9 Azonosító // Instance ID</h3>
+<p sourcefile="softeng/knowledge_base/sql_server_sajat_gepre/index.md" sourcestartlinenumber="46"><img src="../../images/sqlexp10.png" sourcefile="softeng/knowledge_base/sql_server_sajat_gepre/index.md" sourcestartlinenumber="46" alt=""></p>
+<p sourcefile="softeng/knowledge_base/sql_server_sajat_gepre/index.md" sourcestartlinenumber="48">Megjegyzés: a képen látható telepítési környezetben már van más SQL Server kiadás telepítve, emiatt itt egyedi azonosítót használtunk. Más esetben az alapértelmezett azonosító is választható. // Note: the screenshot was taken with another SQL Server instance already installed, therefore a named instance was chosen. Otherwise using a default instance is acceptable.</p>
+<h3 id="210-automatikus-indítás--automatic-startup" sourcefile="softeng/knowledge_base/sql_server_sajat_gepre/index.md" sourcestartlinenumber="50">2.10 Automatikus indítás // Automatic startup</h3>
+<p sourcefile="softeng/knowledge_base/sql_server_sajat_gepre/index.md" sourcestartlinenumber="52"><img src="../../images/sqlexp11.png" sourcefile="softeng/knowledge_base/sql_server_sajat_gepre/index.md" sourcestartlinenumber="52" alt=""></p>
+<p sourcefile="softeng/knowledge_base/sql_server_sajat_gepre/index.md" sourcestartlinenumber="54">Megjegyzés: a szolgáltatás indítása kézi üzemmódra is állítható, és ez a beállítás később igény szerint megváltoztatható. // Note: the service startup type may be set to manual and changed later as needed.</p>
+<h3 id="211-azonosítás--authentication" sourcefile="softeng/knowledge_base/sql_server_sajat_gepre/index.md" sourcestartlinenumber="56">2.11 Azonosítás // Authentication</h3>
+<p sourcefile="softeng/knowledge_base/sql_server_sajat_gepre/index.md" sourcestartlinenumber="58"><img src="../../images/sqlexp12.png" sourcefile="softeng/knowledge_base/sql_server_sajat_gepre/index.md" sourcestartlinenumber="58" alt="">
+ </p>
+<h3 id="212-a-telepítés-befejeződött--installation-completed-successfully" sourcefile="softeng/knowledge_base/sql_server_sajat_gepre/index.md" sourcestartlinenumber="60">2.12 A telepítés befejeződött // Installation completed successfully</h3>
+<p sourcefile="softeng/knowledge_base/sql_server_sajat_gepre/index.md" sourcestartlinenumber="61"><img src="../../images/sqlexp13.png" sourcefile="softeng/knowledge_base/sql_server_sajat_gepre/index.md" sourcestartlinenumber="61" alt=""></p>
+<h3 id="213-kézi-indítás--manual-startup" sourcefile="softeng/knowledge_base/sql_server_sajat_gepre/index.md" sourcestartlinenumber="63">2.13 Kézi indítás // Manual startup</h3>
+<p sourcefile="softeng/knowledge_base/sql_server_sajat_gepre/index.md" sourcestartlinenumber="64"><img src="../../images/sqlexp14.png" sourcefile="softeng/knowledge_base/sql_server_sajat_gepre/index.md" sourcestartlinenumber="64" alt="">
+Megjegyzés: lásd a 2.10-es pont beállításait. // Note: see settings at section 2.10.
+ </p>
+<h3 id="3-sql-server-management-studio" sourcefile="softeng/knowledge_base/sql_server_sajat_gepre/index.md" sourcestartlinenumber="67">3. SQL Server Management Studio</h3>
+<p sourcefile="softeng/knowledge_base/sql_server_sajat_gepre/index.md" sourcestartlinenumber="69">A lokális gépen futó SQL szerver az <em sourcefile="softeng/knowledge_base/sql_server_sajat_gepre/index.md" sourcestartlinenumber="69">Server Management Studio</em> segítségével adminisztrálható.</p>
+<p sourcefile="softeng/knowledge_base/sql_server_sajat_gepre/index.md" sourcestartlinenumber="71"><img src="../../images/sqlexp15.png" sourcefile="softeng/knowledge_base/sql_server_sajat_gepre/index.md" sourcestartlinenumber="71" alt=""></p>
+<p sourcefile="softeng/knowledge_base/sql_server_sajat_gepre/index.md" sourcestartlinenumber="73">Kezdődhet az adatbázisok létrehozása és a táblák felépítése!</p>
+<p sourcefile="softeng/knowledge_base/sql_server_sajat_gepre/index.md" sourcestartlinenumber="75"><img src="../../images/sqlexp16.png" sourcefile="softeng/knowledge_base/sql_server_sajat_gepre/index.md" sourcestartlinenumber="75" alt=""></p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/altinum/szamtud_docfx/blob/main/softeng/knowledge_base/sql_server_sajat_gepre/index.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../styles/main.js"></script>
+  </body>
+</html>

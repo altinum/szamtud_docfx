@@ -1,0 +1,292 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>1. gyakorlat </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="1. gyakorlat ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="1-gyakorlat">1. gyakorlat</h1>
+
+<h2 id="előkészületek">Előkészületek</h2>
+<p>Indítsuk el az SQL Server Management Studio programot, és a bejelentkezéshez adjuk meg a következő adatokat! <br>
+(Ha nem az egyetemen vagyunk, akkor a kapcsolódáshoz VPN-re lehet szükség!)</p>
+<table>
+<thead>
+<tr>
+<th>Server type</th>
+<th>Database Engine</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Server name</td>
+<td>bit.uni-corvinus.hu</td>
+</tr>
+<tr>
+<td>Authentication</td>
+<td>SQL Server authentication</td>
+</tr>
+<tr>
+<td>User name</td>
+<td>hallgato</td>
+</tr>
+<tr>
+<td>Password</td>
+<td>Password123</td>
+</tr>
+</tbody>
+</table>
+<h1 id="a-gyakorlati-feladatsor-tartalma">A gyakorlati feladatsor tartalma:</h1>
+<ul>
+<li>1/1 Egyszerű lekérdezések, konstansok, operátorok (a és b feladatsorok)</li>
+<li>1/2 Összesítés és csoportosítás</li>
+<li>1/3 Táblák összekapcsolása</li>
+<li>1/4 Halmazműveletek - kiegészítő anyag</li>
+</ul>
+<h2 id="11-egyszerű-lekérdezések-konstansok-operátorok-függvények">1/1 Egyszerű lekérdezések, konstansok, operátorok, függvények</h2>
+<h3 id="11a-a-következő-feladatok-megoldásához-a-dvd-adatbázisra-az-egyetemi-szerveren-dvd_magyar-lesz-szükség">1/1/a A következő feladatok megoldásához a DVD adatbázisra (az egyetemi szerveren dvd_magyar) lesz szükség</h3>
+<p>(+/-) Listázzuk a <code>kolcsonzes</code> tábla következő oszlopait: ID, ki_datum, vissza_datum!</p>
+<p>a.	Az ID oszlop neve legyen Azonosító
+b.	A ki_datum oszlop neve legyen Kölcsönzés_dátuma
+c.	A vissza_datum oszlop neve legyen Visszahozatal_dátuma</p>
+<p><a href="../gyak01/Gy1_5.mp4">Megoldás</a></p>
+<p>(+/-)	Melyek a 12-es azonosítójú kölcsönzések adatai?</p>
+<p>a.	Csak a ki, mit, és ki_datum oszlopok jelenjenek meg</p>
+<p><a href="../gyak01/Gy1_7.mp4">Megoldás</a></p>
+<p>(+/-)	Melyek azok a kölcsönzések, amelyek 2005.01.01 és 2007.01.01 között történtek?</p>
+<p><a href="../gyak01/Gy1_8.mp4">Megoldás</a></p>
+<p>(+/-)	Melyek azok a kölcsönzések, ahol a kölcsönző az 1-es, 2-es, vagy a 3-as azonosítójú tag?</p>
+<p>a.	A kölcsönző tag azonosítója ne legyen benne az oszlopok listájában</p>
+<p><a href="../gyak01/Gy1_9.mp4">Megoldás</a></p>
+<p>(+/-)	Melyek azok a tagok, akiknek kedvenc stílusa a játék, és nevük a-ra végződik?</p>
+<p>a.	Csak a tagok neve jelenjen meg, az oszlop neve Név legyen</p>
+<p><a href="../gyak01/Gy1_10.mp4">Megoldás</a></p>
+<p>(+/-)	Melyek azok a tagok, akik nevében nincs b betű, de címükben van?</p>
+<p><a href="../gyak01/Gy1_11.mp4">Megoldás</a></p>
+<p>(+/-)	Melyek azok a tagok, akiknek kedvenc nyelve 1, 2 vagy 5-ös azonosítójú?</p>
+<p><a href="../gyak01/Gy1_12.mp4">Megoldás</a></p>
+<p>(+/-)	Mennyi lenne a dvd-k nettó ára, ha 20%-kal csökkenne?</p>
+<p>a.	Csak a dvd-k címét és a csökkentett árat jelenítsük meg
+b.	A csökkentett árat nevezzük el diszkont_ar-nak</p>
+<p><a href="../gyak01/Gy1_15.mp4">Megoldás</a></p>
+<p>(+/-)	Melyek azok a kölcsönzések, ahol még nem hozták vissza a dvd-t?</p>
+<p><a href="../gyak01/Gy1_18.mp4">Megoldás</a></p>
+<h3 id="11b-a-következő-feladatok-megoldásához-a-diákmunka-adatbázisra-lesz-szükség">1/1/b A következő feladatok megoldásához a diákmunka adatbázisra lesz szükség</h3>
+<p>(+/-) Listázzuk azon diákok nevét és születési idejét, akik 1984-ben vagy 1985-ben születtek!</p>
+<p>a.	A születési dátum csak az évet, hónapot és a napot tartalmazza!
+b.	A születési dátum oszlopát nevezzük el 'Születési idő'-nek!</p>
+<p><a href="../gyak02/Gy2_1.mp4">Megoldás</a></p>
+<p>(+/-) Készítsünk lekérdezést, amely a tanulók nevét és az ebből képzett felhasználói nevét tartalmazza.</p>
+<p>a.	A felhasználói név álljon a név első kettő, illetve utolsó kettő betűjének összefűzéséből!
+b.	A listát szűrjük azon tanulókra, akik teljes neve - szóközzel együtt - legalább 10 betűs!</p>
+<p><a href="../gyak02/Gy2_2.mp4">Megoldás</a></p>
+<p>(+/-) Készítsünk listát a diákok adatairól, ahol a diákok neve úgy jelenik meg, hogy először a keresztnév, majd a vezetéknév, közöttük szóközzel! 	
+a.	Ezen felül a születési idő három külön oszlopban jelenjen meg (év, hónap, nap).
+b.	Az oszlopokat nevezzük el értelemszerűen!</p>
+<p><a href="../gyak02/Gy2_3.mp4">Megoldás</a></p>
+<p>(+/-) Készítsünk listát a munkák azonosítójáról és megnevezéséről! Egy új oszlopban azt is jelenítsük meg, hogy melyik munka hetente mennyit fizet!
+a.	Az oszlop neve legyen Heti bér, az értéket kerekítsük 1000 forintra!
+b.	A listát szűrjük azon rekordokra, ahol a kerekített heti bér 10000 Ft felett van!</p>
+<p><a href="../gyak02/Gy2_5.mp4">Megoldás</a></p>
+<p>(+/-) A diákok számára differenciált béremelést terveznek: a középiskolások esetében 33%, egyéb esetben 17% mértékben. Készítsünk listát, amely tartalmazza a munkák azonosítóját, az állás nevét, az eredeti óradíjat és a tervezett emelt óradíjat.</p>
+<p>a.	Az oszlopoknak adjuk nevet értelemszerűen!
+b.	Az emelt óradíj összegét kerekítsük egészre! (Az esetlegesen megjelenő 0 tizedesjegyekkel ne foglalkozzunk)</p>
+<p><a href="../gyak02/Gy2_7.mp4">Megoldás</a></p>
+<p>(+/-) A diákok számára próbaidőt írnak elő, amely a munka kezdetétől számítva 3 hónapig tart.    Jelenítsük meg a munka tábla adatait egy új oszloppal kiegészítve, amelyik a próbaidő    végének dátumát mutatja!</p>
+<p>a.	Az oszlop neve Próbaidő vége legyen!
+b.	A lista ne tartalmazza azokat a munkákat, ahol a diákok azonosítója nincs megadva!</p>
+<p><a href="../gyak02/Gy2_9.mp4">Megoldás</a></p>
+<p>(+/-) Készítsünk listát a diákok adatairól, amely egy új oszlopban azt is tartalmazza, hogy melyik diák
+jelenleg (a mai nap) hány éves! Egy másik új oszlop jelenítse meg, hogy a diák 35 év alatti-e (Igen vagy Nem).</p>
+<p>a.	Az oszlopokat nevezzük el értelemszerűen!
+b.	A diákok neve két külön oszlopban jelenjen meg: vezetéknév és keresztnév, a vezetéknév csupa nagybetűs, a keresztnév csupa kisbetűs legyen!
+c.	A listából hagyjuk ki a Péter keresztnevű diákokat!</p>
+<p><a href="../gyak02/Gy2_11.mp4">Megoldás</a></p>
+<h2 id="12-összesítés-és-csoportosítás">1/2 Összesítés és csoportosítás</h2>
+<h3 id="a-következő-feladatok-megoldásához-a-dvd-dvd_magyar-adatbázisra-lesz-szükség">A következő feladatok megoldásához a dvd (dvd_magyar) adatbázisra lesz szükség</h3>
+<p>(+/-) Jelenítsük meg, hogy összesen hány db történelem stílusú dvd van a dvd táblában!</p>
+<p>a.	Az oszlop neve legyen 'DB'!
+b.	Csak olyan dvd-ket vegyünk figyelembe, amelyeknek van címe!</p>
+<p><a href="../gyak03/Gy3_1.mp4">Megoldás</a></p>
+<p>(+/-) Mennyi a dvd-k átlagos ára stílusonkénti bontásban?</p>
+<p>a.   Csak azokat a stílusokat vegyük figyelembe, ahol az átlagos ár 4500 Ft feletti!
+b.   Az oszlopokat nevezzük el értelemszerűen!
+c.   A listát rendezzük átlagos ár szerint csökkenő sorrendbe!</p>
+<p><a href="../gyak03/Gy3_3.mp4">Megoldás</a></p>
+<p>(+/-) Készítsünk listát, amely a kölcsönzések darabszámát listázza éves, azon belül havi bontásban!
+a.   Az oszlopokat nevezzük el értelemszerűen!
+b.   Rendezzük a listát Év szerint növekvő sorrendbe!</p>
+<p><a href="../gyak03/Gy3_5.mp4">Megoldás</a></p>
+<p>(+/-) Listázzuk nyelvenkénti, azon belül stílusonkénti bontásban, hogy mennyi a dvd-k legkisebb és legnagyobb ára! a.   Az oszlopok neve legyen 'Nyelv', 'Stílus', 'MinÁr' és 'MaxÁr'!</p>
+<p>b.   A listából hagyjuk ki azokat a sorokat, ahol a nyelv vagy a stílus nincs megadva!
+c.   Szintén hagyjuk ki azokat a csoportokat, ahol a csoport elemszáma 3-nál kisebb!</p>
+<p><a href="../gyak03/Gy3_6.mp4">Megoldás</a></p>
+<p>(+/-) A kölcsönzéseket két csoportra oszthatjuk aszerint, hogy visszahozták-e már a dvd-t. Ez alapján készítsünk listát, amely megadja a kölcsönzés alatt lévő, illetve a már visszahozott dvd-k számát!</p>
+<p>a.   Az oszlopok neve legyen 'Állapot' és 'DB'
+b.   A listát rendezzük DB szerint növekvő sorrendbe!</p>
+<p><a href="../gyak03/Gy3_7.mp4">Megoldás</a></p>
+<p>(+/-) Hány darab különböző című dvd van stílusonként?
+a.    Az oszlopok neve legyen 'Stílus' és 'Különböző című dvd-k száma'
+b.    Csak azokat a dvd-ket számoljuk bele, amelyek stílusnevében a 'játék' szó benne van.</p>
+<p><a href="../gyak03/Gy3_8.mp4">Megoldás</a></p>
+<p>(+/-) A kölcsönző tulajdonosa elhatározza, hogy ezentúl kerekebb árakat alkalmaz. Ezért minden dvd árát 1000 Ft-ra kerekíti. Készítsünk lekérdezést, amely megmutatja, hogy melyik 1000 Ft-ra kerekített ár szerint, azon belül stílus szerint hány db dvd összesen raktáron!
+a.   Csak olyan csoportokat listázzunk, ahol a raktárkészlet legalább 30!
+b.   A listát rendezzük kerekített ár szerint, azon belül raktárkészlet szerint növekvő sorrendbe!</p>
+<p><a href="../gyak03/Gy3_12.mp4">Megoldás</a></p>
+<p>(+/-) A dvd-ket csoportosíthatjuk aszerint, hogy milyen hosszú a címük. Amelyiknél a cím hosszúsága 10 karakter alatt van, az legyen Rövid, 10-20-ig Átlagos, 20 felett Hosszú. Hány Rövid, Átlagos, illetve Hosszú dvd-van összesen raktáron?</p>
+<p>a.    Az oszlopok neve legyen 'Cím hosszúság' és 'Darabszám'</p>
+<p><a href="../gyak03/Gy3_15.mp4">Megoldás</a></p>
+<h2 id="13-táblák-összekapcsolása">1/3 Táblák összekapcsolása</h2>
+<h3 id="a-következő-feladatok-megoldásához-a-tanulmányi-adatbázisra-lesz-szükség">A következő feladatok megoldásához a Tanulmányi adatbázisra lesz szükség</h3>
+<p>(+/-) Készítsünk listát arról, hogy melyik óra melyik teremben van!
+a.	Jelenítsük meg az óra azonosítóját és a terem nevét!
+b.	A listát szűrjük a 3 karakter hosszú, [100;199] zárt intervallumba eső termekre!
+Feltesszük, hogy a 3 karakter hosszú terem nevek csak számjegyeket tartalmaznak.</p>
+<p><a href="../gyak4/Gy4_6.mp4">Megoldás</a></p>
+<p>(+/-) Hány óra van összesen az egyes napokon?
+a.	Jelenítsük meg a napok nevét és az órák számát az adott napon!
+b.	Az oszlopokat nevezzük el értelemszerűen!
+c.	A listát rendezzük óraszám szerint növekvő sorrendbe!</p>
+<p><a href="../gyak4/Gy4_7.mp4">Megoldás</a></p>
+<p>(+/-) Melyek azok az oktatók, akiknek nincs órájuk?
+a.	Csak az oktatók neve jelenjen meg!
+b.	ÖTLET: használjunk LEFT JOIN-t, és szűrjünk azokra a rekordokra, ahol NULL érték van a JOIN utáni feltétel jobb oldalán!</p>
+<p><a href="../gyak4/Gy4_8.mp4">Megoldás</a></p>
+<p>(+/-) 9.	Készítsünk lekérdezést, amely részletesen megjeleníti az egyes órák fontosabb adatait, azaz
+a.	Az órák azonosítóit, a tanár nevét, a tantárgy nevét, a terem nevét és a kezdési időpontot!
+b.	Az oszlopokat nevezzük el értelemszerűen!</p>
+<p><a href="../gyak4/Gy4_9.mp4">Megoldás</a></p>
+<p>(+/-) Készítsünk listát arról, hogy melyik oktatónak hány órája van az Órák táblában!
+a.	A lista jelenítse meg az oktatók nevét, és az órák számát!
+b.	Az oszlopokat nevezzük el értelemszerűen!
+c.	A listából hagyjuk ki az óraadókat!</p>
+<p><a href="../gyak4/Gy4_10.mp4">Megoldás</a></p>
+<p>(+/-)  Készítsünk listát, amely tartalmazza az egyes órák azonosítóit, és az órán oktatott tantárgy felelősének nevét!
+a.	Rendezzük a listát a tantárgyfelelős neve szerint csökkenő sorrendbe!</p>
+<p><a href="../gyak4/Gy4_11.mp4">Megoldás</a></p>
+<p>(+/-) Készítsünk listát, amely megjeleníti, hogy az Orak táblában lévő órák közül hányat tart Dr., illetve nem Dr. titulusú tanár!
+a.	Az oszlopokat nevezzük el értelemszerűen!</p>
+<p><a href="../gyak4/Gy4_13.mp4">Megoldás</a></p>
+<p>(+/-) Készítsünk listát arról, hogy beosztásonként hány óra szerepel az Orak táblában!
+a.	Jelenítsük meg a beosztások nevét és az órák számát!
+b.	A listát szűrjük azokra a beosztásokra, ahol ez az óraszám 10 feletti!</p>
+<p><a href="../gyak4/Gy4_14.mp4">Megoldás</a></p>
+<h2 id="14-halmazműveletek---kiegészítő-anyag">1/4 Halmazműveletek - kiegészítő anyag</h2>
+<h3 id="14-a-következő-feladatok-megoldásához-a-tanulmányi-adatbázisra-lesz-szükség">1/4 A következő feladatok megoldásához a Tanulmányi adatbázisra lesz szükség</h3>
+<p>A következő feladatokat halmazműveletek segítségével oldjuk meg!</p>
+<p>(+/-) Jelenítsük meg azon tanárok azonosítóját és nevét, akik hétfői vagy keddi napokon tanítanak!</p>
+<p><a href="../gyak5/Gy05_06.mp4">Megoldás</a></p>
+<p>(+/-) Melyek azok a tantárgyak, amelyek esetén van óra a 8.00-kor kezdődő sávban, de nincs a 12.30-kor kezdődő sávban?</p>
+<p><a href="../gyak5/Gy05_07.mp4">Megoldás</a></p>
+<p>(+/-) Listázzuk azokat a termeket, amelyekben oktat Kovács László és van olyan tanóra a teremben, ahol a tantárgy nevében nem szerepel az 'ürge' szó!
+a.	A termeknél elég a nevet megjeleníteni.</p>
+<p><a href="../gyak5/Gy05_08.mp4">Megoldás</a></p>
+<p>(+/-) Készítsünk listát arról, hogy melyik tanárnak hány órája van a (munka) hét elején (hétfőn), hét közben (kedd, szerda és csütörtök), illetve a hét végén (péntek)!
+a.	Jelenítsük meg a tanár azonosítóját, nevét, az időszakot (hét eleje - hét közben - hét vége), valamint az óraszámot!
+b.	A három megjelölt időszakot külön kérdezzük le, majd fűzzük össze a lekérdezések eredményeit!
+c.	Rendezzük a listát az oktató neve, azon belül időszak szerint!</p>
+<p><a href="../gyak5/Gy05_09.mp4">Megoldás</a></p>
+<p>(+/-) Melyik napokon nincs órája Pelikán Józsefnek?</p>
+<p><a href="../gyak5/Gy05_10.mp4">Megoldás</a></p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/altinum/szamtud_docfx/blob/main/adatb/adatelemzo01/index.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

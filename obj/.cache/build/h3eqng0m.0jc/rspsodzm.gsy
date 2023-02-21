@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Software Engineering </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Software Engineering ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="software-engineering" sourcefile="softeng/index.md" sourcestartlinenumber="1">Software Engineering</h1>
+
+<p sourcefile="softeng/index.md" sourcestartlinenumber="3"><a href="./tantargyi_informaciok/" sourcefile="softeng/index.md" sourcestartlinenumber="3">Tantargyi_informació, követelmények</a></p>
+<h2 id="segédanyagok-egész-félévre" sourcefile="softeng/index.md" sourcestartlinenumber="7">Segédanyagok egész félévre</h2>
+<ul sourcefile="softeng/index.md" sourcestartlinenumber="11">
+<li sourcefile="softeng/index.md" sourcestartlinenumber="11"><p sourcefile="softeng/index.md" sourcestartlinenumber="11"><a href="./knowledge_base/sql_generalasa_ssms-bol_adatbazis_letrehozasara/" sourcefile="softeng/index.md" sourcestartlinenumber="11">Adatbázist létrehozázó SQL generálása SSMS segítségével</a></p>
+</li>
+<li sourcefile="softeng/index.md" sourcestartlinenumber="13"><p sourcefile="softeng/index.md" sourcestartlinenumber="13"><a href="./knowledge_base/honnet_lesz_sql_szerverem/" sourcefile="softeng/index.md" sourcestartlinenumber="13">Honnét lesz SQL szerverem?</a></p>
+<ul sourcefile="softeng/index.md" sourcestartlinenumber="15">
+<li sourcefile="softeng/index.md" sourcestartlinenumber="15">SQL Server Azure-ban
+<ul sourcefile="softeng/index.md" sourcestartlinenumber="16">
+<li sourcefile="softeng/index.md" sourcestartlinenumber="16"><a href="/ingyenes_hallgatoi_azure_fiok_regisztralasa/" sourcefile="softeng/index.md" sourcestartlinenumber="16">Ingyenes hallgatói Azure fiók regisztrálása</a></li>
+<li sourcefile="softeng/index.md" sourcestartlinenumber="17"><a href="./knowledge_base/azure_sql_adatbazis_letrehozasa_2022/" sourcefile="softeng/index.md" sourcestartlinenumber="17">Azure SQL adatbázis létrehozása</a></li>
+<li sourcefile="softeng/index.md" sourcestartlinenumber="18"><a href="./knowledge_base/azure_costs/" sourcefile="softeng/index.md" sourcestartlinenumber="18">Azure költségek követése</a></li>
+</ul>
+</li>
+<li sourcefile="softeng/index.md" sourcestartlinenumber="19"><a href="./knowledge_base/sql_server_sajat_gepre/" sourcefile="softeng/index.md" sourcestartlinenumber="19">SQL Express telepítése</a></li>
+<li sourcefile="softeng/index.md" sourcestartlinenumber="20"><a href="./knowledge_base/lokalis_adatbazis_visual_studioban/" sourcefile="softeng/index.md" sourcestartlinenumber="20">Lokális .mdf adatbázis</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="i-blokk" sourcefile="softeng/index.md" sourcestartlinenumber="24">I. blokk</h2>
+<p sourcefile="softeng/index.md" sourcestartlinenumber="26">Vastag kilens készítése Widows Forms alapokon SQL adatbázishoz.</p>
+<h3 id="előkészületek-otthon-első-előadás-előtt" sourcefile="softeng/index.md" sourcestartlinenumber="28">Előkészületek otthon, első előadás előtt</h3>
+<ul sourcefile="softeng/index.md" sourcestartlinenumber="30">
+<li sourcefile="softeng/index.md" sourcestartlinenumber="30"><a href="./vsinstall/" sourcefile="softeng/index.md" sourcestartlinenumber="30">Visual Studio telepítése a szükséges komponensekkel</a></li>
+<li sourcefile="softeng/index.md" sourcestartlinenumber="31"><a href="/common/ssms_install/" sourcefile="softeng/index.md" sourcestartlinenumber="31">SQL Server Management Studio (SSMS) telepítése</a> Ha valaki még nem telepítette volna Adatbázisok tárgy keretéban.</li>
+</ul>
+<h3 id="1-hét" sourcefile="softeng/index.md" sourcestartlinenumber="33">1. hét</h3>
+<p sourcefile="softeng/index.md" sourcestartlinenumber="35">In memory adatbázisok, adatok mentése fájlba illetve visszatöltése fájlból. Adatkötött vezérlők használata</p>
+<p sourcefile="softeng/index.md" sourcestartlinenumber="37">​	Gyakorlati feladatsor: <a href="./1_gyak_in_memory_adatbazis/" sourcefile="softeng/index.md" sourcestartlinenumber="37">In-memory adatbázis </a></p>
+<h3 id="2-hét" sourcefile="softeng/index.md" sourcestartlinenumber="40">2. hét</h3>
+<ul sourcefile="softeng/index.md" sourcestartlinenumber="42">
+<li sourcefile="softeng/index.md" sourcestartlinenumber="42"><p sourcefile="softeng/index.md" sourcestartlinenumber="42">2a. gyakorlati feladatsor: <a href="./2a_gyak_tavoli_adatbazis_visual_studioban/" sourcefile="softeng/index.md" sourcestartlinenumber="42">Távoli SQL adatbázis elérése C# alkalmazásból</a></p>
+</li>
+<li sourcefile="softeng/index.md" sourcestartlinenumber="44"><p sourcefile="softeng/index.md" sourcestartlinenumber="44">2b. gyakorlati feladatsor: <a href="./2b_gyak_lokalis_adatbazis_visual_studioban/" sourcefile="softeng/index.md" sourcestartlinenumber="44">Lokális SQL adatbázis használata</a></p>
+</li>
+</ul>
+<h3 id="3-hét" sourcefile="softeng/index.md" sourcestartlinenumber="46">3. hét</h3>
+<ul sourcefile="softeng/index.md" sourcestartlinenumber="49">
+<li sourcefile="softeng/index.md" sourcestartlinenumber="49"><a href="./3_elm_regularis_kifejezesek/" sourcefile="softeng/index.md" sourcestartlinenumber="49">Reguláris kifejezések</a></li>
+<li sourcefile="softeng/index.md" sourcestartlinenumber="50"><a href="./3_gyak_adatok_validalasa_urlapon/" sourcefile="softeng/index.md" sourcestartlinenumber="50">Adatok validálása űrlapon</a></li>
+</ul>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/altinum/szamtud_docfx/blob/main/softeng/index.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>
