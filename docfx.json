@@ -2,15 +2,9 @@
   "metadata": [
     {
       "src": [
-        {
-          "files": [
-            "src/**.csproj"
-          ]
-        }
+        "src/**.csproj"
       ],
-      "dest": "api",
-      "disableGitFeatures": false,
-      "disableDefaultFilter": false
+      "dest": "api"
     }
   ],
   "build": {
