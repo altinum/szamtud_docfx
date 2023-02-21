@@ -51,7 +51,7 @@
     "dest": "_site",
     "template": [
       {
-        "default"
+        "default",
         "_templates/default"
       }
     ],
