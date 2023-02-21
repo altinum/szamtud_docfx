@@ -17,6 +17,4 @@ Az első ZH nem tartogat meglepetéseket,  gyakorlással tökéletesen fel lehet
 
 
 
-
-
  A ZH megírásához egy darab A4-es kézzel írott lap felhasználható,  más, mint internetes dokumentáció vagy tananyag nem vehető igénybe.
