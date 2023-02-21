@@ -33,4 +33,5 @@ A feladat célja egy egyszerű rajzoló program elkészítése, mellyel 8x8 pixe
 
 (+/-)A beolvasás után egy `foreach` ciklussal menj végig a `panel`-ben található `Pixel`-eken és mindegyik `SelectedColor` tulajdonságát állítsd a megadott RGB értékeknek megfelelően. Segítség: `Color.FromArgb(r,g,b)`
 
+
 ![1602072975369.png](../../images/1602072975369.png)
