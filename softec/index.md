@@ -107,4 +107,4 @@ Gyakorló feladatok a 3. ZH-ra:
 
 ## Vizsgaidőszak
 
-Meg nem írt ZH pótlására egy alkalommal, május 23-án, hétfőn 09 és 12 óra között lesz lehetőség az E.245-ben. (Keddre nincs terem, szerdától egyetemi szabályozás értelmében nem lehet ZH pótlást kiíítni, gyakorlati jegyes tárgyakat pedig a vizsgaidőszak első hetében le kell zárni. Javítási lehetőség nincs.) 
+Meg nem írt ZH pótlására egy alkalommal, május 23-án, hétfőn 9:00 és 12:00 óra között lesz lehetőség az E.245-ben. (Keddre nincs terem, szerdától egyetemi szabályozás értelmében nem lehet ZH pótlást kiíítni, gyakorlati jegyes tárgyakat pedig a vizsgaidőszak első hetében le kell zárni. Javítási lehetőség nincs.) 
