@@ -1,9 +1,3 @@
 - name: Szoftver Technológia
   href: softec/
   homepage: softec/index.md
-- name: Adatbázisok
-  href: adatb/
-  homepage: adatb/index.md
-- name: Software Engineering
-  href: softeng/
-  homepage: softeng/index.md
