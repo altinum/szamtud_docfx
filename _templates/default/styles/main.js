@@ -1,4 +1,4 @@
-function translateTasks(){
+function preprocess(){
 
 	let ps=document.querySelectorAll("p");
 
@@ -19,7 +19,24 @@ function translateTasks(){
 			ps[i].innerHTML+=text;
 			ps[i].addEventListener("click", taskClicked);
 		}
+		else if(ps[i].innerHTML.indexOf("(!Vid)")==0){
+			let text=ps[i].innerText;
+			let a=document.createElement("a");
+
+			text=text.substring(7,text.length);
+			a.innerHTML=text;
+			ps[i].innerHTML="";
+			ps[i].appendChild(a);
+			ps[i].addEventListener("click", videoClicked);
+		}
 	}
+	
+	let videos=$(".embeddedvideo");
+
+	for(let i=0;i<v.length;i++){
+		v[i].classList.add("hidden");
+	}
+	
 }
 function taskClicked(e) {
     let el = e.target;
@@ -49,5 +66,14 @@ function taskClicked(e) {
 
     ws.send(`S ${el.id.substring(4)} ${newStatus}`);
 }
+function videoClicked(e){
+	let el = e.target;
+	if(el.nextElementSibling.classList.contains("hidden")){
+		el.nextElementSibling.classList.remove("hidden");
+	}else{
+		el.nextElementSibling.classList.add("hidden");
+	}
+	
+}
 window.addEventListener('load', 
-  translateTasks(), false);
+  preprocess(), false);
