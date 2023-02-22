@@ -49,4 +49,5 @@ function taskClicked(e) {
 
     ws.send(`S ${el.id.substring(4)} ${newStatus}`);
 }
-window.onload+=translateTasks;
+window.addEventListener('load', 
+  translateTasks(), false);
