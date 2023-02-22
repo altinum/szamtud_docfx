@@ -134,7 +134,7 @@ if (a==13) MessageBox.Show("Bad day");
 
 A projekt felépítése az alábbi videókon követhető:
 
-[1. lépés]()
+(!Vid) 1. lépés
 > [!Video https://storage.altinum.hu/szoft1/S1_BEV_4a.m4v]
 
 (!Vid) 2. lépés
