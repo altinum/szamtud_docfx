@@ -2,7 +2,6 @@
 
 [Tantargyi_informació, követelmények](./tantargyi_informaciok/)
 
-
 ## Segédanyagok egész félévre
 
 
