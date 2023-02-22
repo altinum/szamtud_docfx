@@ -14,19 +14,26 @@ A példaalkalmazás az alábbi témákat érinti:
 |[Jatek.zip](Jatek.zip)|Előadás handout
 ## A megoldás menete videókon
 
-[Fájlkezelés](S1quiz1Filehandling-1.m4v)
+(!Vid) Fájlkezelés
+> [!Video https://storage.altinum.hu/szoft1/S1quiz1Filehandling-1.m4v]
 
-[UserControl építése](S1quiz2Uc-2.m4v)
+(!Vid) UserControl építése
+> [!Video https://storage.altinum.hu/szoft1/S1quiz2Uc-2.m4v]
 
-[UserControl-ok kirakása](S1quiz3Ucfromon-3.m4v)
+(!Vid) UserControl-ok kirakása
+> [!Video https://storage.altinum.hu/szoft1/S1quiz3Ucfromon-3.m4v]
 
-[Túlterhelt konstruktor](S1quiz4Overload-4.m4v)
+(!Vid) Túlterhelt konstruktor
+> [!Video https://storage.altinum.hu/szoft1/S1quiz4Overload-4.m4v]
 
-[Válaszok színezése](S1quiz5Coloring-5.m4v)
+(!Vid) Válaszok színezése
+> [!Video https://storage.altinum.hu/szoft1/S1quiz5Coloring-5.m4v]
 
-[CSV fájl kezelése](S1quiz6Csv-6.m4v)
+(!Vid) CSV fájl kezelése
+> [!Video https://storage.altinum.hu/szoft1/S1quiz6Csv-6.m4v]
 
-[Karakterkódolások](S1quiz7Utf-7.m4v)
+(!Vid) Karakterkódolások
+> [!Video https://storage.altinum.hu/szoft1/S1quiz7Utf-7.m4v]
 
 
 ### Ellenőrző kérdések 

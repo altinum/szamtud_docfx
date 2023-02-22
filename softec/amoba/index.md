@@ -2,19 +2,26 @@
 
 ## Előadásra szánt videók
 
-[1. videó](S1misc_1.m4v) -- Menüszalag használata
+(!Vid) 1. videó
+> [!Video https://storage.altinum.hu/szoft1/S1misc_1.m4v]
 
-[2. videó](S1misc_2.m4v) -- Többablakos alkalmazások, a `Show()` és a `ShowDialog()` metódus közötti különbségek. 
+(!Vid) 2. videó
+> [!Video https://storage.altinum.hu/szoft1/S1misc_2.m4v]
 
-[3. videó](S1misc_3.m4v) -- Párbeszédablakok visszatérési értéke, a `DialogResult`
+(!Vid) 3. videó
+> [!Video https://storage.altinum.hu/szoft1/S1misc_3.m4v]
 
-[4. videó](S1misc_4.m4v) -- `MessageBox`
+(!Vid) 4. videó
+> [!Video https://storage.altinum.hu/szoft1/S1misc_4.m4v]
 
-[5. videó](S1misc_5.m4v) -- Űrlap bezárásának megszakítása, a `Closing` esemény
+(!Vid) 5. videó
+> [!Video https://storage.altinum.hu/szoft1/S1misc_5.m4v]
 
-[6. videó](S1misc_6.m4v) -- Az `OpenFileDialog`  használata
+(!Vid) 6. videó
+> [!Video https://storage.altinum.hu/szoft1/S1misc_6.m4v]
 
-[7. videó](S1misc_7.m4v) -- Ikonok használata
+(!Vid) 7. videó
+> [!Video https://storage.altinum.hu/szoft1/S1misc_7.m4v]
 
 
 
@@ -25,27 +32,36 @@ Ez csak egy rávezető feladat a fájlkezeléshez és a közös eseménykiszolg�
 
 A fájl billentyűk elhelyezkedését, méretét, és a rajtuk lévő feliratot tartalmazza. Olvasd fel a fájlt, és rakd ki gombokból a billentyűzetet!
 
-[1. videó](S1kbdhun1.m4v)
+(!Vid) 1. videó
+> [!Video https://storage.altinum.hu/szoft1/S1kbdhun1.m4v]
 
-[2. videó](S1kbdhun2.m4v)
+(!Vid) 2. videó
+> [!Video https://storage.altinum.hu/szoft1/S1kbdhun2.m4v]
 
 ## Aknakereső játék
 
 #### A megoldás menete magyarázatokkal
 
-[1. videó](S1mine_1.m4v) -- Bevezetés
+(!Vid) 1. videó
+> [!Video https://storage.altinum.hu/szoft1/S1mine_1.m4v]
 
-[2. videó](S1mine_2.m4v) -- `Mező` osztály felépítése 
+(!Vid) 2. videó
+> [!Video https://storage.altinum.hu/szoft1/S1mine_2.m4v]
 
-[3. videó](S1mine_3.m4v) -- Pályaépítés mezőkből
+(!Vid) 3. videó
+> [!Video https://storage.altinum.hu/szoft1/S1mine_3.m4v]
 
-[4. videó](S1mine_4.m4v) -- Aknásítás
+(!Vid) 4. videó
+> [!Video https://storage.altinum.hu/szoft1/S1mine_4.m4v]
 
-[5. videó](S1mine_5.m4v) -- Mezők felfedése
+(!Vid) 5. videó
+> [!Video https://storage.altinum.hu/szoft1/S1mine_5.m4v]
 
-[6. videó](S1mine_6.m4v) -- Mezők rekurzív felfedése
+(!Vid) 6. videó
+> [!Video https://storage.altinum.hu/szoft1/S1mine_6.m4v]
 
-[7. videó](S1mine_7.m4v) -- Nagy pálya `Panel`-ben
+(!Vid) 7. videó
+> [!Video https://storage.altinum.hu/szoft1/S1mine_7.m4v]
 
 #### A Mező osztály
 (+/-) Származtass osztályt `Mezo` néven a `Button` osztályból!

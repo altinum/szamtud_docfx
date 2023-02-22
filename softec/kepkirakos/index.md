@@ -7,15 +7,20 @@
 
 ## A megoldás menete videón
 
-[1. Vonszolható gomb kíserlet](S1lo1-1.m4v)
+(!Vid) 1. Vonszolható gomb kíserlet
+> [!Video https://storage.altinum.hu/szoft1/S1lo1-1.m4v]
 
-[2. Képek kezelése, ](S1lo2-2.m4v)
+(!Vid) 2. Képek kezelése, 
+> [!Video https://storage.altinum.hu/szoft1/S1lo2-2.m4v]
 
-[3. 5x5 kiskép kirakása](S1lo3-3.m4v)
+(!Vid) 3. 5x5 kiskép kirakása
+> [!Video https://storage.altinum.hu/szoft1/S1lo3-3.m4v]
 
-[4. Mozgatás](S1lo4-4.m4v)
+(!Vid) 4. Mozgatás
+> [!Video https://storage.altinum.hu/szoft1/S1lo4-4.m4v]
 
-[5. Keverés](S1lo5-5.m4v)
+(!Vid) 5. Keverés
+> [!Video https://storage.altinum.hu/szoft1/S1lo5-5.m4v]
 
 ### Ellenőrző kérdések az előadáshoz
 

@@ -2,21 +2,29 @@
 
 ## Videók
 
-[2a Speech](S2_2a_Speech-2.m4v)
+(!Vid) 2a Speech
+> [!Video https://storage.altinum.hu/szoft1/S2_2a_Speech-2.m4v]
 
-[3a Timer Bemutatása](S2_3a_Timer_Bemutatasa-3.m4v)
+(!Vid) 3a Timer Bemutatása
+> [!Video https://storage.altinum.hu/szoft1/S2_3a_Timer_Bemutatasa-3.m4v]
 
-[3b Sajat Osztály](S2_3b_Sajat_Osztaly-4.m4v)
+(!Vid) 3b Sajat Osztály
+> [!Video https://storage.altinum.hu/szoft1/S2_3b_Sajat_Osztaly-4.m4v]
 
-[3c Egyszerű örökles](S2_3c_Egyszeru_Orokles-5.m4v)
+(!Vid) 3c Egyszerű örökles
+> [!Video https://storage.altinum.hu/szoft1/S2_3c_Egyszeru_Orokles-5.m4v]
 
-[3d Származtatás](S2_3d_Szarmaztatas-6.m4v)
+(!Vid) 3d Származtatás
+> [!Video https://storage.altinum.hu/szoft1/S2_3d_Szarmaztatas-6.m4v]
 
-[3e Konstruktor](S2_3e_Konstruktor-7.m4v)
+(!Vid) 3e Konstruktor
+> [!Video https://storage.altinum.hu/szoft1/S2_3e_Konstruktor-7.m4v]
 
-[3f Projekt Felépítése](S1_BEV_P1_7a2.m4v)
+(!Vid) 3f Projekt Felépítése
+> [!Video https://storage.altinum.hu/szoft1/S1_BEV_P1_7a2.m4v]
 
-[3g Cs Fájl](S2_3g_csfile.m4v)
+(!Vid) 3g Cs Fájl
+> [!Video https://storage.altinum.hu/szoft1/S2_3g_csfile.m4v]
 
 ## Ellenőrző kérések a videókhoz
 
@@ -64,11 +72,16 @@ A jövő hétnél Moodle-ben van további információ ZH-val kapcsolatban.
 
 (+/-)  :)
 # [megoldás](#tab/meg1)
-[1-3. pontok megoldása](S1_BEV_P1%201-3.m4v)
-[5-6. pontok megoldása](S1_BEV_P1%205-6.m4v)
-[7. pont megoldása](S1_BEV_P1%207a1.m4v)
-[7. pont megoldása, kiegészítés](S1_BEV_P1%207a2.m4v)
-[8-12. pontok megoldása](S1_BEV_P1%208-12.m4v)
+(!Vid) 1-3. pontok megoldása
+> [!Video https://storage.altinum.hu/szoft1/S1_BEV_P1%201-3.m4v]
+(!Vid) 5-6. pontok megoldása
+> [!Video https://storage.altinum.hu/szoft1/S1_BEV_P1%205-6.m4v]
+(!Vid) 7. pont megoldása
+> [!Video https://storage.altinum.hu/szoft1/S1_BEV_P1%207a1.m4v]
+(!Vid) 7. pont megoldása, kiegészítés
+> [!Video https://storage.altinum.hu/szoft1/S1_BEV_P1%207a2.m4v]
+(!Vid) 8-12. pontok megoldása
+> [!Video https://storage.altinum.hu/szoft1/S1_BEV_P1%208-12.m4v]
 
 ```csharp
 class VillogoGomb : Button
@@ -123,9 +136,12 @@ class VillogoGomb : Button
 
 (+/-)  Módosítsd a `SzámolóGomb` osztályt úgy, hogy az 5-ös szám után az 1-es jelenjen meg!
 
-[1-7. pontok megoldása](S1_BEV_P3%201-7.m4v)
-[változók érvenyessége](S1_BEV_P3%207lifecycle.m4v)
-[8-9. pont megoldása](S1_BEV_P3%208-9.m4v)
+(!Vid) 1-7. pontok megoldása
+> [!Video https://storage.altinum.hu/szoft1/S1_BEV_P3%201-7.m4v]
+(!Vid) változók érvenyessége
+> [!Video https://storage.altinum.hu/szoft1/S1_BEV_P3%207lifecycle.m4v]
+(!Vid) 8-9. pont megoldása
+> [!Video https://storage.altinum.hu/szoft1/S1_BEV_P3%208-9.m4v]
 
 # [megoldás](#tab/meg3)
 A `SzámolóGomb` osztály:

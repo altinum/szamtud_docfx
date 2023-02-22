@@ -1,6 +1,7 @@
 ## Visual Studió telepítése
 
-[Visual studio verziók](S1_BEV_01_vs_letoltes.mp4) (Rövid videó)
+(!Vid) Visual studio verziók
+> [!Video https://storage.altinum.hu/szoft1/S1_BEV_01_vs_letoltes.mp4]
 A telepítőkészlet letölthető  [innen](https://visualstudio.microsoft.com/downloads/)
 Az egyetemi géptermekbe az alábbi komponensek kerültek telepítésre:  
 [![](../../images/vs_install.png)](../../images/http://szoft1.comeback.hu/bevezetes/vs_install.png)

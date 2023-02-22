@@ -1,19 +1,26 @@
 # Emory game
 ## Videók
 
-[1. videó](S1emo_1.m4v)
+(!Vid) 1. videó
+> [!Video https://storage.altinum.hu/szoft1/S1emo_1.m4v]
 
-[2. videó](S1emo_2.m4v)
+(!Vid) 2. videó
+> [!Video https://storage.altinum.hu/szoft1/S1emo_2.m4v]
 
-[3. videó](S1emo_3.m4v)
+(!Vid) 3. videó
+> [!Video https://storage.altinum.hu/szoft1/S1emo_3.m4v]
 
-[4. videó](S1emo_4.m4v)
+(!Vid) 4. videó
+> [!Video https://storage.altinum.hu/szoft1/S1emo_4.m4v]
 
-[5. videó](S1emo_5.m4v)
+(!Vid) 5. videó
+> [!Video https://storage.altinum.hu/szoft1/S1emo_5.m4v]
 
-[6. videó](S1emo_6.m4v)
+(!Vid) 6. videó
+> [!Video https://storage.altinum.hu/szoft1/S1emo_6.m4v]
 
-[7. videó](S1emo_7.m4v)
+(!Vid) 7. videó
+> [!Video https://storage.altinum.hu/szoft1/S1emo_7.m4v]
 
 ## Feladat lépésenként
 

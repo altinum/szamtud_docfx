@@ -5,37 +5,50 @@
 
 ### GDI alapok
 
-[Videó](S1graph_1.m4v)
+(!Vid) Videó
+> [!Video https://storage.altinum.hu/szoft1/S1graph_1.m4v]
 [Grafika.doc](Grafika.doc) -- Rövid összefoglaló a GDI grafikáról
 
 ### GDI-ról bővebben
 
-[Toll (Pen) osztály](02_Pen.m4v)
+(!Vid) Toll (Pen) osztály
+> [!Video https://storage.altinum.hu/szoft1/Pen]
 
-[Vonal rajzolása](03_Drawline.m4v)
+(!Vid) Vonal rajzolása
+> [!Video https://storage.altinum.hu/szoft1/03_Drawline.m4v]
 
-[Téglalap rajzolása](04_Drawrectangle.m4v)
+(!Vid) Téglalap rajzolása
+> [!Video https://storage.altinum.hu/szoft1/04_Drawrectangle.m4v]
 
-[Kör (ellipszis) rajzolása](05_Drawellipse.m4v)
+(!Vid) Kör (ellipszis) rajzolása
+> [!Video https://storage.altinum.hu/szoft1/ellipszis]
 
-[Ecset (Brush) osztály](06_Brush.m4v)
+(!Vid) Ecset (Brush) osztály
+> [!Video https://storage.altinum.hu/szoft1/Brush]
 
-[Kitöltött rajzolás](07_Fill.m4v)
+(!Vid) Kitöltött rajzolás
+> [!Video https://storage.altinum.hu/szoft1/07_Fill.m4v]
 
-[Sokszög rajzolás](08_Fillpolygon.m4v)
+(!Vid) Sokszög rajzolás
+> [!Video https://storage.altinum.hu/szoft1/08_Fillpolygon.m4v]
 
-[Paint esemény](09_Paint.m4v)
+(!Vid) Paint esemény
+> [!Video https://storage.altinum.hu/szoft1/09_Paint.m4v]
 
 
 ## IFS fraktálok - Páfránylevél rajzolása
 
-[1. videó](S1graph_2.m4v)
+(!Vid) 1. videó
+> [!Video https://storage.altinum.hu/szoft1/S1graph_2.m4v]
 
-[2. videó](S1graph_3.m4v)
+(!Vid) 2. videó
+> [!Video https://storage.altinum.hu/szoft1/S1graph_3.m4v]
 
-[3. videó](S1graph_4.m4v)
+(!Vid) 3. videó
+> [!Video https://storage.altinum.hu/szoft1/S1graph_4.m4v]
 
-[4. videó](S1graph_5.m4v)
+(!Vid) 4. videó
+> [!Video https://storage.altinum.hu/szoft1/S1graph_5.m4v]
 
 [IFS_fraktl.doc](IFS%20fraktl.doc) -- Előadás handout
 

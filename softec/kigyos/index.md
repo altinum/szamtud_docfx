@@ -2,17 +2,23 @@
 
 ## Videók
 
-[1. rész](S1snake1.m4v)
+(!Vid) 1. rész
+> [!Video https://storage.altinum.hu/szoft1/S1snake1.m4v]
 
-[2. rész](S1sanke2.m4v)
+(!Vid) 2. rész
+> [!Video https://storage.altinum.hu/szoft1/S1sanke2.m4v]
 
-[3. rész](S1sake3.m4v)
+(!Vid) 3. rész
+> [!Video https://storage.altinum.hu/szoft1/S1sake3.m4v]
 
-[4. rész](S1snake4.m4v)
+(!Vid) 4. rész
+> [!Video https://storage.altinum.hu/szoft1/S1snake4.m4v]
 
-[5. rész](S1snake5.m4v)
+(!Vid) 5. rész
+> [!Video https://storage.altinum.hu/szoft1/S1snake5.m4v]
 
-[6. rész](S1snake6.m4v)
+(!Vid) 6. rész
+> [!Video https://storage.altinum.hu/szoft1/S1snake6.m4v]
 
 ## Játék felépítése lépésenként
 

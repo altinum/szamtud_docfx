@@ -19,15 +19,19 @@ Offtopic videó arról, hogy hogy nézett ki az Apollo földreszálló egységé
 
 
 
-["Learning by Doing" megközelítés](S1_BEV_03b_leadning_by_doing.m4v)
+(!Vid) "Learning by Doing" megközelítés
+> [!Video https://storage.altinum.hu/szoft1/S1_BEV_03b_leadning_by_doing.m4v]
 
  Az alábbi videók segítsét nyújhatnak a ZH előtti ismétléshez.
 
-[Elemi változók](S1_BEV_valtozok_es_tipusok-1.m4v)
+(!Vid) Elemi változók
+> [!Video https://storage.altinum.hu/szoft1/S1_BEV_valtozok_es_tipusok-1.m4v]
 
-[Változók viselkedése -1.rész](S1_BEV_7_valtozok1.m4v)
+(!Vid) Változók viselkedése -1.rész
+> [!Video https://storage.altinum.hu/szoft1/S1_BEV_7_valtozok1.m4v]
 
-[Változók viselkedése -2.rész](S1_BEV_7_valtozok2.mp4)
+(!Vid) Változók viselkedése -2.rész
+> [!Video https://storage.altinum.hu/szoft1/S1_BEV_7_valtozok2.mp4]
 
 
 
@@ -117,11 +121,14 @@ if (a==13) MessageBox.Show("Bad day");
 
 ### Első projekt
 
-[Visual Studio első indítása](S1_BEV_02_first_start.m4v)
+(!Vid) Visual Studio első indítása
+> [!Video https://storage.altinum.hu/szoft1/S1_BEV_02_first_start.m4v]
 
-[Új projekt létrehozása](S1_BEV_03a_add_new%20project.m4v)
+(!Vid) Új projekt létrehozása
+> [!Video https://storage.altinum.hu/szoft1/S1_BEV_03a_add_new%20project.m4v]
 
-[Gomb elhelyezése űrlapon](S1_BEV_3c_ne_nyomj_meg.m4v)
+(!Vid) Gomb elhelyezése űrlapon
+> [!Video https://storage.altinum.hu/szoft1/S1_BEV_3c_ne_nyomj_meg.m4v]
 
 ### Másodfokú egyenlet megoldó program
 
@@ -130,24 +137,34 @@ A projekt felépítése az alábbi videókon követhető:
 [1. lépés]()
 > [!Video https://storage.altinum.hu/szoft1/S1_BEV_4a.m4v]
 
-[2. lépés](S1_BEV_4b.m4v)
+(!Vid) 2. lépés
+> [!Video https://storage.altinum.hu/szoft1/S1_BEV_4b.m4v]
 
-[3. lépés](S1_BEV_4c.m4v)
+(!Vid) 3. lépés
+> [!Video https://storage.altinum.hu/szoft1/S1_BEV_4c.m4v]
 
-[4. lépés](S1_BEV_4d.m4v)
+(!Vid) 4. lépés
+> [!Video https://storage.altinum.hu/szoft1/S1_BEV_4d.m4v]
 
-[5. lépés](S1_BEV_4e.m4v)
+(!Vid) 5. lépés
+> [!Video https://storage.altinum.hu/szoft1/S1_BEV_4e.m4v]
 
-[6. lépés](S1_BEV_4f.mp4)
+(!Vid) 6. lépés
+> [!Video https://storage.altinum.hu/szoft1/S1_BEV_4f.mp4]
 
-[Try-catch: hibakezelés](S1_BEV_4g_try_catch.m4v)
+(!Vid) Try-catch: hibakezelés
+> [!Video https://storage.altinum.hu/szoft1/S1_BEV_4g_try_catch.m4v]
 
-[TryParse hibakezelés (Kiegészítő anyag)](S1_BEV_4h_tryparse_extra.m4v)
+(!Vid) TryParse hibakezelés (Kiegészítő anyag)
+> [!Video https://storage.altinum.hu/szoft1/Kiegészítő anyag]
 
 ### Szorzótábla
 
-[Egy gomb kirakása](S1_BEV_5a_1gomb.m4v)
+(!Vid) Egy gomb kirakása
+> [!Video https://storage.altinum.hu/szoft1/S1_BEV_5a_1gomb.m4v]
 
-[10 gomb kirakása](S1_BEV_5b_100gomb.m4v)
+(!Vid) 10 gomb kirakása
+> [!Video https://storage.altinum.hu/szoft1/S1_BEV_5b_100gomb.m4v]
 
-[10x10 gomb kirakása szorzótáblába](S1_BEV_5c_szorzotabla.m4v)
+(!Vid) 10x10 gomb kirakása szorzótáblába
+> [!Video https://storage.altinum.hu/szoft1/S1_BEV_5c_szorzotabla.m4v]

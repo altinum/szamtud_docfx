@@ -2,13 +2,17 @@
 
 ## Videók
 
-[1. videó](S1fgv1-1.m4v)
+(!Vid) 1. videó
+> [!Video https://storage.altinum.hu/szoft1/S1fgv1-1.m4v]
 
-[2. videó](S1fgv2-2.m4v)
+(!Vid) 2. videó
+> [!Video https://storage.altinum.hu/szoft1/S1fgv2-2.m4v]
 
-[3. videó](S1fgv3-3.m4v)
+(!Vid) 3. videó
+> [!Video https://storage.altinum.hu/szoft1/S1fgv3-3.m4v]
 
-[4. videó](S1fgv4-4.m4v)
+(!Vid) 4. videó
+> [!Video https://storage.altinum.hu/szoft1/S1fgv4-4.m4v]
 
 ## 0. feladat: Solution létrehozása
 

@@ -3,21 +3,29 @@
 
 ## Videók
 
-[e1. videó](S1value_Ref1.m4v) -- Érték és referencia típusok
+(!Vid) e1. videó
+> [!Video https://storage.altinum.hu/szoft1/S1value_Ref1.m4v]
 
-[e2. videó](S1value_Ref2.m4v)
+(!Vid) e2. videó
+> [!Video https://storage.altinum.hu/szoft1/S1value_Ref2.m4v]
 
-[1. videó](S1bantumi1.m4v)
+(!Vid) 1. videó
+> [!Video https://storage.altinum.hu/szoft1/S1bantumi1.m4v]
 
-[2. videó](S1bantumi2.m4v)
+(!Vid) 2. videó
+> [!Video https://storage.altinum.hu/szoft1/S1bantumi2.m4v]
 
-[3. videó](S1bantumi3.m4v)
+(!Vid) 3. videó
+> [!Video https://storage.altinum.hu/szoft1/S1bantumi3.m4v]
 
-[4. videó](S1bantumi4.m4v)
+(!Vid) 4. videó
+> [!Video https://storage.altinum.hu/szoft1/S1bantumi4.m4v]
 
-[5. videó](S1bantumi5.m4v)
+(!Vid) 5. videó
+> [!Video https://storage.altinum.hu/szoft1/S1bantumi5.m4v]
 
-[6. videó](S1bantumi6.m4v)
+(!Vid) 6. videó
+> [!Video https://storage.altinum.hu/szoft1/S1bantumi6.m4v]
 
 A játéknak nagyon sok változata létezik elérő szabályokkal. A nyerést éppen ezért nem implementáljuk, csak a játéktáblát. 
 

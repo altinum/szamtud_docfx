@@ -33,9 +33,11 @@ Töltsd le a kbd_hun.txt állományt! Az állomány egy képernyőre kirakható 
 
 A 7. pont egy magyarázatot igényel, erről feltöltök egy videót, nem lesz a ZH-ban, viszont így teljes a példa.
 
-[Megoldás videó 1. része](S1kbdhun1.m4v)
+(!Vid) Megoldás videó 1. része
+> [!Video https://storage.altinum.hu/szoft1/S1kbdhun1.m4v]
 
-[Megoldás videó 2. része](S1kbdhun2.m4v)
+(!Vid) Megoldás videó 2. része
+> [!Video https://storage.altinum.hu/szoft1/S1kbdhun2.m4v]
 
 ## Gombokkal mozgatható játékos
 
@@ -48,7 +50,8 @@ Képzeljetek el egy billentyűkkel négy irányba mozgatható játékost, ami mo
 5. Az űrlap `KeyDown` eseményéhez rendelj eseménykiszolgáló függvényt. 
 6. A `KeyDown` eseménykiszolgálóban annak függvényében, hogy melyik billentyűt nyomták meg, a `játékos` `Top` illetve `Left` tulajdonságát növeld vagy csökkentsd 30-al értelemszerűen. 
 
-[Megoldás videó](S1movingPlayer.m4v)
+(!Vid) Megoldás videó
+> [!Video https://storage.altinum.hu/szoft1/S1movingPlayer.m4v]
 
 ## Véletlenszerűen mozgó ellenségek
 
