@@ -70,12 +70,12 @@ function taskClicked(e) {
 }
 function videoClicked(e){
 	let el = e.target;
-	if(el.nextElementSibling.classList.contains("hidden")){
-		el.nextElementSibling.parentNode.classList.remove("hidden");
+	if(el.parentNode.nextElementSibling.classList.contains("hidden")){
+		el.parentNode.nextElementSibling.classList.remove("hidden");
 		videos[i].children[0].scr=videos[i].children[0].target;
 		
 	}else{
-		el.nextElementSibling.parentNode.classList.add("hidden");
+		el.parentNode.nextElementSibling.classList.add("hidden");
 	}
 	
 }
