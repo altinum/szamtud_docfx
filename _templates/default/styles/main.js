@@ -35,6 +35,8 @@ function preprocess(){
 
 	for(let i=0;i<videos.length;i++){
 		videos[i].classList.add("hidden");
+		videos[i].children[0].target=videos[i].children[0].scr;
+		videos[i].children[0].scr="";
 	}
 	
 }
@@ -69,9 +71,11 @@ function taskClicked(e) {
 function videoClicked(e){
 	let el = e.target;
 	if(el.nextElementSibling.classList.contains("hidden")){
-		el.nextElementSibling.classList.remove("hidden");
+		el.nextElementSibling.parentNode.classList.remove("hidden");
+		videos[i].children[0].scr=videos[i].children[0].target;
+		
 	}else{
-		el.nextElementSibling.classList.add("hidden");
+		el.nextElementSibling.parentNode.classList.add("hidden");
 	}
 	
 }
