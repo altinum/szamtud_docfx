@@ -33,8 +33,8 @@ function preprocess(){
 	
 	let videos=$(".embeddedvideo");
 
-	for(let i=0;i<v.length;i++){
-		v[i].classList.add("hidden");
+	for(let i=0;i<videos.length;i++){
+		videos[i].classList.add("hidden");
 	}
 	
 }
