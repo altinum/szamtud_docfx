@@ -52,6 +52,7 @@ Természetesen kombinálhatók is. A  **^p.k$**  kifejezés csak akkor igaz, ha 
 
 ![1615368531680.png](../../images/1615368531680.png)
 
+
 ``` csharp
 public partial class Form1 : Form
 {
