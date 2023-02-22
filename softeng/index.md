@@ -7,7 +7,6 @@
 ## Segédanyagok egész félévre
 
 
-
 - [Adatbázist létrehozázó SQL generálása SSMS segítségével](./knowledge_base/sql_generalasa_ssms-bol_adatbazis_letrehozasara/)
 
 - [Honnét lesz SQL szerverem?](./knowledge_base/honnet_lesz_sql_szerverem/)
