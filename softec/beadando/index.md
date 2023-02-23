@@ -1,6 +1,6 @@
 # A beadandó feladatok értékelése
 
-## Feladatválasztás
+## Feladatválasztás 
 
 Feladat szabadon választható a honlapon közzétett listából. A választást nem kell közölni. 
 
