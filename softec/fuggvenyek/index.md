@@ -182,7 +182,7 @@ namespace Pascal
 > [!Tip]
 > A ClientRectangle.Width kifejezés értéke az ablak belső mérete – keretek nélkül – pixelekben. (Ablak esetén a Width és a Height a keretet is magában foglalja, ami függ Windows verziótól és a beállított témától is.) Az első sort az ablak szélességének felével érdemes jobbra tolni, amiből – ha nagyon szőrszálhasokgatunk – ki kell vonni egy fél elemszélességnyit.
 
-## Extra feladat “versenyen kívül”
+## 3. Sakktábla
 
 (+/-) Csináljatok sakktáblát. Azaz csak minden második négyzetet jelenítsétek meg.
 
