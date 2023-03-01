@@ -14,10 +14,10 @@
   items:
   - name: "Első hét"
     href: masodfoku\index.md
-#- name: "2. hét"
-#  items:
-#    - name: "Függvények és vezérlőszerkezetek"
-#      href: fuggvenyek\index.md
+- name: "2. hét"
+  items:
+    - name: "Függvények és vezérlőszerkezetek"
+      href: fuggvenyek\index.md
 #- name: "3. hét"
 #  items:
 #    - name: "Osztályok példányosítása"
