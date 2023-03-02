@@ -6,9 +6,9 @@ A mindennapi munka során egyre többen használunk kisebb-nagyobb saját fejles
 
 Gazdasági szakembereknél a feladatok jelentős része adatgyűjtéssel és -- feldolgozással kapcsolatos, így a két, egymásra épülő kurzusból álló tárgyfüzér is eköré épül. Az oktatásban a C# nyelvet használjuk MS-SQL adatbázisok elérésére. Reméljük, hogy a következő két félév alatt alatt gyakorlatban is alkalmazható tudásra lehet szert tenni:
 
-2. félév: A **Szoftvertechnológia I** „learning by doing” megközelítéssel játékos feladatokon keresztül vezet be az objektumorientált programozásba .NET környezetben, C# nyelven, Visual Studio fejlesztőkörnyezetben. 
+2. félév: A **Softweare technológia** „learning by doing” megközelítéssel játékos feladatokon keresztül vezet be az objektumorientált programozásba .NET környezetben, C# nyelven, Visual Studio fejlesztőkörnyezetben. 
 
-3. félév: A *Szoftvertechnológia I*-re épülő **Szoftvertechnológia II**-t érdemes az **Adatbázisok** tárgy után felvenni - így van a mintatantervben is. A *Szoftvertechnológia II.* már közelebb áll az üzleti életben előforduló problémákhoz: bemutatja, hogyan lehet SQL adatbázishoz kezelőfelületet építeni C# alapokon. A tárgy keretében adatbázisra épülő webalkalmazásokat fejleszthetünk, melyek Azure felhőben kerülnek hosztolásra.
+3. félév: A *Szoftvertechnológia I*-re épülő **Software engineering**-t érdemes az **Adatbázisok** tárgy után felvenni - így van a mintatantervben is. A *Software engineering* már közelebb áll az üzleti életben előforduló problémákhoz: bemutatja, hogyan lehet SQL adatbázishoz kezelőfelületet építeni C# alapokon. A tárgy keretében adatbázisra épülő webalkalmazásokat fejleszthetünk, melyek Azure felhőben kerülnek hosztolásra.
 
 4. félév: Az **Informatikai rendszerek fejlesztése** tárgy az alapvető adatbázis-kezelési és szoftverfejlesztési ismeretek birtokában már a projekt szemszögéből tekinti a szoftverfolyamatot. Szerepet kap a csapatmunka, a verziókezelés és a dokumentációkészítés is. Szóba kerülnek a fejlesztési metodológiák és a szervezési kérdések is.
 
