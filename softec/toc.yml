@@ -1,5 +1,5 @@
-#- name: "A tárgy célja, követelmények"
-#  href: kovetelmenyek\index.md
+- name: "A tárgy célja, követelmények"
+  href: kovetelmenyek\index.md
 - name: "Tudásbázis"
   items:
     - name: "Visual Studió telepítése"
