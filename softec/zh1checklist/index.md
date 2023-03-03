@@ -17,7 +17,7 @@ Az ZH jelenléti formában kerül megtartásra. Az osztályzással és a hiányz
 
 4. Eseménykiszolgáló rendelése az űrlap `Load` eseményeihez. (Dupla kattintás tervezőből az űrlap üres részére.)
 	
-5. Konverzió elemi típusok között, például szöveg számmá alakítása , vagy szám szöveggé alakítása. Emlékeztetőül: másodfokú egyenletet megoldó mintaalkalmazásban a `TextBox` típusú beviteli mező `Text` tulajdonságával kiolvasott értéket kellett `double` típusú változóba olvasni a ` double.Parse()` metódus segítségével. A gyökök kiszámítását követően a szintén`double` típusú eredményt a `.ToString()` metódus segítségével alakítottuk szöveggé.
+5. Konverzió elemi típusok között, például szöveg számmá alakítása , vagy szám szöveggé alakítása. Emlékeztetőül: másodfokú egyenletet megoldó mintaalkalmazásban a `TextBox` típusú beviteli mező `Text` tulajdonságával kiolvasott értéket kellett `double` típusú változóba olvasni a ` double.Parse()` metódus segítségével. A gyökök kiszámítását követően a szintén`double` típusú eredményt a `.ToString()` metódus segítségével alakítottuk szöveggé. Kezelni kell a típuskonverzió során felmerülő futásifejű hibákat, például `double.TryParse()` használatával. 
 
 	Példafeladat: 
 	- Az űrlapon helyezz el két beviteli mezőt és egy gombot, majd
@@ -25,7 +25,7 @@ Az ZH jelenléti formában kerül megtartásra. Az osztályzással és a hiányz
 	- A gomb kattintás (`Click`) eseményéhez rendelj esemény kiszolgáló függvényt, 
 	- az eseménykiszolgáló jelenítse meg az első beviteli mezőbe írt érték kétszeresét a második beviteli mezőben.
 
-6. Vezérlő létrehozása kódból és elhelyezése az űrlapon. Például a `Button` osztály egy példányának létrehozása gomb néven (`Button gomb = new Button();`) alapvető tulajdonságainak, mint szélesség, magasság, pozíció, felirat, szín beállítása; hozzáadás az űrlap vezérlőinek listájához (`Controls.add(gomb);`)
+6. Vezérlő létrehozása kódból és elhelyezése az űrlapon. Például a `Button` osztály egy példányának létrehozása gomb néven (`Button gomb = new Button();`) alapvető tulajdonságainak, mint szélesség, magasság, pozíció, felirat, szín beállítása; hozzáadás az űrlap vezérlőinek listájához (`Controls.Add(gomb);`)
 
 7. `for` ciklusok szervezése. Például tíz gomb kirakása egymás mellé. Előfordulhatnak egymásba ágyazott ciklusok is, mint például 10 x 10 négyzet alakú gomb kirakása.
 
