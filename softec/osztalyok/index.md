@@ -271,7 +271,7 @@ Rakd ki egy 10x10-es gombokból álló mátrix gombjait úgy, hogy csak a főát
 
 (+/-) Helyezz el gombokat 10 sorban úgy, hogy minden sorban egyel több gomb legyen: az elsőbe egy, a másodikban kettő, a harmadikban három, stb. Tipp: a belső ciklus bennmaradási feltételében felhasználhatod a külső ciklus ciklusváltozójának értékét.
 
-(+/-) Minden gomb legyen 20x20 pixel méretű.
+(+/-) Minden gomb legyen 20x20 pixel méretű. 
 
 (+/-) Told el a gombok `Left` tulajdonságon keresztül beállított vízszintes koordinátáját úgy, hogy a gombokból álló háromszög bal széle az ablak középvonalába essen. Tipp: az ablak szélességét a `Width` tulajdonságán keresztül tudod kiolvasni. Ha a gombok `Left` tulajdonságának beállításánál `Width/2` értéket hozzáadsz a korábban számított értékhez.
 
