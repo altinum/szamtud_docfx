@@ -4,10 +4,10 @@
   items:
     - name: "Visual Studió telepítése"
       href: vsinstall\index.md
-    - name: "Levelezős követelmények"
-      href: kovetelmenyek_levelezo\index.md
-    - name: "Módosított követelmények"
-      href: levelezo_beadando\index.md
+#    - name: "Levelezős követelmények"
+#     href: kovetelmenyek_levelezo\index.md
+#    - name: "Módosított követelmények"
+#      href: levelezo_beadando\index.md
     - name: "Útmutató projektek feltöltéséhez"
       href: projektfeltoltes\index.md
 - name: "1. hét"
@@ -18,16 +18,16 @@
   items:
     - name: "Függvények és vezérlőszerkezetek"
       href: fuggvenyek\index.md
-#- name: "3. hét"
-#  items:
-#    - name: "Osztályok példányosítása"
-#      href: osztalyok\index.md
-#- name: "4. hét - 1. Géptermi ZH"
-#  items:
-#    - name: "ZH Checklist"
-#     href: zh1checklist\index.md
-#   - name: "Szoftvertechnológia I összefoglaló feladatsor"
-#      href: osszefoglalo_levelezo\index.md
+- name: "3. hét"
+  items:
+    - name: "Osztályok példányosítása"
+      href: osztalyok\index.md
+- name: "4. hét - 1. Géptermi ZH"
+  items:
+    - name: "ZH Checklist"
+     href: zh1checklist\index.md
+   - name: "Szoftvertechnológia I összefoglaló feladatsor"
+      href: osszefoglalo_levelezo\index.md
 #- name: "5. hét"
 #  items:
 #    - name: "Képkirakós játék"
