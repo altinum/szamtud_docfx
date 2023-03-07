@@ -26,11 +26,11 @@ A nappali képzésben résztvevő hallgatók esetén a TVSZ szerint **gyakorlato
 
 ### Számonkérés
 
-A jegy a félév során a 3 gépteremben írt, egyenként 27 pontos ZH és egy önállóan elkészített 20 pontos projektfeladat alapján kerül meghatározásra.
+A jegy a félév során a 3 gépteremben írt, egyenként 40 pontos ZH és egy önállóan elkészített 20 pontos projektfeladat alapján kerül meghatározásra. A legrosszabbul sikerült ZH eredménye nem kerül beszámításra az összpontszámba. 
 
 - ZH-k a gyakorlatok idejében, gépteremben lesznek, gyakorlati programozási feladatot kell megoldani lépésekre bontott feladatsor mentén.
 
-- A projekt feladatot az utolsó gyakorlatig Moodle-be fel kell tölteni, az utolsó gyakorlaton pedig be kell mutatni.  
+- A projekt feladatot az utolsó gyakorlaton önállóan kell felépíteni, de előre fel lehet készülni rá. 
 
 A jegyek az alábbi táblázat szerint alakulnak:
 
@@ -42,7 +42,7 @@ A jegyek az alábbi táblázat szerint alakulnak:
 
 ### Pótlási lehetőség
 
-**Egy meg nem írt ZH vagy projektbemutató pótlására van lehetőség a vizsgaidőszak első péntekén.**  A késedelmesen feltöltött projektfeladatok nem kerülnek értékelésre, a bemutató pótolható. 
+**Egy meg nem írt ZH vagy projekt pótlására van lehetőség a vizsgaidőszak első péntekén.**  
 
 
 
