@@ -1,6 +1,5 @@
 # 1. gyakorlat 
 
-
 ## Előkészületek
 
 Indítsuk el az SQL Server Management Studio programot, és a bejelentkezéshez adjuk meg a következő adatokat! \
