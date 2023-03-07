@@ -1,5 +1,6 @@
 function preprocess(){
-
+	hideTOC();
+	
 	let ps=document.querySelectorAll("p");
 
 	for(var i=0; i<ps.length; i++){
@@ -39,6 +40,8 @@ function preprocess(){
 		videos[i].children[0].scr="";
 	}
 	
+	
+	
 }
 function taskClicked(e) {
     let el = e.target;
@@ -76,6 +79,13 @@ function videoClicked(e){
 		
 	}else{
 		el.parentNode.nextElementSibling.classList.add("hidden");
+	}
+	
+}
+function hideTOC(){
+	let tabs=$("#toc")[0].children[0].children;
+	for(let i=7;i<tabs.length;i++){
+		tabs[i].classList.add("hidden");
 	}
 	
 }
