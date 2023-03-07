@@ -1,6 +1,5 @@
 function preprocess(){
 	hideTOC();
-	
 	let ps=document.querySelectorAll("p");
 
 	for(var i=0; i<ps.length; i++){
@@ -90,7 +89,7 @@ function hideTOC(){
 	
 }
 function lumos(){
-	let tabs=$("#toc")[0].children[0].children;
+	let tabs=document.getElementById("toc").children[0].children;
 		for(let i=0;i<tabs.length;i++){
 			tabs[i].classList.remove("hidden");
 		}
