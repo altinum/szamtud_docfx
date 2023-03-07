@@ -26,7 +26,7 @@
   items:
   - name: "ZH Checklist"
   href: zh1checklist\index.md
- - name: "Szoftvertechnológia I összefoglaló feladatsor"
+  - name: "Szoftvertechnológia I összefoglaló feladatsor"
   href: osszefoglalo_levelezo\index.md
 - name: "5. hét"
   items:
