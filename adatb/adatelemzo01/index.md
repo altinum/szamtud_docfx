@@ -13,7 +13,6 @@ Indítsuk el az SQL Server Management Studio programot, és a bejelentkezéshez 
 |  Password | Password123  |
 
 
-
 # A gyakorlati feladatsor tartalma:
 + 1/1 Egyszerű lekérdezések, konstansok, operátorok (a és b feladatsorok)
 + 1/2 Összesítés és csoportosítás
