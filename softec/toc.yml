@@ -25,7 +25,7 @@
 - name: "4. hét - 1. Géptermi ZH"
   items:
   - name: "ZH Checklist"
-  href: zh1checklist\index.md
+  href: zh1checklist\index.md 
   - name: "Szoftvertechnológia I összefoglaló feladatsor"
   href: osszefoglalo_levelezo\index.md
 - name: "5. hét"
