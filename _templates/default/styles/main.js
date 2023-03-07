@@ -82,7 +82,7 @@ function videoClicked(e){
 	
 }
 function hideTOC(){
-	let tabs=$("#toc")[0].children[0].children;
+	let tabs=document.getElementById("toc").children[0].children;
 	for(let i=7;i<tabs.length;i++){
 		tabs[i].classList.add("hidden");
 	}
