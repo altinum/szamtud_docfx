@@ -6,6 +6,7 @@ A videók alapján építsétek fel az alkalmazást. Ezt az anyagot gyakorlásna
 
 Jó felkészülést!
 
+
 (!Vid) 1. videó
 > [!Video https://storage.altinum.hu/szoft1/S1quiz2_1.m4v]
 
