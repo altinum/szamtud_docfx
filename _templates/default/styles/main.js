@@ -1,5 +1,5 @@
 function preprocess(){
-	hideTOC();
+	
 	let ps=document.querySelectorAll("p");
 
 	for(var i=0; i<ps.length; i++){
@@ -38,8 +38,7 @@ function preprocess(){
 		videos[i].children[0].target=videos[i].children[0].scr;
 		videos[i].children[0].scr="";
 	}
-	
-	
+	hideTOC();
 	
 }
 function taskClicked(e) {
