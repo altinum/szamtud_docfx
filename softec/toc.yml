@@ -28,75 +28,75 @@
   href: zh1checklist\index.md
   - name: "Szoftvertechnológia I összefoglaló feladatsor"
   href: osszefoglalo_levelezo\index.md
-#- name: "5. hét"
-#  items:
-#    - name: "Képkirakós játék"
-#      href: kepkirakos\index.md
-#- name: "6. hét"
-#  items:
-#    - name: "Feleltválasztós játék"
-#      href: feleletvalasztos\index.md
-#- name: "7. hét"
-#  items:
-#      - name: "Kígyós játék"
-#        href: kigyos\index.md
-#- name: "8. hét - 2. Géptermi ZH"
-#  items:
-#    - name: "Checklist az második ZH-hoz"
-#      href: zh2checklist\index.md
-#- name: "9. hét"
-#  items:
-#    - name: "Emory game"
-#      href: emory\index.md
-#- name: "10. hét"
-#  items:
-#    - name: "Grafika"
-#      href: grafika_ifs_reszletes\index.md
-#- name: "11. hét"
-#  items:
-#    - name: "Bantumi játék"
-#      href: bantumi\index.md
-#- name: "12. hét - 3. Géptermi ZH"
-#  items:
-#    - name: "Előadás: Aknakereső"
-#      href: amoba\index.md
-#    - name: "Gyakorló feladatok ZH-ra"
-#      items:
-#      - name: "Kvíz játék kérdéslistával"
-#        href: quiz2\index.md
-#      - name: "Villámkérdések"
-#        href: villamkerdesek\index.md
-#      - name: "Szópároztatós játék"
-#        href: szoparoztatos\index.md
-#      - name: "PixelArt"
-#        href: pixelart\index.md
-#- name: "13. hét - Projektfeladat bemutatók"
-#  items:
-#    - name: "A beadandó feladatok értékelése"
-#      href: beadando\index.md
-#    - name: "A beszámolók menete"
-#      href: teamsbeszamolok\index.md
-#- name: "Szoftvertechnológia I feladatlap-gyűjtemény"
-#  href: 2021\index.md
-#- name: "Projektfeladatok"
-#  items:
-#  - name: "A beadandó feladatok értékelése"
-#    href: beadando\index.md
-#  - name: "A beszámolók menete"
-#    href: teamsbeszamolok\index.md
-#  - name: "Projektfeladat: Életjáték"
-#    href: beadando_game_of_life\index.md
-#  - name: "Projektfeladat: Hajós oktató"
-#    href: beadando_hajos\index.md
-#  - name: "Projektfeladat:  Memóriajáték folytatása"
-#    href: beadando_quiz_numerikus\index.md
-#  - name: "Projektfeladat: Szótanító játék"
-#    href: beadando_szotanito\index.md
-#  - name: "Projektfeladat:  Akasztófa játék"
-#    href: beadando_hangman\index.md
-#  - name: "Projektfeladat:  Labirintus játék"
-#    href: beadando_maze\index.md
-#  - name: "Projektfeladat:  Kígyós játék almákkal"
-#    href: beadando_snake\index.md
-#  - name: "Projektfeladat:  „Keresd a különbséget” játék"
-#    href: beadando_spot_the_difference\index.md
+- name: "5. hét"
+  items:
+    - name: "Képkirakós játék"
+      href: kepkirakos\index.md
+- name: "6. hét"
+  items:
+    - name: "Feleltválasztós játék"
+      href: feleletvalasztos\index.md
+- name: "7. hét"
+  items:
+      - name: "Kígyós játék"
+        href: kigyos\index.md
+- name: "8. hét - 2. Géptermi ZH"
+  items:
+    - name: "Checklist az második ZH-hoz"
+      href: zh2checklist\index.md
+- name: "9. hét"
+  items:
+    - name: "Emory game"
+      href: emory\index.md
+- name: "10. hét"
+  items:
+    - name: "Grafika"
+      href: grafika_ifs_reszletes\index.md
+- name: "11. hét"
+  items:
+    - name: "Bantumi játék"
+      href: bantumi\index.md
+- name: "12. hét - 3. Géptermi ZH"
+  items:
+    - name: "Előadás: Aknakereső"
+      href: amoba\index.md
+    - name: "Gyakorló feladatok ZH-ra"
+      items:
+      - name: "Kvíz játék kérdéslistával"
+        href: quiz2\index.md
+      - name: "Villámkérdések"
+        href: villamkerdesek\index.md
+      - name: "Szópároztatós játék"
+        href: szoparoztatos\index.md
+      - name: "PixelArt"
+        href: pixelart\index.md
+- name: "13. hét - Projektfeladat bemutatók"
+  items:
+    - name: "A beadandó feladatok értékelése"
+      href: beadando\index.md
+    - name: "A beszámolók menete"
+      href: teamsbeszamolok\index.md
+- name: "Szoftvertechnológia I feladatlap-gyűjtemény"
+  href: 2021\index.md
+- name: "Projektfeladatok"
+  items:
+  - name: "A beadandó feladatok értékelése"
+    href: beadando\index.md
+  - name: "A beszámolók menete"
+    href: teamsbeszamolok\index.md
+  - name: "Projektfeladat: Életjáték"
+    href: beadando_game_of_life\index.md
+  - name: "Projektfeladat: Hajós oktató"
+    href: beadando_hajos\index.md
+  - name: "Projektfeladat:  Memóriajáték folytatása"
+    href: beadando_quiz_numerikus\index.md
+  - name: "Projektfeladat: Szótanító játék"
+    href: beadando_szotanito\index.md
+  - name: "Projektfeladat:  Akasztófa játék"
+    href: beadando_hangman\index.md
+  - name: "Projektfeladat:  Labirintus játék"
+    href: beadando_maze\index.md
+  - name: "Projektfeladat:  Kígyós játék almákkal"
+    href: beadando_snake\index.md
+  - name: "Projektfeladat:  „Keresd a különbséget” játék"
+    href: beadando_spot_the_difference\index.md
