@@ -89,5 +89,11 @@ function hideTOC(){
 	}
 	
 }
+function lumos(){
+	let tabs=$("#toc")[0].children[0].children;
+		for(let i=0;i<tabs.length;i++){
+			tabs[i].classList.remove("hidden");
+		}
+}
 window.addEventListener('load', 
   preprocess(), false);
