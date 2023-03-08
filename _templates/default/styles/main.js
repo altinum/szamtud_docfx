@@ -90,21 +90,21 @@ function taskClicked(e) {
             ele.classList.remove("tg_success");
             ele.classList.add("tg_fail");
             newStatus = "-";
-		onsole.log("boing");
-		console.log(ele.parentNode);
+		showHint(e.target.parentNode.parentNode.children[e.target.parentNode.parentNode.children.length-1]);
         } else if (ele.classList.contains("tg_fail")) {
             ele.classList.remove("tg_fail");
             ele.classList.add("tg_neutral");
             newStatus = "0";
+		hideHint(e.target.parentNode.parentNode.children[e.target.parentNode.parentNode.children.length-1]);
         }
 
     ws.send(`S ${el.id.substring(4)} ${newStatus}`);
 }
-function showHint(){
-
+function showHint(p){
+	p.classList.remove("hidden");
 }
-function hideHint(){
-
+function hideHint(p){
+	p.classList.add("hidden");
 }
 function videoClicked(e){
 	let el = e.target;
