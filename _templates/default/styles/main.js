@@ -111,7 +111,7 @@ function hideTOC(){
 		}
 	}catch(er){
 		k++;
-		settimeout(hideTOC,k*100);
+		setTimeout(hideTOC,k*100);
 	}
 	
 	
