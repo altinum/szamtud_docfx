@@ -30,15 +30,15 @@
 
 (!Hint) Írd le azt a kódrésztelet, amit 10x10 gombot kirak az űrlapra! [!kódrészlet...]
 
-(!Hint) Sorolj fel 5-öt a Form osztály tulajdonságai közül!
+(!Hint) Sorolj fel 5-öt a Form osztály tulajdonságai közül! [!kódrészlet...]
 
-(!Hint) Sorolj fel 2-öt a Form osztály metódusai közül!
+(!Hint) Sorolj fel 2-öt a Form osztály metódusai közül! [!kódrészlet...]
 
-(!Hint) Sorolj fel 5-öt a Form osztály eseményai közül!
+(!Hint) Sorolj fel 5-öt a Form osztály eseményai közül! [!kódrészlet...]
 
-(!Hint) Melyik osztálytól ötököl a Példa osztály?  `class Példa {...}`
+(!Hint) Melyik osztálytól örököl a Példa osztály?  `class Példa {...}` [!kódrészlet...]
 
-(!Hint) Mikor következnek be az alábbi események pl. egy gomb esetén?  
+(!Hint) Mikor következnek be az alábbi események pl. egy gomb esetén? [!kódrészlet...]
     - MouseUp  
     - MouseDown  
     - MouseMove  
