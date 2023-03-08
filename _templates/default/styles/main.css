@@ -302,3 +302,7 @@ nav svg{
     height: 75%;
     margin-top: 0.5rem
 }
+.hint{
+    color:gray;
+    padding:2px;
+}
