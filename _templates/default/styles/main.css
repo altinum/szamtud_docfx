@@ -93,24 +93,29 @@
             display: inline-block;*/
             /*float: left;
             width: 20px;*/
+            border-radius: 4px;
             padding-left: 4px;
             padding-right: 4px;
         }
     
     .tg_success :nth-child(2) {
         background: var(--succes-color) !important;
+        color: white;
     }
     .tg_success :first-child {
         color: var(--succes-color) !important;
+        color: white;
     }
     
     
     .tg_fail :last-child {
         background: var(--fail-color) !important;
+        color: white;
     }
     
     .tg_fail :first-child {
         color: var(--fail-color) !important;
+        color: white;
     }
 
 
