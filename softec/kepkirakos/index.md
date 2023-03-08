@@ -28,7 +28,7 @@
 
 (!Hint) Hol lehet átírni, hogy melyik űrlappal induljon az alkalmazás? [!A Program.cs Main függvényében.]
 
-(!Hint) Írd le azt a kódrésztelet, amit 10x10 gombot kirak az űrlapra!
+(!Hint) Írd le azt a kódrésztelet, amit 10x10 gombot kirak az űrlapra! [!kódrészlet...]
 
 (!Hint) Sorolj fel 5-öt a Form osztály tulajdonságai közül!
 
