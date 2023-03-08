@@ -54,6 +54,7 @@
         margin-right: -23px;
         margin-bottom:5px;*/
         cursor:pointer;
+        color:rgb(102,102,102);
     }
     
     /* .tg_task :hover{
@@ -118,8 +119,8 @@
 :root {
     --succes-color: green;
     --fail-color: red;
-    --neutral-color: lightgray;
-    --end-color: lightgray;
+    --neutral-color: rgb(241,241,241);
+    --end-color: rgb(241,241,241);
     --start-color: green;
 }
 
