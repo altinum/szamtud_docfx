@@ -1,7 +1,7 @@
 function preprocess(){
 	setTimeout(hideTOC, 10);
 	let ps=document.querySelectorAll("p");
-
+	let taskCount=0;
 	for(var i=0; i<ps.length; i++){
 		if(ps[i].innerHTML.indexOf("(+/-)")==0){
 			let t=document.createElement("span");
@@ -9,7 +9,9 @@ function preprocess(){
 			t.classList.add("tg_task");
 			t.classList.add("tg_taskctrl");
 			t.classList.add("tg_neutral");
-			t.id="task"+i;
+			
+			taskCount++;
+			t.id="task"+taskCount;
 			
 			let text=ps[i].innerText;
 			text=text.substring(6,text.length-1);
