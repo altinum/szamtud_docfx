@@ -4,7 +4,7 @@ function preprocess(){
 	let ps=document.querySelectorAll("p");
 	let taskCount=0;
 	for(var i=0; i<ps.length; i++){
-		if(ps[i].innerHTML.indexOf("(+/-)")==0||ps[i].innerHTML.indexOf("(!Hint)")==0)
+		if(ps[i].innerHTML.indexOf("(+/-)")==0||ps[i].innerHTML.indexOf("(!Hint)")==0){
 			let t=document.createElement("span");
 			t.innerHTML="<span class=\"tg_cnt\">#"+taskCount+"</span><span>✓</span><span>?</span>";
 			t.classList.add("tg_task");
