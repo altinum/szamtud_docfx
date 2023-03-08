@@ -45,7 +45,7 @@
     - MouseEnter  
     - MouseLeave  
     
-(!Hint) Példaként adott az alábbi esemény-kiszolgáló függvény. Milyen információt hordoz az  _e_  paraméter?
+(!Hint) Példaként adott az alábbi esemény-kiszolgáló függvény. Milyen információt hordoz az  _e_  paraméter? [!kódrészlet...]
 ``` csharp
 void b_MouseDown(object sender, MouseEventArgs e)  
 {  
