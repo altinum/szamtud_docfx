@@ -1,5 +1,6 @@
 function preprocess(){
 	setTimeout(hideTOC, 10);
+	setTimeout(hideTOC, 200);
 	let ps=document.querySelectorAll("p");
 	let taskCount=0;
 	for(var i=0; i<ps.length; i++){
