@@ -16,7 +16,7 @@ function preprocess(){
 			t.id="task"+taskCount;
 			
 			let text=ps[i].innerText;
-			text=text.substring(6,text.length-1);
+			text=text.substring(6,text.length);
 			ps[i].innerHTML="";
 			
 			ps[i].appendChild(t);
