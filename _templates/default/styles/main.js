@@ -50,10 +50,12 @@ function preprocess(){
 			hint=hint.substring(text.indexOf("[!"),hint.length-1);
 			text=text.substring(8,text.indexOf("[!")-1);
 			p.innerHTML=hint;
-			ps[i].innerHTML=text;
+			
 			p.classList.add("hidden");
 			p.classList.add("hint");
+			ps[i].innerHTML="";
 			ps[i].appendChild(t);
+			ps[i].innerHTML+=text;
 			ps[i].appendChild(p);
 			ps[i].addEventListener("click", taskClicked);
 		}
