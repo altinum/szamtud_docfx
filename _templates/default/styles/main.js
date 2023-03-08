@@ -1,9 +1,5 @@
 function preprocess(){
-	try {
-	  setTimeout(hideTOC, 10);
-	  setTimeout(hideTOC, 200);
-	} catch (error) {
-	}
+	hideTOC();
 	
 	let ps=document.querySelectorAll("p");
 	let taskCount=0;
@@ -36,6 +32,19 @@ function preprocess(){
 			ps[i].appendChild(a);
 			ps[i].addEventListener("click", videoClicked);
 		}
+		else if(ps[i].innerHTML.indexOf("(!Hint)")==0){
+			let hint=ps[i].innerText;
+			let text=ps[i].innerText;
+			let p=document.createElement("p");
+
+			hint=hint.substring(text.indexOf("[!"),hint.length-1);
+			text=text.substring(8,text.indexOf("[!")-1);
+			p.innerHTML=hint;
+			ps[i].innerHTML=text;
+			p.classList.add("hidden");
+			p.classList.add("hint");
+			ps[i].appendChild(p);
+		}
 	}
 	
 	let videos=$(".embeddedvideo");
@@ -67,6 +76,7 @@ function taskClicked(e) {
             ele.classList.remove("tg_success");
             ele.classList.add("tg_fail");
             newStatus = "-";
+		console.log("lll "+ele);
         } else if (ele.classList.contains("tg_fail")) {
             ele.classList.remove("tg_fail");
             ele.classList.add("tg_neutral");
@@ -74,6 +84,12 @@ function taskClicked(e) {
         }
 
     ws.send(`S ${el.id.substring(4)} ${newStatus}`);
+}
+function showHint(){
+
+}
+function hideHint(){
+
 }
 function videoClicked(e){
 	let el = e.target;
@@ -87,10 +103,17 @@ function videoClicked(e){
 	
 }
 function hideTOC(){
-	let tabs=document.getElementById("toc").children[0].children;
-	for(let i=7;i<tabs.length;i++){
-		tabs[i].classList.add("hidden");
+	let k=0;
+	try{
+		let tabs=document.getElementById("toc").children[0].children;
+		for(let i=7;i<tabs.length;i++){
+			tabs[i].classList.add("hidden");
+		}
+	}catch(er){
+		k++;
+		settimeout(hideTOC,k*100);
 	}
+	
 	
 }
 function lumos(){
