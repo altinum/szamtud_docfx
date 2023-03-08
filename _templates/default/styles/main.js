@@ -90,7 +90,8 @@ function taskClicked(e) {
             ele.classList.remove("tg_success");
             ele.classList.add("tg_fail");
             newStatus = "-";
-		console.log("lll "+ele);
+		onsole.log("boing");
+		console.log(ele.parentNode);
         } else if (ele.classList.contains("tg_fail")) {
             ele.classList.remove("tg_fail");
             ele.classList.add("tg_neutral");
