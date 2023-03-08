@@ -52,7 +52,6 @@ void b_MouseDown(object sender, MouseEventArgs e)
 ...  
 }
 ```
-
 ## A feladatmegoldás lépései gyakorlatra
 
 ### Első fázis – új osztály származtatása
