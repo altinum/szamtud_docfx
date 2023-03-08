@@ -4,14 +4,15 @@ function preprocess(){
 	let ps=document.querySelectorAll("p");
 	let taskCount=0;
 	for(var i=0; i<ps.length; i++){
-		if(ps[i].innerHTML.indexOf("(+/-)")==0||ps[i].innerHTML.indexOf("(!Hint)")==0){
+		if(ps[i].innerHTML.indexOf("(+/-)")==0){
+			taskCount++;
 			let t=document.createElement("span");
 			t.innerHTML="<span class=\"tg_cnt\">#"+taskCount+"</span><span>✓</span><span>?</span>";
 			t.classList.add("tg_task");
 			t.classList.add("tg_taskctrl");
 			t.classList.add("tg_neutral");
 			
-			taskCount++;
+			
 			t.id="task"+taskCount;
 			
 			let text=ps[i].innerText;
@@ -33,6 +34,15 @@ function preprocess(){
 			ps[i].addEventListener("click", videoClicked);
 		}
 		else if(ps[i].innerHTML.indexOf("(!Hint)")==0){
+			taskCount++;
+			let t=document.createElement("span");
+			t.innerHTML="<span class=\"tg_cnt\">#"+taskCount+"</span><span>✓</span><span>?</span>";
+			t.classList.add("tg_task");
+			t.classList.add("tg_taskctrl");
+			t.classList.add("tg_neutral");
+			
+			
+			t.id="task"+taskCount;
 			let hint=ps[i].innerText;
 			let text=ps[i].innerText;
 			let p=document.createElement("p");
