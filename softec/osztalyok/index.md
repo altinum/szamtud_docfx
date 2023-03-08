@@ -28,15 +28,21 @@
 
 ## Ellenőrző kérdések a videókhoz
 
-1. Mire való az űrlap konstruktorában az `InitializeComponent()` metódushívás?
-2. Írd le azt a néhány kódsort, mely `Gomb` néven osztályt származtat a `Button` osztályból!
-3. Mikor fut le egy osztály konstruktora?
-4. Hogyan készítesz konstruktort egy osztályhoz?
-5. Írd le azt a néhány kódsort, mely létrehozza a `Button` osztály egy példányát, majd elhelyezi az űrlapon!
-6. Írd le azt a néhány kódsort, mely `SajátGomb` néven származtat egy osztályt a `Button` osztályból!
-7. Írj példát `for` ciklusra!
+(!Hint) 1. Mire való az űrlap konstruktorában az `InitializeComponent()` metódushívás? [! ]
 
-Ezeket érdemes fejből tudni. 
+(!Hint) 2. Írd le azt a néhány kódsort, mely `Gomb` néven osztályt származtat a `Button` osztályból! [! ]
+
+(!Hint) 3. Mikor fut le egy osztály konstruktora? [! ]
+
+(!Hint) 4. Hogyan készítesz konstruktort egy osztályhoz? [! ]
+
+(!Hint) 5. Írd le azt a néhány kódsort, mely létrehozza a `Button` osztály egy példányát, majd elhelyezi az űrlapon! [! ]
+
+(!Hint) 6. Írd le azt a néhány kódsort, mely `SajátGomb` néven származtat egy osztályt a `Button` osztályból! [! ]
+
+(!Hint) 7. Írj példát `for` ciklusra! [! ]
+
+Ezeket érdemes fejből tudni.
 
 ## Heti feladatok 
 
