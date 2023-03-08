@@ -53,7 +53,9 @@ function preprocess(){
 			ps[i].innerHTML=text;
 			p.classList.add("hidden");
 			p.classList.add("hint");
+			ps[i].appendChild(t);
 			ps[i].appendChild(p);
+			ps[i].addEventListener("click", taskClicked);
 		}
 	}
 	
