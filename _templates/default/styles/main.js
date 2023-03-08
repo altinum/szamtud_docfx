@@ -10,7 +10,7 @@ function preprocess(){
 	for(var i=0; i<ps.length; i++){
 		if(ps[i].innerHTML.indexOf("(+/-)")==0){
 			let t=document.createElement("span");
-			t.innerHTML="<span class=\"tg_cnt\">#"+i+"</span><span>✓</span><span>?</span>";
+			t.innerHTML="<span class=\"tg_cnt\">#"+taskCount+"</span><span>✓</span><span>?</span>";
 			t.classList.add("tg_task");
 			t.classList.add("tg_taskctrl");
 			t.classList.add("tg_neutral");
