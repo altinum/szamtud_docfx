@@ -56,7 +56,7 @@ void b_MouseDown(object sender, MouseEventArgs e)
 
 (+/-) A konstruktorban a `Képkocka` osztály színezze magát fukszia színűre, valamint állítsa be saját szélességét és magasságát 76 pixelre!
 
-(+/-) Fordítsd le az alkalmazást. Pl. futtasd és állítsd le. Fordítás után a Tollbox-on meg kell jelennie a `Képkocka` vezérlőnek, melyet a többihez hasonlóan tervező nézetben is elhelyezhetsz a űrlapon. Próbáld ki!
+(+/-) Fordítsd le az alkalmazást. Pl. futtasd és állítsd le. Fordítás után a Toolbox-on meg kell jelennie a `Képkocka` vezérlőnek, melyet a többihez hasonlóan tervező nézetben is elhelyezhetsz a űrlapon. Próbáld ki!
 
 ### Második fázis – mozgatható gomb
 
