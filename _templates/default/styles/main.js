@@ -47,7 +47,7 @@ function preprocess(){
 			let text=ps[i].innerText;
 			let p=document.createElement("p");
 
-			hint=hint.substring(text.indexOf("[!"),hint.length-1);
+			hint=hint.substring(text.indexOf("[!")+2,hint.length-1);
 			text=text.substring(8,text.indexOf("[!")-1);
 			p.innerHTML=hint;
 			
