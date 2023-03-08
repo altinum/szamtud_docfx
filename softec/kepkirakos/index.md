@@ -24,21 +24,21 @@
 
 ### Ellenőrző kérdések az előadáshoz
 
-(!Hint) 1.  Hány közvetlen őse lehet C#-ban egy osztálynak? [!Egyszerre csak egy osztálytól tud közvetlenül örökölni. A több osztályból való öröklés funkcióinak egy része interfészekkel van megoldva.]
-(!Hint) 2.  Hol lehet átírni, hogy melyik űrlappal induljon az alkalmazás? [!A Program.cs Main függvényében.]
-3.  Írd le azt a kódrésztelet, amit 10x10 gombot kirak az űrlapra!
-4.  Sorolj fel 5-öt a Form osztály tulajdonságai közül!
-5.  Sorolj fel 2-öt a Form osztály metódusai közül!
-6.  Sorolj fel 5-öt a Form osztály eseményai közül!
-7.  Melyik osztálytól ötököl a Példa osztály?  `class Példa {...}`
-9.  Mikor következnek be az alábbi események pl. egy gomb esetén?  
+(!Hint) Hány közvetlen őse lehet C#-ban egy osztálynak? [!Egyszerre csak egy osztálytól tud közvetlenül örökölni. A több osztályból való öröklés funkcióinak egy része interfészekkel van megoldva.]
+(!Hint) Hol lehet átírni, hogy melyik űrlappal induljon az alkalmazás? [!A Program.cs Main függvényében.]
+(!Hint) Írd le azt a kódrésztelet, amit 10x10 gombot kirak az űrlapra!
+(!Hint) Sorolj fel 5-öt a Form osztály tulajdonságai közül!
+(!Hint) Sorolj fel 2-öt a Form osztály metódusai közül!
+(!Hint) Sorolj fel 5-öt a Form osztály eseményai közül!
+(!Hint) Melyik osztálytól ötököl a Példa osztály?  `class Példa {...}`
+(!Hint) Mikor következnek be az alábbi események pl. egy gomb esetén?  
     - MouseUp  
     - MouseDown  
     - MouseMove  
     - MouseEnter  
     - MouseLeave  
     
-10.  Példaként adott az alábbi esemény-kiszolgáló függvény. Milyen információt hordoz az  _e_  paraméter?
+(!Hint) Példaként adott az alábbi esemény-kiszolgáló függvény. Milyen információt hordoz az  _e_  paraméter?
 ``` csharp
 void b_MouseDown(object sender, MouseEventArgs e)  
 {  
