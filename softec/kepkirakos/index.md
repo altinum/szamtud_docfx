@@ -36,7 +36,7 @@
 
 (!Hint) Sorolj fel 5-öt a Form osztály eseményai közül! [!kódrészlet...]
 
-(!Hint) Melyik osztálytól örököl a Példa osztály?  `class Példa {...}` [!kódrészlet...]
+(!Hint) Melyik osztálytól örököl a Példa osztály?  `class Példa {...}` [Egyiktől sem. ha `class Példa:Szülő {...}` lenne, akkor a `Szülő`-től örökölne.]
 
 (!Hint) Mikor következnek be az alábbi események pl. egy gomb esetén? [!kódrészlet...]
     - MouseUp  
