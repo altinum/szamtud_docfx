@@ -26,7 +26,7 @@
 (!Vid) 3g Cs Fájl
 > [!Video https://storage.altinum.hu/szoft1/S2_3g_csfile.m4v]
 
-## Ellenőrző kérések a videókhoz
+## Ellenőrző kérdések a videókhoz
 
 1. Mire való az űrlap konstruktorában az `InitializeComponent()` metódushívás?
 2. Írd le azt a néhány kódsort, mely `Gomb` néven osztályt származtat a `Button` osztályból!
