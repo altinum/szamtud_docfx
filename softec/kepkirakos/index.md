@@ -128,7 +128,6 @@ public partial class Form1 : Form
 }
 ```
 
-
 ``` csharp
 public partial class Form1 : Form
 {
