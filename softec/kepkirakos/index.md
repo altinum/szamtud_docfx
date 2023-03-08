@@ -24,7 +24,7 @@
 
 ### Ellenőrző kérdések az előadáshoz
 
-1.  Hány közvetlen őse lehet C#-ban egy osztálynak?
+(!Hint) 1.  Hány közvetlen őse lehet C#-ban egy osztálynak? [!Egyszerre csak egy osztálytól tud közvetlenül örökölni. A több osztályból való öröklés funkcióinak egy része interfészekkel van megoldva.]
 2.  Hol lehet átírni, hogy melyik űrlappal induljon az alkalmazás?
 3.  Írd le azt a kódrésztelet, amit 10x10 gombot kirak az űrlapra!
 4.  Sorolj fel 5-öt a Form osztály tulajdonságai közül!
