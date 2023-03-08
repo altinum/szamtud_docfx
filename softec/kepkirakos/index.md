@@ -25,12 +25,19 @@
 ### Ellenőrző kérdések az előadáshoz
 
 (!Hint) Hány közvetlen őse lehet C#-ban egy osztálynak? [!Egyszerre csak egy osztálytól tud közvetlenül örökölni. A több osztályból való öröklés funkcióinak egy része interfészekkel van megoldva.]
+
 (!Hint) Hol lehet átírni, hogy melyik űrlappal induljon az alkalmazás? [!A Program.cs Main függvényében.]
+
 (!Hint) Írd le azt a kódrésztelet, amit 10x10 gombot kirak az űrlapra!
+
 (!Hint) Sorolj fel 5-öt a Form osztály tulajdonságai közül!
+
 (!Hint) Sorolj fel 2-öt a Form osztály metódusai közül!
+
 (!Hint) Sorolj fel 5-öt a Form osztály eseményai közül!
+
 (!Hint) Melyik osztálytól ötököl a Példa osztály?  `class Példa {...}`
+
 (!Hint) Mikor következnek be az alábbi események pl. egy gomb esetén?  
     - MouseUp  
     - MouseDown  
