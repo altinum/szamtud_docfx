@@ -333,6 +333,8 @@ nav svg{
 
 .step-counter {
   margin: 5px 0; /* adjust as needed */
+     color:var(--font-color);
+     font-size: 2rem;
 }
 
 .step-chevron-up,
