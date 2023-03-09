@@ -164,14 +164,11 @@ function generateStepper(){
 	const chevronUpSvg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
 	chevronUpSvg.setAttribute('aria-hidden', 'true');
 	chevronUpSvg.className = 'svg-icon iconArrowUpLg';
-	chevronUpSvg.setAttribute('width', '36');
-	chevronUpSvg.setAttribute('height', '36');
-	chevronUpSvg.setAttribute('viewBox', '0 0 36 36');
 	const chevronUpPath = document.createElementNS('http://www.w3.org/2000/svg', 'path');
 	chevronUpPath.setAttribute('d', 'M2 25h32L18 9 2 25Z');
 	chevronUpSvg.appendChild(chevronUpPath);
 	chevronUpButton.appendChild(chevronUpSvg);
-
+	chevronUpButton.classList.append("alert");
 	// Create the step counter
 	const stepCounter = document.createElement('div');
 	stepCounter.className = 'step-counter';
@@ -183,13 +180,11 @@ function generateStepper(){
 	const chevronDownSvg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
 	chevronDownSvg.setAttribute('aria-hidden', 'true');
 	chevronDownSvg.className = 'svg-icon iconArrowDownLg';
-	chevronDownSvg.setAttribute('width', '36');
-	chevronDownSvg.setAttribute('height', '36');
-	chevronDownSvg.setAttribute('viewBox', '0 0 36 36');
 	const chevronDownPath = document.createElementNS('http://www.w3.org/2000/svg', 'path');
 	chevronDownPath.setAttribute('d', 'M2 11h32L18 27 2 11Z');
 	chevronDownSvg.appendChild(chevronDownPath);
 	chevronDownButton.appendChild(chevronDownSvg);
+	chevronDownButton.classList.append("alert");
 
 	// Append the buttons to the chevron div
 	const chevronDiv = document.createElement('div');
