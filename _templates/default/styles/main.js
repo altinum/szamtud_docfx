@@ -69,6 +69,14 @@ function preprocess(){
 		videos[i].children[0].scr="";
 	}
 	
+	for(let i=0;i<ps.length;i++){
+		if(ps[i].innerHTML.indexOf("(!Stepper)")==0){
+			ps[i].innerHTML="";
+			ps[i].appendChild(generateStepper());
+		}
+	}
+	
+	
 }
 function taskClicked(e) {
     let el = e.target;
@@ -103,7 +111,7 @@ function taskClicked(e) {
 		}
         }
 
-    ws.send(`S ${el.id.substring(4)} ${newStatus}`);
+    //ws.send(`S ${el.id.substring(4)} ${newStatus}`);
 }
 function showHint(p){
 	p.classList.remove("hidden");
@@ -135,6 +143,70 @@ function hideTOC(){
 	}
 	
 	
+}
+function generateStepper(){
+	// create parent element
+	const parentElem = document.createElement("p");
+	parentElem.setAttribute("id", "stepper-1");
+	parentElem.classList.add("stepper");
+
+	// create child element 1
+	const childElem1 = document.createElement("p");
+	childElem1.classList.add("stepper-text");
+	childElem1.textContent = "This is a sample text.";
+	parentElem.appendChild(childElem1);
+
+	// create child element 2
+	const childElem2 = document.createElement("div");
+	childElem2.classList.add("step-chevron-div");
+
+	// create child element 2.1
+	const childElem2_1 = document.createElement("button");
+	childElem2_1.classList.add("step-chevron-up");
+
+	// create child element 2.1.1
+	const childElem2_1_1 = document.createElement("svg");
+	childElem2_1_1.setAttribute("aria-hidden", "true");
+	childElem2_1_1.classList.add("svg-icon", "iconArrowUpLg");
+	childElem2_1_1.setAttribute("width", "36");
+	childElem2_1_1.setAttribute("height", "36");
+	childElem2_1_1.setAttribute("viewBox", "0 0 36 36");
+
+	const childElem2_1_1_path = document.createElement("path");
+	childElem2_1_1_path.setAttribute("d", "M2 25h32L18 9 2 25Z");
+	childElem2_1_1.appendChild(childElem2_1_1_path);
+
+	childElem2_1.appendChild(childElem2_1_1);
+	childElem2.appendChild(childElem2_1);
+
+	// create child element 2.2
+	const childElem2_2 = document.createElement("div");
+	childElem2_2.classList.add("step-counter");
+	childElem2_2.textContent = "1.";
+	childElem2.appendChild(childElem2_2);
+
+	// create child element 2.3
+	const childElem2_3 = document.createElement("button");
+	childElem2_3.classList.add("step-chevron-down");
+
+	// create child element 2.3.1
+	const childElem2_3_1 = document.createElement("svg");
+	childElem2_3_1.setAttribute("aria-hidden", "true");
+	childElem2_3_1.classList.add("svg-icon", "iconArrowDownLg");
+	childElem2_3_1.setAttribute("width", "36");
+	childElem2_3_1.setAttribute("height", "36");
+	childElem2_3_1.setAttribute("viewBox", "0 0 36 36");
+
+	const childElem2_3_1_path = document.createElement("path");
+	childElem2_3_1_path.setAttribute("d", "M2 11h32L18 27 2 11Z");
+	childElem2_3_1.appendChild(childElem2_3_1_path);
+
+	childElem2_3.appendChild(childElem2_3_1);
+	childElem2.appendChild(childElem2_3);
+
+	parentElem.appendChild(childElem2);
+
+return parentElem;
 }
 function lumos(){
 	let tabs=document.getElementById("toc").children[0].children;
