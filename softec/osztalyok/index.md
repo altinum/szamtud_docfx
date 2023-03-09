@@ -122,6 +122,8 @@ class VillogoGomb : Button
 
 (+/-) Kattintásra a `SzíneződőGomb` színezze magát fukszia színűre.
 
+(+/-) A már felépített szorzótáblát írd át úgy, hogy `SzíneződőGomb`-okból épüljön fel!
+
 ### 3. feladat: számoló gomb - videó alapján
 # [feladat](#tab/fel3)
 (+/-) Származtass osztályt a `Button` osztályból `SzámolóGomb` néven!
@@ -141,6 +143,7 @@ class VillogoGomb : Button
 (+/-)  Módosítsd a `SzámolóGomb` osztályt úgy, hogy az 1-es értékről induljon a számolás!
 
 (+/-)  Módosítsd a `SzámolóGomb` osztályt úgy, hogy az 5-ös szám után az 1-es jelenjen meg!
+
 
 (!Vid) 1-7. pontok megoldása
 > [!Video https://storage.altinum.hu/szoft1/S1_BEV_P3_1-7.m4v]
