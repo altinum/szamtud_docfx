@@ -168,7 +168,7 @@ function generateStepper(){
 	chevronUpPath.setAttribute('d', 'M2 25h32L18 9 2 25Z');
 	chevronUpSvg.appendChild(chevronUpPath);
 	chevronUpButton.appendChild(chevronUpSvg);
-	chevronUpButton.classList.append("alert");
+	chevronUpButton.classList.add("alert");
 	// Create the step counter
 	const stepCounter = document.createElement('div');
 	stepCounter.className = 'step-counter';
@@ -184,7 +184,7 @@ function generateStepper(){
 	chevronDownPath.setAttribute('d', 'M2 11h32L18 27 2 11Z');
 	chevronDownSvg.appendChild(chevronDownPath);
 	chevronDownButton.appendChild(chevronDownSvg);
-	chevronDownButton.classList.append("alert");
+	chevronDownButton.classList.add("alert");
 
 	// Append the buttons to the chevron div
 	const chevronDiv = document.createElement('div');
