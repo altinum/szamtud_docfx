@@ -351,5 +351,8 @@ nav svg{
   display: flex;
     width: 4rem;
     height: 3rem;
-    color:var(--font-color);
+    fill:var(--font-color);
+}
+.svg-icon:hover {
+    fill:rgb(172,172,172);
 }
