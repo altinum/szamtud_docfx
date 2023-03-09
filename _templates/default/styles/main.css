@@ -314,6 +314,7 @@ nav svg{
   justify-content: center;
   background-color:var(--neutral-color);
   min-height:6rem;
+    border: 1px solid var(--font-color);
 }
 
 .stepper-text {
@@ -328,7 +329,7 @@ nav svg{
   align-items: center;
   justify-content: center;
   margin-left: 10px; /* adjust as needed */
-    border: 1px solid var(--font-color);
+    
 }
 
 .step-counter {
