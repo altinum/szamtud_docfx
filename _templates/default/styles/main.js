@@ -145,48 +145,62 @@ function hideTOC(){
 	
 }
 function generateStepper(){
-	// create parent element
-	// create a new p element with class "stepper"
-	let stepper = document.createElement("p");
-	stepper.classList.add("stepper");
-	stepper.id = "stepper-1";
+	// Get the parent element where the HTML will be appended
+	
 
-	// create a new p element with class "stepper-text"
-	let stepperText = document.createElement("p");
-	stepperText.classList.add("stepper-text");
-	stepperText.textContent = "This is a sample text.";
-	stepper.appendChild(stepperText);
+	// Create the main container
+	const stepperContainer = document.createElement('p');
+	stepperContainer.id = 'stepper-1';
+	stepperContainer.className = 'stepper';
 
-	// create a div element with class "step-chevron-div"
-	let stepChevronDiv = document.createElement("div");
-	stepChevronDiv.classList.add("step-chevron-div");
-	stepper.appendChild(stepChevronDiv);
+	// Create the text container
+	const textContainer = document.createElement('p');
+	textContainer.className = 'stepper-text';
+	textContainer.textContent = 'This is a sample text.';
+	stepperContainer.appendChild(textContainer);
 
-	// create an SVG element with class "svg-icon iconArrowUpLg"
-	let svgIconUp = document.createElementNS("http://www.w3.org/2000/svg", "svg");
-	svgIconUp.classList.add("svg-icon", "iconArrowUpLg");
-	svgIconUp.setAttribute("aria-hidden", "true");
-	let pathUp = document.createElementNS("http://www.w3.org/2000/svg", "path");
-	pathUp.setAttribute("d", "M2 25h32L18 9 2 25Z");
-	svgIconUp.appendChild(pathUp);
-	stepChevronDiv.appendChild(svgIconUp);
+	// Create the chevron up button
+	const chevronUpButton = document.createElement('button');
+	const chevronUpSvg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+	chevronUpSvg.setAttribute('aria-hidden', 'true');
+	chevronUpSvg.className = 'svg-icon iconArrowUpLg';
+	chevronUpSvg.setAttribute('width', '36');
+	chevronUpSvg.setAttribute('height', '36');
+	chevronUpSvg.setAttribute('viewBox', '0 0 36 36');
+	const chevronUpPath = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+	chevronUpPath.setAttribute('d', 'M2 25h32L18 9 2 25Z');
+	chevronUpSvg.appendChild(chevronUpPath);
+	chevronUpButton.appendChild(chevronUpSvg);
 
-	// create a div element with class "step-counter" and text content "1."
-	let stepCounter = document.createElement("div");
-	stepCounter.classList.add("step-counter");
-	stepCounter.textContent = "1.";
-	stepper.appendChild(stepCounter);
+	// Create the step counter
+	const stepCounter = document.createElement('div');
+	stepCounter.className = 'step-counter';
+	stepCounter.textContent = '1.';
+	stepperContainer.appendChild(stepCounter);
 
-	// create an SVG element with class "svg-icon iconArrowDownLg"
-	let svgIconDown = document.createElementNS("http://www.w3.org/2000/svg", "svg");
-	svgIconDown.classList.add("svg-icon", "iconArrowDownLg");
-	svgIconDown.setAttribute("aria-hidden", "true");
-	let pathDown = document.createElementNS("http://www.w3.org/2000/svg", "path");
-	pathDown.setAttribute("d", "M2 11h32L18 27 2 11Z");
-	svgIconDown.appendChild(pathDown);
-	stepChevronDiv.appendChild(svgIconDown);
+	// Create the chevron down button
+	const chevronDownButton = document.createElement('button');
+	const chevronDownSvg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+	chevronDownSvg.setAttribute('aria-hidden', 'true');
+	chevronDownSvg.className = 'svg-icon iconArrowDownLg';
+	chevronDownSvg.setAttribute('width', '36');
+	chevronDownSvg.setAttribute('height', '36');
+	chevronDownSvg.setAttribute('viewBox', '0 0 36 36');
+	const chevronDownPath = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+	chevronDownPath.setAttribute('d', 'M2 11h32L18 27 2 11Z');
+	chevronDownSvg.appendChild(chevronDownPath);
+	chevronDownButton.appendChild(chevronDownSvg);
 
-	return stepper;
+	// Append the buttons to the chevron div
+	const chevronDiv = document.createElement('div');
+	chevronDiv.className = 'step-chevron-div';
+	chevronDiv.appendChild(chevronUpButton);
+	chevronDiv.appendChild(chevronDownButton);
+	stepperContainer.appendChild(chevronDiv);
+
+
+
+	return stepperContainer;
 }
 function lumos(){
 	let tabs=document.getElementById("toc").children[0].children;
