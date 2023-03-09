@@ -165,7 +165,7 @@ function generateStepper(){
 	chevronUpButton.classList.add("step-chevron-down");
 	const chevronUpSvg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
 	chevronUpSvg.setAttribute('aria-hidden', 'true');
-	chevronUpSvg.className = 'svg-icon iconArrowUpLg';
+	chevronUpSvg.classList.add('svg-icon');
 	const chevronUpPath = document.createElementNS('http://www.w3.org/2000/svg', 'path');
 	chevronUpPath.setAttribute('d', 'M2 25h32L18 9 2 25Z');
 	chevronUpSvg.appendChild(chevronUpPath);
@@ -181,7 +181,7 @@ function generateStepper(){
 	chevronDownButton.classList.add("step-chevron-up");
 	const chevronDownSvg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
 	chevronDownSvg.setAttribute('aria-hidden', 'true');
-	chevronDownSvg.className = 'svg-icon iconArrowDownLg';
+	chevronDownSvg.classList.add('svg-icon');
 	const chevronDownPath = document.createElementNS('http://www.w3.org/2000/svg', 'path');
 	chevronDownPath.setAttribute('d', 'M2 11h32L18 27 2 11Z');
 	chevronDownSvg.appendChild(chevronDownPath);
