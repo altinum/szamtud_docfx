@@ -313,6 +313,7 @@ nav svg{
   align-items: center;
   justify-content: center;
   background-color:var(--neutral-color);
+  min-height:6rem;
 }
 
 .stepper-text {
