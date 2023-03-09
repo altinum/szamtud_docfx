@@ -182,21 +182,18 @@ function generateStepper(){
 	childElem2_2.classList.add("step-counter");
 	childElem2_2.textContent = "1.";
 	childElem2.appendChild(childElem2_2);
+	
 
 	// create child element 2.3
-	const childElem2_3 = document.createElement("button");
+	const childElem2_3 = document.createElement("svg");
+	childElem2_3.setAttribute("aria-hidden", "true");
+	childElem2_3.classList.add("svg-icon", "iconArrowDownLg");
 	childElem2_3.classList.add("step-chevron-down");
-
-	// create child element 2.3.1
-	const childElem2_3_1 = document.createElement("svg");
-	childElem2_3_1.setAttribute("aria-hidden", "true");
-	childElem2_3_1.classList.add("svg-icon", "iconArrowDownLg");
 
 	const childElem2_3_1_path = document.createElement("path");
 	childElem2_3_1_path.setAttribute("d", "M2 11h32L18 27 2 11Z");
 	childElem2_3_1.appendChild(childElem2_3_1_path);
 
-	childElem2_3.appendChild(childElem2_3_1);
 	childElem2.appendChild(childElem2_3);
 
 	parentElem.appendChild(childElem2);
