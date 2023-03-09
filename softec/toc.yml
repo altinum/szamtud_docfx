@@ -19,8 +19,6 @@
   items:
     - name: Osztályok-gyakorlati feladatok
       href: osztalyok\index.md
-    - name: Osztályok és Objektumok
-      href: osztalyok\overview.md
 - name: 4. hét - 1. Géptermi ZH
   items:
     - name: ZH Checklist
@@ -31,6 +29,8 @@
   items:
     - name: Képkirakós játék
       href: kepkirakos\index.md
+    - name: Osztályok és Objektumok
+      href: osztalyok\overview.md
 - name: 6. hét
   items:
     - name: Feleltválasztós játék
