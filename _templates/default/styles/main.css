@@ -317,6 +317,8 @@ nav svg{
 
 .stepper-text {
   flex: 1;
+  word-wrap: break-word;
+  padding:1rem;
 }
 
 .step-chevron-div {
@@ -333,7 +335,7 @@ nav svg{
 
 .step-chevron-up,
 .step-chevron-down {
-  background: none;
+  background: red;
   border: none;
   padding: 0;
   margin: 0;
