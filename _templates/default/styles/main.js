@@ -146,59 +146,47 @@ function hideTOC(){
 }
 function generateStepper(){
 	// create parent element
-	const parentElem = document.createElement("p");
-	parentElem.setAttribute("id", "stepper-1");
-	parentElem.classList.add("stepper");
-	parentElem.classList.add("alert");
+	// create a new p element with class "stepper"
+	let stepper = document.createElement("p");
+	stepper.classList.add("stepper");
+	stepper.id = "stepper-1";
 
-	// create child element 1
-	const childElem1 = document.createElement("p");
-	childElem1.classList.add("stepper-text");
-	childElem1.textContent = "This is a sample text.";
-	parentElem.appendChild(childElem1);
+	// create a new p element with class "stepper-text"
+	let stepperText = document.createElement("p");
+	stepperText.classList.add("stepper-text");
+	stepperText.textContent = "This is a sample text.";
+	stepper.appendChild(stepperText);
 
-	// create child element 2
-	const childElem2 = document.createElement("div");
-	childElem2.classList.add("step-chevron-div");
+	// create a div element with class "step-chevron-div"
+	let stepChevronDiv = document.createElement("div");
+	stepChevronDiv.classList.add("step-chevron-div");
+	stepper.appendChild(stepChevronDiv);
 
-	// create child element 2.1
-	const childElem2_1 = document.createElement("button");
-	childElem2_1.classList.add("step-chevron-up");
+	// create an SVG element with class "svg-icon iconArrowUpLg"
+	let svgIconUp = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+	svgIconUp.classList.add("svg-icon", "iconArrowUpLg");
+	svgIconUp.setAttribute("aria-hidden", "true");
+	let pathUp = document.createElementNS("http://www.w3.org/2000/svg", "path");
+	pathUp.setAttribute("d", "M2 25h32L18 9 2 25Z");
+	svgIconUp.appendChild(pathUp);
+	stepChevronDiv.appendChild(svgIconUp);
 
-	// create child element 2.1.1
-	const childElem2_1_1 = document.createElement("svg");
-	childElem2_1_1.setAttribute("aria-hidden", "true");
-	childElem2_1_1.classList.add("svg-icon", "iconArrowUpLg");
+	// create a div element with class "step-counter" and text content "1."
+	let stepCounter = document.createElement("div");
+	stepCounter.classList.add("step-counter");
+	stepCounter.textContent = "1.";
+	stepper.appendChild(stepCounter);
 
-	const childElem2_1_1_path = document.createElement("path");
-	childElem2_1_1_path.setAttribute("d", "M2 25h32L18 9 2 25Z");
-	childElem2_1_1.appendChild(childElem2_1_1_path);
+	// create an SVG element with class "svg-icon iconArrowDownLg"
+	let svgIconDown = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+	svgIconDown.classList.add("svg-icon", "iconArrowDownLg");
+	svgIconDown.setAttribute("aria-hidden", "true");
+	let pathDown = document.createElementNS("http://www.w3.org/2000/svg", "path");
+	pathDown.setAttribute("d", "M2 11h32L18 27 2 11Z");
+	svgIconDown.appendChild(pathDown);
+	stepChevronDiv.appendChild(svgIconDown);
 
-	childElem2_1.appendChild(childElem2_1_1);
-	childElem2.appendChild(childElem2_1);
-
-	// create child element 2.2
-	const childElem2_2 = document.createElement("div");
-	childElem2_2.classList.add("step-counter");
-	childElem2_2.textContent = "1.";
-	childElem2.appendChild(childElem2_2);
-	
-
-	// create child element 2.3
-	const childElem2_3 = document.createElement("svg");
-	childElem2_3.setAttribute("aria-hidden", "true");
-	childElem2_3.classList.add("svg-icon", "iconArrowDownLg");
-	childElem2_3.classList.add("step-chevron-down");
-
-	const childElem2_3_1_path = document.createElement("path");
-	childElem2_3_1_path.setAttribute("d", "M2 11h32L18 27 2 11Z");
-	childElem2_3.appendChild(childElem2_3_1_path);
-
-	childElem2.appendChild(childElem2_3);
-
-	parentElem.appendChild(childElem2);
-
-return parentElem;
+	return stepper;
 }
 function lumos(){
 	let tabs=document.getElementById("toc").children[0].children;
