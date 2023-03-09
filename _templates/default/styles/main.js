@@ -192,7 +192,7 @@ function generateStepper(){
 
 	const childElem2_3_1_path = document.createElement("path");
 	childElem2_3_1_path.setAttribute("d", "M2 11h32L18 27 2 11Z");
-	childElem2_3_1.appendChild(childElem2_3_1_path);
+	childElem2_3.appendChild(childElem2_3_1_path);
 
 	childElem2.appendChild(childElem2_3);
 
