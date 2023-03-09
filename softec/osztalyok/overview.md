@@ -6,8 +6,11 @@ A projekt a szokásos `Windows Forms App`-ban készül, a `Form1.cs`-ben. Rendha
 
 ## Alapok
 Az osztályok egyfajta sablonként szolgálnak, segítségégükkel létrehozhatunk objektumokat, melyek adattagokat és metódusokat tartalmaznak. Az osztályok lehetővé teszik a programozók számára, hogy strukturáltabb és modulárisabb kódot írjanak, valamint egyszerűbbé tegyék az adatok kezelését és azokat megoszthassák a kód különböző részei között.
+
 (!Stepper)
+
 (!Step)[Ez itt a Form1.cs]
+
 # [lényeg](#tab/focus)
 ```csharp
 class Kutya
@@ -70,5 +73,7 @@ namespace OsztalyokDemo
 }
 ```
 ***
+
 (!EndStep)
+
 (!EndStepper)
