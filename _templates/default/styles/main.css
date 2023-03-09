@@ -306,3 +306,38 @@ nav svg{
     color:gray;
     padding:2px;
 }
+
+.stepper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.stepper-text {
+  flex: 1;
+}
+
+.step-chevron-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-left: 10px; /* adjust as needed */
+}
+
+.step-counter {
+  margin: 5px 0; /* adjust as needed */
+}
+
+.step-chevron-up,
+.step-chevron-down {
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+.svg-icon {
+  display: block;
+}
