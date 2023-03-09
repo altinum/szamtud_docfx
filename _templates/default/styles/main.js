@@ -149,6 +149,7 @@ function generateStepper(){
 	const parentElem = document.createElement("p");
 	parentElem.setAttribute("id", "stepper-1");
 	parentElem.classList.add("stepper");
+	parentElem.classList.add("alert");
 
 	// create child element 1
 	const childElem1 = document.createElement("p");
