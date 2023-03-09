@@ -343,13 +343,13 @@ nav svg{
   border: none;
   padding: 0;
   margin: 0;
-    min-width:3rem;
-    min-height:3rem;
+    width: 4rem;
+    height: 3rem;
 }
 
 .svg-icon {
   display: flex;
-    min-width:2rem;
-    min-height:2rem;
+    width: 4rem;
+    height: 3rem;
     color:var(--font-color);
 }
