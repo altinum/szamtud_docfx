@@ -354,5 +354,5 @@ nav svg{
     fill:var(--font-color);
 }
 .svg-icon:hover {
-    fill:rgb(172,172,172);
+    fill:rgb(172,172,172) !important;
 }
