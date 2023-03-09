@@ -173,7 +173,7 @@ function generateStepper(){
 	const stepCounter = document.createElement('div');
 	stepCounter.className = 'step-counter';
 	stepCounter.textContent = '1.';
-	stepperContainer.appendChild(stepCounter);
+	
 
 	// Create the chevron down button
 	const chevronDownButton = document.createElement('button');
@@ -190,6 +190,7 @@ function generateStepper(){
 	const chevronDiv = document.createElement('div');
 	chevronDiv.className = 'step-chevron-div';
 	chevronDiv.appendChild(chevronUpButton);
+	chevronDiv.appendChild(stepCounter);
 	chevronDiv.appendChild(chevronDownButton);
 	stepperContainer.appendChild(chevronDiv);
 
