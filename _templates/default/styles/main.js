@@ -169,9 +169,6 @@ function generateStepper(){
 	const childElem2_1_1 = document.createElement("svg");
 	childElem2_1_1.setAttribute("aria-hidden", "true");
 	childElem2_1_1.classList.add("svg-icon", "iconArrowUpLg");
-	childElem2_1_1.setAttribute("width", "36");
-	childElem2_1_1.setAttribute("height", "36");
-	childElem2_1_1.setAttribute("viewBox", "0 0 36 36");
 
 	const childElem2_1_1_path = document.createElement("path");
 	childElem2_1_1_path.setAttribute("d", "M2 25h32L18 9 2 25Z");
@@ -194,9 +191,6 @@ function generateStepper(){
 	const childElem2_3_1 = document.createElement("svg");
 	childElem2_3_1.setAttribute("aria-hidden", "true");
 	childElem2_3_1.classList.add("svg-icon", "iconArrowDownLg");
-	childElem2_3_1.setAttribute("width", "36");
-	childElem2_3_1.setAttribute("height", "36");
-	childElem2_3_1.setAttribute("viewBox", "0 0 36 36");
 
 	const childElem2_3_1_path = document.createElement("path");
 	childElem2_3_1_path.setAttribute("d", "M2 11h32L18 27 2 11Z");
