@@ -312,6 +312,7 @@ nav svg{
   flex-direction: row;
   align-items: center;
   justify-content: center;
+  background-color:var(--neutral-color);
 }
 
 .stepper-text {
