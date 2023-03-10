@@ -86,7 +86,9 @@ function preprocess(){
 				if(children[i].innerHTML.indexOf("(!EndStep)"==0){
 				   	children[i].innerHTML="";
 				}
-				children[i].classList.add("hidden");
+				if(stepCount>1){
+					children[i].classList.add("hidden");
+				}
 				children[i].classList.add("stepperStep-"+stepperCount);
 				children[i].classList.add("step-"+stepCount);
 				i++;
@@ -224,6 +226,7 @@ function generateStepper(i){
 }
 function onStepperArrowClicked(arrow){
 	arrow=arrow.target;
+	let children=$("#_content")[0].children;
 	if(arrow.classList.contains("inactive")){
 		return;
 	}
@@ -246,9 +249,19 @@ function onStepperArrowClicked(arrow){
 	if(arrow.parentElement.parentElement.classList.contains("step-chevron-down")){
 		if(counter+1<=maxSteps){
 			arrow.parentElement.parentElement.parentElement.children[1].innerHTML=counter+1+".";
+			for(let i=0;i<children.length;i++){
+				if(children[i].classList.contains("stepperStep-"+counter)){
+					children[i].classList.add("hidden");
+				}			
+			}
 			counter=Number(arrow.parentElement.parentElement.parentElement.children[1].innerHTML);
 			if(counter==maxSteps){
 				arrow.classList.add("inactive");
+			}
+			for(let i=0;i<children.length;i++){
+				if(children[i].classList.contains("stepperStep-"+counter)){
+					children[i].classList.remove("hidden");
+				}			
 			}
 			else if(counter==2){
 				arrow.parentElement.children[0].classList.remove("inactive");
@@ -258,15 +271,26 @@ function onStepperArrowClicked(arrow){
 		
 		if(counter-1>=1){
 			arrow.parentElement.parentElement.parentElement.children[1].innerHTML=counter-1+".";
+			for(let i=0;i<children.length;i++){
+				if(children[i].classList.contains("stepperStep-"+counter)){
+					children[i].classList.add("hidden");
+				}			
+			}
 			counter=Number(arrow.parentElement.parentElement.parentElement.children[1].innerHTML);
 			if(counter==1){
 				arrow.classList.add("inactive");
+			}
+			for(let i=0;i<children.length;i++){
+				if(children[i].classList.contains("stepperStep-"+counter)){
+					children[i].classList.remove("hidden");
+				}			
 			}
 			else if(counter==maxSteps-1){
 				arrow.parentElement.children[2].classList.remove("inactive");
 			}
 		}
 	}
+	
 }
 function lumos(){
 	let tabs=document.getElementById("toc").children[0].children;
