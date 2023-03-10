@@ -50,7 +50,7 @@ namespace OsztalyokDemo
 ```csharp
 class Kutya
 {
-  
+    //második
 }
 ```
 # [teljes kód](#tab/entire)
@@ -71,7 +71,41 @@ namespace OsztalyokDemo
     }
     class Kutya
     {
+        //második
+    }
+}
+```
+***
 
+(!EndStep)
+
+(!Step)[Ez itt a Form1.cs]
+# [lényeg](#tab/focus)
+```csharp
+class Kutya
+{
+    //harmadik
+}
+```
+# [teljes kód](#tab/entire)
+```csharp
+namespace OsztalyokDemo
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+    }
+    class Kutya
+    {
+        //harmadik
     }
 }
 ```
