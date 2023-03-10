@@ -203,7 +203,7 @@ function generateStepper(){
 }
 function onStepperArrowClicked(arrow){
 	arrow=arrow.target;
-	let counter=Number(arrow.parentElement.parentElement.parentElement.children[1]);
+	let counter=Number(arrow.parentElement.parentElement.parentElement.children[1].innerHTML);
 	if(arrow.parentElement.parentElement.classList.contains("step-chevron-down")){
 		arrow.parentElement.parentElement.parentElement.children[1].innerHTML=counter+1;
 	}else{
