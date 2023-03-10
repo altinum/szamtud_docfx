@@ -363,3 +363,11 @@ nav svg{
 .svg-icon:hover path{
   fill: rgb(172, 172, 172) !important;
 }
+.inactive{
+    fill: var(--neutral-color)!important;
+    cursor: default;
+}
+.inactive:hover path{
+    fill: var(--neutral-color)!important;
+    cursor: default;
+}
