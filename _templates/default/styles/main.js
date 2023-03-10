@@ -162,7 +162,7 @@ function generateStepper(){
 
 	// Create the chevron up button
 	const chevronUpButton = document.createElement('div');
-	chevronUpButton.classList.add("step-chevron-down");
+	chevronUpButton.classList.add("step-chevron-up");
 	const chevronUpSvg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
 	chevronUpSvg.setAttribute('aria-hidden', 'true');
 	chevronUpSvg.classList.add('svg-icon');
@@ -179,7 +179,7 @@ function generateStepper(){
 
 	// Create the chevron down button
 	const chevronDownButton = document.createElement('div');
-	chevronDownButton.classList.add("step-chevron-up");
+	chevronDownButton.classList.add("step-chevron-down");
 	const chevronDownSvg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
 	chevronDownSvg.setAttribute('aria-hidden', 'true');
 	chevronDownSvg.classList.add('svg-icon');
@@ -205,9 +205,9 @@ function onStepperArrowClicked(arrow){
 	arrow=arrow.target;
 	let counter=Number(arrow.parentElement.parentElement.parentElement.children[1].innerHTML);
 	if(arrow.parentElement.parentElement.classList.contains("step-chevron-down")){
-		arrow.parentElement.parentElement.parentElement.children[1].innerHTML=counter+1;
+		arrow.parentElement.parentElement.parentElement.children[1].innerHTML=counter+1+".";
 	}else{
-		arrow.parentElement.parentElement.parentElement.children[1].innerHTML=counter-1;
+		arrow.parentElement.parentElement.parentElement.children[1].innerHTML=counter-1+".";
 	}
 }
 function lumos(){
