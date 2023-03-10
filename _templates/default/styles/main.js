@@ -79,9 +79,10 @@ function preprocess(){
 			children[i].appendChild(generateStepper(stepperCount));
 			i++;
 			while(children[i].innerHTML.indexOf("(!EndStepper)"==-1)){
-				if(children[i].innerHTML.indexOf("(!Step)"==0){
+				if(children[i].innerHTML.indexOf("(!Step)")==0{
 					stepCount++;
-				   	children[i].innerHTML="";
+				   	children[i].classList.add("hidden");
+					children[i].classList.add("stepDescription");
 				}
 				if(children[i].innerHTML.indexOf("(!EndStep)"==0){
 				   	children[i].innerHTML="";
