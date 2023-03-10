@@ -29,7 +29,9 @@
             cursor: pointer;
             background: url('data:image/svg+xml;utf8, <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20pt" height="20pt" viewBox="0 0 20 20" version="1.1"> <g id="surface5398168"> <path style="fill-rule:nonzero;fill:rgb(100%,100%,100%);fill-opacity:1;stroke-width:10;stroke-linecap:butt;stroke-linejoin:round;stroke:rgb(0%,0%,0%,.5);stroke-opacity:1;stroke-miterlimit:10;" d="M 86 81.04296 L 145.448812 21.594148 L 150.405852 26.551188 L 90.95704 86 L 150.405852 145.448812 L 145.448812 150.405852 L 86 90.95704 L 26.551188 150.405852 L 21.594148 145.448812 L 81.04296 86 L 21.594148 26.551188 L 26.551188 21.594148 Z M 86 81.04296 " transform="matrix(0.109535,0,0,0.109535,0.58,0.58)"/> <path style=" stroke:none;fill-rule:nonzero;fill:rgb(100%,100%,100%);fill-opacity:1;" d="M 3.488281 2.945312 L 2.945312 3.488281 L 9.457031 10 L 2.945312 16.511719 L 3.488281 17.054688 L 10 10.542969 L 16.511719 17.054688 L 17.054688 16.511719 L 10.542969 10 L 17.054688 3.488281 L 16.511719 2.945312 L 10 9.457031 Z M 3.488281 2.945312 "/> </g> </svg>');
         }
-
+p::first-line {
+  text-indent: 1em; /* adjust the value as needed */
+}
     .param {
         margin: 48px;
     }
