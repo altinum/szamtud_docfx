@@ -168,6 +168,7 @@ function generateStepper(){
 	chevronUpSvg.classList.add('svg-icon');
 	const chevronUpPath = document.createElementNS('http://www.w3.org/2000/svg', 'path');
 	chevronUpPath.setAttribute('d', 'M2 25h32L18 9 2 25Z');
+	chevronUpPath.addEventListener("click", onStepperArrowClicked.bind(chevronUpPath));
 	chevronUpSvg.appendChild(chevronUpPath);
 	chevronUpButton.appendChild(chevronUpSvg);
 	// Create the step counter
@@ -184,6 +185,7 @@ function generateStepper(){
 	chevronDownSvg.classList.add('svg-icon');
 	const chevronDownPath = document.createElementNS('http://www.w3.org/2000/svg', 'path');
 	chevronDownPath.setAttribute('d', 'M2 11h32L18 27 2 11Z');
+	chevronDownPath.addEventListener("click", onStepperArrowClicked.bind(chevronDownPath));
 	chevronDownSvg.appendChild(chevronDownPath);
 	chevronDownButton.appendChild(chevronDownSvg);
 
@@ -198,6 +200,14 @@ function generateStepper(){
 
 
 	return stepperContainer;
+}
+function onStepperArrowClicked(arrow){
+	let counter=Number(arrow.parentElement.parentElement.parentElement.children[1]);
+	if(arrow.parentElement.parentElement.classList.contains("step-chevron-down")){
+		arrow.parentElement.parentElement.parentElement.children[1].innerHTML=counter+1;
+	}else{
+		arrow.parentElement.parentElement.parentElement.children[1].innerHTML=counter-1;
+	}
 }
 function lumos(){
 	let tabs=document.getElementById("toc").children[0].children;
