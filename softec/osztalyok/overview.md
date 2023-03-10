@@ -44,6 +44,7 @@ namespace OsztalyokDemo
 ```
 ***
 (!EndStep)
+
 (!Step)[Ez itt a Form1.cs]
 # [lényeg](#tab/focus)
 ```csharp
