@@ -228,6 +228,7 @@ function generateStepper(i){
 function onStepperArrowClicked(arrow){
 	arrow=arrow.target;
 	let children=$("#_content")[0].children;
+	let stepDescriptions=$(".stepDescription");
 	if(arrow.classList.contains("inactive")){
 		return;
 	}
@@ -251,16 +252,23 @@ function onStepperArrowClicked(arrow){
 		if(counter+1<=maxSteps){
 			arrow.parentElement.parentElement.parentElement.children[1].innerHTML=counter+1+".";
 			for(let i=0;i<children.length;i++){
-				if(children[i].classList.contains("stepperStep-"+counter)){
+				if(children[i].classList.contains("step-"+counter)&&children[i].classList.contains("stepperStep-"+nth)){
 					children[i].classList.add("hidden");
 				}			
 			}
 			counter=Number(arrow.parentElement.parentElement.parentElement.children[1].innerHTML);
+			let desc="";
+			for(let i=0;i<stepDescriptions.length;i++){
+				if(stepDescriptions[i].classList.contains("step-"counter)&&children[i].classList.contains("stepperStep-"+nth)){
+					desc=
+				}
+			}
+			arrow.parentElement.parentElement.parentElement.parentElement.children[0].innerHTML=;
 			if(counter==maxSteps){
 				arrow.classList.add("inactive");
 			}
 			for(let i=0;i<children.length;i++){
-				if(children[i].classList.contains("stepperStep-"+counter)){
+				if(children[i].classList.contains("step-"+counter)&&children[i].classList.contains("stepperStep-"+nth)){
 					children[i].classList.remove("hidden");
 				}			
 			}
@@ -273,7 +281,7 @@ function onStepperArrowClicked(arrow){
 		if(counter-1>=1){
 			arrow.parentElement.parentElement.parentElement.children[1].innerHTML=counter-1+".";
 			for(let i=0;i<children.length;i++){
-				if(children[i].classList.contains("stepperStep-"+counter)){
+				if(children[i].classList.contains("step-"+counter)&&children[i].classList.contains("stepperStep-"+nth)){
 					children[i].classList.add("hidden");
 				}			
 			}
@@ -282,7 +290,7 @@ function onStepperArrowClicked(arrow){
 				arrow.classList.add("inactive");
 			}
 			for(let i=0;i<children.length;i++){
-				if(children[i].classList.contains("stepperStep-"+counter)){
+				if(children[i].classList.contains("step-"+counter)&&children[i].classList.contains("stepperStep-"+nth)){
 					children[i].classList.remove("hidden");
 				}			
 			}
