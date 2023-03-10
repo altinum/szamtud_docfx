@@ -356,3 +356,6 @@ nav svg{
 .stepper .svg-icon:hover {
   fill: rgb(172, 172, 172) !important;
 }
+.svg-icon:hover path{
+  fill: rgb(172, 172, 172) !important;
+}
