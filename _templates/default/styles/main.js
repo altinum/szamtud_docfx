@@ -69,10 +69,31 @@ function preprocess(){
 		videos[i].children[0].scr="";
 	}
 	
-	for(let i=0;i<ps.length;i++){
-		if(ps[i].innerHTML.indexOf("(!Stepper)")==0){
-			ps[i].innerHTML="";
-			ps[i].appendChild(generateStepper());
+	let children=$("#_content")[0].children;
+	let stepperCount=0;
+	let stepCount=0;
+	for(let i=0;i<children.length;i++){
+		if(children[i].innerHTML.indexOf("(!Stepper)")==0){
+			stepperCount++;
+			children[i].innerHTML="";
+			children[i].appendChild(generateStepper(stepperCount));
+			i++;
+			while(children[i].innerHTML.indexOf("(!EndStepper)"==-1)){
+				if(children[i].innerHTML.indexOf("(!Step)"==0){
+					stepCount++;
+				   	children[i].innerHTML="";
+				}
+				if(children[i].innerHTML.indexOf("(!EndStep)"==0){
+				   	children[i].innerHTML="";
+				}
+				children[i].classList.add("hidden");
+				children[i].classList.add("stepperStep-"+stepperCount);
+				children[i].classList.add("step-"+stepCount);
+				i++;
+			}
+			if(children[i].innerHTML.indexOf("(!EndStepper)"==0){
+				   	children[i].innerHTML="";
+				}
 		}
 	}
 	
@@ -144,13 +165,13 @@ function hideTOC(){
 	
 	
 }
-function generateStepper(){
+function generateStepper(i){
 	// Get the parent element where the HTML will be appended
 	
 
 	// Create the main container
 	const stepperContainer = document.createElement('p');
-	stepperContainer.id = 'stepper-1';
+	stepperContainer.id = 'stepper-'+i;
 	stepperContainer.className = 'stepper';
 	stepperContainer.classList.add("alert");
 
@@ -203,11 +224,48 @@ function generateStepper(){
 }
 function onStepperArrowClicked(arrow){
 	arrow=arrow.target;
+	if(arrow.classList.contains("inactive")){
+		return;
+	}
+	let nth=0;
+	for(let i=1;i<100;i++){
+		if(arrow.classList.contains("stepper-"+i)){
+			nth=i;
+			break;
+		}
+	}
+	let maxSteps=0;
+	for(let i=1;i<1000;i++){
+		if($("stepperStep-"+nth)[$("stepperStep-"+nth).length-1].classList.contains("stepperStep-"+i)){
+			maxSteps=i;
+			break;
+		}
+	}
+	
 	let counter=Number(arrow.parentElement.parentElement.parentElement.children[1].innerHTML);
 	if(arrow.parentElement.parentElement.classList.contains("step-chevron-down")){
-		arrow.parentElement.parentElement.parentElement.children[1].innerHTML=counter+1+".";
+		if(counter+1<=maxSteps){
+			arrow.parentElement.parentElement.parentElement.children[1].innerHTML=counter+1+".";
+			counter=Number(arrow.parentElement.parentElement.parentElement.children[1].innerHTML);
+			if(counter==maxSteps){
+				arrow.classList.add("inactive");
+			}
+			else if(counter==2){
+				arrow.parentElement.children[0].classList.remove("inactive");
+			}
+		}
 	}else{
-		arrow.parentElement.parentElement.parentElement.children[1].innerHTML=counter-1+".";
+		
+		if(counter-1>=1){
+			arrow.parentElement.parentElement.parentElement.children[1].innerHTML=counter-1+".";
+			counter=Number(arrow.parentElement.parentElement.parentElement.children[1].innerHTML);
+			if(counter==1){
+				arrow.classList.add("inactive");
+			}
+			else if(counter==maxSteps-1){
+				arrow.parentElement.children[2].classList.remove("inactive");
+			}
+		}
 	}
 }
 function lumos(){
