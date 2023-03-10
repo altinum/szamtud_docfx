@@ -353,6 +353,6 @@ nav svg{
     height: 3rem;
     fill:var(--font-color);
 }
-.svg-icon:hover {
-    fill:rgb(172,172,172) !important;
+.stepper .svg-icon:hover {
+  fill: rgb(172, 172, 172) !important;
 }
