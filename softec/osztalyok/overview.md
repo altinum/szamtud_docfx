@@ -540,18 +540,132 @@ namespace OsztalyokDemo
 (!EndStepper)
 
 ## A Konstruktor
-A konstruktor egy speciális függvény az osztályon belül. Ugyanazzal a névvel rendelkezik mint, az osztály és publikus. Amikor létrehozunk egy példányt és azt írjuk le, hogy ```csharp Kutya k=new Kutya();```, akkor a `Kutya()` maga a konstruktor függvény.
+A konstruktor egy speciális függvény az osztályon belül. Ugyanazzal a névvel rendelkezik mint, az osztály és publikus. Amikor létrehozunk egy példányt és azt írjuk le, hogy ```csharp Kutya k=new Kutya();```, akkor a `Kutya()` maga a konstruktor függvény. Ha nem hoztunk létre konstruktort az osztályban nem probléma, mert automatikusan generálódik egy.
 
 (!Stepper)
 
-(!Step)[Szöveg]
+(!Step)[Ahhoz, hogy tudjuk értékelni, hogy milyen jó dolog a konstruktor adjunk néhány új tulajdonságot a Kutya osztálynak. Nem nehéz rájönni, hogy ha ismét szeretnénk egy ciklussal létrehozni sok példányt az mennyivel több sort igényelne.]
 # [lényeg](#tab/focus)
 ```csharp
-
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            Kutya kutya = new Kutya();
+            kutya.nev = "Morzsa";
+            kutya.fajta = "tacskó";
+            kutya.hím_E = true;
+            kutya.kor = 1;
+            kutya.súly = 7.6f; //az f azt jelenti, hogy ez egy float típusú változó és nem double, mert ha leírom, hogy 7.6, akkor azt double-nek tekinti a C#. Nincs szükség nagy pontosságra és ezzel így nem kell parse-olni.
+        }
+    class Kutya
+    {
+        public string nev;
+        public string fajta;
+        public bool hím_E; //angolban isMale
+        public int kor;
+        public float súly;
+        public void Ugat()
+        {
+            MessageBox.Show(nev + " ugat.");
+        }
+    }
 ```
 # [teljes kód](#tab/entire)
 ```csharp
+namespace OsztalyokDemo
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
 
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            Kutya kutya = new Kutya();
+            kutya.nev = "Morzsa";
+            kutya.fajta = "tacskó";
+            kutya.hím_E = true;
+            kutya.kor = 1;
+            kutya.súly = 7.6f; //az f azt jelenti, hogy ez egy float típusú változó és nem double, mert ha leírom, hogy 7.6, akkor azt double-nek tekinti a C#. Nincs szükség nagy pontosságra és ezzel így nem kell parse-olni.
+        }
+    }
+    class Kutya
+    {
+        public string nev;
+        public string fajta;
+        public bool hím_E; //angolban isMale
+        public int kor;
+        public float súly;
+        public void Ugat()
+        {
+            MessageBox.Show(nev + " ugat.");
+        }
+    }
+}
+```
+***
+
+(!EndStep)
+
+(!Step)[Itt jön kapóra a konstruktor. Most még nem vagyunk előrébb, ezt kapjuk gyárilag is. Létrehozni a `ctor tab tab` shortcuttal is lehet. A tulajdonságok után és a metódusok elé szokás elhelyezni.]
+# [lényeg](#tab/focus)
+```csharp {highlight=[8-11]}
+    class Kutya
+    {
+        public string nev;
+        public string fajta;
+        public bool hím_E; //angolban isMale
+        public int kor;
+        public float súly;
+        public Kutya()//ez itt a konstruktor
+        {
+
+        }
+        public void Ugat()
+        {
+            MessageBox.Show(nev + " ugat.");
+        }
+    }
+```
+# [teljes kód](#tab/entire)
+```csharp {highlight=[26-29]}
+namespace OsztalyokDemo
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            Kutya kutya = new Kutya();
+            kutya.nev = "Morzsa";
+            kutya.fajta = "tacskó";
+            kutya.hím_E = true;
+            kutya.kor = 1;
+            kutya.súly = 7.6f; //az f azt jelenti, hogy ez egy float típusú változó és nem double, mert ha leírom, hogy 7.6, akkor azt double-nek tekinti a C#. Nincs szükség nagy pontosságra és ezzel így nem kell parse-olni.
+        }
+    }
+    class Kutya
+    {
+        public string nev;
+        public string fajta;
+        public bool hím_E; //angolban isMale
+        public int kor;
+        public float súly;
+        public Kutya()//ez itt a konstruktor
+        {
+
+        }
+        public void Ugat()
+        {
+            MessageBox.Show(nev + " ugat.");
+        }
+    }
+}
 ```
 ***
 (!Hint) Kérdés [!Válasz]
