@@ -19,10 +19,10 @@ Az osztályok egyfajta sablonként szolgálnak, segítségégükkel létrehozhat
  {
 
  }
-class Kutya
-{
+ class Kutya
+ {
   
-}
+ }
 ```
 # [teljes kód](#tab/entire)
 ```csharp
@@ -100,9 +100,9 @@ namespace OsztalyokDemo
             MessageBox.Show(k.nev);
         }
         class Kutya
-    {
-        public string nev = "Morzsa";
-    }
+        {
+            public string nev = "Morzsa";
+        }
 ```
 # [teljes kód](#tab/entire)
 ```csharp
@@ -176,14 +176,14 @@ namespace OsztalyokDemo
 ```csharp
 private void Form1_Load(object sender, EventArgs e)
         {
-            Kutya k1=new Kutya();
+            Kutya k1 = new Kutya();
             Kutya k2 = new Kutya();
             Kutya k3 = new Kutya();
 
-            k2.name = "Liza";
-            k3.name = "Bodri";
+            k2.nev = "Liza";
+            k3.nev = "Bodri";
 
-            MessageBox.Show($"k1: {k1.name} k2: {k2.name} k3: {k3.name}");
+            MessageBox.Show($"k1: {k1.nev} k2: {k2.nev} k3: {k3.nev}");
             //Ha egy string elé `$` jelet teszünk, akkor a kapcsos zárójelekbe berakhatunk közvetlenül változókat, így olvashatóbb a kód és szebb, mint a +-jeles megoldással.
         }
 ```
@@ -200,25 +200,25 @@ namespace OsztalyokDemo
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            Kutya k1=new Kutya();
+            Kutya k1 = new Kutya();
             Kutya k2 = new Kutya();
             Kutya k3 = new Kutya();
 
-            k2.name = "Liza";
-            k3.name = "Bodri";
+            k2.nev = "Liza";
+            k3.nev = "Bodri";
 
-            MessageBox.Show($"k1: {k1.name} k2: {k2.name} k3: {k3.name}");
+            MessageBox.Show($"k1: {k1.nev} k2: {k2.nev} k3: {k3.nev}");
              //Ha egy string elé `$` jelet teszünk, akkor a kapcsos zárójelekbe berakhatunk közvetlenül változókat, így olvashatóbb a kód és szebb, mint a +-jeles megoldással.
         }
     }
     class Kutya
     {
-        public string name = "Morzsa";
+        public string nev = "Morzsa";
     }
 }
 ```
 ***
-(!Hint) Mit fog kiírni a program? ["k1: Morzsa k2: Liza k3: Bodri", mert a `nev` alapértelmezett értéke "Morzsa".]
+(!Hint) Mit fog kiírni a program? [!"k1: Morzsa k2: Liza k3: Bodri", mert a `nev` alapértelmezett értéke "Morzsa".]
 
 (!EndStep)
 
@@ -227,7 +227,7 @@ namespace OsztalyokDemo
 ```csharp
 class Kutya
     {
-        public string name;
+        public string nev;
     }
 ```
 # [teljes kód](#tab/entire)
@@ -243,19 +243,19 @@ namespace OsztalyokDemo
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            Kutya k1=new Kutya();
+            Kutya k1 = new Kutya();
             Kutya k2 = new Kutya();
             Kutya k3 = new Kutya();
 
-            k2.name = "Liza";
-            k3.name = "Bodri";
+            k2.nev = "Liza";
+            k3.nev = "Bodri";
 
-            MessageBox.Show($"k1: {k1.name} k2: {k2.name} k3: {k3.name}");
+            MessageBox.Show($"k1: {k1.nev} k2: {k2.nev} k3: {k3.nev}");
         }
     }
     class Kutya
     {
-        public string name;
+        public string nev;
     }
 }
 ```
@@ -264,26 +264,294 @@ namespace OsztalyokDemo
 
 (!EndStep)
 
-(!Step)[Ami nem tud ugatni, az nem lehet kutya. Hozzunk létre egy függvényt, ami ]
+(!Step)[Ami nem tud ugatni, az nem lehet kutya. Hozzunk létre egy függvényt a `Kutya` osztályon belül, ami kiírja a kutya nevét és azt, hogy ugat.] 
 # [lényeg](#tab/focus)
 ```csharp
  class Kutya
     {
-        public string name;
+        public string nev;
         public void Ugat()
         {
-            MessageBox.Show(name + " ugat.");
+            MessageBox.Show(nev + " ugat.");
         }
     }
+```
+# [teljes kód](#tab/entire)
+```csharp
+namespace OsztalyokDemo
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            Kutya k1 = new Kutya();
+            Kutya k2 = new Kutya();
+            Kutya k3 = new Kutya();
+
+            k2.nev = "Liza";
+            k3.nev = "Bodri";
+
+        }
+    }
+    class Kutya
+    {
+        public string nev;
+        public void Ugat()
+        {
+            MessageBox.Show(nev + " ugat.");
+        }
+    }
+}
+```
+***
+
+(!EndStep)
+
+(!Step)[A kutyáink még nem ugatnak, mert nem hívtuk meg egyiken sem az `Ugat` metódust. Bírjuk őket ugatásra.]
+# [lényeg](#tab/focus)
+```csharp
+ private void Form1_Load(object sender, EventArgs e)
+        {
+            Kutya k1 = new Kutya();
+            Kutya k2 = new Kutya();
+            Kutya k3 = new Kutya();
+
+            k1.nev = "Morzsa";
+            k2.nev = "Liza";
+            k3.nev = "Bodri";
+
+            k1.Ugat();
+            k2.Ugat();
+            k3.Ugat();
+        }
+```
+# [teljes kód](#tab/entire)
+```csharp
+namespace OsztalyokDemo
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            Kutya k1 = new Kutya();
+            Kutya k2 = new Kutya();
+            Kutya k3 = new Kutya();
+
+            k1.nev = "Morzsa";
+            k2.nev = "Liza";
+            k3.nev = "Bodri";
+
+            k1.Ugat();
+            k2.Ugat();
+            k3.Ugat();
+        }
+    }
+    class Kutya
+    {
+        public string nev;
+        public void Ugat()
+        {
+            MessageBox.Show(nev + " ugat.");
+        }
+    }
+}
+```
+***
+(!Hint) Mit fog kiírni a program? [!"Morzsa ugat","Liza ugat","Bodri ugat" három külön felugró ablakban.]
+
+(!EndStep)
+
+(!Step)[A programozásban van egy "DRY" akroníma, ami annak a rövidítése, hogy "Don't repeat yourself." Mi pedig háromszor ismételjük önmagunkat. Írjuk meg úgy a kódot, hogy ciklussal hozunk létre tíz kutyát.]
+# [lényeg](#tab/focus)
+```csharp
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            List<Kutya> kutyák=new List<Kutya>(); //hozzunk létre egy üres listát, amibe a kutyákat tesszük
+            //A List egy osztály a C#-ban, amely lehetővé teszi a dinamikus méretű kollekciók tárolását és kezelését.
+
+            List<string> kutyanevek = new List<string>() {//létrehozunk egy listát kutyanevekkel, kapcsos zárójelben egyből rakunk bele értékeket.
+                "Bajusz",
+                "Bodri",
+                "Csipke",
+                "Csonti",
+                "Morzsa",
+                "Cukor",
+                "Csoki",
+                "Liza",
+                "Csíkos",
+                "Foltos"
+            };
+            foreach (string nev in kutyanevek) //egy foreach ciklussal végigmegyünk a kutyanevek lista összes elemén
+            {
+                Kutya kutya = new Kutya(); //létrehozunk egy új kutya példányt a Kutya osztályból
+                kutya.nev = nev; //ezt a példányt elnevezzük Bajusznak, majd Bodrinak, aztán Csipkének...
+                kutyák.Add(kutya); //hozzáadjuk a kutyák listához az éppen aktuális példányt
+            }
+
+        }
+```
+# [teljes kód](#tab/entire)
+```csharp
+namespace OsztalyokDemo
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            List<Kutya> kutyák=new List<Kutya>(); //hozzunk létre egy üres listát, amibe a kutyákat tesszük
+            //A List egy osztály a C#-ban, amely lehetővé teszi a dinamikus méretű kollekciók tárolását és kezelését.
+
+            List<string> kutyanevek = new List<string>() {//létrehozunk egy listát kutyanevekkel, kapcsos zárójelben egyből rakunk bele értékeket.
+                "Bajusz",
+                "Bodri",
+                "Csipke",
+                "Csonti",
+                "Morzsa",
+                "Cukor",
+                "Csoki",
+                "Liza",
+                "Csíkos",
+                "Foltos"
+            };
+            foreach (string nev in kutyanevek) //egy foreach ciklussal végigmegyünk a kutyanevek lista összes elemén
+            {
+                Kutya kutya = new Kutya(); //létrehozunk egy új kutya példányt a Kutya osztályból
+                kutya.nev = nev; //ezt a példányt elnevezzük Bajusznak, majd Bodrinak, aztán Csipkének...
+                kutyák.Add(kutya); //hozzáadjuk a kutyák listához az éppen aktuális példányt
+            }
+
+        }
+    }
+    class Kutya
+    {
+        public string nev;
+        public void Ugat()
+        {
+            MessageBox.Show(nev + " ugat.");
+        }
+    }
+}
+```
+***
+(!Hint) Mi az a List<?> [!A List egy olyan osztály a C# programozási nyelvben, amely lehetővé teszi a dinamikus méretű kollekciók tárolását. A List osztály egy generikus osztály, amelyet típusparaméterrel lehet példányosítani, és ezzel meghatározni, hogy milyen típusú elemeket tároljon a lista.A List osztály általában többféle műveletet támogat, például az elemek hozzáadását, eltávolítását, indexelését és számlálójának lekérdezését. Ezeket a műveleteket számos beépített metódus segítségével érhetjük el, mint például az Add, a Remove, a Count és az IndexOf metódusok.Az előző példában egy List<string> típusú változót hoztunk létre, amely a típusparaméterként megadott string típusú elemeket tárolja. Ezután az Add metódussal adtunk hozzá tíz elemet a listához. A lista változót további műveletekre is használhatjuk, például a foreach ciklus segítségével bejárhatjuk az összes elemét.]
+
+(!Hint) Hogy nézne ki `for` ciklussal a `kutyák` lista feltöltése? [!for (int i = 0; i < kutyák.Count; i++){Kutya kutya = new Kutya();kutya.nev = kutyanevek[i];kutyák.Add(kutya);}]
+
+(!EndStep)
+
+(!Step)[Még mielőtt átmennénk a következő részre, adjunk értelmet ennek a két ciklusnak egy harmadikkal és bírjuk ugatásra a falkát.]
+# [lényeg](#tab/focus)
+```csharp
+            foreach (Kutya kutya in kutyák)
+            {
+                kutya.Ugat();
+            }
+            //vagy
+            for (int i = 0; i < kutyák.Count; i++)
+            {
+                kutyák[i].Ugat();
+            }
+```
+# [teljes kód](#tab/entire)
+```csharp
+namespace OsztalyokDemo
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            List<Kutya> kutyák=new List<Kutya>(); //hozzunk létre egy üres listát, amibe a kutyákat tesszük
+            //A List egy osztály a C#-ban, amely lehetővé teszi a dinamikus méretű kollekciók tárolását és kezelését.
+
+            List<string> kutyanevek = new List<string>() {//létrehozunk egy listát kutyanevekkel, kapcsos zárójelben egyből rakunk bele értékeket.
+                "Bajusz",
+                "Bodri",
+                "Csipke",
+                "Csonti",
+                "Morzsa",
+                "Cukor",
+                "Csoki",
+                "Liza",
+                "Csíkos",
+                "Foltos"
+            };
+            foreach (string nev in kutyanevek) //egy foreach ciklussal végigmegyünk a kutyanevek lista összes elemén
+            {
+                Kutya kutya = new Kutya(); //létrehozunk egy új kutya példányt a Kutya osztályból
+                kutya.nev = nev; //ezt a példányt elnevezzük Bajusznak, majd Bodrinak, aztán Csipkének...
+                kutyák.Add(kutya); //hozzáadjuk a kutyák listához az éppen aktuális példányt
+            }
+            //for (int i = 0; i < kutyák.Count; i++)
+            //{
+            //    Kutya kutya = new Kutya();
+            //    kutya.nev = kutyanevek[i];
+            //    kutyák.Add(kutya);
+            //}
+            foreach (Kutya kutya in kutyák)
+            {
+                kutya.Ugat();
+            }
+            //vagy
+            for (int i = 0; i < kutyák.Count; i++)
+            {
+                kutyák[i].Ugat();
+            }
+
+        }
+    }
+    class Kutya
+    {
+        public string nev;
+        public void Ugat()
+        {
+            MessageBox.Show(nev + " ugat.");
+        }
+    }
+}
+```
+***
+
+(!EndStep)
+
+(!EndStepper)
+
+## A Konstruktor
+A konstruktor egy speciális függvény az osztályon belül.
+
+(!Stepper)
+
+(!Step)[Szöveg]
+# [lényeg](#tab/focus)
+```csharp
+
 ```
 # [teljes kód](#tab/entire)
 ```csharp
 
 ```
 ***
-(!Hint) Most mit fog kiírni a program? [!"k1: k2: Liza k3: Bodri", mert a `nev` most null és az alapból egy üres `string`.]
+(!Hint) Kérdés [!Válasz]
 
 (!EndStep)
 
 (!EndStepper)
-
