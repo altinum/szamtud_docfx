@@ -78,13 +78,13 @@ function preprocess(){
 			children[i].innerHTML="";
 			children[i].appendChild(generateStepper(stepperCount));
 			i++;
-			while(children[i].innerHTML.indexOf("(!EndStepper)"==-1)){
+			while(children[i].innerHTML.indexOf("(!EndStepper)")==-1){
 				if(children[i].innerHTML.indexOf("(!Step)")==0){
 					stepCount++;
 				   	children[i].classList.add("hidden");
 					children[i].classList.add("stepDescription");
 				}
-				if(children[i].innerHTML.indexOf("(!EndStep)"==0){
+				if(children[i].innerHTML.indexOf("(!EndStep)")==0){
 				   	children[i].innerHTML="";
 				}
 				if(stepCount>1){
@@ -94,7 +94,7 @@ function preprocess(){
 				children[i].classList.add("step-"+stepCount);
 				i++;
 			}
-			if(children[i].innerHTML.indexOf("(!EndStepper)"==0){
+			if(children[i].innerHTML.indexOf("(!EndStepper)")==0){
 				   	children[i].innerHTML="";
 				}
 		}
@@ -234,14 +234,14 @@ function onStepperArrowClicked(arrow){
 	}
 	let nth=0;
 	for(let i=1;i<100;i++){
-		if(arrow.classList.contains("stepper-"+i)){
+		if(arrow.parentElement.parentElement.parentElement.parentElement.id==("stepper-"+i)){
 			nth=i;
 			break;
 		}
 	}
 	let maxSteps=0;
 	for(let i=1;i<1000;i++){
-		if($("stepperStep-"+nth)[$("stepperStep-"+nth).length-1].classList.contains("stepperStep-"+i)){
+		if($(".stepperStep-"+nth)[$(".stepperStep-"+nth).length-1].classList.contains("step-"+i)){
 			maxSteps=i;
 			break;
 		}
@@ -259,22 +259,22 @@ function onStepperArrowClicked(arrow){
 			counter=Number(arrow.parentElement.parentElement.parentElement.children[1].innerHTML);
 			let desc="";
 			for(let i=0;i<stepDescriptions.length;i++){
-				if(stepDescriptions[i].classList.contains("step-"counter)&&children[i].classList.contains("stepperStep-"+nth)){
-					desc=
+				if(stepDescriptions[i].classList.contains("step-"+counter)&&stepDescriptions[i].classList.contains("stepperStep-"+nth)){
+					desc=stepDescriptions[i].innerHTML.substring(8,stepDescriptions[i].innerHTML.length-1);
 				}
 			}
-			arrow.parentElement.parentElement.parentElement.parentElement.children[0].innerHTML=;
+			arrow.parentElement.parentElement.parentElement.parentElement.children[0].innerHTML=desc;
 			if(counter==maxSteps){
 				arrow.classList.add("inactive");
+			}else if(counter>1){
+				arrow.parentElement.parentElement.parentElement.children[0].firstChild.firstChild.classList.remove("inactive");
 			}
 			for(let i=0;i<children.length;i++){
 				if(children[i].classList.contains("step-"+counter)&&children[i].classList.contains("stepperStep-"+nth)){
 					children[i].classList.remove("hidden");
-				}			
+				}
 			}
-			else if(counter==2){
-				arrow.parentElement.children[0].classList.remove("inactive");
-			}
+			
 		}
 	}else{
 		
@@ -286,17 +286,25 @@ function onStepperArrowClicked(arrow){
 				}			
 			}
 			counter=Number(arrow.parentElement.parentElement.parentElement.children[1].innerHTML);
+			let desc="";
+			for(let i=0;i<stepDescriptions.length;i++){
+				if(stepDescriptions[i].classList.contains("step-"+counter)&&stepDescriptions[i].classList.contains("stepperStep-"+nth)){
+					desc=stepDescriptions[i].innerHTML.substring(8,stepDescriptions[i].innerHTML.length-1);
+				}
+			}
+			arrow.parentElement.parentElement.parentElement.parentElement.children[0].innerHTML=desc;
 			if(counter==1){
 				arrow.classList.add("inactive");
+			}else if(counter<maxSteps){
+				arrow.parentElement.parentElement.parentElement.children[2].firstChild.firstChild.classList.remove("inactive");
 			}
 			for(let i=0;i<children.length;i++){
 				if(children[i].classList.contains("step-"+counter)&&children[i].classList.contains("stepperStep-"+nth)){
 					children[i].classList.remove("hidden");
-				}			
+				}
+					
 			}
-			else if(counter==maxSteps-1){
-				arrow.parentElement.children[2].classList.remove("inactive");
-			}
+			
 		}
 	}
 	
