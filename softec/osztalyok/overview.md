@@ -530,15 +530,33 @@ namespace OsztalyokDemo
 }
 ```
 ***
+>[!Note]
+>Összefoglalva: létrehoztunk egy Kutya osztályt, ami egy tervrajz és létrehoztunk belőle sok példányt. Az osztályok példányai az objektumok. Egy kutya példánynak volt egy nev tulajdonsága és egy Ugat metódusa. 
+>[!Note]
+>Összefoglalva: A függvények és metódusok között annyi a különbség, hogy a metódusok egy objektumhoz tartoznak, tehát osztályszinten vannak definiálva. Gyakorlatban sokszor felváltva használják a kettő kifejezést.
 
 (!EndStep)
 
 (!EndStepper)
 
 ## A Konstruktor
-A konstruktor egy speciális függvény az osztályon belül.
+A konstruktor egy speciális függvény az osztályon belül. Ugyanazzal a névvel rendelkezik mint, az osztály és publikus. Amikor létrehozunk egy példányt és azt írjuk le, hogy ```csharp Kutya k=new Kutya();```, akkor a `Kutya()` maga a konstruktor függvény.
 
 (!Stepper)
+
+(!Step)[Szöveg]
+# [lényeg](#tab/focus)
+```csharp
+
+```
+# [teljes kód](#tab/entire)
+```csharp
+
+```
+***
+(!Hint) Kérdés [!Válasz]
+
+(!EndStep)
 
 (!Step)[Szöveg]
 # [lényeg](#tab/focus)
