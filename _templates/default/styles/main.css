@@ -357,11 +357,11 @@ nav svg{
     fill:var(--font-color);
 }
 .stepper .svg-icon:hover {
-  fill: rgb(172, 172, 172) !important;
+  fill: rgb(172, 172, 172);
     
 }
 .svg-icon:hover path{
-  fill: rgb(172, 172, 172) !important;
+  fill: rgb(172, 172, 172);
 }
 .inactive{
     fill: var(--neutral-color)!important;
@@ -369,5 +369,13 @@ nav svg{
 }
 .inactive:hover path{
     fill: var(--neutral-color)!important;
-    cursor: default;
+    cursor: default !important;
+}
+.stepDescription{
+    width: 0;
+    height: 0;
+    padding: 0;
+    margin: 0;
+    color: transparent;
+    overflow: hidden;
 }
