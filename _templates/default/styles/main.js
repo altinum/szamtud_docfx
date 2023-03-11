@@ -187,12 +187,13 @@ function generateStepper(i){
 	// Create the chevron up button
 	const chevronUpButton = document.createElement('div');
 	chevronUpButton.classList.add("step-chevron-up");
+	chevronUpButton.addEventListener("click", onStepperArrowClicked.bind(chevronUpButton));
 	const chevronUpSvg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
 	chevronUpSvg.setAttribute('aria-hidden', 'true');
 	chevronUpSvg.classList.add('svg-icon');
 	const chevronUpPath = document.createElementNS('http://www.w3.org/2000/svg', 'path');
 	chevronUpPath.setAttribute('d', 'M2 25h32L18 9 2 25Z');
-	chevronUpPath.addEventListener("click", onStepperArrowClicked.bind(chevronUpPath));
+	
 	chevronUpSvg.appendChild(chevronUpPath);
 	chevronUpButton.appendChild(chevronUpSvg);
 	// Create the step counter
@@ -204,12 +205,13 @@ function generateStepper(i){
 	// Create the chevron down button
 	const chevronDownButton = document.createElement('div');
 	chevronDownButton.classList.add("step-chevron-down");
+	chevronDownButton.addEventListener("click", onStepperArrowClicked.bind(chevronDownButton));
 	const chevronDownSvg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
 	chevronDownSvg.setAttribute('aria-hidden', 'true');
 	chevronDownSvg.classList.add('svg-icon');
 	const chevronDownPath = document.createElementNS('http://www.w3.org/2000/svg', 'path');
 	chevronDownPath.setAttribute('d', 'M2 11h32L18 27 2 11Z');
-	chevronDownPath.addEventListener("click", onStepperArrowClicked.bind(chevronDownPath));
+	
 	chevronDownSvg.appendChild(chevronDownPath);
 	chevronDownButton.appendChild(chevronDownSvg);
 
@@ -226,7 +228,7 @@ function generateStepper(i){
 	return stepperContainer;
 }
 function onStepperArrowClicked(arrow){
-	arrow=arrow.target;
+	arrow=(arrow.target.classList.contains("svg-icon"))?arrow.target.firstChild:arrow.target;
 	let children=$("#_content")[0].children;
 	let stepDescriptions=$(".stepDescription");
 	if(arrow.classList.contains("inactive")){
@@ -266,8 +268,10 @@ function onStepperArrowClicked(arrow){
 			arrow.parentElement.parentElement.parentElement.parentElement.children[0].innerHTML=desc;
 			if(counter==maxSteps){
 				arrow.classList.add("inactive");
+				arrow.parentElement.parentElement.classList.add("inactive");
 			}else if(counter>1){
 				arrow.parentElement.parentElement.parentElement.children[0].firstChild.firstChild.classList.remove("inactive");
+				arrow.parentElement.parentElement.parentElement.children[0].classList.remove("inactive");
 			}
 			for(let i=0;i<children.length;i++){
 				if(children[i].classList.contains("step-"+counter)&&children[i].classList.contains("stepperStep-"+nth)){
@@ -295,8 +299,10 @@ function onStepperArrowClicked(arrow){
 			arrow.parentElement.parentElement.parentElement.parentElement.children[0].innerHTML=desc;
 			if(counter==1){
 				arrow.classList.add("inactive");
+				arrow.parentElement.parentElement.classList.add("inactive");
 			}else if(counter<maxSteps){
 				arrow.parentElement.parentElement.parentElement.children[2].firstChild.firstChild.classList.remove("inactive");
+				arrow.parentElement.parentElement.parentElement.children[2].classList.remove("inactive");
 			}
 			for(let i=0;i<children.length;i++){
 				if(children[i].classList.contains("step-"+counter)&&children[i].classList.contains("stepperStep-"+nth)){
@@ -309,11 +315,19 @@ function onStepperArrowClicked(arrow){
 	}
 	
 }
-function lumos(){
-	let tabs=document.getElementById("toc").children[0].children;
+function lumos(m=""){
+	if (m="maxima") {
+		const elements = document.querySelectorAll('.hidden, .stepDescription');
+		elements.forEach(element => {
+		  element.classList.remove('hidden', 'stepDescription');
+		});
+	}else{
+		let tabs=document.getElementById("toc").children[0].children;
 		for(let i=0;i<tabs.length;i++){
 			tabs[i].classList.remove("hidden");
 		}
+	}
+	
 }
 window.addEventListener('load', 
   preprocess(), false);
