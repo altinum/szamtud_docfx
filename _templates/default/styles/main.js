@@ -317,7 +317,7 @@ function onStepperArrowClicked(arrow){
 	
 }
 function lumos(m=""){
-	if (m="maxima") {
+	if (m=="maxima") {
 		const elements = document.querySelectorAll('.hidden, .stepDescription');
 		elements.forEach(element => {
 		  element.classList.remove('hidden', 'stepDescription');
