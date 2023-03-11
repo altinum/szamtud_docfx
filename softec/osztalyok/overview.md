@@ -11,10 +11,14 @@ Az osztályok egyfajta sablonként szolgálnak, segítségégükkel létrehozhat
 
 (!Stepper)
 
-(!Step)[Első]
+(!Step)[Először hozzunk létre egy eseménykiszolgálót a `Form1` load eseményére, majd hozzunk létre egy osztályt `Kutya` névvel.]
 
 # [lényeg](#tab/focus)
 ```csharp
+ private void Form1_Load(object sender, EventArgs e)
+ {
+
+ }
 class Kutya
 {
   
@@ -45,13 +49,19 @@ namespace OsztalyokDemo
 ***
 (!EndStep)
 
-(!Step)[Második]
+(!Step)[Vegyünk fel egy `nev` változót, amiben a kutyánk nevét fogjuk rakni. Majd hozzunk létre a . `Form1_Load`-ban egy új `Kutya` objektumot és rakjuk bele egy `k` nevű változóba. Ha most megpróbálnánk kiíratni a kutya nevét, akkor nem tudjuk, mert az csak a `Kutya` osztályon belül látható, a `Form1_Load`-ban nem.]
 # [lényeg](#tab/focus)
 ```csharp
-class Kutya
-{
-    //második
-}
+ private void Form1_Load(object sender, EventArgs e)
+        {
+            Kutya k=new Kutya();
+            MessageBox.Show(k.nev); //k.nev nem látszik
+            //A MessageBox.Show() feldob egy ablakot azzal a szöveggel, ami a zárójelei közé kapott.
+        }
+ class Kutya
+    {
+        string nev = "Morzsa";
+    }
 ```
 # [teljes kód](#tab/entire)
 ```csharp
@@ -66,12 +76,14 @@ namespace OsztalyokDemo
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            Kutya k=new Kutya();
+            MessageBox.Show(k.name); //k.nev nem látszik
+            //A MessageBox.Show() feldob egy ablakot azzal a szöveggel, ami a zárójelei közé kapott.
         }
     }
     class Kutya
     {
-        //második
+        string nev = "Morzsa";
     }
 }
 ```
@@ -79,13 +91,18 @@ namespace OsztalyokDemo
 
 (!EndStep)
 
-(!Step)[Harmadik]
+(!Step)[A megoldás, hogy átállítjuk a `nev` változót `public`-ra. Ez azt jelenti, hogy az osztályon kívül is elérhető lesz. Most, ha lefuttatjuk a progamot, fel fog ugrani egy ablak, ami kiírja, hogy "Morzsa".]
 # [lényeg](#tab/focus)
 ```csharp
-class Kutya
-{
-    //harmadik
-}
+ private void Form1_Load(object sender, EventArgs e)
+        {
+            Kutya k=new Kutya();
+            MessageBox.Show(k.nev);
+        }
+        class Kutya
+    {
+        public string nev = "Morzsa";
+    }
 ```
 # [teljes kód](#tab/entire)
 ```csharp
@@ -100,16 +117,150 @@ namespace OsztalyokDemo
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            Kutya k=new Kutya();
+            MessageBox.Show(k.nev);
         }
     }
     class Kutya
     {
-        //harmadik
+        public string nev = "Morzsa";
     }
 }
 ```
 ***
+
+(!EndStep)
+
+(!Step)[Morzsa felszedett pár kilót, ezért szeretnénk átkeresztelni Kenyérre. Ezt megtehetjük úgy, hogy `k.nev`-nek adunk egy új értéket. Ha lefuttatjuk a programot, akkor először kiírja, hogy "Morzsa", majd azt, hogy "Kenyér". Eddig egy van egy elhízott Morzsánk/Kenyerünk, de mi van, ha szeretnénk több kutyát létrehozni?]
+# [lényeg](#tab/focus)
+```csharp
+ private void Form1_Load(object sender, EventArgs e)
+        {
+            Kutya k=new Kutya();
+            MessageBox.Show(k.nev);
+            k.nev = "Kenyér";
+            MessageBox.Show(k.nev);
+        }
+```
+# [teljes kód](#tab/entire)
+```csharp
+namespace OsztalyokDemo
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            Kutya k=new Kutya();
+            MessageBox.Show(k.nev);
+            k.nev = "Kenyér";
+            MessageBox.Show(k.nev);
+        }
+    }
+    class Kutya
+    {
+        public string nev = "Morzsa";
+    }
+}
+```
+***
+
+(!EndStep)
+
+(!Step)[A `k` változónkat cseréljük ki többre, adjunk nekik nevet, majd írassuk ki a nevüket a képernyőre.]
+# [lényeg](#tab/focus)
+```csharp
+private void Form1_Load(object sender, EventArgs e)
+        {
+            Kutya k1=new Kutya();
+            Kutya k2 = new Kutya();
+            Kutya k3 = new Kutya();
+
+            k2.name = "Liza";
+            k3.name = "Bodri";
+
+            MessageBox.Show($"k1: {k1.name} k2: {k2.name} k3: {k3.name}");
+            //Ha egy string elé `$` jelet teszünk, akkor a kapcsos zárójelekbe berakhatunk közvetlenül változókat, így olvashatóbb a kód és szebb, mint a +-jeles megoldással.
+        }
+```
+# [teljes kód](#tab/entire)
+```csharp
+namespace OsztalyokDemo
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            Kutya k1=new Kutya();
+            Kutya k2 = new Kutya();
+            Kutya k3 = new Kutya();
+
+            k2.name = "Liza";
+            k3.name = "Bodri";
+
+            MessageBox.Show($"k1: {k1.name} k2: {k2.name} k3: {k3.name}");
+             //Ha egy string elé `$` jelet teszünk, akkor a kapcsos zárójelekbe berakhatunk közvetlenül változókat, így olvashatóbb a kód és szebb, mint a +-jeles megoldással.
+        }
+    }
+    class Kutya
+    {
+        public string name = "Morzsa";
+    }
+}
+```
+***
+(!Hint) Mit fog kiírni a program? ["k1: Morzsa k2: Liza k3: Bodri", mert a `nev` alapértelmezett értéke "Morzsa".]
+
+(!EndStep)
+
+(!Step)[Miért pont "Morzsa" legyen az alapértelmezett neve egy kutyának? Vegyük ki.]
+# [lényeg](#tab/focus)
+```csharp
+class Kutya
+    {
+        public string name;
+    }
+```
+# [teljes kód](#tab/entire)
+```csharp
+namespace OsztalyokDemo
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            Kutya k1=new Kutya();
+            Kutya k2 = new Kutya();
+            Kutya k3 = new Kutya();
+
+            k2.name = "Liza";
+            k3.name = "Bodri";
+
+            MessageBox.Show($"k1: {k1.name} k2: {k2.name} k3: {k3.name}");
+        }
+    }
+    class Kutya
+    {
+        public string name;
+    }
+}
+```
+***
+(!Hint) Most mit fog kiírni a program? ["k1: k2: Liza k3: Bodri", mert a `nev` most null és az alapból egy üres `string`.]
 
 (!EndStep)
 
