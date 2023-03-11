@@ -96,6 +96,7 @@ function preprocess(){
 			}
 			if(children[i].innerHTML.indexOf("(!EndStepper)")==0){
 				   	children[i].innerHTML="";
+					$("#stepper-"+stepperCount)[0].firstChild.innerHTML=document.querySelector(".stepDescription", ".step-1","stepperStep-"+stepCount).innerHTML.substring(8,document.querySelector(".stepDescription", ".step-1","stepperStep-"+stepCount).innerHTML.length-1);
 				}
 		}
 	}
@@ -181,7 +182,7 @@ function generateStepper(i){
 	// Create the text container
 	const textContainer = document.createElement('p');
 	textContainer.className = 'stepper-text';
-	textContainer.textContent = 'This is a sample text.';
+	textContainer.textContent = '';
 	stepperContainer.appendChild(textContainer);
 
 	// Create the chevron up button
