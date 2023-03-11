@@ -610,7 +610,7 @@ namespace OsztalyokDemo
 
 (!Step)[Itt jön kapóra a konstruktor. Most még nem vagyunk előrébb, ezt kapjuk gyárilag is. Létrehozni a `ctor tab tab` shortcuttal is lehet. A tulajdonságok után és a metódusok elé szokás elhelyezni.]
 # [lényeg](#tab/focus)
-```csharp {highlight=[8-11]}
+```csharp highlight=[8-11]
     class Kutya
     {
         public string nev;
@@ -629,7 +629,7 @@ namespace OsztalyokDemo
     }
 ```
 # [teljes kód](#tab/entire)
-```csharp {highlight=[26-29]}
+```csharp highlight=[26-29]
 namespace OsztalyokDemo
 {
     public partial class Form1 : Form
@@ -668,7 +668,77 @@ namespace OsztalyokDemo
 }
 ```
 ***
-(!Hint) Kérdés [!Válasz]
+
+(!EndStep)
+
+(!Step)[A konstruktor arra való, hogy az általa kapott paraméterek segítségével legyártsa a példányokat. Itt minden értéket, amit kap hozzárendel az osztály megfelelő tulajdonságaihoz.]
+# [lényeg](#tab/focus)
+```csharp
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            Kutya kutya = new Kutya();//hibás, mert nem talál ilyen konstrukort, ami nem kér egy paramétert sem
+        }
+    class Kutya
+    {
+        public string nev;
+        public string fajta;
+        public bool hím_e; 
+        public int kor;
+        public float súly;
+        public Kutya(string név,string fajta,bool hím_e,int kor, float súly)
+        {
+            this.nev = név; //mivel a konstruktor paraméterei között lévő név és a Kutya osztály nev tulajdonsága nem ugyanaz, ezért a this előtagra, ami az osztályra utal nincsen szükség, mindenhol máshol van.
+            this.fajta = fajta;
+            this.hím_e = hím_e;
+            this.kor = kor;
+            this.súly = súly;
+        }
+        public void Ugat()
+        {
+            MessageBox.Show(nev + " ugat.");
+        }
+    }
+```
+# [teljes kód](#tab/entire)
+```csharp
+namespace OsztalyokDemo
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            Kutya kutya = new Kutya();//hibás, mert nem talál ilyen konstrukort, ami nem kér egy paramétert sem
+        }
+    }
+    class Kutya
+    {
+        public string nev;
+        public string fajta;
+        public bool hím_e; 
+        public int kor;
+        public float súly;
+        public Kutya(string név,string fajta,bool hím_e,int kor, float súly)
+        {
+            this.nev = név; //mivel a konstruktor paraméterei között lévő név és a Kutya osztály nev tulajdonsága nem ugyanaz, ezért a this előtagra, ami az osztályra utal nincsen szükség, mindenhol máshol van.
+            this.fajta = fajta;
+            this.hím_e = hím_e;
+            this.kor = kor;
+            this.súly = súly;
+        }
+        public void Ugat()
+        {
+            MessageBox.Show(nev + " ugat.");
+        }
+    }
+}
+```
+***
+(!Hint) Mit jelent a `this`? [!Osztályon belül az osztályra utal. Osztályon kívül azt mondanánk, hogy kutya1.nev, osztályon belül this.nev lenne.]
 
 (!EndStep)
 
