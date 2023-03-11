@@ -186,14 +186,14 @@ function generateStepper(i){
 
 	// Create the chevron up button
 	const chevronUpButton = document.createElement('div');
-	chevronUpButton.classList.add("step-chevron-up");
+	chevronUpButton.classList.add("step-chevron-up","inactive");
 	chevronUpButton.addEventListener("click", onStepperArrowClicked.bind(chevronUpButton));
 	const chevronUpSvg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
 	chevronUpSvg.setAttribute('aria-hidden', 'true');
 	chevronUpSvg.classList.add('svg-icon');
 	const chevronUpPath = document.createElementNS('http://www.w3.org/2000/svg', 'path');
 	chevronUpPath.setAttribute('d', 'M2 25h32L18 9 2 25Z');
-	
+	chevronUpPath.classList.add("inactive");
 	chevronUpSvg.appendChild(chevronUpPath);
 	chevronUpButton.appendChild(chevronUpSvg);
 	// Create the step counter
