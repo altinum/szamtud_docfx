@@ -260,8 +260,30 @@ namespace OsztalyokDemo
 }
 ```
 ***
-(!Hint) Most mit fog kiírni a program? ["k1: k2: Liza k3: Bodri", mert a `nev` most null és az alapból egy üres `string`.]
+(!Hint) Most mit fog kiírni a program? [!"k1: k2: Liza k3: Bodri", mert a `nev` most null és az alapból egy üres `string`.]
+
+(!EndStep)
+
+(!Step)[Ami nem tud ugatni, az nem lehet kutya. Hozzunk létre egy függvényt, ami ]
+# [lényeg](#tab/focus)
+```csharp
+ class Kutya
+    {
+        public string name;
+        public void Ugat()
+        {
+            MessageBox.Show(name + " ugat.");
+        }
+    }
+```
+# [teljes kód](#tab/entire)
+```csharp
+
+```
+***
+(!Hint) Most mit fog kiírni a program? [!"k1: k2: Liza k3: Bodri", mert a `nev` most null és az alapból egy üres `string`.]
 
 (!EndStep)
 
 (!EndStepper)
+
