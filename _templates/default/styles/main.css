@@ -331,7 +331,7 @@ nav svg{
   align-items: center;
   justify-content: center;
   margin-left: 10px; /* adjust as needed */
-    
+  user-select:none;
 }
 
 .step-counter {
