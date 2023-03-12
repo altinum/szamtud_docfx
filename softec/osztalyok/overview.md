@@ -531,9 +531,10 @@ namespace OsztalyokDemo
 ```
 ***
 
->[!NOTE]
+>[!Note]
 >Összefoglalva: létrehoztunk egy Kutya osztályt, ami egy tervrajz és létrehoztunk belőle sok példányt. Az osztályok példányai az objektumok. Egy kutya példánynak volt egy nev tulajdonsága és egy Ugat metódusa. 
->[!NOTE]
+
+>[!Note]
 >A függvények és metódusok között annyi a különbség, hogy a metódusok egy objektumhoz tartoznak, tehát osztályszinten vannak definiálva. Gyakorlatban sokszor felváltva használják a kettő kifejezést.
 
 (!EndStep)
@@ -1172,7 +1173,7 @@ namespace OsztalyokDemo
 }
 ```
 
->[!NOTE]
+>[!Note]
 >Összefoglalva: A konstruktor egy olyan függvény, ami akkor hívódik, meg, ha egy új példányt szeretnénk létrehozni egy osztályból. Többet is létrehozhatunk, amíg más a lenyomatuk, azaz más paramétereket kérnek. Visszaadja a példányt, amit létrehozott.
 
 (!EndStep)
@@ -1243,7 +1244,7 @@ namespace OsztalyokDemo
 ```
 ***
 
->[!TIP]
+>[!Tip]
 >`propfull tab tab` shortcuttal is létre lehet hozni
 
 (!EndStep)
@@ -1432,7 +1433,7 @@ namespace OsztalyokDemo
 ***
 (!Hint) Miért neveztük át kis betűsről nagy betűsre a tulajdonságokat? [!Mert a C#-ban konvenció és olvashatóbb lesz tőle a kód. A program futása szempontjából nincs jelentősége.]
 
->[!TIP]
+>[!Tip]
 >`prop tab tab` shortcuttal gyorsabb
 
 (!EndStep)
@@ -1599,7 +1600,7 @@ namespace OsztalyokDemo
 ```
 ***
 
->[!TIP]
+>[!Tip]
 >Érdemes lehet megnézni a élesben osztályokat. Például ha jobb klikkel rákattintunk a `DateTime`-ra és kiválasztjuk, hogy go to definition, akkor megnézhetjük, hogy hogyan alkalmazzák a fent említetteket.
 
 (!EndStep)
@@ -1871,7 +1872,8 @@ namespace OsztalyokDemo
 }
 ```
 ***
->[!NOTE]
+
+>[!Note]
 >Mindent, ami közös, átvittünk a szülő (Állat) osztályba. Ez azért is jó, mert ha valamin változtatni kell a tulajdonságok között, akkor azt csak egy helyen kell megtenni.
 
 (!EndStep)
@@ -2364,7 +2366,7 @@ namespace OsztalyokDemo
 ***
 (!Hint) Mi fog történni a Kutya Vedlik() metódusával? [!Semmi, változatlan formában örökli az Allat-tól.]
 
->[!NOTE]
+>[!Note]
 >Nem csak függvényeket, de operátorokat is felül lehet írni. Ez azt jelentené, hogy meg tudnánk csinálni, hogy összeadunk két kutyát pl: k1+k2 és egy harmadik kutyát kapnánk eredményül. Ennek sok értelme nincsen ugyan, de más osztályoknál pl: saját szám osztálynál igenis sok jelentősége van. Ha érdekel hogyan, nézz utána!
 
 (!EndStep)
@@ -2470,10 +2472,10 @@ namespace OsztalyokDemo
 
 (!EndStep)
 
->[!NOTE]
+>[!Note]
 >Amikor a Button osztályból származtatunk egy osztályt, pontosan ugyanezek történnek. Egyből megkapunk mindent, amit a gombok tudnak és nem kell nekünk megvalósítani azt a rengeteg logikát, ami ahhoz kell, hogy az ablakban működjön az összes többi elemmel együtt.
 
->[!NOTE]
+>[!Note]
 >Vannak még osztályokhoz kapcsolódó tartalmak, mint például az interfészek, de ezeket nem ez az oldal fogja tárgyalni.
 
 (!EndStepper)
