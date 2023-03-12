@@ -1180,6 +1180,7 @@ namespace OsztalyokDemo
 (!EndStepper)
 
 ## Tulajdonságok
+
 Eddig amit tulajdonságnak hívtunk, az igazából csak egy adattag. A kettő között az a különbség, hogy amit eddig használtunk, az egy publikus mező volt, mindenhol lehetett látni kívül. Amikor alapértelmezett privát volt, kívülről nem lehetett elérni. A tulajdonság ezzel szemben egy ügynök, ami ezt a privát mezőt elérhetővé teszi a külső kód számára. Felmerülhet a kérdés, hogy mire jó ez az extra réteg bonyolultság. Biztonságosabbá teszi az osztályt, nagyobb kontrolt biztosít az adatok felett és lehetőséget ad dinamikusan számított tulajdonságok használatára is.
 
 (!Stepper)
