@@ -2474,6 +2474,4 @@ namespace OsztalyokDemo
 >[!NOTE]
 >Vannak még osztályokhoz kapcsolódó tartalmak, mint például az interfészek, de ezeket nem ez az oldal fogja tárgyalni.
 
-(!EndStep)
-
 (!EndStepper)
