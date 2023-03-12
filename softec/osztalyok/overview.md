@@ -1601,6 +1601,7 @@ namespace OsztalyokDemo
 
 >[!TIP]
 >Érdemes lehet megnézni a élesben osztályokat. Például ha jobb klikkel rákattintunk a `DateTime`-ra és kiválasztjuk, hogy go to definition, akkor megnézhetjük, hogy hogyan alkalmazzák a fent említetteket.
+
 (!EndStep)
 
 (!EndStepper)
