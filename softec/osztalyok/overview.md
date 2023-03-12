@@ -1536,7 +1536,7 @@ namespace OsztalyokDemo
 ```csharp
         private void Form1_Load(object sender, EventArgs e)
         {
-            Kutya aida = new Kutya("Aida", "németjuhász", false,new DateTime(2013,11,9),37f);
+            Kutya aida = new Kutya("Aida", "németjuhász", false,new DateTime(2013,11,15),37f);
             //A DateTime-nak sok konstruktora van, köztük egy olyan is, ami pont egy év,hónap,nap-ot kér
             MessageBox.Show($"Aida {aida.Kor} éves.");
         }
@@ -1555,7 +1555,7 @@ namespace OsztalyokDemo
         List<Kutya> kutyák = new List<Kutya>();
         private void Form1_Load(object sender, EventArgs e)
         {
-            Kutya aida = new Kutya("Aida", "németjuhász", false,new DateTime(2013,11,9),37f);
+            Kutya aida = new Kutya("Aida", "németjuhász", false,new DateTime(2013,11,15),37f);
             //A DateTime-nak sok konstruktora van, köztük egy olyan is, ami pont egy év,hónap,nap-ot kér
             MessageBox.Show($"Aida {aida.Kor} éves.");
         }
@@ -1661,7 +1661,7 @@ namespace OsztalyokDemo
         List<Kutya> kutyák = new List<Kutya>();
         private void Form1_Load(object sender, EventArgs e)
         {
-            Kutya aida = new Kutya("Aida", "németjuhász", false,new DateTime(2013,11,9),37f);
+            Kutya aida = new Kutya("Aida", "németjuhász", false,new DateTime(2013,11,15),37f);
             //A DateTime-nak sok konstruktora van, köztük egy olyan is, ami pont egy év,hónap,nap-ot kér
             MessageBox.Show($"Aida {aida.Kor} éves.");
         }
@@ -2011,7 +2011,7 @@ namespace OsztalyokDemo
         private void Form1_Load(object sender, EventArgs e)
         {
             Macska m = new Macska("Cirmi", "sziámi", true, new DateTime(2022, 3, 27), 1.5f);
-            Kutya k = new Kutya("Aida", "németjuhász", false, new DateTime(2013, 11, 9), 37f);
+            Kutya k = new Kutya("Aida", "németjuhász", false, new DateTime(2013, 11, 15), 37f);
 
             allatok.Add(m);
             allatok.Add(k);
@@ -2034,7 +2034,7 @@ namespace OsztalyokDemo
         private void Form1_Load(object sender, EventArgs e)
         {
             Macska m = new Macska("Cirmi", "sziámi", true, new DateTime(2022, 3, 27), 1.5f);
-            Kutya k = new Kutya("Aida", "németjuhász", false, new DateTime(2013, 11, 9), 37f);
+            Kutya k = new Kutya("Aida", "németjuhász", false, new DateTime(2013, 11, 15), 37f);
 
             allatok.Add(m);
             allatok.Add(k);
@@ -2151,7 +2151,7 @@ namespace OsztalyokDemo
         private void Form1_Load(object sender, EventArgs e)
         {
             Macska m = new Macska("Cirmi", "sziámi", true, new DateTime(2022, 3, 27), 1.5f);
-            Kutya k = new Kutya("Aida", "németjuhász", false, new DateTime(2013, 11, 9), 37f);
+            Kutya k = new Kutya("Aida", "németjuhász", false, new DateTime(2013, 11, 15), 37f);
 
             allatok.Add(m);
             allatok.Add(k);
@@ -2289,7 +2289,7 @@ namespace OsztalyokDemo
         private void Form1_Load(object sender, EventArgs e)
         {
             Macska m = new Macska("Cirmi", "sziámi", true, new DateTime(2022, 3, 27), 1.5f);
-            Kutya k = new Kutya("Aida", "németjuhász", false, new DateTime(2013, 11, 9), 37f);
+            Kutya k = new Kutya("Aida", "németjuhász", false, new DateTime(2013, 11, 15), 37f);
 
             allatok.Add(m);
             allatok.Add(k);
@@ -2362,6 +2362,9 @@ namespace OsztalyokDemo
 ***
 (!Hint) Mi fog történni a Kutya Vedlik() metódusával? [!Semmi, változatlan formában örökli az Allat-tól.]
 
+>[!NOTE]
+>Nem csak függvényeket, de operátorokat is felül lehet írni. Ez azt jelentené, hogy meg tudnánk csinálni, hogy összeadunk két kutyát pl: k1+k2 és egy harmadik kutyát kapnánk eredményül. Ennek sok értelme nincsen ugyan, de más osztályoknál pl: saját szám osztálynál igenis sok jelentősége van. Ha érdekel hogyan, nézz utána!
+
 (!EndStep)
 
 (!Step)[Próbáljuk ki!]
@@ -2370,7 +2373,7 @@ namespace OsztalyokDemo
         private void Form1_Load(object sender, EventArgs e)
         {
             Macska m = new Macska("Cirmi", "sziámi", true, new DateTime(2022, 3, 27), 1.5f);
-            Kutya k = new Kutya("Aida", "németjuhász", false, new DateTime(2013, 11, 9), 37f);
+            Kutya k = new Kutya("Aida", "németjuhász", false, new DateTime(2013, 11, 15), 37f);
 
             m.Vedlik();
             k.Vedlik();
@@ -2391,7 +2394,7 @@ namespace OsztalyokDemo
         private void Form1_Load(object sender, EventArgs e)
         {
             Macska m = new Macska("Cirmi", "sziámi", true, new DateTime(2022, 3, 27), 1.5f);
-            Kutya k = new Kutya("Aida", "németjuhász", false, new DateTime(2013, 11, 9), 37f);
+            Kutya k = new Kutya("Aida", "németjuhász", false, new DateTime(2013, 11, 15), 37f);
 
             m.Vedlik();
             k.Vedlik();
@@ -2469,7 +2472,7 @@ namespace OsztalyokDemo
 >Amikor a Button osztályból származtatunk egy osztályt, pontosan ugyanezek történnek. Egyből megkapunk mindent, amit a gombok tudnak és nem kell nekünk megvalósítani azt a rengeteg logikát, ami ahhoz kell, hogy az ablakban működjön az összes többi elemmel együtt.
 
 >[!NOTE]
->Vannak még osztályokhoz kapcsolódó tartalmak, mint például az interfészek vagy az operátorok felülírása, de ezeket nem ez az oldal fogja tárgyalni.
+>Vannak még osztályokhoz kapcsolódó tartalmak, mint például az interfészek, de ezeket nem ez az oldal fogja tárgyalni.
 
 (!EndStep)
 
