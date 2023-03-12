@@ -1172,6 +1172,7 @@ namespace OsztalyokDemo
     }
 }
 ```
+***
 
 >[!Note]
 >Összefoglalva: A konstruktor egy olyan függvény, ami akkor hívódik, meg, ha egy új példányt szeretnénk létrehozni egy osztályból. Többet is létrehozhatunk, amíg más a lenyomatuk, azaz más paramétereket kérnek. Visszaadja a példányt, amit létrehozott.
