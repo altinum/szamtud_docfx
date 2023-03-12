@@ -1,4 +1,4 @@
-# Osztályok és Objektumok
+# Osztályok Összefoglaló
 
 Ez az oldal arra szolgál, hogy mindenki magabiztosan tudja használni az osztályokat és szilárd alapokat adjon a jővőre. A feltétlenül szükségesnél többet tartalmaz, de a megértéshez jobb látni a teljes képet.
 A projekt a szokásos `Windows Forms App`-ban készül, a `Form1.cs`-ben. Rendhagyó módon más fájlba nem is dolgozunk.
@@ -533,7 +533,7 @@ namespace OsztalyokDemo
 >[!Note]
 >Összefoglalva: létrehoztunk egy Kutya osztályt, ami egy tervrajz és létrehoztunk belőle sok példányt. Az osztályok példányai az objektumok. Egy kutya példánynak volt egy nev tulajdonsága és egy Ugat metódusa. 
 >[!Note]
->Összefoglalva: A függvények és metódusok között annyi a különbség, hogy a metódusok egy objektumhoz tartoznak, tehát osztályszinten vannak definiálva. Gyakorlatban sokszor felváltva használják a kettő kifejezést.
+>A függvények és metódusok között annyi a különbség, hogy a metódusok egy objektumhoz tartoznak, tehát osztályszinten vannak definiálva. Gyakorlatban sokszor felváltva használják a kettő kifejezést.
 
 (!EndStep)
 
@@ -739,6 +739,57 @@ namespace OsztalyokDemo
 ```
 ***
 (!Hint) Mit jelent a `this`? [!Osztályon belül az osztályra utal. Osztályon kívül azt mondanánk, hogy kutya1.nev, osztályon belül this.nev lenne.]
+
+(!EndStep)
+
+(!Step)[Nézzük meg, hogyan tudjuk használni a konstruktort.]
+# [lényeg](#tab/focus)
+```csharp
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            Kutya kutya = new Kutya("Morzsa","puli",true,3,25.5f); //konstruktorba, mint egy függvénynek odaadjuk az értékeket
+        }
+```
+# [teljes kód](#tab/entire)
+```csharp
+namespace OsztalyokDemo
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            Kutya kutya = new Kutya("Morzsa","puli",true,3,25.5f); //konstruktorba, mint egy függvénynek odaadjuk az értékeket
+        }
+    }
+    class Kutya
+    {
+        public string nev;
+        public string fajta;
+        public bool hím_e; 
+        public int kor;
+        public float súly;
+        public Kutya(string név,string fajta,bool hím_e,int kor, float súly)
+        {
+            this.nev = név; //mivel a konstruktor paraméterei között lévő név és a Kutya osztály nev tulajdonsága nem ugyanaz, ezért a this előtagra, ami az osztályra utal nincsen szükség, mindenhol máshol van.
+            this.fajta = fajta;
+            this.hím_e = hím_e;
+            this.kor = kor;
+            this.súly = súly;
+        }
+        public void Ugat()
+        {
+            MessageBox.Show(nev + " ugat.");
+        }
+    }
+}
+```
+***
+(!Hint) Mit jelent az f a 25.5f-ben? [!Azt, hogy az érték float (lebegő pontos szám).]
 
 (!EndStep)
 
