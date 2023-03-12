@@ -1,4 +1,5 @@
 # Képkirakós játék
+
 ## Kiinduló állományok és megoldás
  | | |
 |-|-|
@@ -148,5 +149,4 @@ public partial class Form1 : Form
 }
 
 ```
-
 
