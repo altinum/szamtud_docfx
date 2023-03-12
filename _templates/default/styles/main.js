@@ -96,7 +96,8 @@ function preprocess(){
 			}
 			if(children[i].innerHTML.indexOf("(!EndStepper)")==0){
 				   	children[i].innerHTML="";
-					$("#stepper-"+stepperCount)[0].firstChild.innerHTML=document.querySelector(".stepDescription", ".step-1",".stepperStep-"+stepperCount).innerHTML.substring(8,document.querySelector(".stepDescription", ".step-1",".stepperStep-"+stepperCount).innerHTML.length-1);
+					   $("#stepper-" + stepperCount)[0].firstChild.innerHTML = document.querySelector(".stepDescription.step-1.stepperStep-" + stepperCount).innerHTML.substring(8);
+
 					stepCount=0;
 				}
 		}
