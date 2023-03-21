@@ -25,8 +25,6 @@
   items:
     - name: ZH Checklist
   href: zh1checklist\index.md
-- name: Szoftvertechnológia I összefoglaló feladatsor
-  href: osszefoglalo_levelezo\index.md
 - name: 5. hét
   items:
     - name: Képkirakós játék
@@ -79,6 +77,8 @@
       href: teamsbeszamolok\index.md
 - name: Szoftvertechnológia I feladatlap-gyűjtemény
   href: 2021\index.md
+- name: Szoftvertechnológia I összefoglaló feladatsor
+  href: osszefoglalo_levelezo\index.md
 - name: Projektfeladatok
   items:
     - name: A beadandó feladatok értékelése
