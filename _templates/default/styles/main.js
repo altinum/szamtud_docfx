@@ -168,7 +168,7 @@ function hideTOC(){
 	let k=0;
 	try{
 		let tabs=document.getElementById("toc").children[0].children;
-		for(let i=6;i<tabs.length;i++){
+		for(let i=7;i<tabs.length;i++){
 			tabs[i].classList.add("hidden");
 		}
 	}catch(er){
