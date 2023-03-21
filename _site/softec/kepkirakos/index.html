@@ -89,39 +89,31 @@
 </tbody>
 </table>
 <h2 id="a-megoldás-menete-videón">A megoldás menete videón</h2>
-<p><a href="S1lo1-1.m4v">1. Vonszolható gomb kíserlet</a></p>
-<p><a href="S1lo2-2.m4v">2. Képek kezelése, </a></p>
-<p><a href="S1lo3-3.m4v">3. 5x5 kiskép kirakása</a></p>
-<p><a href="S1lo4-4.m4v">4. Mozgatás</a></p>
-<p><a href="S1lo5-5.m4v">5. Keverés</a></p>
+<p>(!Vid) 1. Vonszolható gomb kíserlet</p>
+<div class="embeddedvideo"><iframe src="https://storage.altinum.hu/szoft1/S1lo1-1.m4v" frameborder="0" allowfullscreen="true"></iframe></div>
+<p>(!Vid) 2. Képek kezelése,</p>
+<div class="embeddedvideo"><iframe src="https://storage.altinum.hu/szoft1/S1lo2-2.m4v" frameborder="0" allowfullscreen="true"></iframe></div>
+<p>(!Vid) 3. 5x5 kiskép kirakása</p>
+<div class="embeddedvideo"><iframe src="https://storage.altinum.hu/szoft1/S1lo3-3.m4v" frameborder="0" allowfullscreen="true"></iframe></div>
+<p>(!Vid) 4. Mozgatás</p>
+<div class="embeddedvideo"><iframe src="https://storage.altinum.hu/szoft1/S1lo4-4.m4v" frameborder="0" allowfullscreen="true"></iframe></div>
+<p>(!Vid) 5. Keverés</p>
+<div class="embeddedvideo"><iframe src="https://storage.altinum.hu/szoft1/S1lo5-5.m4v" frameborder="0" allowfullscreen="true"></iframe></div>
 <h3 id="ellenőrző-kérdések-az-előadáshoz">Ellenőrző kérdések az előadáshoz</h3>
-<ol>
-<li><p>Hány közvetlen őse lehet C#-ban egy osztálynak?</p>
-</li>
-<li><p>Hol lehet átírni, hogy melyik űrlappal induljon az alkalmazás?</p>
-</li>
-<li><p>Írd le azt a kódrésztelet, amit 10x10 gombot kirak az űrlapra!</p>
-</li>
-<li><p>Sorolj fel 5-öt a Form osztály tulajdonságai közül!</p>
-</li>
-<li><p>Sorolj fel 2-öt a Form osztály metódusai közül!</p>
-</li>
-<li><p>Sorolj fel 5-öt a Form osztály eseményai közül!</p>
-</li>
-<li><p>Melyik osztálytól ötököl a Példa osztály?  <code>class Példa {...}</code></p>
-</li>
-<li><p>Mikor következnek be az alábbi események pl. egy gomb esetén?</p>
-<ul>
-<li>MouseUp</li>
-<li>MouseDown</li>
-<li>MouseMove</li>
-<li>MouseEnter</li>
-<li>MouseLeave</li>
-</ul>
-</li>
-<li><p>Példaként adott az alábbi esemény-kiszolgáló függvény. Milyen információt hordoz az  <em>e</em>  paraméter?</p>
-</li>
-</ol>
+<p>(!Hint) Hány közvetlen őse lehet C#-ban egy osztálynak? [!Egyszerre csak egy osztálytól tud közvetlenül örökölni. A több osztályból való öröklés funkcióinak egy része interfészekkel van megoldva.]</p>
+<p>(!Hint) Hol lehet átírni, hogy melyik űrlappal induljon az alkalmazás? [!A Program.cs Main függvényében.]</p>
+<p>(!Hint) Írd le azt a kódrésztelet, amit 10x10 gombot kirak az űrlapra! [!kódrészlet...]</p>
+<p>(!Hint) Sorolj fel 5-öt a Form osztály tulajdonságai közül! [!kódrészlet...]</p>
+<p>(!Hint) Sorolj fel 2-öt a Form osztály metódusai közül! [!kódrészlet...]</p>
+<p>(!Hint) Sorolj fel 5-öt a Form osztály eseményai közül! [!kódrészlet...]</p>
+<p>(!Hint) Melyik osztálytól örököl a Példa osztály?  <code>class Példa {...}</code> [!Egyiktől sem. ha <code>class Példa:Szülő {...}</code> lenne, akkor a <code>Szülő</code>-től örökölne.]</p>
+<p>(!Hint) Mikor következnek be az alábbi események pl. egy gomb esetén? [!kódrészlet...]
+- MouseUp<br>
+- MouseDown<br>
+- MouseMove<br>
+- MouseEnter<br>
+- MouseLeave</p>
+<p>(!Hint) Példaként adott az alábbi esemény-kiszolgáló függvény. Milyen információt hordoz az  <em>e</em>  paraméter? [!kódrészlet...]</p>
 <pre><code class="lang-csharp">void b_MouseDown(object sender, MouseEventArgs e)  
 {  
 ...  
@@ -132,7 +124,7 @@
 <p>(+/-)  Származtass osztályt a <code>PictureBox</code> osztályból <code>Képkocka</code> néven!</p>
 <p>(+/-)  Az új <code>Képkocka</code> osztályt bővítsd konstruktorral!</p>
 <p>(+/-) A konstruktorban a <code>Képkocka</code> osztály színezze magát fukszia színűre, valamint állítsa be saját szélességét és magasságát 76 pixelre!</p>
-<p>(+/-) Fordítsd le az alkalmazást. Pl. futtasd és állítsd le. Fordítás után a Tollbox-on meg kell jelennie a <code>Képkocka</code> vezérlőnek, melyet a többihez hasonlóan tervező nézetben is elhelyezhetsz a űrlapon. Próbáld ki!</p>
+<p>(+/-) Fordítsd le az alkalmazást. Pl. futtasd és állítsd le. Fordítás után a Toolbox-on meg kell jelennie a <code>Képkocka</code> vezérlőnek, melyet a többihez hasonlóan tervező nézetben is elhelyezhetsz a űrlapon. Próbáld ki!</p>
 <h3 id="második-fázis--mozgatható-gomb">Második fázis – mozgatható gomb</h3>
 <p>(+/-) A <code>Képkocka</code> konstruktorában rendelj esemélykiszolgáló függvényeket a <code>MouseDown</code>, a <code>MouseUp</code> és a <code>MouseMove</code> eseményekhez! (Ezeket a <code>Képkocka</code> osztály a <code>PictureBox</code> osztálytól örökölte.)</p>
 <p>(+/-) A <code>Képkocka</code> osztályt bővítsd egy <code>ox</code> és egy <code>oy</code> nevű <code>int</code> típusú változóval! Ebben tároljuk majd azt a koordinátát, ahol az egér a gomb lenyomásakor tartózkodott a gombon belül.</p>

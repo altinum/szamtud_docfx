@@ -82,7 +82,7 @@
 </li>
 <li><p>Eseménykiszolgáló rendelése az űrlap <code>Load</code> eseményeihez. (Dupla kattintás tervezőből az űrlap üres részére.)</p>
 </li>
-<li><p>Konverzió elemi típusok között, például szöveg számmá alakítása , vagy szám szöveggé alakítása. Emlékeztetőül: másodfokú egyenletet megoldó mintaalkalmazásban a <code>TextBox</code> típusú beviteli mező <code>Text</code> tulajdonságával kiolvasott értéket kellett <code>double</code> típusú változóba olvasni a <code> double.Parse()</code> metódus segítségével. A gyökök kiszámítását követően a szintén<code>double</code> típusú eredményt a <code>.ToString()</code> metódus segítségével alakítottuk szöveggé.</p>
+<li><p>Konverzió elemi típusok között, például szöveg számmá alakítása , vagy szám szöveggé alakítása. Emlékeztetőül: másodfokú egyenletet megoldó mintaalkalmazásban a <code>TextBox</code> típusú beviteli mező <code>Text</code> tulajdonságával kiolvasott értéket kellett <code>double</code> típusú változóba olvasni a <code> double.Parse()</code> metódus segítségével. A gyökök kiszámítását követően a szintén<code>double</code> típusú eredményt a <code>.ToString()</code> metódus segítségével alakítottuk szöveggé. Kezelni kell a típuskonverzió során felmerülő futásifejű hibákat, például <code>double.TryParse()</code> használatával.</p>
 <p>Példafeladat:</p>
 <ul>
 <li>Az űrlapon helyezz el két beviteli mezőt és egy gombot, majd</li>
@@ -91,7 +91,7 @@
 <li>az eseménykiszolgáló jelenítse meg az első beviteli mezőbe írt érték kétszeresét a második beviteli mezőben.</li>
 </ul>
 </li>
-<li><p>Vezérlő létrehozása kódból és elhelyezése az űrlapon. Például a <code>Button</code> osztály egy példányának létrehozása gomb néven (<code>Button gomb = new Button();</code>) alapvető tulajdonságainak, mint szélesség, magasság, pozíció, felirat, szín beállítása; hozzáadás az űrlap vezérlőinek listájához (<code>Controls.add(gomb);</code>)</p>
+<li><p>Vezérlő létrehozása kódból és elhelyezése az űrlapon. Például a <code>Button</code> osztály egy példányának létrehozása gomb néven (<code>Button gomb = new Button();</code>) alapvető tulajdonságainak, mint szélesség, magasság, pozíció, felirat, szín beállítása; hozzáadás az űrlap vezérlőinek listájához (<code>Controls.Add(gomb);</code>)</p>
 </li>
 <li><p><code>for</code> ciklusok szervezése. Például tíz gomb kirakása egymás mellé. Előfordulhatnak egymásba ágyazott ciklusok is, mint például 10 x 10 négyzet alakú gomb kirakása.</p>
 </li>

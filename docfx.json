@@ -39,7 +39,10 @@
     "resource": [
       {
         "files": [
-          "images/**"
+          "images/**",
+          "softec/**.zip",
+          "softec/**.docx",
+          "softec/**.txt"
         ]
       }
     ],
