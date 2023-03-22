@@ -203,7 +203,7 @@ function hideTOC(){
 }
 function shouldTitleBeVisible(title) {
     const currentDate = new Date();
-    if (titleDateObject.hasOwnProperty(title) && currentDate > titleDateObject[title]) {
+    if (Syllabus.hasOwnProperty(title) && currentDate > Syllabus[title]) {
         return true;
     }
     return false;
