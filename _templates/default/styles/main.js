@@ -190,7 +190,7 @@ function hideTOC(){
 	try{
 		let tabs=document.getElementById("toc").children[0].children;
 		for(let i=0;i<tabs.length;i++){
-			if(shouldTitleBeVisible(tabs[i].querySelector("a").innerText)){
+			if(!shouldTitleBeVisible(tabs[i].querySelector("a").innerText)){
 			tabs[i].classList.add("hidden");
 			}
 		}
