@@ -38,7 +38,6 @@ Csak akkor használd az alábbi paraméterekkel elérhető adatbázist, ha valam
 |Jelszó        |Password123
 |Adatbázis     |Studies
 
-
 ### 3. Adatkötött objektumok létrehozása
 
 Ebben a példában nincs szükség adat-kötött objektumokra. Lekérdezéseket fogunk megvalósítani és megjeleníteni. Mivel egyes megjelenítések során több tábla adatait fogjuk kombinálni, nem lesz értelmezhető az adatkötés. (Ezen a héten nem kell a *Data Sources* panel és az *Add new data source*.) 
