@@ -1,5 +1,3 @@
-
-
 # 1. gyakorlati feladatsor: In memory adatbázis 
 
 ## Gyakorlat célja
