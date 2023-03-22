@@ -162,7 +162,6 @@ studentBindingSource.DataSource = students;
 ![](../../images/add_textbox_binding.gif)
 
 
-
 ## 5. Mentés funkció megvalósítása
 
 (+/-) Rendelj eseménykezelőt a *Save* gomb `Click` eseményéhez!
