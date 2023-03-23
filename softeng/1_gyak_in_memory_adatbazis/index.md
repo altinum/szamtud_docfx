@@ -1,5 +1,3 @@
-
-
 # 1. gyakorlati feladatsor: In memory adatbázis 
 
 ## Gyakorlat célja
@@ -162,7 +160,6 @@ studentBindingSource.DataSource = students;
 (+/-)  Állíts be egy adatkötést a Neptun kódhoz tartozó `TextBox` `Text` tulajdonságára  az animáció szerint:
 
 ![](../../images/add_textbox_binding.gif)
-
 
 
 ## 5. Mentés funkció megvalósítása

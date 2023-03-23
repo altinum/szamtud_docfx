@@ -1,3 +1,24 @@
+const Syllabus = {
+    "A tárgy célja, követelmények": new Date('2023-03-20'),
+    "ZH eredmények": new Date('2023-03-20'),
+    "Tudásbázis": new Date('2023-03-20'),
+    "1. hét": new Date('2023-03-20'),
+    "2. hét": new Date('2023-03-20'),
+    "3. hét": new Date('2023-03-20'),
+    "4. hét - 1. Géptermi ZH": new Date('2023-03-29'),
+    "5. hét": new Date('2023-03-19'),
+    "6. hét": new Date('2023-03-26'),
+    "7. hét": new Date('2023-04-09'),
+    "8. hét - 2. Géptermi ZH": new Date('2023-04-16'),
+    "9. hét": new Date('2023-04-23'),
+	"10. hét": new Date('2023-04-30'),
+    "11. hét": new Date('2023-05-07'),
+    "12. hét - 3. Géptermi ZH": new Date('2023-05-14'),
+    "13. hét - Projektfeladat bemutatók": new Date('2023-05-21'),
+    "Szoftvertechnológia I feladatlap-gyűjtemény": new Date('2023-07-09'),
+    "Szoftvertechnológia I összefoglaló feladatsor": new Date('2023-07-09'),
+    "Projektfeladatok": new Date('2023-07-9'),
+};
 function preprocess(){
 	hideTOC();
 	
@@ -168,8 +189,10 @@ function hideTOC(){
 	let k=0;
 	try{
 		let tabs=document.getElementById("toc").children[0].children;
-		for(let i=6;i<tabs.length;i++){
+		for(let i=0;i<tabs.length;i++){
+			if(!shouldTitleBeVisible(tabs[i].querySelector("a").innerText)){
 			tabs[i].classList.add("hidden");
+			}
 		}
 	}catch(er){
 		k++;
@@ -177,6 +200,13 @@ function hideTOC(){
 	}
 	
 	
+}
+function shouldTitleBeVisible(title) {
+    const currentDate = new Date();
+    if (Syllabus.hasOwnProperty(title) && currentDate > Syllabus[title]) {
+        return true;
+    }
+    return false;
 }
 function generateStepper(i){
 	// Get the parent element where the HTML will be appended
