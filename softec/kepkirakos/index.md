@@ -150,3 +150,15 @@ public partial class Form1 : Form
 
 ```
 
+## Extra feladatok gyakorlatra
+
+Az alábbi címen találtok egy szolgáltatást, melynek segítségével külön szoftver telepítése nélkül darabolhattok fel képeket: https://pinetools.com/split-image
+
+Arra érdemes figyelni, hogy a kép szélessége illetve magassága osztható legyen a kívánt osztások számával. Akár Paint-ben is körbe lehet vágni a kiválasztott képet darabolás előtt. 
+
+- Csináljatok játékot saját képpel!
+
+- Lehessen választani, hogy mennyire legyen megkeverve!
+
+- Lehessen több kép közül választani!
+
