@@ -24,7 +24,7 @@
       "output": {
         ".html": {
           "relative_path": "adatb/adatelemzo01/index.html",
-          "hash": "8YrUUiAa1rBXymDo2YBNyFdtdKTE+GDWJO0JCj2X11g="
+          "hash": "YprMxq1i2gHrW9gBXnnXxsDQi07hs6JA5MghHthHDsg="
         }
       },
       "is_incremental": true,
@@ -1032,10 +1032,10 @@
       "output": {
         ".html": {
           "relative_path": "softec/2021/index.html",
-          "hash": "ic5HnvnGmF21sITwI1eB7SU0oTE0tPjfhbGkS5VPUXg="
+          "hash": "v76DhgQKqovQctaC7AmYxMmeDBQMCQ3L96NFMJn1/8s="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -1047,7 +1047,7 @@
           "hash": "Uj3dBYI+1lQVpBLN10m5lr2T23HTLLD8QY2b0oV+FXE="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -1070,7 +1070,7 @@
           "hash": "qAo2xPj3dBbzXD6LaFb47bVINl4FsAEI/cU9K1jqEXQ="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -1082,7 +1082,7 @@
           "hash": "sBf1ntWTTs5XdTxChfBQgJ04zqB6QiACOHWGSuJ4m+w="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -1094,7 +1094,7 @@
           "hash": "25BJbkxN1SBydnodzT4T8KcUOlrsqRv/4t13OPxVLqw="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -1109,7 +1109,7 @@
           "hash": "PT5DRR5JiwvLD4C/fjmJqDrudii1FR+omtnuLWsFx0M="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -1121,7 +1121,7 @@
           "hash": "YRLGMxnUxaj64NsKNzZ3b96KetjF0MpVZMO9Md0aQg4="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -1133,7 +1133,7 @@
           "hash": "8M+1RRMU63fg+K6i9KR5ElhDJdfm8g3pqgULRtpmnQQ="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -1145,7 +1145,7 @@
           "hash": "AIHlzb8kY/R3tA4vdZ1j2W27JU2T2xnDOG8QbdpENEU="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -1157,7 +1157,7 @@
           "hash": "XZfCQiz5xyauP2jvX1V6a8o7KnlsKwoLzBFaXjES+IY="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -1169,7 +1169,7 @@
           "hash": "coBK39EB2EyVzMMO2x8bWwlU8tLv5v+s6oXxltilSuI="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -1181,7 +1181,7 @@
           "hash": "RvwlwkTf/OYSkzHqfPtBYUfgVMHo4XDvFhmhhaLxujI="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -1196,7 +1196,7 @@
           "hash": "Q+1Lt6qOR+C+pOPr9Mm9LmhKI+WelFHG303i4Yq6w2Y="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -1205,10 +1205,10 @@
       "output": {
         ".html": {
           "relative_path": "softec/eredmenyek/index.html",
-          "hash": "DghzuUinWk/dxphzj62evNODfY7bkqV57bmI9YsNEBI="
+          "hash": "O58qxu7l5nozrM6qmvp4en3Ar90pZkBcE8IA1yzQARw="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -1234,7 +1234,7 @@
           "hash": "KefCX3DCEupQRH+51GVmWeL6GnMHRb58BkFPqoedCOk="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -1257,7 +1257,7 @@
           "hash": "P68BcSPFPnIE47vXlQNkK4V/ILuNHdmtf/LjNWQyWec="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -1272,7 +1272,7 @@
           "hash": "G/HDGYGupVSQjQjshsjbp8nGZKQw92kyoSFPuG9SNW0="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -1284,7 +1284,7 @@
           "hash": "anFjCuSa4qeJFeFJWyovkFzv/nQjjJVdZFdvs9HdCyw="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -1304,10 +1304,10 @@
       "output": {
         ".html": {
           "relative_path": "softec/kepkirakos/index.html",
-          "hash": "4RdcSIjunWKAGrcUNYSeW3MfAj2dA3+cOYUQyo/CioY="
+          "hash": "UGzR98NQEr4OQso7XCpXTi2UggJeUCuXpiwIZ7JFiqQ="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -1330,7 +1330,7 @@
           "hash": "3GenWquteL7N8wvQ3Wz+LEWNrhQ//lmzK2MkBoA6NJA="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -1342,7 +1342,7 @@
           "hash": "d3LvPor31AxiQdgI5k0Lld5W74Npdi68NOpCLcKDorQ="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -1354,7 +1354,7 @@
           "hash": "RyDwt81bcghPnGecSaTDMzblLYgMZhyb+Pj7tw1Cplo="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -1366,7 +1366,7 @@
           "hash": "5G7OVE8pvqvO4WixOiNyXq2KSnG1CjoREQ0jc67aHQY="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -1378,7 +1378,7 @@
           "hash": "yCnrFGNs6nAG9Tq1hqevZ8/4nt9ATjzgq+Xq3Br3wwc="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -1390,7 +1390,7 @@
           "hash": "pZrLLNVy2w5EeD8JKp3+ySXBjiwGIMeeq87LkbqpXdo="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -1402,7 +1402,7 @@
           "hash": "Ydpq3qM+TZWvXJGvpYRtcqn1NbONsvIEmNTl2292Si4="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -1414,7 +1414,7 @@
           "hash": "YVdVlG+qWfryNTFR7JKfneK1OJX9yhggG45ojUUxDhM="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -1426,7 +1426,7 @@
           "hash": "GKEzqGP+WSZjjKjOiyavW+QWLp06oP+zC0DLlO5fh/o="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -1441,7 +1441,7 @@
           "hash": "tsGfs7C4tKkXfiTqqRk0epM3CkHOwsLS2iU222TfuHo="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -1456,7 +1456,7 @@
           "hash": "xCOCdIBANYcP0G3xmrzVLw3A7lD6aKccKHHuuFIOs/s="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -1468,7 +1468,7 @@
           "hash": "fm/WWzfWuxF8XIra1OGixTey53g6Nau2XDzVxV5IYrM="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -1480,7 +1480,7 @@
           "hash": "D6GCWUETBTFQSgAiMfgnXLWKwnorCmE2fETcYc5Mqyg="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -1492,7 +1492,7 @@
           "hash": "alg4Jkd/ZR3EsAn6DkRg+bryNLYP07bo0HmGPdgQyUQ="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -1501,7 +1501,7 @@
       "output": {
         ".html": {
           "relative_path": "softec/toc.html",
-          "hash": "ShmBwqULNyWUWdr696uKgN5+yoLPqCl46V5RoM7q91U="
+          "hash": "uIt66M3vt49fvQuzMqZYhc6SR3XbOXI6/UyWwbELF9U="
         }
       },
       "is_incremental": false,
@@ -1519,7 +1519,7 @@
           "hash": "10GKMPKNmM8+IPdW7atmLWx81IGJmIIUNedCZSbPD4A="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -1531,7 +1531,7 @@
           "hash": "BBpg/tFlMJ/s9Zl5nBFWNSGaOEfzJB0iAuFodDy6D98="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -1543,7 +1543,7 @@
           "hash": "buqNbPqENjWBkuGaF4T3USwyeIU31bdHpfJma48mX2E="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -1555,7 +1555,7 @@
           "hash": "yF2LUR34TFitS5hMGaiD3nBE8gvU+rRnFwf9FTP9vz4="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -1578,7 +1578,7 @@
       "output": {
         ".html": {
           "relative_path": "softeng/1_gyak_in_memory_adatbazis/index.html",
-          "hash": "sw9egkJL5B7IwU5t4reXMYArNSpJhdiAd71KIaTqHcU="
+          "hash": "5mtVI4SsnRP13RJsqBEzLS2EGOVusd4No5BR15FiorE="
         }
       },
       "is_incremental": true,
@@ -1686,7 +1686,7 @@
       "output": {
         ".html": {
           "relative_path": "softeng/5_gyak_linq_lekerdezesek_-_studies_adatb/index.html",
-          "hash": "vE0GC/I1SYXjj/IIWhzS4GTw3KCsw8viTMltGJvyVDM="
+          "hash": "rNhfuq8VO82AV8pW2/ePvKX1NOJs6dr7PgldZLHN+i0="
         }
       },
       "is_incremental": true,

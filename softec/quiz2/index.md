@@ -2,9 +2,7 @@
 
 Kedves Kollégák!
 
-A videók alapján építsétek fel az alkalmazást. Ezt az anyagot gyakorlásnak szántuk. 
-
-Jó felkészülést!
+A videók alapján építsétek fel az alkalmazást. Ezt az feladatot a gyakorlatra szántuk. 
 
 
 (!Vid) 1. videó
@@ -36,4 +34,4 @@ Kérünk Benneteket, jelöljétek, meddig jutottatok, illetve hol akadtatok el:
 
 (+/-) Jó és rossz válaszok számlálása
 
-(+/-) Extra feladat 
+(+/-) Extra feladat - automatikus továbblépés a következő feladatra

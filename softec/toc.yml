@@ -35,6 +35,8 @@
   items:
     - name: Feleltválasztós játék
       href: feleletvalasztos\index.md
+    - name: Kvíz játék kérdéslistával gyakorlatra
+      href: quiz2\index.md
 - name: 7. hét
   items:
     - name: Kígyós játék
@@ -61,8 +63,6 @@
       href: amoba\index.md
     - name: Gyakorló feladatok ZH-ra
       items:
-        - name: Kvíz játék kérdéslistával
-          href: quiz2\index.md
         - name: Villámkérdések
           href: villamkerdesek\index.md
         - name: Szópároztatós játék
