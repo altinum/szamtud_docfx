@@ -8,10 +8,9 @@ A példaalkalmazás az alábbi témákat érinti:
 ## Kiinduló állományok és megoldás
 |||
 |-|-|
-|[jatek.csv](jatek.csv)|  Kérdések - pontosvesszővel tagolt sorokban
-|[jatek2.txt](jatek2.txt)|Kérdések - külön sorokba fejtve
-|[handout.docx](handout.docx)|Előadás handout
-|[Jatek.zip](Jatek.zip)|Előadás handout
+|[jatek.csv](jatek.csv)|  Kérdések - pontosvesszővel tagolt sorokban|
+|[jatek2.txt](jatek2.txt)|Kérdések - külön sorokba fejtve|
+|[handout.docx](handout.docx)|Előadás handout|
 ## A megoldás menete videókon
 
 (!Vid) Fájlkezelés
