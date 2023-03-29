@@ -42,7 +42,8 @@
           "images/**",
           "softec/**.zip",
           "softec/**.docx",
-          "softec/**.txt"
+          "softec/**.txt",
+		  "softec/**.csv",
         ]
       }
     ],

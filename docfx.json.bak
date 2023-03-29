@@ -39,7 +39,10 @@
     "resource": [
       {
         "files": [
-          "images/**"
+          "images/**",
+          "softec/**.zip",
+          "softec/**.docx",
+          "softec/**.txt"
         ]
       }
     ],
@@ -58,7 +61,8 @@
     "globalMetadataFiles": [],
     "fileMetadataFiles": [],
     "template": [
-      "default"
+      
+	  "./_templates/default"
     ],
     "postProcessors": [],
     "markdownEngineName": "markdig",
