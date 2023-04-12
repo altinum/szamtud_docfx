@@ -1,4 +1,4 @@
-# Software Engineering
+# Software Engineering Levelező vizsgakurzus
 
 [Tantargyi_informació, követelmények](./tantargyi_informaciok/)
 
@@ -26,23 +26,19 @@ Vastag kilens készítése Widows Forms alapokon SQL adatbázishoz.
 - [Visual Studio telepítése a szükséges komponensekkel](./vsinstall/)
 - [SQL Server Management Studio (SSMS) telepítése](/common/ssms_install/) Ha valaki még nem telepítette volna Adatbázisok tárgy keretéban.  
 
-### 1. hét 
+
+
+### 1. téma
+
+
+
+### 2. téma
 
 In memory adatbázisok, adatok mentése fájlba illetve visszatöltése fájlból. Adatkötött vezérlők használata	
 
 ​	Gyakorlati feladatsor: [In-memory adatbázis ](./1_gyak_in_memory_adatbazis/)
 
+### 3. téma
 
-### 2. hét 
-
-- 2a. gyakorlati feladatsor: [Távoli SQL adatbázis elérése C# alkalmazásból](./2a_gyak_tavoli_adatbazis_visual_studioban/)
-
-- 2b. gyakorlati feladatsor: [Lokális SQL adatbázis használata](./2b_gyak_lokalis_adatbazis_visual_studioban/)
-
-### 3. hét
-
-
-- [Reguláris kifejezések](./3_elm_regularis_kifejezesek/)
-- [Adatok validálása űrlapon](./3_gyak_adatok_validalasa_urlapon/)
-
+[Távoli SQL adatbázis elérése C# alkalmazásból](./2a_gyak_tavoli_adatbazis_visual_studioban/)
 

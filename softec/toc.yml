@@ -81,23 +81,23 @@
   href: osszefoglalo_levelezo\index.md
 - name: Projektfeladatok
   items:
-    - name: A beadandó feladatok értékelése
-      href: beadando\index.md
-    - name: A beszámolók menete
-      href: teamsbeszamolok\index.md
+#    - name: A beadandó feladatok értékelése
+#      href: beadando\index.md
+#    - name: A beszámolók menete
+#      href: teamsbeszamolok\index.md
     - name: "Projektfeladat: Életjáték"
       href: beadando_game_of_life\index.md
     - name: "Projektfeladat: Hajós oktató"
       href: beadando_hajos\index.md
-    - name: "Projektfeladat:  Memóriajáték folytatása"
+    - name: "Projektfeladat: Memóriajáték folytatása"
       href: beadando_quiz_numerikus\index.md
     - name: "Projektfeladat: Szótanító játék"
       href: beadando_szotanito\index.md
-    - name: "Projektfeladat:  Akasztófa játék"
+    - name: "Projektfeladat: Akasztófa játék"
       href: beadando_hangman\index.md
-    - name: "Projektfeladat:  Labirintus játék"
+    - name: "Projektfeladat: Labirintus játék"
       href: beadando_maze\index.md
-    - name: "Projektfeladat:  Kígyós játék almákkal"
+    - name: "Projektfeladat: Kígyós játék almákkal"
       href: beadando_snake\index.md
-    - name: "Projektfeladat:  „Keresd a különbséget” játék"
+    - name: "Projektfeladat: Keresd a különbséget játék"
       href: beadando_spot_the_difference\index.md

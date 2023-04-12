@@ -17,7 +17,21 @@ const Syllabus = {
     "13. hét - Projektfeladat bemutatók": new Date('2023-05-21'),
     "Szoftvertechnológia I feladatlap-gyűjtemény": new Date('2023-07-09'),
     "Szoftvertechnológia I összefoglaló feladatsor": new Date('2023-07-09'),
-    "Projektfeladatok": new Date('2023-07-9'),
+    "Projektfeladatok": new Date('2023-04-10'),
+	"Projektfeladat: Életjáték":new Date('2023-04-10'),
+    "Projektfeladat: Hajós oktató":new Date('2023-04-10'),
+    "Projektfeladat: Memóriajáték folytatása":new Date('2023-04-10'),
+    "Projektfeladat: Szótanító játék":new Date('2023-04-10'),
+    "Projektfeladat: Akasztófa játék":new Date('2023-04-10'),
+    "Projektfeladat: Labirintus játék":new Date('2023-04-10'),
+    "Projektfeladat: Kígyós játék almákkal":new Date('2023-04-10'),
+    "Projektfeladat: Keresd a különbséget játék":new Date('2023-04-10'),
+	"1. téma": new Date('2023-03-20'),
+	"2. téma": new Date('2023-03-20'),
+	"3. téma": new Date('2023-03-20'),
+	"4. téma": new Date('2023-03-20'),
+    
+    
 };
 function preprocess(){
 	hideTOC();
