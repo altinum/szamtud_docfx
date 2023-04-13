@@ -50,6 +50,7 @@ class KígyóElem : PictureBox
     {
         Width = KígyóElem.Méret;
         Height = KígyóElem.Méret;
+        BackColor = Color.Fuchsia;
     }
 }
 ```
