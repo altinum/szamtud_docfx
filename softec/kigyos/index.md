@@ -87,7 +87,10 @@ private void timer1_Tick(object sender, EventArgs e)
     //Fejnövesztés
     fej_x += irány_x * KígyóElem.Méret;
     fej_y += irány_y * KígyóElem.Méret;   
+    
     KígyóElem ke = new KígyóElem();
+    ke.Top = fej_y;
+    ke.Left = fej_x;
     Controls.Add(ke);
 }
 ```
