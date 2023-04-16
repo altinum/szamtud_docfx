@@ -41,18 +41,18 @@
   items:
     - name: Kígyós játék
       href: kigyos\index.md
-- name: 8. hét - 2. Géptermi ZH
-  items:
-    - name: Checklist az második ZH-hoz
-      href: zh2checklist\index.md
-- name: 9. hét
-  items:
-    - name: Emory game
-      href: emory\index.md
-- name: 10. hét
+- name: 8. hét
   items:
     - name: Grafika
       href: grafika_ifs_reszletes\index.md
+- name: 9. hét - 2. Géptermi ZH
+  items:
+    - name: Checklist az második ZH-hoz
+      href: zh2checklist\index.md
+    - name: Emory game
+      href: emory\index.md
+- name: 10. hét
+
 - name: 11. hét
   items:
     - name: Bantumi játék

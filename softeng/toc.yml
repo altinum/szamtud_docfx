@@ -1,21 +1,39 @@
 #- name: Tájékoztató
 #  href: tantargyi_informaciok\index.md
-- name: "1. téma"
+- name: "Hasznos info"
   items: 
-  - name: "UI tervezés"
-    href: UI_design\index.md
-- name: "2. téma"
-  items: 
-  - name: "In-memory adatbázis"
-    href: 1_gyak_in_memory_adatbazis\index.md
-- name: "3. téma"
-  items: 
-  - name: "Távoli adatbázis visual studioban"
-    href: 2a_gyak_tavoli_adatbazis_visual_studioban\index.md  
-- name: "4. téma"
-  items: 
-  - name: "Elmélet: Táblakapcsolatok"
-    href: 4_elm_tablakapcsolatok\index.md
-  - name: "Feladat: Többtáblás adatbázis"
-    href: 4_gyak_tobbtablas_adatbazis\index.md
+  - name: "Visual Studio 2022 telepítése"
+    href: LevelezoVK\KNOWHOW\visual_studio_telepites.md
+  - name: "Azure"
+    items:
+    - name: "Azure fiók regisztrálása"
+      href: LevelezoVK\KNOWHOW\azure_regisztracio.md
+    - name: "SQL adatbázis létrehozása Azure-ban"
+      href: LevelezoVK\KNOWHOW\azure_sql_adatbazis_letrehozasa_2022\index.md
+    - name: "Azure költségek követése"
+      href: LevelezoVK\KNOWHOW\azure_koltsegek.md
+  - name: "MS SQL Server Express telepítése"
+    href: LevelezoVK\KNOWHOW\sql_express_sajat_gepre\index.md
+  - name: "Lokális adatbázis létrehozása Visual Studio-ban"
+    href: LevelezoVK\KNOWHOW\lokalis_adatbazis_visual_studioban.md
+  href: LevelezoVK\UI\ui_design.html
+- name: "UI tervezés"
+  href: LevelezoVK\UI\ui_design.html
+- name: "In-memory adatbázis"
+  href: LevelezoVK\IN_MEMORY\in_memory_db.md
+- name: "Távoli adatbázis elérése"
+  href: LevelezoVK\REMOTE_DB\index.md  
+- name: "Többtáblás adatbázisok tervezése"
+  items:     
+  - name: "Tanulmányi adatbázis felépítése"
+    href: LevelezoVK\tobbtablas_db\TAO_adatbazis_felepitese.md
+  #- name: "UI építése tanulmányi adatbázishoz"
+  #  href: LevelezoVK\tobbtablas_db\TAO_adatbazis_UI.md
+- name: "LINQ"
+  items:
+  - name: "LINQ öszefoglaló"
+    href: LevelezoVK\LINQ\linq_osszefoglalo.md
+  - name: "LINQ alkalmazási példa"
+    href: LevelezoVK\LINQ\linq_lekerdezesek_-_studies_adatb.md
+
 

@@ -82,21 +82,140 @@
 <div class="embeddedvideo"><iframe src="https://storage.altinum.hu/szoft1/S1snake5.m4v" frameborder="0" allowfullscreen="true"></iframe></div>
 <p>(!Vid) 6. rész</p>
 <div class="embeddedvideo"><iframe src="https://storage.altinum.hu/szoft1/S1snake6.m4v" frameborder="0" allowfullscreen="true"></iframe></div>
-<h2 id="játék-felépítése-lépésenként">Játék felépítése lépésenként</h2>
-<h3 id="lépések-a-kígyós-játék-felépítéséhez">Lépések a kígyós játék felépítéséhez</h3>
+<h2 id="előadás-alap-játék-felépítése">Előadás: alap játék felépítése</h2>
 <p>(+/-)  Származtass a <code>PictureBox</code> osztálytól egy új osztályt <code>KígyóElem</code> néven!</p>
 <p>(+/-) A <code>KígyóElem</code> osztályt bővítsd egy méret statikus egész konstanssal, melynek értéke legyen <code>20</code>.</p>
+<pre><code class="lang-csharp">class KígyóElem : PictureBox
+{
+    public static int Méret = 20;
+}
+</code></pre>
 <p>(+/-) A <code>KígyóElem</code> osztályt bővítsd konstruktorral, melyben az a fenti konstansnak megfelelően 20x20 képpontosra méretezi magát.</p>
+<pre><code class="lang-csharp">class KígyóElem : PictureBox
+{
+    public static int Méret = 10;
+
+    public KígyóElem()
+    {
+        Width = KígyóElem.Méret;
+        Height = KígyóElem.Méret;
+    }
+}
+</code></pre>
 <p>(+/-) A <code>Form1</code> osztályt bővítsd <code>fejX</code> és <code>fejY</code> változókkal, melyekben az utoljára kirakott kígyófej koordinátáit tárolod! Állíts be értelemszerű kezdőéréket! (Pl. 100, 100)</p>
-<p>(+/-) A <code>Form1</code> osztályt bővítsd <code>irányX</code> és <code>irányY</code> változókkal, melyekben kígyó haladási irályát tárolod! (<code>-1</code>,<code>0</code>,<code>1</code> értékeket vehet fel.) Állíts be kezdőértéket -- ettől függ majd, hogy merre indul a kígyónk!</p>
-<p>(+/-) A <code>Form1</code> osztályt bővítsd <code>sorszám</code> nevű, <code>0</code> kezdőértékű változóval!</p>
-<p>(+/-) A <code>Form1</code>-en helyezz el egy engedélyezett számlálót fél másodperces intervallummal, majd rendelj a <code>Tick</code> eseményéhez esemény-kiszolgáló függvényt!</p>
-<p>(+/-) Az esemény-kiszolgálóban hozz létre egy új példányt a <code>KígyóElem</code> osztályból, majd az iránynak és a méretnek megfelelően változtasd a <code>fejX</code> és <code>fejY</code> változók értékeit! Ezután már mozogni kell a kígyóknak.</p>
+<pre><code class="lang-csharp">int fej_x = 100;
+int fej_y = 100;
+</code></pre>
+<p>(+/-) A <code>Form1</code> osztályt bővítsd <code>irány_x</code> és <code>irány_y</code> változókkal, melyekben kígyó haladási irályát tárolod! (<code>-1</code>,<code>0</code>,<code>1</code> értékeket vehet fel.) Állíts be kezdőértéket -- ettől függ majd, hogy merre indul a kígyónk!</p>
+<pre><code class="lang-csharp">int irány_x = 1;
+int irány_y = 0;
+</code></pre>
+<p>(+/-) A <code>Form1</code> osztályt bővítsd <code>lépésszám</code> nevű, <code>0</code> kezdőértékű változóval!</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>Ha létrehozol egy <code>int</code> típusú változót, <code>0</code>  lesz a kezdőértéke, nem kell külön inicializálni.</p>
+</div>
+<p>(+/-) A <code>Form1</code>-en helyezz el tervezőből egy <code>Timer</code>-t fél másodperces intervallummal, majd rendelj a <code>Tick</code> eseményéhez esemény-kiszolgáló függvényt!</p>
+<p>(+/-) Az esemény-kiszolgálóban az iránynak és a méretnek megfelelően változtasd a <code>fejX</code> és <code>fejY</code> változók értékeit, majd hozz létre egy új példányt a <code>KígyóElem</code> osztályból, majd ! Ezután már mozogni kell a kígyóknak.</p>
+<pre><code class="lang-csharp">private void timer1_Tick(object sender, EventArgs e)
+{
+    lépésszám++;
+    
+    //Fejnövesztés
+    fej_x += irány_x * KígyóElem.Méret;
+    fej_y += irány_y * KígyóElem.Méret;   
+    KígyóElem ke = new KígyóElem();
+    Controls.Add(ke);
+}
+</code></pre>
 <p>(+/-) Rendelj esemény-kiszolgálót az űrlap <code>KeyDown</code> eseményhez.</p>
 <p>(+/-) Változtasd a kígyó irányát az esemény-kiszolgáló paramétereként kapott <code>e.KeyValue</code> (vagy <code>KeyCode</code>) értéke alapján!</p>
-<p>(+/-) Valósítsd meg az ütközésvizsgálatot! Járd be az űrlap <code>Controls</code> listáját <code>foreach</code> ciklussal, és vizsgálj meg minden <code>KígyóElemet</code> <code>ke</code> néven. Ha van olyan, melynek <code>Top</code> illetve <code>Left</code> tulajdonságai megegyeznek a <code>fejY</code> illetve <code>fejX</code> változók értékeivel, a kígyó farkába harapott.</p>
-<p>(+/-) Rövidüljön a kígyó. Ehhez először bővítsd egy <code>hossz</code> nevű változóval az osztályt, melyben a kígyó aktuális hosszát tárolod! Ha az űrlapon lévő vezérlők száma meghaladja a hossz változó értékét, vedd ki az űrlap <code>Controls</code> listájának nulladik elemét!</p>
-<p>(+/-) A kígyóelem konstruktorában páros és a páratlan sorszámú kígyóelemeket színezd eltérően!</p>
+<pre><code class="lang-csharp">private void Form1_KeyDown(object sender, KeyEventArgs e)
+{
+    if (e.KeyCode == Keys.Up)
+    {
+        irány_y = -1;
+        irány_x = 0;
+    }
+
+    if (e.KeyCode == Keys.Down)
+    {
+        irány_y = 1;
+        irány_x = 0;
+    }
+
+    if (e.KeyCode == Keys.Left)
+    {
+        irány_y = 0;
+        irány_x = -1;
+    }
+
+    if (e.KeyCode == Keys.Right)
+    {
+        irány_y = 0;
+        irány_x = 1;
+    }
+}
+</code></pre>
+<p>(+/-) Valósítsd meg az ütközésvizsgálatot! Miután kiszámoltad az új <code>fej_x</code> és <code>fej_y</code> értékeket, járd be az űrlap <code>Controls</code> listáját <code>foreach</code> ciklussal, és vizsgálj meg minden <code>KígyóElemet</code> <code>ke</code> néven. Ha van olyan, melynek <code>Top</code> illetve <code>Left</code> tulajdonságai megegyeznek a <code>fej_x</code> illetve <code>fej_y</code> változók értékeivel, a kígyó farkába harapott.</p>
+<pre><code class="lang-csahrp">
+</code></pre>
+<p>(+/-) &quot;Másszon&quot; a kígyó! Ehhez először bővítsd egy <code>hossz</code> nevű változóval az osztályt, melyben a kígyó aktuális hosszát tárolod! Ha az űrlapon lévő vezérlők száma meghaladja a hossz változó értékét, vedd ki az űrlap <code>Controls</code> listájának nulladik elemét!</p>
+<p>Ha a kígyónk hossza nagyobb, mint a kívánt hossz, kivesszük a <code>Controls</code> gyűjtemény nulladik elemét, vagyis a legrégebben belepakolt elemet:</p>
+<pre><code class="lang-csharp">//Farokvágás
+if (kígyó.Count &gt; hossz)
+{
+    KígyóElem levágandó = kígyó[0];
+    Controls.RemoveAt(0);
+}
+</code></pre>
+<p>(+/-) A  páros és a páratlan sorszámú kígyóelemeket színezd eltérően!</p>
+<pre><code class="lang-csharp">if (lépésszám % 2 == 0) ke.BackColor = Color.Yellow;
+</code></pre>
+<h2 id="feladatok-gyakorlatra">Feladatok gyakorlatra</h2>
+<h3 id="mérgek-és-kaják">Mérgek és kaják</h3>
+<p>Ha  kajákat és mérgeket is elhelyezel az űrlap vezérlőinek listájában,  működésképtelenné válik az az elv,  hogy a <code>Controls.RemoveAt(0);</code>  megoldással kivesszük a legrégebben berakott elemet. A probléma megodására azokat a <code>KígyóElem</code> típusú objektumokat, amelyek a kígyónk testét képezik, külön listában is tároljuk. Hozz létre egy <code>KígyóElem</code> típusú elemekből álló listát a <code>From1</code>-ben, osztály szinten:</p>
+<pre><code class="lang-csharp">List&lt;KígyóElem&gt; kígyó = new List&lt;KígyóElem&gt;();
+</code></pre>
+<p>Amikor új fejet  neveztünk a kígyónak,  azt beletesszük a <code>kígyó</code> listába is  és az űrlap vezérlőinek a listájába is:</p>
+<pre><code class="lang-csharp">//Fejnövesztés
+fej_x += irány_x * KígyóElem.Méret;
+fej_y += irány_y * KígyóElem.Méret;   
+KígyóElem ke = new KígyóElem();
+kígyó.Add(ke); //Amikor új fejet neveztünk a kígyónak, azt beletesszük a `kígyó` listába is ..
+Controls.Add(ke); //.. és az űrlap vezérlőinek a listájába is
+</code></pre>
+<p>A farokvágásnál viszont a <code>kígyó</code> lista legrégebbi eleme alapján jelöljük ki a levágandó kígyóelement:</p>
+<pre><code class="lang-csharp">//Farokvágás
+if (kígyó.Count &gt; hossz)
+{
+    KígyóElem levágandó = kígyó[0];
+    kígyó.RemoveAt(0);
+    Controls.Remove(levágandó);
+}
+</code></pre>
+<p>Az ütközésvizsgálat is másképp alakul:</p>
+<pre><code class="lang-csharp">foreach (object item in Controls)
+{
+    if (item is KígyóElem)
+    {
+        KígyóElem k = (KígyóElem)item;
+
+        if (k.Top == fej_y &amp;&amp; k.Left == fej_x)
+        {
+            timer1.Enabled = false;
+            return;
+        }
+    }
+}
+</code></pre>
+<p>Ezután már létrehozhatunk új osztályokat a kajálnak és a mérgeknek, amelyeket valahány lépésenként véletlenszerűen elhelyezhetünk az űrlapon.</p>
+<h3 id="két-kígyó-egymás-ellen">Két kígyó egymás ellen</h3>
+<p>Lehet két kígyók:</p>
+<pre><code class="lang-csharp">List&lt;KígyóElem&gt; kígyó_1 = new List&lt;KígyóElem&gt;();
+List&lt;KígyóElem&gt; kígyó_2 = new List&lt;KígyóElem&gt;();
+</code></pre>
+<p>A többi már jön magától :)</p>
 <h3 id="ellenőrző-kérdések">Ellenőrző kérdések</h3>
 <ol>
 <li>Egy űrlapon csak a <code>Button</code> osztály példányai vannak. Írd le azt a <code>foreach</code> ciklust, mely bejárja az űrlap <code>Controls</code> listáját és minden gomb <code>Visible</code> tulajdonságát hamis értékűre állítja!</li>

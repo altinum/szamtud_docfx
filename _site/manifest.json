@@ -4,18 +4,6 @@
   "xrefmap": "xrefmap.yml",
   "files": [
     {
-      "type": "Conceptual",
-      "source_relative_path": "README.md",
-      "output": {
-        ".html": {
-          "relative_path": "README.html",
-          "hash": "Crn5OJu4ZUKCLAPeaVDhxA9WmOoq2GqH5atrKjxTyCw="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
       "log_codes": [
         "InvalidFileLink"
       ],
@@ -27,7 +15,7 @@
           "hash": "YprMxq1i2gHrW9gBXnnXxsDQi07hs6JA5MghHthHDsg="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -42,7 +30,7 @@
           "hash": "tFfJtdmp9+vs8tn8TzOFZ6vfpQUBJHLRUbhyxxXflxQ="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -57,7 +45,7 @@
           "hash": "Go5/RekKKVOUjuGLZSnIVziPhiBvqbhZzZ+djFd35AA="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -72,7 +60,7 @@
           "hash": "xEE5aQ23hqNdLNB+GWsQrMWHuDTaDdKsPzRCzRtpQpA="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -87,7 +75,7 @@
           "hash": "BO7I6CNmhPXy6aWvYB5nLBBLxGovaohVXqThA9x0bNQ="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -102,7 +90,7 @@
           "hash": "GAHbyEMU38nv6yGM88j2qO7IeCK1Y+RKR6+lVbaYNIY="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -117,7 +105,7 @@
           "hash": "+TMD1scERb90qlpjRrPZmF1YoWh2so657hw7/qEIUmQ="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -132,7 +120,7 @@
           "hash": "tmucoIAoGC7WFtyNXtYih2my2bbSuJ4pHAJ2v5F/BeM="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -147,7 +135,7 @@
           "hash": "Ic87GtjRIX0XK9HIoXcDR0NAxY17zchLF1PtS7dHyzw="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -162,7 +150,7 @@
           "hash": "59e1wOCfyAES5H/5fG+sti+QkvlQ2BObkJ8c1+Uuroc="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -177,7 +165,7 @@
           "hash": "J9d9/A+8dWVSPwB2UHC/yIIjbR9j0AjTggNyl7ECOMM="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -192,7 +180,7 @@
           "hash": "59hUIVwDbZFshS37MPHZfh681iGXjv2HSE6yaCb9CNI="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -204,7 +192,7 @@
           "hash": "Gkw9H1vClxVfU61ODIbjAGfhn4s4OI5ivn98fnQWBxA="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -216,7 +204,7 @@
           "hash": "89GmoBjPTOjqoNrw46zrMCpMu1afmkFxj2+Mfogkksg="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -228,7 +216,7 @@
           "hash": "Hob0M/G0uyiUNGcPtw/TlQpmzdWuo9/7ddnu6rmo1Q8="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -240,7 +228,7 @@
           "hash": "LTMD+/gup9Py7g9vjnQaasRIO3IJbGnUpj4JZi2i074="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -1023,7 +1011,7 @@
           "hash": "/UyM1mtEaJD+VWqyj8QQ+VCLjRnkq1jG/qS0fyv4b34="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -1035,7 +1023,7 @@
           "hash": "v76DhgQKqovQctaC7AmYxMmeDBQMCQ3L96NFMJn1/8s="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -1047,7 +1035,7 @@
           "hash": "Uj3dBYI+1lQVpBLN10m5lr2T23HTLLD8QY2b0oV+FXE="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -1070,7 +1058,7 @@
           "hash": "qAo2xPj3dBbzXD6LaFb47bVINl4FsAEI/cU9K1jqEXQ="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -1082,7 +1070,7 @@
           "hash": "sBf1ntWTTs5XdTxChfBQgJ04zqB6QiACOHWGSuJ4m+w="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -1094,7 +1082,7 @@
           "hash": "25BJbkxN1SBydnodzT4T8KcUOlrsqRv/4t13OPxVLqw="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -1109,7 +1097,7 @@
           "hash": "PT5DRR5JiwvLD4C/fjmJqDrudii1FR+omtnuLWsFx0M="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -1121,7 +1109,7 @@
           "hash": "YRLGMxnUxaj64NsKNzZ3b96KetjF0MpVZMO9Md0aQg4="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -1133,7 +1121,7 @@
           "hash": "8M+1RRMU63fg+K6i9KR5ElhDJdfm8g3pqgULRtpmnQQ="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -1145,7 +1133,7 @@
           "hash": "AIHlzb8kY/R3tA4vdZ1j2W27JU2T2xnDOG8QbdpENEU="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -1157,7 +1145,7 @@
           "hash": "XZfCQiz5xyauP2jvX1V6a8o7KnlsKwoLzBFaXjES+IY="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -1169,7 +1157,7 @@
           "hash": "coBK39EB2EyVzMMO2x8bWwlU8tLv5v+s6oXxltilSuI="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -1181,7 +1169,7 @@
           "hash": "RvwlwkTf/OYSkzHqfPtBYUfgVMHo4XDvFhmhhaLxujI="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -1196,7 +1184,7 @@
           "hash": "Q+1Lt6qOR+C+pOPr9Mm9LmhKI+WelFHG303i4Yq6w2Y="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -1208,7 +1196,7 @@
           "hash": "O58qxu7l5nozrM6qmvp4en3Ar90pZkBcE8IA1yzQARw="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -1223,6 +1211,9 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
       "type": "Conceptual",
       "source_relative_path": "softec/feleletvalasztos/index.md",
       "output": {
@@ -1231,18 +1222,7 @@
           "hash": "mWJaXgqblrfkyFY/3wqcIl6EctlTu6FZAmq38BaUNJg="
         }
       },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "softec/feleletvalasztos/jatek.csv",
-      "output": {
-        "resource": {
-          "relative_path": "softec/feleletvalasztos/jatek.csv"
-        }
-      },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -1265,7 +1245,7 @@
           "hash": "P68BcSPFPnIE47vXlQNkK4V/ILuNHdmtf/LjNWQyWec="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -1280,7 +1260,7 @@
           "hash": "G/HDGYGupVSQjQjshsjbp8nGZKQw92kyoSFPuG9SNW0="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -1292,7 +1272,7 @@
           "hash": "anFjCuSa4qeJFeFJWyovkFzv/nQjjJVdZFdvs9HdCyw="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -1315,7 +1295,7 @@
           "hash": "UGzR98NQEr4OQso7XCpXTi2UggJeUCuXpiwIZ7JFiqQ="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -1335,10 +1315,10 @@
       "output": {
         ".html": {
           "relative_path": "softec/kigyos/index.html",
-          "hash": "3GenWquteL7N8wvQ3Wz+LEWNrhQ//lmzK2MkBoA6NJA="
+          "hash": "gob6qqbV7q7rt+8A+h0OL3PzqdXG0tKjPuyNjYcBq2c="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -1350,7 +1330,7 @@
           "hash": "d3LvPor31AxiQdgI5k0Lld5W74Npdi68NOpCLcKDorQ="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -1362,7 +1342,7 @@
           "hash": "RyDwt81bcghPnGecSaTDMzblLYgMZhyb+Pj7tw1Cplo="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -1374,7 +1354,7 @@
           "hash": "5G7OVE8pvqvO4WixOiNyXq2KSnG1CjoREQ0jc67aHQY="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -1386,7 +1366,7 @@
           "hash": "yCnrFGNs6nAG9Tq1hqevZ8/4nt9ATjzgq+Xq3Br3wwc="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -1398,7 +1378,7 @@
           "hash": "pZrLLNVy2w5EeD8JKp3+ySXBjiwGIMeeq87LkbqpXdo="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -1410,7 +1390,7 @@
           "hash": "Ydpq3qM+TZWvXJGvpYRtcqn1NbONsvIEmNTl2292Si4="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -1422,7 +1402,7 @@
           "hash": "YVdVlG+qWfryNTFR7JKfneK1OJX9yhggG45ojUUxDhM="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -1434,7 +1414,7 @@
           "hash": "GKEzqGP+WSZjjKjOiyavW+QWLp06oP+zC0DLlO5fh/o="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -1449,7 +1429,7 @@
           "hash": "tsGfs7C4tKkXfiTqqRk0epM3CkHOwsLS2iU222TfuHo="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -1464,7 +1444,7 @@
           "hash": "xCOCdIBANYcP0G3xmrzVLw3A7lD6aKccKHHuuFIOs/s="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -1476,7 +1456,7 @@
           "hash": "BbYhE63i3Xc2hDuFOhlqR2tUvjEKauy/oUfHaf1Yv44="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -1488,7 +1468,7 @@
           "hash": "D6GCWUETBTFQSgAiMfgnXLWKwnorCmE2fETcYc5Mqyg="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -1500,7 +1480,7 @@
           "hash": "alg4Jkd/ZR3EsAn6DkRg+bryNLYP07bo0HmGPdgQyUQ="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -1509,7 +1489,7 @@
       "output": {
         ".html": {
           "relative_path": "softec/toc.html",
-          "hash": "jfs1KtffuqkupRKtTI4OH6xEWuJbRWmiombThocsX0g="
+          "hash": "kBrFoD8DzmDLubVc0XfO1RbiJ5TWR9HbwlMgmGX8CIk="
         }
       },
       "is_incremental": false,
@@ -1527,7 +1507,7 @@
           "hash": "10GKMPKNmM8+IPdW7atmLWx81IGJmIIUNedCZSbPD4A="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -1539,7 +1519,7 @@
           "hash": "BBpg/tFlMJ/s9Zl5nBFWNSGaOEfzJB0iAuFodDy6D98="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -1551,7 +1531,7 @@
           "hash": "buqNbPqENjWBkuGaF4T3USwyeIU31bdHpfJma48mX2E="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -1563,7 +1543,7 @@
           "hash": "yF2LUR34TFitS5hMGaiD3nBE8gvU+rRnFwf9FTP9vz4="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -1578,15 +1558,283 @@
       "version": ""
     },
     {
+      "type": "Resource",
+      "source_relative_path": "softeng/LevelezoVK/IN_MEMORY/in-memory-db-1.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/LevelezoVK/IN_MEMORY/in-memory-db-1.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/LevelezoVK/IN_MEMORY/in-memory-db-2.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/LevelezoVK/IN_MEMORY/in-memory-db-2.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "softeng/LevelezoVK/IN_MEMORY/in_memory_db.md",
+      "output": {
+        ".html": {
+          "relative_path": "softeng/LevelezoVK/IN_MEMORY/in_memory_db.html",
+          "hash": "RkVCy2z1swpdyNzTocw6gPp5VWGaaXXjY/hUIs/AwjI="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/LevelezoVK/IN_MEMORY/project/InMemory/obj/Debug/net6.0-windows/InMemory.csproj.FileListAbsolute.txt",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/LevelezoVK/IN_MEMORY/project/InMemory/obj/Debug/net6.0-windows/InMemory.csproj.FileListAbsolute.txt"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "softeng/LevelezoVK/KNOWHOW/azure_koltsegek.md",
+      "output": {
+        ".html": {
+          "relative_path": "softeng/LevelezoVK/KNOWHOW/azure_koltsegek.html",
+          "hash": "j6i5HTyGylWW6Mc0jbucciG2rMl6i5ZHjI9vDRQoiFk="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "softeng/LevelezoVK/KNOWHOW/azure_regisztracio.md",
+      "output": {
+        ".html": {
+          "relative_path": "softeng/LevelezoVK/KNOWHOW/azure_regisztracio.html",
+          "hash": "czVp37mk3nM/jmMV7+JLn676p0pFbaGkTvDuxlctZno="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/LevelezoVK/KNOWHOW/azure_sql_adatbazis_letrehozasa_2022/Azure_2022_Create.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/LevelezoVK/KNOWHOW/azure_sql_adatbazis_letrehozasa_2022/Azure_2022_Create.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/LevelezoVK/KNOWHOW/azure_sql_adatbazis_letrehozasa_2022/Azure_2022_Finished.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/LevelezoVK/KNOWHOW/azure_sql_adatbazis_letrehozasa_2022/Azure_2022_Finished.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/LevelezoVK/KNOWHOW/azure_sql_adatbazis_letrehozasa_2022/Azure_2022_Firewall.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/LevelezoVK/KNOWHOW/azure_sql_adatbazis_letrehozasa_2022/Azure_2022_Firewall.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/LevelezoVK/KNOWHOW/azure_sql_adatbazis_letrehozasa_2022/Azure_2022_configdb.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/LevelezoVK/KNOWHOW/azure_sql_adatbazis_letrehozasa_2022/Azure_2022_configdb.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/LevelezoVK/KNOWHOW/azure_sql_adatbazis_letrehozasa_2022/Azure_2022_dtu.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/LevelezoVK/KNOWHOW/azure_sql_adatbazis_letrehozasa_2022/Azure_2022_dtu.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/LevelezoVK/KNOWHOW/azure_sql_adatbazis_letrehozasa_2022/Azure_2022_home.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/LevelezoVK/KNOWHOW/azure_sql_adatbazis_letrehozasa_2022/Azure_2022_home.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/LevelezoVK/KNOWHOW/azure_sql_adatbazis_letrehozasa_2022/Azure_2022_newHost.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/LevelezoVK/KNOWHOW/azure_sql_adatbazis_letrehozasa_2022/Azure_2022_newHost.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/LevelezoVK/KNOWHOW/azure_sql_adatbazis_letrehozasa_2022/Azure_2022_newdb.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/LevelezoVK/KNOWHOW/azure_sql_adatbazis_letrehozasa_2022/Azure_2022_newdb.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/LevelezoVK/KNOWHOW/azure_sql_adatbazis_letrehozasa_2022/Azure_See_on_ControlPanel.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/LevelezoVK/KNOWHOW/azure_sql_adatbazis_letrehozasa_2022/Azure_See_on_ControlPanel.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/LevelezoVK/KNOWHOW/azure_sql_adatbazis_letrehozasa_2022/Azure_work_in_progress.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/LevelezoVK/KNOWHOW/azure_sql_adatbazis_letrehozasa_2022/Azure_work_in_progress.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/LevelezoVK/KNOWHOW/azure_sql_adatbazis_letrehozasa_2022/azure-firewall.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/LevelezoVK/KNOWHOW/azure_sql_adatbazis_letrehozasa_2022/azure-firewall.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/LevelezoVK/KNOWHOW/azure_sql_adatbazis_letrehozasa_2022/azure-properties.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/LevelezoVK/KNOWHOW/azure_sql_adatbazis_letrehozasa_2022/azure-properties.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/LevelezoVK/KNOWHOW/azure_sql_adatbazis_letrehozasa_2022/azure-settings.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/LevelezoVK/KNOWHOW/azure_sql_adatbazis_letrehozasa_2022/azure-settings.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "softeng/LevelezoVK/KNOWHOW/azure_sql_adatbazis_letrehozasa_2022/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "softeng/LevelezoVK/KNOWHOW/azure_sql_adatbazis_letrehozasa_2022/index.html",
+          "hash": "yISQ9R2nRtXPGjSygITQuMkb3AGMr09Kor6dBQfG5G0="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/LevelezoVK/KNOWHOW/azure_sql_adatbazis_letrehozasa_2022/kep4_4_mehet2_2022.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/LevelezoVK/KNOWHOW/azure_sql_adatbazis_letrehozasa_2022/kep4_4_mehet2_2022.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
       "log_codes": [
         "InvalidFileLink"
       ],
       "type": "Conceptual",
-      "source_relative_path": "softeng/1_gyak_in_memory_adatbazis/index.md",
+      "source_relative_path": "softeng/LevelezoVK/KNOWHOW/azure_sql_szerver.md",
       "output": {
         ".html": {
-          "relative_path": "softeng/1_gyak_in_memory_adatbazis/index.html",
-          "hash": "5mtVI4SsnRP13RJsqBEzLS2EGOVusd4No5BR15FiorE="
+          "relative_path": "softeng/LevelezoVK/KNOWHOW/azure_sql_szerver.html",
+          "hash": "BreA7WiUOAwr6UGP0Ay5tSpIavtsD0KOJfwb90o2byE="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/LevelezoVK/KNOWHOW/local-connection-1.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/LevelezoVK/KNOWHOW/local-connection-1.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/LevelezoVK/KNOWHOW/local-connection-2.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/LevelezoVK/KNOWHOW/local-connection-2.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/LevelezoVK/KNOWHOW/local-connection-3.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/LevelezoVK/KNOWHOW/local-connection-3.png"
         }
       },
       "is_incremental": false,
@@ -1594,11 +1842,255 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "softeng/2a_gyak_tavoli_adatbazis_visual_studioban/index.md",
+      "source_relative_path": "softeng/LevelezoVK/KNOWHOW/lokalis_adatbazis_visual_studioban.md",
       "output": {
         ".html": {
-          "relative_path": "softeng/2a_gyak_tavoli_adatbazis_visual_studioban/index.html",
-          "hash": "8dWBMmUpohnhvT7rFN7KpMKNrZR6sL3dyTNAj2S0xlM="
+          "relative_path": "softeng/LevelezoVK/KNOWHOW/lokalis_adatbazis_visual_studioban.html",
+          "hash": "r9q0PXYaFH89iI/DpBo8UgdHBuUH78fwaX5nT4n7Iks="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/LevelezoVK/KNOWHOW/service-based-db-1.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/LevelezoVK/KNOWHOW/service-based-db-1.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/LevelezoVK/KNOWHOW/service-based-db-2.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/LevelezoVK/KNOWHOW/service-based-db-2.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/LevelezoVK/KNOWHOW/service-based-db-files.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/LevelezoVK/KNOWHOW/service-based-db-files.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "softeng/LevelezoVK/KNOWHOW/sql_express_sajat_gepre/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "softeng/LevelezoVK/KNOWHOW/sql_express_sajat_gepre/index.html",
+          "hash": "KHzv09S5O/0lXdvqUlTB0mL8ezyKHEd7wtP/shSSc2Q="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/LevelezoVK/KNOWHOW/sql_express_sajat_gepre/sqlexp01.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/LevelezoVK/KNOWHOW/sql_express_sajat_gepre/sqlexp01.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/LevelezoVK/KNOWHOW/sql_express_sajat_gepre/sqlexp02.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/LevelezoVK/KNOWHOW/sql_express_sajat_gepre/sqlexp02.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/LevelezoVK/KNOWHOW/sql_express_sajat_gepre/sqlexp03.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/LevelezoVK/KNOWHOW/sql_express_sajat_gepre/sqlexp03.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/LevelezoVK/KNOWHOW/sql_express_sajat_gepre/sqlexp04.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/LevelezoVK/KNOWHOW/sql_express_sajat_gepre/sqlexp04.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/LevelezoVK/KNOWHOW/sql_express_sajat_gepre/sqlexp05.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/LevelezoVK/KNOWHOW/sql_express_sajat_gepre/sqlexp05.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/LevelezoVK/KNOWHOW/sql_express_sajat_gepre/sqlexp06.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/LevelezoVK/KNOWHOW/sql_express_sajat_gepre/sqlexp06.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/LevelezoVK/KNOWHOW/sql_express_sajat_gepre/sqlexp07.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/LevelezoVK/KNOWHOW/sql_express_sajat_gepre/sqlexp07.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/LevelezoVK/KNOWHOW/sql_express_sajat_gepre/sqlexp08.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/LevelezoVK/KNOWHOW/sql_express_sajat_gepre/sqlexp08.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/LevelezoVK/KNOWHOW/sql_express_sajat_gepre/sqlexp09.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/LevelezoVK/KNOWHOW/sql_express_sajat_gepre/sqlexp09.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/LevelezoVK/KNOWHOW/sql_express_sajat_gepre/sqlexp10.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/LevelezoVK/KNOWHOW/sql_express_sajat_gepre/sqlexp10.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/LevelezoVK/KNOWHOW/sql_express_sajat_gepre/sqlexp11.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/LevelezoVK/KNOWHOW/sql_express_sajat_gepre/sqlexp11.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/LevelezoVK/KNOWHOW/sql_express_sajat_gepre/sqlexp12.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/LevelezoVK/KNOWHOW/sql_express_sajat_gepre/sqlexp12.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/LevelezoVK/KNOWHOW/sql_express_sajat_gepre/sqlexp13.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/LevelezoVK/KNOWHOW/sql_express_sajat_gepre/sqlexp13.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/LevelezoVK/KNOWHOW/sql_express_sajat_gepre/sqlexp14.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/LevelezoVK/KNOWHOW/sql_express_sajat_gepre/sqlexp14.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/LevelezoVK/KNOWHOW/sql_express_sajat_gepre/sqlexp15.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/LevelezoVK/KNOWHOW/sql_express_sajat_gepre/sqlexp15.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/LevelezoVK/KNOWHOW/sql_express_sajat_gepre/sqlexp16.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/LevelezoVK/KNOWHOW/sql_express_sajat_gepre/sqlexp16.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "softeng/LevelezoVK/KNOWHOW/visual_studio_telepites.md",
+      "output": {
+        ".html": {
+          "relative_path": "softeng/LevelezoVK/KNOWHOW/visual_studio_telepites.html",
+          "hash": "gVc2cjYWQSa1/pzTdh7r6YO+DqtLiNORa/0wbvwuYrQ="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/LevelezoVK/LINQ/1585069392831.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/LevelezoVK/LINQ/1585069392831.png"
         }
       },
       "is_incremental": false,
@@ -1609,11 +2101,67 @@
         "InvalidFileLink"
       ],
       "type": "Conceptual",
-      "source_relative_path": "softeng/2b_gyak_lokalis_adatbazis_visual_studioban/index.md",
+      "source_relative_path": "softeng/LevelezoVK/LINQ/linq_lekerdezesek_-_studies_adatb.md",
       "output": {
         ".html": {
-          "relative_path": "softeng/2b_gyak_lokalis_adatbazis_visual_studioban/index.html",
-          "hash": "edo1ymtq2SUczaLVJXB3zk3+niyqR7n7eC0tNYTFSJE="
+          "relative_path": "softeng/LevelezoVK/LINQ/linq_lekerdezesek_-_studies_adatb.html",
+          "hash": "gdXx4ALKAovKm6LW1RSIZ3jZLqiuvoNP3pRXBD1nxvM="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "softeng/LevelezoVK/LINQ/linq_osszefoglalo.md",
+      "output": {
+        ".html": {
+          "relative_path": "softeng/LevelezoVK/LINQ/linq_osszefoglalo.html",
+          "hash": "z4JmFzWA8YNdXH9eI3JSQxPMDO7hWAcyP+tJaBhxQJI="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/LevelezoVK/LINQ/linq_studies.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/LevelezoVK/LINQ/linq_studies.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/LevelezoVK/REMOTE_DB/add_connection.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/LevelezoVK/REMOTE_DB/add_connection.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/LevelezoVK/REMOTE_DB/add_data_source.gif",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/LevelezoVK/REMOTE_DB/add_data_source.gif"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/LevelezoVK/REMOTE_DB/add_service_based_database.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/LevelezoVK/REMOTE_DB/add_service_based_database.png"
         }
       },
       "is_incremental": false,
@@ -1621,11 +2169,55 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "softeng/3_elm_regularis_kifejezesek/index.md",
+      "source_relative_path": "softeng/LevelezoVK/REMOTE_DB/concurrency.md",
       "output": {
         ".html": {
-          "relative_path": "softeng/3_elm_regularis_kifejezesek/index.html",
-          "hash": "Qe5mwSnEMrniNREijMsvtQ2oqy0pAdQ0c8BFy0X7blc="
+          "relative_path": "softeng/LevelezoVK/REMOTE_DB/concurrency.html",
+          "hash": "1OHeJhob1R92vqZ5GHG6Gj9impUG1Ac7r12VAg9da5I="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/LevelezoVK/REMOTE_DB/create_a_new_project.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/LevelezoVK/REMOTE_DB/create_a_new_project.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/LevelezoVK/REMOTE_DB/create_a_new_project_60.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/LevelezoVK/REMOTE_DB/create_a_new_project_60.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/LevelezoVK/REMOTE_DB/datasource_in_solutionexplorer.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/LevelezoVK/REMOTE_DB/datasource_in_solutionexplorer.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/LevelezoVK/REMOTE_DB/error.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/LevelezoVK/REMOTE_DB/error.png"
         }
       },
       "is_incremental": false,
@@ -1633,11 +2225,134 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "softeng/3_gyak_adatok_validalasa_urlapon/index.md",
+      "source_relative_path": "softeng/LevelezoVK/REMOTE_DB/index.md",
       "output": {
         ".html": {
-          "relative_path": "softeng/3_gyak_adatok_validalasa_urlapon/index.html",
-          "hash": "J3vOh6xwvwUZ4LIS4X2AH3HI3DPpvhSlIG3oh5JZ33M="
+          "relative_path": "softeng/LevelezoVK/REMOTE_DB/index.html",
+          "hash": "QJ+6XSMq2/Cj3ugJR8SYRvTRpbuXLM8t599j2wkvgbo="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/LevelezoVK/REMOTE_DB/nuget.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/LevelezoVK/REMOTE_DB/nuget.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/LevelezoVK/REMOTE_DB/nuget_packages.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/LevelezoVK/REMOTE_DB/nuget_packages.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/LevelezoVK/REMOTE_DB/orm_files.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/LevelezoVK/REMOTE_DB/orm_files.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/LevelezoVK/REMOTE_DB/project/RemoteDBTest/obj/Debug/net6.0-windows/RemoteDBTest.csproj.FileListAbsolute.txt",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/LevelezoVK/REMOTE_DB/project/RemoteDBTest/obj/Debug/net6.0-windows/RemoteDBTest.csproj.FileListAbsolute.txt"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/LevelezoVK/REMOTE_DB/schema.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/LevelezoVK/REMOTE_DB/schema.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/LevelezoVK/REMOTE_DB/server_explorer_with_db.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/LevelezoVK/REMOTE_DB/server_explorer_with_db.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/LevelezoVK/REMOTE_DB/service-based-db-files.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/LevelezoVK/REMOTE_DB/service-based-db-files.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/LevelezoVK/REMOTE_DB/show_table_data.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/LevelezoVK/REMOTE_DB/show_table_data.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/LevelezoVK/UI/project/Többablakos/obj/Debug/net6.0-windows/Többablakos.csproj.FileListAbsolute.txt",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/LevelezoVK/UI/project/Többablakos/obj/Debug/net6.0-windows/Többablakos.csproj.FileListAbsolute.txt"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "softeng/LevelezoVK/UI/ui_design.md",
+      "output": {
+        ".html": {
+          "relative_path": "softeng/LevelezoVK/UI/ui_design.html",
+          "hash": "RaFeoc+T1+5VzjDPdOLntYfrkyepGitX6O4vifXU74U="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "softeng/LevelezoVK/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "softeng/LevelezoVK/index.html",
+          "hash": "phRnm4wJ7GM+oPo7pIEbtQc47V/39jUcUz3PaGP5des="
         }
       },
       "is_incremental": false,
@@ -1648,14 +2363,14 @@
         "InvalidFileLink"
       ],
       "type": "Conceptual",
-      "source_relative_path": "softeng/4_elm_tablakapcsolatok/index.md",
+      "source_relative_path": "softeng/LevelezoVK/tobbtablas_db/TAO_adatbazis_UI.md",
       "output": {
         ".html": {
-          "relative_path": "softeng/4_elm_tablakapcsolatok/index.html",
-          "hash": "A7DCu3fb5sQekccv1lkrVG2qkz0MWVLE4eY0ANXdKSs="
+          "relative_path": "softeng/LevelezoVK/tobbtablas_db/TAO_adatbazis_UI.html",
+          "hash": "8UX5sCZi82xe6ZMCmWhZ/p7783U7cOp1ZYzzH//szC0="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -1663,83 +2378,14 @@
         "InvalidFileLink"
       ],
       "type": "Conceptual",
-      "source_relative_path": "softeng/4_gyak_tobbtablas_adatbazis/index.md",
+      "source_relative_path": "softeng/LevelezoVK/tobbtablas_db/TAO_adatbazis_felepitese.md",
       "output": {
         ".html": {
-          "relative_path": "softeng/4_gyak_tobbtablas_adatbazis/index.html",
-          "hash": "AU5Q7oRp3Y9IBEcAGiYS0NkZ7JhhCwHsfrqTS70yDMA="
+          "relative_path": "softeng/LevelezoVK/tobbtablas_db/TAO_adatbazis_felepitese.html",
+          "hash": "F332diAPK5SgdpM9nku4I+jbHRshz7fU+iS26xe7XTo="
         }
       },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "softeng/5_elm_LINQ_osszeffoglalo/index.md",
-      "output": {
-        ".html": {
-          "relative_path": "softeng/5_elm_LINQ_osszeffoglalo/index.html",
-          "hash": "gNZDsRi0eIXvgO+G83L+Vp0XP27gFbEXoKilaCq4Z6U="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
-      "type": "Conceptual",
-      "source_relative_path": "softeng/5_gyak_linq_lekerdezesek_-_studies_adatb/index.md",
-      "output": {
-        ".html": {
-          "relative_path": "softeng/5_gyak_linq_lekerdezesek_-_studies_adatb/index.html",
-          "hash": "rNhfuq8VO82AV8pW2/ePvKX1NOJs6dr7PgldZLHN+i0="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
-      "type": "Conceptual",
-      "source_relative_path": "softeng/6_elm_linq_extra/index.md",
-      "output": {
-        ".html": {
-          "relative_path": "softeng/6_elm_linq_extra/index.html",
-          "hash": "JaGSdWg5oCKf5/VGJMoyei4TA5tGPMeDqjwjm4kB8fA="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
-      "type": "Conceptual",
-      "source_relative_path": "softeng/6a_gyak_webshop/index.md",
-      "output": {
-        ".html": {
-          "relative_path": "softeng/6a_gyak_webshop/index.html",
-          "hash": "czjcjGBcih1KMnc6x4MrZPZDMnwT9sfCD9dusWIaljY="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "softeng/UI_design/index.md",
-      "output": {
-        ".html": {
-          "relative_path": "softeng/UI_design/index.html",
-          "hash": "0gyW2mjX2Mpqf8AXXSWUArG796dwNMUaab2j3AeSN4w="
-        }
-      },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -1749,6 +2395,732 @@
         ".html": {
           "relative_path": "softeng/ZH1/index.html",
           "hash": "Jd/H6HTqER6qVUw6EW0hmF3gUWPXexq/A4RTaeTfXlI="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/images/1585069392831.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/images/1585069392831.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/images/1585724543414.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/images/1585724543414.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/images/1585726196537.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/images/1585726196537.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/images/1610903788811.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/images/1610903788811.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/images/1614698473871.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/images/1614698473871.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/images/1614699641758.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/images/1614699641758.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/images/1614699890414.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/images/1614699890414.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/images/1614699994470.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/images/1614699994470.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/images/1615051267868.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/images/1615051267868.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/images/1615051616183.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/images/1615051616183.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/images/1615051851465.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/images/1615051851465.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/images/1615368531680.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/images/1615368531680.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/images/1619343517825.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/images/1619343517825.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/images/1619343711506.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/images/1619343711506.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/images/1619343810349.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/images/1619343810349.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/images/AddNewDatasource.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/images/AddNewDatasource.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/images/InstructorsRaw.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/images/InstructorsRaw.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/images/InstructorsWithComboBoxes.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/images/InstructorsWithComboBoxes.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/images/StatusBindingSource.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/images/StatusBindingSource.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/images/add_connection.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/images/add_connection.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/images/add_data_source.gif",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/images/add_data_source.gif"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/images/add_service_based_database.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/images/add_service_based_database.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/images/add_textbox_binding.gif",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/images/add_textbox_binding.gif"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/images/create_a_new_project.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/images/create_a_new_project.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/images/create_a_new_project_60.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/images/create_a_new_project_60.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/images/datasource_in_solutionexplorer.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/images/datasource_in_solutionexplorer.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/images/edmx.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/images/edmx.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/images/error.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/images/error.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/images/hallgato2.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/images/hallgato2.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/images/image-20220827150347600.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/images/image-20220827150347600.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/images/in-memory-db-1.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/images/in-memory-db-1.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/images/in-memory-db-2.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/images/in-memory-db-2.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/images/input_form.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/images/input_form.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/images/linq_advanced.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/images/linq_advanced.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/images/linq_studies.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/images/linq_studies.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/images/local-connection-1.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/images/local-connection-1.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/images/local-connection-2.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/images/local-connection-2.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/images/local-connection-3.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/images/local-connection-3.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/images/nuget.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/images/nuget.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/images/nuget_packages.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/images/nuget_packages.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/images/orm_classes.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/images/orm_classes.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/images/orm_files.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/images/orm_files.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/images/osztaly.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/images/osztaly.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/images/schema.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/images/schema.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/images/server_explorer_with_db.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/images/server_explorer_with_db.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/images/service-based-db-1.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/images/service-based-db-1.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/images/service-based-db-2.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/images/service-based-db-2.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/images/service-based-db-files.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/images/service-based-db-files.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/images/show_table_data.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/images/show_table_data.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/images/sqlexp01.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/images/sqlexp01.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/images/sqlexp02.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/images/sqlexp02.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/images/sqlexp03.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/images/sqlexp03.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/images/sqlexp04.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/images/sqlexp04.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/images/sqlexp05.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/images/sqlexp05.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/images/sqlexp06.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/images/sqlexp06.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/images/sqlexp07.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/images/sqlexp07.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/images/sqlexp08.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/images/sqlexp08.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/images/sqlexp09.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/images/sqlexp09.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/images/sqlexp10.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/images/sqlexp10.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/images/sqlexp11.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/images/sqlexp11.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/images/sqlexp12.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/images/sqlexp12.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/images/sqlexp13.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/images/sqlexp13.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/images/sqlexp14.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/images/sqlexp14.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/images/sqlexp15.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/images/sqlexp15.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/images/sqlexp16.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/images/sqlexp16.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/images/vs_install.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/images/vs_install.png"
         }
       },
       "is_incremental": false,
@@ -1766,25 +3138,10 @@
           "hash": "Ti3PGMxFeA++8z3VWfouOYT6ddTQyDHR5tB9nsQDRDE="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
-      "type": "Conceptual",
-      "source_relative_path": "softeng/knowledge_base/Murphy/index.md",
-      "output": {
-        ".html": {
-          "relative_path": "softeng/knowledge_base/Murphy/index.html",
-          "hash": "AZHj5NHJKHUgAKfU/szeCnjALf4EZf+JRkubPVadEyA="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "Conceptual",
       "source_relative_path": "softeng/knowledge_base/azure_costs/index.md",
       "output": {
@@ -1793,7 +3150,7 @@
           "hash": "eU+rZ0NMXtvHiubbNwzSRRAlJhj4sReQeFk56KwzYqo="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -1808,7 +3165,7 @@
           "hash": "hY69n+thAmM1KOlqtXGkQW4YbyVGi2DXKa7E5mUzdRk="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -1820,13 +3177,10 @@
           "hash": "7Pn2oyrTYj8ACE1Z2hBZYyS4biHeGd5CLQ0Yde0Z9vo="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "Conceptual",
       "source_relative_path": "softeng/knowledge_base/ingyenes_hallgatoi_azure_fiok_regisztralasa/index.md",
       "output": {
@@ -1835,7 +3189,7 @@
           "hash": "wisKmoR5/fiRgIl6tcHVfDMN/mXz94lo7UrQW/cSaJ4="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -1850,13 +3204,10 @@
           "hash": "Yk2bzEqk1Eh7OV44HDWH6LTqI9tfC0aRj155ChEm0Wc="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "Conceptual",
       "source_relative_path": "softeng/knowledge_base/sql_generalasa_ssms-bol_adatbazis_letrehozasara/index.md",
       "output": {
@@ -1865,13 +3216,10 @@
           "hash": "7Xn8Q3oBadUDQe7h0oW/CUKxdOdIwsci94hQYIxwJWw="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "Conceptual",
       "source_relative_path": "softeng/knowledge_base/sql_server_sajat_gepre/index.md",
       "output": {
@@ -1880,7 +3228,7 @@
           "hash": "FrazPQHxm2hpf/0EC3sa9PoxjYCyQasbQ9X1o5Y/wFU="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -1892,16 +3240,19 @@
           "hash": "E2yvAhrjMeHgG07KS1FrnMO7dwOBuZTMLMeS1HcgXRA="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
       "type": "Toc",
       "source_relative_path": "softeng/toc.yml",
       "output": {
         ".html": {
           "relative_path": "softeng/toc.html",
-          "hash": "tUxCDIn1X7hxn4iLZa7WFtohti6Q4J6NpRtuNV/IGgI="
+          "hash": "O1j9dc/G5weVCICuqohYpeSp1rDC7XPH1Q4MKsDoB/U="
         }
       },
       "is_incremental": false,
@@ -1916,7 +3267,7 @@
           "hash": "8Gjf2XOV97/x2KGM3AxquzwdKZtN18xUdHj6T4EFHNo="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -1928,16 +3279,19 @@
           "hash": "FZKggmd/qYyxbGePh6salTW9r3avAdYoQ4GFdCNk/us="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
       "type": "Toc",
       "source_relative_path": "toc.yml",
       "output": {
         ".html": {
           "relative_path": "toc.html",
-          "hash": "L5im11weJdbOHxx6HjCTEO709v+YZFa+bsK0X0v0wh0="
+          "hash": "nmndDVXmWORzGmgtLCI3dPcet2125/ffdBeSOqHx7XM="
         }
       },
       "is_incremental": false,
@@ -1956,8 +3310,8 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": true,
           "incrementalPhase": "build",
-          "total_file_count": 80,
-          "skipped_file_count": 80
+          "total_file_count": 82,
+          "skipped_file_count": 81
         },
         "ResourceDocumentProcessor": {
           "can_incremental": false,

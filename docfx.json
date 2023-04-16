@@ -29,7 +29,7 @@
           "*.md"
         ]
       },
-	{
+      {
         "files": [
           "softeng/**.yml",
           "softeng/**.md"
@@ -43,7 +43,11 @@
           "softec/**.zip",
           "softec/**.docx",
           "softec/**.txt",
-		  "softec/**.csv",
+          "softeng/**.txt",
+          "softeng/**.png",
+          "softeng/**.jpg",
+          "softeng/**.jpeg",
+          "softeng/**.gif"
         ]
       }
     ],
@@ -62,8 +66,8 @@
     "globalMetadataFiles": [],
     "fileMetadataFiles": [],
     "template": [
-      
-	  "./_templates/default"
+
+      "./_templates/default"
     ],
     "postProcessors": [],
     "markdownEngineName": "markdig",
