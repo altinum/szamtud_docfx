@@ -50,6 +50,7 @@ class KígyóElem : PictureBox
     {
         Width = KígyóElem.Méret;
         Height = KígyóElem.Méret;
+        BackColor = Color.Fuchsia;
     }
 }
 ```
@@ -86,7 +87,10 @@ private void timer1_Tick(object sender, EventArgs e)
     //Fejnövesztés
     fej_x += irány_x * KígyóElem.Méret;
     fej_y += irány_y * KígyóElem.Méret;   
+    
     KígyóElem ke = new KígyóElem();
+    ke.Top = fej_y;
+    ke.Left = fej_x;
     Controls.Add(ke);
 }
 ```
@@ -129,7 +133,15 @@ private void Form1_KeyDown(object sender, KeyEventArgs e)
 (+/-) Valósítsd meg az ütközésvizsgálatot! Miután kiszámoltad az új `fej_x` és `fej_y` értékeket, járd be az űrlap `Controls` listáját `foreach` ciklussal, és vizsgálj meg minden `KígyóElemet` `ke` néven. Ha van olyan, melynek `Top` illetve `Left` tulajdonságai megegyeznek a `fej_x` illetve `fej_y` változók értékeivel, a kígyó farkába harapott.
 
 ``` csahrp
-
+foreach (KígyóElem item in Controls)
+{
+   //Ha vannak már valami ott, ahova az új fejet tenném, vége a játéknak
+   if (item.Top == fej_y && item.Left == fej_x) 
+   {
+       timer1.Enabled = false;
+       return;
+   }
+}
 ```
 
 (+/-) "Másszon" a kígyó! Ehhez először bővítsd egy `hossz` nevű változóval az osztályt, melyben a kígyó aktuális hosszát tárolod! Ha az űrlapon lévő vezérlők száma meghaladja a hossz változó értékét, vedd ki az űrlap `Controls` listájának nulladik elemét! 
