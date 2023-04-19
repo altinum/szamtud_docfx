@@ -1173,18 +1173,26 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
+      "type": "Resource",
+      "source_relative_path": "softec/emory/Kepek.zip",
+      "output": {
+        "resource": {
+          "relative_path": "softec/emory/Kepek.zip"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
       "type": "Conceptual",
       "source_relative_path": "softec/emory/index.md",
       "output": {
         ".html": {
           "relative_path": "softec/emory/index.html",
-          "hash": "Q+1Lt6qOR+C+pOPr9Mm9LmhKI+WelFHG303i4Yq6w2Y="
+          "hash": "2pKQbynn5T9VFLeVU4qVjTjc4J6hYKpB7cA00CXSYNY="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -1242,25 +1250,178 @@
       "output": {
         ".html": {
           "relative_path": "softec/fuggvenyek/index.html",
-          "hash": "P68BcSPFPnIE47vXlQNkK4V/ILuNHdmtf/LjNWQyWec="
+          "hash": "pTpCVE7dYOFD6SbW11oIj9Il9me8MTwKIe/RzjQxngA="
         }
       },
       "is_incremental": true,
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
+      "type": "Resource",
+      "source_relative_path": "softec/grafika_ifs_reszletes/IFS/Fraktal/obj/x86/Debug/Fraktal.csproj.FileListAbsolute.txt",
+      "output": {
+        "resource": {
+          "relative_path": "softec/grafika_ifs_reszletes/IFS/Fraktal/obj/x86/Debug/Fraktal.csproj.FileListAbsolute.txt"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec/grafika_ifs_reszletes/fern.png",
+      "output": {
+        "resource": {
+          "relative_path": "softec/grafika_ifs_reszletes/fern.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "softec/grafika_ifs_reszletes/grafika.md",
+      "output": {
+        ".html": {
+          "relative_path": "softec/grafika_ifs_reszletes/grafika.html",
+          "hash": "hiQNWy0tQ3+rnfrflVQD3QCBfxTD2v/8tsFtlWfZBYw="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
       "type": "Conceptual",
       "source_relative_path": "softec/grafika_ifs_reszletes/index.md",
       "output": {
         ".html": {
           "relative_path": "softec/grafika_ifs_reszletes/index.html",
-          "hash": "G/HDGYGupVSQjQjshsjbp8nGZKQw92kyoSFPuG9SNW0="
+          "hash": "7ySFcacEmH9fdA+xwo1c77nY3Rf+2oXyTzDdfwotdqg="
         }
       },
       "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec/grafika_ifs_reszletes/koch/koch/obj/Debug/koch.csproj.FileListAbsolute.txt",
+      "output": {
+        "resource": {
+          "relative_path": "softec/grafika_ifs_reszletes/koch/koch/obj/Debug/koch.csproj.FileListAbsolute.txt"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "softec/grafika_ifs_reszletes/koch_gorbe.md",
+      "output": {
+        ".html": {
+          "relative_path": "softec/grafika_ifs_reszletes/koch_gorbe.html",
+          "hash": "ncy6CMPO5CjiXlFp6VSZm6RQkyKqqgcVjMEcE3gQ5xU="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec/grafika_ifs_reszletes/sin_cos.png",
+      "output": {
+        "resource": {
+          "relative_path": "softec/grafika_ifs_reszletes/sin_cos.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec/images/1599902337797.png",
+      "output": {
+        "resource": {
+          "relative_path": "softec/images/1599902337797.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec/images/1599921619453.png",
+      "output": {
+        "resource": {
+          "relative_path": "softec/images/1599921619453.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec/images/1600005026998.png",
+      "output": {
+        "resource": {
+          "relative_path": "softec/images/1600005026998.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec/images/1600007423489.png",
+      "output": {
+        "resource": {
+          "relative_path": "softec/images/1600007423489.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec/images/1600008026941.png",
+      "output": {
+        "resource": {
+          "relative_path": "softec/images/1600008026941.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec/images/1602072975369.png",
+      "output": {
+        "resource": {
+          "relative_path": "softec/images/1602072975369.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec/images/fern.png",
+      "output": {
+        "resource": {
+          "relative_path": "softec/images/fern.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec/images/vs_install.png",
+      "output": {
+        "resource": {
+          "relative_path": "softec/images/vs_install.png"
+        }
+      },
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -1315,7 +1476,7 @@
       "output": {
         ".html": {
           "relative_path": "softec/kigyos/index.html",
-          "hash": "gob6qqbV7q7rt+8A+h0OL3PzqdXG0tKjPuyNjYcBq2c="
+          "hash": "ZAbt/oBCiBGrIC3StXPXkmPEfPxJhVxi+KVGMj8NY3Q="
         }
       },
       "is_incremental": true,
@@ -1489,7 +1650,7 @@
       "output": {
         ".html": {
           "relative_path": "softec/toc.html",
-          "hash": "kBrFoD8DzmDLubVc0XfO1RbiJ5TWR9HbwlMgmGX8CIk="
+          "hash": "2Ry1lInlu9Jn8D1FAf4QaKy3T+svL/LMr9peL2SOGYU="
         }
       },
       "is_incremental": false,
@@ -2355,7 +2516,7 @@
           "hash": "phRnm4wJ7GM+oPo7pIEbtQc47V/39jUcUz3PaGP5des="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -3310,8 +3471,8 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": true,
           "incrementalPhase": "build",
-          "total_file_count": 82,
-          "skipped_file_count": 81
+          "total_file_count": 84,
+          "skipped_file_count": 83
         },
         "ResourceDocumentProcessor": {
           "can_incremental": false,

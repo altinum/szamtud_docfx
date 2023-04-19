@@ -44,7 +44,7 @@
 
 (+/-) A `Form1` osztályban hozz létre egy 16 elemű egészekből álló tömböt!
 
-(+/-) A `Form1` osztályban hozz létre egy Keverés() nevű függvényt! A függvény helyezze el 1 és 8 között a számokat a tömb elemeiben úgy, hogy minden szám kétszer szereplejen.
+(+/-) A `Form1` osztályban hozz létre egy `Keverés()` nevű függvényt! A függvény helyezze el 1 és 8 között a számokat a tömb elemeiben úgy, hogy minden szám kétszer szereplejen.
 
 (+/-) A kártyákat kirakó ciklus most már a tömb alapján adja át a kártyához tartozó kép sorszámát!
 

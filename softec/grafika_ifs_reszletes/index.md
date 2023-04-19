@@ -1,44 +1,9 @@
-# Grafika 
+# IFS fraktálok - Páfránylevél rajzolása
 
-
-## GDI grafika
-
-### GDI alapok
-
-(!Vid) Videó
-> [!Video https://storage.altinum.hu/szoft1/S1graph_1.m4v]
-[Grafika.doc](Grafika.doc) -- Rövid összefoglaló a GDI grafikáról
-
-### GDI-ról bővebben
-
-(!Vid) Toll (Pen) osztály
-> [!Video https://storage.altinum.hu/szoft1/Pen]
-
-(!Vid) Vonal rajzolása
-> [!Video https://storage.altinum.hu/szoft1/03_Drawline.m4v]
-
-(!Vid) Téglalap rajzolása
-> [!Video https://storage.altinum.hu/szoft1/04_Drawrectangle.m4v]
-
-(!Vid) Kör (ellipszis) rajzolása
-> [!Video https://storage.altinum.hu/szoft1/ellipszis]
-
-(!Vid) Ecset (Brush) osztály
-> [!Video https://storage.altinum.hu/szoft1/Brush]
-
-(!Vid) Kitöltött rajzolás
-> [!Video https://storage.altinum.hu/szoft1/07_Fill.m4v]
-
-(!Vid) Sokszög rajzolás
-> [!Video https://storage.altinum.hu/szoft1/08_Fillpolygon.m4v]
-
-(!Vid) Paint esemény
-> [!Video https://storage.altinum.hu/szoft1/09_Paint.m4v]
-
-
-## IFS fraktálok - Páfránylevél rajzolása
+## Videók
 
 (!Vid) 1. videó
+
 > [!Video https://storage.altinum.hu/szoft1/S1graph_2.m4v]
 
 (!Vid) 2. videó
@@ -50,18 +15,20 @@
 (!Vid) 4. videó
 > [!Video https://storage.altinum.hu/szoft1/S1graph_5.m4v]
 
-[IFS_fraktl.doc](IFS%20fraktl.doc) -- Előadás handout
-
 [Macintosh IFS manual](http://paulbourke.net/fractals/ifs/) -- Paul Bourke részletes leírása  az érdeklődőknek
 
 [hiddendimension.com](http://www.hiddendimension.com/fractalmath/ifs_fractals_main.html) -- További táblázatok IFS fraktálokhoz
 
 
-#### Az algoritmus
+## Az algoritmus
+
+:)
+
+
 
 Vegyünk a síkban egy P(x,y) pontot. Kezdetben x és y értéke legyen 0. Majd transzformáljuk a pontot az alábbiak szerint:
 
-$$x’ = ax + by + e  $$
+$$x’ = ax + by + e$$
 $$y’ = cx + dy + f$$
 
 , ahol $x$ és $y$ az eredeti koordináták, $x’$ és $y’$ a transzformáltak. Az $a$, $b$, $c$, $d$, $e$, $f$ betűk pedig paraméterek, melyek a transzformációt jellemzik.
@@ -99,7 +66,7 @@ Az eredményül kapott ábra néhány pixel méretű csak, ezért érdemes a kir
 
 
 
-![](../../images/fern.png)
+![](fern.png)
 
 ## Megoldás lépésről-lépésre:
 Rendelj eseménykezelőt a form <code>Paint</code> eseményéhez! A további műveleteket ebben az eseménykezelőben valósítsd meg.
@@ -135,9 +102,8 @@ Valósítsd meg a fent leírt algoritmust!
 2. Szervezzük ki a rajzolást a <code>Form.Paint</code> eseményből egy külön tagfüggvénybe. A tagfüggvényt továbbra is meghívhatjuk a <code>Form.Paint</code> eseményből.
 3. Vegyünk fel egy textboxot, amiben megadhatjuk a méret szorzót. A méretezés transzformációt az ide beírt értékkel végezzük el az érték változásakor. Figyeljünk a hibakezelésre, csak akkor rajzoljuk újra az ábrát, ha a beírt érték egész szám!
 
-### Extra:
+### Extra
 1. Próbáljunk másik vezérlőtípust keresni a toolboxban, amely alkalmasabb lehet a méret megadásának céljára!
 2. A természetben a növények ritkán egyszínűek. Az egyes pixeleket véletlenszerűen színezzük zöld valamelyik árnyalatára!
 3. A komplexitás, azaz, hogy hány lépésben rajzoljuk ki a páfrányt, szintén alapvetően befolyásolja az ábránk minőségét. Oldjuk meg ezt is, a méret mintájára, egy másik vezérlővel.
-
 

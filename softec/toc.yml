@@ -43,14 +43,18 @@
       href: kigyos\index.md
 - name: 8. hét
   items:
-    - name: Grafika
+    - name: GDI Grafika
+      href: grafika_ifs_reszletes\grafika.md
+    - name: Teknős és Koch görbe
+      href: grafika_ifs_reszletes\koch_gorbe.md
+    - name: IFS fraktál
       href: grafika_ifs_reszletes\index.md
+    - name: Emory game
+      href: emory\index.md
 - name: 9. hét - 2. Géptermi ZH
   items:
     - name: Checklist az második ZH-hoz
       href: zh2checklist\index.md
-    - name: Emory game
-      href: emory\index.md
 - name: 10. hét
 
 - name: 11. hét

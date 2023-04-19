@@ -43,11 +43,15 @@
           "softec/**.zip",
           "softec/**.docx",
           "softec/**.txt",
+          "softec/**.png",
+          "softec/**.jpg",
           "softeng/**.txt",
           "softeng/**.png",
           "softeng/**.jpg",
           "softeng/**.jpeg",
-          "softeng/**.gif"
+          "softeng/**.gif",
+          "softeng/**.zip"
+
         ]
       }
     ],
@@ -71,9 +75,20 @@
     ],
     "postProcessors": [],
     "markdownEngineName": "markdig",
+    "markdownEngineProperties": {
+      //"markdigExtensions": [ "mathematics", "emoji" ]
+    },
+
     "noLangKeyword": false,
     "keepFileLink": false,
     "cleanupCacheHistory": false,
-    "disableGitFeatures": false
+    "disableGitFeatures": false,
+
+    //"markdown": {
+    //  "extensions": [ "Markdig.Mathematics" ]
+    //}
+    
+
   }
+
 }

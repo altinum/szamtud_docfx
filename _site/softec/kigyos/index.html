@@ -99,6 +99,7 @@
     {
         Width = KígyóElem.Méret;
         Height = KígyóElem.Méret;
+        BackColor = Color.Fuchsia;
     }
 }
 </code></pre>
@@ -124,7 +125,10 @@ int irány_y = 0;
     //Fejnövesztés
     fej_x += irány_x * KígyóElem.Méret;
     fej_y += irány_y * KígyóElem.Méret;   
+    
     KígyóElem ke = new KígyóElem();
+    ke.Top = fej_y;
+    ke.Left = fej_x;
     Controls.Add(ke);
 }
 </code></pre>
@@ -158,7 +162,15 @@ int irány_y = 0;
 }
 </code></pre>
 <p>(+/-) Valósítsd meg az ütközésvizsgálatot! Miután kiszámoltad az új <code>fej_x</code> és <code>fej_y</code> értékeket, járd be az űrlap <code>Controls</code> listáját <code>foreach</code> ciklussal, és vizsgálj meg minden <code>KígyóElemet</code> <code>ke</code> néven. Ha van olyan, melynek <code>Top</code> illetve <code>Left</code> tulajdonságai megegyeznek a <code>fej_x</code> illetve <code>fej_y</code> változók értékeivel, a kígyó farkába harapott.</p>
-<pre><code class="lang-csahrp">
+<pre><code class="lang-csahrp">foreach (KígyóElem item in Controls)
+{
+   //Ha vannak már valami ott, ahova az új fejet tenném, vége a játéknak
+   if (item.Top == fej_y &amp;&amp; item.Left == fej_x) 
+   {
+       timer1.Enabled = false;
+       return;
+   }
+}
 </code></pre>
 <p>(+/-) &quot;Másszon&quot; a kígyó! Ehhez először bővítsd egy <code>hossz</code> nevű változóval az osztályt, melyben a kígyó aktuális hosszát tárolod! Ha az űrlapon lévő vezérlők száma meghaladja a hossz változó értékét, vedd ki az űrlap <code>Controls</code> listájának nulladik elemét!</p>
 <p>Ha a kígyónk hossza nagyobb, mint a kívánt hossz, kivesszük a <code>Controls</code> gyűjtemény nulladik elemét, vagyis a legrégebben belepakolt elemet:</p>
