@@ -8,6 +8,7 @@ Az elmúlt három gyakorlaton a következő témakörök kerültek elő:
 - string darabolása elválasztó karkter mentén tömbbe, pl: `string[] darabok = egész.Split(';');`
 - Űrlapon szereplő vezérlők listájának bejárása 
 - Billentyű lenyomások kezelése, pl. kígyó vagy játékos mozgatása
+- GDI grafika, egyszerű ábrák rajzolása
 
 ZH-ra bemelegítésül a következő feladatokat javasoljuk:
 
