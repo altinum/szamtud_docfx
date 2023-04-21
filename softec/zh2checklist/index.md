@@ -6,7 +6,7 @@ Az elmúlt három gyakorlaton a következő témakörök kerültek elő:
 - Szövegfájlok beolvasása soronként
 - Tömbök használata
 - string darabolása elválasztó karkter mentén tömbbe, pl: `string[] darabok = egész.Split(';');`
-- Űrlapon szereplő vezérlők listájának bejárása 
+- Űrlapon szereplő vezérlők listájának bejárása, mint pl. az ütközésvizsgálat a kígyónál
 - Billentyű lenyomások kezelése, pl. kígyó vagy játékos mozgatása
 - GDI grafika, egyszerű ábrák rajzolása
 
