@@ -89,7 +89,6 @@ A eladat egy állatot rajzoló alkalmazás készítése. Az egyszerű vonalakbó
 **Előkészületek**
 
 1. Helyezz az űrlapra egy panel objektumot, melynek alapértelmezett háttérszínét állítsd fehérre és méretét 500 x 500 pixelre! Igazítsd a `Form` bal felső sarkába!
-2. A konstruktorban biztosítsd, hogy a megadott bemeneti paraméterek a panelre való rajzolásra alkalmas értékkel kerüljenek tárolásra a tulajdonságokba. Könnyítésként a panel méretei nem változnak, az 500-as érték szabadon égethető.
 
 **Ábra rajzolása és törlése**
 
