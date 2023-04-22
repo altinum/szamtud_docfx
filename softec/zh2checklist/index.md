@@ -65,4 +65,46 @@ Képzeljetek el egy billentyűkkel négy irányba mozgatható játékost, ami mo
 7. Ha egy `Gonosz`-t olyan pozícióba tennél, ahol már van gonosz, színezd át mind a kettőt tetszőleges színűre.
 
 
-Folyt. köv :)
+
+## Rajzolós
+
+A eladat egy állatot rajzoló alkalmazás készítése. Az egyszerű vonalakból felépítendő ábra egyes csúcspontjainak koordinátái a [rajz2.csv](http://web.uni-corvinus.hu/~lmohacs/szoft/ZH/rajz2.csv) fájlban állnak rendelkezésre. Az ábra szakaszokból álló „tört vonalakból” áll. A csúcspontokat a fájl egy-egy sora jelöli. – a *-ot tartalmazó sorok új „tört vonal” kezdetét jelölik. A fájl formátuma a következő:
+
+```
+3;12;*
+1;8
+2;5
+2;3
+9;5
+10;10;*
+12;16
+10;18
+13;19
+13;16
+…
+```
+
+![img](clip_image001.png)
+
+**Előkészületek**
+
+1. Helyezz az űrlapra egy panel objektumot, melynek alapértelmezett háttérszínét állítsd fehérre és méretét 500 x 500 pixelre! Igazítsd a `Form` bal felső sarkába!
+2. A konstruktorban biztosítsd, hogy a megadott bemeneti paraméterek a panelre való rajzolásra alkalmas értékkel kerüljenek tárolásra a tulajdonságokba. Könnyítésként a panel méretei nem változnak, az 500-as érték szabadon égethető.
+
+**Ábra rajzolása és törlése**
+
+1. A `Form1` osztály szintjén hozz létre `ux` és `uy` nevű egész típusú változót `0` kezdőértékkel, melyben az utoljára megrajzolt csúcs koordinátáját tárolod. 
+
+2. Hozz létre egy gombot, melyre kattintva megtörténik a rajzolás. 
+
+   `StreamReader` osztály segítségével nyisd meg a fájlt, és `while` ciklus segítségével járd be a sorait!
+
+3. A ciklustörzsben olvasd be a fájl egy sorát, és a `;` karakter mentén törd egy tömbbe. A tömb első két eleme alapján olvasd ki az `x` és `y` koordinátákat, majd rajzold meg a panelre `(x;y)-(ux;uy)` szakaszt! Rajzolás után `ux` illetve `uy` értékét állítsd `x` illetve `y` értékére! Kirajzoláskor nagyítsd az ábrát 25-szörösre, azaz minden koordinátát szorozz 25-el! (Most még nem vesszük figyelembe `*` karaktereket és az új „tört vonalak” kezdetét.
+
+4. Vegyük figyelembe az új szakaszok kezdetét: ha a `;` mentén létrehozott tömb elemeinek száma 3, ne rajzolj, csak állítsd be az `ux` ill.  `uy` koordinátákat. (Nem a `*` karaktert keressük, így egyszerűbb.)
+
+5. Az ábra most fejjel lefelé áll, fordítsd meg!
+
+   
+
+   Folyt. köv :)

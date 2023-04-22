@@ -1192,7 +1192,7 @@
           "hash": "2pKQbynn5T9VFLeVU4qVjTjc4J6hYKpB7cA00CXSYNY="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -1696,15 +1696,26 @@
       "version": ""
     },
     {
+      "type": "Resource",
+      "source_relative_path": "softec/zh2checklist/clip_image001.png",
+      "output": {
+        "resource": {
+          "relative_path": "softec/zh2checklist/clip_image001.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
       "type": "Conceptual",
       "source_relative_path": "softec/zh2checklist/index.md",
       "output": {
         ".html": {
           "relative_path": "softec/zh2checklist/index.html",
-          "hash": "yF2LUR34TFitS5hMGaiD3nBE8gvU+rRnFwf9FTP9vz4="
+          "hash": "BTXc/k8mjA3zr38/76wQ5jANPeRSBfAJiZiqe/gwjbI="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {

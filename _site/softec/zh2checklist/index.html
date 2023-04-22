@@ -75,8 +75,9 @@
 <li>Szövegfájlok beolvasása soronként</li>
 <li>Tömbök használata</li>
 <li>string darabolása elválasztó karkter mentén tömbbe, pl: <code>string[] darabok = egész.Split(';');</code></li>
-<li>Űrlapon szereplő vezérlők listájának bejárása</li>
+<li>Űrlapon szereplő vezérlők listájának bejárása, mint pl. az ütközésvizsgálat a kígyónál</li>
 <li>Billentyű lenyomások kezelése, pl. kígyó vagy játékos mozgatása</li>
+<li>GDI grafika, egyszerű ábrák rajzolása</li>
 </ul>
 <p>ZH-ra bemelegítésül a következő feladatokat javasoljuk:</p>
 <h2 id="gyakorlófeladatok-zh-ra">Gyakorlófeladatok ZH-ra</h2>
@@ -123,7 +124,41 @@ d.	Rendelj közös esemény-kiszolgáló függvényt a gombok kattintás esemén
 <li>A <code>Tick</code> eseményhez tartozó eseménykiszolgálóban járd be <code>foreach</code> ciklussal a <code>Controls</code> gyűjteményben szereplő elemeket <code>Gonosz</code>-szá castolva, és mozgass minden gonoszt vétlenszerű irányba.</li>
 <li>Ha egy <code>Gonosz</code>-t olyan pozícióba tennél, ahol már van gonosz, színezd át mind a kettőt tetszőleges színűre.</li>
 </ol>
+<h2 id="rajzolós">Rajzolós</h2>
+<p>A eladat egy állatot rajzoló alkalmazás készítése. Az egyszerű vonalakból felépítendő ábra egyes csúcspontjainak koordinátái a <a href="http://web.uni-corvinus.hu/%7Elmohacs/szoft/ZH/rajz2.csv">rajz2.csv</a> fájlban állnak rendelkezésre. Az ábra szakaszokból álló „tört vonalakból” áll. A csúcspontokat a fájl egy-egy sora jelöli. – a *-ot tartalmazó sorok új „tört vonal” kezdetét jelölik. A fájl formátuma a következő:</p>
+<pre><code>3;12;*
+1;8
+2;5
+2;3
+9;5
+10;10;*
+12;16
+10;18
+13;19
+13;16
+…
+</code></pre>
+<p><img src="clip_image001.png" alt="img"></p>
+<p><strong>Előkészületek</strong></p>
+<ol>
+<li>Helyezz az űrlapra egy panel objektumot, melynek alapértelmezett háttérszínét állítsd fehérre és méretét 500 x 500 pixelre! Igazítsd a <code>Form</code> bal felső sarkába!</li>
+<li>A konstruktorban biztosítsd, hogy a megadott bemeneti paraméterek a panelre való rajzolásra alkalmas értékkel kerüljenek tárolásra a tulajdonságokba. Könnyítésként a panel méretei nem változnak, az 500-as érték szabadon égethető.</li>
+</ol>
+<p><strong>Ábra rajzolása és törlése</strong></p>
+<ol>
+<li><p>A <code>Form1</code> osztály szintjén hozz létre <code>ux</code> és <code>uy</code> nevű egész típusú változót <code>0</code> kezdőértékkel, melyben az utoljára megrajzolt csúcs koordinátáját tárolod.</p>
+</li>
+<li><p>Hozz létre egy gombot, melyre kattintva megtörténik a rajzolás.</p>
+<p><code>StreamReader</code> osztály segítségével nyisd meg a fájlt, és <code>while</code> ciklus segítségével járd be a sorait!</p>
+</li>
+<li><p>A ciklustörzsben olvasd be a fájl egy sorát, és a <code>;</code> karakter mentén törd egy tömbbe. A tömb első két eleme alapján olvasd ki az <code>x</code> és <code>y</code> koordinátákat, majd rajzold meg a panelre <code>(x;y)-(ux;uy)</code> szakaszt! Rajzolás után <code>ux</code> illetve <code>uy</code> értékét állítsd <code>x</code> illetve <code>y</code> értékére! Kirajzoláskor nagyítsd az ábrát 25-szörösre, azaz minden koordinátát szorozz 25-el! (Most még nem vesszük figyelembe <code>*</code> karaktereket és az új „tört vonalak” kezdetét.</p>
+</li>
+<li><p>Vegyük figyelembe az új szakaszok kezdetét: ha a <code>;</code> mentén létrehozott tömb elemeinek száma 3, ne rajzolj, csak állítsd be az <code>ux</code> ill.  <code>uy</code> koordinátákat. (Nem a <code>*</code> karaktert keressük, így egyszerűbb.)</p>
+</li>
+<li><p>Az ábra most fejjel lefelé áll, fordítsd meg!</p>
 <p>Folyt. köv :)</p>
+</li>
+</ol>
 </article>
           </div>
           
