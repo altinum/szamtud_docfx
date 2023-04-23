@@ -77,5 +77,5 @@ A pontok összeadódnak.
 
 - `1x5p` Tetszőleges diagram rajzolása
 - `1x2p` A diagram adatforrása tetszőleges módszerrel szűrhető 
-- `1x7p` Excel munkafüzet generálása kódból, adatbázstába tartalmának megjelenítésével, legalább egy formázással
+- `1x7p` Excel munkafüzet generálása kódból, adatbázistábla tartalmának megjelenítésével, legalább egy formázással
 
