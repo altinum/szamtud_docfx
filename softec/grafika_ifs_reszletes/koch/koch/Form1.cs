@@ -14,11 +14,11 @@ namespace koch
         public Form1()
         {
             InitializeComponent();
-        }        
+        }
 
         private void Form1_Paint(object sender, PaintEventArgs e)
         {
-            Teki béla = new Teki(this.CreateGraphics(), 50, this.Height/2);
+            Teki béla = new Teki(this.CreateGraphics(), 50, this.Height / 2);
             //koch(béla, 120);
 
             //Hatszög(béla);
@@ -67,14 +67,14 @@ namespace koch
         {
             if (hossz < 5)
             {
-                          
+
                 teknos.MenjElőre(hossz);
                 teknos.balra(60);
                 teknos.MenjElőre(hossz);
                 teknos.ForduljJobbra(120);
                 teknos.MenjElőre(hossz);
                 teknos.balra(60);
-                teknos.MenjElőre(hossz);                
+                teknos.MenjElőre(hossz);
             }
             else
             {
@@ -85,7 +85,7 @@ namespace koch
                 koch(teknos, hossz / 3);
                 teknos.balra(60);
                 koch(teknos, hossz / 3);
-            }            
+            }
         }
 
     }

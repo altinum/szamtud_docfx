@@ -45,13 +45,13 @@
           "softec/**.txt",
           "softec/**.png",
           "softec/**.jpg",
+          "softec/**.csv",
           "softeng/**.txt",
           "softeng/**.png",
           "softeng/**.jpg",
           "softeng/**.jpeg",
           "softeng/**.gif",
           "softeng/**.zip"
-
         ]
       }
     ],

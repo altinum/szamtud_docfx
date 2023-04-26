@@ -106,4 +106,18 @@ A eladat egy állatot rajzoló alkalmazás készítése. Az egyszerű vonalakbó
 
    
 
-   Folyt. köv :)
+   ## **Előadásra**
+
+
+
+- [colors.csv](colors.csv) 
+
+- [srac.csv](srac.csv) 
+
+- [lany.csv](lany.csv) 
+
+- [quiz.txt](quiz.txt)
+
+- [szavak.csv](szavak.csv)  
+
+- [fa.csv](fa.csv) 
