@@ -8,11 +8,16 @@ Arra érdemes figyelni, hogy a kép szélessége illetve magassága osztható le
 
 A csempék között lesz egy kitüntetett, amelyen nem jelenik meg a kép. Ha bármelyik mellete lévő csempére kattintunk, a "megkantintott" csempének helyet kell cserélni ha a kitüntetett csempével. A kitüntetett csempére nem lehet kattintani. A helycsere gyakorlatilag a Top és a Left tulajdonságok értékeinek kicserélődését jelenti a kattintott csempe és a kitüntetett csempe között -- de erről majd később. 
 
+> [!NOTE]
+> Ha valaki a programozásra koncentrálna a grafikai elemek helyett, fel lehet ép0teni a játékot gombokból is, melyeknek egyre növekvő számok a feliratai.
+
 ## A csempe oszály
 
 Először érdemes létrehozni egy `Csempe` osztályt, és ennek felhasználásával kirakni darabokból a képet egyenlőre úgy, hogy minden képdarab a helyén legyen. 
 
-Érdemes a Csempe osztályt úgy megtervezni, hogy legyen neki egy teljesen kifejtett `Sor` és egy `Oszlop` tulajdonsága is, amelyeknek ha értékül beállítjuk a csempe rácsban elfoglalt pozícióját, a `Top` és `Left` tulajdonságokon keresztül méretének felhasználásával helyezi magát.  Így a csempék helycseréjét `Sor` és `Oszlop` tulajdonságaik cseréjén keresztül is megvalósíthatjuk.
+Éredemes lehet rögzíteni egy statikus változóban a csempe méretét.
+
+Érdemes a `Csempe` osztályt úgy megtervezni, hogy legyen neki egy teljesen kifejtett `Sor` és egy `Oszlop` tulajdonsága is, amelyeknek ha értékül beállítjuk a csempe rácsban elfoglalt pozícióját, a `Top` és `Left` tulajdonságokon keresztül méretének felhasználásával helyezi magát.  Így a csempék helycseréjét `Sor` és `Oszlop` tulajdonságaik cseréjén keresztül is megvalósíthatjuk.
 
 ``` csharp
 private int _sor;
@@ -27,7 +32,11 @@ public int Sor
 }
 ```
 
-Érdemes megjegyeztetni a csempével az eredeti sort, illetve eredeti oszlopot. A puzzle akkor van kirakva, ha az `EredetiSor` megegyezik a `Sor`-ral, és az `EredetiOszlop` megegyezik az `Oszlop`-pal az összes csempénél.  Ez megvalósítás szempontjából azt jelenti, hogy A kattintás hoz tartozó esemény kiszolgáló függvényben a helycsere után egy `foreach`-el meg kell vizsgálni hogy az összes csempénél teljesül-e ez a feltétel. Ha akár egyet is találunk ahol nem teljesül, a puzzle még nincs kirakva.
+Érdemes megjegyeztetni a csempével az eredeti sort, illetve eredeti oszlopot. A puzzle akkor van kirakva, ha az `EredetiSor` megegyezik a `Sor`-ral, és az `EredetiOszlop` megegyezik az `Oszlop`-pal az összes csempénél.  Ez megvalósítás szempontjából azt jelenti, hogy A kattintás hoz tartozó esemény kiszolgáló függvényben a helycsere után egy `foreach`-el meg kell vizsgálni hogy az összes csempénél teljesül-e ez a feltétel. Ha akár egyet is találunk ahol nem teljesül, a puzzle még nincs kirakva. Az eredeti sor és oszlop akár a konstruktoron keresztül is átadható.
+
+## Pályaépítés
+
+A csempék egymásba ágyazott ciklusból kirakhatók a képernyőre.
 
 A kitüntetett csempére vonatkozó referenciát érdemes a `Form1`-ben osztályszinten létrehozni. Kitüntetett csempének a pálya kirakásakor bármelyik csempét választhatjuk: lehet mindig valamelyik sarok, vagy akár véletlenszerűen választott elem is. 
 
