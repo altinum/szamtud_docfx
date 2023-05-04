@@ -15,6 +15,8 @@ Először érdemes létrehozni egy `Csempe` osztályt, és ennek felhasználás�
 Érdemes a Csempe osztályt úgy megtervezni, hogy legyen neki egy teljesen kifejtett `Sor` és egy `Oszlop` tulajdonsága is, amelyeknek ha értékül beállítjuk a csempe rácsban elfoglalt pozícióját, a `Top` és `Left` tulajdonságokon keresztül méretének felhasználásával helyezi magát.  Így a csempék helycseréjét `Sor` és `Oszlop` tulajdonságaik cseréjén keresztül is megvalósíthatjuk.
 
 ``` csharp
+private int _sor;
+
 public int Sor
 {
 	get { return _sor; }
