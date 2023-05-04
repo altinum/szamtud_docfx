@@ -12,7 +12,7 @@ const Syllabus = {
     "8. hét - 2. Géptermi ZH": new Date('2023-04-16'),
     "9. hét": new Date('2023-04-23'),
 	"10. hét": new Date('2023-04-30'),
-    "11. hét": new Date('2023-05-07'),
+    "11. hét": new Date('2023-05-03'),
     "12. hét - 3. Géptermi ZH": new Date('2023-05-14'),
     "13. hét - Projektfeladat bemutatók": new Date('2023-05-21'),
     "Szoftvertechnológia I feladatlap-gyűjtemény": new Date('2023-07-09'),
@@ -47,6 +47,7 @@ const Syllabus = {
 	"Grafika": new Date('2023-03-20'),
 	"9. hét - 2. Géptermi ZH": new Date('2023-03-20'),
 	"Checklist az második ZH- hoz": new Date('2023-03-20'),      
+
 };
 function preprocess(){
 	hideTOC();

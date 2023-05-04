@@ -59,8 +59,8 @@
 
 - name: 11. hét
   items:
-    - name: Bantumi játék
-      href: bantumi\index.md
+    - name: Puzzle
+      href: slide_puzzle\slide_puzzle.md
 - name: 12. hét - 3. Géptermi ZH
   items:
     - name: "Előadás: Aknakereső"
