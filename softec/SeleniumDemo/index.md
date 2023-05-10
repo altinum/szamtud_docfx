@@ -2,7 +2,9 @@
 
 A mai gyakorlat rendhagyó lesz több szempontból is. Egy saját projektet kell létrehozni legalább az egyik mintaprojektben is használt csomag felhasználásával. Az óra első 10-15 percében érdemes megismerkedni a két csomaggal, a `Selenium`-mal és `EPPlus`-szal a mintaprojekten keresztül, majd az onnan ellesett építőkockák felhasználásával érdemes létrehozni a saját alklamazást.
 
-A modern fejlesztői környezet részévé vált a `ChatGPT`, ezért most a használata nemcsak, hogy engedélyezett, hanem kötelező. Sokkal gyorsabban el lehet érni vele a kívánt eredményt, mint a hivatalos dokumentáció böngészésével. Azonban itt fontos megjegyezni, hogy "A nagy erő, nagy felelősséggel jár." (Pókember). Nem lehet teljesen rábízni magunkat az AI-ra, mert könnyen el tud vinni minket vakvágányra és előfordul, hogy túlbonyolít és halucinál dolgokat.
+A programnyelvek igazi erejét az ökoszisztéma gerincét az elérhető csomagok/könyvtárak alkotják. A programozás tulajdonképpen probléma megoldás több szinten, minél absztraktabb módon. Nem kell gépi kódot írnunk, mert vannak magas szintű programnyelvek, nem kell minden dolgot feltalálni a programnyelvekben sem, mert vannak alap osztályok és funkciók és erre épül rá a harmadik féltől származó könyvtár/csomag. Miért vesződjünk azzal, hogy egy objektumot `JSON`-ná konvertáljunk, ha ezt már valaki nagy fáradozással megtette helyettünk?
+
+A modern fejlesztői környezet részévé vált a `ChatGPT`, ezért most a használata nemcsak hogy engedélyezett, de feladat is. Sokkal gyorsabban el lehet érni vele a kívánt eredményt, mint a hivatalos dokumentáció böngészésével. Azonban itt fontos megjegyezni, hogy "A nagy erő, nagy felelősséggel jár." (Pókember). Nem lehet teljesen rábízni magunkat az AI-ra, mert könnyen el tud vinni minket vakvágányra és előfordul, hogy túlbonyolít és halucinál dolgokat.
 
 A mintaprojektet ezen a linken éritek el:
 https://github.com/bodnarbalazs/SeleniumDemo
