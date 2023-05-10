@@ -15,7 +15,7 @@ Az alkalmazás felmegy a neptunra, bejelentkezik, megnézi az órarendet és az 
 
 Három osztályt használunk, a `Scraper.cs`-be száműztük azt a kódot, ami a böngésző irányításért felel, az `Excelizer.cs`-be raktuk azt, ami az Excel generálást végzi és van egy `UniClass` nevű osztályunk, ami az óránknak a modellje.
 
->[Note]
+>[!Note]
 >Azért lett UniClass, mert a class az egy foglalt kifejezés a C#-ban és példányosításnál nem lehetne neki egyszerűen a class nevet adni és félrevezető lehet, de ha bármilyen foglalt kifejezés elé írunk egy @-t, akkor használhatjuk változó névként.
 
 (!Hint) Klónozd le a repository-t és próbáld ki a mintaalkalmazást [!Kérdezd meg a ChatGPT-t hogyan kell!]
