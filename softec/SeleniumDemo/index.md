@@ -9,7 +9,7 @@ A modern fejlesztői környezet részévé vált a `ChatGPT`, ezért most a hasz
 A mintaprojektet ezen a linken éritek el:
 https://github.com/bodnarbalazs/SeleniumDemo
 
-## Rövidenn a mintaprojektről
+## Röviden a mintaprojektről
 A mintaprojekt két könyvtárat használ, a Seleniummal böngészőt tudunk vezérelni és az EPPlussal pedig Excel táblákat lehet kezelni.
 Az alkalmazás felmegy a neptunra, bejelentkezik, megnézi az órarendet és az órarend alapján csinál egy excel fájlt, az órarendünkről.
 
