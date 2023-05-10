@@ -16,13 +16,16 @@ A modern fejlesztői környezet részévé vált a `ChatGPT`, ezért most a hasz
 (!Stepper)
 
 (!Step)[Excel generáló sablonja]
+
 # [Prompt](#tab/focus)
+
 Complete this function: public void CreateTimeTable(List<UniClass> classes)
         {
 
         } use EPPlus, put the classes[i].Title into the cells, based on the classes[i].StartTime and Endtime, which are timespans. The timetable's upper left corner is in cell b2. One cell should be 10 minutes, so if a class starts at 8:00 it should be in the second row, and for every ten minutes until 9:30 for instance you should merge a cell below.
         
 # [Válasz](#tab/entire)
+        
   Here is a simple implementation of your CreateTimeTable function using EPPlus. Please note that this is a basic implementation, and you may need to adjust it to fit your specific needs:
 ```csharp
 using OfficeOpenXml;
@@ -71,17 +74,25 @@ Please note that this code assumes that the StartTime and EndTime of each UniCla
 
 Also note that this code does not handle conflicts, i.e., it does not check if a cell is already occupied by another class. If you need to handle conflicts, you would need to add additional logic for that.
 ***
+                                          
 (!EndStep)
+                                          
 (!Step)[Mi a nuget package neve?]
+                                          
 # [Prompt](#tab/focus)
+                                          
 give me the nuget I need to use
+                                          
 # [Válasz](#tab/entire)
+                                          
 To use EPPlus in your .NET project, you need to install the EPPlus NuGet package. You can install it through the NuGet Package Manager in Visual Studio, or by using the following command in the Package Manager Console:
 ```bash
 Install-Package EPPlus
 ```
 ***
+                                          
 (!EndStep)
+                                          
 (!Step)[Hogyan vágjam ki a HTML-ből a lényeges információt?]
 
 # [lényeg](#tab/focus)
@@ -117,9 +128,31 @@ This code first retrieves the title attribute from the div element, then splits 
 
 Please note that the "text from Ora" extraction assumes there's only one pair of square brackets in the line. If there can be multiple pairs, you'll need to adjust the code accordingly.
 ***
+        
 (!EndStep)
+        
 (!EndStepper)
         
 # Selenium
 
+(!Hint) Kérdezd meg a ChatGPT-t, hogy mi az a Selenium! [A Selenium egy olyan eszköz vagy keretrendszer, amely lehetővé teszi a webes alkalmazások automatizált tesztelését és a böngészőalapú műveletek programozását. A Selenium lehetővé teszi a felhasználók számára, hogy felvegyenek teszteket, amelyek az egyes felhasználói eseteket szimulálják, és ellenőrzik, hogy az alkalmazás működik-e a tervezett módon. A Selenium támogatja a legnépszerűbb böngészőket, mint például a Google Chrome, a Mozilla Firefox és az Internet Explorer, és lehetővé teszi a felhasználók számára, hogy automatizáltan töltsenek ki űrlapokat, kattintsanak gombokra, navigáljanak az oldalak között, és még sok más dolgot tegyenek. A Selenium nagyon hasznos lehet a webfejlesztők és tesztelők számára, akik hatékonyabb és megbízhatóbb teszteket szeretnének végrehajtani, valamint a webes alkalmazások fejlesztői számára, akik könnyedén hozzáadhatják a Selenium támogatását az alkalmazásaikhoz.]
+        
 # EPPlus
+
+(!Hint) Kérdezd meg mire jó az EPPlus! [Az EPPlus egy .NET-ben írt nyílt forráskódú könyvtár, amely lehetővé teszi a Microsoft Excel fájlok olvasását és írását. Az EPPlus alkalmas Excel-fájlok létrehozására, módosítására, olvasására és mentésére is, és támogatja a legtöbb Excel-fájl formátumot. Az EPPlus-nal a fejlesztők programozói módon kezelhetik az Excel-fájlokat, így lehetőségük van arra, hogy a programozás révén generálják az Excel-táblázatokat vagy azok tartalmát. Az EPPlus további előnye, hogy nagyon hatékonyan kezeli a nagy adathalmazokat, és támogatja a diagramok, táblázatok, képek és más elemek beillesztését az Excel-fájlokba. Az EPPlus így kiválóan alkalmas olyan alkalmazások fejlesztésére, amelyek az Excel adathalmazok kezelésére épülnek, és lehetőséget kívánnak adni az adatok vizualizálására és elemzésére.]
+
+                                                                                                      
+                                                                                                      
+                                                                                                      
+                                                                                                      
+                                                                                                      
+                                                                                                      
+                                                                                                      
+                                                                                                      
+                                                                                                      
+                                                                                                      
+                                                                                                      
+                                                                                                      
+                                                                                                      
+                                                                                                      
+                                                                                                      
