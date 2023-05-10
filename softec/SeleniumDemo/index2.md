@@ -400,5 +400,4 @@ public static List<UniClass> ScrapeClasses(string username, string password)
 }
 ```
         
-Jó munkát :)
 
