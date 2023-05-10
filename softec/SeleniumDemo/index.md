@@ -21,6 +21,7 @@ Complete this function: public void CreateTimeTable(List<UniClass> classes)
         {
 
         } use EPPlus, put the classes[i].Title into the cells, based on the classes[i].StartTime and Endtime, which are timespans. The timetable's upper left corner is in cell b2. One cell should be 10 minutes, so if a class starts at 8:00 it should be in the second row, and for every ten minutes until 9:30 for instance you should merge a cell below.
+        
 # [Válasz](#tab/entire)
   Here is a simple implementation of your CreateTimeTable function using EPPlus. Please note that this is a basic implementation, and you may need to adjust it to fit your specific needs:
 ```csharp
@@ -118,3 +119,7 @@ Please note that the "text from Ora" extraction assumes there's only one pair of
 ***
 (!EndStep)
 (!EndStepper)
+        
+# Selenium
+
+# EPPlus
