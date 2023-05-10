@@ -1,6 +1,6 @@
 # Third Party Package-ek használata
 
-A mai gyakorlat rendhagyó lesz több szempontból is. Egy saját projektet kell létrehozni legalább az egyik mintaprojektben is használt csomag felhasználásával. Az óra első 10-15 percében érdemes megismerkedni a két csomaggal, a `Selenium`-mal és `EPPlus`-szal a mintaprojekten keresztül, majd az onnan ellesett építőkockák felhasználásával létrehozni egy saját alklamazást.
+A mai gyakorlat rendhagyó lesz több szempontból is. Egy saját projektet kell létrehozni legalább az egyik mintaprojektben is használt csomag felhasználásával. Az óra első 10-15 percében érdemes megismerkedni a két csomaggal, a `Selenium`-mal és `EPPlus`-szal a mintaprojekten keresztül, majd az onnan ellesett építőkockák felhasználásával érdemes létrehozni a saját alklamazást.
 
 A modern fejlesztői környezet részévé vált a `ChatGPT`, ezért most a használata nemcsak, hogy engedélyezett, hanem kötelező. Sokkal gyorsabban el lehet érni vele a kívánt eredményt, mint a hivatalos dokumentáció böngészésével. Azonban itt fontos megjegyezni, hogy "A nagy erő, nagy felelősséggel jár." (Pókember). Nem lehet teljesen rábízni magunkat az AI-ra, mert könnyen el tud vinni minket vakvágányra és előfordul, hogy túlbonyolít és halucinál dolgokat.
 
