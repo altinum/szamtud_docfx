@@ -4,6 +4,11 @@ A mai gyakorlat rendhagyó lesz több szempontból is. Egy saját projektet kell
 
 A modern fejlesztői környezet részévé vált a `ChatGPT`, ezért most a használata nemcsak, hogy engedélyezett, hanem kötelező. Sokkal gyorsabban el lehet érni vele a kívánt eredményt, mint a hivatalos dokumentáció böngészésével. Azonban itt fontos megjegyezni, hogy "A nagy erő, nagy felelősséggel jár." (Pókember). Nem lehet teljesen rábízni magunkat az AI-ra, mert könnyen el tud vinni minket vakvágányra és előfordul, hogy túlbonyolít és halucinál dolgokat.
 
+A mintaprojektet ezen a linken éritek el:
+https://github.com/bodnarbalazs/SeleniumDemo
+
+(!Hint) Klónozd le a repository-t és próbáld ki a mintaalkalmazást [Kérdezd meg a ChatGPT-t hogyan kell!]
+
 ## Tippek a ChatGPT használatához
 1. Kontextus: Adjuk át minél jobban, hogy mik az elvárásaink és milyen környezetben vagyunk, hagyjunk minél kevesebb dolgot a képzelőerőnek
 2. Tegyünk fel jól strukturált kérdéseket és ha feladatot adunk, legyünk precízek
@@ -133,11 +138,11 @@ Please note that the "text from Ora" extraction assumes there's only one pair of
         
 (!EndStepper)
         
-# Selenium
+## Selenium
 
 (!Hint) Kérdezd meg a ChatGPT-t, hogy mi az a Selenium! [A Selenium egy olyan eszköz vagy keretrendszer, amely lehetővé teszi a webes alkalmazások automatizált tesztelését és a böngészőalapú műveletek programozását. A Selenium lehetővé teszi a felhasználók számára, hogy felvegyenek teszteket, amelyek az egyes felhasználói eseteket szimulálják, és ellenőrzik, hogy az alkalmazás működik-e a tervezett módon. A Selenium támogatja a legnépszerűbb böngészőket, mint például a Google Chrome, a Mozilla Firefox és az Internet Explorer, és lehetővé teszi a felhasználók számára, hogy automatizáltan töltsenek ki űrlapokat, kattintsanak gombokra, navigáljanak az oldalak között, és még sok más dolgot tegyenek. A Selenium nagyon hasznos lehet a webfejlesztők és tesztelők számára, akik hatékonyabb és megbízhatóbb teszteket szeretnének végrehajtani, valamint a webes alkalmazások fejlesztői számára, akik könnyedén hozzáadhatják a Selenium támogatását az alkalmazásaikhoz.]
         
-# EPPlus
+## EPPlus
 
 (!Hint) Kérdezd meg mire jó az EPPlus! [Az EPPlus egy .NET-ben írt nyílt forráskódú könyvtár, amely lehetővé teszi a Microsoft Excel fájlok olvasását és írását. Az EPPlus alkalmas Excel-fájlok létrehozására, módosítására, olvasására és mentésére is, és támogatja a legtöbb Excel-fájl formátumot. Az EPPlus-nal a fejlesztők programozói módon kezelhetik az Excel-fájlokat, így lehetőségük van arra, hogy a programozás révén generálják az Excel-táblázatokat vagy azok tartalmát. Az EPPlus további előnye, hogy nagyon hatékonyan kezeli a nagy adathalmazokat, és támogatja a diagramok, táblázatok, képek és más elemek beillesztését az Excel-fájlokba. Az EPPlus így kiválóan alkalmas olyan alkalmazások fejlesztésére, amelyek az Excel adathalmazok kezelésére épülnek, és lehetőséget kívánnak adni az adatok vizualizálására és elemzésére.]
 
