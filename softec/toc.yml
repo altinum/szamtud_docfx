@@ -61,6 +61,10 @@
   items:
     - name: Puzzle
       href: slide_puzzle\slide_puzzle.md
+- name: ?. hét
+  items:
+    - name: Third Party Packages
+      href: SeleniumDemo\index.md
 - name: 12. hét - 3. Géptermi ZH
   items:
     - name: "Előadás: Aknakereső"
