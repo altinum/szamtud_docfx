@@ -158,7 +158,7 @@ driver.Navigate().GoToUrl(_url);
 
 
 
-### Órarend letöltése Selenummal
+### Órarend letöltése Seleniummal
 
 Értelmezd az alábbi kódot:
 
