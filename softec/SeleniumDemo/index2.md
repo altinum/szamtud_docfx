@@ -123,7 +123,7 @@ return classes;
 
 ## A `ScrapeClasses` hívása a `Form1`-ből:
 
-(+/-) Hívd meg a `Sraper` osztály statikus `ScrapeClasses` és jelenítsd meg az órákat a rácsban. A `DataGridView` `DataSouce` tulajdonságán keresztül beállítható a lista, amelynek tartalmát szeretnénk megjeleníteni!
+(+/-) Rendelj eseménykiszolgálót a gomb kattintás eseményéhez, melyben hívd meg a `Sraper` osztály statikus `ScrapeClasses` és jelenítsd meg az órákat a rácsban. A `DataGridView` `DataSouce` tulajdonságán keresztül beállítható a lista, amelynek tartalmát szeretnénk megjeleníteni!
 
 ``` csharp
 List<UniClass> classes = Scraper.ScrapeClasses(textBoxUser.Text, textBoxPassword.Text);
@@ -184,6 +184,9 @@ driver.Navigate().GoToUrl(_url);
 > [!IMPORTANT] 
 >
 > A Neptun és a Moodle minden tevékenységet loggol. Az alább bemutatott technika etikátlan használója tettenérhető minden olyan oldalon, ahol a felhasználó egyértelműen azonosítható. Az alábbi kódrészéletet egy az egyben használd, NE a Neptunon gyakorloj!
+
+> [!NOTE]
+> Az alábbi kód összetetten vezérli a böngészőt, a teljes megértésére nincs idő a gyakorlat keretein belül. Az elv megértése a lényeg, szükség esetén a kódminta alapként szolgálhat más feladatok megoldására.
 
 ```csharp
 public static List<UniClass> ScrapeClasses(string username, string password)
