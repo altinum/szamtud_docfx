@@ -125,6 +125,17 @@ return classes;
 
 (+/-) Hívd meg a `Sraper` osztály statikus `ScrapeClasses` és jelenítsd meg az órákat a rácsban. A `DataGridView` `DataSouce` tulajdonságán keresztül beállítható a lista, amelynek tartalmát szeretnénk megjeleníteni!
 
+``` csharp
+List<UniClass> classes = Scraper.ScrapeClasses(textBoxUser.Text, textBoxPassword.Text);
+dataGridView1.DataSource= classes;
+```
+
+lustáknak:
+``` csharp
+var classes = Scraper.ScrapeClasses(textBoxUser.Text, textBoxPassword.Text);
+dataGridView1.DataSource= classes;
+```
+
 Ha minden jól megy, valami ilyesmit kéne látni:
 
 ![image-20230510205350488](FormRunning.png)
