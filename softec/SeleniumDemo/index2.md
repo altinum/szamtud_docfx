@@ -2,7 +2,7 @@
 
 A mai gyakorlat rendhagyó lesz több szempontból is. Egy saját projektet kell létrehozni legalább az egyik mintaprojektben is használt csomag felhasználásával.
 
-A programnyelvek igazi erejét az ökoszisztéma gerincét az elérhető csomagok/könyvtárak alkotják. A programozás tulajdonképpen probléma megoldás több szinten, minél absztraktabb módon. Nem kell gépi kódot írnunk, mert vannak magas szintű programnyelvek, nem kell minden dolgot feltalálni a programnyelvekben sem, mert vannak alaposztályok és funkciók, és erre épül rá a harmadik féltől származó könyvtár/csomag. Miért vesződjünk azzal, hogy egy objektumot `JSON`-ná konvertáljunk, ha ezt már valaki nagy fáradozással megtette helyettünk?
+A programnyelvek igazi erejét, az ökoszisztéma gerincét, az elérhető csomagok/könyvtárak alkotják. A programozás tulajdonképpen probléma megoldás több szinten, minél absztraktabb módon. Nem kell gépi kódot írnunk, mert vannak magas szintű programnyelvek, nem kell minden dolgot feltalálni a programnyelvekben sem, mert vannak alaposztályok és funkciók, és erre épülnek rá a harmadik féltől származó könyvtárak/csomagok. Miért vesződjünk azzal, hogy egy objektumot `JSON`-ná konvertáljunk, ha ezt már valaki nagy fáradozással megtette helyettünk? A .NET keretrendszerhez nagyon sokféle csomag érhető el -- akárcsak Python-hoz.
 
 A modern fejlesztői környezet részévé vált a `ChatGPT`, ezért most a használata nemcsak hogy engedélyezett, de feladat is. Sokkal gyorsabban el lehet érni vele a kívánt eredményt, mint a hivatalos dokumentáció böngészésével. Azonban itt fontos megjegyezni, hogy "A nagy erő, nagy felelősséggel jár." (Pókember). Nem lehet teljesen rábízni magunkat az AI-ra, mert könnyen el tud vinni minket vakvágányra és előfordul, hogy túlbonyolít és halucinál dolgokat.
 
@@ -29,11 +29,15 @@ A mintaprojekt két könyvtárat használ, a `Selenium`-mal böngészőt tudunk 
         
 ## A mintaprojekt felépítése
 
+> [!WARNING]
+>
+> A mintaprojektet nem kell leadni, okulásul és kiindulásul szolgál a lap legalján található leadandó feladathoz!
+
 ### A felhasznált csomagok
 
 #### Selenium
 
-(!Hint) Kérdezd meg a ChatGPT-t, hogy mi az a Selenium! [!A Selenium egy olyan eszköz vagy keretrendszer, amely lehetővé teszi a webes alkalmazások automatizált tesztelését és a böngészőalapú műveletek programozását. A Selenium lehetővé teszi a felhasználók számára, hogy felvegyenek teszteket, amelyek az egyes felhasználói eseteket szimulálják, és ellenőrzik, hogy az alkalmazás működik-e a tervezett módon. A Selenium támogatja a legnépszerűbb böngészőket, mint például a Google Chrome, a Mozilla Firefox és az Internet Explorer, és lehetővé teszi a felhasználók számára, hogy automatizáltan töltsenek ki űrlapokat, kattintsanak gombokra, navigáljanak az oldalak között, és még sok más dolgot tegyenek. A Selenium nagyon hasznos lehet a webfejlesztők és tesztelők számára, akik hatékonyabb és megbízhatóbb teszteket szeretnének végrehajtani, valamint a webes alkalmazások fejlesztői számára, akik könnyedén hozzáadhatják a Selenium támogatását az alkalmazásaikhoz.]
+(!Hint) Kérdezd meg a ChatGPT-t, hogy mi az a Selenium! [!A Selenium egy olyan eszköz vagy keretrendszer, amely lehetővé teszi a webes alkalmazások automatizált tesztelését és a böngészőalapú műveletek programozását. A Selenium lehetővé teszi a felhasználók számára, hogy felvegyenek teszteket, amelyek az egyes felhasználói eseteket szimulálják, és ellenőrzik, hogy az alkalmazás működik-e a tervezett módon. A Selenium támogatja a legnépszerűbb böngészőket, mint például a Google Chrome, a Mozilla Firefox és az Internet Explorer, és lehetővé teszi a felhasználók számára, hogy automatizáltan töltsenek ki űrlapokat, kattintsanak gombokra, navigáljanak az oldalak között, és még sok más dolgot tegyenek. A Selenium nagyon hasznos lehet a webfejlesztők és tesztelők számára, akik hatékonyabb és megbízhatóbb teszteket szeretnének végrehajtani, valamint a webes alkalmazások fejlesztői számára, akik könnyedén hozzáadhatják a Selenium támogatását az alkalmazásaikhoz. **Egy éles projektben nincs lehetőség arra, hogy minden kódváltozatás után manuálisan végigteszteltessünk mindent, hogy nem tört-e el valamit az eszközölt változtatás.**]
         
 
 #### EPPlus
@@ -46,7 +50,7 @@ A mintaprojekt két könyvtárat használ, a `Selenium`-mal böngészőt tudunk 
 
 > [!IMPORTANT] 
 >
-> Nem szeretnénk, ha a felhasználónév illetve bármilyen jelszó el lenne mentve a forráskódban!
+> Nem szeretnénk, ha a felhasználónév illetve bármilyen jelszó el lenne mentve a forráskódban! Ne írd be lustaságból a `TextBox`-okba tervezőben, mert bent maradhat, feltölthated bárhova, és egy ilyen feledékenység vállalati környezetben az állásodba kerülhet!
 
 (+/-)  Kérdezd meg a ChatGPT-t, hogyan oldható meg az, hogy a jelszó karakterei helyett pöttyök jelenjenek meg egy `TextBox`-ban!
 
@@ -139,7 +143,11 @@ A NuGet a Visual Studio csomagkezelője. Számtalan ingyenes és fizetős modul 
 how can i install selenium into a c# project?
 ```
 
-(+/-) Telepítsétek a `WebDriverManager` és a `Selenium.WebDriver.ChromeDriver` csomagokat is. 
+(+/-) Telepítsétek a `WebDriverManager` csomagot is. A Solution Expolrerban is tudjátok ellenőrizni a telepített csomagokat, mostanra a pirossal keretezetteknek kell telepítve lennie:
+
+![image-20230511075700191](Packages.png)
+
+
 
 Minden böngészőhöz külön csomag tartozik, a `WebDriverManager` pedig segít a böngészőkhöz tartozó bináris állományok automatikus letöltésében. 
 
@@ -160,7 +168,11 @@ driver.Navigate().GoToUrl(_url);
 
 ### Órarend letöltése Seleniummal
 
-Értelmezd az alábbi kódot:
+Értelmezd az alábbi kódot! A böngészőben F12-vel megnyíló Developer Tools segítségével vizsgálhatod meg, hogy mely elemekre vagy kíváncsi az adott oldalon. 
+
+> [!IMPORTANT] 
+>
+> A Neptun és a Moodle minden tevékenységet loggol. Az alább bemutatott technika etikátlan használója tettenérhető minden olyan oldalon, ahol a felhasználó egyértelműen azonosítható. Az alábbi kódrészéletet egy az egyben használd, NE a Neptunon gyakorloj!
 
 ```csharp
 public static List<UniClass> ScrapeClasses(string username, string password)
@@ -277,7 +289,7 @@ public static List<UniClass> ScrapeClasses(string username, string password)
 
 ## Órarend exportálása Excelbe
 
-(+/-) Telpítsltek az `epplus` NuGet csomagot!
+(+/-) Telpítsltek az `epplus` NuGet csomagot is!
 
 (+/-) Hozzátok létre az alábbi osztályt, majd építsétek be a `Form1`-be, miután megszereztétek a listát az órákkal. 
 
@@ -370,5 +382,13 @@ public class Excelizer
     }
 }
 ```
-        
 
+## Leadandó feladat
+
+## 
+
+> [!WARNING]
+>
+> Csak ezt kell leadni gyakrolat végén!
+
+(+/-) Építs olyan alkalmazást, mely tetszőleges weblapról legyűjti az USD/HUF pillanatnyi árfolyamát!
