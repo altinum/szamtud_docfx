@@ -65,22 +65,16 @@
       href: SeleniumDemo\index2.md
 - name: 12. hét - 3. Géptermi ZH
   items:
-    - name: "Előadás: Aknakereső"
-      href: amoba\index.md
     - name: Gyakorló feladatok ZH-ra
       items:
         - name: Villámkérdések
           href: villamkerdesek\index.md
         - name: Szópároztatós játék
           href: szoparoztatos\index.md
-        - name: PixelArt
-          href: pixelart\index.md
-- name: 13. hét - Projektfeladat bemutatók
+#        - name: PixelArt
+#          href: pixelart\index.md
+- name: 13. hét - Projektfeladat ZH
   items:
-    - name: A beadandó feladatok értékelése
-      href: beadando\index.md
-    - name: A beszámolók menete
-      href: teamsbeszamolok\index.md
 - name: Szoftvertechnológia I feladatlap-gyűjtemény
   href: 2021\index.md
 - name: Szoftvertechnológia I összefoglaló feladatsor
