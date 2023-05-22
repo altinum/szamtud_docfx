@@ -39,28 +39,28 @@ namespace Szoparoztatos
             flowLayoutPanel1.Controls.Clear();
 
             int wordId = rnd.Next(wordPairs.Count);
-            label1.Text = wordPairs[wordId].Latin;
+            label1.Text = wordPairs[wordId].Hungarian;
 
             List<Word> answers = new List<Word>();
 
             //A helyes válasz
             Word word = new Word();
-            word.Text = wordPairs[wordId].Hungarian;
+            word.Text = wordPairs[wordId].Latin;
             word.IsCorrectAnswer = true;
 
             answers.Add(word);
 
             //A fals válaszok
-            for (int i = 0; i < 14; i++)
+            for (int i = 0; i < 19; i++)
             {
                 int id = rnd.Next(wordPairs.Count);
                 Word w = new Word();
-                w.Text = wordPairs[id].Hungarian;
+                w.Text = wordPairs[id].Latin;
                 answers.Add(w);
             }
 
             //keverés
-            for (int i = 0; i < 15; i++)
+            for (int i = 0; i < 20; i++)
             {
 int melyiket = rnd.Next(answers.Count);
 flowLayoutPanel1.Controls.Add(answers[melyiket]);
