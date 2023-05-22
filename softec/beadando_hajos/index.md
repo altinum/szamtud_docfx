@@ -48,3 +48,4 @@ List<Kerdes> gyakoroltatottKérdések = new List<Kerdes>();
 //hányas számú kérdés jön be az összesKérdés listából a helyére
 int követketőKérdés = 8;
 ```
+
