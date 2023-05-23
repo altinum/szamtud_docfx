@@ -77,10 +77,8 @@
 #          href: pixelart\index.md
 - name: 13. hét - Projektfeladat ZH
   items:
-- name: Szoftvertechnológia I feladatlap-gyűjtemény
-  href: 2021\index.md
-- name: Szoftvertechnológia I összefoglaló feladatsor
-  href: osszefoglalo_levelezo\index.md
+  - name: Értékelés módja
+    href: beadando/projekt_zh_ertekeles.md
 - name: Projektfeladatok
   items:
 #    - name: A beadandó feladatok értékelése
