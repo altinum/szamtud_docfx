@@ -1,4 +1,4 @@
-# Python kurzusok
+# Szoftvertechnológia 
 
 **Előadás és gyakorlatok rendje**
 
