@@ -2,4 +2,4 @@ _site/
 images/
 obj/
 *.html
-.vs/
+.vs

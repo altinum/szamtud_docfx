@@ -11,20 +11,15 @@ A ZH mígírásához csak géptermi gépek használhatóak!
 ## Checklist az első ZH-hoz
 
 1. Windows Form Application típusú projekt létrehozása, majd a teljes projekt tömörítése beadható ZIP állományba. Erről készült egy külön útmutató.
+2. Elemi típusok ismerete : `int`,`bool`,`double`, `decimal` ,`string`
+3. Űrlap szerkesztő használata, `Button`, `TextBox` és `Label` , `DataGridView`típusú vezérlők elhelyezése az űrlapon, nevük és alapvető tulajdonságaik beállítása. Eseménykiszolgáló rendelése eseményekhez. Pl. eseménykiszolgáló rendelése az űrlap `Load` eseményeihez. (Dupla kattintás tervezőből az űrlap üres részére.)
+4. Konverzió elemi típusok között, például szöveg számmá alakítása , vagy szám szöveggé alakítása. Emlékeztetőül: kamatszámító mintaalkalmazásban a `TextBox` típusú beviteli mező `Text` tulajdonságával kiolvasott értéket kellett `decimal` típusú változóba olvasni a ` decimal.Parse()` metódus segítségével. A költség kiszámítását követően a szintén`decimal` típusú eredményt a `.ToString()` metódus segítségével alakítottuk szöveggé. Kezelni kell a típuskonverzió során felmerülő futásifejű hibákat, például `double.TryParse()` használatával. 
+   Példafeladat: 
+   1. Az űrlapon helyezz el két beviteli mezőt és egy gombot, majd
+   2. a második beviteli mező `Enabled` tulajdonságát állítsd `false` értékűre tervezőből. 
+   3. A gomb kattintás (`Click`) eseményéhez rendelj esemény kiszolgáló függvényt, 
+   4. az eseménykiszolgáló jelenítse meg az első beviteli mezőbe írt érték kétszeresét a második beviteli mezőben.
 
-2. Elemi változó típusok : `int`,`bool`,`double`, `decimal` ,`string`
-
-3. Űrlap szerkesztő használata, `Button`, `TextBox` és `Label` , `DataGridView`típusú vezérlők elhelyezése az űrlapon, nevük és alapvető tulajdonságaik beállítása. Eseménykiszolgáló rendelése a gomb kattintás eseményeihez.
-
-4. Eseménykiszolgáló rendelése az űrlap `Load` eseményeihez. (Dupla kattintás tervezőből az űrlap üres részére.)
-
-5. Konverzió elemi típusok között, például szöveg számmá alakítása , vagy szám szöveggé alakítása. Emlékeztetőül: kamatszámító mintaalkalmazásban a `TextBox` típusú beviteli mező `Text` tulajdonságával kiolvasott értéket kellett `decimal` típusú változóba olvasni a ` decimal.Parse()` metódus segítségével. A költség kiszámítását követően a szintén`decimal` típusú eredményt a `.ToString()` metódus segítségével alakítottuk szöveggé. Kezelni kell a típuskonverzió során felmerülő futásifejű hibákat, például `double.TryParse()` használatával. 
-
-  Példafeladat: 
-  - Az űrlapon helyezz el két beviteli mezőt és egy gombot, majd
-  - a második beviteli mező `Enabled` tulajdonságát állítsd `false` értékűre tervezőből. 
-  - A gomb kattintás (`Click`) eseményéhez rendelj esemény kiszolgáló függvényt, 
-  - az eseménykiszolgáló jelenítse meg az első beviteli mezőbe írt érték kétszeresét a második beviteli mezőben.
 
 6. Vezérlő létrehozása kódból és elhelyezése az űrlapon. Például a `Button` osztály egy példányának létrehozása gomb néven (`Button gomb = new Button();`) alapvető tulajdonságainak, mint szélesség, magasság, pozíció, felirat, szín beállítása; hozzáadás az űrlap vezérlőinek listájához (`Controls.Add(gomb);`)
 
@@ -34,9 +29,9 @@ A ZH mígírásához csak géptermi gépek használhatóak!
 
 9. Feltételes elágazások. 
 
-  Mintafeladat: az előző példát egészítsd ki úgy, hogy pepita szerűen csak minden második gomb kerüljön megjelenítésre. Ez a legegyszerűbben úgy érhető el, hogy csak akkor jeleníted meg a gombot ha a sor és az oszlopszám összegének osztási maradéka 0. az osztási maradéka `%`operátorral képezhető. `if((sor + oszlop) % 2 == 0) {...}`
+   Mintafeladat: az előző példát egészítsd ki úgy, hogy pepita szerűen csak minden második gomb kerüljön megjelenítésre. Ez a legegyszerűbben úgy érhető el, hogy csak akkor jeleníted meg a gombot ha a sor és az oszlopszám összegének osztási maradéka 0. az osztási maradéka `%`operátorral képezhető. `if((sor + oszlop) % 2 == 0) {...}`
 
-  Fontos odafigyelni arra hogy az ekvivalenciát a `==` operátorral vizsgálhatjuk, míg a `=` értékadásra szolgál.
+   Fontos odafigyelni arra hogy az ekvivalenciát a `==` operátorral vizsgálhatjuk, míg a `=` értékadásra szolgál.
 
 10. Metódusok. A feladatok között szerepelt metódus a faktoriális kiszámítására, vagy a Fibonacci sor egy elemének meghatározására.
 
@@ -44,35 +39,35 @@ A ZH mígírásához csak géptermi gépek használhatóak!
     Mintafeladat: váltógomb
     Származtass `VáltóGomb` néven osztályt a `Button` osztályból, mely kattintásra megváltoztatja a színét, újabb kattintásra viszont visszaáll az eredeti színe! 
 
-Az utolsó mintafeladat megoldása itt szerepel:
-```csharp
-class ValtoGomb : Button
-{
-    bool Benyomva = false;
-    public ValtoGomb()
+    Az utolsó mintafeladat megoldása itt szerepel: 
+    ```csharp
+    class ValtoGomb : Button
     {
-        MouseClick += ValtoGomb_MouseClick;
-    }
+        bool Benyomva = false;
+        public ValtoGomb()
+        {
+            MouseClick += ValtoGomb_MouseClick;
+        }
 
-    void ValtoGomb_MouseClick(object sender, MouseEventArgs e)
-    {
-        if (Benyomva)
+        void ValtoGomb_MouseClick(object sender, MouseEventArgs e)
         {
-            this.BackColor = SystemColors.ButtonFace;
-            Benyomva = false;
-        }
-        else
-        {
-            this.BackColor = Color.Red;
-            Benyomva = true;
-        }
-    }        
-}
-```
+            if (Benyomva)
+            {
+                this.BackColor = SystemColors.ButtonFace;
+                Benyomva = false;
+            }
+            else
+            {
+                this.BackColor = Color.Red;
+                Benyomva = true;
+            }
+        }        
+    }
+    ```
 
 12. Lista létrehozása adott típusú elemekből, lista tartalmának megjelenítése `DataGridView` vezérlőben.
 
-    ``` csh
+    ``` csharp
     List<Sor> sorok = new List<Sor>();
     ...
     dataGridView1.DataSource = sorok;

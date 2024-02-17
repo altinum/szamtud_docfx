@@ -14,6 +14,14 @@
     }
   ],
   "build": {
+    "globalMetadata": {
+      "fileMetadata": {
+        "conceptual": [
+          "softec/index.md"
+        ]
+      },
+      "breadcrumb_home": "softec/index.md"
+    },
     "content": [
       {
         "files": [
@@ -82,12 +90,12 @@
     "noLangKeyword": false,
     "keepFileLink": false,
     "cleanupCacheHistory": false,
-    "disableGitFeatures": false,
+    "disableGitFeatures": false
 
     //"markdown": {
     //  "extensions": [ "Markdig.Mathematics" ]
     //}
-    
+
 
   }
 

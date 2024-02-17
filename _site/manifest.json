@@ -1016,11 +1016,107 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "softec/1_bevezeto/eloadas_linkek.md",
+      "output": {
+        ".html": {
+          "relative_path": "softec/1_bevezeto/eloadas_linkek.html",
+          "hash": "ccwKRCHv6ICnJOSHisy7Opdof+2WPAUmEp8EpWe1C6g="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "softec/1_bevezeto/kamatszamitas.md",
+      "output": {
+        ".html": {
+          "relative_path": "softec/1_bevezeto/kamatszamitas.html",
+          "hash": "K/wVn3X2pgnJa99W4z4Db8lSiwGd1FE6EM47pqokQSo="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "softec/1_bevezeto/vscode_polyglot_notebook.md",
+      "output": {
+        ".html": {
+          "relative_path": "softec/1_bevezeto/vscode_polyglot_notebook.html",
+          "hash": "bGSLXM7ZLXovoMmjreuMCALahNTNz5vYeFUFEkhqvbg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "softec/2021/index.md",
       "output": {
         ".html": {
           "relative_path": "softec/2021/index.html",
           "hash": "v76DhgQKqovQctaC7AmYxMmeDBQMCQ3L96NFMJn1/8s="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "softec/2_osztalyok/fibonacci_sor.md",
+      "output": {
+        ".html": {
+          "relative_path": "softec/2_osztalyok/fibonacci_sor.html",
+          "hash": "+s4mZDpvjHewQgPktpSybE3a88GZA3jrjT7wPxOVctM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "softec/2_osztalyok/pascal_haromszog.md",
+      "output": {
+        ".html": {
+          "relative_path": "softec/2_osztalyok/pascal_haromszog.html",
+          "hash": "ya4GriGYjBLpmZHYr0mnXL3TVrblZWr/ZMXsHiKOwqA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "softec/2_osztalyok/sakktabla.md",
+      "output": {
+        ".html": {
+          "relative_path": "softec/2_osztalyok/sakktabla.html",
+          "hash": "SZdmnlo7PjeRhQMwFYkcoqykEXUSJ7ZVVQ6IDs5zn/I="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "softec/2_osztalyok/szorzotabla.md",
+      "output": {
+        ".html": {
+          "relative_path": "softec/2_osztalyok/szorzotabla.html",
+          "hash": "5Fd99xlF1dPnIhzTxMsXi+zHeL4O8IbC/U3nTjr84Lw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "softec/2_osztalyok/valtozok_viselkedese.md",
+      "output": {
+        ".html": {
+          "relative_path": "softec/2_osztalyok/valtozok_viselkedese.html",
+          "hash": "WXUvxNcfbS6GIhocnHARtLmXUMiCk7a6A40YoXeCrPI="
         }
       },
       "is_incremental": false,
@@ -1082,6 +1178,138 @@
       "version": ""
     },
     {
+      "type": "Resource",
+      "source_relative_path": "softec/SeleniumDemo/ZH3/Quiz/bin/Debug/net6.0-windows/multichoice.csv",
+      "output": {
+        "resource": {
+          "relative_path": "softec/SeleniumDemo/ZH3/Quiz/bin/Debug/net6.0-windows/multichoice.csv"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec/SeleniumDemo/ZH3/Quiz/multichoice.csv",
+      "output": {
+        "resource": {
+          "relative_path": "softec/SeleniumDemo/ZH3/Quiz/multichoice.csv"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec/SeleniumDemo/ZH3/Quiz/obj/Debug/net6.0-windows/Quiz.csproj.FileListAbsolute.txt",
+      "output": {
+        "resource": {
+          "relative_path": "softec/SeleniumDemo/ZH3/Quiz/obj/Debug/net6.0-windows/Quiz.csproj.FileListAbsolute.txt"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec/SeleniumDemo/ZH3/Szoparoztatos/bin/Debug/net6.0-windows/words.csv",
+      "output": {
+        "resource": {
+          "relative_path": "softec/SeleniumDemo/ZH3/Szoparoztatos/bin/Debug/net6.0-windows/words.csv"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec/SeleniumDemo/ZH3/Szoparoztatos/obj/Debug/net6.0-windows/Szoparoztatos.csproj.FileListAbsolute.txt",
+      "output": {
+        "resource": {
+          "relative_path": "softec/SeleniumDemo/ZH3/Szoparoztatos/obj/Debug/net6.0-windows/Szoparoztatos.csproj.FileListAbsolute.txt"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec/SeleniumDemo/ZH3/Szoparoztatos/words.csv",
+      "output": {
+        "resource": {
+          "relative_path": "softec/SeleniumDemo/ZH3/Szoparoztatos/words.csv"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec/SeleniumDemo/ZH3/SzoperoztatosOszlopos/bin/Debug/net6.0-windows/words.csv",
+      "output": {
+        "resource": {
+          "relative_path": "softec/SeleniumDemo/ZH3/SzoperoztatosOszlopos/bin/Debug/net6.0-windows/words.csv"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec/SeleniumDemo/ZH3/SzoperoztatosOszlopos/obj/Debug/net6.0-windows/SzoperoztatosOszlopos.csproj.FileListAbsolute.txt",
+      "output": {
+        "resource": {
+          "relative_path": "softec/SeleniumDemo/ZH3/SzoperoztatosOszlopos/obj/Debug/net6.0-windows/SzoperoztatosOszlopos.csproj.FileListAbsolute.txt"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec/SeleniumDemo/ZH3/SzoperoztatosOszlopos/words.csv",
+      "output": {
+        "resource": {
+          "relative_path": "softec/SeleniumDemo/ZH3/SzoperoztatosOszlopos/words.csv"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec/SeleniumDemo/ZH3/Trivia/bin/Debug/net6.0-windows/trivia.csv",
+      "output": {
+        "resource": {
+          "relative_path": "softec/SeleniumDemo/ZH3/Trivia/bin/Debug/net6.0-windows/trivia.csv"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec/SeleniumDemo/ZH3/Trivia/obj/Debug/net6.0-windows/Trivia.csproj.FileListAbsolute.txt",
+      "output": {
+        "resource": {
+          "relative_path": "softec/SeleniumDemo/ZH3/Trivia/obj/Debug/net6.0-windows/Trivia.csproj.FileListAbsolute.txt"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec/SeleniumDemo/ZH3/Trivia/trivia.csv",
+      "output": {
+        "resource": {
+          "relative_path": "softec/SeleniumDemo/ZH3/Trivia/trivia.csv"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
       "type": "Conceptual",
       "source_relative_path": "softec/SeleniumDemo/index.md",
       "output": {
@@ -1099,7 +1327,7 @@
       "output": {
         ".html": {
           "relative_path": "softec/SeleniumDemo/index2.html",
-          "hash": "5gLLCQ89IsqL84737jWfYizy4DIlN6SmG4UbelHMAQI="
+          "hash": "rvwNP2bdZA60iE1llhQDeFumriLlISgFvYhuIRlQolo="
         }
       },
       "is_incremental": false,
@@ -1154,6 +1382,18 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "softec/beadando/projekt_zh_ertekeles.md",
+      "output": {
+        ".html": {
+          "relative_path": "softec/beadando/projekt_zh_ertekeles.html",
+          "hash": "dT8VUnFTZ4Rk83Smzwf9MPZFMA6C7ROlS/C185qZx6g="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "softec/beadando_game_of_life/index.md",
       "output": {
         ".html": {
@@ -1165,9 +1405,17 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
+      "type": "Resource",
+      "source_relative_path": "softec/beadando_hajos/2018_11_22_Hajozasi_szabalyzat.zip",
+      "output": {
+        "resource": {
+          "relative_path": "softec/beadando_hajos/2018_11_22_Hajozasi_szabalyzat.zip"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
       "type": "Conceptual",
       "source_relative_path": "softec/beadando_hajos/index.md",
       "output": {
@@ -1280,7 +1528,7 @@
       "output": {
         ".html": {
           "relative_path": "softec/eredmenyek/index.html",
-          "hash": "FnAm387o0vLA8OmHqv0Pmqouq0SSNoOOWHvrZF+G0dg="
+          "hash": "YXJUyQ6nRu67RWDgF2NQfdtKNXPUso/WTUBSNBMODB4="
         }
       },
       "is_incremental": false,
@@ -1337,7 +1585,56 @@
       "output": {
         ".html": {
           "relative_path": "softec/fuggvenyek/index.html",
-          "hash": "pTpCVE7dYOFD6SbW11oIj9Il9me8MTwKIe/RzjQxngA="
+          "hash": "P68BcSPFPnIE47vXlQNkK4V/ILuNHdmtf/LjNWQyWec="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "softec/git/ea_linkek.md",
+      "output": {
+        ".html": {
+          "relative_path": "softec/git/ea_linkek.html",
+          "hash": "lZHQefCXG3LukM0BLtsTUsvhbtEDap6tg9qPz1hufzk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec/git/memo.docx",
+      "output": {
+        "resource": {
+          "relative_path": "softec/git/memo.docx"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
+      "type": "Conceptual",
+      "source_relative_path": "softec/git/verziokovetes_a_gyakorlatban.md",
+      "output": {
+        ".html": {
+          "relative_path": "softec/git/verziokovetes_a_gyakorlatban.html",
+          "hash": "xZUfGWojznt5uWDRrnRnnN1XoBPPhxFESA8+GNplyzw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec/git/verziokovetes_a_gyakorlatban.png",
+      "output": {
+        "resource": {
+          "relative_path": "softec/git/verziokovetes_a_gyakorlatban.png"
         }
       },
       "is_incremental": false,
@@ -1383,7 +1680,7 @@
       "output": {
         ".html": {
           "relative_path": "softec/grafika_ifs_reszletes/index.html",
-          "hash": "7ySFcacEmH9fdA+xwo1c77nY3Rf+2oXyTzDdfwotdqg="
+          "hash": "TC4PU9vvhaLR0CwcxUmOxT1qeXQvScgMAIPwveQV9Gs="
         }
       },
       "is_incremental": false,
@@ -1517,7 +1814,7 @@
       "output": {
         ".html": {
           "relative_path": "softec/index.html",
-          "hash": "anFjCuSa4qeJFeFJWyovkFzv/nQjjJVdZFdvs9HdCyw="
+          "hash": "o9ZVJJR1YYsUabRzk04MkhRmjxzzuP4DYILc259ln8s="
         }
       },
       "is_incremental": false,
@@ -1575,7 +1872,7 @@
       "output": {
         ".html": {
           "relative_path": "softec/kovetelmenyek/index.html",
-          "hash": "d3LvPor31AxiQdgI5k0Lld5W74Npdi68NOpCLcKDorQ="
+          "hash": "K+aMe/BaINXhGnImFIsRXU1gYqrzQpUwqqaJIDsl7RI="
         }
       },
       "is_incremental": false,
@@ -1612,18 +1909,6 @@
         ".html": {
           "relative_path": "softec/masodfoku/index.html",
           "hash": "yCnrFGNs6nAG9Tq1hqevZ8/4nt9ATjzgq+Xq3Br3wwc="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "softec/megoldasok/index.md",
-      "output": {
-        ".html": {
-          "relative_path": "softec/megoldasok/index.html",
-          "hash": "pZrLLNVy2w5EeD8JKp3+ySXBjiwGIMeeq87LkbqpXdo="
         }
       },
       "is_incremental": false,
@@ -1760,7 +2045,7 @@
       "output": {
         ".html": {
           "relative_path": "softec/toc.html",
-          "hash": "vZp4HMPs6LNrlIBT+8l/x6c+F0YPmzcVkcpaO0M0BRg="
+          "hash": "3fyaH6CJCR2UizuVC8F5vd0HmPwppeDBJKVHw9i3ovc="
         }
       },
       "is_incremental": false,
@@ -1799,7 +2084,7 @@
       "output": {
         ".html": {
           "relative_path": "softec/zh1checklist/index.html",
-          "hash": "buqNbPqENjWBkuGaF4T3USwyeIU31bdHpfJma48mX2E="
+          "hash": "sH+OFsykFeTBztVd0494Ck90LpIh1cduB9y+PApnIF4="
         }
       },
       "is_incremental": false,
@@ -1900,6 +2185,119 @@
       "output": {
         "resource": {
           "relative_path": "softec/zh2checklist/szavak.csv"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec/zh3_gyakorlas/dilbert.csv",
+      "output": {
+        "resource": {
+          "relative_path": "softec/zh3_gyakorlas/dilbert.csv"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "softec/zh3_gyakorlas/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "softec/zh3_gyakorlas/index.html",
+          "hash": "23FnjQN7mNNiPnA6hKhNJOA6Rzt4ww+WEaAfaE4OM8M="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec/zh3_gyakorlas/lany.csv",
+      "output": {
+        "resource": {
+          "relative_path": "softec/zh3_gyakorlas/lany.csv"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec/zh3_gyakorlas/multichoice.csv",
+      "output": {
+        "resource": {
+          "relative_path": "softec/zh3_gyakorlas/multichoice.csv"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec/zh3_gyakorlas/srac.csv",
+      "output": {
+        "resource": {
+          "relative_path": "softec/zh3_gyakorlas/srac.csv"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec/zh3_gyakorlas/szavak2.txt",
+      "output": {
+        "resource": {
+          "relative_path": "softec/zh3_gyakorlas/szavak2.txt"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec/zh3_gyakorlas/trivia.csv",
+      "output": {
+        "resource": {
+          "relative_path": "softec/zh3_gyakorlas/trivia.csv"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec/zh3_gyakorlas/words.csv",
+      "output": {
+        "resource": {
+          "relative_path": "softec/zh3_gyakorlas/words.csv"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "softec/zh_checklists/zh1_checklist.md",
+      "output": {
+        ".html": {
+          "relative_path": "softec/zh_checklists/zh1_checklist.html",
+          "hash": "jgE6HmHxJz2YyeAp3lhGwrlV6Q1n66KrnbttTvRQBwA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "softec/zh_checklists/zh_ertekeles_leadas.md",
+      "output": {
+        ".html": {
+          "relative_path": "softec/zh_checklists/zh_ertekeles_leadas.html",
+          "hash": "Rtlnaq7M2fWYi/LK8LL2LBXdbFMsyq0w/xpwnMb6F+c="
         }
       },
       "is_incremental": false,
@@ -3631,15 +4029,12 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "Toc",
       "source_relative_path": "toc.yml",
       "output": {
         ".html": {
           "relative_path": "toc.html",
-          "hash": "nmndDVXmWORzGmgtLCI3dPcet2125/ffdBeSOqHx7XM="
+          "hash": "Bzbu/+Bfwi/V7N/aZZdVo/jAc49OABL9ctY+C2dkIsY="
         }
       },
       "is_incremental": false,
@@ -3658,8 +4053,8 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": true,
           "incrementalPhase": "build",
-          "total_file_count": 87,
-          "skipped_file_count": 87
+          "total_file_count": 100,
+          "skipped_file_count": 94
         },
         "ResourceDocumentProcessor": {
           "can_incremental": false,

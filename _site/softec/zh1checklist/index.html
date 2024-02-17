@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Checklist az els&#337; ZH-hoz </title>
+    <title>Checklist az 1. ZH-hoz </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Checklist az els&#337; ZH-hoz ">
+    <meta name="title" content="Checklist az 1. ZH-hoz ">
     <meta name="generator" content="docfx 2.59.4.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
@@ -67,22 +67,25 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
+<h1 id="checklist-az-1-zh-hoz">Checklist az 1. ZH-hoz</h1>
 
 <p>Azt tanácsoljuk, hogy a felkészülést ne hagyjátok az utolsó pillanatra. A lenti <em>checklist</em> átnézése után érdemes az összes eddigi mintafeladatot megoldani a feladathoz tartozó lépésekre bontott útmutató alapján. Az első ZH-ban a feladatleírások egyértelmű, elemi lépésekre lesznek bontva. Még nem várunk el önálló ötleteket, csak némi jártasságot Visual Studio fejlesztőkörnyezet használatában, és <em>checklist</em> részben felsorolt nyelvi elemek ismeretét.</p>
 <p>A zárthelyin egy darab A4-es kézzel írott jegyzet használható, azonban nem szerencsés, ha ez a segítség hamis biztonságérzetet ad. Ha valakinek nincs meg a gyakorlata, nem tud elég gyorsan javítani olyan egyszerű hibákat, mint mint egy hiányzó <code>;</code> vagy <code>}</code>.</p>
-<p>Egy gyakorlati tanács: a ZH solution-jét ne az S: meghajtón hozzátok létre, mert ha ott esetleg elfogy a tárhely, vagy pillanatnyi hálózati hiba lép fel, furcsa jelenségek történhetnek a Visual Studio-ban, melyek nem utalnak a hiba okára. Érdemes az asztalon létrehozni a projektet.</p>
-<p>Az ZH jelenléti formában kerül megtartásra. Az osztályzással és a hiányzásokkal kapcsolatban a tantárgyi Moodle oldal tetején találtok bővebb információt.</p>
+<p>Egy gyakorlati tanács: a ZH solution-jét ne az S: meghajtón hozzátok létre, mert ha ott esetleg elfogy a tárhely, vagy pillanatnyi hálózati hiba lép fel, furcsa jelenségek történhetnek a Visual Studio-ban, melyek nem utalnak a hiba okára. Érdemes az asztalon létrehozni a projektet. Erre felhívtuk a figyelmet, így az ebből fakadó következmények hibának minősülnek!</p>
+<p>A ZH mígírásához csak géptermi gépek használhatóak!</p>
 <h2 id="checklist-az-első-zh-hoz">Checklist az első ZH-hoz</h2>
 <ol>
 <li><p>Windows Form Application típusú projekt létrehozása, majd a teljes projekt tömörítése beadható ZIP állományba. Erről készült egy külön útmutató.</p>
 </li>
-<li><p>Elemi változó típusok : <code>int</code>,<code>bool</code>,<code>double</code>,<code>string</code></p>
+<li><p>Elemi változó típusok : <code>int</code>,<code>bool</code>,<code>double</code>, <code>decimal</code> ,<code>string</code></p>
 </li>
-<li><p>Űrlap szerkesztő használata, <code>Button</code>, <code>TextBox</code> és <code>Label</code> típusú vezérlők elhelyezése az űrlapon, nevük és alapvető tulajdonságaik beállítása. Eseménykiszolgáló rendelése a gomb kattintás eseményeihez.</p>
+<li><p>Űrlap szerkesztő használata, <code>Button</code>, <code>TextBox</code> és <code>Label</code> , <code>DataGridView</code>típusú vezérlők elhelyezése az űrlapon, nevük és alapvető tulajdonságaik beállítása. Eseménykiszolgáló rendelése a gomb kattintás eseményeihez.</p>
 </li>
 <li><p>Eseménykiszolgáló rendelése az űrlap <code>Load</code> eseményeihez. (Dupla kattintás tervezőből az űrlap üres részére.)</p>
 </li>
-<li><p>Konverzió elemi típusok között, például szöveg számmá alakítása , vagy szám szöveggé alakítása. Emlékeztetőül: másodfokú egyenletet megoldó mintaalkalmazásban a <code>TextBox</code> típusú beviteli mező <code>Text</code> tulajdonságával kiolvasott értéket kellett <code>double</code> típusú változóba olvasni a <code> double.Parse()</code> metódus segítségével. A gyökök kiszámítását követően a szintén<code>double</code> típusú eredményt a <code>.ToString()</code> metódus segítségével alakítottuk szöveggé. Kezelni kell a típuskonverzió során felmerülő futásifejű hibákat, például <code>double.TryParse()</code> használatával.</p>
+<li><p>Konverzió elemi típusok között, például szöveg számmá alakítása , vagy szám szöveggé alakítása. Emlékeztetőül: kamatszámító mintaalkalmazásban a <code>TextBox</code> típusú beviteli mező <code>Text</code> tulajdonságával kiolvasott értéket kellett <code>decimal</code> típusú változóba olvasni a <code> decimal.Parse()</code> metódus segítségével. A költség kiszámítását követően a szintén<code>decimal</code> típusú eredményt a <code>.ToString()</code> metódus segítségével alakítottuk szöveggé. Kezelni kell a típuskonverzió során felmerülő futásifejű hibákat, például <code>double.TryParse()</code> használatával.</p>
+</li>
+</ol>
 <p>Példafeladat:</p>
 <ul>
 <li>Az űrlapon helyezz el két beviteli mezőt és egy gombot, majd</li>
@@ -90,18 +93,22 @@
 <li>A gomb kattintás (<code>Click</code>) eseményéhez rendelj esemény kiszolgáló függvényt,</li>
 <li>az eseménykiszolgáló jelenítse meg az első beviteli mezőbe írt érték kétszeresét a második beviteli mezőben.</li>
 </ul>
-</li>
+<ol start="6">
 <li><p>Vezérlő létrehozása kódból és elhelyezése az űrlapon. Például a <code>Button</code> osztály egy példányának létrehozása gomb néven (<code>Button gomb = new Button();</code>) alapvető tulajdonságainak, mint szélesség, magasság, pozíció, felirat, szín beállítása; hozzáadás az űrlap vezérlőinek listájához (<code>Controls.Add(gomb);</code>)</p>
 </li>
 <li><p><code>for</code> ciklusok szervezése. Például tíz gomb kirakása egymás mellé. Előfordulhatnak egymásba ágyazott ciklusok is, mint például 10 x 10 négyzet alakú gomb kirakása.</p>
 </li>
+<li><p><code>while</code> ciklusok szervezése.</p>
+</li>
 <li><p>Feltételes elágazások.</p>
+</li>
+</ol>
 <p>Mintafeladat: az előző példát egészítsd ki úgy, hogy pepita szerűen csak minden második gomb kerüljön megjelenítésre. Ez a legegyszerűbben úgy érhető el, hogy csak akkor jeleníted meg a gombot ha a sor és az oszlopszám összegének osztási maradéka 0. az osztási maradéka <code>%</code>operátorral képezhető. <code>if((sor + oszlop) % 2 == 0) {...}</code></p>
 <p>Fontos odafigyelni arra hogy az ekvivalenciát a <code>==</code> operátorral vizsgálhatjuk, míg a <code>=</code> értékadásra szolgál.</p>
-</li>
+<ol start="10">
 <li><p>Metódusok. A feladatok között szerepelt metódus a faktoriális kiszámítására, vagy a Fibonacci sor egy elemének meghatározására.</p>
 </li>
-<li><p>Saját, származtatott osztály létrehozása; az osztály bővítése konstruktorral (ctor-tab-tab); eseménykiszolgáló függvények létrehozása és hozzárendelése olyan eseményekhez, mint <code>Click</code> vagy <code>MouseDown</code>. Osztály bővítése változóval.
+<li><p>Saját, vagy származtatott osztály létrehozása; az osztály bővítése konstruktorral (ctor-tab-tab); eseménykiszolgáló függvények létrehozása és hozzárendelése olyan eseményekhez, mint <code>Click</code> vagy <code>MouseDown</code>. Osztály bővítése változóval.
 Mintafeladat: váltógomb
 Származtass <code>VáltóGomb</code> néven osztályt a <code>Button</code> osztályból, mely kattintásra megváltoztatja a színét, újabb kattintásra viszont visszaáll az eredeti színe!</p>
 </li>
@@ -130,6 +137,14 @@ Származtass <code>VáltóGomb</code> néven osztályt a <code>Button</code> osz
     }        
 }
 </code></pre>
+<ol start="12">
+<li><p>Lista létrehozása adott típusú elemekből, lista tartalmának megjelenítése <code>DataGridView</code> vezérlőben.</p>
+<pre><code class="lang-csh">List&lt;Sor&gt; sorok = new List&lt;Sor&gt;();
+...
+dataGridView1.DataSource = sorok;
+</code></pre>
+</li>
+</ol>
 </article>
           </div>
           

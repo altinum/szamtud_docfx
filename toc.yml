@@ -1,6 +1,6 @@
 - name: Szoftver Technológia
   href: softec/
   homepage: softec/index.md
-- name: Szofttech. II. vizsgakurzus
-  href: softeng\LevelezoVK
-  homepage: softeng/LevelezoVK/index.md
+#- name: Szofttech. II. vizsgakurzus
+#  href: softeng\LevelezoVK
+#  homepage: softeng/LevelezoVK/index.md
