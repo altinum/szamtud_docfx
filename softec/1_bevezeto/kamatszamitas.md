@@ -48,7 +48,7 @@ class Sor
 
 #### A `Sor` osztály
 
-A `Sor` osztály felfogható egy olyan összetett típusnak mely képes két szám tárolására:
+A `Sor` osztály felfogható egy olyan összetett típusnak, mely képes két szám tárolására:
 
 - egy `int` típusú `Hónap` nevű tulajdonságban tároljuk a hónap számát
 - egy `decimal` típusú `Hátralék` nevű tulajdonságban tároljuk az adott hónapra vonatkozó hátralékot
