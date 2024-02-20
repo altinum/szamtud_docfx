@@ -43,7 +43,7 @@ C# nyelv alapjai, Visual Studio fejlesztőkönyezet megismerése, verziókövet�
 #### 1. hét
 
 **Előadáson:** elemi változók, osztályok, vezérlőszerkezetek - _VS Code_ és _Polyglott Notebooks_ bővítménnyen keresztül bemutatva. 
-**Gyakorlaton:** másodfokú egyenlet megoldása, szorzótábla kirakása gombokból
+**Gyakorlaton:** Fejlesztőkörnyezet és nyelvi elemek bemutatása kamatszámítás példán keresztül
 **Egyéni munka:** Visual Studio fejlesztőkörnyezet telepítése saját gépre
 
 <!--
