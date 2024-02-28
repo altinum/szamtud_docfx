@@ -30,10 +30,12 @@
     - name: Sakktábla
       href: 2_osztalyok\sakktabla.md
 
-#- name: 3. hét
-#  items:
-#    - name: Gyakorló feladatok
-#      href: osztalyok\index.md
+- name: 3. hét
+  items:
+   - name: Linkek az előadáshoz
+     href: 3_osztalyok_2\time_to_learn.md
+   - name: Gyakorló feladatok
+     href: 3_osztalyok_2\index.md
 - name: 4. hét - 1. Géptermi ZH
   items:
     - name: ZH Checklist
