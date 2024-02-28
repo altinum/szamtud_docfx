@@ -58,21 +58,27 @@ A jövő hétnél Moodle-ben van további információ ZH-val kapcsolatban.
 
 (+/-)  Állíts be méretet a gombnak!
 
-(+/-)  Állítsd be a gomb `Left` és `Top` tulajdonságát úgy, hogy pont középre kerüljön az ablakban!
+(+/-)  Állítsd be a gomb `Left` és `Top` tulajdonságát úgy, hogy pont középre kerüljön az ablakban! 
+
+> [!TIP]
+>
+> Az űrlap kódjában a `Width` és a `Height` tulajdonság az ablak szélességére illetve magasságára hivatkozik, de a mértetbe beleértendő a keret is. A belső méret a `ClientRectangle.Width` illetve a `ClientRectangle.Height` tulajdonságokon keresztül kérdezhető le. 
 
 (+/-)  Rakj ki 10 gombot egymás mellé az űrlapra `for` ciklusból!
 
-(+/-)  Egészítsd ki az előző feladatot úgy, hogy 10x10 gomb legye kint!
+(+/-)  Egészítsd ki az előző feladatot úgy, hogy 10x10 gomb legyen kint!
 
 (+/-)  Csinálj szorzótáblát; jelenítsd meg a gombokon a számokat.
 
-(+/-)  Származtass `VillogóGomb` néven osztályt a `Button` osztályból! (A kódot írhatod a `Form1` osztály alá.)
+(+/-)  Származtass `VillogóGomb` néven osztályt a `Button` osztályból! (A kódot írhatod a `Form1` osztály alá, de adhatsz új osztályt a projekthez.)
 
 (+/-)  Hozz létre konstruktort a `VillogóGomb` osztályban! (ctor - tab - tab)
 
 (+/-)  A konstruktorban rendelj eseménykiszolgálót a `MouseEnter` és a `MouseLeave` eseményekhez!  (+=  - tab - tab)
 
-(+/-)  Az eseménykiszolgálókban állítsd be a gomb színét.
+(+/-)  Az eseménykiszolgálókban állítsd be a gomb színét. 
+
+
 
 (+/-)  Cseréld le a szorzótábla gombjait `VillogóGomb`-ra!
 
@@ -124,7 +130,7 @@ class VillogoGomb : Button
 
 (+/-) A már felépített szorzótáblát írd át úgy, hogy `SzíneződőGomb`-okból épüljön fel!
 
-### 3. feladat: számoló gomb - videó alapján
+### 3. feladat: számoló gomb
 # [feladat](#tab/fel3)
 (+/-) Származtass osztályt a `Button` osztályból `SzámolóGomb` néven!
 
@@ -210,6 +216,10 @@ private void Form1_Load(object sender, EventArgs e)
 
 (+/-)  A szín is.
 
+> [!TIP]
+>
+> A színt így is be lehet állítani:  `gomb.BackColor = Color.FromArgb(255, 0, 0);`. A paraméterként átadott 0 és 255 közé eső értékek rendre a piros, zöld, illetve kék összetevőt határozzák meg. 
+
 # [megoldás](#tab/meg4)
 Gombok véletlenszerű kirajzolása
 
@@ -269,6 +279,8 @@ public Form1()
 }
 ```
 ---
+
+
 
 ### 5. Gyakorló feladat: gombok kirakása háromszögben (ismétlés)
 
