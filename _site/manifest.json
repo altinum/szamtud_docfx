@@ -1128,7 +1128,7 @@
       "output": {
         ".html": {
           "relative_path": "softec/3_osztalyok_2/index.html",
-          "hash": "I1cnTU8NSKYDsU9ackFRy8tWBPpk1WrEL82gcsFgics="
+          "hash": "dq13c1DTWMTbddgkKsEDSo92QmpT8DUDWPIkCb/zPqc="
         }
       },
       "is_incremental": false,
@@ -1153,6 +1153,62 @@
         ".html": {
           "relative_path": "softec/3_osztalyok_2/time_to_learn.html",
           "hash": "1XE5bySKrruD/CSBB1AmTheXtw4Cv+zYUYjgIPVas/o="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec/4_file/ea_vazlat.txt",
+      "output": {
+        "resource": {
+          "relative_path": "softec/4_file/ea_vazlat.txt"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec/4_file/feleletvalasztos/handout.docx",
+      "output": {
+        "resource": {
+          "relative_path": "softec/4_file/feleletvalasztos/handout.docx"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "softec/4_file/feleletvalasztos/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "softec/4_file/feleletvalasztos/index.html",
+          "hash": "jkqEE9dO9NssdqZMHZg9+xqVFG0HvE6tVwC/QJ4Yo0Y="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec/4_file/feleletvalasztos/jatek.csv",
+      "output": {
+        "resource": {
+          "relative_path": "softec/4_file/feleletvalasztos/jatek.csv"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec/4_file/feleletvalasztos/jatek2.txt",
+      "output": {
+        "resource": {
+          "relative_path": "softec/4_file/feleletvalasztos/jatek2.txt"
         }
       },
       "is_incremental": false,
@@ -1571,51 +1627,6 @@
       "version": ""
     },
     {
-      "type": "Resource",
-      "source_relative_path": "softec/feleletvalasztos/handout.docx",
-      "output": {
-        "resource": {
-          "relative_path": "softec/feleletvalasztos/handout.docx"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "softec/feleletvalasztos/index.md",
-      "output": {
-        ".html": {
-          "relative_path": "softec/feleletvalasztos/index.html",
-          "hash": "mWJaXgqblrfkyFY/3wqcIl6EctlTu6FZAmq38BaUNJg="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "softec/feleletvalasztos/jatek.csv",
-      "output": {
-        "resource": {
-          "relative_path": "softec/feleletvalasztos/jatek.csv"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "softec/feleletvalasztos/jatek2.txt",
-      "output": {
-        "resource": {
-          "relative_path": "softec/feleletvalasztos/jatek2.txt"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
       "type": "Conceptual",
       "source_relative_path": "softec/fuggvenyek/index.md",
       "output": {
@@ -1850,7 +1861,7 @@
       "output": {
         ".html": {
           "relative_path": "softec/index.html",
-          "hash": "o9ZVJJR1YYsUabRzk04MkhRmjxzzuP4DYILc259ln8s="
+          "hash": "6zRsZdR06v06aiU05Y2BOcgVzxLYKjtVZO8p0TuTQZU="
         }
       },
       "is_incremental": false,
@@ -2057,7 +2068,7 @@
       "output": {
         ".html": {
           "relative_path": "softec/toc.html",
-          "hash": "T9eLHI2LYRzPChljUsjG1IzoR2PGXFOWiq0O/xwFqvM="
+          "hash": "tJZnDBzn3KMTGY8aAeNAhSvn3nfYFRS81WfBRQIc8cE="
         }
       },
       "is_incremental": false,
@@ -4066,7 +4077,7 @@
           "can_incremental": true,
           "incrementalPhase": "build",
           "total_file_count": 101,
-          "skipped_file_count": 100
+          "skipped_file_count": 101
         },
         "ResourceDocumentProcessor": {
           "can_incremental": false,
