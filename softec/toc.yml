@@ -46,6 +46,9 @@
   items:
     - name: "Ea: fájlkezelés"
       href: 4_file\feleletvalasztos\index.md
+    - name: "Gyak: hajós teszt"
+      href: 4_file\hajos_gyak.md
+
 
 #- name: 5. hét
 #  items:

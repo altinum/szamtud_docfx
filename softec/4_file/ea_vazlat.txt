@@ -1,19 +1,30 @@
 
 
 Mitől sikeres?
-Tyúk vagy tojás
-WSA: https://learn.microsoft.com/en-us/windows/android/wsa/
-Samsung Galaxy Store
-Amazon App Store 
-Huawei AppGallery
+Mi az a Trivia -
+5194
 
+Honnét lesznek a jó kérdések?
+Go international? i18n
+
+Tyúk vagy tojás
+- WSA: https://learn.microsoft.com/en-us/windows/android/wsa/
+- Samsung Galaxy Store
+- Amazon App Store 
+- Huawei AppGallery
+* Julia
+https://www.nuget.org/packages
 
 
 Monetizáció
 - Reklám 
 - Érettségi
 - Társasjáték
-Mennyi az annyi? 
+- TV
+* HQ trivia példája
+Mennyi az annyi? Céginfó
+Exit stratégia
+Glassdoor
 
 
 
