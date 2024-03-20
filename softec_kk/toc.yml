@@ -1,0 +1,105 @@
+---
+- name: A tárgy célja, követelmények
+  href: kovetelmenyek\index.md
+#- name: ZH eredmények 
+#  href: eredmenyek\index.md
+- name: 0. hét
+  items:
+    - name: Visual Studió telepítése
+      href: vsinstall\index.md
+ #   - name: Útmutató projektek feltöltéséhez
+ #     href: projektfeltoltes\index.md
+- name: 1. hét
+  items:
+    - name: Összefoglaló a változókról
+      href: 1_bevezeto\eloadas_linkek.md
+    - name: Kamtszámítás mintafeladat
+      href: 1_bevezeto\kamatszamitas.md
+    - name: Változók viselkedése
+      href: 2_osztalyok\valtozok_viselkedese.md
+    - name: Szorzótábla (videók)
+      href: 2_osztalyok\szorzotabla.md
+    - name: Fibonacci sor
+      href: 2_osztalyok\fibonacci_sor.md
+    - name: Pascal háromszög
+      href: 2_osztalyok\pascal_haromszog.md
+    - name: Sakktábla
+      href: 2_osztalyok\sakktabla.md
+    - name: Gyakorló feladatok
+      href: 3_osztalyok_2\index.md
+    - name: Ellenőrző kérdések
+      href: zh_checklists\zh1_checklist.md   
+#- name: 3. blokk
+#  items:
+#    - name: Fájlkezelés"
+#      href: 4_file\feleletvalasztos\index.md
+#    - name: "Gyak: hajós teszt"
+#      href: 4_file\hajos_gyak.md
+#- name: 4. blokk
+#  items:
+#    - name: Képkirakós játék
+#      href: kepkirakos\index.md
+#    - name: Osztályok és Objektumok
+#      href: osztalyok\overview.md
+#- name: 5. hét
+#  items:
+#    - name: Feleltválasztós játék
+#      href: feleletvalasztos\index.md
+#    - name: Kvíz játék kérdéslistával gyakorlatra
+#      href: quiz2\index.md
+#- name: 6. hét
+#  items:
+#    - name: Kígyós játék
+#      href: kigyos\index.md
+#- name: 7. hét
+#  items:
+#    
+#    - name: Ellenőrző kérdések
+#      href: zh2checklist\index.md
+#- name: 8. hét
+#  items:
+#    - name: Puzzle
+#      href: slide_puzzle\slide_puzzle.md
+#- name: Kiegészítő anyagok
+#  items:
+#    - name: Third Party Packages
+#      href: SeleniumDemo\index2.md
+#    - name: GDI Grafika
+#      href: grafika_ifs_reszletes\grafika.md
+#    - name: Teknős és Koch görbe
+#      href: grafika_ifs_reszletes\koch_gorbe.md
+#    - name: IFS fraktál
+#      href: grafika_ifs_reszletes\index.md
+#    - name: Emory game
+#      href: emory\index.md
+#- name: Gyakorló feladatok ZH-ra
+#  items:
+#  - name: Villámkérdések
+#    href: villamkerdesek\index.md
+#  - name: Szópároztatós játék
+#    href: szoparoztatos\index.md
+#  - name: Fájlok előasára
+#    href: zh3_gyakorlas\index.md    
+#- name: Projektfeladatok
+#  items:
+#    - name: A projektfeladatok értékelése
+#      href: beadandok\beadando\index.md
+#    - name: Témajavaslatok
+#      items:
+#      - name: "Projektfeladat: Életjáték"
+#        href: beadandok\beadando_game_of_life\index.md
+#      - name: "Projektfeladat: Hajós oktató"
+#        href: beadandok\beadando_hajos\index.md
+#      - name: "Projektfeladat: Memóriajáték folytatása"
+#        href: beadandok\beadando_quiz_numerikus\index.md
+#      - name: "Projektfeladat: Szótanító játék"
+#        href: beadandok\beadando_szotanito\index.md
+#      - name: "Projektfeladat: Akasztófa játék"
+#        href: beadandok\beadando_hangman\index.md
+#      - name: "Projektfeladat: Labirintus játék"
+#        href: beadandok\beadando_maze\index.md
+#      - name: "Projektfeladat: Kígyós játék almákkal"
+#        href: beadandok\beadando_snake\index.md
+#      - name: "Projektfeladat: Keresd a különbséget játék"
+#        href: beadandok\beadando_spot_the_difference\index.md
+#

@@ -31,6 +31,12 @@
       },
       {
         "files": [
+          "softec_kk/**.yml",
+          "softec_kk/**.md"
+        ]
+      },
+      {
+        "files": [
           "adatb/**.md",
           "adatb/**/toc.yml",
           "toc.yml",
@@ -59,7 +65,15 @@
           "softeng/**.jpg",
           "softeng/**.jpeg",
           "softeng/**.gif",
-          "softeng/**.zip"
+          "softeng/**.zip",
+          "softec_kk/**.zip",
+          "softec_kk/**.docx",
+          "softec_kk/**.txt",
+          "softec_kk/**.png",
+          "softec_kk/**.jpg",
+          "softec_kk/**.csv"
+          
+
         ]
       }
     ],

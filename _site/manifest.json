@@ -1220,10 +1220,10 @@
       "output": {
         ".html": {
           "relative_path": "softec/4_file/hajos_gyak.html",
-          "hash": "AGaxLKEfuqtXGW/7i9MAUGOROBt65YJMAE3hJ3MAVmM="
+          "hash": "0ztZBcupqJiFCJ6Xt97jMVjdvulR6HrJ3DCMV9qKNDo="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -1301,6 +1301,29 @@
         }
       },
       "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec/5_UI/ea_jegyzet.txt",
+      "output": {
+        "resource": {
+          "relative_path": "softec/5_UI/ea_jegyzet.txt"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "softec/5_UI/ea_linkek.md",
+      "output": {
+        ".html": {
+          "relative_path": "softec/5_UI/ea_linkek.html",
+          "hash": "pJ67fTNVIoKlMoh3tzGPiBpULbEVcUhck7/eACdCGcI="
+        }
+      },
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -1996,7 +2019,7 @@
       "output": {
         ".html": {
           "relative_path": "softec/kigyos/index.html",
-          "hash": "ZAbt/oBCiBGrIC3StXPXkmPEfPxJhVxi+KVGMj8NY3Q="
+          "hash": "CeCSRMWM4/w+nWkuD7YpvxDryCAYoTq15ZZfKe9q48E="
         }
       },
       "is_incremental": true,
@@ -2413,6 +2436,1407 @@
         }
       },
       "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "softec_kk/1_bevezeto/eloadas_linkek.md",
+      "output": {
+        ".html": {
+          "relative_path": "softec_kk/1_bevezeto/eloadas_linkek.html",
+          "hash": "asfitzz3o/lK89Ziy6iR+a8+dvPnIaByJRK73Ax3IiE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "softec_kk/1_bevezeto/kamatszamitas.md",
+      "output": {
+        ".html": {
+          "relative_path": "softec_kk/1_bevezeto/kamatszamitas.html",
+          "hash": "JkHX9NRCZ3hJ0ePwajEQLQ8FY3JEcBv2oWPoGexKo/I="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "softec_kk/1_bevezeto/vscode_polyglot_notebook.md",
+      "output": {
+        ".html": {
+          "relative_path": "softec_kk/1_bevezeto/vscode_polyglot_notebook.html",
+          "hash": "l0URzUv4DUJsWsAlPxnzfToupCRTtJT+qIGcvE3OaUM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "softec_kk/2021/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "softec_kk/2021/index.html",
+          "hash": "nbQ1ejvr494jGhsMMnK28TClIXzorHiK78PuDgUlwqo="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "softec_kk/2_osztalyok/fibonacci_sor.md",
+      "output": {
+        ".html": {
+          "relative_path": "softec_kk/2_osztalyok/fibonacci_sor.html",
+          "hash": "Gft7oljCK4WLRlvEJ4ha980YBBMOMjRYnoIcLn8zT7M="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "softec_kk/2_osztalyok/pascal_haromszog.md",
+      "output": {
+        ".html": {
+          "relative_path": "softec_kk/2_osztalyok/pascal_haromszog.html",
+          "hash": "mzLQgsF1wiwLRYHgg6JsQrbm3tsxIFsHU3T1MwqIVFo="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "softec_kk/2_osztalyok/sakktabla.md",
+      "output": {
+        ".html": {
+          "relative_path": "softec_kk/2_osztalyok/sakktabla.html",
+          "hash": "+9qZavV1G7GWVR8bNhycxuW4zmF9jnlapO/b8M7mYlA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "softec_kk/2_osztalyok/szorzotabla.md",
+      "output": {
+        ".html": {
+          "relative_path": "softec_kk/2_osztalyok/szorzotabla.html",
+          "hash": "lDZpeEjOJ5gmmtyYZBy53OMdSsvx0Hd+JKKQHOW3Ksk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "softec_kk/2_osztalyok/valtozok_viselkedese.md",
+      "output": {
+        ".html": {
+          "relative_path": "softec_kk/2_osztalyok/valtozok_viselkedese.html",
+          "hash": "KYd7GZB+45wMz+zOhx/UdnFDkzpNRyLff6G1/WNHRbE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "softec_kk/3_osztalyok_2/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "softec_kk/3_osztalyok_2/index.html",
+          "hash": "xoA/F3vyh09IbHPqS2JMQNRv2feU7ee22E7erMZ6RMM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "softec_kk/3_osztalyok_2/overview.md",
+      "output": {
+        ".html": {
+          "relative_path": "softec_kk/3_osztalyok_2/overview.html",
+          "hash": "DpL8BsJ1U73Y5q4jndo7pIbMU5TRR2iYiY0a/Plwj/s="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "softec_kk/3_osztalyok_2/time_to_learn.md",
+      "output": {
+        ".html": {
+          "relative_path": "softec_kk/3_osztalyok_2/time_to_learn.html",
+          "hash": "Df0sPf1jx7v2woq3XBcnZr8XH0WKvs6fs2Mqnnv44C4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec_kk/4_file/ea_vazlat.txt",
+      "output": {
+        "resource": {
+          "relative_path": "softec_kk/4_file/ea_vazlat.txt"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec_kk/4_file/feleletvalasztos/handout.docx",
+      "output": {
+        "resource": {
+          "relative_path": "softec_kk/4_file/feleletvalasztos/handout.docx"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "softec_kk/4_file/feleletvalasztos/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "softec_kk/4_file/feleletvalasztos/index.html",
+          "hash": "e4fl3HMnQBeq+aRowXz0dR8Q+bYaOBhu91NUytfnA2w="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec_kk/4_file/feleletvalasztos/jatek.csv",
+      "output": {
+        "resource": {
+          "relative_path": "softec_kk/4_file/feleletvalasztos/jatek.csv"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec_kk/4_file/feleletvalasztos/jatek2.txt",
+      "output": {
+        "resource": {
+          "relative_path": "softec_kk/4_file/feleletvalasztos/jatek2.txt"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "softec_kk/4_file/hajos_gyak.md",
+      "output": {
+        ".html": {
+          "relative_path": "softec_kk/4_file/hajos_gyak.html",
+          "hash": "/preYgr34uigj4TKiM5rwDbWrbTv/qBQMEM4oELm5CM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec_kk/4_file/hajozasi_szabalyzat_kerdessor_BOM.txt",
+      "output": {
+        "resource": {
+          "relative_path": "softec_kk/4_file/hajozasi_szabalyzat_kerdessor_BOM.txt"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec_kk/4_file/image-20240313221824912.png",
+      "output": {
+        "resource": {
+          "relative_path": "softec_kk/4_file/image-20240313221824912.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec_kk/4_file/vs_projekt/HajosQuiz.zip",
+      "output": {
+        "resource": {
+          "relative_path": "softec_kk/4_file/vs_projekt/HajosQuiz.zip"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec_kk/4_file/vs_projekt/HajosQuiz/HajosQuiz/bin/Debug/net6.0-windows/hajozasi_szabalyzat_kerdessor_BOM.txt",
+      "output": {
+        "resource": {
+          "relative_path": "softec_kk/4_file/vs_projekt/HajosQuiz/HajosQuiz/bin/Debug/net6.0-windows/hajozasi_szabalyzat_kerdessor_BOM.txt"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec_kk/4_file/vs_projekt/HajosQuiz/HajosQuiz/hajozasi_szabalyzat_kerdessor.txt",
+      "output": {
+        "resource": {
+          "relative_path": "softec_kk/4_file/vs_projekt/HajosQuiz/HajosQuiz/hajozasi_szabalyzat_kerdessor.txt"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec_kk/4_file/vs_projekt/HajosQuiz/HajosQuiz/hajozasi_szabalyzat_kerdessor_BOM.txt",
+      "output": {
+        "resource": {
+          "relative_path": "softec_kk/4_file/vs_projekt/HajosQuiz/HajosQuiz/hajozasi_szabalyzat_kerdessor_BOM.txt"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec_kk/4_file/vs_projekt/HajosQuiz/HajosQuiz/obj/Debug/net6.0-windows/HajosQuiz.csproj.FileListAbsolute.txt",
+      "output": {
+        "resource": {
+          "relative_path": "softec_kk/4_file/vs_projekt/HajosQuiz/HajosQuiz/obj/Debug/net6.0-windows/HajosQuiz.csproj.FileListAbsolute.txt"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec_kk/SeleniumDemo/FormDesigner.png",
+      "output": {
+        "resource": {
+          "relative_path": "softec_kk/SeleniumDemo/FormDesigner.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec_kk/SeleniumDemo/FormRunning.png",
+      "output": {
+        "resource": {
+          "relative_path": "softec_kk/SeleniumDemo/FormRunning.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec_kk/SeleniumDemo/Packages.png",
+      "output": {
+        "resource": {
+          "relative_path": "softec_kk/SeleniumDemo/Packages.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec_kk/SeleniumDemo/SeleniumTest/SeleniumTest/obj/Debug/net6.0-windows/SeleniumTest.csproj.FileListAbsolute.txt",
+      "output": {
+        "resource": {
+          "relative_path": "softec_kk/SeleniumDemo/SeleniumTest/SeleniumTest/obj/Debug/net6.0-windows/SeleniumTest.csproj.FileListAbsolute.txt"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec_kk/SeleniumDemo/UseCourseScraper/UseCourseScraper/obj/Debug/net6.0-windows/UseCourseScraper.csproj.FileListAbsolute.txt",
+      "output": {
+        "resource": {
+          "relative_path": "softec_kk/SeleniumDemo/UseCourseScraper/UseCourseScraper/obj/Debug/net6.0-windows/UseCourseScraper.csproj.FileListAbsolute.txt"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec_kk/SeleniumDemo/ZH3/Quiz/bin/Debug/net6.0-windows/multichoice.csv",
+      "output": {
+        "resource": {
+          "relative_path": "softec_kk/SeleniumDemo/ZH3/Quiz/bin/Debug/net6.0-windows/multichoice.csv"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec_kk/SeleniumDemo/ZH3/Quiz/multichoice.csv",
+      "output": {
+        "resource": {
+          "relative_path": "softec_kk/SeleniumDemo/ZH3/Quiz/multichoice.csv"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec_kk/SeleniumDemo/ZH3/Quiz/obj/Debug/net6.0-windows/Quiz.csproj.FileListAbsolute.txt",
+      "output": {
+        "resource": {
+          "relative_path": "softec_kk/SeleniumDemo/ZH3/Quiz/obj/Debug/net6.0-windows/Quiz.csproj.FileListAbsolute.txt"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec_kk/SeleniumDemo/ZH3/Szoparoztatos/bin/Debug/net6.0-windows/words.csv",
+      "output": {
+        "resource": {
+          "relative_path": "softec_kk/SeleniumDemo/ZH3/Szoparoztatos/bin/Debug/net6.0-windows/words.csv"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec_kk/SeleniumDemo/ZH3/Szoparoztatos/obj/Debug/net6.0-windows/Szoparoztatos.csproj.FileListAbsolute.txt",
+      "output": {
+        "resource": {
+          "relative_path": "softec_kk/SeleniumDemo/ZH3/Szoparoztatos/obj/Debug/net6.0-windows/Szoparoztatos.csproj.FileListAbsolute.txt"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec_kk/SeleniumDemo/ZH3/Szoparoztatos/words.csv",
+      "output": {
+        "resource": {
+          "relative_path": "softec_kk/SeleniumDemo/ZH3/Szoparoztatos/words.csv"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec_kk/SeleniumDemo/ZH3/SzoperoztatosOszlopos/bin/Debug/net6.0-windows/words.csv",
+      "output": {
+        "resource": {
+          "relative_path": "softec_kk/SeleniumDemo/ZH3/SzoperoztatosOszlopos/bin/Debug/net6.0-windows/words.csv"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec_kk/SeleniumDemo/ZH3/SzoperoztatosOszlopos/obj/Debug/net6.0-windows/SzoperoztatosOszlopos.csproj.FileListAbsolute.txt",
+      "output": {
+        "resource": {
+          "relative_path": "softec_kk/SeleniumDemo/ZH3/SzoperoztatosOszlopos/obj/Debug/net6.0-windows/SzoperoztatosOszlopos.csproj.FileListAbsolute.txt"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec_kk/SeleniumDemo/ZH3/SzoperoztatosOszlopos/words.csv",
+      "output": {
+        "resource": {
+          "relative_path": "softec_kk/SeleniumDemo/ZH3/SzoperoztatosOszlopos/words.csv"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec_kk/SeleniumDemo/ZH3/Trivia/bin/Debug/net6.0-windows/trivia.csv",
+      "output": {
+        "resource": {
+          "relative_path": "softec_kk/SeleniumDemo/ZH3/Trivia/bin/Debug/net6.0-windows/trivia.csv"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec_kk/SeleniumDemo/ZH3/Trivia/obj/Debug/net6.0-windows/Trivia.csproj.FileListAbsolute.txt",
+      "output": {
+        "resource": {
+          "relative_path": "softec_kk/SeleniumDemo/ZH3/Trivia/obj/Debug/net6.0-windows/Trivia.csproj.FileListAbsolute.txt"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec_kk/SeleniumDemo/ZH3/Trivia/trivia.csv",
+      "output": {
+        "resource": {
+          "relative_path": "softec_kk/SeleniumDemo/ZH3/Trivia/trivia.csv"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "softec_kk/SeleniumDemo/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "softec_kk/SeleniumDemo/index.html",
+          "hash": "jcvhldK59tM8zZX4I2pIoWXTDKeZuOUUb/7HeJUsVDo="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "softec_kk/SeleniumDemo/index2.md",
+      "output": {
+        ".html": {
+          "relative_path": "softec_kk/SeleniumDemo/index2.html",
+          "hash": "kThWS0aL+/1mb2DHy6nPKZWyZj9N2IwTm+bVym6SiRY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "softec_kk/amoba/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "softec_kk/amoba/index.html",
+          "hash": "pFl0RqlcpQ/8nj+hPqMZCTThnbRsUfANDd/Pf9QoS54="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec_kk/amoba/kbd_hun.txt",
+      "output": {
+        "resource": {
+          "relative_path": "softec_kk/amoba/kbd_hun.txt"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "softec_kk/bantumi/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "softec_kk/bantumi/index.html",
+          "hash": "ZcSX8lk7muf6VkrByfOaZu3XGCj/eCeuZfLcOXUDya8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "softec_kk/beadandok/beadando/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "softec_kk/beadandok/beadando/index.html",
+          "hash": "Qo6/rmcVz5IO9HI4Ctkwe/7ZrpxthkDIfdcwB9mjHpo="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "softec_kk/beadandok/beadando/projekt_zh_ertekeles.md",
+      "output": {
+        ".html": {
+          "relative_path": "softec_kk/beadandok/beadando/projekt_zh_ertekeles.html",
+          "hash": "cWqP9F5WaXhdaiWXN76sewZHBK4MzJTDxxERWpV1JJE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "softec_kk/beadandok/beadando_game_of_life/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "softec_kk/beadandok/beadando_game_of_life/index.html",
+          "hash": "g7b3m7HDIXgo4d4vugJwRxTqhr1UIHW+iEcRLgJXJD8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec_kk/beadandok/beadando_hajos/2018_11_22_Hajozasi_szabalyzat.zip",
+      "output": {
+        "resource": {
+          "relative_path": "softec_kk/beadandok/beadando_hajos/2018_11_22_Hajozasi_szabalyzat.zip"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "softec_kk/beadandok/beadando_hajos/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "softec_kk/beadandok/beadando_hajos/index.html",
+          "hash": "tv+z+SITFLpGFveRdQq/QKhlvbdWnIhBJDW3w7fIC4Q="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "softec_kk/beadandok/beadando_hangman/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "softec_kk/beadandok/beadando_hangman/index.html",
+          "hash": "P7mmWG/98xczTJBJ+IMaICiia31cG72gU24/1rmB7l0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "softec_kk/beadandok/beadando_maze/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "softec_kk/beadandok/beadando_maze/index.html",
+          "hash": "tmaFi0naWfbJM03ebC7MPdz1nedGOPzg4hSDBurLKI4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "softec_kk/beadandok/beadando_quiz_numerikus/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "softec_kk/beadandok/beadando_quiz_numerikus/index.html",
+          "hash": "3YljQSzgFjmYcQVApPEqmIsG/+hZQ78PBokCm7oWn5M="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "softec_kk/beadandok/beadando_snake/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "softec_kk/beadandok/beadando_snake/index.html",
+          "hash": "1OGC5IFUX304GhEHcPbyHoSREtRj4w3UTcRWu40pZA0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "softec_kk/beadandok/beadando_spot_the_difference/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "softec_kk/beadandok/beadando_spot_the_difference/index.html",
+          "hash": "JawXDp0K3+KTD9UEGTFaX926N9/4xd8pImLG/vrXdJI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "softec_kk/beadandok/beadando_szotanito/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "softec_kk/beadandok/beadando_szotanito/index.html",
+          "hash": "2lqSktN2ZPcCnRd9WDgtQzwe0vHdxGkvJ1MgSlFUbYU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec_kk/emory/Kepek.zip",
+      "output": {
+        "resource": {
+          "relative_path": "softec_kk/emory/Kepek.zip"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "softec_kk/emory/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "softec_kk/emory/index.html",
+          "hash": "ocSaJoNOgicuWKHYi9SAHJ4up9zhtBv2mQN3HrYFRXc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "softec_kk/eredmenyek/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "softec_kk/eredmenyek/index.html",
+          "hash": "qG3d7MwJ91LfYsmhqjWnFGNdME1OFOxdzwCNNbGRfAw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "softec_kk/fuggvenyek/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "softec_kk/fuggvenyek/index.html",
+          "hash": "65G+diwW41sj6O/XfjsaFDZXcyDuw8TP4u/czQQBIDI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "softec_kk/git/ea_linkek.md",
+      "output": {
+        ".html": {
+          "relative_path": "softec_kk/git/ea_linkek.html",
+          "hash": "nz/5qMnbhNhEBNmP3oggd9vR2qxoeZ9rcrc7nTnAyTw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec_kk/git/memo.docx",
+      "output": {
+        "resource": {
+          "relative_path": "softec_kk/git/memo.docx"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
+      "type": "Conceptual",
+      "source_relative_path": "softec_kk/git/verziokovetes_a_gyakorlatban.md",
+      "output": {
+        ".html": {
+          "relative_path": "softec_kk/git/verziokovetes_a_gyakorlatban.html",
+          "hash": "dd4AU5aBCuDQtwu18DNkroZ7cZKtIE3nVhp8RrcLX1Q="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec_kk/git/verziokovetes_a_gyakorlatban.png",
+      "output": {
+        "resource": {
+          "relative_path": "softec_kk/git/verziokovetes_a_gyakorlatban.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec_kk/grafika_ifs_reszletes/IFS/Fraktal/obj/x86/Debug/Fraktal.csproj.FileListAbsolute.txt",
+      "output": {
+        "resource": {
+          "relative_path": "softec_kk/grafika_ifs_reszletes/IFS/Fraktal/obj/x86/Debug/Fraktal.csproj.FileListAbsolute.txt"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec_kk/grafika_ifs_reszletes/fern.png",
+      "output": {
+        "resource": {
+          "relative_path": "softec_kk/grafika_ifs_reszletes/fern.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "softec_kk/grafika_ifs_reszletes/grafika.md",
+      "output": {
+        ".html": {
+          "relative_path": "softec_kk/grafika_ifs_reszletes/grafika.html",
+          "hash": "6yRU6UoEtMhb9/UUiKdEHR9olJbJ6goUEcBLM/JLGnA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "softec_kk/grafika_ifs_reszletes/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "softec_kk/grafika_ifs_reszletes/index.html",
+          "hash": "zcC+MVB0brsV8sLXrCaT2G5/YUu5q59yGE1pz7rYYuA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec_kk/grafika_ifs_reszletes/koch/koch/obj/Debug/koch.csproj.FileListAbsolute.txt",
+      "output": {
+        "resource": {
+          "relative_path": "softec_kk/grafika_ifs_reszletes/koch/koch/obj/Debug/koch.csproj.FileListAbsolute.txt"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "softec_kk/grafika_ifs_reszletes/koch_gorbe.md",
+      "output": {
+        ".html": {
+          "relative_path": "softec_kk/grafika_ifs_reszletes/koch_gorbe.html",
+          "hash": "wkIJF/6bWgtdOoe2ghdj594/YlSjZIYQfeUgsQUp88Y="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec_kk/grafika_ifs_reszletes/sin_cos.png",
+      "output": {
+        "resource": {
+          "relative_path": "softec_kk/grafika_ifs_reszletes/sin_cos.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec_kk/images/1599902337797.png",
+      "output": {
+        "resource": {
+          "relative_path": "softec_kk/images/1599902337797.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec_kk/images/1599921619453.png",
+      "output": {
+        "resource": {
+          "relative_path": "softec_kk/images/1599921619453.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec_kk/images/1600005026998.png",
+      "output": {
+        "resource": {
+          "relative_path": "softec_kk/images/1600005026998.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec_kk/images/1600007423489.png",
+      "output": {
+        "resource": {
+          "relative_path": "softec_kk/images/1600007423489.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec_kk/images/1600008026941.png",
+      "output": {
+        "resource": {
+          "relative_path": "softec_kk/images/1600008026941.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec_kk/images/1602072975369.png",
+      "output": {
+        "resource": {
+          "relative_path": "softec_kk/images/1602072975369.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec_kk/images/fern.png",
+      "output": {
+        "resource": {
+          "relative_path": "softec_kk/images/fern.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec_kk/images/vs_install.png",
+      "output": {
+        "resource": {
+          "relative_path": "softec_kk/images/vs_install.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "softec_kk/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "softec_kk/index.html",
+          "hash": "lXhAvDGXvbF6I6pLHt6QYAJBO4x57zo/TjzCiEhp/Jk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec_kk/kepkirakos/Pascel_es_lo.docx",
+      "output": {
+        "resource": {
+          "relative_path": "softec_kk/kepkirakos/Pascel_es_lo.docx"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "softec_kk/kepkirakos/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "softec_kk/kepkirakos/index.html",
+          "hash": "7MUlQB7Ttf/h/lVHoxO15MssSLQJ82ubCBe/St9uSPI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec_kk/kepkirakos/lo.zip",
+      "output": {
+        "resource": {
+          "relative_path": "softec_kk/kepkirakos/lo.zip"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "softec_kk/kigyos/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "softec_kk/kigyos/index.html",
+          "hash": "lLWhknnOiGqPXOkXTPZQrI5I3zUnLBuguJ+YRoKtDPU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "softec_kk/kovetelmenyek/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "softec_kk/kovetelmenyek/index.html",
+          "hash": "o81WenBoAm1iiyawv5TSnE8c57KJ+XqL5IRvAhBPK00="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "softec_kk/kovetelmenyek_levelezo/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "softec_kk/kovetelmenyek_levelezo/index.html",
+          "hash": "Lt3FhVme7UiYaJI0cy/L18J/ZcTg8FI2eK66dKMogEg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "softec_kk/levelezo_beadando/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "softec_kk/levelezo_beadando/index.html",
+          "hash": "UA8XtQKjrcPA9dJ7bmWVw64FBm5kMNIhlIQSNEMZJM0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "softec_kk/masodfoku/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "softec_kk/masodfoku/index.html",
+          "hash": "G3snTAlx4VekMzfZnsEp4JNta/TLVrm0Hcux/qPME/U="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "softec_kk/osszefoglalo_levelezo/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "softec_kk/osszefoglalo_levelezo/index.html",
+          "hash": "Sy+xcAoFl0sELYMonOzN/tyfmbrCJYNLNTtSVW22dKE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
+      "type": "Conceptual",
+      "source_relative_path": "softec_kk/pixelart/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "softec_kk/pixelart/index.html",
+          "hash": "R7F6wIISoQZUlvSlWXju4k5xAwxLHvUqeSsCXwD7d8w="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
+      "type": "Conceptual",
+      "source_relative_path": "softec_kk/projektfeltoltes/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "softec_kk/projektfeltoltes/index.html",
+          "hash": "1YEZ8nn7YBOlrd7YZi1kX7ytkZNXApwLO/RtoUnoFm0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "softec_kk/quiz2/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "softec_kk/quiz2/index.html",
+          "hash": "TqUx2VZAlDAwEscaFQk8pHzQJeV/b6G/68h5oV4Sxr8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec_kk/slide_puzzle/SlidePuzzle/SlidePuzzle/obj/Debug/net6.0-windows/SlidePuzzle.csproj.FileListAbsolute.txt",
+      "output": {
+        "resource": {
+          "relative_path": "softec_kk/slide_puzzle/SlidePuzzle/SlidePuzzle/obj/Debug/net6.0-windows/SlidePuzzle.csproj.FileListAbsolute.txt"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "softec_kk/slide_puzzle/slide_puzzle.md",
+      "output": {
+        ".html": {
+          "relative_path": "softec_kk/slide_puzzle/slide_puzzle.html",
+          "hash": "8ILzYK3NklVwx/rcJ+ONGnFLUdd8qJcySKZ3vnipC1w="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "softec_kk/szoparoztatos/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "softec_kk/szoparoztatos/index.html",
+          "hash": "C1IlRq22rdMw59GEVsyX7DsLORhX1bGh5Z2fmyW7hKU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "softec_kk/teamsbeszamolok/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "softec_kk/teamsbeszamolok/index.html",
+          "hash": "frp2MDOBW+4MJqi6nVthOS2NEaNEV032skKvGqFjj78="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "softec_kk/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "softec_kk/toc.html",
+          "hash": "jeI4pMzgnl5kgVJHqLoauQlMiD7auaXsjRB6oEzEEwc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "invalid-yaml-header"
+      ],
+      "type": "Conceptual",
+      "source_relative_path": "softec_kk/villamkerdesek/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "softec_kk/villamkerdesek/index.html",
+          "hash": "YCbHf+JsJJwDumfCaIhMXnmQwgOQBuuvCZX7XXxNT3Y="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "softec_kk/vsinstall/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "softec_kk/vsinstall/index.html",
+          "hash": "zgDU5pO2HFuY9L/XwksTiTVFjdJGzFhHxP9tI6FUOaI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "softec_kk/zh1checklist/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "softec_kk/zh1checklist/index.html",
+          "hash": "3km4sdWIiybiJOlyZ7WNAb/hHJWY8ZBb3vs/6u5gKMA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec_kk/zh2checklist/clip_image001.png",
+      "output": {
+        "resource": {
+          "relative_path": "softec_kk/zh2checklist/clip_image001.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec_kk/zh2checklist/colors.csv",
+      "output": {
+        "resource": {
+          "relative_path": "softec_kk/zh2checklist/colors.csv"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec_kk/zh2checklist/fa.csv",
+      "output": {
+        "resource": {
+          "relative_path": "softec_kk/zh2checklist/fa.csv"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "softec_kk/zh2checklist/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "softec_kk/zh2checklist/index.html",
+          "hash": "YgEhuhE2lfP46o9F7XAYqBaZFGIANnjPPtneeRcXiv8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec_kk/zh2checklist/kbd_hun.txt",
+      "output": {
+        "resource": {
+          "relative_path": "softec_kk/zh2checklist/kbd_hun.txt"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec_kk/zh2checklist/lany.csv",
+      "output": {
+        "resource": {
+          "relative_path": "softec_kk/zh2checklist/lany.csv"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec_kk/zh2checklist/quiz.txt",
+      "output": {
+        "resource": {
+          "relative_path": "softec_kk/zh2checklist/quiz.txt"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec_kk/zh2checklist/srac.csv",
+      "output": {
+        "resource": {
+          "relative_path": "softec_kk/zh2checklist/srac.csv"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec_kk/zh2checklist/szavak.csv",
+      "output": {
+        "resource": {
+          "relative_path": "softec_kk/zh2checklist/szavak.csv"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec_kk/zh3_gyakorlas/dilbert.csv",
+      "output": {
+        "resource": {
+          "relative_path": "softec_kk/zh3_gyakorlas/dilbert.csv"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "softec_kk/zh3_gyakorlas/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "softec_kk/zh3_gyakorlas/index.html",
+          "hash": "qZu3Y2Q6WyuL6uWMmpJp197p4iK05aP3yBWGrithipw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec_kk/zh3_gyakorlas/lany.csv",
+      "output": {
+        "resource": {
+          "relative_path": "softec_kk/zh3_gyakorlas/lany.csv"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec_kk/zh3_gyakorlas/multichoice.csv",
+      "output": {
+        "resource": {
+          "relative_path": "softec_kk/zh3_gyakorlas/multichoice.csv"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec_kk/zh3_gyakorlas/srac.csv",
+      "output": {
+        "resource": {
+          "relative_path": "softec_kk/zh3_gyakorlas/srac.csv"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec_kk/zh3_gyakorlas/szavak2.txt",
+      "output": {
+        "resource": {
+          "relative_path": "softec_kk/zh3_gyakorlas/szavak2.txt"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec_kk/zh3_gyakorlas/trivia.csv",
+      "output": {
+        "resource": {
+          "relative_path": "softec_kk/zh3_gyakorlas/trivia.csv"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec_kk/zh3_gyakorlas/words.csv",
+      "output": {
+        "resource": {
+          "relative_path": "softec_kk/zh3_gyakorlas/words.csv"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "softec_kk/zh_checklists/zh1_checklist.md",
+      "output": {
+        ".html": {
+          "relative_path": "softec_kk/zh_checklists/zh1_checklist.html",
+          "hash": "hEaGx6z6LrUzfMwUNmafghmTl5zfAWbzfkOf0egRQ0M="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "softec_kk/zh_checklists/zh_ertekeles_leadas.md",
+      "output": {
+        ".html": {
+          "relative_path": "softec_kk/zh_checklists/zh_ertekeles_leadas.html",
+          "hash": "kapsaZ3LnfrSaDC7vVf8u8Ib9GdIDP+FljbBX8ifFjQ="
+        }
+      },
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -4146,7 +5570,7 @@
       "output": {
         ".html": {
           "relative_path": "toc.html",
-          "hash": "Bzbu/+Bfwi/V7N/aZZdVo/jAc49OABL9ctY+C2dkIsY="
+          "hash": "HHAN3iWBMSglSW1DV3OlWP9zNfnMotNIs1ThVkX2OUc="
         }
       },
       "is_incremental": false,
@@ -4165,8 +5589,8 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": true,
           "incrementalPhase": "build",
-          "total_file_count": 102,
-          "skipped_file_count": 101
+          "total_file_count": 160,
+          "skipped_file_count": 160
         },
         "ResourceDocumentProcessor": {
           "can_incremental": false,

@@ -69,6 +69,7 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="kígyós-játék">Kígyós játék</h1>
 
+<p>A gyakrolat célja a listák használatának elmélyítése, az enumerációk bemtatása, valamint a <code>foreach</code> ciklusok szervezése.</p>
 <h2 id="videók">Videók</h2>
 <p>(!Vid) 1. rész</p>
 <div class="embeddedvideo"><iframe src="https://storage.altinum.hu/szoft1/S1snake1.m4v" frameborder="0" allowfullscreen="true"></iframe></div>
@@ -82,7 +83,7 @@
 <div class="embeddedvideo"><iframe src="https://storage.altinum.hu/szoft1/S1snake5.m4v" frameborder="0" allowfullscreen="true"></iframe></div>
 <p>(!Vid) 6. rész</p>
 <div class="embeddedvideo"><iframe src="https://storage.altinum.hu/szoft1/S1snake6.m4v" frameborder="0" allowfullscreen="true"></iframe></div>
-<h2 id="előadás-alap-játék-felépítése">Előadás: alap játék felépítése</h2>
+<h2 id="a-játék-felépítése">A játék felépítése</h2>
 <p>(+/-)  Származtass a <code>PictureBox</code> osztálytól egy új osztályt <code>KígyóElem</code> néven!</p>
 <p>(+/-) A <code>KígyóElem</code> osztályt bővítsd egy méret statikus egész konstanssal, melynek értéke legyen <code>20</code>.</p>
 <pre><code class="lang-csharp">class KígyóElem : PictureBox
@@ -184,8 +185,7 @@ if (kígyó.Count &gt; hossz)
 <p>(+/-) A  páros és a páratlan sorszámú kígyóelemeket színezd eltérően!</p>
 <pre><code class="lang-csharp">if (lépésszám % 2 == 0) ke.BackColor = Color.Yellow;
 </code></pre>
-<h2 id="feladatok-gyakorlatra">Feladatok gyakorlatra</h2>
-<h3 id="mérgek-és-kaják">Mérgek és kaják</h3>
+<h3 id="mérgek-és-almák--egyénileg-megoldandó-feladatok">Mérgek és almák- egyénileg megoldandó feladatok</h3>
 <p>Ha  kajákat és mérgeket is elhelyezel az űrlap vezérlőinek listájában,  működésképtelenné válik az az elv,  hogy a <code>Controls.RemoveAt(0);</code>  megoldással kivesszük a legrégebben berakott elemet. A probléma megodására azokat a <code>KígyóElem</code> típusú objektumokat, amelyek a kígyónk testét képezik, külön listában is tároljuk. Hozz létre egy <code>KígyóElem</code> típusú elemekből álló listát a <code>From1</code>-ben, osztály szinten:</p>
 <pre><code class="lang-csharp">List&lt;KígyóElem&gt; kígyó = new List&lt;KígyóElem&gt;();
 </code></pre>

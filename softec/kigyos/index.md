@@ -1,10 +1,6 @@
 # Kígyós játék
 
-
-
-
-
-
+A gyakrolat célja a listák használatának elmélyítése, az enumerációk bemtatása, valamint a `foreach` ciklusok szervezése.
 
 ## Videók
 
@@ -26,7 +22,7 @@
 (!Vid) 6. rész
 > [!Video https://storage.altinum.hu/szoft1/S1snake6.m4v]
 
-## Előadás: alap játék felépítése
+## A játék felépítése
 
 (+/-)  Származtass a `PictureBox` osztálytól egy új osztályt `KígyóElem` néven!
 
@@ -165,9 +161,7 @@ if (lépésszám % 2 == 0) ke.BackColor = Color.Yellow;
 
 
 
-## Feladatok gyakorlatra
-
-### Mérgek és kaják
+### Mérgek és almák- egyénileg megoldandó feladatok
 
 Ha  kajákat és mérgeket is elhelyezel az űrlap vezérlőinek listájában,  működésképtelenné válik az az elv,  hogy a `Controls.RemoveAt(0);`  megoldással kivesszük a legrégebben berakott elemet. A probléma megodására azokat a `KígyóElem` típusú objektumokat, amelyek a kígyónk testét képezik, külön listában is tároljuk. Hozz létre egy `KígyóElem` típusú elemekből álló listát a `From1`-ben, osztály szinten:
 

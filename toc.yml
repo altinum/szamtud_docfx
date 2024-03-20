@@ -4,3 +4,6 @@
 #- name: Szofttech. II. vizsgakurzus
 #  href: softeng\LevelezoVK
 #  homepage: softeng/LevelezoVK/index.md
+- name: Szofttech. I. konzultációs kurzus
+  href: softec_kk/
+  homepage: softec_kk/index.md
