@@ -48,7 +48,10 @@
       href: 4_file\feleletvalasztos\index.md
     - name: "Gyak: hajós teszt"
       href: 4_file\hajos_gyak.md
-
+- name: 6. hét
+  items:
+  - name: Kígyós játék
+    href: kigyos\index.md
 
 #- name: 5. hét
 #  items:
