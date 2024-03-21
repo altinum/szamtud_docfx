@@ -1,0 +1,196 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Bantumi j&#225;t&#233;k </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Bantumi j&#225;t&#233;k ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="bantumi-játék">Bantumi játék</h1>
+
+<h2 id="videók">Videók</h2>
+<p>(!Vid) e1. videó</p>
+<div class="embeddedvideo"><iframe src="https://storage.altinum.hu/szoft1/S1value_Ref1.m4v" frameborder="0" allowfullscreen="true"></iframe></div>
+<p>(!Vid) e2. videó</p>
+<div class="embeddedvideo"><iframe src="https://storage.altinum.hu/szoft1/S1value_Ref2.m4v" frameborder="0" allowfullscreen="true"></iframe></div>
+<p>(!Vid) 1. videó</p>
+<div class="embeddedvideo"><iframe src="https://storage.altinum.hu/szoft1/S1bantumi1.m4v" frameborder="0" allowfullscreen="true"></iframe></div>
+<p>(!Vid) 2. videó</p>
+<div class="embeddedvideo"><iframe src="https://storage.altinum.hu/szoft1/S1bantumi2.m4v" frameborder="0" allowfullscreen="true"></iframe></div>
+<p>(!Vid) 3. videó</p>
+<div class="embeddedvideo"><iframe src="https://storage.altinum.hu/szoft1/S1bantumi3.m4v" frameborder="0" allowfullscreen="true"></iframe></div>
+<p>(!Vid) 4. videó</p>
+<div class="embeddedvideo"><iframe src="https://storage.altinum.hu/szoft1/S1bantumi4.m4v" frameborder="0" allowfullscreen="true"></iframe></div>
+<p>(!Vid) 5. videó</p>
+<div class="embeddedvideo"><iframe src="https://storage.altinum.hu/szoft1/S1bantumi5.m4v" frameborder="0" allowfullscreen="true"></iframe></div>
+<p>(!Vid) 6. videó</p>
+<div class="embeddedvideo"><iframe src="https://storage.altinum.hu/szoft1/S1bantumi6.m4v" frameborder="0" allowfullscreen="true"></iframe></div>
+<p>A játéknak nagyon sok változata létezik elérő szabályokkal. A nyerést éppen ezért nem implementáljuk, csak a játéktáblát.</p>
+<h2 id="feladatmegoldás-lépésről-lépésre">Feladatmegoldás lépésről lépésre</h2>
+<p>(+/-)  Származtass egy osztályt <code>Lyuk</code> néven a <code>Button</code> osztályból!</p>
+<pre><code class="lang-csharp">public class Lyuk: Button
+{
+}
+</code></pre>
+<p>(+/-)  A Lyuk konstruktorában méretezze magát <code>50x50</code> képpontosra!</p>
+<pre><code class="lang-csharp">	public Lyuk()
+	{
+		this.Height = 50;
+		this.Width = 50;
+	}
+</code></pre>
+<p>(+/-) Bővítsd a Lyuk osztályt teljesen kifejtett getter-setter metódusokkal ellátott <code>BabokSzáma</code> tulajdonsággal! (<em>propfull-tab-tab</em>)</p>
+<pre><code class="lang-csharp">class Lyuk : Button
+{
+    private int babokSzáma;
+    public int BabokSzáma
+    {
+        get { return babokSzáma; }
+        set { babokSzáma = value; }
+    }
+    ...
+</code></pre>
+<p>(+/-) A setter metódusban állítsd be a <code>Lyuk</code> <code>Button</code>-tól örökölt <code>Text</code> tulajdonságát a beállított babok számának megfelelően!</p>
+<pre><code class="lang-csharp">class Lyuk : Button
+{
+    private int babokSzáma;
+    public int BabokSzáma
+    {
+        get { return babokSzáma; }
+        set { 
+            babokSzáma = value;
+            Text = babokSzáma.ToString(); 
+        }
+    }
+    ...
+</code></pre>
+<p>(+/-) Fordítsd le az alkalmazást, majd helyezz el néhány példányt tervező nézetből a <code>Fomr1</code>-en! A <em>Properties</em> ablakban be kell tudni állítani a <code>BabokSzáma</code> tulajdonságot, ami azonnal megjelenik a <code>Lyuk</code> felirataként.</p>
+<p>(+/-) Bővítsd a <code>Lyuk</code> osztályt szintén <code>Lyuk</code> típusú, <code>KövetkezőLyuk</code> nevű tulajdonsággal, melyben minden lyuknál beállítható, ki a soron következő lyuk. A getter-setter metódusokat itt nem kell kifejteni. (<em>prop-tab-tab</em>)</p>
+<pre><code class="lang-csharp">     public Lyuk KövetkezőLyuk { get; set; }
+</code></pre>
+<p>(+/-) Az űrlapon helyezz el tervező nézetben lyukakat, és az óramutató járásával ellentétes irányban haladva a <em>Properties</em> ablakon keresztül minden <code>Lyuk</code>nál állítsd be a <code>KövetkezőLyuk</code> értékét! (Egyértelmű lesz, ha oda jutsz.)</p>
+<p>(+/-) Bővítsd a <code>Lyuk</code> osztályt <code>void</code> típusú <code>BabotKap</code> nevű publikus metódussal, mely paraméterként <code>mennyiBabot</code> nevű égész típusú paramétert kap! Ha a <code>mennyiBabot&gt; 0,</code></p>
+<ul>
+<li>növelje a <code>Lyuk</code> saját babjainak számát egyel a <code>BabokSzáma</code> tulajdonságának beállításával, majd</li>
+<li>hívja meg a <code>KövetkezőLyuk</code> <code>BabotKap</code> függvényét <code>mennyiBabot-1</code> paraméterrel!<br>
+(Egy babot megtart magának, a többit tovább adja a következő Lyuknak. Ha már nincs mit tovább adni, nem csinál semmit.)</li>
+</ul>
+<pre><code class="lang-csharp">    public void BabotKap(int mennyiBabot)
+    {
+        if (mennyiBabot&gt;0) BabokSzáma++;
+            
+        if (mennyiBabot-1 &gt;0)
+        {                
+            KövetkezőLyuk.BabotKap(mennyiBabot - 1);
+        }
+    }
+</code></pre>
+<p>(+/-) A <code>Lyuk</code> konstruktorában rendelj esemény-kiszolgálót a <code>Button</code>-tól örökölt <code>Click</code> eseményhez.</p>
+<p>(+/-) Az esemény-kiszolgáló hívja meg <code>KövetkezőLyuk</code> <code>BabotKap</code> metódusát <code>BabokSzáma</code> paraméterrel, majd nullázza saját <code>BabokSzáma</code> tulajdonságát!   (A megkattintott <code>Lyuk</code> minden babját odaadja a következő <code>Lyuk</code>-nak.)</p>
+<pre><code class="lang-csharp">    private void Lyuk_Click(object sender, EventArgs e)
+    {
+        KövetkezőLyuk.BabotKap(this.BabokSzáma);
+        this.BabokSzáma = 0;
+    }
+</code></pre>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/altinum/szamtud_docfx/blob/main/softec/bantumi/index.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,5289 @@
+{
+  "homepages": [],
+  "source_base_path": "D:/a/szamtud_docfx/szamtud_docfx",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
+      "type": "Conceptual",
+      "source_relative_path": "adatb/adatelemzo01/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "adatb/adatelemzo01/index.html",
+          "hash": "DxYKrNTvvTta5J7bdGgGV1PVy3QvPto3yuPv/wTMSTs="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
+      "type": "Conceptual",
+      "source_relative_path": "adatb/gyak1/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "adatb/gyak1/index.html",
+          "hash": "9TmE4vcCDxbXf7NYaHnG28PnQH2EklUslSQA7DuZ9tc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
+      "type": "Conceptual",
+      "source_relative_path": "adatb/gyak10/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "adatb/gyak10/index.html",
+          "hash": "u4+VK3iS57rsJzguNwB4UjJpFvF5DMZijpT/hrZha+4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
+      "type": "Conceptual",
+      "source_relative_path": "adatb/gyak11/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "adatb/gyak11/index.html",
+          "hash": "M8rCk5RH4t8L4FOPkK1N1PvDj9K8XhuHLEd65zrKkHU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
+      "type": "Conceptual",
+      "source_relative_path": "adatb/gyak2/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "adatb/gyak2/index.html",
+          "hash": "AqOT5ICVOgerIzMuvmZEG3+KlO3qC+GQsszXETpa/38="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
+      "type": "Conceptual",
+      "source_relative_path": "adatb/gyak3/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "adatb/gyak3/index.html",
+          "hash": "4uQHJp8qiAZ+a1hIRdbVkAWtFXk3FMVKkbGo6Z+yWcM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
+      "type": "Conceptual",
+      "source_relative_path": "adatb/gyak4/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "adatb/gyak4/index.html",
+          "hash": "mT9BY8ZYfaSThMX6QL1CsE+r8nVhCtw1iDwzjB+wknQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
+      "type": "Conceptual",
+      "source_relative_path": "adatb/gyak5/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "adatb/gyak5/index.html",
+          "hash": "8IGv13R7znWfqg12IRw45ldMNQGlPLCcBw6UdF8twWs="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
+      "type": "Conceptual",
+      "source_relative_path": "adatb/gyak6/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "adatb/gyak6/index.html",
+          "hash": "ZQCRvz5n9WRGG5mVbJg8nHFhqUmiUG5cErOO5RmuZ34="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
+      "type": "Conceptual",
+      "source_relative_path": "adatb/gyak7/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "adatb/gyak7/index.html",
+          "hash": "DOIhaQuH8WV7Ny3fjG42ERVJ8nhFt/a0xGOK0vaXrms="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
+      "type": "Conceptual",
+      "source_relative_path": "adatb/gyak8/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "adatb/gyak8/index.html",
+          "hash": "BBULVnHswH8rwpmx7B4bem9X9Jc7ct2+wTZ0yHO7U1U="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
+      "type": "Conceptual",
+      "source_relative_path": "adatb/gyak9/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "adatb/gyak9/index.html",
+          "hash": "JX5rxR5176/+QNevgObsOba0kQbps0oaFamGpUZ4o9c="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "adatb/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "adatb/index.html",
+          "hash": "OZPf9ByZhmPR3OSSxt1XP/bHuN5q+ZZdSn9BQ8fadxA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "adatb/kovetelmenyek/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "adatb/kovetelmenyek/index.html",
+          "hash": "n263ceLQJ4RaDuPZjjRbiVSeEUWvFq5ilGbu9fQ7/nI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "adatb/kovetelmenyek_INSA007NMBB/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "adatb/kovetelmenyek_INSA007NMBB/index.html",
+          "hash": "9/FEoTlrteisrwa2LdmyIYZLWkXUipDOSPoqlP3r0As="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "adatb/kovetelmenyek_levelezo/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "adatb/kovetelmenyek_levelezo/index.html",
+          "hash": "7Wl3eFPeLA+1QAUMKrKvdNTNTz40qPfH452qiNoIylY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "adatb/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "adatb/toc.html",
+          "hash": "YxGbLXuVylFiKXWORRO+CI/AoRyH12o4TKRDjUdhv0c="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/1585069392831.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/1585069392831.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/1585724543414.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/1585724543414.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/1585726196537.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/1585726196537.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/1600005026998.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/1600005026998.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/1600007423489.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/1600007423489.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/1600008026941.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/1600008026941.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/1610903788811.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/1610903788811.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/1614698473871.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/1614698473871.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/1614699641758.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/1614699641758.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/1614699890414.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/1614699890414.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/1614699994470.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/1614699994470.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/1615051267868.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/1615051267868.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/1615051616183.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/1615051616183.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/1615051851465.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/1615051851465.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/1615368531680.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/1615368531680.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/1619343517825.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/1619343517825.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/1619343711506.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/1619343711506.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/1619343810349.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/1619343810349.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/AddNewDatasource.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/AddNewDatasource.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/InstructorsRaw.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/InstructorsRaw.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/InstructorsWithComboBoxes.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/InstructorsWithComboBoxes.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/StatusBindingSource.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/StatusBindingSource.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/add_connection.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/add_connection.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/add_data_source.gif",
+      "output": {
+        "resource": {
+          "relative_path": "images/add_data_source.gif"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/add_service_based_database.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/add_service_based_database.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/add_textbox_binding.gif",
+      "output": {
+        "resource": {
+          "relative_path": "images/add_textbox_binding.gif"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/create_a_new_project.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/create_a_new_project.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/create_a_new_project_60.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/create_a_new_project_60.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/datasource_in_solutionexplorer.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/datasource_in_solutionexplorer.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/edmx.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/edmx.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/error.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/error.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/hallgato2.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/hallgato2.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/image-20220827150347600.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/image-20220827150347600.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/in-memory-db-1.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/in-memory-db-1.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/in-memory-db-2.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/in-memory-db-2.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/input_form.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/input_form.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/linq_advanced.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/linq_advanced.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/linq_studies.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/linq_studies.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/local-connection-1.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/local-connection-1.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/local-connection-2.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/local-connection-2.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/local-connection-3.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/local-connection-3.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/nuget.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/nuget.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/nuget_packages.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/nuget_packages.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/orm_classes.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/orm_classes.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/orm_files.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/orm_files.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/osztaly.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/osztaly.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/schema.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/schema.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/server_explorer_with_db.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/server_explorer_with_db.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/service-based-db-1.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/service-based-db-1.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/service-based-db-2.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/service-based-db-2.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/service-based-db-files.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/service-based-db-files.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/show_table_data.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/show_table_data.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/sqlexp01.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/sqlexp01.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/sqlexp02.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/sqlexp02.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/sqlexp03.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/sqlexp03.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/sqlexp04.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/sqlexp04.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/sqlexp05.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/sqlexp05.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/sqlexp06.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/sqlexp06.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/sqlexp07.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/sqlexp07.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/sqlexp08.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/sqlexp08.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/sqlexp09.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/sqlexp09.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/sqlexp10.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/sqlexp10.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/sqlexp11.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/sqlexp11.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/sqlexp12.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/sqlexp12.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/sqlexp13.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/sqlexp13.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/sqlexp14.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/sqlexp14.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/sqlexp15.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/sqlexp15.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/sqlexp16.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/sqlexp16.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/vs_install.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/vs_install.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html",
+          "hash": "t5rX+dXgxY/aO0f9v4kE8/ADgv++diNXKLW93ljmqko="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "softec/1_bevezeto/eloadas_linkek.md",
+      "output": {
+        ".html": {
+          "relative_path": "softec/1_bevezeto/eloadas_linkek.html",
+          "hash": "kFqfcyNodAxu2pxvfM77Yg1AImv7xV8YNYRbCApcV6w="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "softec/1_bevezeto/kamatszamitas.md",
+      "output": {
+        ".html": {
+          "relative_path": "softec/1_bevezeto/kamatszamitas.html",
+          "hash": "2+3cn2mjkXjfaxojcwyHTg3hwTX41rVdTZKCEp6/UGk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "softec/1_bevezeto/vscode_polyglot_notebook.md",
+      "output": {
+        ".html": {
+          "relative_path": "softec/1_bevezeto/vscode_polyglot_notebook.html",
+          "hash": "xN+CGGZE6jBJVhLv4Vy9wW3pHRx0tP4DwdDUbMAhnqA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "softec/2021/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "softec/2021/index.html",
+          "hash": "dzY7xEStrCJ0wVPS7J7HFdboVT1LeErbFL3JLQi36zk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "softec/2_osztalyok/fibonacci_sor.md",
+      "output": {
+        ".html": {
+          "relative_path": "softec/2_osztalyok/fibonacci_sor.html",
+          "hash": "nHEOKX8OdcNJvBVxd0dmJdompfkxJh0RtJ0DVLH3PjM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "softec/2_osztalyok/pascal_haromszog.md",
+      "output": {
+        ".html": {
+          "relative_path": "softec/2_osztalyok/pascal_haromszog.html",
+          "hash": "s8Dm7NWbVbodY3y01CLoRVpLCBHMLy06UIWAb673gTw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "softec/2_osztalyok/sakktabla.md",
+      "output": {
+        ".html": {
+          "relative_path": "softec/2_osztalyok/sakktabla.html",
+          "hash": "BxQgdpiaUvnMCAdouJ2Un7u0xxRKWVNUKP9CDnLwWe0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "softec/2_osztalyok/szorzotabla.md",
+      "output": {
+        ".html": {
+          "relative_path": "softec/2_osztalyok/szorzotabla.html",
+          "hash": "ZSpMWtJkRa1fhwNbvZD6mWc32+ob32GrLjS8d2AUJAw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "softec/2_osztalyok/valtozok_viselkedese.md",
+      "output": {
+        ".html": {
+          "relative_path": "softec/2_osztalyok/valtozok_viselkedese.html",
+          "hash": "BFkIAC5JcfOMT99F0aOZu91MHeQU2bYD9doppr1uIbk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "softec/3_osztalyok_2/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "softec/3_osztalyok_2/index.html",
+          "hash": "MLHhHUBmacrELkcEhsR00YJ7Ndm9oKYFdOGzBgtNoGc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "softec/3_osztalyok_2/overview.md",
+      "output": {
+        ".html": {
+          "relative_path": "softec/3_osztalyok_2/overview.html",
+          "hash": "TH/vNZpx4no7CGjy3pZpfPhyWwY7PPBat8Lh69R2oRA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "softec/3_osztalyok_2/time_to_learn.md",
+      "output": {
+        ".html": {
+          "relative_path": "softec/3_osztalyok_2/time_to_learn.html",
+          "hash": "79caoASmbEvOayNgq3LdESjmmUx0bdaa3JvwjkIiOJ4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec/4_file/ea_vazlat.txt",
+      "output": {
+        "resource": {
+          "relative_path": "softec/4_file/ea_vazlat.txt"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec/4_file/feleletvalasztos/handout.docx",
+      "output": {
+        "resource": {
+          "relative_path": "softec/4_file/feleletvalasztos/handout.docx"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "softec/4_file/feleletvalasztos/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "softec/4_file/feleletvalasztos/index.html",
+          "hash": "yRjEhsaWLYmh9tW1bAHFDuZkIlMKHzHs5yfMlt4ccr0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec/4_file/feleletvalasztos/jatek.csv",
+      "output": {
+        "resource": {
+          "relative_path": "softec/4_file/feleletvalasztos/jatek.csv"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec/4_file/feleletvalasztos/jatek2.txt",
+      "output": {
+        "resource": {
+          "relative_path": "softec/4_file/feleletvalasztos/jatek2.txt"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "softec/4_file/hajos_gyak.md",
+      "output": {
+        ".html": {
+          "relative_path": "softec/4_file/hajos_gyak.html",
+          "hash": "s0/aklsSmxoIKMoNUqySISubC3cRh+tFEioD/oVAO/s="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec/4_file/hajozasi_szabalyzat_kerdessor_BOM.txt",
+      "output": {
+        "resource": {
+          "relative_path": "softec/4_file/hajozasi_szabalyzat_kerdessor_BOM.txt"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec/4_file/image-20240313221824912.png",
+      "output": {
+        "resource": {
+          "relative_path": "softec/4_file/image-20240313221824912.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec/4_file/vs_projekt/HajosQuiz.zip",
+      "output": {
+        "resource": {
+          "relative_path": "softec/4_file/vs_projekt/HajosQuiz.zip"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec/4_file/vs_projekt/HajosQuiz/HajosQuiz/bin/Debug/net6.0-windows/hajozasi_szabalyzat_kerdessor_BOM.txt",
+      "output": {
+        "resource": {
+          "relative_path": "softec/4_file/vs_projekt/HajosQuiz/HajosQuiz/bin/Debug/net6.0-windows/hajozasi_szabalyzat_kerdessor_BOM.txt"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec/4_file/vs_projekt/HajosQuiz/HajosQuiz/hajozasi_szabalyzat_kerdessor.txt",
+      "output": {
+        "resource": {
+          "relative_path": "softec/4_file/vs_projekt/HajosQuiz/HajosQuiz/hajozasi_szabalyzat_kerdessor.txt"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec/4_file/vs_projekt/HajosQuiz/HajosQuiz/hajozasi_szabalyzat_kerdessor_BOM.txt",
+      "output": {
+        "resource": {
+          "relative_path": "softec/4_file/vs_projekt/HajosQuiz/HajosQuiz/hajozasi_szabalyzat_kerdessor_BOM.txt"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec/5_UI/ea_jegyzet.txt",
+      "output": {
+        "resource": {
+          "relative_path": "softec/5_UI/ea_jegyzet.txt"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "softec/5_UI/ea_linkek.md",
+      "output": {
+        ".html": {
+          "relative_path": "softec/5_UI/ea_linkek.html",
+          "hash": "yYqYZOs11WMCfn50za5kkY2IKsE1JWuE5PXxSQwW4rA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec/SeleniumDemo/FormDesigner.png",
+      "output": {
+        "resource": {
+          "relative_path": "softec/SeleniumDemo/FormDesigner.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec/SeleniumDemo/FormRunning.png",
+      "output": {
+        "resource": {
+          "relative_path": "softec/SeleniumDemo/FormRunning.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec/SeleniumDemo/Packages.png",
+      "output": {
+        "resource": {
+          "relative_path": "softec/SeleniumDemo/Packages.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec/SeleniumDemo/ZH3/Quiz/bin/Debug/net6.0-windows/multichoice.csv",
+      "output": {
+        "resource": {
+          "relative_path": "softec/SeleniumDemo/ZH3/Quiz/bin/Debug/net6.0-windows/multichoice.csv"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec/SeleniumDemo/ZH3/Quiz/multichoice.csv",
+      "output": {
+        "resource": {
+          "relative_path": "softec/SeleniumDemo/ZH3/Quiz/multichoice.csv"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec/SeleniumDemo/ZH3/Szoparoztatos/bin/Debug/net6.0-windows/words.csv",
+      "output": {
+        "resource": {
+          "relative_path": "softec/SeleniumDemo/ZH3/Szoparoztatos/bin/Debug/net6.0-windows/words.csv"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec/SeleniumDemo/ZH3/Szoparoztatos/words.csv",
+      "output": {
+        "resource": {
+          "relative_path": "softec/SeleniumDemo/ZH3/Szoparoztatos/words.csv"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec/SeleniumDemo/ZH3/SzoperoztatosOszlopos/bin/Debug/net6.0-windows/words.csv",
+      "output": {
+        "resource": {
+          "relative_path": "softec/SeleniumDemo/ZH3/SzoperoztatosOszlopos/bin/Debug/net6.0-windows/words.csv"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec/SeleniumDemo/ZH3/SzoperoztatosOszlopos/words.csv",
+      "output": {
+        "resource": {
+          "relative_path": "softec/SeleniumDemo/ZH3/SzoperoztatosOszlopos/words.csv"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec/SeleniumDemo/ZH3/Trivia/bin/Debug/net6.0-windows/trivia.csv",
+      "output": {
+        "resource": {
+          "relative_path": "softec/SeleniumDemo/ZH3/Trivia/bin/Debug/net6.0-windows/trivia.csv"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec/SeleniumDemo/ZH3/Trivia/trivia.csv",
+      "output": {
+        "resource": {
+          "relative_path": "softec/SeleniumDemo/ZH3/Trivia/trivia.csv"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "softec/SeleniumDemo/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "softec/SeleniumDemo/index.html",
+          "hash": "2QQXEbMd+KI39MdL5H3HgM4NxrUwOQ0jiZ3jYQ0f6Pc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "softec/SeleniumDemo/index2.md",
+      "output": {
+        ".html": {
+          "relative_path": "softec/SeleniumDemo/index2.html",
+          "hash": "gVEfRwq4AHTCC/TaWts0T9A2QLhOKV++NmRgHg/jaBE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "softec/amoba/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "softec/amoba/index.html",
+          "hash": "oRo9XnyQmo9Dpw0NbrnlmDUQgSHJJ2S7JoosaTijHwk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec/amoba/kbd_hun.txt",
+      "output": {
+        "resource": {
+          "relative_path": "softec/amoba/kbd_hun.txt"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "softec/bantumi/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "softec/bantumi/index.html",
+          "hash": "6hhf5N/dEFgQ9UIDCK6v+c5qLjlBbSl8olMEujpJcl8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "softec/beadandok/beadando/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "softec/beadandok/beadando/index.html",
+          "hash": "VNezaQamesweB2Oy6gLT0wHS6+2FKqfJ7D/X/eJZz7w="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "softec/beadandok/beadando/projekt_zh_ertekeles.md",
+      "output": {
+        ".html": {
+          "relative_path": "softec/beadandok/beadando/projekt_zh_ertekeles.html",
+          "hash": "6DvODjgUBcsVwpw21nfpEVNGYPJbFt5yhfk0KHHOobk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "softec/beadandok/beadando_game_of_life/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "softec/beadandok/beadando_game_of_life/index.html",
+          "hash": "rSRRBkhvDayagi6yM5RbgBTo3XuYG1LQeQyTcX1Usro="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec/beadandok/beadando_hajos/2018_11_22_Hajozasi_szabalyzat.zip",
+      "output": {
+        "resource": {
+          "relative_path": "softec/beadandok/beadando_hajos/2018_11_22_Hajozasi_szabalyzat.zip"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "softec/beadandok/beadando_hajos/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "softec/beadandok/beadando_hajos/index.html",
+          "hash": "VCjFEUje5zPFhuwtRZ63PmPcuE+O6hg1zVQZYpcySuc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "softec/beadandok/beadando_hangman/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "softec/beadandok/beadando_hangman/index.html",
+          "hash": "Cm5LD6K6UDby+Nne+Uk9j/x6/Y/HDIDJErRZGtTf6/0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "softec/beadandok/beadando_maze/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "softec/beadandok/beadando_maze/index.html",
+          "hash": "3aPKqdgUEnW1FaURr5Rb/9aQMKO9WnFKWxxpbEEYamk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "softec/beadandok/beadando_quiz_numerikus/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "softec/beadandok/beadando_quiz_numerikus/index.html",
+          "hash": "wuqjPRSBYVManO00vunkVSyeXT4X8kC3ciU8NVOU4+M="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "softec/beadandok/beadando_snake/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "softec/beadandok/beadando_snake/index.html",
+          "hash": "ejpbKTFgL0BtEQZFuHNuvGcyKDQHKEomqsgs4+O0bhc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "softec/beadandok/beadando_spot_the_difference/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "softec/beadandok/beadando_spot_the_difference/index.html",
+          "hash": "R87sbSaNHHEkYk8e6UTcjA8BJALqXHOOSIqaRHcu6Ts="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "softec/beadandok/beadando_szotanito/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "softec/beadandok/beadando_szotanito/index.html",
+          "hash": "7n/qxk35vV9h9CpuNfbpWJKi5sDWPLZEds4XNk63mYs="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec/emory/Kepek.zip",
+      "output": {
+        "resource": {
+          "relative_path": "softec/emory/Kepek.zip"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "softec/emory/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "softec/emory/index.html",
+          "hash": "Sx25nbCbdRZskQJbzZPP7Q8FuImTw3VSY1hlOGTrPZI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "softec/eredmenyek/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "softec/eredmenyek/index.html",
+          "hash": "Vx3ZcPih/wxwl30tjwNdlCrRhuzOttufysHijwX8sBQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "softec/fuggvenyek/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "softec/fuggvenyek/index.html",
+          "hash": "ZZN9yL+fCcEXw5htnKIFzURzKzRWdqVksxfG2KLoqbQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "softec/git/ea_linkek.md",
+      "output": {
+        ".html": {
+          "relative_path": "softec/git/ea_linkek.html",
+          "hash": "+eidOt5aXEJWYkWRAWdVewU952zTYUoutmhkoe980Lw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec/git/memo.docx",
+      "output": {
+        "resource": {
+          "relative_path": "softec/git/memo.docx"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
+      "type": "Conceptual",
+      "source_relative_path": "softec/git/verziokovetes_a_gyakorlatban.md",
+      "output": {
+        ".html": {
+          "relative_path": "softec/git/verziokovetes_a_gyakorlatban.html",
+          "hash": "7MFE2df5xhlNwYDK1fIT9bTmnmd1cKbjVo14tuohwEk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec/git/verziokovetes_a_gyakorlatban.png",
+      "output": {
+        "resource": {
+          "relative_path": "softec/git/verziokovetes_a_gyakorlatban.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec/grafika_ifs_reszletes/fern.png",
+      "output": {
+        "resource": {
+          "relative_path": "softec/grafika_ifs_reszletes/fern.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "softec/grafika_ifs_reszletes/grafika.md",
+      "output": {
+        ".html": {
+          "relative_path": "softec/grafika_ifs_reszletes/grafika.html",
+          "hash": "gcc88IF1gZ1cT664oHOn1a5ljVJQ6PvaCC+7c1owR3o="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "softec/grafika_ifs_reszletes/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "softec/grafika_ifs_reszletes/index.html",
+          "hash": "ImuH2lchokcoXyPeLdNW0o/36ho2JlLCQn59KOeUI0g="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "softec/grafika_ifs_reszletes/koch_gorbe.md",
+      "output": {
+        ".html": {
+          "relative_path": "softec/grafika_ifs_reszletes/koch_gorbe.html",
+          "hash": "P1hs4R08ENbk14LaX6JJ5yUNmiHGP4rnhA773yqlwXw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec/grafika_ifs_reszletes/sin_cos.png",
+      "output": {
+        "resource": {
+          "relative_path": "softec/grafika_ifs_reszletes/sin_cos.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec/images/1599902337797.png",
+      "output": {
+        "resource": {
+          "relative_path": "softec/images/1599902337797.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec/images/1599921619453.png",
+      "output": {
+        "resource": {
+          "relative_path": "softec/images/1599921619453.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec/images/1600005026998.png",
+      "output": {
+        "resource": {
+          "relative_path": "softec/images/1600005026998.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec/images/1600007423489.png",
+      "output": {
+        "resource": {
+          "relative_path": "softec/images/1600007423489.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec/images/1600008026941.png",
+      "output": {
+        "resource": {
+          "relative_path": "softec/images/1600008026941.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec/images/1602072975369.png",
+      "output": {
+        "resource": {
+          "relative_path": "softec/images/1602072975369.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec/images/fern.png",
+      "output": {
+        "resource": {
+          "relative_path": "softec/images/fern.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec/images/vs_install.png",
+      "output": {
+        "resource": {
+          "relative_path": "softec/images/vs_install.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "softec/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "softec/index.html",
+          "hash": "20FpSKRX928xW8XMYUomB65yP5MHJS9YczSlNqG+SSk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec/kepkirakos/Pascel_es_lo.docx",
+      "output": {
+        "resource": {
+          "relative_path": "softec/kepkirakos/Pascel_es_lo.docx"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "softec/kepkirakos/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "softec/kepkirakos/index.html",
+          "hash": "PpICTldyAbpdxrxxMy1a/urDgGJGF3YveKZhWxA7Jl4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec/kepkirakos/lo.zip",
+      "output": {
+        "resource": {
+          "relative_path": "softec/kepkirakos/lo.zip"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "softec/kigyos/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "softec/kigyos/index.html",
+          "hash": "FTe3QrmqcG6kN06Zv3yGtqTbZKkhvfA9+Ap/4RQ1dQU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "softec/kovetelmenyek/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "softec/kovetelmenyek/index.html",
+          "hash": "muwLwlh9Gt7TF0YIOotNHSIETEm/4Q9JYmynlEtzWKY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "softec/kovetelmenyek_levelezo/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "softec/kovetelmenyek_levelezo/index.html",
+          "hash": "GUJf3pCKmQ7/EIhTpHmwXV7clAg/CcK558B3XlbexKo="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "softec/levelezo_beadando/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "softec/levelezo_beadando/index.html",
+          "hash": "VEIQf1tWNe7YsbpbE8JE7Gz/PCga4eMc32fHQUQ8oqA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "softec/masodfoku/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "softec/masodfoku/index.html",
+          "hash": "A7yeqiQntYB1khIhaWohNhBTvyMpU6sZDNS+EpBa/Uw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "softec/osszefoglalo_levelezo/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "softec/osszefoglalo_levelezo/index.html",
+          "hash": "jBA1/8a2D1gWRGM+C/2KevaUQrtVNDTBG9IJ0FmUuQw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
+      "type": "Conceptual",
+      "source_relative_path": "softec/pixelart/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "softec/pixelart/index.html",
+          "hash": "QuxmMB8pK3ydwXgAzTRLIy6eVJvlb+lXYydKXH3dEdc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
+      "type": "Conceptual",
+      "source_relative_path": "softec/projektfeltoltes/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "softec/projektfeltoltes/index.html",
+          "hash": "GVpEYHTFH0Jxh2snnI+gA87TkP5sqeK94IiXPI/GVBk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "softec/quiz2/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "softec/quiz2/index.html",
+          "hash": "BeuoiDyCh8xj0cSZlaWOE7vCxGy1RU/VymcV3ddzaTs="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "softec/slide_puzzle/slide_puzzle.md",
+      "output": {
+        ".html": {
+          "relative_path": "softec/slide_puzzle/slide_puzzle.html",
+          "hash": "uZ1BA5SFsuT2OE0qk/sE565RbK2f6A87kO8RYCcdLUw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "softec/szoparoztatos/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "softec/szoparoztatos/index.html",
+          "hash": "zfdR4Gn4b/vog7/GGkImy6c6sPmsspj78AInNHYGXug="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "softec/teamsbeszamolok/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "softec/teamsbeszamolok/index.html",
+          "hash": "hWMFsHKBeiHl4uc7ey/vUfJ0mIkCbHiQI8lG/Cz3SF8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "softec/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "softec/toc.html",
+          "hash": "bKElu3OV0w/1qsW/5d0mwTsC8Bk8EEJgAeuAA5M7EO0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "invalid-yaml-header"
+      ],
+      "type": "Conceptual",
+      "source_relative_path": "softec/villamkerdesek/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "softec/villamkerdesek/index.html",
+          "hash": "o3ApqcdpyzPaUib9bKaX5/s8LndyaThdQ67FQ1QmIb4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "softec/vsinstall/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "softec/vsinstall/index.html",
+          "hash": "R6Am3alhklhZOBjAIusTYPkH3WaSDSgRFmh/r9jOvb8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "softec/zh1checklist/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "softec/zh1checklist/index.html",
+          "hash": "n4LcN+FM2pxrs/SP6dyNSxN8DPkAeQ0YqERoeJ+a3SA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec/zh2checklist/clip_image001.png",
+      "output": {
+        "resource": {
+          "relative_path": "softec/zh2checklist/clip_image001.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec/zh2checklist/colors.csv",
+      "output": {
+        "resource": {
+          "relative_path": "softec/zh2checklist/colors.csv"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec/zh2checklist/fa.csv",
+      "output": {
+        "resource": {
+          "relative_path": "softec/zh2checklist/fa.csv"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "softec/zh2checklist/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "softec/zh2checklist/index.html",
+          "hash": "CzJHCG4NhyPGU2E5ZlxvDugiZkrOBZRNY93hbLANdus="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec/zh2checklist/kbd_hun.txt",
+      "output": {
+        "resource": {
+          "relative_path": "softec/zh2checklist/kbd_hun.txt"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec/zh2checklist/lany.csv",
+      "output": {
+        "resource": {
+          "relative_path": "softec/zh2checklist/lany.csv"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec/zh2checklist/quiz.txt",
+      "output": {
+        "resource": {
+          "relative_path": "softec/zh2checklist/quiz.txt"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec/zh2checklist/srac.csv",
+      "output": {
+        "resource": {
+          "relative_path": "softec/zh2checklist/srac.csv"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec/zh2checklist/szavak.csv",
+      "output": {
+        "resource": {
+          "relative_path": "softec/zh2checklist/szavak.csv"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec/zh3_gyakorlas/dilbert.csv",
+      "output": {
+        "resource": {
+          "relative_path": "softec/zh3_gyakorlas/dilbert.csv"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "softec/zh3_gyakorlas/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "softec/zh3_gyakorlas/index.html",
+          "hash": "PSqIIBx1N/nXjp6JFehsYEdouwYVDdWunCdMPaTqlkA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec/zh3_gyakorlas/lany.csv",
+      "output": {
+        "resource": {
+          "relative_path": "softec/zh3_gyakorlas/lany.csv"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec/zh3_gyakorlas/multichoice.csv",
+      "output": {
+        "resource": {
+          "relative_path": "softec/zh3_gyakorlas/multichoice.csv"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec/zh3_gyakorlas/srac.csv",
+      "output": {
+        "resource": {
+          "relative_path": "softec/zh3_gyakorlas/srac.csv"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec/zh3_gyakorlas/szavak2.txt",
+      "output": {
+        "resource": {
+          "relative_path": "softec/zh3_gyakorlas/szavak2.txt"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec/zh3_gyakorlas/trivia.csv",
+      "output": {
+        "resource": {
+          "relative_path": "softec/zh3_gyakorlas/trivia.csv"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec/zh3_gyakorlas/words.csv",
+      "output": {
+        "resource": {
+          "relative_path": "softec/zh3_gyakorlas/words.csv"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "softec/zh_checklists/zh1_checklist.md",
+      "output": {
+        ".html": {
+          "relative_path": "softec/zh_checklists/zh1_checklist.html",
+          "hash": "kc60ONPQ0suGd3SyrLV5WcQ25usIzTQqhLRvAPQBLUs="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "softec/zh_checklists/zh_ertekeles_leadas.md",
+      "output": {
+        ".html": {
+          "relative_path": "softec/zh_checklists/zh_ertekeles_leadas.html",
+          "hash": "B+FkPuQRoweM0m+XY8I/MIGsBku9K1RVGMXr4P21xCE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "softec_kk/1_bevezeto/eloadas_linkek.md",
+      "output": {
+        ".html": {
+          "relative_path": "softec_kk/1_bevezeto/eloadas_linkek.html",
+          "hash": "XrDXxQvKsdau4W1i/0kGTBkxZFO9REE+/8x175UludU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "softec_kk/1_bevezeto/kamatszamitas.md",
+      "output": {
+        ".html": {
+          "relative_path": "softec_kk/1_bevezeto/kamatszamitas.html",
+          "hash": "lPXDWT3C1HLtfZ3SamRgZAQoVPbY4bWbMtRw4rBV+C8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "softec_kk/1_bevezeto/vscode_polyglot_notebook.md",
+      "output": {
+        ".html": {
+          "relative_path": "softec_kk/1_bevezeto/vscode_polyglot_notebook.html",
+          "hash": "0jMT8lDDeJ/P7eJ2PLHEgLrGGKXygSUXD7hNO0niV6Q="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "softec_kk/2021/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "softec_kk/2021/index.html",
+          "hash": "czOnRCLfUuqP+YB//2cBvuMxZIeF8VPLcoFrU0gI0Ms="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "softec_kk/2_osztalyok/fibonacci_sor.md",
+      "output": {
+        ".html": {
+          "relative_path": "softec_kk/2_osztalyok/fibonacci_sor.html",
+          "hash": "gwjx4IikZ3CdfaiQ2TvfLa1azIZ05birTARhdEZf8yc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "softec_kk/2_osztalyok/pascal_haromszog.md",
+      "output": {
+        ".html": {
+          "relative_path": "softec_kk/2_osztalyok/pascal_haromszog.html",
+          "hash": "zNKx5CGUF9du46E9/NHN/gLoWRpFbW6ZyaVWZVcp0hY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "softec_kk/2_osztalyok/sakktabla.md",
+      "output": {
+        ".html": {
+          "relative_path": "softec_kk/2_osztalyok/sakktabla.html",
+          "hash": "hW1HOCXA7nub7+9/Car7Keih0FyznhQ4Wek8PS/BXVE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "softec_kk/2_osztalyok/szorzotabla.md",
+      "output": {
+        ".html": {
+          "relative_path": "softec_kk/2_osztalyok/szorzotabla.html",
+          "hash": "8DhmsvX3p1DjFVYYE0cR97WA/M8NAJESJ2uU/qAQifQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "softec_kk/2_osztalyok/valtozok_viselkedese.md",
+      "output": {
+        ".html": {
+          "relative_path": "softec_kk/2_osztalyok/valtozok_viselkedese.html",
+          "hash": "Sf5Tk5N2EjuGaZIXUDhEfaqek5DLVeLVc9l4J8lWy1s="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "softec_kk/3_osztalyok_2/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "softec_kk/3_osztalyok_2/index.html",
+          "hash": "kTKeUwkz3MJshaAFQUAuVQ3WK82XQd60dloZ9MSAvzo="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "softec_kk/3_osztalyok_2/overview.md",
+      "output": {
+        ".html": {
+          "relative_path": "softec_kk/3_osztalyok_2/overview.html",
+          "hash": "5y23J2LlEyZ7G0nHZMo2VuJwdiQx54OKQ1kJeXm7jQ8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "softec_kk/3_osztalyok_2/time_to_learn.md",
+      "output": {
+        ".html": {
+          "relative_path": "softec_kk/3_osztalyok_2/time_to_learn.html",
+          "hash": "IBZqY8Yw5V5E+Uwqy75H0DVF1uDxXfipUDs72Fc+pqU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec_kk/4_file/ea_vazlat.txt",
+      "output": {
+        "resource": {
+          "relative_path": "softec_kk/4_file/ea_vazlat.txt"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec_kk/4_file/feleletvalasztos/handout.docx",
+      "output": {
+        "resource": {
+          "relative_path": "softec_kk/4_file/feleletvalasztos/handout.docx"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "softec_kk/4_file/feleletvalasztos/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "softec_kk/4_file/feleletvalasztos/index.html",
+          "hash": "vvwt1yaCBtRu7lwT6OZoDUejEpUl0RGyTrNKzirkRL4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec_kk/4_file/feleletvalasztos/jatek.csv",
+      "output": {
+        "resource": {
+          "relative_path": "softec_kk/4_file/feleletvalasztos/jatek.csv"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec_kk/4_file/feleletvalasztos/jatek2.txt",
+      "output": {
+        "resource": {
+          "relative_path": "softec_kk/4_file/feleletvalasztos/jatek2.txt"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "softec_kk/4_file/hajos_gyak.md",
+      "output": {
+        ".html": {
+          "relative_path": "softec_kk/4_file/hajos_gyak.html",
+          "hash": "M8j48+GKcx1dZuq5uyxvDJmwtAoTXJwBVPR1U+vZ0/Q="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec_kk/4_file/hajozasi_szabalyzat_kerdessor_BOM.txt",
+      "output": {
+        "resource": {
+          "relative_path": "softec_kk/4_file/hajozasi_szabalyzat_kerdessor_BOM.txt"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec_kk/4_file/image-20240313221824912.png",
+      "output": {
+        "resource": {
+          "relative_path": "softec_kk/4_file/image-20240313221824912.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec_kk/4_file/vs_projekt/HajosQuiz.zip",
+      "output": {
+        "resource": {
+          "relative_path": "softec_kk/4_file/vs_projekt/HajosQuiz.zip"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec_kk/4_file/vs_projekt/HajosQuiz/HajosQuiz/bin/Debug/net6.0-windows/hajozasi_szabalyzat_kerdessor_BOM.txt",
+      "output": {
+        "resource": {
+          "relative_path": "softec_kk/4_file/vs_projekt/HajosQuiz/HajosQuiz/bin/Debug/net6.0-windows/hajozasi_szabalyzat_kerdessor_BOM.txt"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec_kk/4_file/vs_projekt/HajosQuiz/HajosQuiz/hajozasi_szabalyzat_kerdessor.txt",
+      "output": {
+        "resource": {
+          "relative_path": "softec_kk/4_file/vs_projekt/HajosQuiz/HajosQuiz/hajozasi_szabalyzat_kerdessor.txt"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec_kk/4_file/vs_projekt/HajosQuiz/HajosQuiz/hajozasi_szabalyzat_kerdessor_BOM.txt",
+      "output": {
+        "resource": {
+          "relative_path": "softec_kk/4_file/vs_projekt/HajosQuiz/HajosQuiz/hajozasi_szabalyzat_kerdessor_BOM.txt"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec_kk/SeleniumDemo/FormDesigner.png",
+      "output": {
+        "resource": {
+          "relative_path": "softec_kk/SeleniumDemo/FormDesigner.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec_kk/SeleniumDemo/FormRunning.png",
+      "output": {
+        "resource": {
+          "relative_path": "softec_kk/SeleniumDemo/FormRunning.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec_kk/SeleniumDemo/Packages.png",
+      "output": {
+        "resource": {
+          "relative_path": "softec_kk/SeleniumDemo/Packages.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec_kk/SeleniumDemo/ZH3/Quiz/bin/Debug/net6.0-windows/multichoice.csv",
+      "output": {
+        "resource": {
+          "relative_path": "softec_kk/SeleniumDemo/ZH3/Quiz/bin/Debug/net6.0-windows/multichoice.csv"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec_kk/SeleniumDemo/ZH3/Quiz/multichoice.csv",
+      "output": {
+        "resource": {
+          "relative_path": "softec_kk/SeleniumDemo/ZH3/Quiz/multichoice.csv"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec_kk/SeleniumDemo/ZH3/Szoparoztatos/bin/Debug/net6.0-windows/words.csv",
+      "output": {
+        "resource": {
+          "relative_path": "softec_kk/SeleniumDemo/ZH3/Szoparoztatos/bin/Debug/net6.0-windows/words.csv"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec_kk/SeleniumDemo/ZH3/Szoparoztatos/words.csv",
+      "output": {
+        "resource": {
+          "relative_path": "softec_kk/SeleniumDemo/ZH3/Szoparoztatos/words.csv"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec_kk/SeleniumDemo/ZH3/SzoperoztatosOszlopos/bin/Debug/net6.0-windows/words.csv",
+      "output": {
+        "resource": {
+          "relative_path": "softec_kk/SeleniumDemo/ZH3/SzoperoztatosOszlopos/bin/Debug/net6.0-windows/words.csv"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec_kk/SeleniumDemo/ZH3/SzoperoztatosOszlopos/words.csv",
+      "output": {
+        "resource": {
+          "relative_path": "softec_kk/SeleniumDemo/ZH3/SzoperoztatosOszlopos/words.csv"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec_kk/SeleniumDemo/ZH3/Trivia/bin/Debug/net6.0-windows/trivia.csv",
+      "output": {
+        "resource": {
+          "relative_path": "softec_kk/SeleniumDemo/ZH3/Trivia/bin/Debug/net6.0-windows/trivia.csv"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec_kk/SeleniumDemo/ZH3/Trivia/trivia.csv",
+      "output": {
+        "resource": {
+          "relative_path": "softec_kk/SeleniumDemo/ZH3/Trivia/trivia.csv"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "softec_kk/SeleniumDemo/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "softec_kk/SeleniumDemo/index.html",
+          "hash": "tG68YEXA0ZefRBA0eVgwvMfPsuPcWGPi8t8YjkKLJs8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "softec_kk/SeleniumDemo/index2.md",
+      "output": {
+        ".html": {
+          "relative_path": "softec_kk/SeleniumDemo/index2.html",
+          "hash": "HXkCxgf6475vZnzIrBwxExsJIvBvpEZRF+bXpewbbLk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "softec_kk/amoba/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "softec_kk/amoba/index.html",
+          "hash": "cIOJbs1wx17s+xvaZO4bua34S3Qdxrk0OHgEI3tFnEA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec_kk/amoba/kbd_hun.txt",
+      "output": {
+        "resource": {
+          "relative_path": "softec_kk/amoba/kbd_hun.txt"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "softec_kk/bantumi/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "softec_kk/bantumi/index.html",
+          "hash": "+XryvZDz8f+xoDbvLT5hLwYFnvDa8Wid+dA7XsUEFPI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "softec_kk/beadandok/beadando/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "softec_kk/beadandok/beadando/index.html",
+          "hash": "iG36EjJKLpZqNbxldD+3Z3ZxY2CJnq2kZpZFjfzNV+Y="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "softec_kk/beadandok/beadando/projekt_zh_ertekeles.md",
+      "output": {
+        ".html": {
+          "relative_path": "softec_kk/beadandok/beadando/projekt_zh_ertekeles.html",
+          "hash": "iQxELlKkteM0u+eHmajRx876FFb0MIzqdZrzcU0oxRY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "softec_kk/beadandok/beadando_game_of_life/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "softec_kk/beadandok/beadando_game_of_life/index.html",
+          "hash": "aczme+H5HTEaGXaPurBfYJDuXK/7cQnRuOKnU5mb+c4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec_kk/beadandok/beadando_hajos/2018_11_22_Hajozasi_szabalyzat.zip",
+      "output": {
+        "resource": {
+          "relative_path": "softec_kk/beadandok/beadando_hajos/2018_11_22_Hajozasi_szabalyzat.zip"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "softec_kk/beadandok/beadando_hajos/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "softec_kk/beadandok/beadando_hajos/index.html",
+          "hash": "NdDpp7mgxfIbOhXU2l+j97B//Byq59IWz6lxbAEl0uE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "softec_kk/beadandok/beadando_hangman/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "softec_kk/beadandok/beadando_hangman/index.html",
+          "hash": "SMWgxfRk1geavf1xxr2fZvwOCTTBry3sKtBWAfCyiP8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "softec_kk/beadandok/beadando_maze/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "softec_kk/beadandok/beadando_maze/index.html",
+          "hash": "c8gGGv90VXd1W7l8wz7wP2TQF+6etDh2nBhgMcoJW4g="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "softec_kk/beadandok/beadando_quiz_numerikus/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "softec_kk/beadandok/beadando_quiz_numerikus/index.html",
+          "hash": "QCROexsTQud3iqEz9e05SlsRjlKeNiG7G6gcMhcq4Ks="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "softec_kk/beadandok/beadando_snake/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "softec_kk/beadandok/beadando_snake/index.html",
+          "hash": "wjM7CE3RfCStsXpfAY/0EdTpwi2ouK+lJnYfoe+9SiU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "softec_kk/beadandok/beadando_spot_the_difference/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "softec_kk/beadandok/beadando_spot_the_difference/index.html",
+          "hash": "6BrOWXwHHA3Xw8/pUNtoh7B4Oz4js5MjhVi8Pzm7qX0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "softec_kk/beadandok/beadando_szotanito/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "softec_kk/beadandok/beadando_szotanito/index.html",
+          "hash": "GBNepKP7B8HJO5tQl1AZCP4TZ+1VJccoa3buGd642IQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec_kk/emory/Kepek.zip",
+      "output": {
+        "resource": {
+          "relative_path": "softec_kk/emory/Kepek.zip"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "softec_kk/emory/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "softec_kk/emory/index.html",
+          "hash": "ktLEaeLqBmPi8JpUMYc95Inr30xUEfP1LEneylXeltk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "softec_kk/eredmenyek/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "softec_kk/eredmenyek/index.html",
+          "hash": "47EIRCc48tHDzX7C8ZYnI5Yys7Hhj2pIGi7T4wGCezk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "softec_kk/fuggvenyek/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "softec_kk/fuggvenyek/index.html",
+          "hash": "aq/4OBnQZ+jQ3xNqIRqYTWcTA84T2vmOVdzTeaI646I="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "softec_kk/git/ea_linkek.md",
+      "output": {
+        ".html": {
+          "relative_path": "softec_kk/git/ea_linkek.html",
+          "hash": "Lrkmg8iYMq6IJYYZTzHlU4LAbopWSL9gFhyEASeIgko="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec_kk/git/memo.docx",
+      "output": {
+        "resource": {
+          "relative_path": "softec_kk/git/memo.docx"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
+      "type": "Conceptual",
+      "source_relative_path": "softec_kk/git/verziokovetes_a_gyakorlatban.md",
+      "output": {
+        ".html": {
+          "relative_path": "softec_kk/git/verziokovetes_a_gyakorlatban.html",
+          "hash": "26ezKaTbTdOxBShMu2tEjWE2f5JLE7zsn6P3n4jxt3o="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec_kk/git/verziokovetes_a_gyakorlatban.png",
+      "output": {
+        "resource": {
+          "relative_path": "softec_kk/git/verziokovetes_a_gyakorlatban.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec_kk/grafika_ifs_reszletes/fern.png",
+      "output": {
+        "resource": {
+          "relative_path": "softec_kk/grafika_ifs_reszletes/fern.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "softec_kk/grafika_ifs_reszletes/grafika.md",
+      "output": {
+        ".html": {
+          "relative_path": "softec_kk/grafika_ifs_reszletes/grafika.html",
+          "hash": "rPF+mH0dcJYC/IcGMvYDkycgJhWViZgnNnUY2kgi+ZA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "softec_kk/grafika_ifs_reszletes/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "softec_kk/grafika_ifs_reszletes/index.html",
+          "hash": "SSM2OPF17M4HKW/BVM9VJM0gGCOi5tjmnYsXFsvTZJA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "softec_kk/grafika_ifs_reszletes/koch_gorbe.md",
+      "output": {
+        ".html": {
+          "relative_path": "softec_kk/grafika_ifs_reszletes/koch_gorbe.html",
+          "hash": "ChUxAg3NzSwgvPlh+ACZZqkXtWKNEpylWupQiirJ3BE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec_kk/grafika_ifs_reszletes/sin_cos.png",
+      "output": {
+        "resource": {
+          "relative_path": "softec_kk/grafika_ifs_reszletes/sin_cos.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "softec_kk/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "softec_kk/index.html",
+          "hash": "rjL+P6eMv+ngmsoTHGIwwZcxqYdG/CbnZijDvklcC6M="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec_kk/kepkirakos/Pascel_es_lo.docx",
+      "output": {
+        "resource": {
+          "relative_path": "softec_kk/kepkirakos/Pascel_es_lo.docx"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "softec_kk/kepkirakos/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "softec_kk/kepkirakos/index.html",
+          "hash": "UG8cjjMc4otCYczZytUvEIUMS1iwuLdd1eXG4McAsuM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec_kk/kepkirakos/lo.zip",
+      "output": {
+        "resource": {
+          "relative_path": "softec_kk/kepkirakos/lo.zip"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "softec_kk/kigyos/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "softec_kk/kigyos/index.html",
+          "hash": "0s0J51ENRcscqesL3fYBLjm4wHca5cRXu3teuW9k1sY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "softec_kk/kovetelmenyek/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "softec_kk/kovetelmenyek/index.html",
+          "hash": "8K8BNg7RBIswYtPVw/WLj9UTXiwxCt0hA0Wxk3GbQVo="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "softec_kk/kovetelmenyek_levelezo/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "softec_kk/kovetelmenyek_levelezo/index.html",
+          "hash": "5y9Qk3d85vJgZej3ZIyzcbmM+9+KgKW8xv5ItDZuxmM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "softec_kk/levelezo_beadando/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "softec_kk/levelezo_beadando/index.html",
+          "hash": "atV4RHcdxQLx1bZDXBE45KctdGve0cNdZaApcwqdYtw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "softec_kk/masodfoku/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "softec_kk/masodfoku/index.html",
+          "hash": "sgQJpS9mj6ZqL/rGQ/9kU9Y2Znux2kQGwEtvXp0y6Lg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "softec_kk/osszefoglalo_levelezo/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "softec_kk/osszefoglalo_levelezo/index.html",
+          "hash": "oFhvhLF3i1ifBiRZd3pwSwG5wrC12pF0lSbaOnfli48="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
+      "type": "Conceptual",
+      "source_relative_path": "softec_kk/pixelart/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "softec_kk/pixelart/index.html",
+          "hash": "t6Nox2yLXdUAimSBRqKFqvf+rPO6b3N2yWUTClVb5/0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
+      "type": "Conceptual",
+      "source_relative_path": "softec_kk/projektfeltoltes/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "softec_kk/projektfeltoltes/index.html",
+          "hash": "yjfSjhvOLRj3RHV9YKefy9HopdT3ei0k/SZ3IX7yZTU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "softec_kk/quiz2/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "softec_kk/quiz2/index.html",
+          "hash": "svooCfEISL8j3a1es7jU9kEtMpUwAovPGM2yGmG8itc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "softec_kk/slide_puzzle/slide_puzzle.md",
+      "output": {
+        ".html": {
+          "relative_path": "softec_kk/slide_puzzle/slide_puzzle.html",
+          "hash": "lmHrTlUkxBgeOS0dL2gUt2kldcFZTJe8CX4NYvL/QAI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "softec_kk/szoparoztatos/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "softec_kk/szoparoztatos/index.html",
+          "hash": "qQKAHpUsQmH/r3IcrpPCORjsp4CIASLMaidWwiaRwIY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "softec_kk/teamsbeszamolok/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "softec_kk/teamsbeszamolok/index.html",
+          "hash": "KZuF4L4vax5ie0gyFmAmc2r6uS0PnCwaedTzwwMaL/w="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "softec_kk/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "softec_kk/toc.html",
+          "hash": "WKkJy06Q60tpKGaqbY5RUivt/p8M1DETibdvKovJLbA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "invalid-yaml-header"
+      ],
+      "type": "Conceptual",
+      "source_relative_path": "softec_kk/villamkerdesek/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "softec_kk/villamkerdesek/index.html",
+          "hash": "4/DcYltasJADrMDPb+ixjlmo0F6z5vMhnP7nqdW9GGY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "softec_kk/vsinstall/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "softec_kk/vsinstall/index.html",
+          "hash": "Q0lv2dypRBPW64R8fR+cXagOfnIjMQaJKl34+7K5Xes="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "softec_kk/zh1checklist/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "softec_kk/zh1checklist/index.html",
+          "hash": "BwtwcUTNgBGFOv8YEDu1FZXt0IH2ci67usCIZhV3XQE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec_kk/zh2checklist/clip_image001.png",
+      "output": {
+        "resource": {
+          "relative_path": "softec_kk/zh2checklist/clip_image001.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec_kk/zh2checklist/colors.csv",
+      "output": {
+        "resource": {
+          "relative_path": "softec_kk/zh2checklist/colors.csv"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec_kk/zh2checklist/fa.csv",
+      "output": {
+        "resource": {
+          "relative_path": "softec_kk/zh2checklist/fa.csv"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "softec_kk/zh2checklist/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "softec_kk/zh2checklist/index.html",
+          "hash": "5ezaahVGfzAEETVeYwMa1QLqjHqUXakjq1FSKu8vGDs="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec_kk/zh2checklist/kbd_hun.txt",
+      "output": {
+        "resource": {
+          "relative_path": "softec_kk/zh2checklist/kbd_hun.txt"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec_kk/zh2checklist/lany.csv",
+      "output": {
+        "resource": {
+          "relative_path": "softec_kk/zh2checklist/lany.csv"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec_kk/zh2checklist/quiz.txt",
+      "output": {
+        "resource": {
+          "relative_path": "softec_kk/zh2checklist/quiz.txt"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec_kk/zh2checklist/srac.csv",
+      "output": {
+        "resource": {
+          "relative_path": "softec_kk/zh2checklist/srac.csv"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec_kk/zh2checklist/szavak.csv",
+      "output": {
+        "resource": {
+          "relative_path": "softec_kk/zh2checklist/szavak.csv"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec_kk/zh3_gyakorlas/dilbert.csv",
+      "output": {
+        "resource": {
+          "relative_path": "softec_kk/zh3_gyakorlas/dilbert.csv"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "softec_kk/zh3_gyakorlas/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "softec_kk/zh3_gyakorlas/index.html",
+          "hash": "qMfTaerkizRDNjEVa6xW6nx1DxKUPw4rnE7VyvrGpIY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec_kk/zh3_gyakorlas/lany.csv",
+      "output": {
+        "resource": {
+          "relative_path": "softec_kk/zh3_gyakorlas/lany.csv"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec_kk/zh3_gyakorlas/multichoice.csv",
+      "output": {
+        "resource": {
+          "relative_path": "softec_kk/zh3_gyakorlas/multichoice.csv"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec_kk/zh3_gyakorlas/srac.csv",
+      "output": {
+        "resource": {
+          "relative_path": "softec_kk/zh3_gyakorlas/srac.csv"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec_kk/zh3_gyakorlas/szavak2.txt",
+      "output": {
+        "resource": {
+          "relative_path": "softec_kk/zh3_gyakorlas/szavak2.txt"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec_kk/zh3_gyakorlas/trivia.csv",
+      "output": {
+        "resource": {
+          "relative_path": "softec_kk/zh3_gyakorlas/trivia.csv"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec_kk/zh3_gyakorlas/words.csv",
+      "output": {
+        "resource": {
+          "relative_path": "softec_kk/zh3_gyakorlas/words.csv"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "softec_kk/zh_checklists/zh1_checklist.md",
+      "output": {
+        ".html": {
+          "relative_path": "softec_kk/zh_checklists/zh1_checklist.html",
+          "hash": "MqjLsOX8hNZHY0XUFAV6WiWOhFVGYzdxFXxTqPdGPQ8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "softec_kk/zh_checklists/zh_ertekeles_leadas.md",
+      "output": {
+        ".html": {
+          "relative_path": "softec_kk/zh_checklists/zh_ertekeles_leadas.html",
+          "hash": "evolD7wkMSMvVsMv5K3zwb6uGQtPlr06qL5qj4bky4Q="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/LevelezoVK/IN_MEMORY/in-memory-db-1.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/LevelezoVK/IN_MEMORY/in-memory-db-1.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/LevelezoVK/IN_MEMORY/in-memory-db-2.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/LevelezoVK/IN_MEMORY/in-memory-db-2.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "softeng/LevelezoVK/IN_MEMORY/in_memory_db.md",
+      "output": {
+        ".html": {
+          "relative_path": "softeng/LevelezoVK/IN_MEMORY/in_memory_db.html",
+          "hash": "/xdzOTia/zxLW9eXLwimONHzt0qmVsLQBF4InzQyrqs="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "softeng/LevelezoVK/KNOWHOW/azure_koltsegek.md",
+      "output": {
+        ".html": {
+          "relative_path": "softeng/LevelezoVK/KNOWHOW/azure_koltsegek.html",
+          "hash": "E2hs+I5Vf8C/8HuQVsR3gdb+RnYXDIlm/9r6uHAy6aI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "softeng/LevelezoVK/KNOWHOW/azure_regisztracio.md",
+      "output": {
+        ".html": {
+          "relative_path": "softeng/LevelezoVK/KNOWHOW/azure_regisztracio.html",
+          "hash": "rDu162nNZG8yd6dJceiE/DmK6h/BY+upMvQG2Qks2IM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/LevelezoVK/KNOWHOW/azure_sql_adatbazis_letrehozasa_2022/Azure_2022_Create.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/LevelezoVK/KNOWHOW/azure_sql_adatbazis_letrehozasa_2022/Azure_2022_Create.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/LevelezoVK/KNOWHOW/azure_sql_adatbazis_letrehozasa_2022/Azure_2022_Finished.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/LevelezoVK/KNOWHOW/azure_sql_adatbazis_letrehozasa_2022/Azure_2022_Finished.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/LevelezoVK/KNOWHOW/azure_sql_adatbazis_letrehozasa_2022/Azure_2022_Firewall.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/LevelezoVK/KNOWHOW/azure_sql_adatbazis_letrehozasa_2022/Azure_2022_Firewall.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/LevelezoVK/KNOWHOW/azure_sql_adatbazis_letrehozasa_2022/Azure_2022_configdb.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/LevelezoVK/KNOWHOW/azure_sql_adatbazis_letrehozasa_2022/Azure_2022_configdb.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/LevelezoVK/KNOWHOW/azure_sql_adatbazis_letrehozasa_2022/Azure_2022_dtu.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/LevelezoVK/KNOWHOW/azure_sql_adatbazis_letrehozasa_2022/Azure_2022_dtu.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/LevelezoVK/KNOWHOW/azure_sql_adatbazis_letrehozasa_2022/Azure_2022_home.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/LevelezoVK/KNOWHOW/azure_sql_adatbazis_letrehozasa_2022/Azure_2022_home.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/LevelezoVK/KNOWHOW/azure_sql_adatbazis_letrehozasa_2022/Azure_2022_newHost.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/LevelezoVK/KNOWHOW/azure_sql_adatbazis_letrehozasa_2022/Azure_2022_newHost.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/LevelezoVK/KNOWHOW/azure_sql_adatbazis_letrehozasa_2022/Azure_2022_newdb.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/LevelezoVK/KNOWHOW/azure_sql_adatbazis_letrehozasa_2022/Azure_2022_newdb.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/LevelezoVK/KNOWHOW/azure_sql_adatbazis_letrehozasa_2022/Azure_See_on_ControlPanel.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/LevelezoVK/KNOWHOW/azure_sql_adatbazis_letrehozasa_2022/Azure_See_on_ControlPanel.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/LevelezoVK/KNOWHOW/azure_sql_adatbazis_letrehozasa_2022/Azure_work_in_progress.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/LevelezoVK/KNOWHOW/azure_sql_adatbazis_letrehozasa_2022/Azure_work_in_progress.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/LevelezoVK/KNOWHOW/azure_sql_adatbazis_letrehozasa_2022/azure-firewall.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/LevelezoVK/KNOWHOW/azure_sql_adatbazis_letrehozasa_2022/azure-firewall.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/LevelezoVK/KNOWHOW/azure_sql_adatbazis_letrehozasa_2022/azure-properties.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/LevelezoVK/KNOWHOW/azure_sql_adatbazis_letrehozasa_2022/azure-properties.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/LevelezoVK/KNOWHOW/azure_sql_adatbazis_letrehozasa_2022/azure-settings.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/LevelezoVK/KNOWHOW/azure_sql_adatbazis_letrehozasa_2022/azure-settings.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "softeng/LevelezoVK/KNOWHOW/azure_sql_adatbazis_letrehozasa_2022/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "softeng/LevelezoVK/KNOWHOW/azure_sql_adatbazis_letrehozasa_2022/index.html",
+          "hash": "zXrCZsGBtvFq8mk+rxkdD7xx160YtFGi0hjB5EvZmhs="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/LevelezoVK/KNOWHOW/azure_sql_adatbazis_letrehozasa_2022/kep4_4_mehet2_2022.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/LevelezoVK/KNOWHOW/azure_sql_adatbazis_letrehozasa_2022/kep4_4_mehet2_2022.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
+      "type": "Conceptual",
+      "source_relative_path": "softeng/LevelezoVK/KNOWHOW/azure_sql_szerver.md",
+      "output": {
+        ".html": {
+          "relative_path": "softeng/LevelezoVK/KNOWHOW/azure_sql_szerver.html",
+          "hash": "TMmNhhYDXgcbfczqcq8zzGKtnuzIv71rVcDUYrGQTcw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/LevelezoVK/KNOWHOW/local-connection-1.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/LevelezoVK/KNOWHOW/local-connection-1.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/LevelezoVK/KNOWHOW/local-connection-2.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/LevelezoVK/KNOWHOW/local-connection-2.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/LevelezoVK/KNOWHOW/local-connection-3.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/LevelezoVK/KNOWHOW/local-connection-3.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "softeng/LevelezoVK/KNOWHOW/lokalis_adatbazis_visual_studioban.md",
+      "output": {
+        ".html": {
+          "relative_path": "softeng/LevelezoVK/KNOWHOW/lokalis_adatbazis_visual_studioban.html",
+          "hash": "wReSxL276XfTCMjlCda+99iiclN5XCiKc4slj1wOJp8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/LevelezoVK/KNOWHOW/service-based-db-1.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/LevelezoVK/KNOWHOW/service-based-db-1.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/LevelezoVK/KNOWHOW/service-based-db-2.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/LevelezoVK/KNOWHOW/service-based-db-2.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/LevelezoVK/KNOWHOW/service-based-db-files.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/LevelezoVK/KNOWHOW/service-based-db-files.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "softeng/LevelezoVK/KNOWHOW/sql_express_sajat_gepre/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "softeng/LevelezoVK/KNOWHOW/sql_express_sajat_gepre/index.html",
+          "hash": "aaozC27nvW/4fbiIbyfMzj7oMDvxUA2tTRTLnvIqVwk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/LevelezoVK/KNOWHOW/sql_express_sajat_gepre/sqlexp01.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/LevelezoVK/KNOWHOW/sql_express_sajat_gepre/sqlexp01.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/LevelezoVK/KNOWHOW/sql_express_sajat_gepre/sqlexp02.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/LevelezoVK/KNOWHOW/sql_express_sajat_gepre/sqlexp02.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/LevelezoVK/KNOWHOW/sql_express_sajat_gepre/sqlexp03.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/LevelezoVK/KNOWHOW/sql_express_sajat_gepre/sqlexp03.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/LevelezoVK/KNOWHOW/sql_express_sajat_gepre/sqlexp04.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/LevelezoVK/KNOWHOW/sql_express_sajat_gepre/sqlexp04.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/LevelezoVK/KNOWHOW/sql_express_sajat_gepre/sqlexp05.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/LevelezoVK/KNOWHOW/sql_express_sajat_gepre/sqlexp05.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/LevelezoVK/KNOWHOW/sql_express_sajat_gepre/sqlexp06.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/LevelezoVK/KNOWHOW/sql_express_sajat_gepre/sqlexp06.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/LevelezoVK/KNOWHOW/sql_express_sajat_gepre/sqlexp07.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/LevelezoVK/KNOWHOW/sql_express_sajat_gepre/sqlexp07.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/LevelezoVK/KNOWHOW/sql_express_sajat_gepre/sqlexp08.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/LevelezoVK/KNOWHOW/sql_express_sajat_gepre/sqlexp08.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/LevelezoVK/KNOWHOW/sql_express_sajat_gepre/sqlexp09.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/LevelezoVK/KNOWHOW/sql_express_sajat_gepre/sqlexp09.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/LevelezoVK/KNOWHOW/sql_express_sajat_gepre/sqlexp10.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/LevelezoVK/KNOWHOW/sql_express_sajat_gepre/sqlexp10.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/LevelezoVK/KNOWHOW/sql_express_sajat_gepre/sqlexp11.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/LevelezoVK/KNOWHOW/sql_express_sajat_gepre/sqlexp11.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/LevelezoVK/KNOWHOW/sql_express_sajat_gepre/sqlexp12.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/LevelezoVK/KNOWHOW/sql_express_sajat_gepre/sqlexp12.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/LevelezoVK/KNOWHOW/sql_express_sajat_gepre/sqlexp13.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/LevelezoVK/KNOWHOW/sql_express_sajat_gepre/sqlexp13.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/LevelezoVK/KNOWHOW/sql_express_sajat_gepre/sqlexp14.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/LevelezoVK/KNOWHOW/sql_express_sajat_gepre/sqlexp14.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/LevelezoVK/KNOWHOW/sql_express_sajat_gepre/sqlexp15.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/LevelezoVK/KNOWHOW/sql_express_sajat_gepre/sqlexp15.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/LevelezoVK/KNOWHOW/sql_express_sajat_gepre/sqlexp16.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/LevelezoVK/KNOWHOW/sql_express_sajat_gepre/sqlexp16.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "softeng/LevelezoVK/KNOWHOW/visual_studio_telepites.md",
+      "output": {
+        ".html": {
+          "relative_path": "softeng/LevelezoVK/KNOWHOW/visual_studio_telepites.html",
+          "hash": "wwN5dD9GLPVy36TTK0eVWpML2e2sLYUM2w2FsKEESXg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/LevelezoVK/LINQ/1585069392831.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/LevelezoVK/LINQ/1585069392831.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
+      "type": "Conceptual",
+      "source_relative_path": "softeng/LevelezoVK/LINQ/linq_lekerdezesek_-_studies_adatb.md",
+      "output": {
+        ".html": {
+          "relative_path": "softeng/LevelezoVK/LINQ/linq_lekerdezesek_-_studies_adatb.html",
+          "hash": "P+h7vmVcvASw8TV0kNzeIHR9lf3e2JRvFi+weMugb1k="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "softeng/LevelezoVK/LINQ/linq_osszefoglalo.md",
+      "output": {
+        ".html": {
+          "relative_path": "softeng/LevelezoVK/LINQ/linq_osszefoglalo.html",
+          "hash": "FUWXjQB5NNuha0BEMyBVkRc4ARE0IBnGYwY1pidOCQo="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/LevelezoVK/LINQ/linq_studies.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/LevelezoVK/LINQ/linq_studies.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/LevelezoVK/REMOTE_DB/add_connection.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/LevelezoVK/REMOTE_DB/add_connection.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/LevelezoVK/REMOTE_DB/add_data_source.gif",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/LevelezoVK/REMOTE_DB/add_data_source.gif"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/LevelezoVK/REMOTE_DB/add_service_based_database.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/LevelezoVK/REMOTE_DB/add_service_based_database.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "softeng/LevelezoVK/REMOTE_DB/concurrency.md",
+      "output": {
+        ".html": {
+          "relative_path": "softeng/LevelezoVK/REMOTE_DB/concurrency.html",
+          "hash": "capXsrB5JWJcoTtLyati47XY21jZqycaOg4+b1YjIXc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/LevelezoVK/REMOTE_DB/create_a_new_project.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/LevelezoVK/REMOTE_DB/create_a_new_project.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/LevelezoVK/REMOTE_DB/create_a_new_project_60.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/LevelezoVK/REMOTE_DB/create_a_new_project_60.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/LevelezoVK/REMOTE_DB/datasource_in_solutionexplorer.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/LevelezoVK/REMOTE_DB/datasource_in_solutionexplorer.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/LevelezoVK/REMOTE_DB/error.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/LevelezoVK/REMOTE_DB/error.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "softeng/LevelezoVK/REMOTE_DB/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "softeng/LevelezoVK/REMOTE_DB/index.html",
+          "hash": "v4VHAFlum/pFUai6i66eW4aZmGnixnCa/OMQYXpR73c="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/LevelezoVK/REMOTE_DB/nuget.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/LevelezoVK/REMOTE_DB/nuget.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/LevelezoVK/REMOTE_DB/nuget_packages.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/LevelezoVK/REMOTE_DB/nuget_packages.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/LevelezoVK/REMOTE_DB/orm_files.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/LevelezoVK/REMOTE_DB/orm_files.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/LevelezoVK/REMOTE_DB/schema.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/LevelezoVK/REMOTE_DB/schema.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/LevelezoVK/REMOTE_DB/server_explorer_with_db.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/LevelezoVK/REMOTE_DB/server_explorer_with_db.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/LevelezoVK/REMOTE_DB/service-based-db-files.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/LevelezoVK/REMOTE_DB/service-based-db-files.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/LevelezoVK/REMOTE_DB/show_table_data.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/LevelezoVK/REMOTE_DB/show_table_data.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "softeng/LevelezoVK/UI/ui_design.md",
+      "output": {
+        ".html": {
+          "relative_path": "softeng/LevelezoVK/UI/ui_design.html",
+          "hash": "Wl/OyXoiGDFGnQz6KRYNeqLc6GvkUJHLBatYN6G8pmQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "softeng/LevelezoVK/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "softeng/LevelezoVK/index.html",
+          "hash": "C13sX8QQP9ZfRZ/tAA12JQPbh9LoWSQWoj876gXIbDk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
+      "type": "Conceptual",
+      "source_relative_path": "softeng/LevelezoVK/tobbtablas_db/TAO_adatbazis_UI.md",
+      "output": {
+        ".html": {
+          "relative_path": "softeng/LevelezoVK/tobbtablas_db/TAO_adatbazis_UI.html",
+          "hash": "9+zsBTh1ozXPV4zCgrqW2tD91b9S280jqxDH4CGWcMk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
+      "type": "Conceptual",
+      "source_relative_path": "softeng/LevelezoVK/tobbtablas_db/TAO_adatbazis_felepitese.md",
+      "output": {
+        ".html": {
+          "relative_path": "softeng/LevelezoVK/tobbtablas_db/TAO_adatbazis_felepitese.html",
+          "hash": "FWjbqtn+efs3SFFZSZaZnwVuYzlpEAGaKCXe+JBM//s="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "softeng/ZH1/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "softeng/ZH1/index.html",
+          "hash": "GpKVdg8GtL+MsGJeQmW8YzuJB3X00MqTvXYbxwvl0V4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/images/1585069392831.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/images/1585069392831.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/images/1585724543414.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/images/1585724543414.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/images/1585726196537.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/images/1585726196537.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/images/1610903788811.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/images/1610903788811.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/images/1614698473871.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/images/1614698473871.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/images/1614699641758.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/images/1614699641758.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/images/1614699890414.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/images/1614699890414.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/images/1614699994470.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/images/1614699994470.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/images/1615051267868.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/images/1615051267868.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/images/1615051616183.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/images/1615051616183.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/images/1615051851465.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/images/1615051851465.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/images/1615368531680.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/images/1615368531680.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/images/1619343517825.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/images/1619343517825.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/images/1619343711506.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/images/1619343711506.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/images/1619343810349.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/images/1619343810349.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/images/AddNewDatasource.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/images/AddNewDatasource.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/images/InstructorsRaw.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/images/InstructorsRaw.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/images/InstructorsWithComboBoxes.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/images/InstructorsWithComboBoxes.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/images/StatusBindingSource.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/images/StatusBindingSource.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/images/add_connection.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/images/add_connection.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/images/add_data_source.gif",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/images/add_data_source.gif"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/images/add_service_based_database.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/images/add_service_based_database.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/images/add_textbox_binding.gif",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/images/add_textbox_binding.gif"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/images/create_a_new_project.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/images/create_a_new_project.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/images/create_a_new_project_60.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/images/create_a_new_project_60.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/images/datasource_in_solutionexplorer.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/images/datasource_in_solutionexplorer.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/images/edmx.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/images/edmx.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/images/error.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/images/error.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/images/hallgato2.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/images/hallgato2.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/images/image-20220827150347600.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/images/image-20220827150347600.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/images/in-memory-db-1.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/images/in-memory-db-1.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/images/in-memory-db-2.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/images/in-memory-db-2.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/images/input_form.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/images/input_form.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/images/linq_advanced.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/images/linq_advanced.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/images/linq_studies.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/images/linq_studies.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/images/local-connection-1.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/images/local-connection-1.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/images/local-connection-2.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/images/local-connection-2.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/images/local-connection-3.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/images/local-connection-3.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/images/nuget.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/images/nuget.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/images/nuget_packages.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/images/nuget_packages.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/images/orm_classes.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/images/orm_classes.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/images/orm_files.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/images/orm_files.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/images/osztaly.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/images/osztaly.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/images/schema.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/images/schema.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/images/server_explorer_with_db.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/images/server_explorer_with_db.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/images/service-based-db-1.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/images/service-based-db-1.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/images/service-based-db-2.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/images/service-based-db-2.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/images/service-based-db-files.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/images/service-based-db-files.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/images/show_table_data.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/images/show_table_data.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/images/sqlexp01.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/images/sqlexp01.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/images/sqlexp02.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/images/sqlexp02.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/images/sqlexp03.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/images/sqlexp03.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/images/sqlexp04.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/images/sqlexp04.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/images/sqlexp05.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/images/sqlexp05.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/images/sqlexp06.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/images/sqlexp06.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/images/sqlexp07.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/images/sqlexp07.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/images/sqlexp08.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/images/sqlexp08.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/images/sqlexp09.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/images/sqlexp09.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/images/sqlexp10.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/images/sqlexp10.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/images/sqlexp11.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/images/sqlexp11.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/images/sqlexp12.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/images/sqlexp12.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/images/sqlexp13.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/images/sqlexp13.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/images/sqlexp14.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/images/sqlexp14.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/images/sqlexp15.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/images/sqlexp15.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/images/sqlexp16.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/images/sqlexp16.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/images/vs_install.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/images/vs_install.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
+      "type": "Conceptual",
+      "source_relative_path": "softeng/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "softeng/index.html",
+          "hash": "cTtaV6x86VIqNxcq7chz8L5lo4N1yD+CIfBqyqWFJ2Y="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "softeng/knowledge_base/azure_costs/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "softeng/knowledge_base/azure_costs/index.html",
+          "hash": "CcW3TkSLsYicVXmENcbUHb06wpLZXKb23FhnyPfKWz8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
+      "type": "Conceptual",
+      "source_relative_path": "softeng/knowledge_base/azure_sql_adatbazis_letrehozasa_2022/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "softeng/knowledge_base/azure_sql_adatbazis_letrehozasa_2022/index.html",
+          "hash": "+wOlomzXah9xGTAOo1NwVW40vUoqajR3wlHZZHNTz2k="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "softeng/knowledge_base/honnet_lesz_sql_szerverem/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "softeng/knowledge_base/honnet_lesz_sql_szerverem/index.html",
+          "hash": "E9Xl80JGXlWuB6488TQ8iAqCWHl6NOSAl0x6Rjxekls="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "softeng/knowledge_base/ingyenes_hallgatoi_azure_fiok_regisztralasa/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "softeng/knowledge_base/ingyenes_hallgatoi_azure_fiok_regisztralasa/index.html",
+          "hash": "xyLFBybJrio4SoqbcV4UwgZlYdpe0BxGztjFf5RrZFU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
+      "type": "Conceptual",
+      "source_relative_path": "softeng/knowledge_base/lokalis_adatbazis_visual_studioban/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "softeng/knowledge_base/lokalis_adatbazis_visual_studioban/index.html",
+          "hash": "1NPKm0prd5/N0AkrVY822onbjAw6FPLwOqajftDeqgA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "softeng/knowledge_base/sql_generalasa_ssms-bol_adatbazis_letrehozasara/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "softeng/knowledge_base/sql_generalasa_ssms-bol_adatbazis_letrehozasara/index.html",
+          "hash": "Y9iBuKdctDqTimamWY5Idadg3bsiG1mUjkacq6pOp9M="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "softeng/knowledge_base/sql_server_sajat_gepre/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "softeng/knowledge_base/sql_server_sajat_gepre/index.html",
+          "hash": "QQ9a88X3MgEsB3jhJgPrG2SJjxpy6r6VhoyhRb0P3m8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "softeng/tantargyi_informaciok/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "softeng/tantargyi_informaciok/index.html",
+          "hash": "2CMm4wwH41rzeAsiVCBepwpSnbCWQ2hfgY6bdJg9lXE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
+      "type": "Toc",
+      "source_relative_path": "softeng/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "softeng/toc.html",
+          "hash": "sfaXc77S467chBZX4pOBh+jC4tSq11i+C55Nk6wJAwo="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "softeng/vsinstall/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "softeng/vsinstall/index.html",
+          "hash": "NhofZkpEg2XHvFEb1L0DeAMvVrSC01xTFBuHkQMNoOQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "softeng/zh_ertekeles_szabalyai/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "softeng/zh_ertekeles_szabalyai/index.html",
+          "hash": "dXKS2hXVw/9LWkZNoOUf/P5fWXrqOqHDiYQ5xEA/i1A="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "toc.html",
+          "hash": "I6aJFn768rsg4SAshnqk2U4hqL6f28a6oPPnzNmqYRo="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    }
+  ],
+  "incremental_info": [
+    {
+      "status": {
+        "can_incremental": false,
+        "details": "Cannot build incrementally because last build info is missing.",
+        "incrementalPhase": "build",
+        "total_file_count": 0,
+        "skipped_file_count": 0,
+        "full_build_reason_code": "NoAvailableBuildCache"
+      },
+      "processors": {
+        "ConceptualDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build",
+          "total_file_count": 160,
+          "skipped_file_count": 0
+        },
+        "ResourceDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
+          "skipped_file_count": 0
+        },
+        "TocDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
+          "skipped_file_count": 0
+        }
+      }
+    },
+    {
+      "status": {
+        "can_incremental": false,
+        "details": "Cannot support incremental post processing, the reason is: last post processor info is null.",
+        "incrementalPhase": "postProcessing",
+        "total_file_count": 0,
+        "skipped_file_count": 0
+      },
+      "processors": {}
+    }
+  ],
+  "version_info": {},
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}
