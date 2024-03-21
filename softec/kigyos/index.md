@@ -146,7 +146,7 @@ Ha a kígyónk hossza nagyobb, mint a kívánt hossz, kivesszük a `Controls` gy
 
 ```csharp
 //Farokvágás
-if (kígyó.Count > hossz)
+if (Controls.Count > hossz)
 {
     KígyóElem levágandó = kígyó[0];
     Controls.RemoveAt(0);
