@@ -52,23 +52,6 @@
   items:
   - name: Kígyós játék
     href: kigyos\index.md
-
-#- name: 5. hét
-#  items:
-#    - name: Képkirakós játék
-#      href: kepkirakos\index.md
-#    - name: Osztályok és Objektumok
-#      href: osztalyok\overview.md
-#- name: 6. hét
-#  items:
-#    - name: Feleltválasztós játék
-#      href: feleletvalasztos\index.md
-#    - name: Kvíz játék kérdéslistával gyakorlatra
-#      href: quiz2\index.md
-- name: 6. hét
-  items:
-  - name: Kígyós játék
-    href: kigyos\index.md
 #- name: 8. hét
 #  items:
 #    - name: GDI Grafika
