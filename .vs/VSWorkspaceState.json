@@ -1,12 +1,16 @@
 {
   "ExpandedNodes": [
     "",
-    "\\softec\\1_bevezeto",
+    "\\softec",
     "\\softec\\2_osztalyok",
     "\\softec\\git",
     "\\softec\\masodfoku",
     "\\softec\\zh_checklists",
+    "\\softec_kk",
+    "\\softec_kk\\beadandok",
+    "\\softec_kk\\beadandok\\beadando",
     "\\softeng"
   ],
+  "SelectedNode": "\\softec\\toc.yml",
   "PreviewInSolutionExplorer": false
 }
