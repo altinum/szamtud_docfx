@@ -52,6 +52,10 @@
   items:
   - name: Kígyós játék
     href: kigyos\index.md
+- name: 7. hét
+  items:
+  - name: Adatkötés
+    href: csv_databinding\index.md
 #- name: 8. hét
 #  items:
 #    - name: GDI Grafika
