@@ -56,7 +56,7 @@
   items:
   - name: Adatkötés
     href: csv_databinding\index.md
-#- name: 8. hét
+#- name: 8. hét#
 #  items:
 #    - name: GDI Grafika
 #      href: grafika_ifs_reszletes\grafika.md

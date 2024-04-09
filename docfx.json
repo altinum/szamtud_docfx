@@ -55,6 +55,7 @@
         "files": [
           "images/**",
           "softec/**.zip",
+          "softec/**.gif",
           "softec/**.docx",
           "softec/**.txt",
           "softec/**.png",
@@ -72,7 +73,7 @@
           "softec_kk/**.png",
           "softec_kk/**.jpg",
           "softec_kk/**.csv"
-          
+
 
         ]
       }
