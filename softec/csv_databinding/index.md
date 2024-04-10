@@ -2,9 +2,9 @@
 
 ## Bevezetés
 
-Az eheti feladatsor egyben minta ZH-ként is szolgál. A jövő héten esedékes ZH nagyon hasonló lesz minden csoportnak, lényegi eltérés a kezelendő CSV állomány oszlopaiban, és azok adattípusaiban lesz. Az előadás az adatkötés működéséről szól, ami fontos lehet, hogy ne csak bizonytalan kattintgatás legyen a feladatmegoldás. Ha valaki követi és megérti az előadáson elhangzottakat, ez a ZH is "low hanging fruit".  Az adatkötés nem bonyolult, de az Interneten nagyon sok az idejétmúlt infromáció, nehéz megtalálni a most is működő megoldást. 
+A heti feladatsor egyben minta ZH-ként is szolgál. A holnapi előadás az adatkötés működéséről szól, ami fontos lehet, hogy ne csak bizonytalan kattintgatás legyen a feladatmegoldás. Ha valaki követi és megérti az előadáson elhangzottakat, ez a ZH "low hanging fruit".  Az adatkötés nem bonyolult, de az Interneten nagyon sok az idejétmúlt infromáció, nehéz megtalálni a most is működő megoldást. 
 
-Az eheti előadás és gyakorlat fő célja az adatkötés bemutatása. Adatkötések (Binding) segítségével elérhető, hogy két változó értéke mindig szinkronban legyen egymással. Ha például egy `string` típusú változót egy `TextBox` `Text` tulajdonságával kötünk össze, akkor nem kell folyton átírni a változót, ha megváltozik a `TextBox` tartalma. Az adatkötések nagyon egyszerűsítik a fejlesztést, hosszas és unalmas kódolás helyett pillanatok alatt látványos eredmények érhetőek el a tervezőben. 
+Az előadás és gyakorlat fő célja az adatkötés bemutatása. Adatkötések (Binding) segítségével elérhető, hogy két változó értéke mindig szinkronban legyen egymással. Ha például egy `string` típusú változót egy `TextBox` `Text` tulajdonságával kötünk össze, akkor nem kell folyton átírni a változót, ha megváltozik a `TextBox` tartalma. Az adatkötések nagyon egyszerűsítik a fejlesztést, hosszas és unalmas kódolás helyett pillanatok alatt látványos eredmények érhetőek el a tervezőben. 
 
 A gyakorlati példa az európai országok területét és lakosságát tartalmazó CSV állományt használ. 
 
@@ -262,3 +262,18 @@ private void buttonEdit_Click(object sender, EventArgs e)
 
 ![working_databinding](working_databinding.gif)
 
+A mentés sem nehéz:
+
+```csharp
+private void buttonSave_Click(object sender, EventArgs e)
+{
+    using (var writer = new StreamWriter("countries.csv"))
+    using (var csv = new CsvWriter(writer, CultureInfo.InvariantCulture))
+    {
+        // Write records to the CSV file
+        csv.WriteRecords(countryList);
+    };
+}
+```
+
+:)

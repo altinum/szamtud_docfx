@@ -176,7 +176,7 @@ int irány_y = 0;
 <p>(+/-) &quot;Másszon&quot; a kígyó! Ehhez először bővítsd egy <code>hossz</code> nevű változóval az osztályt, melyben a kígyó aktuális hosszát tárolod! Ha az űrlapon lévő vezérlők száma meghaladja a hossz változó értékét, vedd ki az űrlap <code>Controls</code> listájának nulladik elemét!</p>
 <p>Ha a kígyónk hossza nagyobb, mint a kívánt hossz, kivesszük a <code>Controls</code> gyűjtemény nulladik elemét, vagyis a legrégebben belepakolt elemet:</p>
 <pre><code class="lang-csharp">//Farokvágás
-if (kígyó.Count &gt; hossz)
+if (Controls.Count &gt; hossz)
 {
     KígyóElem levágandó = kígyó[0];
     Controls.RemoveAt(0);

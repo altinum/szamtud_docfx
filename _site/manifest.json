@@ -1705,6 +1705,205 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "softec/csv_databinding/FormCountryEdit.png",
+      "output": {
+        "resource": {
+          "relative_path": "softec/csv_databinding/FormCountryEdit.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec/csv_databinding/add-new-datasource-1.png",
+      "output": {
+        "resource": {
+          "relative_path": "softec/csv_databinding/add-new-datasource-1.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec/csv_databinding/add-new-datasource-2.png",
+      "output": {
+        "resource": {
+          "relative_path": "softec/csv_databinding/add-new-datasource-2.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec/csv_databinding/add_datasource.gif",
+      "output": {
+        "resource": {
+          "relative_path": "softec/csv_databinding/add_datasource.gif"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec/csv_databinding/csv_dababinding/csv_dababinding/bin/Debug/net6.0-windows7.0/european_countries.csv",
+      "output": {
+        "resource": {
+          "relative_path": "softec/csv_databinding/csv_dababinding/csv_dababinding/bin/Debug/net6.0-windows7.0/european_countries.csv"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec/csv_databinding/csv_dababinding/csv_dababinding/bin/Debug/net8.0-windows/countries.csv",
+      "output": {
+        "resource": {
+          "relative_path": "softec/csv_databinding/csv_dababinding/csv_dababinding/bin/Debug/net8.0-windows/countries.csv"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec/csv_databinding/csv_dababinding/csv_dababinding/bin/Debug/net8.0-windows/european_countries.csv",
+      "output": {
+        "resource": {
+          "relative_path": "softec/csv_databinding/csv_dababinding/csv_dababinding/bin/Debug/net8.0-windows/european_countries.csv"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec/csv_databinding/csv_dababinding/csv_dababinding/european_countries.csv",
+      "output": {
+        "resource": {
+          "relative_path": "softec/csv_databinding/csv_dababinding/csv_dababinding/european_countries.csv"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec/csv_databinding/csv_dababinding/csv_dababinding/obj/Debug/net6.0-windows7.0/csv_dababinding.csproj.FileListAbsolute.txt",
+      "output": {
+        "resource": {
+          "relative_path": "softec/csv_databinding/csv_dababinding/csv_dababinding/obj/Debug/net6.0-windows7.0/csv_dababinding.csproj.FileListAbsolute.txt"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec/csv_databinding/csv_dababinding/csv_dababinding/obj/Debug/net7.0-windows/csv_dababinding.csproj.FileListAbsolute.txt",
+      "output": {
+        "resource": {
+          "relative_path": "softec/csv_databinding/csv_dababinding/csv_dababinding/obj/Debug/net7.0-windows/csv_dababinding.csproj.FileListAbsolute.txt"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec/csv_databinding/csv_dababinding/csv_dababinding/obj/Debug/net8.0-windows/csv_dababinding.csproj.FileListAbsolute.txt",
+      "output": {
+        "resource": {
+          "relative_path": "softec/csv_databinding/csv_dababinding/csv_dababinding/obj/Debug/net8.0-windows/csv_dababinding.csproj.FileListAbsolute.txt"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec/csv_databinding/form2.png",
+      "output": {
+        "resource": {
+          "relative_path": "softec/csv_databinding/form2.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec/csv_databinding/image-20240409132717658.png",
+      "output": {
+        "resource": {
+          "relative_path": "softec/csv_databinding/image-20240409132717658.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "softec/csv_databinding/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "softec/csv_databinding/index.html",
+          "hash": "FCGjZQEZI9jqPJgAg33cyxnJaYx26GDUIbHiim1cMVw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec/csv_databinding/nuegt.png",
+      "output": {
+        "resource": {
+          "relative_path": "softec/csv_databinding/nuegt.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec/csv_databinding/set_textbox_databinding.gif",
+      "output": {
+        "resource": {
+          "relative_path": "softec/csv_databinding/set_textbox_databinding.gif"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec/csv_databinding/solution_explorer_dependency.png",
+      "output": {
+        "resource": {
+          "relative_path": "softec/csv_databinding/solution_explorer_dependency.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec/csv_databinding/working_databinding.gif",
+      "output": {
+        "resource": {
+          "relative_path": "softec/csv_databinding/working_databinding.gif"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "softec/emory/Kepek.zip",
       "output": {
         "resource": {
@@ -1732,7 +1931,7 @@
       "output": {
         ".html": {
           "relative_path": "softec/eredmenyek/index.html",
-          "hash": "YXJUyQ6nRu67RWDgF2NQfdtKNXPUso/WTUBSNBMODB4="
+          "hash": "IbL4zSLEgNSMJii2MQN4ffEnKkwhq0dFhQTRu+B/VcQ="
         }
       },
       "is_incremental": false,
@@ -2019,7 +2218,7 @@
       "output": {
         ".html": {
           "relative_path": "softec/kigyos/index.html",
-          "hash": "CeCSRMWM4/w+nWkuD7YpvxDryCAYoTq15ZZfKe9q48E="
+          "hash": "Kr0/GOx6/s/aBM7tpPx7FFd3kR79tz/1+/6g7CYsPuk="
         }
       },
       "is_incremental": false,
@@ -2180,7 +2379,7 @@
       "output": {
         ".html": {
           "relative_path": "softec/toc.html",
-          "hash": "zbnvio4KtibDUiCb8gliG7E4p90HWzj6TueXZavhmG8="
+          "hash": "e8VLYnwjTQJTIfKKjSQQ379ByI4RteeGzYtpXG0hey4="
         }
       },
       "is_incremental": false,
@@ -5589,8 +5788,8 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": true,
           "incrementalPhase": "build",
-          "total_file_count": 160,
-          "skipped_file_count": 160
+          "total_file_count": 161,
+          "skipped_file_count": 158
         },
         "ResourceDocumentProcessor": {
           "can_incremental": false,
