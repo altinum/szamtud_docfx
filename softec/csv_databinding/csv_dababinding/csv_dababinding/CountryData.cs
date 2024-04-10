@@ -10,6 +10,6 @@ public class CountryData
 {
     public string Name { get; set; } = string.Empty;
     public long Population { get; set; }
-    public double AreaInSquareKm { get; set; }
+    public double AreaInSquareKmx { get; set; }
 }
 }

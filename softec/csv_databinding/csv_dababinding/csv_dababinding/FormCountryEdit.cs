@@ -24,7 +24,7 @@ public partial class FormCountryEdit : Form
         originalCountryData = new();
         originalCountryData.Name = CountryData.Name;
         originalCountryData.Population = CountryData.Population;
-        originalCountryData.AreaInSquareKm = CountryData.AreaInSquareKm;
+        originalCountryData.AreaInSquareKmx = CountryData.AreaInSquareKmx;
 
         bindingSource1.DataSource = CountryData;
 

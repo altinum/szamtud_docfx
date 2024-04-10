@@ -23,15 +23,14 @@ namespace csv_dababinding
 
         private void button1_Click(object sender, EventArgs e)
         {
-            using (var reader = new StreamReader("european_countries.csv"))
-            using (var csv = new CsvReader(reader, CultureInfo.InvariantCulture))
+            StreamReader sr = new StreamReader("european_countries.csv");
+            var csv = new CsvReader(sr, CultureInfo.InvariantCulture);
+            var tömb = csv.GetRecords<CountryData>();
+            foreach (var item in tömb )
             {
-                var x = csv.GetRecords<CountryData>();
-                foreach (var item in x)
-                {
-                    countryList.Add(item);
-                }
+                countryList.Add(item);
             }
+
         }
 
         private void buttonEdit_Click(object sender, EventArgs e)
@@ -47,15 +46,15 @@ namespace csv_dababinding
             countryDataBindingSource.RemoveCurrent();
         }
 
-private void buttonSave_Click(object sender, EventArgs e)
-{
-    using (var writer = new StreamWriter("countries.csv"))
-    using (var csv = new CsvWriter(writer, CultureInfo.InvariantCulture))
-    {
-        // Write records to the CSV file
-        csv.WriteRecords(countryList);
-    };
-}
+        private void buttonSave_Click(object sender, EventArgs e)
+        {
+            using (var writer = new StreamWriter("countries.csv"))
+            using (var csv = new CsvWriter(writer, CultureInfo.InvariantCulture))
+            {
+                // Write records to the CSV file
+                csv.WriteRecords(countryList);
+            };
+        }
     }
 }
 

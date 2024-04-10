@@ -2,15 +2,15 @@
 
 ## Bevezetés
 
-A heti feladatsor egyben minta ZH-ként is szolgál. A holnapi előadás az adatkötés működéséről szól, ami fontos lehet, hogy ne csak bizonytalan kattintgatás legyen a feladatmegoldás. Ha valaki követi és megérti az előadáson elhangzottakat, ez a ZH "low hanging fruit".  Az adatkötés nem bonyolult, de az Interneten nagyon sok az idejétmúlt infromáció, nehéz megtalálni a most is működő megoldást. 
+A heti feladatsor egyben minta ZH-ként is szolgál. 
 
-Az előadás és gyakorlat fő célja az adatkötés bemutatása. Adatkötések (Binding) segítségével elérhető, hogy két változó értéke mindig szinkronban legyen egymással. Ha például egy `string` típusú változót egy `TextBox` `Text` tulajdonságával kötünk össze, akkor nem kell folyton átírni a változót, ha megváltozik a `TextBox` tartalma. Az adatkötések nagyon egyszerűsítik a fejlesztést, hosszas és unalmas kódolás helyett pillanatok alatt látványos eredmények érhetőek el a tervezőben. 
+Az előadás és gyakorlat fő célja az adatkötés bemutatása. Adatkötések (_data binding_) segítségével elérhető, hogy két tulajdonság értéke mindig szinkronban legyen egymással. Összeköthető például egy szövegdoboz `Text` tulajdonsága egy objektum valamely `string` típusú tulajdonságával. Ha a szöveg megváltozik a szövegdobozban, a változás automatikusan átkerül az objelktum kötött tulajdonságába. Az adatkötések nagyon leegyszerűsítik a fejlesztést, hosszas és unalmas kódolás helyett pillanatok alatt látványos eredmények érhetőek el a tervezőben. 
 
 A gyakorlati példa az európai országok területét és lakosságát tartalmazó CSV állományt használ. 
 
 ## Előkészületek
 
-Hozz létre egy projektet a `Forms Application` projektsablon alapján, majd Dokumnetumok mappában egy szövegfájlt `european_countries.csv` néven az alábbi tartalommal:
+Hozz létre egy projektet a `Forms Application` projektsablon alapján, majd projektben egy szövegfájlt `european_countries.csv` néven az alábbi tartalommal.  Legegyszerűbb, ha a projekten melül hozol létre egy szövegfájlt, aminek aztán `.csv` kitrejesztést adsz!
 
 ```
 Name,Population,AreaInSquareKm
@@ -62,9 +62,11 @@ United Kingdom,67886011,242495
 Vatican City,800,0
 ```
 
-A fájlt másold be a projektbe is, mert fejlesztés közben nagyon idegölő minden futtatásnál kiválasztani a fájlt! Ne felejtsd el beállítani a `Copy to output directory`-t!
+> [!NOTE]
+>
+> Ne felejtsd el beállítani a `Copy to output directory`-t!
 
-Hozz létre egy egyszerű űrlapot:
+Ezután hozz létre egy egyszerű űrlapot:
 
 ![image-20240409132717658](image-20240409132717658.png)
 
@@ -72,21 +74,23 @@ Hozz létre egy egyszerű űrlapot:
 
 ### 1. `CsvHelper` NuGet csomag telepítése
 
-A CSV állományokat fel lehet úgy is olvasni ahogy a múltkor csináltunk: `StreamReader` osztály segítségével soronként, majd a sorokat a `Split()` metódus metódus segítségével valamilyen elválasztó karakter mentén tömbbe tördelve. Létezik egy könnyebb út is, C# nyelvhez több csomag is létezik, amely kész osztályt tartalmaz CSV állományok kezeléséhez. A gyakorlaton a `CsvHelper` csomagot használjuk, amit a Visual Studio beépített beépített csomagkezelőjén a NuGet-en keresztül telepítünk. Ha valakinek nem szimpatikus a `CsvHelper`, használhatja a két héttel ezelőtt alkalmazott megoldást is. A gyakorlaton első lépés tehát a `CsvHelper` NuGet csomag telepítése pár kattintással.
+A CSV állományokat fel lehet úgy is olvasni ahogy a múltkor csináltunk: `StreamReader` osztály segítségével soronként, majd a sorokat a `Split()` metódus metódus segítségével valamilyen elválasztó karakter mentén tömbbe tördelve. Létezik egy könnyebb út is! C# nyelvhez több csomag is létezik, amely kész osztályt tartalmaz CSV állományok kezeléséhez. A gyakorlaton a `CsvHelper` csomagot használjuk, amit a Visual Studio beépített beépített csomagkezelőjén a NuGet-en keresztül telepítünk. Ha valakinek nem szimpatikus a `CsvHelper`, használhatja a két héttel ezelőtt alkalmazott megoldást is - most is és a ZH-ban is.  
 
-Illetve két megoldás létezik, egy parancssoros és egy grafikus. 
+A első lépés tehát a `CsvHelper` NuGet csomag telepítése pár kattintással. Illetve két megoldás létezik, egy parancssoros és egy grafikus. 
 
-A grafikus felület a  `Tools` menü, ezen belül `NuGet package manager`, majd a `Manage Packages for Solution` menüpont alól érhető el:
+**A grafikus felület** a  `Tools` menü, ezen belül `NuGet package manager`, majd a `Manage Packages for Solution` menüpont alól érhető el:
 
 ![image-20240409122052533](nuegt.png)
 
-A Parancssoros a `Tools` menü, ezen belül `NuGet package manager`, majd `Package Manager console` menüpont kiválasztása után érhető el, és a 
+**A Parancssoros** a `Tools` menü, ezen belül `NuGet package manager`, majd `Package Manager console` menüpont kiválasztása után érhető el, és a 
 
 ```mathematica
 Install-Package CsvHelper
 ```
 
-paranccsal telepíthető a csomag. Telepítés után a Solution Explorerben a projekt függőségei között látható a telepített csomag:
+paranccsal telepíthető a csomag. 
+
+Bármelyik utat választod, telepítés után a *Solution Explorer*ben a projekt függőségei között látható a telepített csomag:
 
 ![image-20240409122328780](solution_explorer_dependency.png)
 
@@ -94,7 +98,7 @@ paranccsal telepíthető a csomag. Telepítés után a Solution Explorerben a pr
 
 ### 2. CSV állománynak megfelelő osztály létrehozása
 
-Ezután meg kell vizsgálni a feldolgozandó állományt, és el kell készíteni azt az osztályt, mely az állományban szereplő adatokat reprezentálja:
+Ezután meg kell vizsgálni a feldolgozandó állományt, és el kell készíteni azt az osztályt, mely az állományban szereplő sorokat reprezentálja:
 
 ```c#
 public class CountryData
@@ -105,11 +109,15 @@ public class CountryData
 }
 ```
 
-Ebben nincs újdonság. A típusokra érdemes odafigyelni.
+Ebben nincs újdonság. A típusokra érdemes odafigyelni. 
+
+> [!IMPORTANT]
+>
+> A CsvHelper használatánál nagyon fontos, hogy az osztályban szereplő tulajdonságok nevei megegyezzenek a CSV fájl első sorában lévő nevekkel! Ezért érdemes a neveket vágólapon keresztül átvinni a kódba. 
 
 ### 3. Adatköthető lista létrehozása
 
-Osztály szinten létre kell hozni egy listát, melynek elemtípusa az előbb létrehozott osztály. Ebben tároljuk majd a fájlból beolvasott adatokat. Annyi különbség lesz a megszokotthoz képest, hogy nem `List<>`-et használunk, hanem `BindingList<>`-et. Ez utóbbi képes arra, hogy ha a memóriában megváltozik a lista, a `DataGridView` tartalma automatikusan frissüljön. 
+Osztály szinten létre kell hozni egy listát, melynek elemtípusa az előbb létrehozott osztály. Ebben tároljuk majd a fájlból beolvasott adatokat. Annyi különbség lesz a megszokotthoz képest, hogy nem `List<>`-et használunk, hanem `BindingList<>`-et. Ez utóbbi képes arra, hogy ha a memóriában megváltozik a lista, a `DataGridView`, illetve a többi adatkötött vezérlő tartalma automatikusan frissüljön. 
 
 ```c#
 public partial class Form1 : Form
@@ -123,14 +131,13 @@ public partial class Form1 : Form
     ...
 ```
 
-
-
-Az adatkötött listák (`BindingList`) elsősorban olyan vezérlőkben használhatók fel, melyek alkalmasak több elem megjelenítésére is (pl.: `ListBox`, `DataGridView`). Ilyenkor lehetőség van arra is, hogy a felhasználó egy megfelelő vezérlőn keresztül szerkessze az általunk létrehozott listát. Ehhez mindössze be kell állítani, hogy az adatkötött lista legyen a vezérlő adatforrása (`DataSource`).
+Az `BindingList`-ek elsősorban olyan vezérlők adatforrásaikont használhatók fel, melyek alkalmasak több elem megjelenítésére is, mint  pl: `ListBox`, `DataGridView`. Ilyenkor lehetőség van arra is, hogy a felhasználó egy megfelelő vezérlőn keresztül szerkessze listát. Ehhez mindössze be kell állítani, hogy az adatkötött lista legyen a vezérlő adatforrása (`DataSource`):
 
 ```c#
 public partial class Form1 : Form
 {
     BindingList<CountryData> countryList = new();
+    
     public Form1()
     {
         InitializeComponent();
@@ -143,6 +150,21 @@ public partial class Form1 : Form
 ### 4. A fájl feldolgozása
 
 A következő lépés a fájl megnyitása és a CSV fájl feldolgozása:
+
+```csharp
+private void button1_Click(object sender, EventArgs e)
+{
+    StreamReader sr = new StreamReader("european_countries.csv");
+    var csv = new CsvReader(sr, CultureInfo.InvariantCulture);
+    var tömb = csv.GetRecords<CountryData>();
+    foreach (var item in )
+    {
+        countryList.Add(item);
+    }
+}    
+```
+
+Vagy így:
 
 ```c#
 private void button1_Click(object sender, EventArgs e)
@@ -161,17 +183,17 @@ private void button1_Click(object sender, EventArgs e)
 
 
 
- Miután feltöltöttük a listát össze lehet kötni a `DataGridView` `DataSource` tulajdonságát a listával. Ugyanez az adatkötés levégezhető a konstruktorban vagy Az űrlap `Load()` metódusában is - ahogy már meg is tettük -, hiszen amint változik a lista tartalma, a változás megjelenik a rácsban. 
+Miután feltöltöttük a listát össze lehet kötni a `DataGridView` `DataSource` tulajdonságát a listával. Ugyanez az adatkötés levégezhető a konstruktorban vagy az űrlap `Load()` metódusában is - ahogy már meg is tettük -, hiszen amint változik a lista tartalma, a változás megjelenik a rácsban. 
 
-Ha mindent jól csináltál, a gombra kattitnva mejelenik a lista tartalma a rácsban.
+Ha mindent jól csináltál, a gombra kattitnva mejelenik a fájl tartalma a rácsban.
 
 ### 5. Adatkötött vezérlők
 
 Az adatköthető rács nagyon hasznos vezérlő, de használatánál eddig nehézséget jelentett, hogy tervező nézetben nem tudtunk változtatni a tartalmán. Ezen segít a `BindingSource`. 
 
-A `BindingSource` egy speciális adatkötött objektum. Egyszerre több vezérlő adatforrásaként is be lehet állítani, és van saját adatforrása is. Lényegében egy köztes szereplő, melynek segítségével más adatkötött objektumokat több különböző vezérlőhöz is hozzá tudunk rendelni. A `BindingSource` képes kezelni a kiválasztott elemeket is, így, ha az egyik vezérlőben kiválasztunk egy elemet egy listából, a másikban is megváltozik a kijelölés. Lehetőség van a kiválasztott elem törlésére, is a `BindingSource`-on keresztül.
+A `BindingSource` egy speciális adatkötött objektum. **Egyszerre több vezérlő adatforrásaként is be lehet állítani, és van saját adatforrása is.** Lényegében egy köztes szereplő, melynek segítségével más adatkötött objektumokat több különböző vezérlőhöz is hozzá tudunk rendelni. A `BindingSource` képes kezelni a kiválasztott elemeket is, így, ha az egyik vezérlőben kiválasztunk egy elemet egy listából, a másikban is megváltozik a kijelölés. Lehetőség van a kiválasztott elem törlésére, is a `BindingSource`-on keresztül.
 
-A `BindingSource`-nak van egy másik hasznos felhasználási módja: tervező nézetben be lehet állítani egy oszályt (típust) adatforrásként. Ha ezt megtettük, az adatkötött vezérlőhöz kötött vezérlőkben, például `DataGridView`-ban tervező nézetben is lehet szerkeszteni az oszlopokat. 
+A `BindingSource`-nak van egy másik hasznos felhasználási módja: tervező nézetben be lehet állítani egy oszályt (típust) adatforrásként. Ha ezt megtettük, az adatkötött vezérlőhöz kötött vezérlőkben, például `DataGridView`-ban tervező nézetben is lehet szerkeszteni az oszlopokat. (Jobb felső sarokban lévő kis fül, majd *Edit columns*)
 
 Az alábbi lépéssorozat eredményeként létrejön egy `BindingSource` az űrlap alatt:
 
