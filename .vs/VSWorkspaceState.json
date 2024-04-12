@@ -3,14 +3,13 @@
     "",
     "\\softec",
     "\\softec\\2_osztalyok",
-    "\\softec\\git",
+    "\\softec\\csv_databinding",
     "\\softec\\masodfoku",
     "\\softec\\zh_checklists",
-    "\\softec_kk",
     "\\softec_kk\\beadandok",
     "\\softec_kk\\beadandok\\beadando",
     "\\softeng"
   ],
-  "SelectedNode": "\\softec\\toc.yml",
+  "SelectedNode": "\\softec\\csv_databinding\\add_datasource.gif",
   "PreviewInSolutionExplorer": false
 }

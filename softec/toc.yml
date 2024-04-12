@@ -56,8 +56,10 @@
   items:
   - name: Adatkötés
     href: csv_databinding\index.md
-#- name: 8. hét#
-#  items:
+- name: 8. hét
+  items:
+  - name: ZH mintafeladat
+    href: hajos_bindnig\index.md
 #    - name: GDI Grafika
 #      href: grafika_ifs_reszletes\grafika.md
 #    - name: Teknős és Koch görbe
