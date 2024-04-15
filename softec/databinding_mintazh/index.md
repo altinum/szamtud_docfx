@@ -1,6 +1,6 @@
 # Minta ZH
 
-A futoversenyzok.txt fájlban található adatok alapján kell egy alkalmazást felépíteni. 
+A [futoversenyzok.txt](futoversenyzok.txt) fájlban található adatok alapján kell egy alkalmazást felépíteni. 
 
 A fájl felépítése:
 
