@@ -16,63 +16,63 @@ namespace hajos_binding
             InitializeComponent();
         }
 
-        private void buttonOpen_Click(object sender, EventArgs e)
+private void buttonOpen_Click(object sender, EventArgs e)
+{
+    try
+    {
+        StreamReader sr = new StreamReader("hajozasi_szabalyzat_coma.txt");
+        var csv = new CsvReader(sr, CultureInfo.InvariantCulture);
+        var tömb = csv.GetRecords<VizsgaKérdés>();
+
+        foreach (var item in tömb)
         {
-            try
-            {
-                StreamReader sr = new StreamReader("hajozasi_szabalyzat_coma.txt");
-                var csv = new CsvReader(sr, CultureInfo.InvariantCulture);
-                var tömb = csv.GetRecords<VizsgaKérdés>();
-
-                foreach (var item in tömb)
-                {
-                    kérdések.Add(item);
-                }
-
-
-                sr.Close();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
+            kérdések.Add(item);
         }
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
-            vizsgaKérdésBindingSource.DataSource = kérdések;
-        }
+
+        sr.Close();
+    }
+    catch (Exception ex)
+    {
+        MessageBox.Show(ex.Message);
+    }
+}
+
+private void Form1_Load(object sender, EventArgs e)
+{
+    dataGridView1.DataSource = kérdések;
+}
 
         private void buttonSave_Click(object sender, EventArgs e)
         {
-            try
-            {
-                SaveFileDialog saveFileDialog = new SaveFileDialog();
+try
+{
+    SaveFileDialog saveFileDialog = new SaveFileDialog();
 
-                if (saveFileDialog.ShowDialog() == DialogResult.OK)
-                {
-                    StreamWriter sw = new StreamWriter(saveFileDialog.FileName);
-                    var csv = new CsvWriter(sw, CultureInfo.InvariantCulture);
-                    csv.WriteRecords(kérdések);
-                    sw.Close();
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
+    if (saveFileDialog.ShowDialog() == DialogResult.OK)
+    {
+        StreamWriter sw = new StreamWriter(saveFileDialog.FileName);
+        var csv = new CsvWriter(sw, CultureInfo.InvariantCulture);
+        csv.WriteRecords(kérdések);
+        sw.Close();
+    }
+}
+catch (Exception ex)
+{
+    MessageBox.Show(ex.Message);
+}
         }
 
-        private void buttonDelete_Click(object sender, EventArgs e)
-        {
-            if (vizsgaKérdésBindingSource.Current == null) return;
+private void buttonDelete_Click(object sender, EventArgs e)
+{
+    if (vizsgaKérdésBindingSource.Current == null) return;
 
-            if (MessageBox.Show("A", "B", MessageBoxButtons.YesNo) == DialogResult.Yes)
-            {
-                vizsgaKérdésBindingSource.RemoveCurrent();
-            }
+    if (MessageBox.Show("A", "B", MessageBoxButtons.YesNo) == DialogResult.Yes)
+    {
+        vizsgaKérdésBindingSource.RemoveCurrent();
+    }
 
-        }
+}
 
         private void buttonAddNew_Click(object sender, EventArgs e)
         {
@@ -87,12 +87,12 @@ namespace hajos_binding
 
         private void buttonEdit_Click(object sender, EventArgs e)
         {
-            if (vizsgaKérdésBindingSource.Current == null) return;
-            
-            FormEdit formEdit = new FormEdit();
-            formEdit.ÚjVizsgaKérdés = vizsgaKérdésBindingSource.Current as VizsgaKérdés;
-            formEdit.Show();
-
+            if (vizsgaKérdésBindingSource.Current is VizsgaKérdés)
+            {
+                FormEdit formEdit = new FormEdit();
+                formEdit.ÚjVizsgaKérdés = (VizsgaKérdés)vizsgaKérdésBindingSource.Current;
+                formEdit.Show();
+            }
 
 
 

@@ -1904,6 +1904,95 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "softec/databinding_mintazh/image1.png",
+      "output": {
+        "resource": {
+          "relative_path": "softec/databinding_mintazh/image1.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec/databinding_mintazh/image2.png",
+      "output": {
+        "resource": {
+          "relative_path": "softec/databinding_mintazh/image2.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec/databinding_mintazh/image3.png",
+      "output": {
+        "resource": {
+          "relative_path": "softec/databinding_mintazh/image3.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec/databinding_mintazh/image4.png",
+      "output": {
+        "resource": {
+          "relative_path": "softec/databinding_mintazh/image4.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec/databinding_mintazh/image5.png",
+      "output": {
+        "resource": {
+          "relative_path": "softec/databinding_mintazh/image5.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec/databinding_mintazh/image6.png",
+      "output": {
+        "resource": {
+          "relative_path": "softec/databinding_mintazh/image6.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec/databinding_mintazh/image7.png",
+      "output": {
+        "resource": {
+          "relative_path": "softec/databinding_mintazh/image7.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "softec/databinding_mintazh/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "softec/databinding_mintazh/index.html",
+          "hash": "WRJilvw3pEYhSCOICdXjhBtKQL8vl6fpsOh1Apou8s4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "softec/emory/Kepek.zip",
       "output": {
         "resource": {
@@ -2080,6 +2169,17 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "softec/hajos_bindnig/WinFormsApp1/WinFormsApp1/obj/Debug/net8.0-windows/WinFormsApp1.csproj.FileListAbsolute.txt",
+      "output": {
+        "resource": {
+          "relative_path": "softec/hajos_bindnig/WinFormsApp1/WinFormsApp1/obj/Debug/net8.0-windows/WinFormsApp1.csproj.FileListAbsolute.txt"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "softec/hajos_bindnig/hajos_binding/hajos_binding/bin/Debug/net8.0-windows/hajozasi_szabalyzat_coma.txt",
       "output": {
         "resource": {
@@ -2131,7 +2231,7 @@
           "hash": "zPkVrdqwmhiAW7FYuU7nbl8tiO75aEUiRk/lHwnac2A="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -2435,7 +2535,7 @@
       "output": {
         ".html": {
           "relative_path": "softec/toc.html",
-          "hash": "TPe8yW3O2aUoGo/aNpSIn1of+JnMeWTeSLwYj2Yd0sA="
+          "hash": "xYwVoyzMBnl1+6PwZhdyaU4jjIzIR6JEuCsWwTVR2eY="
         }
       },
       "is_incremental": false,
@@ -5856,8 +5956,8 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": true,
           "incrementalPhase": "build",
-          "total_file_count": 163,
-          "skipped_file_count": 162
+          "total_file_count": 164,
+          "skipped_file_count": 163
         },
         "ResourceDocumentProcessor": {
           "can_incremental": false,
