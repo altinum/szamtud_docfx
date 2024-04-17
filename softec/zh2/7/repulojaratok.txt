@@ -1,0 +1,51 @@
+JaratID,Legitarsasag,IndulasiHely,CelHely,UtasokSzama,IdotartamOra
+1,Lufthansa,Frankfurt,New York,280,8
+2,Emirates,Dubai,London,350,7
+3,Qantas,Sydney,Tokyo,300,9
+4,United Airlines,Chicago,Los Angeles,220,4
+5,Ryanair,Dublin,Paris,170,2
+6,EasyJet,London,Berlin,160,2
+7,Delta Air Lines,Atlanta,Amsterdam,310,9
+8,Cathay Pacific,Hong Kong,Sydney,280,9
+9,Alitalia,Rome,New York,250,10
+10,Air Canada,Toronto,Vancouver,200,5
+11,KLM,Amsterdam,Cape Town,270,11
+12,Air France,Paris,Tokyo,290,12
+13,British Airways,London,New York,240,7
+14,Aer Lingus,Dublin,Chicago,230,8
+15,Air India,Delhi,Sydney,260,12
+16,Singapore Airlines,Singapore,London,340,13
+17,ANA,Tokyo,San Francisco,320,11
+18,Turkish Airlines,Istanbul,New York,310,10
+19,Virgin Atlantic,London,San Francisco,210,11
+20,JetBlue,New York,San Francisco,180,6
+21,Air New Zealand,Auckland,Los Angeles,220,12
+22,Qatar Airways,Doha,Paris,300,6
+23,Norwegian,Oslo,New York,200,8
+24,Etihad,Dubai,Melbourne,330,14
+25,Southwest Airlines,Houston,Los Angeles,230,3
+26,American Airlines,Dallas,London,310,9
+27,United Airlines,San Francisco,Tokyo,210,11
+28,Korean Air,Seoul,Paris,290,11
+29,Iberia,Madrid,New York,250,8
+30,Alaska Airlines,Seattle,Miami,180,6
+31,Finnair,Helsinki,Tokyo,220,9
+32,LATAM,Santiago,New York,210,10
+33,EgyptAir,Cairo,New York,230,12
+34,China Southern,Guangzhou,Los Angeles,320,12
+35,AirAsia,Kuala Lumpur,Tokyo,290,7
+36,Spirit Airlines,Detroit,Las Vegas,160,4
+37,Hawaiian Airlines,Honolulu,San Francisco,220,5
+38,Philippine Airlines,Manila,Vancouver,260,11
+39,Air Transat,Montreal,Paris,200,7
+40,Aeromexico,Mexico City,Madrid,240,10
+41,Swiss International,Zurich,New York,220,9
+42,Brussels Airlines,Brussels,New York,210,8
+43,El Al,Tel Aviv,New York,230,12
+44,Scandinavian Airlines,Stockholm,Chicago,250,9
+45,IndiGo,Mumbai,Dubai,300,3
+46,Aeroflot,Moscow,New York,310,9
+47,Vueling,Barcelona,Paris,180,2
+48,Japan Airlines,Tokyo,London,270,12
+49,Royal Air Maroc,Casablanca,New York,230,8
+50,Wizz Air,Budapest,London,160,3

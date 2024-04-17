@@ -1904,6 +1904,17 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "softec/databinding_mintazh/futoversenyzok.txt",
+      "output": {
+        "resource": {
+          "relative_path": "softec/databinding_mintazh/futoversenyzok.txt"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "softec/databinding_mintazh/image1.png",
       "output": {
         "resource": {
@@ -1985,10 +1996,10 @@
       "output": {
         ".html": {
           "relative_path": "softec/databinding_mintazh/index.html",
-          "hash": "WRJilvw3pEYhSCOICdXjhBtKQL8vl6fpsOh1Apou8s4="
+          "hash": "UaiLIPRQldLN8qyIGVwDjBZjzNwPqY3/r4rnsDAIhP0="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -2173,6 +2184,39 @@
       "output": {
         "resource": {
           "relative_path": "softec/hajos_bindnig/WinFormsApp1/WinFormsApp1/obj/Debug/net8.0-windows/WinFormsApp1.csproj.FileListAbsolute.txt"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec/hajos_bindnig/WinFormsApp2/WinFormsApp2/bin/Debug/net8.0-windows/futottakmeg.txt",
+      "output": {
+        "resource": {
+          "relative_path": "softec/hajos_bindnig/WinFormsApp2/WinFormsApp2/bin/Debug/net8.0-windows/futottakmeg.txt"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec/hajos_bindnig/WinFormsApp2/WinFormsApp2/futottakmeg.txt",
+      "output": {
+        "resource": {
+          "relative_path": "softec/hajos_bindnig/WinFormsApp2/WinFormsApp2/futottakmeg.txt"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec/hajos_bindnig/WinFormsApp2/WinFormsApp2/obj/Debug/net8.0-windows/WinFormsApp2.csproj.FileListAbsolute.txt",
+      "output": {
+        "resource": {
+          "relative_path": "softec/hajos_bindnig/WinFormsApp2/WinFormsApp2/obj/Debug/net8.0-windows/WinFormsApp2.csproj.FileListAbsolute.txt"
         }
       },
       "is_incremental": false,
@@ -2578,6 +2622,640 @@
         }
       },
       "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec/zh2/1/autok.txt",
+      "output": {
+        "resource": {
+          "relative_path": "softec/zh2/1/autok.txt"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec/zh2/1/image1.png",
+      "output": {
+        "resource": {
+          "relative_path": "softec/zh2/1/image1.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec/zh2/1/image2.png",
+      "output": {
+        "resource": {
+          "relative_path": "softec/zh2/1/image2.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec/zh2/1/image3.png",
+      "output": {
+        "resource": {
+          "relative_path": "softec/zh2/1/image3.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec/zh2/1/image4.png",
+      "output": {
+        "resource": {
+          "relative_path": "softec/zh2/1/image4.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec/zh2/1/image5.png",
+      "output": {
+        "resource": {
+          "relative_path": "softec/zh2/1/image5.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec/zh2/1/image6.png",
+      "output": {
+        "resource": {
+          "relative_path": "softec/zh2/1/image6.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec/zh2/1/image7.png",
+      "output": {
+        "resource": {
+          "relative_path": "softec/zh2/1/image7.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "softec/zh2/1/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "softec/zh2/1/index.html",
+          "hash": "ria8delS2jRTxM8xlQJXlAJb4ikohwABLQizOMe8bI8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec/zh2/2/bolygo.txt",
+      "output": {
+        "resource": {
+          "relative_path": "softec/zh2/2/bolygo.txt"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec/zh2/2/image1.png",
+      "output": {
+        "resource": {
+          "relative_path": "softec/zh2/2/image1.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec/zh2/2/image3.png",
+      "output": {
+        "resource": {
+          "relative_path": "softec/zh2/2/image3.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec/zh2/2/image4.png",
+      "output": {
+        "resource": {
+          "relative_path": "softec/zh2/2/image4.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec/zh2/2/image5.png",
+      "output": {
+        "resource": {
+          "relative_path": "softec/zh2/2/image5.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec/zh2/2/image6.png",
+      "output": {
+        "resource": {
+          "relative_path": "softec/zh2/2/image6.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec/zh2/2/image7.png",
+      "output": {
+        "resource": {
+          "relative_path": "softec/zh2/2/image7.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "softec/zh2/2/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "softec/zh2/2/index.html",
+          "hash": "iwliiRbb2/5+/sicX+GVraVDr15eSSrCUJ8xuXJnklM="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec/zh2/3/filmek.txt",
+      "output": {
+        "resource": {
+          "relative_path": "softec/zh2/3/filmek.txt"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec/zh2/3/image1.png",
+      "output": {
+        "resource": {
+          "relative_path": "softec/zh2/3/image1.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec/zh2/3/image3.png",
+      "output": {
+        "resource": {
+          "relative_path": "softec/zh2/3/image3.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec/zh2/3/image4.png",
+      "output": {
+        "resource": {
+          "relative_path": "softec/zh2/3/image4.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec/zh2/3/image5.png",
+      "output": {
+        "resource": {
+          "relative_path": "softec/zh2/3/image5.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec/zh2/3/image6.png",
+      "output": {
+        "resource": {
+          "relative_path": "softec/zh2/3/image6.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec/zh2/3/image7.png",
+      "output": {
+        "resource": {
+          "relative_path": "softec/zh2/3/image7.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "softec/zh2/3/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "softec/zh2/3/index.html",
+          "hash": "HKJRFN2qAy5MifmtMEXgL9QOO4CR23o3ECtbLXlU9zw="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec/zh2/4/image1.png",
+      "output": {
+        "resource": {
+          "relative_path": "softec/zh2/4/image1.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec/zh2/4/image3.png",
+      "output": {
+        "resource": {
+          "relative_path": "softec/zh2/4/image3.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec/zh2/4/image4.png",
+      "output": {
+        "resource": {
+          "relative_path": "softec/zh2/4/image4.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec/zh2/4/image5.png",
+      "output": {
+        "resource": {
+          "relative_path": "softec/zh2/4/image5.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec/zh2/4/image6.png",
+      "output": {
+        "resource": {
+          "relative_path": "softec/zh2/4/image6.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec/zh2/4/image7.png",
+      "output": {
+        "resource": {
+          "relative_path": "softec/zh2/4/image7.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "softec/zh2/4/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "softec/zh2/4/index.html",
+          "hash": "sdm2IpMyHWIQpVqLfWLXgO6TRuCv+UBTGjpARQ7dxlU="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec/zh2/4/italok.txt",
+      "output": {
+        "resource": {
+          "relative_path": "softec/zh2/4/italok.txt"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec/zh2/5/image1.png",
+      "output": {
+        "resource": {
+          "relative_path": "softec/zh2/5/image1.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec/zh2/5/image3.png",
+      "output": {
+        "resource": {
+          "relative_path": "softec/zh2/5/image3.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec/zh2/5/image4.png",
+      "output": {
+        "resource": {
+          "relative_path": "softec/zh2/5/image4.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec/zh2/5/image5.png",
+      "output": {
+        "resource": {
+          "relative_path": "softec/zh2/5/image5.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec/zh2/5/image6.png",
+      "output": {
+        "resource": {
+          "relative_path": "softec/zh2/5/image6.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec/zh2/5/image7.png",
+      "output": {
+        "resource": {
+          "relative_path": "softec/zh2/5/image7.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "softec/zh2/5/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "softec/zh2/5/index.html",
+          "hash": "UsGOpjmYbpiWoEfUblE/098SkJ/HbR8I4ZY8GLwYxfk="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec/zh2/5/kavezo.txt",
+      "output": {
+        "resource": {
+          "relative_path": "softec/zh2/5/kavezo.txt"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec/zh2/6/image1.png",
+      "output": {
+        "resource": {
+          "relative_path": "softec/zh2/6/image1.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec/zh2/6/image3.png",
+      "output": {
+        "resource": {
+          "relative_path": "softec/zh2/6/image3.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec/zh2/6/image4.png",
+      "output": {
+        "resource": {
+          "relative_path": "softec/zh2/6/image4.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec/zh2/6/image5.png",
+      "output": {
+        "resource": {
+          "relative_path": "softec/zh2/6/image5.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec/zh2/6/image6.png",
+      "output": {
+        "resource": {
+          "relative_path": "softec/zh2/6/image6.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec/zh2/6/image7.png",
+      "output": {
+        "resource": {
+          "relative_path": "softec/zh2/6/image7.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "softec/zh2/6/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "softec/zh2/6/index.html",
+          "hash": "jBBkk49rp6E87Pfv7EeZhNiwDxE4vzQIVJqJ95LNkLQ="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec/zh2/6/konyv.txt",
+      "output": {
+        "resource": {
+          "relative_path": "softec/zh2/6/konyv.txt"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec/zh2/7/image1.png",
+      "output": {
+        "resource": {
+          "relative_path": "softec/zh2/7/image1.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec/zh2/7/image3.png",
+      "output": {
+        "resource": {
+          "relative_path": "softec/zh2/7/image3.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec/zh2/7/image4.png",
+      "output": {
+        "resource": {
+          "relative_path": "softec/zh2/7/image4.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec/zh2/7/image5.png",
+      "output": {
+        "resource": {
+          "relative_path": "softec/zh2/7/image5.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec/zh2/7/image6.png",
+      "output": {
+        "resource": {
+          "relative_path": "softec/zh2/7/image6.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec/zh2/7/image7.png",
+      "output": {
+        "resource": {
+          "relative_path": "softec/zh2/7/image7.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "softec/zh2/7/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "softec/zh2/7/index.html",
+          "hash": "M32iWAPXAQavSjcViWAipvJY/1InjYHSllNDgCHCDFQ="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec/zh2/7/repulojaratok.txt",
+      "output": {
+        "resource": {
+          "relative_path": "softec/zh2/7/repulojaratok.txt"
+        }
+      },
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -5956,8 +6634,8 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": true,
           "incrementalPhase": "build",
-          "total_file_count": 164,
-          "skipped_file_count": 163
+          "total_file_count": 171,
+          "skipped_file_count": 171
         },
         "ResourceDocumentProcessor": {
           "can_incremental": false,
