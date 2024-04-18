@@ -1,4 +1,4 @@
-# 2. ZH - foxtrot
+# 2. ZH - golf
 
 A [repulojaratok.txt](repulojaratok.txt) fájlban található adatok alapján kell egy alkalmazást felépíteni. 
 
