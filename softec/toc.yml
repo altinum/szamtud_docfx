@@ -72,6 +72,8 @@
   items:
   - name: LINQ összefoglaló
     href: starmap\linq_osszefoglalo.md
+  - name: GDI grafika összefoglaló
+    href: starmap\gdi.md
   - name: Csillagtérkép rajzolás
     href: starmap\index.md
 
