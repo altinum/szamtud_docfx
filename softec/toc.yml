@@ -68,6 +68,12 @@
     href: 9a_gyak_tavoli_adatbazis_visual_studioban\index.md
   - name: IFS fraktál
     href: grafika_ifs_reszletes\index.md
+- name: 10. hét
+  items:
+  - name: LINQ összefoglaló
+    href: starmap\linq_osszefoglalo.md
+  - name: Csillagtérkép rajzolás
+    href: starmap\index.md
 
 #    - name: GDI Grafika
 #      href: grafika_ifs_reszletes\grafika.md

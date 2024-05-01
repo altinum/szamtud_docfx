@@ -2854,6 +2854,41 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "softec/starmap/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "softec/starmap/index.html",
+          "hash": "VXMggUQ6dyVXQcy7kCTNsWgyaMfk92Wddp2F6ur0i1c="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "softec/starmap/linq_osszefoglalo.md",
+      "output": {
+        ".html": {
+          "relative_path": "softec/starmap/linq_osszefoglalo.html",
+          "hash": "uaI33lKYeWW2ieIMZbJUmH/AixhrLZR39NFtyWxGevg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec/starmap/project/Starmap/Starmap/obj/Debug/net8.0-windows/Starmap.csproj.FileListAbsolute.txt",
+      "output": {
+        "resource": {
+          "relative_path": "softec/starmap/project/Starmap/Starmap/obj/Debug/net8.0-windows/Starmap.csproj.FileListAbsolute.txt"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "softec/szoparoztatos/index.md",
       "output": {
         ".html": {
@@ -2882,7 +2917,7 @@
       "output": {
         ".html": {
           "relative_path": "softec/toc.html",
-          "hash": "85LE8KJDypXZ+MvWw6PBStaS+biMXvbTjW3UQ7f16Go="
+          "hash": "ENVq2IyRYIsktkv5nmIGiWuumT2r0GeSgAqZ/avwhhs="
         }
       },
       "is_incremental": false,
@@ -6937,7 +6972,7 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": true,
           "incrementalPhase": "build",
-          "total_file_count": 174,
+          "total_file_count": 176,
           "skipped_file_count": 174
         },
         "ResourceDocumentProcessor": {
