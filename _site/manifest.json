@@ -2854,6 +2854,18 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "softec/starmap/gdi.md",
+      "output": {
+        ".html": {
+          "relative_path": "softec/starmap/gdi.html",
+          "hash": "9H3+8CF9ApuK0E34aXy6Fm9aDt1Yj6O3yuMdF+mG/Gc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "softec/starmap/index.md",
       "output": {
         ".html": {
@@ -2917,7 +2929,7 @@
       "output": {
         ".html": {
           "relative_path": "softec/toc.html",
-          "hash": "ENVq2IyRYIsktkv5nmIGiWuumT2r0GeSgAqZ/avwhhs="
+          "hash": "iWMM4YTVz/uv+5xGbIpioEszicExZJQYqbv31OySL6k="
         }
       },
       "is_incremental": false,
@@ -6972,8 +6984,8 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": true,
           "incrementalPhase": "build",
-          "total_file_count": 176,
-          "skipped_file_count": 174
+          "total_file_count": 177,
+          "skipped_file_count": 176
         },
         "ResourceDocumentProcessor": {
           "can_incremental": false,
