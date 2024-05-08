@@ -48,6 +48,7 @@ const Syllabus = {
 	"9. hét - 2. Géptermi ZH": new Date('2023-03-20'),
 	"Checklist az második ZH- hoz": new Date('2023-03-20'),      
 	"Fájlok előasára": new Date('2023-03-20'),      
+	"Mintakódok projekthez": new Date('2023-03-20'),      
 
 };
 function preprocess(){

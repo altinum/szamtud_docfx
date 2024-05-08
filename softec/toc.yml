@@ -133,3 +133,12 @@
 #      href: beadando_snake\index.md
     - name: "Projektfeladat: Keresd a különbséget játék"
       href: beadandok\beadando_spot_the_difference\index.md
+- name: Mintakódok projekthez
+  items:    
+    - name: "Memóriajáték"
+      href: mintakodok\emory\index.md
+    - name: "Labirintus játék"
+      href: mintakodok\labirintus\index.md
+    - name: "Akasztófa játék"
+      href: mintakodok\hangman\index.md
+    
