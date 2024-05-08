@@ -12,7 +12,7 @@ A cél kliens felület építése, mely kétféle nézetben teszi lehetővé az 
 - Az egyik nézet egy listában megjeleníti az oktatókat, és a kiválasztott oktatónak listázza az óráit, de úgy, hogy az idegen kulcsok helyén a csatolt táblában szereplő érték jelenjen meg. Az oktatók név szerint szűrhetők az oktatók listája felett lévő szövegdobozban.
 - A másik gombhoz tartozó nézetben kurzusonként lehet megtekinteni az órákat.
 
-![kep1]
+![kep1](linq_studies.png)
 
 ## Gyakorlati feladatsor
 
@@ -254,7 +254,7 @@ public partial class UserControl2 : UserControl
 }
 ```
 
-[kep1]: linq_studies.png	"0"
+
 
 ## 6. Oktatók adatainak megjelenítése és mentése
 
@@ -268,4 +268,4 @@ public partial class UserControl2 : UserControl
 
 ## 8. Egyéb feladatok
 
-Egészítsd ki az előző feladatokat úgy, hogy a rácsok és a listák alatt jelenjen meg egy cimkében, hogy éppen hány rekordot taralmaznak!
+(+/-)  Egészítsd ki az előző feladatokat úgy, hogy a rácsok és a listák alatt jelenjen meg egy cimkében, hogy éppen hány rekordot taralmaznak!
