@@ -12,6 +12,7 @@ namespace Hangman
 
         public string WordMask { get; private set; }
 
+
         public Word(string wordToGuess)
         {
             this.wordToGuess = wordToGuess.ToUpper();

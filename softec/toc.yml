@@ -77,8 +77,10 @@
   - name: Csillagtérkép rajzolás
     href: starmap\index.md
 
-#    - name: GDI Grafika
-#      href: grafika_ifs_reszletes\grafika.md
+- name: 11. hét
+  items:
+  - name: Studies adatbázis UI
+    href: 11_gyak_linq_lekerdezesek_-_studies_adatb\index.md
 #    - name: Teknős és Koch görbe
 #      href: grafika_ifs_reszletes\koch_gorbe.md
 #    - name: Emory game
@@ -141,4 +143,6 @@
       href: mintakodok\labirintus\index.md
     - name: "Akasztófa játék"
       href: mintakodok\hangman\index.md
+    - name: Puzzle
+      href: slide_puzzle\slide_puzzle.md
     
