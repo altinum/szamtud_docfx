@@ -79,7 +79,7 @@
 
 - name: 11. hét
   items:
-  - name: Studies adatbázis UI
+  - name: Studies adatbázis UI_
     href: 11_gyak_linq_lekerdezesek_-_studies_adatb\index.md
 #    - name: Teknős és Koch görbe
 #      href: grafika_ifs_reszletes\koch_gorbe.md
