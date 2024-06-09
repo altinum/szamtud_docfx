@@ -1,0 +1,51 @@
+KavezoID,Nev,Varos,NapiLatogatok,ProfitEZREuro
+1,Caffé Mondo,Róma,120,1.8
+2,Espresso House,Stockholm,95,1.5
+3,Coffee Corner,Bécs,78,1.2
+4,Brew Brothers,Budapest,50,0.8
+5,Morning Joe,London,130,2.1
+6,Coffee Bean,Nyíregyháza,45,0.6
+7,Java Jive,Prága,110,1.7
+8,Cup o' Joe,Párizs,105,1.6
+9,Bean There,Amsterdam,100,1.5
+10,Black Brew,Brüsszel,85,1.3
+11,Café au lait,Zürich,70,1.1
+12,Perk Up,Lisszabon,90,1.4
+13,Brewed Awakening,Dublin,115,1.8
+14,Steaming Mugs,Hamburg,65,1.0
+15,The Grind,Madrid,80,1.2
+16,The Coffee Shop,Oslo,75,1.1
+17,Café de Flore,Barcelona,98,1.5
+18,Ground Up,Warsaw,55,0.9
+19,Coffee Time,Berlin,105,1.6
+20,Roast & Toast,Atén,100,1.5
+21,Mocha Madness,Velence,80,1.2
+22,Jumpstart Java,Frankfurt,110,1.7
+23,Bean Around,Moszkva,75,1.1
+24,Coffee Cloud,Reykjavík,90,1.4
+25,Caffeine Fix,Tallinn,60,0.9
+26,Java on the Rocks,Belgrád,85,1.3
+27,Percolate,Riga,65,1.0
+28,Buzz Café,Vilnius,50,0.7
+29,Steep & Sip,Zágráb,70,1.1
+30,Café Revive,Genf,95,1.5
+31,Brew Lab,Helisnki,55,0.8
+32,Café Noir,Koppenhága,78,1.2
+33,Latte Lounge,Monaco,130,2.1
+34,Sip Cafe,Andorra la Vella,45,0.6
+35,Grind House,Szentpétervár,115,1.8
+36,Cuppa Joe,Milánó,80,1.2
+37,Java Hut,Firenze,90,1.4
+38,Aroma Espresso,Torino,105,1.6
+39,The Split Bean,Szófia,100,1.5
+40,The Daily Grind,Bréma,55,0.8
+41,Café Brewski,Salzburg,70,1.1
+42,Bean Box,Luxemburg,65,1.0
+43,Grind Time,Edinburgh,85,1.3
+44,Café Crema,Lyon,95,1.5
+45,Hot Shots,Manchester,80,1.2
+46,The Roastery,Birmingham,90,1.4
+47,Latte Da,Krakkó,75,1.1
+48,Espresso Yourself,Ghent,60,0.9
+49,Brew Ha Ha,Lausanne,50,0.7
+50,Grounds for Celebration,Nizza,105,1.6

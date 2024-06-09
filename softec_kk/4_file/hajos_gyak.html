@@ -1,0 +1,323 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Haj&#243;s kv&#237;z </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Haj&#243;s kv&#237;z ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="hajós-kvíz">Hajós kvíz</h1>
+
+<p>A gyakorlaton a hatósági kisgéphajó vezetői vizsgához elérhető kérdésbankhoz készítünk felületet, amely a felhasználóval begyakoroltatja a kérdésekre a válaszokat.</p>
+<p>A kérdéseket tartalmazó állomány CSV fájlból fogjuk beolvasni egy memóriában tárolt listába.</p>
+<p>Ha az 1400 kérdésből mindig véletlenszerűen választanánk, nem lenne hatékony a tanulás. A program az összes kérdést tartalmazó lista mellett használ egy másik listát is, melyben az éppen gyakoroltatott 7 kérdés van. A program indításakor az első 7 kérdés kerül majd ide.</p>
+<p>Az éppen gyakoroltatott kérdések közül kerül mindig a soron következő a képernyőre. Ha a tanuló egymás után háromszor helyesen válaszol egy kérdésre, a kérdés kikerül a gyakoroltatott kérdések listájáról, és helyébe a teljes listáról bekerül a következő kérdés.</p>
+<p>Valahogy így fog kinézni:</p>
+<p><img src="image-20240313221824912.png" alt="image-20240313221824912"></p>
+<h2 id="kinnduló-állományok">Kinnduló állományok</h2>
+<p>A feladat megoldásához szükséges fájt itt találjátok:</p>
+<p><a href="hajozasi_szabalyzat_kerdessor_BOM.txt">hajozasi_szabalyzat_kerdessor_BOM.txt</a></p>
+<p>Érdemes megnézni a fájlt mielőtt elkezdhetek dolgozni!</p>
+<ul>
+<li><p>A mezőket a tabulátor (<code>\t</code>) tagolja.</p>
+</li>
+<li><p>Az első oszlop a kérdés sorszámát tartalmazza,</p>
+</li>
+<li><p>ezt a kérdés szövege követi,</p>
+</li>
+<li><p>egy kérdéshez a kérdésen felül minden esetben három lehetséges válasz tartozik,</p>
+</li>
+<li><p>néhány kérdéshez tartozik kép is, a következő adat a kép fájlneve,</p>
+</li>
+<li><p>az utolsó szám a helyes válaszlehetőségét sorszámát tartalmazza.</p>
+</li>
+</ul>
+<p>A képeket webről töltjük majd be.</p>
+<h2 id="a-megoldás-menete">A megoldás menete</h2>
+<p>(+/-) Töltsd Git-ről a Solution-t, amibe eddig is dolgoztál, ebbe hozd létre az új projektet <code>HajósTeszt</code> néven! A munka végeztével <code>commit</code> és <code>push</code> 😊</p>
+<p>(+/-) Hozz létre egy osztályt <code>Kérdés</code> néven. Ez az osztály ír le egy kérdést -- tehát a fájl minden sorához létrehozunk majd egy példányt ebből az osztályból --, a példányokat pedig majd egy listában helyezzük el.</p>
+<p><code>Kérdés</code> osztály tulajdonságai képezzék le a fájlban lévő oszlopokat:</p>
+<pre><code class="lang-csharp">internal class Kérdés
+{
+    public string KérdésSzöveg { get; set; }
+    public string Válasz1 { get; set; }
+    public string Válasz2 { get; set; }
+    public string Válasz3 { get; set; }
+    public string URL { get; set; }
+    public int HelyesVálasz { get; set; }
+    public int HelyesVálaszokSzáma { get; set; }
+}
+</code></pre>
+<h2 id="csv-feldolgozása">CSV feldolgozása</h2>
+<p>(+/-) A <code>Form2</code>-et bővítsük két listával:</p>
+<ul>
+<li><p>az egyik, kérdésből álló listába az összes kérdést olvassuk majd be a fájlból,</p>
+</li>
+<li><p>a másik listába viszont az éppen gyakoroltatott 7 kérdés kerül majd átmásolása a teljes listából.</p>
+</li>
+<li><p>Ezen felül szükségünk lesz egy változóra, ami éppen feltett kérdés sorszámát tartalmazza a szűkített, 7 elemű listából. Tehát ennek a változónak az értéke 0 és 6 között lehet majd.</p>
+</li>
+</ul>
+<p>Valahogy így:</p>
+<pre><code class="lang-csharp">List&lt;Kérdés&gt; ÖsszesKérdés;
+List&lt;Kérdés&gt; AktívKérdések;
+int AktívKérdés=5;
+</code></pre>
+<p>Teszteléshez most alapértelmezetten 5 állítotsuk be aktív kérdésnek, mert ehhez van kép is.</p>
+<p>(+/-) Ezután hozzunk létre egy metódust mely beolvassa a fájlból a kérdéseket. Érdemes megfigyelni hogy a <code>KérdésBeolvasás()</code> metódus visszatérési értéke egy kérdés típusú elemekből álló lista. Ez így szép 😊</p>
+<div class="TIP">
+<h5>Tip</h5>
+<p>Az alábbi kódrészletet éremes &quot;kézzel&quot; felépíteni, és nem bemásolni, mert ilyen biztosan lesz a következő ZH-ban.</p>
+</div>
+<pre><code class="lang-csharp">List&lt;Kérdés&gt; KérdésBeolvasás()
+{
+  List&lt;Kérdés&gt; kérdések = new List&lt;Kérdés&gt;();
+  StreamReader sr = new StreamReader(&quot;hajozasi_szabalyzat_kerdessor_BOM.txt&quot;, true);
+
+  while (!sr.EndOfStream)
+  {
+
+     string sor = sr.ReadLine() ?? string.Empty; 
+     //A ?? azt jelenti, hogy ha az sr.ReadLine() null értékkel jön vissza, akkor legyen üres string a sor változó értéke
+      
+     string[] tömb = sor.Split(&quot;\t&quot;);
+     if (tömb.Length != 7) continue; 
+     //Ha nem 6 részre hasítja a sort a TAB, akkor ez egy rossz sor, megyünk a következőre
+
+     Kérdés k = new Kérdés();
+     k.KérdésSzöveg = tömb[1];
+     k.Válasz1 = tömb[2];
+     k.Válasz2 = tömb[3];
+     k.Válasz3 = tömb[4];
+     k.URL = tömb[5];
+
+     int.TryParse(tömb[6], out int jóválasz); //Ez a best practice
+
+     k.HelyesVálasz = jóválasz;
+
+     kérdések.Add(k);
+  }
+  sr.Colse();
+  return kérdések;
+}
+</code></pre>
+<p>A kódrészlet elemeit előadáson részletesen tagoltuk. Csak ismétlésképpen:</p>
+<ul>
+<li><p>Szövegfájlt beolvasni a <code>StreamReader</code> osztály segítségével lehet. A  <code>StreamReader</code>  konstruktorának első argumentuma a fájlnév, a második <code>bool</code> típusú argumentummal lehet megadni, hogy a fájl kezelésénél figyelembe vegye a karakterkódolást leíró BOM-ot, azaz az első négy bájtot a szövegfájlban.</p>
+</li>
+<li><p>Szövegfájl beolvasásánál nem tudhatjuk előre, hogy hány sort fogunk beolvasni, éppen ezért nem előírt lépésszáú ciklussal dolgozunk. A <code> while (!sr.EndOfStream)</code> addig pörög, amíg az olvasásban a fájl végére nem értünk. Természetesen, ha nem olvasunk, sosem érünk a végére -- hacsak nem üres szövegfájlról van szó.</p>
+</li>
+<li><p>A C#-ban érdekesen működnek az elemi változók. Úgy viselkednek, mint hogyha objektumok lennének: vannak metódusaik. A <code>string</code> osztálynak például van egy <code>Split()</code> metódusa, mely az argumentumként átadott szöveg vagy karakter mentén feldarabolja a stringet. Az eredmény egy tömb lesz, mely annyi elemből áll, ahány darabra szelte az elválasztó karakter - vagy string - (más néven delimiter) a szöveget.</p>
+</li>
+<li><p>A szövegfájlok feldolgozása csupa veszély! Egyáltalán nem biztos, hogy ahol számot várunk ott szám is lesz. A <em>best practice</em> szöveg számmá alakítására a <code>TryParse</code>. Ha az átalakítás sikerül, jó, ha nem, akkor sem kapunk hibaüzenetet. Az <code>out</code>-ról lesz még bővebben szó, a lényeg hogy az eredmény az argumentumban átadott változóba kerül vissza.</p>
+</li>
+<li><p>Miután létrehoztuk az új kérdést, nem felejtjük el betenni a listába.</p>
+</li>
+<li><p>Az olvasási ciklus után a metódus visszaadja a feltöltött listát.</p>
+</li>
+</ul>
+<div class="IMPORTANT">
+<h5>Important</h5>
+<p>Fájkezelésnél sohasem lehetünk biztosak a sikerben. Mindig használj <code>try-catch</code> blokkot!</p>
+</div>
+<h2 id="az-alkalmazás-indulása">Az alkalmazás indulása</h2>
+<p>(+/-) Rendeljünk eseménykiszolgálót a <code>Form1</code> <code>Load</code> eseményéhez!</p>
+<p>(+/-) Az eseménykiszolgálóban hívjuk meg az előbb elkészített <code> KérdésBeolvasás();</code> metódust!</p>
+<p>(+/-) Ezután inicializáljuk az <code>AktívKérdések</code> listát! Ha megfigyelitek az előbb ezt még nem tettük meg:</p>
+<pre><code class="lang-csharp">List&lt;Kérdés&gt; ÖsszesKérdés;
+List&lt;Kérdés&gt; AktívKérdések;
+</code></pre>
+<div class="NOTE">
+<h5>Note</h5>
+<p>A <code>List&lt;Kérdés&gt; AktívKérdések;</code> csak egy <code>Kérdés</code> típusú elemekből álló ún. <strong>referenciát</strong> hoz létre. Viszont egyenlőre még nem hoztuk létre a tényleges listát a memóriában. Ebben a pillanatban az <code>ÖsszesKérdés</code> értéke még <code>null</code>. A tényleges objektum létrehozása majd az <code>AktívKérdések = new List&lt;Kérdés&gt;();</code> kifejezéssel történik.</p>
+<pre><code class="lang-csharp">List&lt;Kérdés&gt; AktívKérdések;
+AktívKérdések = new List&lt;Kérdés&gt;();
+</code></pre>
+<p>A fenti két sor összevonható:</p>
+<pre><code>List&lt;Kérdés&gt; AktívKérdések = new List&lt;Kérdés&gt;();
+</code></pre>
+</div>
+<p>(+/-) Az <code>ÖsszesKérdés</code> listát tölsük fel a <code>KérdésBeolvasás()</code> metódus hívásával:</p>
+<pre><code class="lang-csharp">private void Form1_Load(object sender, EventArgs e)
+{
+    AktívKérdések = new List&lt;Kérdés&gt;();
+    ÖsszesKérdés = KérdésBeolvasás(); 
+}
+
+</code></pre>
+<p>(+/-) Most már készen állunk arra, hogy az első 7 kérdést áthelyezzük az <code>ÖsszesKérdés</code> listából az <code>AktívKérdések</code> listába:</p>
+<pre><code class="lang-csharp">private void Form1_Load(object sender, EventArgs e)
+{
+    AktívKérdések = new List&lt;Kérdés&gt;();
+    ÖsszesKérdés = KérdésBeolvasás(); 
+    for (int i = 0; i &lt; 7; i++)
+    {
+        AktívKérdések.Add(ÖsszesKérdés[0]);
+        ÖsszesKérdés.RemoveAt(0);
+    }
+}
+</code></pre>
+<p>A <code> ÖsszesKérdés.RemoveAt(0)</code> törli a lista első elemét, és az eddigi második elem kerül az első helyre. Egy éles alkalmazásban itt mindenféle ellenőrzéseket kéne végezni, hogy a beolvasott szövegfájl egyáltalán tartalmaz-e legalább 7 kérdést.</p>
+<p>Tesztelési céllal érdemes kirakni egy <code>DataGridView</code>-t az űrlapra, és bekötni az adat forrását. Ha mindent jól csináltunk megjelenik az első hét kérdés rácsban.</p>
+<pre><code class="lang-csharp">dataGridView1.DataSource = AktívKérdések;
+</code></pre>
+<h2 id="válaszgomb-létrehozása"><code>VálaszGomb</code> létrehozása</h2>
+<p>A válaszlehetőségek megjelenítéséhez érdemes egy új osztályt létrehozni. Ehhez most nem a gombot vagy a címkét fogjuk használni ősosztályként, mert ezek a vezérlők nem kezelik rendesen a többsoros szövegeket. Illetve kezelik, csak nekünk kell beállítani, hogy hol legyen a sortörés.</p>
+<p>Ha valaki szeretne egy olyan szövegdobozt, amiben a szöveget nem lehet szerkeszteni, nincs neki kerete, és többsoros szöveget is tud tárolni, forduljon bizalommal a ChatGPT-hez :)</p>
+<p>Az eredmény valami ilyesmi lesz, ha még keretet is szeretnénk, ha a felhasználó fölé megy az egérrel, és kéz alakú a kurzort, ami segít rájönni a felhasználónak, hogy mit kell csinálni:</p>
+<pre><code class="lang-csharp">internal class VálaszGomb : TextBox
+{
+    public VálaszGomb()
+    {
+        BackColor = Color.LightGray;
+        Multiline = true;
+        ReadOnly = true;
+
+        MouseEnter += VálaszGomb_MouseEnter;
+        MouseLeave += VálaszGomb_MouseLeave;
+
+        BorderStyle = BorderStyle.None;
+        Cursor = Cursors.Hand;
+    }
+
+    private void VálaszGomb_MouseLeave(object? sender, EventArgs e)
+    {
+        BorderStyle = BorderStyle.None;
+    }
+
+    private void VálaszGomb_MouseEnter(object? sender, EventArgs e)
+    {
+        BorderStyle = BorderStyle.FixedSingle;
+    }
+}
+</code></pre>
+<p>Ha ezzel megvagyunk, érdemes fölépíteni az UI-t. Fordítás után a Toolboxban meg kell jelenjen az új választógomb. Ha ezt nem teszi, érdemes újraindítani a VS-t!</p>
+<h2 id="kérdés-megjelenítése-a-képernyőn">Kérdés megjelenítése a képernyőn</h2>
+<p>A kérdésmegjelenítést végző kódrészletet megint érdemes kiszervezni külön metódusba!</p>
+<p>A képek a <a href="https://storage.altinum.hu/hajo/">https://storage.altinum.hu/hajo/</a> URL alá kerültek fel.</p>
+<p>Ha nincs kép és úgy próbáljuk meg betölteni, a program hibára fut.</p>
+<p>Legkifinomultabban a <code>string.IsNullOrEmpty</code> metódussal tudjuk eldönteni, hogy üres vagy <code>null</code>-e egy string.</p>
+<pre><code class="lang-csharp">void KérdésMegjelenítés(Kérdés kérdés)
+{
+    labelKérdés.Text = kérdés.KérdésSzöveg;
+    textBox1.Text = kérdés.Válasz1;
+    textBox2.Text = kérdés.Válasz2;
+    textBox3.Text = kérdés.Válasz3;
+    if (!string.IsNullOrEmpty(kérdés.URL))
+    {
+        pictureBox1.Load(&quot;https://storage.altinum.hu/hajo/&quot; + kérdés.URL);
+        pictureBox1.Visible = true;
+    }
+    else
+    {
+        pictureBox1.Visible = false;
+    }            
+}
+</code></pre>
+<h1 id="egyéni-feladatok">Egyéni feladatok</h1>
+<p>(+/-) Helyezz el az űrlapon egy „Következő” gombot, megjeleníti a következő kérdést természetesen hogyha az aktív kérdés száma eléri a 7-et, elölről kell kezdeni.</p>
+<p>(+/-) Rendelj eseménykiszolgálót a válasz gombok kattintás eseményéhez, és ez eseménykiszolgálóban színezd pirosra, illetve zöldre a gombokat annak függvényében, hogy eltalálta-e a felhasználó a helyes választ.</p>
+<p>(+/-) Ha a feltaláló eltalálta a helyes választ, az éppen megjelenített kérdésnél a <code> HelyesVálaszokSzáma</code> tulajdonság értékét növeld egyel!</p>
+<p>(+/-) Ha a <code>HelyesVálaszokSzáma</code> elérte a hármat, cseréld ki a kérdést az összes kérdést tartalmazó lista első (nulladik) elemére. Az összes kérdést tartalmazó listából pedig vedd ki a nulladik elemet!</p>
+<p>Happy Coding!</p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/altinum/szamtud_docfx/blob/main/softec_kk/4_file/hajos_gyak.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

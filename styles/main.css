@@ -1,0 +1,381 @@
+/* Pretty links*/
+    
+/*
+    a:not([href*='yourdomain.com']):not([href^='#']):not([href^='/']):after {
+        font-family: 'FontAwesome';
+        content: " \f08e";
+    }
+  */  
+    /*Video in box*/
+
+    .innerVideoContainer {
+        margin-bottom: 20px;
+        /*width: 50%;*/
+        position: relative;
+    }
+
+        .innerVideoContainer video {
+            width: 100%;
+            background-color: lightgrey;
+        }
+
+        .innerVideoContainer div {
+            position: absolute;
+            top: 0px;
+            right: 0px;
+            color: white;
+            height: 30px;
+            width: 30px;
+            cursor: pointer;
+            background: url('data:image/svg+xml;utf8, <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20pt" height="20pt" viewBox="0 0 20 20" version="1.1"> <g id="surface5398168"> <path style="fill-rule:nonzero;fill:rgb(100%,100%,100%);fill-opacity:1;stroke-width:10;stroke-linecap:butt;stroke-linejoin:round;stroke:rgb(0%,0%,0%,.5);stroke-opacity:1;stroke-miterlimit:10;" d="M 86 81.04296 L 145.448812 21.594148 L 150.405852 26.551188 L 90.95704 86 L 150.405852 145.448812 L 145.448812 150.405852 L 86 90.95704 L 26.551188 150.405852 L 21.594148 145.448812 L 81.04296 86 L 21.594148 26.551188 L 26.551188 21.594148 Z M 86 81.04296 " transform="matrix(0.109535,0,0,0.109535,0.58,0.58)"/> <path style=" stroke:none;fill-rule:nonzero;fill:rgb(100%,100%,100%);fill-opacity:1;" d="M 3.488281 2.945312 L 2.945312 3.488281 L 9.457031 10 L 2.945312 16.511719 L 3.488281 17.054688 L 10 10.542969 L 16.511719 17.054688 L 17.054688 16.511719 L 10.542969 10 L 17.054688 3.488281 L 16.511719 2.945312 L 10 9.457031 Z M 3.488281 2.945312 "/> </g> </svg>');
+        }
+p::first-line {
+  text-indent: 1em; /* adjust the value as needed */
+}
+    .param {
+        margin: 48px;
+    }
+
+    .nodisplay {
+        display: none;
+    }
+
+/*Task*/
+
+    .tg_taskctrl {
+    cursor: pointer; 
+     user-select: none;
+     margin-right: 6px;
+    }
+
+    .tg_task {
+        /*border: 1px solid gray;*/
+        /*padding-left: 23px;
+        margin-left: -23px;
+        padding-right: 23px;
+        margin-right: -23px;
+        margin-bottom:5px;*/
+        cursor:pointer;
+        color:rgb(102,102,102);
+    }
+    
+    /* .tg_task :hover{
+        background-color:aqua
+    }
+    
+        .tg_task h3 {
+            
+            padding-left: 23px;
+            margin-left: -23px;
+            padding-right: 23px;
+            margin-right: -23px;
+            margin-top: 10px;
+        }
+    
+    .tg_success {
+        color: forestgreen;
+        transform: rotate(90deg); 
+    }
+    
+    .tg_fail {
+        color: red;
+        transform: rotate(270deg);
+    }
+
+    .tg_taskctrl {
+        cursor: pointer;
+        user-select: none;
+        margin-right: 6px; 
+    }*/
+    
+        .tg_taskctrl span {
+            color: var(--font-color);
+            background-color: var(--neutral-color);
+            /*width: 20px;
+            display: inline-block;*/
+            /*float: left;
+            width: 20px;*/
+            border-radius: 4px;
+            padding-left: 4px;
+            padding-right: 4px;
+        }
+    
+    .tg_success :nth-child(2) {
+        background: var(--succes-color) !important;
+        color: white;
+    }
+    .tg_success :first-child {
+        color: var(--succes-color) !important;
+        color: white;
+    }
+    
+    
+    .tg_fail :last-child {
+        background: var(--fail-color) !important;
+        color: white;
+    }
+    
+    .tg_fail :first-child {
+        color: var(--fail-color) !important;
+        color: white;
+    }
+
+
+    /*STEPS*/
+
+:root {
+    --succes-color: green;
+    --fail-color: red;
+    --neutral-color: rgb(241,241,241);
+    --end-color: rgb(241,241,241);
+    --start-color: green;
+    --font-color:rgb(102,102,102);
+}
+
+.progressbar {
+    position: absolute;
+    bottom: 0;
+    left: 0;   
+}
+
+.steps {
+    margin: 4px;
+    padding: 0;
+    overflow: hidden;
+}
+
+    .steps a {
+        color: white;
+        text-decoration: none;
+    }
+
+    .steps em {
+        display: block;
+        font-size: 12px;
+        color: white;
+        font-style: normal
+        /*font-weight: bold;*/
+    }
+
+    .steps li:first-child {
+        cursor: default;
+        pointer-events: none;
+    }
+
+    .steps li:last-child {
+        cursor: default;
+        pointer-events: none;
+        color: black;
+    }
+
+        .steps li:last-child:after { /*no arrow at the end*/
+            display: none
+        }
+
+    .steps li {
+        float: left;
+        margin-left: 0;
+        width: 20px; /* 100 / number of steps */
+        height: 20px; /* total height */
+        line-height: 20px; /*same as total height*/
+        list-style-type: none;
+        padding: 0px 5px 5px 10px; /* padding around text, last should include arrow width */
+        border-right: 2px solid white; /* width: gap between arrows, color: background of document - used to be 1px*/
+        position: relative;
+        cursor: pointer;
+    }
+        /* remove extra padding on the first object since it doesn't have an arrow to the left */
+        .steps li:first-child {
+            padding-left: 5px;
+            width: 50px;
+        }
+        /* white arrow to the left to "erase" background (starting from the 2nd object) */
+        .steps li:nth-child(n+2)::before {
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: block;
+            border-left: 8px solid white; /* width: arrow width, color: background of document */
+            border-top: 10px solid transparent; /* width: half height */
+            border-bottom: 10px solid transparent; /* width: half height */
+            width: 0;
+            height: 0;
+            content: " ";
+        }
+        /* colored arrow to the right */
+        .steps li::after {
+            z-index: 1; /* need to bring this above the next item */
+            position: absolute;
+            top: 0;
+            right: -8px; /* arrow width (negated) */
+            display: block;
+            border-left: 8px solid #7c8437; /* width: arrow width */
+            border-top: 10px solid transparent; /* width: half height */
+            border-bottom: 10px solid transparent; /* width: half height */
+            width: 0;
+            height: 0;
+            content: " ";
+        }
+
+    /* Setup colors (both the background and the arrow) */
+
+    /* Completed */
+    .steps li {
+        background-color: var(--neutral-color);
+    }
+
+        .steps li::after {
+            border-left-color: var(--neutral-color);
+        }
+
+
+        /* Fail */
+        /*.pb_fail*/
+        .steps li.pb_fail {
+            background-color: var(--fail-color);
+        }
+
+            .steps li.pb_fail::after {
+                border-left-color: var(--fail-color);
+            }
+
+.pb_fail em::after {
+    content: "?"
+}
+/* Success */
+.steps li.pb_success {
+    background-color: var(--succes-color)!important;
+    color:white!important;
+}
+
+    .steps li.pb_success::after {
+        border-left-color: var(--succes-color);
+    }
+
+/* Start */
+.steps li.pb_start {
+    background-color: var(--succes-color);
+}
+
+    .steps li.pb_start::after {
+        border-left-color: var(--succes-color);
+    }
+/* End */
+.steps li.pb_end {
+    background-color: var(--end-color);
+    /*color:orange!important;*/
+    width: 60px;
+}
+
+    .steps li.pb_end::after {
+        border-left-color: var(--end-color);
+    }
+
+.pb_success em::after {
+    content: "✓";
+}
+/* Current */
+.steps li.current {
+    background-color: orange;
+}
+
+    .steps li.current::after {
+        border-left-color: orange;
+    }
+
+    /* Following */
+    .steps li.current ~ li {
+        background-color: #EBEBEB;
+    }
+
+        .steps li.current ~ li::after {
+            border-left-color: #EBEBEB;
+        }
+
+/* Hover for completed and current */
+.steps li:hover {
+    background-color: #696
+}
+
+    .steps li:hover::after {
+        border-left-color: #696
+    }
+nav svg{
+    height: 75%;
+    margin-top: 0.5rem
+}
+.hint{
+    color:gray;
+    padding:2px;
+}
+
+.stepper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background-color:var(--neutral-color);
+  min-height:6rem;
+    border: 1px solid var(--font-color);
+}
+
+.stepper-text {
+  flex: 1;
+  word-wrap: break-word;
+  padding:1rem;
+}
+
+.step-chevron-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-left: 10px; /* adjust as needed */
+  user-select:none;
+}
+
+.step-counter {
+  margin: 5px 0; /* adjust as needed */
+     color:var(--font-color);
+     font-size: 2rem;
+}
+
+.step-chevron-up,
+.step-chevron-down {
+  border: none;
+  padding: 0;
+  margin: 0;
+    width: 4rem;
+    height: 3rem;
+    cursor:pointer;
+}
+
+.svg-icon {
+  display: flex;
+    width: 4rem;
+    height: 3rem;
+    fill:var(--font-color);
+}
+.stepper .svg-icon:hover {
+  fill: rgb(172, 172, 172);
+    
+}
+.svg-icon:hover path{
+  fill: rgb(172, 172, 172);
+}
+.inactive{
+    fill: var(--neutral-color)!important;
+    cursor: default;
+}
+.inactive:hover path{
+    fill: var(--neutral-color)!important;
+    cursor: default !important;
+}
+.stepDescription{
+    width: 0;
+    height: 0;
+    padding: 0;
+    margin: 0;
+    color: transparent;
+    overflow: hidden;
+}

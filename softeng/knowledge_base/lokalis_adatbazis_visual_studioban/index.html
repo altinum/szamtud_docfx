@@ -1,0 +1,131 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Lok&#225;lis adatb&#225;zis </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Lok&#225;lis adatb&#225;zis ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../../../favicon.ico">
+    <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../styles/docfx.css">
+    <link rel="stylesheet" href="../../../styles/main.css">
+    <meta property="docfx:navrel" content="../../../toc.html">
+    <meta property="docfx:tocrel" content="../../toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../../index.html">
+                <img id="logo" class="svg" src="../../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="lokális-adatbázis">Lokális adatbázis</h1>
+
+<p>Egy adatbázis-szerver üzemeltetése erőforrás igényes és költséges feladat. A lokális adatbázis egyértelmű hátránya, hogy nem igazán tudja egyszerre több felhasználó elérni az adatokat. Viszont nincs szükség internet elérésre és/vagy szerver üzemeltetésére a használatához. Lokális adatbázis használata <em>production</em>, azaz éles környezetben nem javasolt, fejlesztéshez és prototípus készítéshez viszont kiváló eszköz.</p>
+<h2 id="lokális-adatbázis-létrehozásának-lépései-egy-visual-studio-projektben">Lokális adatbázis létrehozásának lépései egy Visual Studio projektben</h2>
+<p>◯ Adj egy <code>Service based database</code> objektumot a projekthez, az objektum neve lesz az adatbázis neve! (A képen látható ablak a <em>Solution Explorer</em>-ben jobb egérgombra megjelenő menüben az <em>Add new item</em> menüpontra kattintva jelenik meg.)</p>
+<p><img src="service-based-db-1.png" alt="kep1"></p>
+<p>Ez két új fájlt fog létrehozni a Solution Explorerben:</p>
+<ul>
+<li>A .mdf kiterjesztésű maga az adatbázis</li>
+<li>Az .ldf kiterjesztésű az adatbázishoz kapcsolódó log fájl. (Ez  utóbbit büntetlenül lehet törölni is, legfeljebb újra létrejön.)</li>
+</ul>
+<p><img src="service-based-db-2.png" alt="kep2"></p>
+<p>◯ A Server Explorer-ben csatlakozz a létrejött adatbázishoz</p>
+<p>Új Connection felvétele esetén most nem a szerver, hanem a <code>Microsoft SQL Server Database File</code> opciót kell kiválasztani!</p>
+<p><img src="local-connection-1.png" alt="kep3">
+<img src="local-connection-2.png" alt="kep4">
+Előfordulhat, hogy az mdf-et csak akkor engedi kiválasztani a VS, ha be van zárva az azt tartalmazó projekt!
+A Windows Authentication opció maradjon kiválasztva.</p>
+<p><img src="local-connection-3.png" alt="kep5"></p>
+<p>Ezt a VS automatikusan elvégzi a <code>Service based database</code> létrehozásakor, de ha egy másik gépen újra nyitod a projektedet, akkor már kézzel kell majd megcsinálni.</p>
+<p>◯ Az ORM létrehozásától kezdve a lokális adatbázist ugyanúgy kell használni, mint bármelyik szerveren található adatbázist.</p>
+<p>Egy apró különbség, hogy mivel itt nincs authentikáció, ezért nincs olyan érzékeny adat, amit le kellene menteni a <em>ConnectionString</em>-be</p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/altinum/szamtud_docfx/blob/main/softeng/knowledge_base/lokalis_adatbazis_visual_studioban/index.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../styles/main.js"></script>
+  </body>
+</html>
