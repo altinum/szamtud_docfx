@@ -21,13 +21,38 @@ function toggleBackgroundColor() {
   targetElement.style.backgroundColor = isVisibleNow ? 'red' : 'green';
 }
 
-//Intersection Observer API for automatic toggling
+let startTime;
+let currentTime;
+
+const timingInfo = {
+  totalVisibleTime: 0,
+  lastVisibleTime: null
+};
+
 const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    entry.target.style.backgroundColor = entry.isIntersecting ? 'red' : 'green';
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      if (!startTime) {
+        startTime = performance.now()/1000;
+      }
+      
+      timingInfo.lastVisibleTime = time;
+    } else {
+      currentTime = performance.now()/1000;
+      stopClock();
+    }
   });
 }, { threshold: 0.1 });
 
-const targetElement = document.getElementById('target-element');
+
+function stopClock() {
+  if (currentTime && startTime) {
+    timingInfo.totalVisibleTime += (currentTime - startTime);
+    startTime = null;
+    currentTime = null;
+  }
+}
+
+const targetElement = document.getElementById('a-számonkérések-időpontjai');
 observer.observe(targetElement);
 
