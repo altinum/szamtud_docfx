@@ -41,6 +41,7 @@ window.onload = () => {
 const observer = new IntersectionObserver(
   (entries) => {
     entries.forEach((entry) => {
+      //a látszódó mapSection kiválasztása
       let matchingSection = mapSections.find(
         (section) => section.element === entry.target
       );
@@ -48,6 +49,16 @@ const observer = new IntersectionObserver(
       if (entry.isIntersecting) {
         if (!startTime) {
           startTime = performance.now() / 1000;
+        }
+
+        matchingSection.timingInfo.y = entry.target.offsetTop;
+        matchingSection.timingInfo.height = entry.target.offsetHeight;
+
+        if (matchingSection.timingInfo.lastVisibleTime == null) {
+          addMapSection(
+            matchingSection.timingInfo.y,
+            matchingSection.timingInfo.height
+          );
         }
 
         matchingSection.timingInfo.lastVisibleTime = startTime;
@@ -59,6 +70,17 @@ const observer = new IntersectionObserver(
   },
   { threshold: 0.1 }
 );
+
+function addMapSection(y, height) {
+  let heatmap = document.getElementById("heatmap");
+  let section = document.createElement("div");
+  section.classList.add("map-section");
+
+  section.style.top = y - heatmap.offsetTop + "px";
+  section.style.height = height + "px";
+
+  heatmap.appendChild(section);
+}
 
 function stopClock(section) {
   if (currentTime && startTime) {
