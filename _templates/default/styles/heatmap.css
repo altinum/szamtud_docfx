@@ -1,0 +1,11 @@
+.col-md-10 {
+  display: flex;
+  padding-left: 0;
+}
+#heatmap {
+  width: 5vw;
+  position: relative;
+  border: solid 2pt black;
+  margin-right: 15px;
+  min-height: 100%;
+}
