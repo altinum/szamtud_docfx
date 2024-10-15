@@ -12,6 +12,12 @@ class TimingInfo {
 }
 
 window.onload = () => {
+  //a futás feltétele, hogy a heatmap paraméter értéke true legyen
+  const urlParams = new URLSearchParams(window.location.search);
+  if (urlParams.get("heatmap") !== "true") {
+    return;
+  }
+
   //heatmap element hozzáadása a dokumentumhoz
   var divBeforeHeatmap = document.getElementsByClassName("col-md-10");
   divBeforeHeatmap[0].insertAdjacentHTML(
