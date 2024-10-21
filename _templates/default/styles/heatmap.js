@@ -25,10 +25,24 @@ window.onload = () => {
     '<div id="heatmap"></div>'
   );
 
+  //releváns element típusok kiválasztása csak a col-md-10 div-ből és a hidden iframe videókat kizárva
+  let heatmapSections = document
+    .querySelector(".col-md-10")
+    .querySelectorAll("p, ul, tr, iframe, pre");
+
+  //szűrés, hogy csak azokat az elemeket tartsuk meg, amelyek nincsenek másik kiválasztott elemben
+  //(pl. listában lévő p-k ne legyenek kiválasztva)
+  heatmapSections = Array.from(heatmapSections).filter((element) => {
+    const parentDiv = element.closest("div");
+    if (parentDiv && parentDiv.classList.contains("hidden")) {
+      return false;
+    }
+    return !Array.from(heatmapSections).some(
+      (parent) => parent !== element && parent.contains(element)
+    );
+  });
+
   //heatmapSection osztály hozzáadása a tananyag részekhez
-  const heatmapSections = document.querySelectorAll(
-    "p, ul, table, iframe, pre"
-  );
   heatmapSections.forEach((heatmapSection) => {
     heatmapSection.classList.add("heatmap-section");
   });
@@ -60,7 +74,12 @@ const observer = new IntersectionObserver(
           startTime = performance.now() / 1000;
         }
 
-        matchingSection.timingInfo.y = entry.target.offsetTop;
+        if (matchingSection.element.closest("table")) {
+          matchingSection.timingInfo.y =
+            entry.target.offsetParent.offsetTop + entry.target.offsetTop;
+        } else {
+          matchingSection.timingInfo.y = entry.target.offsetTop;
+        }
         matchingSection.timingInfo.height = entry.target.offsetHeight;
 
         //ha még nem látszódott ez az element, akkor a heatmapben létrehozok neki egy div-et
@@ -72,13 +91,16 @@ const observer = new IntersectionObserver(
         }
 
         matchingSection.timingInfo.lastVisibleTime = startTime;
-      } else {
+      } else if (matchingSection.timingInfo.lastVisibleTime !== null) {
         currentTime = performance.now() / 1000;
         stopClock(matchingSection);
+      } else {
+        return;
       }
     });
   },
-  { threshold: 0.1 }
+  { threshold: 0.5
+   }
 );
 
 function addMapSection(y, height) {
@@ -94,8 +116,9 @@ function addMapSection(y, height) {
 }
 
 function stopClock(section) {
-  if (currentTime && startTime) {
-    section.timingInfo.totalVisibleTime += currentTime - startTime;
+  if (currentTime) {
+    section.timingInfo.totalVisibleTime +=
+      currentTime - section.timingInfo.lastVisibleTime;
     startTime = null;
     currentTime = null;
   }
