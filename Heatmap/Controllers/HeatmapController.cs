@@ -1,7 +1,11 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Heatmap.Data;
+using Heatmap.Services;
 
-[Route("api/[controller]")]
+namespace Heatmap.Controllers;
+
+[Route("heatmap")]
 [ApiController]
 public class HeatmapController : ControllerBase
 {

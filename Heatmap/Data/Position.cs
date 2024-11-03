@@ -1,3 +1,5 @@
+namespace Heatmap.Data;
+
 public class Position {
     public int PositionId { get; set; }
 

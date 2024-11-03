@@ -1,3 +1,5 @@
+namespace Heatmap.Data;
+
 public class VisibilityInfo {
     public int VisibilityInfoId { get; set; }
 

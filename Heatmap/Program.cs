@@ -1,4 +1,5 @@
 using Microsoft.EntityFrameworkCore;
+using Heatmap.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 

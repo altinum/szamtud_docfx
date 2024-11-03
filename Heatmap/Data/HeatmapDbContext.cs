@@ -1,5 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 
+namespace Heatmap.Data;
+
 public class HeatmapDbContext : DbContext
 {
     public HeatmapDbContext(DbContextOptions<HeatmapDbContext> options) : base(options) { }

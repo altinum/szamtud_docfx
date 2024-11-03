@@ -1,3 +1,5 @@
+namespace Heatmap.Data;
+
 public class Subject {
     public int SubjectId { get; set; }
 

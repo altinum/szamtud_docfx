@@ -1,3 +1,5 @@
+namespace Heatmap.Data;
+
 public class Site {
     public int SiteId { get; set; }
 
