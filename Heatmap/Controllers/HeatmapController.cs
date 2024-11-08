@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Heatmap.Data;
 using Heatmap.Services;
+using Heatmap.services;
 
 namespace Heatmap.Controllers;
 
@@ -10,23 +11,118 @@ namespace Heatmap.Controllers;
 public class HeatmapController : ControllerBase
 {
     private readonly HeatmapDbContext _context;
+    private readonly Service _service;
 
-    public HeatmapController(HeatmapDbContext context)
+    public HeatmapController(HeatmapDbContext context, Service service)
     {
         _context = context;
+        _service = service;
     }
 
-    [HttpGet]
-    public async Task<ActionResult<IEnumerable<Subject>>> Get()
+    [HttpPut("currentHash/{siteId}")]
+    public async Task<ActionResult<bool>> UpdateCurrentHash([FromBody] string hash, [FromRoute] int siteId, CancellationToken cancellationToken)
     {
-        return await _context.Subjects.ToListAsync();
+        try
+        {
+            bool hashChanged = await _service.UpdateContentHashAsync(hash, siteId, cancellationToken);
+            return Ok(hashChanged);
+        }
+        catch (Exception ex)
+        {
+            return BadRequest(ex.Message);
+        }
+    }
+        
+
+    [HttpPost("emptyDatabase")]
+    public async Task<ActionResult> EmptyDatabase(CancellationToken cancellationToken)
+    {
+        try
+        {
+            await _service.EmptyDatabaseAsync(cancellationToken);
+        }
+        catch (Exception ex)
+        {
+            return BadRequest(ex.Message);
+        }
+
+        return Ok();
     }
 
-    [HttpPost]
-    public async Task<ActionResult<Subject>> Post(Subject entity)
+    [HttpGet("types")]
+    public async Task<ActionResult<IEnumerable<HtmlElementType>>> GetHtmlElementTypes(
+        CancellationToken cancellationToken) =>
+        await _context.HtmlElementTypes.ToListAsync(cancellationToken);
+
+
+    [HttpGet("sections")]
+    public async Task<ActionResult<IEnumerable<Section>>> GetSections(CancellationToken cancellationToken) =>
+        await _context.Sections.ToListAsync(cancellationToken);
+
+    [HttpPost("section")]
+    public async Task<ActionResult<Section>> CreateSection([FromBody] CreateSectionDto htmlElement,
+        CancellationToken cancellationToken)
     {
-        _context.Subjects.Add(entity);
-        await _context.SaveChangesAsync();
-        return CreatedAtAction("Get", new { id = entity.SubjectId }, entity);
+        try
+        {
+            Section section = await _service.CreateSectionAsync(htmlElement, cancellationToken);
+            return Ok(section);
+        }
+        catch (Exception ex)
+        {
+            return BadRequest(ex.Message);
+        }
+    }
+
+    [HttpPost("sites")]
+    public async Task<ActionResult<Section>> CreateSite([FromBody] string siteUrl, CancellationToken cancellationToken)
+    {
+        try
+        {
+            return Ok(await _service.CreateSiteAsync(siteUrl, cancellationToken));
+        }
+        catch (Exception ex)
+        {
+            return BadRequest(ex.Message);
+        }
+    }
+
+    [HttpPost("position")]
+    public async Task<ActionResult> CreatePositionInfo(Position position, CancellationToken cancellationToken)
+    {
+        try
+        {
+            await _service.CreatePositionInfoAsync(position, cancellationToken);
+        }
+        catch (Exception ex)
+        {
+            return BadRequest(ex.Message);
+        }
+
+        return Ok();
+    }
+
+    [HttpGet("positions")]
+    public async Task<ActionResult<IList<Position>>> GetPositionInfos(CancellationToken cancellationToken) => 
+        await _context.Positions.ToArrayAsync(cancellationToken);
+
+    [HttpGet("visibilityInfos")]
+    public async Task<ActionResult<IList<VisibilityInfo>>> GetVisibilityInfos(CancellationToken cancellationToken) => 
+        await _context.VisibilityInfos.ToArrayAsync(cancellationToken);
+
+    [HttpPut("timingInfo/{sectionId}")]
+    public async Task<ActionResult> UpdateTimingInfo([FromRoute] int sectionId, [FromBody] double visibleTime,
+        CancellationToken cancellationToken)
+    {
+        try
+        {
+            await _service.UpdateVisibilityInfoAsync(sectionId, visibleTime, cancellationToken);
+        }
+        catch (Exception ex)
+        {
+            return BadRequest(ex.Message);
+        }
+
+        return Ok();
     }
 }

@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using Heatmap.Data;
+using Heatmap.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -10,8 +11,12 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+//HeatmapDbContext hozzáadása
 builder.Services.AddDbContext<HeatmapDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+//Servicek regisztrálása
+builder.Services.AddScoped<Service>();
 
 builder.Services.AddCors(options =>
 {

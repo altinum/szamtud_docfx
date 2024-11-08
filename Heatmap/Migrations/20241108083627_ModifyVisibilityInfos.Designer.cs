@@ -4,6 +4,7 @@ using Heatmap.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Heatmap.Migrations
 {
     [DbContext(typeof(HeatmapDbContext))]
-    partial class HeatmapDbContextModelSnapshot : ModelSnapshot
+    [Migration("20241108083627_ModifyVisibilityInfos")]
+    partial class ModifyVisibilityInfos
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -85,7 +88,7 @@ namespace Heatmap.Migrations
                         .HasColumnType("nvarchar(max)")
                         .HasColumnName("Html_element");
 
-                    b.Property<int>("SiteId")
+                    b.Property<int?>("SiteId")
                         .HasColumnType("int")
                         .HasColumnName("Site_id");
 
@@ -115,33 +118,6 @@ namespace Heatmap.Migrations
                     b.HasKey("SiteId");
 
                     b.ToTable("Sites");
-                });
-
-            modelBuilder.Entity("Heatmap.Data.SiteVersion", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasColumnName("Id");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<string>("ContentHash")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)")
-                        .HasColumnName("Content_hash");
-
-                    b.Property<DateTime>("LastUpdated")
-                        .HasColumnType("datetime2")
-                        .HasColumnName("Last_updated");
-
-                    b.Property<int>("SiteId")
-                        .HasColumnType("int")
-                        .HasColumnName("Site_id");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("SiteVersions");
                 });
 
             modelBuilder.Entity("Heatmap.Data.Subject", b =>

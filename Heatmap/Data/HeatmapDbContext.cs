@@ -2,10 +2,8 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Heatmap.Data;
 
-public class HeatmapDbContext : DbContext
+public class HeatmapDbContext(DbContextOptions<HeatmapDbContext> options) : DbContext(options)
 {
-    public HeatmapDbContext(DbContextOptions<HeatmapDbContext> options) : base(options) { }
-
     public DbSet<Subject> Subjects { get; set; }
 
     public DbSet<HtmlElementType> HtmlElementTypes { get; set; }
@@ -17,6 +15,8 @@ public class HeatmapDbContext : DbContext
     public DbSet<Site> Sites { get; set; }
 
     public DbSet<VisibilityInfo> VisibilityInfos { get; set; }
+    
+    public DbSet<SiteVersion> SiteVersions { get; set; }
 
    protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -32,7 +32,7 @@ public class HeatmapDbContext : DbContext
         base.OnModelCreating(modelBuilder);
     }
 
-   private string ConvertToSnakeCase(string name)
+   private static string ConvertToSnakeCase(string name)
    {
     if (string.IsNullOrWhiteSpace(name)) return name;
     return string.Concat(name.Select((x, i) => 
