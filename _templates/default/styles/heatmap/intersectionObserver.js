@@ -1,37 +1,44 @@
-import { applicationUrl } from "./config.js";
+import { fetchData } from "./main.js";
 
-let startTime;
-let currentTime;
+let timingData = {};
 
 export const observer = new IntersectionObserver(
   (entries) => {
     entries.forEach((entry) => {
-      let element = entry.target;
+      const element = entry.target;
+      const elementId = element.id;
+
       if (entry.isIntersecting) {
-        if (!startTime) {
-          startTime = performance.now() / 1000;
+        if (!timingData[elementId]) {
+          timingData[elementId] = {
+            startTime: performance.now() / 1000,
+            currentTime: null,
+          };
         }
       } else {
-        currentTime = performance.now() / 1000;
-        const elementId = element.id;
-        stopClock(elementId);
+        if (timingData[elementId] && timingData[elementId].startTime) {
+          timingData[elementId].currentTime = performance.now() / 1000;
+          stopClock(elementId);
+        }
       }
     });
   },
   { threshold: 0.5 }
 );
 
-function stopClock(sectionId) {
-  if (currentTime) {
-    fetch(`${applicationUrl}heatmap/timingInfo/${sectionId}`, {
-      method: "PUT",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: parseFloat(currentTime - startTime),
-    });
+async function stopClock(elementId) {
+  const { startTime, currentTime } = timingData[elementId];
+  const duration = parseFloat(currentTime - startTime);
 
-    startTime = null;
-    currentTime = null;
+  try {
+    await fetchData(`heatmap/timingInfo/${elementId}`, "PUT", duration);
+    console.log(
+      `Section ${elementId} viewed for ${currentTime - startTime} seconds`
+    );
+  } catch (error) {
+    console.error(`Failed to update timing for section ${elementId}:`, error);
+  } finally {
+    //töröljük az adatokat az objektumból, hogy új mérésekhez frissítsük
+    delete timingData[elementId];
   }
 }

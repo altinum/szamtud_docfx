@@ -1,6 +1,7 @@
-import { applicationUrl } from "./config.js";
+import { fetchData, getSite } from "./main.js";
+import { heatmapPrecedingClass } from "./config.js";
 
-let site = {};
+export let site = {};
 
 export async function displayHeatmap() {
   //annak a megkeresése, hogy melyik oldalon vagyunk
@@ -13,20 +14,9 @@ export async function displayHeatmap() {
   await colorSections();
 }
 
-async function getSite() {
-  const response = await fetch(`${applicationUrl}heatmap/sites`);
-  const sites = await response.json();
-  for (const site of sites) {
-    if (
-      site.siteUrl === String(window.location.origin + window.location.pathname)
-    )
-      return site;
-  }
-}
-
 function createHeatmap() {
   //heatmap element hozzáadása a dokumentumhoz
-  var divBeforeHeatmap = document.getElementsByClassName("col-md-10");
+  var divBeforeHeatmap = document.getElementsByClassName(heatmapPrecedingClass);
   divBeforeHeatmap[0].insertAdjacentHTML(
     "afterbegin",
     '<div id="heatmap"></div>'
@@ -34,38 +24,29 @@ function createHeatmap() {
 }
 
 async function addMapSections() {
-  let heatmap = document.getElementById("heatmap");
+  const heatmap = document.getElementById("heatmap");
+  if (!heatmap || !site.siteId) return;
 
-  const response = await fetch(
-    `${applicationUrl}heatmap/positions/${site.siteId}`
-  );
-  let positions = await response.json();
-
+  const positions = await fetchData(`heatmap/positions/${site.siteId}`);
   for (let position of positions) {
     let section = document.createElement("div");
-    section.classList.add(`map-section`);
+    section.className = `map-section`;
     section.id = position.sectionId;
-    section.style.top = position.y - heatmap.offsetTop + "px";
-    section.style.height = position.height + "px";
+    section.style.top = `${position.y - heatmap.offsetTop}px`;
+    section.style.height = `${position.height}px`;
     heatmap.appendChild(section);
   }
 }
 
 async function colorSections() {
   //összes visibilityInfo lekérése
-  let response = await fetch(
-    `${applicationUrl}heatmap/visibilityInfos/${site.siteId}`
+  const visibilityInfos = await fetchData(
+    `heatmap/visibilityInfos/${site.siteId}`
   );
-  let visibilityInfos = await response.json();
 
   //az elemek közül a maximális és minimális látszódási idő lekérése
-  const minTime = Math.min(
-    ...visibilityInfos.map((visibilityInfo) =>
-      parseFloat(visibilityInfo.totalVisibleTime)
-    )
-  );
-  const maxTime = Math.max(
-    ...visibilityInfos.map((visibilityInfo) => visibilityInfo.totalVisibleTime)
+  const [minTime, maxTime] = getMinMaxTime(
+    visibilityInfos.map((info) => parseFloat(info.totalVisibleTime))
   );
 
   visibilityInfos.forEach((visibilityInfo) => {
@@ -81,9 +62,12 @@ async function colorSections() {
     //hőtérkép színek beállítása
     const color = getHeatmapColor(normalizedTime);
     const section = document.getElementById(visibilityInfo.sectionId);
-
     section.style.backgroundColor = color;
   });
+}
+
+function getMinMaxTime(times) {
+  return [Math.min(...times), Math.max(...times)];
 }
 
 function getHeatmapColor(value) {

@@ -22,12 +22,11 @@ window.onload = async () => {
 
 async function selectRelevantSections() {
   //megfigyelni kívánt elemtípusok lekérése az adatbázisból
-  const response = await fetch(`${applicationUrl}heatmap/types`);
-  const elementTypes = await response.json();
+  const elementTypes = await fetchData(`heatmap/types`);
   const typeNames = elementTypes.map((type) => type.typeName).join(",");
 
   //releváns element típusok kiválasztása csak a html-nek abból a részéből, amit meg kívánunk figyelni
-  //az observedRegion a script elején módosítható a kód újrafelhasználhatósága érdekében
+  //az observedRegion a configban módosítható a kód újrafelhasználhatósága érdekében
   let heatmapSections = document
     .querySelector(observedRegion)
     .querySelectorAll(typeNames);
@@ -52,7 +51,39 @@ async function selectRelevantSections() {
 }
 
 //segítő függvény az api hívásokhoz
-export async function fetchData(endpoint) {
-  const response = await fetch(`${applicationUrl}${endpoint}`);
-  return response.json();
+export async function fetchData(endpoint, method = "GET", body = null) {
+  const options = {
+    method,
+    headers: {
+      "Content-Type": "application/json",
+    },
+  };
+
+  if (body) {
+    options.body = JSON.stringify(body);
+  }
+
+  const response = await fetch(`${applicationUrl}${endpoint}`, options);
+  if (!response.ok) {
+    throw new Error(`HTTP error! status: ${response.status}`);
+  }
+
+  //ha van tartalom a válaszban, akkor parse-oljuk JSON-ként
+  const contentType = response.headers.get("content-type");
+  if (contentType && contentType.includes("application/json")) {
+    return response.json();
+  } else {
+    //ha nincs JSON, csak az OK státuszt jelöljük visszatérési értékként
+    return { status: "ok" };
+  }
+}
+
+export async function getSite() {
+  const sites = await fetchData("heatmap/sites");
+  for (const site of sites) {
+    if (
+      site.siteUrl === String(window.location.origin + window.location.pathname)
+    )
+      return site;
+  }
 }
