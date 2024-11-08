@@ -1,4 +1,4 @@
-import { applicationUrl } from "./main.js";
+import { applicationUrl } from "./config.js";
 
 export async function manageHtmlChange(elements) {
   //hash létrehozása az elemek alapján

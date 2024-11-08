@@ -1,24 +1,13 @@
-import {
-  createHeatmap,
-  addMapSections,
-  colorSections,
-} from "./displayHeatmap.js";
+import { displayHeatmap } from "./displayHeatmap.js";
 import { manageHtmlChange } from "./manageHtmlChange.js";
 import { observer } from "./intersectionObserver.js";
-
-export const applicationUrl = "http://localhost:5215/";
-const observedRegion = ".col-md-10";
+import { applicationUrl, observedRegion } from "./config.js";
 
 window.onload = async () => {
   //heatmap megjelenítés feltétele, hogy a heatmap paraméter értéke true legyen
   const urlParams = new URLSearchParams(window.location.search);
   if (urlParams.get("heatmap") == "true") {
-    //heatmap létrehozása
-    createHeatmap();
-    //div létrehozása a hőtérképben minden sectionnek
-    await addMapSections();
-    //minden section szinezése
-    await colorSections();
+    await displayHeatmap();
     return;
   }
 
@@ -60,4 +49,10 @@ async function selectRelevantSections() {
   heatmapSections.forEach((heatmapSection) => {
     heatmapSection.classList.add("heatmap-section");
   });
+}
+
+//segítő függvény az api hívásokhoz
+export async function fetchData(endpoint) {
+  const response = await fetch(`${applicationUrl}${endpoint}`);
+  return response.json();
 }

@@ -1,4 +1,4 @@
-import { applicationUrl } from "./main.js";
+import { applicationUrl } from "./config.js";
 
 let startTime;
 let currentTime;
