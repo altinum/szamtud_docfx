@@ -19,8 +19,13 @@ public class HeatmapController : ControllerBase
         _service = service;
     }
 
+    [HttpGet("sites")]
+    public async Task<ActionResult<IList<Site>>> GetSitesAsync( CancellationToken cancellationToken) =>
+        await _context.Sites.ToListAsync(cancellationToken); 
+
     [HttpPut("currentHash/{siteId}")]
-    public async Task<ActionResult<bool>> UpdateCurrentHash([FromBody] string hash, [FromRoute] int siteId, CancellationToken cancellationToken)
+    public async Task<ActionResult<bool>> UpdateCurrentHash([FromBody] string hash, [FromRoute] int siteId,
+        CancellationToken cancellationToken)
     {
         try
         {
@@ -32,14 +37,14 @@ public class HeatmapController : ControllerBase
             return BadRequest(ex.Message);
         }
     }
-        
 
-    [HttpPost("emptyDatabase")]
-    public async Task<ActionResult> EmptyDatabase(CancellationToken cancellationToken)
+
+    [HttpPost("emptyDatabase/{siteId}")]
+    public async Task<ActionResult> EmptyDatabase([FromRoute] int siteId, CancellationToken cancellationToken)
     {
         try
         {
-            await _service.EmptyDatabaseAsync(cancellationToken);
+            await _service.EmptyDatabaseAsync(siteId, cancellationToken);
         }
         catch (Exception ex)
         {
@@ -55,9 +60,10 @@ public class HeatmapController : ControllerBase
         await _context.HtmlElementTypes.ToListAsync(cancellationToken);
 
 
-    [HttpGet("sections")]
-    public async Task<ActionResult<IEnumerable<Section>>> GetSections(CancellationToken cancellationToken) =>
-        await _context.Sections.ToListAsync(cancellationToken);
+    [HttpGet("sections/{siteId}")]
+    public async Task<ActionResult<IEnumerable<Section>>> GetSectionsBySiteIdAsync([FromRoute] int siteId,
+        CancellationToken cancellationToken) =>
+        await _context.Sections.Where(s => s.SiteId == siteId).ToListAsync(cancellationToken);
 
     [HttpPost("section")]
     public async Task<ActionResult<Section>> CreateSection([FromBody] CreateSectionDto htmlElement,
@@ -102,13 +108,13 @@ public class HeatmapController : ControllerBase
         return Ok();
     }
 
-    [HttpGet("positions")]
-    public async Task<ActionResult<IList<Position>>> GetPositionInfos(CancellationToken cancellationToken) => 
-        await _context.Positions.ToArrayAsync(cancellationToken);
+    [HttpGet("positions/{siteId}")]
+    public async Task<IList<Position?>> GetPositionInfosBySiteUrl([FromRoute] int siteId, CancellationToken cancellationToken) =>
+        await _service.GetPositionsBySiteIdAsync(siteId, cancellationToken);
 
-    [HttpGet("visibilityInfos")]
-    public async Task<ActionResult<IList<VisibilityInfo>>> GetVisibilityInfos(CancellationToken cancellationToken) => 
-        await _context.VisibilityInfos.ToArrayAsync(cancellationToken);
+    [HttpGet("visibilityInfos/{siteId}")]
+    public async Task<IList<VisibilityInfo?>> GetVisibilityInfos([FromRoute] int siteId, CancellationToken cancellationToken) =>
+        await _service.GetVisibilityInfosBySiteIdAsync(siteId, cancellationToken);
 
     [HttpPut("timingInfo/{sectionId}")]
     public async Task<ActionResult> UpdateTimingInfo([FromRoute] int sectionId, [FromBody] double visibleTime,

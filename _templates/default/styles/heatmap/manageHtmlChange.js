@@ -24,14 +24,16 @@ export async function manageHtmlChange(elements) {
   if (contentChanged) {
     console.log("Az oldal HTML szerkezete megváltozott.");
 
-    await emptyDatabase();
+    await emptyDatabase(site.siteId);
     await createSectionInfo(elements);
     await createPositionInfo(elements);
   } else {
     try {
       //ha nem kell frissíteni az adatbázis akkor is le kell kérni a sectionöket és beállítani
       //az id-kat az elementeknek, hogy egyszerűbben lehessen hivatkozni rájuk
-      const response = await fetch(`${applicationUrl}heatmap/sections`);
+      const response = await fetch(
+        `${applicationUrl}heatmap/sections/${site.siteId}`
+      );
       let sections = await response.json();
 
       sections.forEach((section) => {
@@ -63,9 +65,9 @@ function hashString(str) {
   return hash.toString();
 }
 
-async function emptyDatabase() {
+async function emptyDatabase(siteId) {
   try {
-    await fetch(`${applicationUrl}heatmap/emptyDatabase`, {
+    await fetch(`${applicationUrl}heatmap/emptyDatabase/${siteId}`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

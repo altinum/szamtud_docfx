@@ -13,9 +13,10 @@ public class Service
         _context = context;
     }
 
-    public async Task EmptyDatabaseAsync(CancellationToken cancellationToken)
+    public async Task EmptyDatabaseAsync(int siteId, CancellationToken cancellationToken)
     {
-        IList<Section> sections = await _context.Sections.ToArrayAsync(cancellationToken);
+        IList<Section> sections =
+            await _context.Sections.Where(s => s.SiteId == siteId).ToArrayAsync(cancellationToken);
         foreach (var section in sections)
         {
             _context.Remove(section);
@@ -70,7 +71,7 @@ public class Service
     {
         Site? existingSite = await _context.Sites.SingleOrDefaultAsync(s => s.SiteUrl == siteUrl, cancellationToken);
         if (existingSite != null) return existingSite;
- 
+
         var uri = new Uri(siteUrl);
         string subjectName = uri.Segments[1].TrimEnd('/');
         Subject? subject =
@@ -98,6 +99,38 @@ public class Service
         };
         await _context.AddAsync(siteVersion, cancellationToken);
         await _context.SaveChangesAsync(cancellationToken);
+    }
+
+    public async Task<IList<Position?>> GetPositionsBySiteIdAsync(int siteId, CancellationToken cancellationToken)
+    {
+        Site site = (await _context.Sites.SingleOrDefaultAsync(s => s.SiteId == siteId, cancellationToken)!)!;
+        IList<Section> sections =
+            await _context.Sections.Where(s => s.SiteId == site.SiteId).ToArrayAsync(cancellationToken);
+
+        var positions = new List<Position?>();
+        foreach (var section in sections)
+        {
+            Position? position =
+                await _context.Positions.FirstOrDefaultAsync(p => p.SectionId == section.SectionId, cancellationToken);
+            positions.Add(position);
+        }
+        return positions;
+    }
+    
+    public async Task<IList<VisibilityInfo?>> GetVisibilityInfosBySiteIdAsync(int siteId, CancellationToken cancellationToken)
+    {
+        Site site = (await _context.Sites.SingleOrDefaultAsync(s => s.SiteId == siteId, cancellationToken)!)!;
+        IList<Section> sections =
+            await _context.Sections.Where(s => s.SiteId == site.SiteId).ToArrayAsync(cancellationToken);
+
+        var visibilityInfos = new List<VisibilityInfo?>();
+        foreach (var section in sections)
+        {
+            VisibilityInfo? visibilityInfo =
+                await _context.VisibilityInfos.FirstOrDefaultAsync(v => v.SectionId == section.SectionId, cancellationToken);
+            visibilityInfos.Add(visibilityInfo);
+        }
+        return visibilityInfos;
     }
 
     public async Task CreatePositionInfoAsync(Position position, CancellationToken cancellationToken)

@@ -1,6 +1,30 @@
-import { applicationUrl } from "./main.js";
+import { applicationUrl } from "./config.js";
 
-export function createHeatmap() {
+let site = {};
+
+export async function displayHeatmap() {
+  //annak a megkeresése, hogy melyik oldalon vagyunk
+  site = await getSite();
+  //heatmap létrehozása
+  createHeatmap();
+  //div létrehozása a hőtérképben minden sectionnek
+  await addMapSections();
+  //minden section szinezése
+  await colorSections();
+}
+
+async function getSite() {
+  const response = await fetch(`${applicationUrl}heatmap/sites`);
+  const sites = await response.json();
+  for (const site of sites) {
+    if (
+      site.siteUrl === String(window.location.origin + window.location.pathname)
+    )
+      return site;
+  }
+}
+
+function createHeatmap() {
   //heatmap element hozzáadása a dokumentumhoz
   var divBeforeHeatmap = document.getElementsByClassName("col-md-10");
   divBeforeHeatmap[0].insertAdjacentHTML(
@@ -9,10 +33,12 @@ export function createHeatmap() {
   );
 }
 
-export async function addMapSections() {
+async function addMapSections() {
   let heatmap = document.getElementById("heatmap");
 
-  const response = await fetch(`${applicationUrl}heatmap/positions`);
+  const response = await fetch(
+    `${applicationUrl}heatmap/positions/${site.siteId}`
+  );
   let positions = await response.json();
 
   for (let position of positions) {
@@ -25,9 +51,11 @@ export async function addMapSections() {
   }
 }
 
-export async function colorSections() {
+async function colorSections() {
   //összes visibilityInfo lekérése
-  let response = await fetch(`${applicationUrl}heatmap/visibilityInfos`);
+  let response = await fetch(
+    `${applicationUrl}heatmap/visibilityInfos/${site.siteId}`
+  );
   let visibilityInfos = await response.json();
 
   //az elemek közül a maximális és minimális látszódási idő lekérése
