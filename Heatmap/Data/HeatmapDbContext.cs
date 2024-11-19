@@ -7,6 +7,8 @@ public class HeatmapDbContext(DbContextOptions<HeatmapDbContext> options) : DbCo
     public DbSet<Subject> Subjects { get; set; }
 
     public DbSet<HtmlElementType> HtmlElementTypes { get; set; }
+    
+    public DbSet<HtmlElement> HtmlElements { get; set; }
 
     public DbSet<Position> Positions { get; set; }
 
