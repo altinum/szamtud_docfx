@@ -19,11 +19,7 @@ public class Service
             await _context.Sections.Where(s => s.SiteId == siteId).ToArrayAsync(cancellationToken);
         foreach (var section in sections)
         {
-            HtmlElement? element =
-                await _context.HtmlElements.SingleOrDefaultAsync(e => e.ElementId == section.HtmlElementId,
-                    cancellationToken);
-            if (element == null) _context.Remove(section);
-            else _context.Remove(section);
+            _context.Remove(section);
         }
 
         await _context.SaveChangesAsync(cancellationToken);
@@ -31,8 +27,7 @@ public class Service
 
     public async Task<bool> UpdateContentHashAsync(string hash, int siteId, CancellationToken cancellationToken)
     {
-        Site site = await _context.Sites.SingleOrDefaultAsync(s => s.SiteId == siteId, cancellationToken) ??
-                    throw new InvalidOperationException();
+        Site site = await _context.Sites.SingleOrDefaultAsync(s => s.SiteId == siteId, cancellationToken);
 
         SiteVersion siteVersion =
             (await _context.SiteVersions.SingleOrDefaultAsync(sv => sv.SiteId == site.SiteId, cancellationToken))!;
@@ -46,12 +41,10 @@ public class Service
     public async Task<Section> CreateSectionAsync(CreateSectionDto createSectionDto,
         CancellationToken cancellationToken)
     {
-        HtmlElement? element =
-            await _context.HtmlElements.SingleOrDefaultAsync(e => e.Element == createSectionDto.OuterHtml,
+        Section? existingSection =
+            await _context.Sections.SingleOrDefaultAsync(s => s.HtmlElement == createSectionDto.OuterHtml,
                 cancellationToken);
-        if (element != null)
-            return await _context.Sections.SingleOrDefaultAsync(s => s.HtmlElementId == element.ElementId,
-                cancellationToken);
+        if (existingSection != null) return existingSection;
 
         HtmlElementType? elementType =
             await _context.HtmlElementTypes.SingleOrDefaultAsync(t => t.TypeName == createSectionDto.NodeName,
@@ -61,30 +54,17 @@ public class Service
 
         if (site == null || elementType == null) throw new Exception();
 
-        var newElement = await CreateHtmlElementAsync(createSectionDto.OuterHtml, cancellationToken);
-
         var section = new Section
         {
-            HtmlElementId = newElement.ElementId,
-            ElementTypeId = elementType.TypeId,
+            HtmlElement = createSectionDto.OuterHtml,
+            ElementType = elementType.TypeId,
             SiteId = site.SiteId
         };
 
-        await _context.Sections.AddAsync(section, cancellationToken);
+        await _context.AddAsync(section, cancellationToken);
         await _context.SaveChangesAsync(cancellationToken);
         await CreateVisibilityInfoAsync(section.SectionId, cancellationToken);
         return section;
-    }
-
-    private async Task<HtmlElement> CreateHtmlElementAsync(string outerHtml, CancellationToken cancellationToken)
-    {
-        var htmlElement = new HtmlElement
-        {
-            Element = outerHtml,
-        };
-        await _context.HtmlElements.AddAsync(htmlElement, cancellationToken);
-        await _context.SaveChangesAsync(cancellationToken);
-        return htmlElement;
     }
 
     public async Task<Site> CreateSiteAsync(string siteUrl, CancellationToken cancellationToken)
@@ -123,8 +103,7 @@ public class Service
 
     public async Task<IList<Position?>> GetPositionsBySiteIdAsync(int siteId, CancellationToken cancellationToken)
     {
-        Site site = await _context.Sites.SingleOrDefaultAsync(s => s.SiteId == siteId, cancellationToken) ??
-                    throw new InvalidOperationException();
+        Site site = (await _context.Sites.SingleOrDefaultAsync(s => s.SiteId == siteId, cancellationToken)!)!;
         IList<Section> sections =
             await _context.Sections.Where(s => s.SiteId == site.SiteId).ToArrayAsync(cancellationToken);
 
@@ -135,15 +114,12 @@ public class Service
                 await _context.Positions.FirstOrDefaultAsync(p => p.SectionId == section.SectionId, cancellationToken);
             positions.Add(position);
         }
-
         return positions;
     }
-
-    public async Task<IList<VisibilityInfo?>> GetVisibilityInfosBySiteIdAsync(int siteId,
-        CancellationToken cancellationToken)
+    
+    public async Task<IList<VisibilityInfo?>> GetVisibilityInfosBySiteIdAsync(int siteId, CancellationToken cancellationToken)
     {
-        Site site = await _context.Sites.SingleOrDefaultAsync(s => s.SiteId == siteId, cancellationToken) ??
-                    throw new InvalidOperationException();
+        Site site = (await _context.Sites.SingleOrDefaultAsync(s => s.SiteId == siteId, cancellationToken)!)!;
         IList<Section> sections =
             await _context.Sections.Where(s => s.SiteId == site.SiteId).ToArrayAsync(cancellationToken);
 
@@ -151,11 +127,9 @@ public class Service
         foreach (var section in sections)
         {
             VisibilityInfo? visibilityInfo =
-                await _context.VisibilityInfos.FirstOrDefaultAsync(v => v.SectionId == section.SectionId,
-                    cancellationToken);
+                await _context.VisibilityInfos.FirstOrDefaultAsync(v => v.SectionId == section.SectionId, cancellationToken);
             visibilityInfos.Add(visibilityInfo);
         }
-
         return visibilityInfos;
     }
 

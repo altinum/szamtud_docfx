@@ -22,25 +22,6 @@ namespace Heatmap.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
-            modelBuilder.Entity("Heatmap.Data.HtmlElement", b =>
-                {
-                    b.Property<int>("ElementId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasColumnName("Element_id");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ElementId"));
-
-                    b.Property<string>("Element")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)")
-                        .HasColumnName("Element");
-
-                    b.HasKey("ElementId");
-
-                    b.ToTable("HtmlElements");
-                });
-
             modelBuilder.Entity("Heatmap.Data.HtmlElementType", b =>
                 {
                     b.Property<int>("TypeId")
@@ -95,13 +76,14 @@ namespace Heatmap.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("SectionId"));
 
-                    b.Property<int>("ElementTypeId")
+                    b.Property<int>("ElementType")
                         .HasColumnType("int")
-                        .HasColumnName("Element_type_id");
+                        .HasColumnName("Element_type");
 
-                    b.Property<int>("HtmlElementId")
-                        .HasColumnType("int")
-                        .HasColumnName("Html_element_id");
+                    b.Property<string>("HtmlElement")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)")
+                        .HasColumnName("Html_element");
 
                     b.Property<int>("SiteId")
                         .HasColumnType("int")

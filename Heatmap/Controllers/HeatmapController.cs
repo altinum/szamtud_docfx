@@ -20,11 +20,11 @@ public class HeatmapController : ControllerBase
     }
 
     [HttpGet("sites")]
-    public async Task<ActionResult<IList<Site>>> GetSitesAsync(CancellationToken cancellationToken) =>
-        await _context.Sites.ToListAsync(cancellationToken);
+    public async Task<ActionResult<IList<Site>>> GetSitesAsync( CancellationToken cancellationToken) =>
+        await _context.Sites.ToListAsync(cancellationToken); 
 
     [HttpPut("currentHash/{siteId}")]
-    public async Task<ActionResult<bool>> UpdateCurrentHashAsync([FromBody] string hash, [FromRoute] int siteId,
+    public async Task<ActionResult<bool>> UpdateCurrentHash([FromBody] string hash, [FromRoute] int siteId,
         CancellationToken cancellationToken)
     {
         try
@@ -40,7 +40,7 @@ public class HeatmapController : ControllerBase
 
 
     [HttpPost("emptyDatabase/{siteId}")]
-    public async Task<ActionResult> EmptyDatabaseAsync([FromRoute] int siteId, CancellationToken cancellationToken)
+    public async Task<ActionResult> EmptyDatabase([FromRoute] int siteId, CancellationToken cancellationToken)
     {
         try
         {
@@ -55,7 +55,7 @@ public class HeatmapController : ControllerBase
     }
 
     [HttpGet("types")]
-    public async Task<ActionResult<IEnumerable<HtmlElementType>>> GetHtmlElementTypesAsync(
+    public async Task<ActionResult<IEnumerable<HtmlElementType>>> GetHtmlElementTypes(
         CancellationToken cancellationToken) =>
         await _context.HtmlElementTypes.ToListAsync(cancellationToken);
 
@@ -66,7 +66,7 @@ public class HeatmapController : ControllerBase
         await _context.Sections.Where(s => s.SiteId == siteId).ToListAsync(cancellationToken);
 
     [HttpPost("section")]
-    public async Task<ActionResult<Section>> CreateSectionAsync([FromBody] CreateSectionDto htmlElement,
+    public async Task<ActionResult<Section>> CreateSection([FromBody] CreateSectionDto htmlElement,
         CancellationToken cancellationToken)
     {
         try
@@ -81,7 +81,7 @@ public class HeatmapController : ControllerBase
     }
 
     [HttpPost("sites")]
-    public async Task<ActionResult<Section>> CreateSiteAsync([FromBody] string siteUrl, CancellationToken cancellationToken)
+    public async Task<ActionResult<Section>> CreateSite([FromBody] string siteUrl, CancellationToken cancellationToken)
     {
         try
         {
@@ -94,7 +94,7 @@ public class HeatmapController : ControllerBase
     }
 
     [HttpPost("position")]
-    public async Task<ActionResult> CreatePositionInfoAsync(Position position, CancellationToken cancellationToken)
+    public async Task<ActionResult> CreatePositionInfo(Position position, CancellationToken cancellationToken)
     {
         try
         {
@@ -109,17 +109,15 @@ public class HeatmapController : ControllerBase
     }
 
     [HttpGet("positions/{siteId}")]
-    public async Task<IList<Position?>> GetPositionInfosBySiteUrlAsync([FromRoute] int siteId,
-        CancellationToken cancellationToken) =>
+    public async Task<IList<Position?>> GetPositionInfosBySiteUrl([FromRoute] int siteId, CancellationToken cancellationToken) =>
         await _service.GetPositionsBySiteIdAsync(siteId, cancellationToken);
 
     [HttpGet("visibilityInfos/{siteId}")]
-    public async Task<IList<VisibilityInfo?>> GetVisibilityInfosAsync([FromRoute] int siteId,
-        CancellationToken cancellationToken) =>
+    public async Task<IList<VisibilityInfo?>> GetVisibilityInfos([FromRoute] int siteId, CancellationToken cancellationToken) =>
         await _service.GetVisibilityInfosBySiteIdAsync(siteId, cancellationToken);
 
     [HttpPut("timingInfo/{sectionId}")]
-    public async Task<ActionResult> UpdateTimingInfoAsync([FromRoute] int sectionId, [FromBody] double visibleTime,
+    public async Task<ActionResult> UpdateTimingInfo([FromRoute] int sectionId, [FromBody] double visibleTime,
         CancellationToken cancellationToken)
     {
         try
