@@ -3,9 +3,14 @@
   padding-left: 0;
 }
 #heatmap {
-  width: 5vw;
+  width: 1.5vw;
   position: relative;
-  border: solid 2pt black;
+  border: solid 1pt black;
   margin-right: 15px;
   min-height: 100%;
+}
+.map-section {
+  width: 100%;
+  position: absolute;
+  background-color: white;
 }
