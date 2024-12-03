@@ -27,7 +27,7 @@ public class Service
 
     public async Task<bool> UpdateContentHashAsync(string hash, int siteId, CancellationToken cancellationToken)
     {
-        Site site = await _context.Sites.SingleOrDefaultAsync(s => s.SiteId == siteId, cancellationToken);
+        Site site = await _context.Sites.SingleOrDefaultAsync(s => s.SiteId == siteId, cancellationToken) ?? throw new InvalidOperationException();
 
         SiteVersion siteVersion =
             (await _context.SiteVersions.SingleOrDefaultAsync(sv => sv.SiteId == site.SiteId, cancellationToken))!;
@@ -94,7 +94,7 @@ public class Service
         var siteVersion = new SiteVersion
         {
             SiteId = siteId,
-            ContentHash = "kezdeti_hash_érték",
+            ContentHash = "kezdeti_hash",
             LastUpdated = DateTime.Now,
         };
         await _context.AddAsync(siteVersion, cancellationToken);

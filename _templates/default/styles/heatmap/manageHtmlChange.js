@@ -5,7 +5,6 @@ export async function manageHtmlChange(elements) {
   const htmlContent = [...elements].map((el) => el.outerHTML).join("");
   const currentHash = hashString(htmlContent);
 
-  //az aktuális oldal megkerése (ha még nincs bent az adatbázisban az oldal akkor létrehozza)
   const site = (await getSite()) ?? (await createSiteInfo());
 
   //az oldal hash értékének frissítése az adatbázisban ha a benne lévőtől eltér
@@ -17,19 +16,16 @@ export async function manageHtmlChange(elements) {
 
   //ha nincs előző hash vagy eltér, akkor frissítjük az adatbázist
   if (contentChanged) {
-    console.log("Az oldal HTML szerkezete megváltozott.");
-
+    localStorage.clear();
     await emptyDatabase(site.siteId);
     await createSectionInfo(elements);
     await createPositionInfo(elements);
   } else {
     try {
-      //ha nem kell frissíteni az adatbázis akkor is le kell kérni a sectionöket és beállítani
-      //az id-kat az elementeknek, hogy egyszerűbben lehessen hivatkozni rájuk
+      //ha nem kell frissíteni az adatbázis akkor le kell kérni a sectionöket és beállítani az id-kat
       const sections = await fetchData(`heatmap/sections/${site.siteId}`);
 
       sections.forEach((section) => {
-        //olyan elemet keresünk, aminek az outerHTML-je megegyezik a section htmlElement-jével
         const el = [...elements].find(
           (el) => el.outerHTML === section.htmlElement
         );
@@ -42,12 +38,10 @@ export async function manageHtmlChange(elements) {
     } catch (error) {
       console.error("Error fetching sections:", error);
     }
-
-    console.log("Az oldal HTML szerkezete nem változott.");
   }
 }
 
-//hash függvény a szöveg hash-ének létrehozására
+//a szöveg hash-ének létrehozására
 function hashString(str) {
   return str
     .split("")

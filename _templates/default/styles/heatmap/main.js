@@ -1,6 +1,6 @@
 import { displayHeatmap } from "./displayHeatmap.js";
 import { manageHtmlChange } from "./manageHtmlChange.js";
-import { observer } from "./intersectionObserver.js";
+import { observer, stopClock } from "./intersectionObserver.js";
 import { applicationUrl, observedRegion } from "./config.js";
 
 window.onload = async () => {
@@ -14,10 +14,23 @@ window.onload = async () => {
   //ha a heatmap paraméter értéke nem true, akkor méri a nézettséget
   await selectRelevantSections();
   const targetElements = document.querySelectorAll(".heatmap-section");
+
   //az adatbázisban bizonyos dolgokat csak akkor szeretnék frissíteni,
   //ha valami változott az oldal html-jében az előző megnyitás óta
   await manageHtmlChange(targetElements);
+
+  //az oldal előző bezárásakor mért idők lezárása
+  const closingTime = localStorage.getItem("closingTime");
+  localStorage.removeItem("closingTime");
+  for (const recording of Object.entries(localStorage)) {
+    stopClock(recording[0], closingTime);
+  }
+  
   targetElements.forEach((element) => observer.observe(element));
+};
+
+window.onbeforeunload = async () => {
+  localStorage.setItem("closingTime", performance.now() / 1000);
 };
 
 async function selectRelevantSections() {
@@ -25,17 +38,16 @@ async function selectRelevantSections() {
   const elementTypes = await fetchData(`heatmap/types`);
   const typeNames = elementTypes.map((type) => type.typeName).join(",");
 
-  //releváns element típusok kiválasztása csak a html-nek abból a részéből, amit meg kívánunk figyelni
   //az observedRegion a configban módosítható a kód újrafelhasználhatósága érdekében
   let heatmapSections = document
     .querySelector(observedRegion)
     .querySelectorAll(typeNames);
 
-  //szűrés, hogy csak azokat az elemeket tartsuk meg, amelyek nincsenek másik kiválasztott elemben
-  //pl.: a tr-en belül egy p-t ne figyeljünk meg kétszer, elég a külső elementet figyelni
-  //specifikusan a hidden iframe videókat nem kell kiválasztani
+  //csak azokat az elemek kellenek, amelyek nincsenek másik kiválasztott elemben
+  //pl.: a tr-en belül egy p-t nem figyel meg kétszer, elég a külső elemet figyelni
   heatmapSections = Array.from(heatmapSections).filter((element) => {
     const parentDiv = element.closest("div");
+    //specifikusan a hidden iframe videókat nem kell kiválasztani
     if (parentDiv && parentDiv.classList.contains("hidden")) {
       return false;
     }
@@ -44,13 +56,13 @@ async function selectRelevantSections() {
     );
   });
 
-  //heatmapSection osztálynév hozzáadása a tananyag részekhez a későbbi könnyebben kezelhetőség érdekében
+  //heatmapSection osztálynév hozzáadása a tananyag részekhez
   heatmapSections.forEach((heatmapSection) => {
     heatmapSection.classList.add("heatmap-section");
   });
 }
 
-//segítő függvény az api hívásokhoz
+//helpers
 export async function fetchData(endpoint, method = "GET", body = null) {
   const options = {
     method,
@@ -68,12 +80,10 @@ export async function fetchData(endpoint, method = "GET", body = null) {
     throw new Error(`HTTP error! status: ${response.status}`);
   }
 
-  //ha van tartalom a válaszban, akkor parse-oljuk JSON-ként
   const contentType = response.headers.get("content-type");
   if (contentType && contentType.includes("application/json")) {
     return response.json();
   } else {
-    //ha nincs JSON, csak az OK státuszt jelöljük visszatérési értékként
     return { status: "ok" };
   }
 }

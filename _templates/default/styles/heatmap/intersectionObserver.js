@@ -1,6 +1,6 @@
 import { fetchData } from "./main.js";
 
-let timingData = {};
+let timingRecordings = {};
 
 export const observer = new IntersectionObserver(
   (entries) => {
@@ -9,16 +9,23 @@ export const observer = new IntersectionObserver(
       const elementId = element.id;
 
       if (entry.isIntersecting) {
-        if (!timingData[elementId]) {
-          timingData[elementId] = {
+        if (!timingRecordings[elementId]) {
+          timingRecordings[elementId] = {
             startTime: performance.now() / 1000,
-            currentTime: null,
           };
+          //timingData rögzítése localStorage-ban
+          localStorage.setItem(
+            elementId,
+            JSON.stringify(timingRecordings[elementId])
+          );
         }
       } else {
-        if (timingData[elementId] && timingData[elementId].startTime) {
-          timingData[elementId].currentTime = performance.now() / 1000;
-          stopClock(elementId);
+        if (
+          timingRecordings[elementId] &&
+          timingRecordings[elementId].startTime
+        ) {
+          const currentTime = performance.now() / 1000;
+          stopClock(elementId, currentTime);
         }
       }
     });
@@ -26,19 +33,17 @@ export const observer = new IntersectionObserver(
   { threshold: 0.5 }
 );
 
-async function stopClock(elementId) {
-  const { startTime, currentTime } = timingData[elementId];
-  const duration = parseFloat(currentTime - startTime);
+export async function stopClock(elementId, currentTime) {
+  const recording = JSON.parse(localStorage.getItem(elementId));
+  const duration = parseFloat(currentTime - recording.startTime);
 
   try {
     await fetchData(`heatmap/timingInfo/${elementId}`, "PUT", duration);
-    console.log(
-      `Section ${elementId} viewed for ${currentTime - startTime} seconds`
-    );
   } catch (error) {
     console.error(`Failed to update timing for section ${elementId}:`, error);
   } finally {
-    //töröljük az adatokat az objektumból, hogy új mérésekhez frissítsük
-    delete timingData[elementId];
+    //töröljük az adatokat az objektumból és a localStorage-ból, hogy új mérésekhez frissítsük
+    delete timingRecordings[elementId];
+    localStorage.removeItem(elementId);
   }
 }

@@ -6,11 +6,9 @@ export let site = {};
 export async function displayHeatmap() {
   //annak a megkeresése, hogy melyik oldalon vagyunk
   site = await getSite();
-  //heatmap létrehozása
+  
   createHeatmap();
-  //div létrehozása a hőtérképben minden sectionnek
   await addMapSections();
-  //minden section szinezése
   await colorSections();
 }
 
@@ -39,12 +37,10 @@ async function addMapSections() {
 }
 
 async function colorSections() {
-  //összes visibilityInfo lekérése
   const visibilityInfos = await fetchData(
     `heatmap/visibilityInfos/${site.siteId}`
   );
-
-  //az elemek közül a maximális és minimális látszódási idő lekérése
+  
   const [minTime, maxTime] = getMinMaxTime(
     visibilityInfos.map((info) => parseFloat(info.totalVisibleTime))
   );
