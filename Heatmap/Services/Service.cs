@@ -7,7 +7,6 @@ namespace Heatmap.Services;
 public class Service
 {
     private readonly HeatmapDbContext _context;
-
     public Service(HeatmapDbContext context)
     {
         _context = context;
@@ -58,7 +57,7 @@ public class Service
         {
             HtmlElement = createSectionDto.OuterHtml,
             ElementType = elementType.TypeId,
-            SiteId = site.SiteId
+            SiteId = site.SiteId,
         };
 
         await _context.AddAsync(section, cancellationToken);
@@ -100,22 +99,6 @@ public class Service
         await _context.AddAsync(siteVersion, cancellationToken);
         await _context.SaveChangesAsync(cancellationToken);
     }
-
-    public async Task<IList<Position?>> GetPositionsBySiteIdAsync(int siteId, CancellationToken cancellationToken)
-    {
-        Site site = (await _context.Sites.SingleOrDefaultAsync(s => s.SiteId == siteId, cancellationToken)!)!;
-        IList<Section> sections =
-            await _context.Sections.Where(s => s.SiteId == site.SiteId).ToArrayAsync(cancellationToken);
-
-        var positions = new List<Position?>();
-        foreach (var section in sections)
-        {
-            Position? position =
-                await _context.Positions.FirstOrDefaultAsync(p => p.SectionId == section.SectionId, cancellationToken);
-            positions.Add(position);
-        }
-        return positions;
-    }
     
     public async Task<IList<VisibilityInfo?>> GetVisibilityInfosBySiteIdAsync(int siteId, CancellationToken cancellationToken)
     {
@@ -131,12 +114,6 @@ public class Service
             visibilityInfos.Add(visibilityInfo);
         }
         return visibilityInfos;
-    }
-
-    public async Task CreatePositionInfoAsync(Position position, CancellationToken cancellationToken)
-    {
-        await _context.AddAsync(position, cancellationToken);
-        await _context.SaveChangesAsync(cancellationToken);
     }
 
     private async Task CreateVisibilityInfoAsync(int sectionId, CancellationToken cancellationToken)

@@ -93,25 +93,6 @@ public class HeatmapController : ControllerBase
         }
     }
 
-    [HttpPost("position")]
-    public async Task<ActionResult> CreatePositionInfo(Position position, CancellationToken cancellationToken)
-    {
-        try
-        {
-            await _service.CreatePositionInfoAsync(position, cancellationToken);
-        }
-        catch (Exception ex)
-        {
-            return BadRequest(ex.Message);
-        }
-
-        return Ok();
-    }
-
-    [HttpGet("positions/{siteId}")]
-    public async Task<IList<Position?>> GetPositionInfosBySiteUrl([FromRoute] int siteId, CancellationToken cancellationToken) =>
-        await _service.GetPositionsBySiteIdAsync(siteId, cancellationToken);
-
     [HttpGet("visibilityInfos/{siteId}")]
     public async Task<IList<VisibilityInfo?>> GetVisibilityInfos([FromRoute] int siteId, CancellationToken cancellationToken) =>
         await _service.GetVisibilityInfosBySiteIdAsync(siteId, cancellationToken);

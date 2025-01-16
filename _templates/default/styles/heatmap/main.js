@@ -12,8 +12,7 @@ window.onload = async () => {
   }
 
   //ha a heatmap paraméter értéke nem true, akkor méri a nézettséget
-  await selectRelevantSections();
-  const targetElements = document.querySelectorAll(".heatmap-section");
+  const targetElements = await selectRelevantSections();
 
   //az adatbázisban bizonyos dolgokat csak akkor szeretnék frissíteni,
   //ha valami változott az oldal html-jében az előző megnyitás óta
@@ -21,19 +20,20 @@ window.onload = async () => {
 
   //az oldal előző bezárásakor mért idők lezárása
   const closingTime = localStorage.getItem("closingTime");
+
   localStorage.removeItem("closingTime");
   for (const recording of Object.entries(localStorage)) {
     stopClock(recording[0], closingTime);
   }
-  
+
+  setTimeout(() => {
+    localStorage.setItem("closingTime", performance.now() / 1000);
+  }, 1000);
+
   targetElements.forEach((element) => observer.observe(element));
 };
 
-window.onbeforeunload = async () => {
-  localStorage.setItem("closingTime", performance.now() / 1000);
-};
-
-async function selectRelevantSections() {
+export async function selectRelevantSections() {
   //megfigyelni kívánt elemtípusok lekérése az adatbázisból
   const elementTypes = await fetchData(`heatmap/types`);
   const typeNames = elementTypes.map((type) => type.typeName).join(",");
@@ -60,6 +60,7 @@ async function selectRelevantSections() {
   heatmapSections.forEach((heatmapSection) => {
     heatmapSection.classList.add("heatmap-section");
   });
+  return heatmapSections;
 }
 
 //helpers

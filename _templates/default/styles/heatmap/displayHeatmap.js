@@ -1,4 +1,4 @@
-import { fetchData, getSite } from "./main.js";
+import { fetchData, getSite, selectRelevantSections } from "./main.js";
 import { heatmapPrecedingClass } from "./config.js";
 
 export let site = {};
@@ -6,7 +6,7 @@ export let site = {};
 export async function displayHeatmap() {
   //annak a megkeresése, hogy melyik oldalon vagyunk
   site = await getSite();
-  
+
   createHeatmap();
   await addMapSections();
   await colorSections();
@@ -25,22 +25,34 @@ async function addMapSections() {
   const heatmap = document.getElementById("heatmap");
   if (!heatmap || !site.siteId) return;
 
-  const positions = await fetchData(`heatmap/positions/${site.siteId}`);
-  for (let position of positions) {
-    let section = document.createElement("div");
-    section.className = `map-section`;
-    section.id = position.sectionId;
-    section.style.top = `${position.y - heatmap.offsetTop}px`;
-    section.style.height = `${position.height}px`;
-    heatmap.appendChild(section);
-  }
+  const storedSections = await fetchData(`heatmap/sections/${site.siteId}`);
+  let domElements = await selectRelevantSections();
+
+  storedSections.forEach((section) => {
+    const el = [...domElements].find(
+      (el) => el.outerHTML === section.htmlElement
+    );
+
+    let mapElement = document.createElement("div");
+    mapElement.className = `map-section`;
+    mapElement.id = section.sectionId;
+    mapElement.style.top = el.closest("table")
+      ? `${el.offsetTop + el.offsetParent.offsetTop}px`
+      : `${el.offsetTop}px`;
+    mapElement.style.height = `${el.offsetHeight}px`;
+    heatmap.appendChild(mapElement);
+    if (el) {
+      //ha megtaláltuk, akkor eltávolítjuk a megtalált elemet a listából, hogy gyorsabban menjen a keresés
+      domElements = [...domElements].filter((e) => e !== el);
+    }
+  });
 }
 
 async function colorSections() {
   const visibilityInfos = await fetchData(
     `heatmap/visibilityInfos/${site.siteId}`
   );
-  
+
   const [minTime, maxTime] = getMinMaxTime(
     visibilityInfos.map((info) => parseFloat(info.totalVisibleTime))
   );

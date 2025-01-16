@@ -19,7 +19,6 @@ export async function manageHtmlChange(elements) {
     localStorage.clear();
     await emptyDatabase(site.siteId);
     await createSectionInfo(elements);
-    await createPositionInfo(elements);
   } else {
     try {
       //ha nem kell frissíteni az adatbázis akkor le kell kérni a sectionöket és beállítani az id-kat
@@ -76,18 +75,4 @@ async function createSectionInfo(elements) {
 
   //asyncronitás miatt meg kell várni az összes hívás lefutását
   await Promise.all(sectionPromises);
-}
-
-async function createPositionInfo(elements) {
-  const positionPromises = [...elements].map(async (element) => {
-    await fetchData(`heatmap/position`, "POST", {
-      sectionId: element.id,
-      y: element.closest("table")
-        ? element.offsetParent.offsetTop + element.offsetTop
-        : element.offsetTop,
-      height: element.offsetHeight,
-    });
-  });
-  //asyncronitás miatt meg kell várni az összes hívás lefutását
-  await Promise.all(positionPromises);
 }
