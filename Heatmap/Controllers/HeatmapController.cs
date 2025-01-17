@@ -23,7 +23,7 @@ public class HeatmapController : ControllerBase
     public async Task<ActionResult<IList<Site>>> GetSitesAsync( CancellationToken cancellationToken) =>
         await _context.Sites.ToListAsync(cancellationToken); 
 
-    [HttpPut("currentHash/{siteId}")]
+    [HttpPost("currentHash/{siteId}")]
     public async Task<ActionResult<bool>> UpdateCurrentHash([FromBody] string hash, [FromRoute] int siteId,
         CancellationToken cancellationToken)
     {
@@ -97,7 +97,7 @@ public class HeatmapController : ControllerBase
     public async Task<IList<VisibilityInfo?>> GetVisibilityInfos([FromRoute] int siteId, CancellationToken cancellationToken) =>
         await _service.GetVisibilityInfosBySiteIdAsync(siteId, cancellationToken);
 
-    [HttpPut("timingInfo/{sectionId}")]
+    [HttpPost("timingInfo/{sectionId}")]
     public async Task<ActionResult> UpdateTimingInfo([FromRoute] int sectionId, [FromBody] double visibleTime,
         CancellationToken cancellationToken)
     {

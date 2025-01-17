@@ -26,7 +26,7 @@ window.onload = async () => {
     stopClock(recording[0], closingTime);
   }
 
-  setTimeout(() => {
+  setInterval(() => {
     localStorage.setItem("closingTime", performance.now() / 1000);
   }, 1000);
 

@@ -72,7 +72,7 @@ public class Service
         if (existingSite != null) return existingSite;
 
         var uri = new Uri(siteUrl);
-        string subjectName = uri.Segments[1].TrimEnd('/');
+        string subjectName = uri.Segments[2].TrimEnd('/');
         Subject? subject =
             await _context.Subjects.SingleOrDefaultAsync(s => s.SubjectName == subjectName, cancellationToken);
         if (subject == null) throw new Exception("Nincs a megadott url-hez tantárgy az adatbázisban!");
