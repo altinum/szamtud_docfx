@@ -6,6 +6,7 @@
 
 # Jegyzetek előadásra
 
+
 ## Példák dátumkezelésre
 
 ``` csharp
