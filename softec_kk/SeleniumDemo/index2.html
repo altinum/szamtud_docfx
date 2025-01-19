@@ -1,0 +1,452 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Third Party Package-ek haszn&#225;lata </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Third Party Package-ek haszn&#225;lata ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <link rel="stylesheet" href="../../styles/heatmap.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="third-party-package-ek-használata">Third Party Package-ek használata</h1>
+
+<p>A mai gyakorlat rendhagyó lesz több szempontból is. Egy saját projektet kell létrehozni legalább az egyik mintaprojektben is használt csomag felhasználásával.</p>
+<p>A programnyelvek igazi erejét, az ökoszisztéma gerincét, az elérhető csomagok/könyvtárak alkotják. A programozás tulajdonképpen probléma megoldás több szinten, minél absztraktabb módon. Nem kell gépi kódot írnunk, mert vannak magas szintű programnyelvek, nem kell minden dolgot feltalálni a programnyelvekben sem, mert vannak alaposztályok és funkciók, és erre épülnek rá a harmadik féltől származó könyvtárak/csomagok. Miért vesződjünk azzal, hogy egy objektumot <code>JSON</code>-ná konvertáljunk, ha ezt már valaki nagy fáradozással megtette helyettünk? A .NET keretrendszerhez nagyon sokféle csomag érhető el -- akárcsak Python-hoz.</p>
+<p>A modern fejlesztői környezet részévé vált a <code>ChatGPT</code>, ezért most a használata nemcsak hogy engedélyezett, de feladat is. Sokkal gyorsabban el lehet érni vele a kívánt eredményt, mint a hivatalos dokumentáció böngészésével. Azonban itt fontos megjegyezni, hogy &quot;A nagy erő, nagy felelősséggel jár.&quot; (Pókember). Nem lehet teljesen rábízni magunkat az AI-ra, mert könnyen el tud vinni minket vakvágányra és előfordul, hogy túlbonyolít és halucinál dolgokat.</p>
+<h2 id="röviden-a-mintaprojektről">Röviden a mintaprojektről</h2>
+<p>A mintaprojekt két könyvtárat használ, a <code>Selenium</code>-mal böngészőt tudunk vezérelni és az <code>EPPlus</code>-sal pedig Excel mukafüzeteket lehet kódból generálni. Az alkalmazás</p>
+<ul>
+<li>felmegy a neptunra,</li>
+<li>bejelentkezik,</li>
+<li>letölti az órarendet,</li>
+<li>és az órarend alapján csinál egy excel fájlt, az órarendünkről.</li>
+</ul>
+<h2 id="tippek-a-chatgpt-használatához">Tippek a ChatGPT használatához</h2>
+<ol>
+<li>Kontextus: Adjuk át minél jobban, hogy mik az elvárásaink és milyen környezetben vagyunk, hagyjunk minél kevesebb dolgot a képzelőerőnek</li>
+<li>Tegyünk fel jól strukturált kérdéseket és ha feladatot adunk, legyünk precízek</li>
+<li>Kérdezzünk bátran és kérdezzünk vissza, ha valamit nem értünk, kiemelve a kérdéses részeket</li>
+<li>Ha változtatunk a kódon miután átvettük akkor a következő kérdésnél adjuk oda a modellnek, hogy jó kóddal dolgozzon</li>
+<li>Ha valami nem jó, pontosítsunk</li>
+<li>Használjunk minél fejlettebb modellt</li>
+</ol>
+<h2 id="a-mintaprojekt-felépítése">A mintaprojekt felépítése</h2>
+<div class="WARNING">
+<h5>Warning</h5>
+<p>A mintaprojektet nem kell leadni, okulásul és kiindulásul szolgál a lap legalján található leadandó feladathoz!</p>
+</div>
+<h3 id="a-felhasznált-csomagok">A felhasznált csomagok</h3>
+<h4 id="selenium">Selenium</h4>
+<p>(!Hint) Kérdezd meg a ChatGPT-t, hogy mi az a Selenium! [!A Selenium egy olyan eszköz vagy keretrendszer, amely lehetővé teszi a webes alkalmazások automatizált tesztelését és a böngészőalapú műveletek programozását. A Selenium lehetővé teszi a felhasználók számára, hogy felvegyenek teszteket, amelyek az egyes felhasználói eseteket szimulálják, és ellenőrzik, hogy az alkalmazás működik-e a tervezett módon. A Selenium támogatja a legnépszerűbb böngészőket, mint például a Google Chrome, a Mozilla Firefox és az Internet Explorer, és lehetővé teszi a felhasználók számára, hogy automatizáltan töltsenek ki űrlapokat, kattintsanak gombokra, navigáljanak az oldalak között, és még sok más dolgot tegyenek. A Selenium nagyon hasznos lehet a webfejlesztők és tesztelők számára, akik hatékonyabb és megbízhatóbb teszteket szeretnének végrehajtani, valamint a webes alkalmazások fejlesztői számára, akik könnyedén hozzáadhatják a Selenium támogatását az alkalmazásaikhoz. <strong>Egy éles projektben nincs lehetőség arra, hogy minden kódváltozatás után manuálisan végigteszteltessünk mindent, hogy nem tört-e el valamit az eszközölt változtatás.</strong>]</p>
+<h4 id="epplus">EPPlus</h4>
+<p>(!Hint) Kérdezd meg mire jó az EPPlus! [!Az EPPlus egy .NET-ben írt nyílt forráskódú könyvtár, amely lehetővé teszi a Microsoft Excel fájlok olvasását és írását. Az EPPlus alkalmas Excel-fájlok létrehozására, módosítására, olvasására és mentésére is, és támogatja a legtöbb Excel-fájl formátumot. Az EPPlus-nal a fejlesztők programozói módon kezelhetik az Excel-fájlokat, így lehetőségük van arra, hogy a programozás révén generálják az Excel-táblázatokat vagy azok tartalmát. Az EPPlus további előnye, hogy nagyon hatékonyan kezeli a nagy adathalmazokat, és támogatja a diagramok, táblázatok, képek és más elemek beillesztését az Excel-fájlokba. Az EPPlus így kiválóan alkalmas olyan alkalmazások fejlesztésére, amelyek az Excel adathalmazok kezelésére épülnek, és lehetőséget kívánnak adni az adatok vizualizálására és elemzésére.]</p>
+<h2 id="a-projekt-felépítése">A projekt felépítése</h2>
+<p>(+/-) Első lépésként hozz létre egy Widows Forms App típusú projektet, és az űrlapon helyezz el egy-egy mezőt a Neptun kódodnak és a felhasználónevednek, és egy OK gomot!</p>
+<div class="IMPORTANT">
+<h5>Important</h5>
+<p>Nem szeretnénk, ha a felhasználónév illetve bármilyen jelszó el lenne mentve a forráskódban! Ne írd be lustaságból a <code>TextBox</code>-okba tervezőben, mert bent maradhat, feltölthated bárhova, és egy ilyen feledékenység vállalati környezetben az állásodba kerülhet!</p>
+</div>
+<p>(+/-)  Kérdezd meg a ChatGPT-t, hogyan oldható meg az, hogy a jelszó karakterei helyett pöttyök jelenjenek meg egy <code>TextBox</code>-ban!</p>
+<p>(+/-) Helyezz el egy DataGridView vezérlőt is az űrlapon, itt tudjuk majd megjeleníteni az adatokat, amiket letöltöttünk! Erről bővebben később!</p>
+<p><img src="FormDesigner.png" alt="image-20230510205059651"></p>
+<p>Három osztályt használunk, a <code>Scraper.cs</code>-be száműztük azt a kódot, ami a böngésző irányításért felel, az <code>Excelizer.cs</code>-be raktuk azt, ami az Excel generálást végzi és van egy <code>UniClass</code> nevű osztályunk, ami az óránknak a modellje.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>Azért lett UniClass, mert a class az egy foglalt kifejezés a C#-ban és példányosításnál nem lehetne neki egyszerűen a class nevet adni és félrevezető lehet, de ha bármilyen foglalt kifejezés elé írunk egy @-t, akkor használhatjuk változó névként.</p>
+</div>
+<h2 id="az-uniclass-osztály">Az <code>UniClass</code> osztály</h2>
+<p>(+/-) Hozd létre a projektben az <code>UniClass</code> osztályt! Ez egy egyszerű osztály, ami egy óráról tárol infromációt. Ez órarend <code>List&lt;UniClass&gt;</code>. A <code>DayOfWeek</code> tulajdonságban 0-6 ig megmondhatjuk milyen nap van az óránk, a <code>StartTime</code> és az <code>EndTime</code> megadja, mikor kezdődik, illetve mikor van vége. A <code>Title</code> a tárgy  címe:</p>
+<pre><code class="lang-csharp">public class UniClass
+{
+    // Teljesen egyszerű osztály, 0-6 ig megmondhatjuk milyen nap van az óránk, mikor kezdődik, mikor van vége és mi a szöveg
+    // A szövegben van benne a tantárgy neve, hogy ki tartja és melyik teremben van
+    public int DayOfWeek { get; set; }
+    public TimeSpan StartTime { get; set; }
+    public TimeSpan EndTime { get; set; }
+    public string Title { get; set; }
+}
+</code></pre>
+<h2 id="a-scraper-osztály">A <code>Scraper</code> osztály</h2>
+<p>(+/-) Hozd létre az alábbi osztályt a projektben!</p>
+<pre><code class="lang-cs">public class Scraper
+{    
+    private static string _url = @&quot;https://neptun3r.web.uni-corvinus.hu/Hallgatoi/login.aspx&quot;;
+
+    public static List&lt;UniClass&gt; ScrapeClasses(string username, string password)
+    {
+        List&lt;UniClass&gt; classes = new List&lt;UniClass&gt;();
+        //Ide jön a kód
+
+
+        return classes;
+    }
+}
+</code></pre>
+<p>Az  <code>_url</code> a neptununk url-je ez nem fog változni, nyugodtan iderakhatjuk</p>
+<p>A <code>ScrapeClasses</code> függvény fogja megszerezni nekünk az óráinkat, de ehhez szüksége van a felhasználónevünkre és jelszavunkra, amit a Form1-ből szerzünk.</p>
+<p>A kódját egészítsd ki az alábbiak szerint, hogy legyen legalább egy tesztadatunk, amit meg tudunk jeleníteni:</p>
+<pre><code class="lang-csharp">List&lt;UniClass&gt; classes = new List&lt;UniClass&gt;();
+
+UniClass mintaÓra = new UniClass();
+mintaÓra.DayOfWeek = 4;
+mintaÓra.Title = &quot;Szofttech&quot;;
+mintaÓra.StartTime = TimeSpan.FromHours(8);
+mintaÓra.EndTime = TimeSpan.FromHours(9);
+
+classes.Add(mintaÓra);
+
+return classes;
+</code></pre>
+<h2 id="a-scrapeclasses-hívása-a-form1-ből">A <code>ScrapeClasses</code> hívása a <code>Form1</code>-ből:</h2>
+<p>(+/-) Rendelj eseménykiszolgálót a gomb kattintás eseményéhez, melyben hívd meg a <code>Sraper</code> osztály statikus <code>ScrapeClasses</code> és jelenítsd meg az órákat a rácsban. A <code>DataGridView</code> <code>DataSouce</code> tulajdonságán keresztül beállítható a lista, amelynek tartalmát szeretnénk megjeleníteni!</p>
+<pre><code class="lang-csharp">List&lt;UniClass&gt; classes = Scraper.ScrapeClasses(textBoxUser.Text, textBoxPassword.Text);
+dataGridView1.DataSource= classes;
+</code></pre>
+<p>lustáknak:</p>
+<pre><code class="lang-csharp">var classes = Scraper.ScrapeClasses(textBoxUser.Text, textBoxPassword.Text);
+dataGridView1.DataSource= classes;
+</code></pre>
+<p>Ha minden jól megy, valami ilyesmit kéne látni:</p>
+<p><img src="FormRunning.png" alt="image-20230510205350488"></p>
+<p>​</p>
+<h1 id="böngésző-vezérlése-seleniummal">Böngésző vezérlése Seleniummal</h1>
+<h3 id="nuget-csomag-telepítése">NuGet csomag telepítése</h3>
+<p>A NuGet a Visual Studio csomagkezelője. Számtalan ingyenes és fizetős modul érhető el rajta keresztül, és telepíthető pillanatok alatt.</p>
+<p>(+/-) Kérdezzétek meg a ChatGPT-t, hogyan kell a Selnium NuGet csomagot telepíteni C# projektbe!</p>
+<pre><code>how can i install selenium into a c# project?
+</code></pre>
+<p>(+/-) Telepítsétek a <code>WebDriverManager</code> csomagot is. A Solution Expolrerban is tudjátok ellenőrizni a telepített csomagokat, mostanra a pirossal keretezetteknek kell telepítve lennie:</p>
+<p><img src="Packages.png" alt="image-20230511075700191"></p>
+<p>Minden böngészőhöz külön csomag tartozik, a <code>WebDriverManager</code> pedig segít a böngészőkhöz tartozó bináris állományok automatikus letöltésében.</p>
+<h3 id="böngésző-és-weblap-megnyitása-seleniummal">Böngésző és weblap megnyitása Seleniummal</h3>
+<p>Az előző kérdésre kapott igen bőbeszédű válasz alapján már ki is egészíthetjük a <code>ScrapeClasses</code> metódust azzal, hogy nyissa meg a Chrome-ot a megfelelő URL-el:</p>
+<pre><code class="lang-csharp">// Minden böngészőre máshogy kell konfigurálni a Selenium motort, it a Chrome-ot használjuk
+new WebDriverManager.DriverManager().SetUpDriver(new ChromeConfig());
+IWebDriver driver = new ChromeDriver();
+
+// Megnyitjuk a neptunt
+driver.Navigate().GoToUrl(_url);
+</code></pre>
+<h3 id="órarend-letöltése-seleniummal">Órarend letöltése Seleniummal</h3>
+<p>Értelmezd az alábbi kódot! A böngészőben F12-vel megnyíló Developer Tools segítségével vizsgálhatod meg, hogy mely elemekre vagy kíváncsi az adott oldalon.</p>
+<div class="IMPORTANT">
+<h5>Important</h5>
+<p>A Neptun és a Moodle minden tevékenységet loggol. Az alább bemutatott technika etikátlan használója tettenérhető minden olyan oldalon, ahol a felhasználó egyértelműen azonosítható. Az alábbi kódrészéletet egy az egyben használd, NE a Neptunon gyakorloj!</p>
+</div>
+<div class="NOTE">
+<h5>Note</h5>
+<p>Az alábbi kód összetetten vezérli a böngészőt, a teljes megértésére nincs idő a gyakorlat keretein belül. Az elv megértése a lényeg, szükség esetén a kódminta alapként szolgálhat más feladatok megoldására.</p>
+</div>
+<pre><code class="lang-csharp">public static List&lt;UniClass&gt; ScrapeClasses(string username, string password)
+{
+    // Minden böngészőre máshogy kell konfigurálni a Selenium motort, it a Chrome-ot használjuk
+    new WebDriverManager.DriverManager().SetUpDriver(new ChromeConfig());
+    IWebDriver driver = new ChromeDriver();
+
+    // Megnyitjuk a neptunt
+    driver.Navigate().GoToUrl(_url);
+
+    // Ez a két elem az, ahova beírnánk a neptun kódot és jelszót. A driver-rel meg tudjuk találni a weboldalon az elemeket a szellemes By segítségével.
+    // Itt a felhasználó nevet fogadó inputot a neve alapján választjuk ki, a jelszavasat pedig az id-ja alapján.
+    var usernameField = driver.FindElement(By.Name(&quot;user&quot;));
+    var passwordField = driver.FindElement(By.Id(&quot;pwd&quot;));
+
+    // Beíratjuk a motorral a felhasználónevet és jelszót
+    usernameField.SendKeys(username);
+    passwordField.SendKeys(password);
+
+    // Példányosítunk egy osztályt, aminek az a feladata, hogy megváratja a motort, maximum addig, amennyi a konstruktor második argumentuma
+    WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(10));
+
+    // Itt például addig váratjuk, amíg nem talál egy btnSubmit id-val rendelkező elemet.
+    // A nyilas dolog benne egy lambda kifejezés, ami tulajdonképpen egy rövidített függvény
+    // Lesz róla szó bővebben a következő félévben.
+    var loginButton = wait.Until(driver =&gt; driver.FindElement(By.Id(&quot;btnSubmit&quot;)));
+
+    // Rákattintunk a gombra
+    loginButton.Click();
+
+    // Itt a Tanulmányok linket szeretnénk berakni a studiesLink változóba, aminek nem mondjuk meg előre, hogy micsoda
+    // mert a jobb oldalából következik ez például lehet bármilyen olyan osztály példánya, ami teljesíti az
+    // IWebElement interfész kritériumait és lehet null, mert van mögötte kérdőjel
+    // A wait addig váratja a motort, amíg olyan eredményt kap, ami nem null
+    var studiesLink = wait.Until(driver =&gt;
+    {
+        try
+        {
+            // Itt XPath alapján választjuk ki az elemet, ebben egyerre benne van a típusa és most a szövege is.
+            return driver.FindElement(By.XPath(&quot;//li[contains(text(), 'Tanulmányok')]&quot;));
+        }
+        catch (NoSuchElementException)
+        {
+            return null;
+        }
+    });
+    // Létrehozunk egy olyan osztályt, amivel felhasználói mozdulatokat tudunk emulálni.
+    Actions actions = new Actions(driver);
+    // Rákattintunk vele a Tanulmányok linkre
+    actions.MoveToElement(studiesLink).Perform();
+
+    var scheduleLink = driver.FindElement(By.Id(&quot;mb1_Tanulmanyok_Órarend&quot;));
+    actions.MoveToElement(scheduleLink).Perform();
+    // Rákattintunk az Órarend linkre
+    scheduleLink.Click();
+
+    // Megvárjuk míg betölt (az, hogy maga a tábla létezik még nem jelenti azt, hogy a tartalma is fel van töltve)
+    wait.Until(driver =&gt; driver.FindElement(By.Id(&quot;c_common_timetable_tabOrarend_body&quot;)));
+    // Altatjuk a függvényt 3 másodpercig, hogy biztosan betöltsön az is, ami benne van
+    Thread.Sleep(3000);
+
+    // Megfogjuk az oszlop elemet, amiben vannak az órák
+    var days = driver.FindElements(By.ClassName(&quot;tg-col&quot;));
+
+    List&lt;UniClass&gt; classes = new List&lt;UniClass&gt;();
+    int d = 0;
+
+    // Végigmegyünk minden oszlopon
+    foreach (var day in days)
+    {
+        // A kék óra buborékok mind chip osztállyal rendelkeznek, azzal választjuk őket ki
+        var classesInDay = day.FindElements(By.ClassName(&quot;chip&quot;));
+
+        foreach (IWebElement classElement in classesInDay)
+        {
+            // Kiválasztjuk az aktuális óra elemének a title attribútumát
+            string title = classElement.GetAttribute(&quot;title&quot;);
+
+            // Felvágjuk a sortörések mentén
+            string[] titleParts = title.Split('\n');
+
+            // Az időt ' - ' mentén választjuk le
+            string[] timeRange = titleParts[0].Split(&quot; - &quot;);
+            string startingTime = timeRange[0].Substring(timeRange[0].LastIndexOf(&quot; &quot;) + 1);
+            string finishingTime = timeRange[1].Split(&quot;\r&quot;)[0].Trim();
+
+            // Az lesz a szöveg, ami az [Óra] rész után van
+            string classTitle = titleParts[1].Split(&quot;[Óra] &quot;)[1];
+
+            // Konstruktor nélkül létrehozunk egy új UniClass-t a szerzett paraméterekkel
+            classes.Add(new UniClass
+            {
+                // A TimeSpan osztály hasonló, mint a DateTime, de ez időintervallumot jelöl.
+                // Itt odaadjuk a ParseExact függvényének a feldolgozott stringünket és súgunk neki, hogy milyen formában van
+                StartTime = TimeSpan.ParseExact(startingTime, &quot;h\\:mm&quot;, null),
+                EndTime = TimeSpan.ParseExact(finishingTime, &quot;h\\:mm&quot;, null),
+                Title = classTitle,
+                DayOfWeek = d
+            });
+
+        }
+
+        // Növeljük a d (nap) számlálónkat, később innen fogjuk tudni, hogy melyik nap van az óra
+        d++;
+    }
+
+    // Becsukjuk a Seleniumot, hogy ne maradjon nyitva a fekete ablak.
+    driver.Close();
+    driver.Quit();
+    return classes;
+}
+</code></pre>
+<h2 id="órarend-exportálása-excelbe">Órarend exportálása Excelbe</h2>
+<p>(+/-) Telpítsltek az <code>epplus</code> NuGet csomagot is!</p>
+<p>(+/-) Hozzátok létre az alábbi osztályt, majd építsétek be a <code>Form1</code>-be, miután megszereztétek a listát az órákkal.</p>
+<pre><code class="lang-csharp">public class Excelizer
+{
+    // Adunk egy tulajdonságot az osztálynak, ez lesz az elérési út
+    public string Path { get; set; }
+    // Konstruktorba ezt bekérjük és be is állítjuk
+    public Excelizer(string path)
+    {
+        this.Path = path;
+    }
+    // Ez a metódus fogja legenerálni az excel táblát, az alapján az órákat tartalmazó lista alapján, amit kap
+    public void CreateTimeTable(List&lt;UniClass&gt; classes)
+    {
+        // Az EPPLus szeretne pénzt kérni, ha üzleti fejlesztésben van használva a munkájuk, ezért a
+        // licenszt beállíthatjuk, nem üzletire
+        ExcelPackage.LicenseContext = LicenseContext.NonCommercial;
+        // Ami a using blokkba van, az a using blokkból kilépve tisztességesen be lesz csukva
+        using (var package = new ExcelPackage())
+        {
+            // A csomaggal létrehozunk egy munkafüzetet, ebben fogunk dolgozni
+            var worksheet = package.Workbook.Worksheets.Add(&quot;Órarend&quot;);
+
+            int startHour = 8; // Innen indítjuk a napot
+            int endHour = 21; // Itt fejezzük be
+
+            // Felcímkézzük a sorokat, hogy hány órát jelentenek
+            for (int hour = startHour; hour &lt;= endHour; hour++)
+            {
+                for (int minute = 0; minute &lt; 60; minute += 10)
+                {
+                    int rowIndex = 2 + ((hour - startHour) * 6) + (minute / 10);
+                    worksheet.Cells[rowIndex, 1].Value = $&quot;{hour:D2}:{minute:D2}&quot;;
+                }
+            }
+            // Felcímkézzük az oszlopokat is, minden másodikat, hogy szebb legyen és ki tudjunk hagyni egy picit
+            // a napok között
+            worksheet.Cells[1, 2].Value = &quot;Hétfő&quot;;
+            worksheet.Cells[1, 4].Value = &quot;Kedd&quot;;
+            worksheet.Cells[1, 6].Value = &quot;Szerda&quot;;
+            worksheet.Cells[1, 8].Value = &quot;Csütörtök&quot;;
+            worksheet.Cells[1, 10].Value = &quot;Péntek&quot;;
+
+            //Az első oszlop magasságát 15 pontról 30-ra állítjuk
+            worksheet.Row(1).Height = 30;
+            //Kiválasztjuk az első sort és félkövérre állítjuk
+            var font = worksheet.Cells[&quot;1:1&quot;].Style.Font;
+            font.Bold = true;
+            // Feltöltjük a munkafüzetet az órákkal
+            for (int i = 0; i &lt; classes.Count; i++)
+            {
+                UniClass uniClass = classes[i];
+
+                // Kiszámoljuk a kezdő és záró sor indexet az idő alapján
+                int startRowIndex = 2 + (((uniClass.StartTime.Hours - startHour) * 6) + (uniClass.StartTime.Minutes / 10));
+                int endRowIndex = 2 + (((uniClass.EndTime.Hours - startHour) * 6) + (uniClass.EndTime.Minutes / 10));
+
+                // Beírjuk a szöveget a cellába
+                worksheet.Cells[startRowIndex, 2 + uniClass.DayOfWeek*2].Value = uniClass.Title;
+
+                // Beállítjuk a sortörést
+                worksheet.Cells[startRowIndex, 2 + uniClass.DayOfWeek*2].Style.WrapText = true;
+
+                // Átméretezzük az oszlopokat (itt más mértékegységet használunk).
+                // Az oszlop amiben az óra van az 12 széles és 2 szünet lesz mellette
+                worksheet.Column(2 + uniClass.DayOfWeek*2).Width = 12;
+                worksheet.Column(2 + uniClass.DayOfWeek * 2+1).Width = 2;
+
+                // Beállítjuk, hogy a szöveg a tetejére húzzon
+                worksheet.Cells[startRowIndex, 2 + uniClass.DayOfWeek*2].Style.VerticalAlignment = ExcelVerticalAlignment.Top;
+
+
+                // Kitöltjük tankönyves nyomtatós stílussal a cellát, természetesen Fuchsiára
+                var fill = worksheet.Cells[startRowIndex, 2 + uniClass.DayOfWeek*2].Style.Fill;
+                fill.PatternType = ExcelFillStyle.LightTrellis;
+                fill.BackgroundColor.SetColor(Color.Fuchsia);
+
+                // Összeolvasztjuk az alatta lévő cellákkal, amíg tart az óra
+                worksheet.Cells[startRowIndex, 2 + uniClass.DayOfWeek*2, endRowIndex, 2 + uniClass.DayOfWeek*2].Merge = true;
+
+            }
+
+            // Elmentjük a munkafüzetet Orarend.xlsx néven
+            // Itt a System.IO előtagra szükség van, mert az osztályszintű elérési út is Path!
+            package.SaveAs(new FileInfo(System.IO.Path.Combine(this.Path, &quot;Orarend.xlsx&quot;)));
+
+        }
+    }
+}
+</code></pre>
+<h2 id="leadandó-feladat">Leadandó feladat</h2>
+<h2 id="section"></h2>
+<div class="WARNING">
+<h5>Warning</h5>
+<p>Csak ezt kell leadni gyakrolat végén!</p>
+</div>
+<p>(+/-) Építs olyan alkalmazást, mely tetszőleges weblapról legyűjti az USD/HUF pillanatnyi árfolyamát!</p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/altinum/szamtud_docfx/blob/main/softec_kk/SeleniumDemo/index2.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+    <script type="module" src="../../styles/heatmap/main.js"></script>
+    <script type="module" src="../../styles/heatmap/displayHeatmap.js"></script>
+    <script type="module" src="../../styles/heatmap/manageHtmlChange.js"></script>
+    <script type="module" src="../../styles/heatmap/intersectionObserver.js"></script>
+    <script type="module" src="../../styles/heatmap/config.js"></script>  </body>
+</html>

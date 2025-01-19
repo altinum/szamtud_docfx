@@ -1,0 +1,187 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Szoftvertechnol&#243;gia II. levelez&#337; vizsgakurzus </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Szoftvertechnol&#243;gia II. levelez&#337; vizsgakurzus ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <link rel="stylesheet" href="../../styles/heatmap.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="szoftvertechnológia-ii-levelező-vizsgakurzus">Szoftvertechnológia II. levelező vizsgakurzus</h1>
+
+<p>A feladat ASP. NET illetve Forms felhasználói felület építése egy szabadon választott adatbázishoz, mely valós vagy kitalált problémára, vagy annak egy részére nyújt megoldást. Az adatbázis lehet saját készítésű, de használható  minta adatbázis is, mint az  <a href="https://learn.microsoft.com/en-us/sql/samples/adventureworks-install-configure?view=sql-server-ver16&amp;tabs=ssms">AdventureWorks.</a> Az adatbázissal szemben annyi a követelmény, hogy legalább négy táblából álljon, és tartalmazzon több-a-több kapcsolatot.</p>
+<p>A baloldali linkeken többféle megoldás is bemutatásra kerül az adatbázis hosztolására. Szükség esetén ebben is szívesen segítünk.</p>
+<p>A feladat kötetlen, mivel minden adatbázis más, és más követelményeket támaszt az UI-vel szemben. A megvalósítás során alkalamzott megoldásokra az alábbi táblázat alapján kapható pont.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>Javasoljuk, hogy tervezéssel kezdjétek a munkát! Egy lapra rajzoljátok le, hogy mit szeretnétek megvalósítani, és az <a href="#%C3%81rlap">Árlap</a> alapján kiszámolni a pontértéket. Összehasonlításul: az 1b ZH az árlap alapján</p>
+</div>
+<p>A jeleshez 40 pontot kell gyűjteni.</p>
+<div class="IMPORTANT">
+<h5>Important</h5>
+<p>A honlap folyamatosan bővül újabb segédanyagokkal.</p>
+<p>Ha bármiben tudok segíteni, keressetek Teams-en!</p>
+</div>
+<h2 id="árlap">Árlap</h2>
+<p>A pontszámok szorzat formájában kerültek megadásra, pl: <code>4x1p</code>. A <strong>második</strong> szám -- a példában <code>1p</code> -- azt jelenti, hogy hogy hány pontot ér az adott részfeladat, az <strong>első</strong> pedig az adja meg, hogy hány ismétlés kerül beszámításra. Így nem lehet egyetlen részfeladat ismételgetésével teljesíteni a követelményt.</p>
+<p><strong>Adatbázis</strong></p>
+<ul>
+<li><code>1x15p</code> A saját tervezésű adatbázis 15 pontot ér! Annyi adattal kell csak feltölteni, hogy kipróbálható legyen működés közben.</li>
+</ul>
+<h5 id="user-interface">User Interface</h5>
+<ul>
+<li><p><code>1x2p</code> Az alkalmazásból a <strong>kilépés csak megerősítő kérdés után</strong> lehetséges.</p>
+</li>
+<li><p><code>3x2p</code> Olyan alkalmazás <strong>elrendezés, melyben gombok lenyomására UserControl-ok kerülnek elhelyezésre egy Panel vezérlőben</strong>, teljesen kitöltve azt. Minden gombra jár a pont, amennyiben az funckuonlalitással rendelkező UserControl-t tölt be.</p>
+</li>
+<li><p><code>3x1p</code> <strong>Többablakos alkalmazás</strong> legalább két felugró ablakkal. Minden Form-nak saját osztályon kell alapulnia, és funcionalitással kell rendelkeznie. Az ablakok nyílhatnak gombokkal vagy felső menüből is.</p>
+</li>
+<li><p><code>1x2p</code> <strong>Anchorok alkalmazása</strong>: az alkalmazás egészében meg van oldva, hogy az ablak átméretezésekor ki legyen használva a rendelkezésre álló terület.</p>
+</li>
+</ul>
+<h5 id="tábla-adatainak-megjelenítése-listbox-ban">Tábla adatainak megjelenítése <code>ListBox</code>-ban.</h5>
+<ul>
+<li><code>1x2p</code> Adatok  megjelenítése</li>
+<li><code>2x2p</code> Ha az adatok tetszőleges módszerrel, pl. <code>TextBox</code>-on keresztül szűrhetőek.</li>
+<li><code>1x2p</code> Ha a tábla adatforrása saját osztály.</li>
+</ul>
+<h5 id="tábla-adatainak-megjelenítése-datagridview-ban">Tábla adatainak megjelenítése <code>DataGridView</code>-ban</h5>
+<ul>
+<li><code>1x2p</code> Adatok  megjelenítése</li>
+<li><code>1x2p</code> Ha a tábla idegen kulcsot is tartalmaz, melynek megjelenítése <code>DataGridViewComboBoxColumn</code>-on keresztül történik.</li>
+<li><code>1x2p</code> Ha a tábla adatforrása saját osztály.</li>
+</ul>
+<h5 id="adatkötés-bindingsource--on-keresztül">Adatkötés <code>BindingSource</code> -on keresztül</h5>
+<ul>
+<li><code>1x2p</code> Működő  <code>BindingSource</code></li>
+<li><code>3x1p</code> Egy <code>BindingSource</code>-ra egy gyűjemény megjelenítésére alkalmas vezérlő (ListÍBox, ComboBox, DataGridVIew) mellett más adatkötött vezérlő is van kötve, mint <code>TextBox</code>, <code>DateTimePicker</code>, <code>ComboBox</code> idegen kulcs értékének beállítására, stb.</li>
+</ul>
+<h5 id="új-rekord-rögzítése">Új rekord rögzítése</h5>
+<p>A pontok összeadódnak.</p>
+<ul>
+<li><code>2x2p</code> master-detail reláció detail táblájába ÉS/VAGY több-a-több kapcsolatban álló táblák kapcsolótáblájába</li>
+<li><code>1x2p</code> Ha csak az idegen kulcsok vannak felvéve</li>
+<li><code>1x1p</code> Ha legalább egy nem kulcs mező, pl. <em>Mennyiség</em> is fel van véve</li>
+<li><code>1x2p</code> Ellenőrzéshez kötött adatfelvitel (egyszerű validáció pl: <code>String.IsNullOrEmpty()</code>)</li>
+<li><code>1x2p</code> Felugró ablakon keresztül történik <em>Ok</em> és <em>Mégse</em> gombbal</li>
+<li><code>1x2p</code> Ha az űrlap legördülő dobozon vagy listán keresztül beállítható idegen kulcsot is tartalmaz</li>
+<li><code>2x1p</code> A kitöltési hiba <code>ErrorProvider</code>-en keresztül kerülnek köközlésre a felhasználóval, hibás kitöltés esetén nem enged rányomni az <em>Ok</em> gombra</li>
+<li><code>1x2p</code> <code>Regex</code> alapú validáció</li>
+<li><code>1x1p</code> Hibás kitöltés esetén nem lehet megynomni az <em>Ok</em> gombot.</li>
+</ul>
+<h5 id="rekord-törlése">Rekord törlése</h5>
+<ul>
+<li><code>1x2p</code> Sikeres törlés</li>
+<li><code>1x2p</code> Megerősítéshez kötött törlés</li>
+</ul>
+<h5 id="diagram-rajzolása-excel-munkafüzet-generálása">Diagram rajzolása, Excel munkafüzet generálása</h5>
+<ul>
+<li><code>1x5p</code> Tetszőleges diagram rajzolása</li>
+<li><code>1x2p</code> A diagram adatforrása tetszőleges módszerrel szűrhető</li>
+<li><code>1x7p</code> Excel munkafüzet generálása kódból, adatbázistábla tartalmának megjelenítésével, legalább egy formázással</li>
+</ul>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/altinum/szamtud_docfx/blob/main/softeng/LevelezoVK/index.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+    <script type="module" src="../../styles/heatmap/main.js"></script>
+    <script type="module" src="../../styles/heatmap/displayHeatmap.js"></script>
+    <script type="module" src="../../styles/heatmap/manageHtmlChange.js"></script>
+    <script type="module" src="../../styles/heatmap/intersectionObserver.js"></script>
+    <script type="module" src="../../styles/heatmap/config.js"></script>  </body>
+</html>

@@ -1,0 +1,422 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Hands-On Lab: In memory adatb&#225;zis </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Hands-On Lab: In memory adatb&#225;zis ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../../../favicon.ico">
+    <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../styles/docfx.css">
+    <link rel="stylesheet" href="../../../styles/main.css">
+    <link rel="stylesheet" href="../../../styles/heatmap.css">
+    <meta property="docfx:navrel" content="../../../toc.html">
+    <meta property="docfx:tocrel" content="../../toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../../index.html">
+                <img id="logo" class="svg" src="../../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="hands-on-lab-in-memory-adatbázis">Hands-On Lab: In memory adatbázis</h1>
+
+<h2 id="gyakorlat-célja">Gyakorlat célja</h2>
+<p>A <em>Software Engineering</em> tárgy során a korábban megszokotthoz képest szignifikánsan nagyobb adathalmazokkal fogunk dolgozni. Az előző félévben felépítettünk egy kvízjátékot, aminek a tartalmait egy szöveges fájlból olvastuk ki egy-egy <code>UserControl</code>-ba. A feladat a memóriában végzett adatkezelés témakörét készítette elő.</p>
+<p>Ezen a gyakorlaton az adatainkat CSV (Comma Seperated Values) formátumú fájlokban tárolni. Ebben a fájltípusban az egyes sorokban vesszővel elválasztva szerepelnek az adatok. Néhány nyelv azonban (köztük a magyar is) a számokban tizedesvesszőt használ pont helyett, így nem ideális a vesszővel történő elválasztás. Emiatt a nyelvi beállításoktól függően érdemes meghatározni, hogy vesszőt vagy pontosvesszőt használunk a CSV fájljainkban. Az egyszerűség kedvéért mi minden esetben pontosvesszőt használunk majd.</p>
+<p>Ebben a példában fájlból olvasás mellett a fájlba írásra is nézünk példát.</p>
+<h2 id="videók">Videók</h2>
+<p>Az alábbi videókat érdemes lehet a feladatmegoldás előtt megnézni.</p>
+<p>(!Vid) 1. rész</p>
+<div class="embeddedvideo"><iframe src="https://storage.altinum.hu/softeng_lev/Inmemory_1.m4v" frameborder="0" allowfullscreen="true"></iframe></div>
+<p>(!Vid) 2. rész</p>
+<div class="embeddedvideo"><iframe src="https://storage.altinum.hu/softeng_lev/Inmemory_2.m4v" frameborder="0" allowfullscreen="true"></iframe></div>
+<p>(!Vid) 3. rész</p>
+<div class="embeddedvideo"><iframe src="https://storage.altinum.hu/softeng_lev/Inmemory_3.m4v" frameborder="0" allowfullscreen="true"></iframe></div>
+<h2 id="a-megoldás-lépései">A megoldás lépései</h2>
+<h3 id="1-hallgató-osztály-létrehozása">1. Hallgató osztály létrehozása</h3>
+<p>A <code>Student</code> osztályt  minden példánya egy-egy hallgató adatait tartalmazza majd.  Ez az osztály írja le, hogy milyen tulajdonságokkal rendelkezzen egy-egy hallgató. Egy <code>Student</code>   típusú elemekből álló lista  gyakorlatilag egy  memóriában tárolt adatbázistáblának feleltethető meg.</p>
+<p>(+/-) A <em>SolutionExplorer</em>-ben hozz létre egy <code>Models</code> nevű mappát! (A mappa neve egyébként tetszőleges.)</p>
+<p>(+/-) A <code>Models</code> nevű mappában hozz létre egy osztályt <code>Student</code> néven egy külön fájlba! Ezt az osztályt kizárólag hallgatói adatok tárolására fogjuk használni.</p>
+<p>A létrejövő kódban érdemes megfigyelni, hogy a névtérbe bekerült a projekt és a mappa neve is! Az osztályra a <code>Models.Student</code> néven lehet az <code>InMemoryDB</code> névtérből hivatkozni.</p>
+<pre><code class="lang-csharp">...
+namespace InMemoryDB.Models
+{
+    internal class Student
+    {
+
+    }
+}
+</code></pre>
+<p>(+/-) Hozd létre az alábbi tulajdonságokat a <code>Student</code> osztályon belül, és állítsd <em>access modifier</em>-t <code>public</code>-ra:</p>
+<table>
+<thead>
+<tr>
+<th>Megnevezés</th>
+<th>Adattípus</th>
+<th>Leírás</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Neptun</td>
+<td>string</td>
+<td>Neptun-kód</td>
+</tr>
+<tr>
+<td>Name</td>
+<td>string</td>
+<td>teljes név</td>
+</tr>
+<tr>
+<td>BirthDate</td>
+<td>DateTime?</td>
+<td>születési dátum</td>
+</tr>
+<tr>
+<td>AverageGrade</td>
+<td>decimal?</td>
+<td>tanulmányi átlag</td>
+</tr>
+<tr>
+<td>IsActive</td>
+<td>bool</td>
+<td>aktív-e a hallgató az adott félévben</td>
+</tr>
+</tbody>
+</table>
+<div class="NOTE">
+<h5>Note</h5>
+<p>A C# nyelvben a változótípus után tett kérdőjellel jelöljük az úgynevezett <strong>nullable type</strong>-okat. Az ilyen típusú változók a megszokott értékeken kívül felvehetik a <code>null</code> értéket is. Ezzel lehetőséget adunk a felhasználónak, hogy bizonyos értékeket ne állítson be, a példában tehát a születési dátum és a tanulmányi átlag lehet ismeretlen.</p>
+</div>
+<p>Megoldás:</p>
+<pre><code class="lang-csharp">public class Student
+{
+    public string Neptun { get; set; }
+    public string Name { get; set; }
+    public DateTime? BirthDate { get; set; }
+    public decimal? AverageGrade { get; set; }
+    public bool IsActive { get; set; }
+}
+</code></pre>
+<h3 id="2-űrlap-felépítése">2. Űrlap felépítése</h3>
+<p>(+/-) Hozz létre egy <code>DataGridView</code>-t a <code>Form1</code> design nézetében, és nevezd át <code>dgv</code>-re!</p>
+<p>(+/-) Hozz létre egy <em>Save</em> és egy <em>Load</em> feliratú gombot is a <code>Form1</code> design nézetében és nevezd el őket rendre <code>btnSave</code>-nek és <code>btnLoad</code>-nak!</p>
+<p>(+/-) Gondoskodj róla, hogy a gombok mindig a Form jobb felső sarkában legyenek, a <code>DataGridView</code> pedig töltse ki a rendelkezésre álló helyet!</p>
+<blockquote>
+<p>A vezérlő tulajdonságai között található <strong>Anchor</strong>, azaz horgony, a &quot;szülő&quot; objektum (jelen esetben a <code>Form</code>) négy oldalához (Top, Bottom, Left, Right) tudja rögzíteni az érintett vezérlőt. Ha egy Anchor aktív, akkor a vezérlőnek az őt tartalmazó objektum adott oldalától vett távolsága állandó. A jelen példában ez a form átméretezésekor is érvényes. Alapértelmezetten minden vezérlő Top és Left horgonya aktív, ezért van értelme az ennek megfelelő tulajdonságokkal meghatározni egy vezérlő pozícióját a <code>Form</code>-on. Ha például a Top és Right horgonyok aktívak, és kihelyezünk egy gombot a jobb felső sarokba, akkor az átméretezéskor is mindig ott fog maradni. Az Anchorok akkor is aktívak maradnak, ha két ellentétes oldalhoz állítjuk be őket. Ebben az esetben a fix távolságot úgy biztosítja a rendszer, hogy a &quot;szülő&quot; objektum átméretezésének megfelelően átméretezi a vezérlőt is. Ha mind a négy Anchort beállítjuk, akkor a vezérlőnk mindig kitölti a rendelkezésre álló helyet, és csak annyi szabad hely marad körülötte, amennyi eredetileg is volt. Az Anchor tulajdonság kódból történő beállítása körülményes, ezért javasolt a tervező nézet használata, de utólag a Designer.cs-ben meg lehet nézni az automatikusan generált mintakódot.</p>
+<p><img src="in-memory-db-1.png" alt="kep1"></p>
+</blockquote>
+<h3 id="3-hallgató-lista-létrehozása">3. Hallgató lista létrehozása</h3>
+<h4 id="31-adatkötött-lista-létrehozása">3.1 Adatkötött lista létrehozása</h4>
+<p>(+/-) Hozz létre egy adatkötött listát (<code>BindingList</code>) a hallgatók tárolására a <code>Form1</code>-ben, osztály szinten!</p>
+<p>▶ Megoldás:</p>
+<pre><code class="lang-csharp">using System.ComponentModel; //névtér, ahol a BindingList megtalálható
+
+// Adatkötött lista
+BindingList&lt;Models.Student&gt; students = new BindingList&lt;Models.Student&gt;();
+</code></pre>
+<blockquote>
+<p>Megjegyzés:
+Ez a példa projekt &quot;normál&quot; lista használata esetén is működik, érdemes kipróbálni. Az egyetlen különbség, hogy adatkötés hiányában nem fogjuk tudni szerkeszteni a listánkat a felhasználói felületen, de az adatok megjelennek:</p>
+<pre><code class="lang-csharp">// Normál lista
+List&lt;Models.Student&gt; students = new List&lt;Models.Student&gt;();
+</code></pre>
+</blockquote>
+<h4 id="32-adatkötött-lista-adatforrásának-beállítása">3.2 Adatkötött lista adatforrásának beállítása</h4>
+<blockquote>
+<p>A DataGridView az adatforrásként megadott lista (felsorolás) sorait jeleníti meg. Az oszlopai szerkeszthetők kódból, de alapértelmezetten a lista összes publikus Property-jét jeleníti meg oszloponként az eredeti nevekkel.</p>
+</blockquote>
+<p>(+/-) A Form konstruktorában állítsd be, hogy a <code>dgv</code> adatforrása (<code>DataSource</code>) a students lista legyen!</p>
+<p>Adatkötött lista esetén a lista elemei szerkeszthetők és a listaelemek automatikusan mentődnek a memóriába, ha átállunk egy másik sorra. A <code>DataGridView</code> azonnal figyelmeztet, ha egy oszlopba nem az annak megfelelő értéket próbáljuk beállítani.</p>
+<p><img src="in-memory-db-2.png" alt="kep2"></p>
+<p>▶ Megoldás:</p>
+<pre><code class="lang-csharp">// Konstruktor
+public Form1()
+{
+    InitializeComponent();           
+
+    // A hallgató lista összekötése a DataGridView-al
+    // Innentől már nem kell foglalkoznunk a dgv kezelésével, a felhasználó ezen keresztül el fogja érni a students listát        
+    // A kód oldalról pedig csak magát a students listát fogjuk szerkeszteni
+    dgv.DataSource = students;
+}
+</code></pre>
+<h3 id="4-adatkötött-vezérlők-használata">4. Adatkötött vezérlők használata</h3>
+<h4 id="41-űrlap-újratervezése">4.1 Űrlap újratervezése</h4>
+<p>(+/-) Tervezd át az űrlapot  az alábbi ábrának megfelelően:</p>
+<p><img src="../../images/image-20220827150347600.png" alt="image-20220827150347600"></p>
+<blockquote>
+<p>A &quot;details&quot; felirattal rendelkező elem egy <code>GroupBox</code>, ami megkönnyítheti a későbbiekben a benne lévő elemek együtt mozgatását</p>
+</blockquote>
+<h4 id="42-új-adatforrás-felvétele">4.2 Új adatforrás felvétele</h4>
+<p><img src="../../images/add_data_source.gif" alt=""></p>
+<p>(+/-) A <code>DataGridView</code> vezérlő &quot;fülében&quot; kattints a legördülőre, majd a megjelenő panelen választ az <em>Add Object Data Source</em> gombot!</p>
+<p>(+/-) A párbeszédablakban válaszd ki a <code>Student</code> osztályt. Fontos: a <code>Student</code> osztály csak akkor jelenik meg a párbeszédablakban, ha a létrehozása után már le lett fordítva (build) az alkalmazás. Innentől az adatforrások között a fában már elérhető a <code>Students</code> osztály. (Ha futtatás után sem jelenik meg a párbeszédablakban, próbáld meg a <code>Form1.cs</code>-t szerkeszteni és megpróbálni megint.)</p>
+<p>(+/-) A <code>DataGridView</code> adatforrásaként válaszd ki a <code>Student</code> osztályt.</p>
+<p>Mi történt?</p>
+<ul>
+<li>Ezzel a lépéssorozattal létrejött egy <code>studentBindingSource</code>, mely az űrlap alatt jelenik meg a tervezőben, mivel nincs külön vizuális reprezentációja.</li>
+<li>A <code>studentBindingSource</code> adatforrásaként már a tervezőben be van állítva a <code>Student</code> osztály.</li>
+<li>A <code>DataGridView</code> adatforrása a <code>studentBindingSource</code>, és mivel a <code>studentBindingSource</code> &quot;tudja&quot;, hogy <code>Student</code> típusú elemekből álló listát jelenítünk majd meg, a rácsban is megjelennek a <code>Student</code> osztály tulajdonságai.</li>
+<li>A <em>Solution Explorer</em>-ben létrejött egy <code>DataSources</code> elem, amelyben megtalálható az adatforrásként felvett <code>Student</code> osztály. Ha valamit tévedésből vettünk fel, innét lehet törölni.</li>
+</ul>
+<h4 id="43-vezérlők-adatkötésének-megváltoztatása">4.3 Vezérlők adatkötésének megváltoztatása</h4>
+<p>(+/-) A rácsba az adatokat a <code>studentBindingSource</code>-on keresztül töltsd.</p>
+<p>Cseréld re ezt a sort:</p>
+<pre><code class="lang-csharp">dgv.DataSource = students;
+</code></pre>
+<p>erre a sorra:</p>
+<pre><code class="lang-csharp">studentBindingSource.DataSource = students;
+</code></pre>
+<h4 id="44-további-vezérlők-bekötése">4.4 További vezérlők bekötése</h4>
+<p>(+/-)  Állíts be egy adatkötést a Neptun kódhoz tartozó <code>TextBox</code> <code>Text</code> tulajdonságára  az animáció szerint:</p>
+<p><img src="../../images/add_textbox_binding.gif" alt=""></p>
+<h3 id="5-mentés-funkció-megvalósítása">5. Mentés funkció megvalósítása</h3>
+<p>(+/-) Rendelj eseménykezelőt a <em>Save</em> gomb <code>Click</code> eseményéhez!</p>
+<p>(+/-) Az eseménykezelőben hozz létre egy példányt a <code>SaveFileDialog</code> osztályból!</p>
+<p>(+/-) Jelenítsd meg ezt a dialógus ablakot (<code>ShowDialog</code>), de ha az ablak végül nem az <em>OK</em> gombbal zárul be, akkor ne engedd tovább futni a metódust!</p>
+<p>(+/-) A <code>StreamWriter</code> osztály felhasználásával írd ki a <code>students</code> lista sorait a dialógus ablakban megadott nevű fájlba!</p>
+<p>(+/-) Futtasd a programot, tölts ki néhány sort a táblázatból, és mentsd el a listát. Ez hasznos lesz a betöltés funkció tesztelésekor.</p>
+<p>▶ Megoldás:</p>
+<pre><code class="lang-csharp">using System.Text; //névtér, ami a karakterkódolást tartalmazza
+
+// Save gomb eseménykezelője
+private void btnSave_Click(object sender, EventArgs e)
+{
+    // Példányosít egyet a windows standard mentés ablakából
+    SaveFileDialog sfd = new SaveFileDialog();
+
+    // Opcionális rész
+    sfd.InitialDirectory = Application.StartupPath; // Alapértelmezetten az exe fájlunk mappája fog megnyílni a dialógus ablakban
+    sfd.Filter = &quot;Comma Seperated Values (*.csv)|*.csv&quot;; // A kiválasztható fájlformátumokat adjuk meg ezzel a sorral. Jelen esetben csak a csv-t fogadjuk el
+    sfd.DefaultExt = &quot;csv&quot;; // A csv lesz az alapértelmezetten kiválasztott kiterjesztés
+    sfd.AddExtension = true; // Ha ez igaz, akkor hozzáírja a megadott fájlnévhez a kiválasztott kiterjesztést, de érzékeli, ha a felhasználó azt is beírta és nem fogja duplán hozzáírni
+
+    // Ez a sor megnyitja a dialógus ablakot és csak akkor engedi tovább futni a kódot, ha az ablakot az OK gombbal zárták be
+    if (sfd.ShowDialog() != DialogResult.OK) return;
+
+    // Az előző kódsor az alábbi két sor rövidített írásmódja
+    // DialogResult eredmény = sfd.ShowDialog(); // A dialógusablak bezárása után visszakapunk egy DialogResult típusú értéket, mely az ablak bezárásnak körülményeit tárolja
+    // if (eredmény != DialogResult.OK) return; // Ha a bezárás nem az OK gomb lenyomására következett be, akkor kilépünk a metódusból és nem hajtjuk végre a mentést
+
+    // Ha a using blokk használatával példányosítunk egy osztályt akkor a példány csak a using blokk végéig létezik, utána törlésre kerül
+    // StreamWriter és StreamReader használata esetén ezzel a módszerrel megspórolhatjuk a Close() metódus használatát és az írás / olvasási hibák egy részét is lekezeljük
+    // A StreamWriter paraméterei:
+    //    1) Fájlnév: mi itt azt a fájlnevet adjuk át, amit a felhasználó az sfd dialógusban megadott
+    //    2) Append: ha igaz és már létezik ilyen fájl, akkor a végéhez fűzi a sorokat, ha hamis, akkor felülírja a létező fájlt
+    //    3) Karakterkódolás: a magyar nyelvnek is megfelelő legáltalánosabb karakterkódolás az UTF8
+    using (StreamWriter sw = new StreamWriter(sfd.FileName, false, Encoding.UTF8))
+    {
+        // Végigmegyünk a hallgató lista elemein
+        foreach (var s in students)
+        {
+            // Egy ciklus iterációban egy sor tartalmát írjuk a fájlba
+            // A StreamWriter Write metódusa a WriteLine-al szemben nem nyit új sort
+            // Így darabokból építhetjük fel a csv fájl pontosvesszővel elválasztott sorait
+            sw.Write(s.Neptun);
+            sw.Write(&quot;;&quot;);
+            sw.Write(s.Name);
+            sw.Write(&quot;;&quot;);
+            sw.Write(s.BirthDate.ToString());
+            sw.Write(&quot;;&quot;);
+            sw.Write(s.AverageGrade.ToString());
+            sw.Write(&quot;;&quot;);
+            sw.Write(s.IsActive.ToString());
+            sw.WriteLine(); // Ez a sor az alábbi módon is írható: sr.Write(&quot;\n&quot;);
+        }
+    }
+}
+</code></pre>
+<p>Foreach rövidebben:</p>
+<pre><code class="lang-csharp">foreach (var s in students)
+        {
+            sw.WriteLine($&quot;{s.Neptun};{s.Name};{s.BirthDate};{s.AverageGrade};{s.IsActive}&quot;);
+        }
+</code></pre>
+<h3 id="6-betöltés-funkció-megvalósítása">6. Betöltés funkció megvalósítása</h3>
+<p>(+/-) Rendelj eseménykezelőt a <em>Load</em> gomb <code>Click</code> eseményéhez!</p>
+<p>(+/-) Az eseménykezelőben hozz létre egy példányt az <code>OpenFileDialog</code> osztályból!</p>
+<p>(+/-) Jelenítsd meg ezt a dialógus ablakot (<code>ShowDialog</code>), de ha az ablak végül nem az <em>OK</em> gombbal zárul be, akkor ne engedd tovább futni a metódust!</p>
+<p>(+/-) A <code>StreamReader</code> osztály felhasználásával menj végig a fájl sorain!</p>
+<p>(+/-) Minden sorra hozz létre egy új elemet a <code>students</code> listában!</p>
+<ul>
+<li>Bontsd fel a beolvasott sort a <code>Split</code> metódus segítségével!</li>
+<li>Hozz létre egy új <code>Student</code> példányt!</li>
+<li>A felbontott szövegdarabokat megfelelően konvertálva töltsd fel értékekkel a létrehozott <code>Student</code> objektum tulajdonságait! (Figyelj a potenciális <code>null</code> értékekre!)</li>
+<li>Add hozzá a létrehozott <code>Student</code> példányt a <code>students</code> listához!</li>
+</ul>
+<p>▶ Megoldás:</p>
+<pre><code class="lang-csharp">using System.Text; //névtér, ami a karakterkódolást tartalmazza
+
+// Load gomb eseménykezelője
+private void btnLoad_Click(object sender, EventArgs e)
+{
+    // Példányosít egyet a windows standard fájlmegnyitó ablakából
+    OpenFileDialog ofd = new OpenFileDialog();
+
+    // Opcionális rész
+    ofd.InitialDirectory = Application.StartupPath; // Alapértelmezetten az exe fájlunk mappája fog megnyílni a dialógus ablakban
+    ofd.Filter = &quot;Comma Seperated Values (*.csv)|*.csv&quot;; // A kiválasztható fájlformátumokat adjuk meg ezzel a sorral. Jelen esetben csak a csv-t fogadjuk el
+    ofd.DefaultExt = &quot;csv&quot;; // A csv lesz az alapértelmezetten kiválasztott kiterjesztés
+    ofd.AddExtension = true; // Ha ez igaz, akkor hozzáírja a megadott fájlnévhez a kiválasztott kiterjesztést, de érzékeli, ha a felhasználó azt is beírta és nem fogja duplán hozzáírni
+
+    // Ez a sor megnyitja a dialógus ablakot és csak akkor engedi tovább futni a kódot, ha az ablakot az OK gombbal zárták be
+    if (ofd.ShowDialog() != DialogResult.OK) return;
+
+    // Ha a using blokk használatával példányosítunk egy osztályt akkor a példány csak a using blokk végéig létezik, utána törlésre kerül
+    // StreamWriter és StreamReader használata esetén ezzel a módszerre megspórolhatjuk a Close() metódus használatát és az írás / olvasási hibák egy részét is lekezeljük
+    // A StreamReader paraméterei:
+    //    1) Fájlnév: mi itt azt a fájlnevet adjuk át, amit a felhasználó az ofd dialógusban megadott            
+    //    2) Karakterkódolás: megadható fixen, de érdemes inkább a Default opciót megadni, mert ez kiolvassa a fájlból, hogy milyen karakterkódolással lett eredetileg lementve
+    using (StreamReader sr = new StreamReader(ofd.FileName, Encoding.Default))
+    {
+	// Ebben a példában nincs fejléc a csv-ben, de gyakran előfordul, hogy szerepel olyan fejléc, amire a kódban nincs szükségünk
+	// Az alábbi kódsor beolvassa ugyan a csv első sorát, de nem tárolja el változóban a tartalmát, hanem egyszerűen eldobja azt
+	// sr.ReadLine()
+	// Ettől a StreamReader továbblép a következő sorba, és a lenti ciklus a második sortól kezdve fogja felolvasni a sorokat
+	
+        // Addig ismételjük a ciklust, míg el nem érjük a fájl végét
+        while (!sr.EndOfStream)
+        {
+            // Ez a sor egy sor nevű tömbbe olvassa be a fájl következő sorát úgy, hogy a pontosvesszők mentén feldarabolja azt
+            string[] sor = sr.ReadLine().Split(';');
+
+            // Az előző sor részletesebben kifejtve:                    
+            // string következőSor = sr.ReadLine(); // Először beolvassuk a következő sort
+            //    VIGYÁZAT: Ha a ciklusban egy ReadLine() sem szerepel, akkor a végtelenségig fog futni
+            //    Ha egynél több ReadLine() szerepel, akkor egy ciklus lépésre több sort is beolvasunk - Ilyenkor könnyen hibára futhat a program, ha azután próbálunk sort beolvasni, hogy elértük a fájl végét
+            // string[] sor = következőSor.Split(';'); // Ezután feldaraboljuk a következő sort a pontosvesszők mentén és a szöveges darabokból létrehozunk egy string típusú tömböt, amit később fel tudunk használni 
+
+            // Példányosítjuk a következő Student-et
+            Student s = new Student();
+
+            // A szöveges mezők egyszerűen feltölthetők
+            s.Neptun = sor[0];
+            s.Name = sor[1];                    
+
+            // A másik három mező nem szöveges ezért  megfelelő módon kell konvertálni őket
+            // A nullable mezők problémásak, ugyanis, ha nincs bennük tartalom, akkor a save metódusunk üres értéket fog kiírni a fájlba
+            // Ezt a konvertálás nem tudja kezelni ezért biztosan hibát fog eredményezni
+            // Az alábbi try-catch blokkok nem a legszebb megoldások, de cserébe nagyon egyszerűek
+            // Amennyiben az adott property beolvasása során hiba történik, egyszerűen nem csinálunk semmit és így üres marad az értéke
+            // VIGYÁZAT: Üres catch ágat csak rendkívül ellenőrzött körülmények között szabad írni a gyakorlásra szánt programokban
+            // Egy éles szoftverben SOHA nem szabad üres catch ágat hagyni, legalább az Exception logolást biztosítani kell!
+            try
+            {
+                s.BirthDate = Convert.ToDateTime(sor[2]);
+            }
+            catch { }                    
+            try
+            {
+                s.AverageGrade = decimal.Parse(sor[3]);
+            }
+            catch { }            
+            s.IsActive = bool.Parse(sor[4]);
+
+            // Az újonnan létrehozott Student-et hozzáadjuk a students listához
+            students.Add(s);
+        }
+    }
+}
+</code></pre>
+<h2 id="összefoglalás">Összefoglalás</h2>
+<h4 id="adatkötött-objektumok">Adatkötött objektumok</h4>
+<p>Adatkötések (Binding) segítségével elérhető, hogy két különböző változó értéke mindig megegyezzen egymással. Ha például egy <code>string</code> típusú változót egy <code>TextBox</code> <code>Text</code> property-jével kötünk össze, akkor nem kell folyton átírni a változót, ha megváltozik a <code>TextBox</code> tartalma.</p>
+<h4 id="bindinglist">BindingList</h4>
+<p>Az adatkötött listák (<code>BindingList</code>) elsősorban olyan vezérlőkben használhatók fel, melyek alkalmasak több elem megjelenítésére is (pl.: <code>ListBox</code>, <code>DataGridView</code>). Ilyenkor lehetőség van arra is, hogy a felhasználó egy megfelelő vezérlőn keresztül szerkessze az általunk létrehozott listát. Ehhez mindössze be kell állítani, hogy az adatkötött lista legyen a vezérlő adatforrása (<code>DataSource</code>).</p>
+<h4 id="bindingsource">BindingSource</h4>
+<p>A <code>BindingSource</code> egy speciális adatkötött objektum. Egyszerre több vezérlő adatforrásaként is be lehet állítani, és van saját adatforrása is. Lényegében egy köztes szereplő, melynek segítségével más adatkötött objektumokat több különböző vezérlőhöz is hozzá tudunk rendelni. A <code>BindingSource</code> képes kezelni a kiválasztott elemeket is, így ha az egyik vezérlőben kiválasztunk egy elemet egy listából, a másikban is megváltozik a kijelölés.</p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/altinum/szamtud_docfx/blob/main/softeng/LevelezoVK/IN_MEMORY/in_memory_db.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../styles/main.js"></script>
+    <script type="module" src="../../../styles/heatmap/main.js"></script>
+    <script type="module" src="../../../styles/heatmap/displayHeatmap.js"></script>
+    <script type="module" src="../../../styles/heatmap/manageHtmlChange.js"></script>
+    <script type="module" src="../../../styles/heatmap/intersectionObserver.js"></script>
+    <script type="module" src="../../../styles/heatmap/config.js"></script>  </body>
+</html>

@@ -1,0 +1,146 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Azure k&#246;lts&#233;gek k&#246;vet&#233;se </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Azure k&#246;lts&#233;gek k&#246;vet&#233;se ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../../../favicon.ico">
+    <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../styles/docfx.css">
+    <link rel="stylesheet" href="../../../styles/main.css">
+    <link rel="stylesheet" href="../../../styles/heatmap.css">
+    <meta property="docfx:navrel" content="../../../toc.html">
+    <meta property="docfx:tocrel" content="../../toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../../index.html">
+                <img id="logo" class="svg" src="../../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="azure-költségek-követése">Azure költségek követése</h1>
+
+<p>Gyakran előfordul, hogy vészesen fogy az Azure kreditet – vagy már el is fogyott.</p>
+<p>Igyekeztünk utánajárni, hogy mit lehet tenni, ha vészesen fogy az <em>Azure for Students</em> kredit. Elöljáróban annyit fontos megjegyezni, hogy a ’Pay-as-you-go’ előfizetés esetén meg lehet nézni, hogy napról napra hogyan növekedett a költség, és a tendenciát meghosszabbítva mekkora számlára számíthatunk a hónap végére. A költségeket aztán tovább lehet bontani. Sajnos ez a funkció hiányzik a „szopnzorált” előfizetésből, az <em>Azure for Students</em> előfizetéshez csak a <code>Subscribtions</code> alatt elérhető, <a href="https://www.microsoftazuresponsorships.com/">https://www.microsoftazuresponsorships.com/</a> oldalról letölthető <code>Usage Details</code> táblázat érthető el.</p>
+<p>Így néz ki a ’Pay-as-you-go’ előfizetés  költségelemzője:
+<img src="../../images/1614698473871.png" alt="1614698473871.png"></p>
+<p>A költségszámításhoz használható az <a href="https://azure.microsoft.com/hu-hu/pricing/calculator/">Azure Picing Calculator</a> oldal, de ez pont SQL szerver esetén nem sokat segít...</p>
+<h2 id="típushibák-melyek-magas-költségekhez-vezetnek">Típushibák, melyek magas költségekhez vezetnek</h2>
+<ul>
+<li><p>Leállított virtuális gépek esetén is kell fizeni a háttértár fenntartásának költségeit. Érdemes ezeket törölni, ha nem kellenek.</p>
+</li>
+<li><p>A WebApp-ból van free, ha jól van beállítva</p>
+</li>
+<li><p>Az SQL adatbázisomként kell fizetni, nem a szerverek után. Érdemes egy adatbázisban dolgozni, ha a táblanevek nem ütköznek. A nem használt adatbázisokat érdemes törölni, ezeket nem nem lehet leállítani.</p>
+</li>
+<li><p>A kurzusokhoz elég a lehető legkisebb SQL adatbázis. Érdemes ellenőrizni a linkre kattintva:
+<img src="../../images/1614699641758.png" alt="1614699641758.png"></p>
+</li>
+</ul>
+<p>Az adatbázis költségeinek alacsonyan tartására két opciónk van:</p>
+<ol>
+<li>General Purpose / Serverless visszavett vCore és adatbázismérettel, automatikus leállítással:
+<img src="../../images/1614699890414.png" alt="1614699890414.png"></li>
+<li>Basic, 100MB-re visszahúzott adatbázissal
+<img src="../../images/1614699994470.png" alt="1614699994470.png"></li>
+</ol>
+<p>Ha a Serverless beállítással a vCore-okra számlázott tétel rejtélyesen nő, érdemes lehet állítani átállni &quot;Basic&quot;-re, aminek becsült költsége 4.21 EUR havonta, ami a félévből hátralevő időre kalkulálható.</p>
+<h2 id="elfogyott-kredit">Elfogyott kredit</h2>
+<p>Ha elfogyott a kredit, a fiók letiltásra kerül. Ebben az esetben át lehet állítani a fiókot ’Pay-as-you-go’ előfizetésre, vagy regisztrálni egy másik, ’Azure free account’-ot. Ehhez utóbbihoz is jár 200 USD, de ennek felhasználására már csak egy hónap áll rendelkezésre. A ’Pay-as-you-go’-hoz meg kell adni hitelkártya adatokat – akkor is ha csak ingyenes szolgáltatásokat akarunk igénybe venni. A kártya hitelességének ellenőrzéséhez egy minimális összeggel meg is terheli a kártyát, melyet, ha jól tudom, vissza is utal.</p>
+<p><strong>Akkor is lehet teljesíteni a tárgyakat</strong>, ha elfogyott a kredit. SQL szervernek tudjátok telepíteni az SQL Server Express kiadását. Hálózatokból a Git repository alapján követjük a gyakorlatokon végzett munkát, a WebApp hiánya nem jelent hátrányt.</p>
+<h2 id="előfizetés-megújítása">Előfizetés megújítása</h2>
+<p>Ha még mindig hallgató vagy, évente 100 USD Azure kreditet kaphatsz. Legfeljebb 30 nappal a <strong>regisztráció évfordulója</strong> előtt az MS e-mailt küld, melyen keresztül újra aktiválhatod az Azure fiókot. <a href="https://azure.microsoft.com/en-gb/resources/knowledge-center/can-i-get-azure-for-students-again-next-year/">forrás</a></p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/altinum/szamtud_docfx/blob/main/softeng/LevelezoVK/KNOWHOW/azure_koltsegek.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../styles/main.js"></script>
+    <script type="module" src="../../../styles/heatmap/main.js"></script>
+    <script type="module" src="../../../styles/heatmap/displayHeatmap.js"></script>
+    <script type="module" src="../../../styles/heatmap/manageHtmlChange.js"></script>
+    <script type="module" src="../../../styles/heatmap/intersectionObserver.js"></script>
+    <script type="module" src="../../../styles/heatmap/config.js"></script>  </body>
+</html>

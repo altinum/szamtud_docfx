@@ -1,0 +1,180 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Azure SQL adatb&#225;zis l&#233;trehoz&#225;sa </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Azure SQL adatb&#225;zis l&#233;trehoz&#225;sa ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../../../../favicon.ico">
+    <link rel="stylesheet" href="../../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../../styles/docfx.css">
+    <link rel="stylesheet" href="../../../../styles/main.css">
+    <link rel="stylesheet" href="../../../../styles/heatmap.css">
+    <meta property="docfx:navrel" content="../../../../toc.html">
+    <meta property="docfx:tocrel" content="../../../toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../../../index.html">
+                <img id="logo" class="svg" src="../../../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="azure-sql-adatbázis-létrehozása">Azure SQL adatbázis létrehozása</h1>
+
+<div class="NOTE">
+<h5>Note</h5>
+<p>Erre a tudásra nem feltétlenül van szükség a kurzus során, de a témához kötődik.</p>
+</div>
+<h2 id="erőforrások-létrehozása">Erőforrások létrehozása</h2>
+<h3 id="1-lépés-bejelentkezés-az-azure-portálra">1. lépés: Bejelentkezés az Azure portálra</h3>
+<p>Jelentkezz be az Azure portál-ba az egyetemi e-mail címeddel!</p>
+<p><img src="Azure_2022_home.png" alt="kep1"></p>
+<h3 id="2-lépés-sql-adatbázis-létrehozása">2. lépés: SQL adatbázis létrehozása</h3>
+<blockquote>
+<p>Az ingyenes előfizetés elvileg 10 különböző adatbázis létrehozását teszi lehetővé. Egy szerveren több adatbázis is létrehozható, de Azure-ban az adatbázis létrehozásával kell kezdeni, és ha még nincs szerver, menet közben lehet létrehozni szervert is.</p>
+</blockquote>
+<p>Hozz létre egy új SQL adatbázis erőforrást!</p>
+<p><img src="Azure_2022_newdb.png" alt="kep2"></p>
+<h3 id="3-lépés-add-meg-az-adatbázisod-paramétereit">3. lépés: Add meg az adatbázisod paramétereit!</h3>
+<p><img src="Azure_2022_configdb.png" alt="kep3"></p>
+<ol>
+<li><p>Add meg az adatbázisod nevét!</p>
+</li>
+<li><p>Előfizetésből csak az ingyenes Azure for Students opció áll rendelkezésre, de korlátlan számú független előfizetés tartozhat egy felhasználóhoz.</p>
+</li>
+<li><p>Az Erőforráscsoport csak segít rendszerezni az adatbázisainkat, számunkra nincs jelentősége (javasolt érték: BCE).</p>
+</li>
+<li><p>A kiszolgálónál kell megadni az adatbázisszervert. (Egy szerveren több adatbázis is lehet.) Mivel még feltehetőleg nincs szerverünk létre kell hozni egyet az &quot;Új létrehozása&quot; linkre kattintva, az alábbiak szerint. Később ehhez a szerverhez csatlakozva tudjuk majd elérni az adatbázisunkat: <img src="Azure_2022_newHost.png" alt="kep4"></p>
+<ul>
+<li>A kiszolgálónévnek egyedinek kell lennie, és az URL-ek szabályainak is meg kell felelnie.</li>
+<li>A kiszolgáló rendszergazdája lesz az a felhasználói fiók, amin keresztül elérjük az adatbázisszerverünket. Van lehetőség új, korlátozottabb jogosultságú felhasználók létrehozására is.</li>
+<li>A megadott jelszó az adatbázisszerver rendszergazdájához tartozik, teljesen független az Azure-fiók jelszavától.     <strong>Olyan jelszót válasszatok, amit sehol máshol nem használtok, mert ezt a jelszót a beadandó során meg kell majd adnotok a gyakorlatvezetőknek!</strong></li>
+<li>A hozzánk legközelebbi szerverközpont Nyugat-Európa, így ezt a helyet érdemes megadni. Az ingyenes előfizetés helyenként egy szerver létrehozását teszi lehetővé. Az észak-európai központ is használható egyéni kísérletezésre.</li>
+</ul>
+</li>
+<li><p>A rugalmas SQL készletre nincs szükségünk.</p>
+</li>
+<li><p>A Számítás+Tárolás részen paraméterezhetjük a felhasználható erőforrást. Ennek komoly jelentősége van, mert ha elmulasztjuk beállítását, az ingyenes kreditjeink gyorsan fogynak. <img src="Azure_2022_dtu.png" alt="kep4_2"></p>
+</li>
+<li><p>A Rendezés megadja, hogy a szöveges mezők milyen nyelv szerint legyenek sorba rendezve. A gyakorlatok során az alapértelmezettet használjuk, hogy mindenkinek egyforma eredmények jelenjenek meg.</p>
+</li>
+<li><p>Ha mindent beállítottunk, indíhatjuk az adatbázis és a kiszolgáló létrehozását. Ehhez előbb a Felülvizsgálat+Létrehozás, majd a Létrehozás gombra kell kattintani. [!kep4_3]</p>
+</li>
+<li><p>Az adatbázis és a kiszolgáló létrehozása időbe telik, de az értesítési ablakban nyomon követhető a folyamat.
+<img src="Azure_work_in_progress.png" alt="kep5"></p>
+</li>
+<li><p>Ha elkészültek, akkor az erőforrások megtekinthetők az irányítópultra kattintva.
+<img src="Azure_See_on_ControlPanel.png" alt="kep6"></p>
+</li>
+</ol>
+<h3 id="4-lépés-konfiguráció">4. lépés: Konfiguráció</h3>
+<p>Az irányítópulton a szerverünket kiválasztva hozzáférünk a különböző beállításokhoz. A jelszó megváltoztatásához nincs szükség a régi jelszóra, így ha elfelejtettük, egyszerűen felülírható. Ahhoz, hogy az adatbázis távolról elérhető legyen, az alábbi ábra szerinti linken keresztül módosítani kell  a tűzfal beállításokat:</p>
+<p><img src="azure-settings.png" alt="kep7"></p>
+<p><strong>Tűzfalbeállítások</strong></p>
+<p><img src="Azure_2022_Firewall.png" alt="kep8"></p>
+<ul>
+<li>A létrehozott szerver alapértelmezetten nem elérhető, mert white-list-et használ, és semmilyen IP tartományt nem enged be.</li>
+<li>Az Azure-szolgáltatásokhoz való hozzáférés engedélyezése kapcsolót kikapcsolva a hozzáférés black-list jellegűre változtatható. (Nem ajánlott!)</li>
+<li>A listába felvett szabályok elnevezése csak nekünk szolgál, hogy a jövőben aznosítani tudjuk az egyes tartományokat. Érdemes a hozzáférést az egyetemi IP tartományra korlátozni (146.110.0.0 - 146.110.255.255), de ekkor csak az egyetemről vagy VPN-en lehet majd elérni a szervert.</li>
+<li>Az otthoni, megbízható IP címeket pedig új szabályként fel lehet venni ezek mellé. Netszolgáltatónként (és szolgáltatási szintenként) eltérő lehet, hogy az otthoni IP-cím milyen gyakran változik, akár a router újraindítása nélkül is.</li>
+<li>Ne felejtsd el elmenteni a tűzfal beállításainak változtatásait!</li>
+</ul>
+<p><strong>A szerver tulajdonságai</strong></p>
+<ul>
+<li>A kapcsolódáskor a szerver teljes nevét kell megadni, amely kimásolható a tulajdonságok közül.</li>
+<li>Ha esetleg elfelejtetted volna, akkor itt a rendszergazda felhasználóneve is megtekinthető.</li>
+</ul>
+<p><img src="azure-properties.png" alt="kep9"></p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/altinum/szamtud_docfx/blob/main/softeng/LevelezoVK/KNOWHOW/azure_sql_adatbazis_letrehozasa_2022/index.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../../styles/main.js"></script>
+    <script type="module" src="../../../../styles/heatmap/main.js"></script>
+    <script type="module" src="../../../../styles/heatmap/displayHeatmap.js"></script>
+    <script type="module" src="../../../../styles/heatmap/manageHtmlChange.js"></script>
+    <script type="module" src="../../../../styles/heatmap/intersectionObserver.js"></script>
+    <script type="module" src="../../../../styles/heatmap/config.js"></script>  </body>
+</html>

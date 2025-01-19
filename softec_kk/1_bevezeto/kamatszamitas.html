@@ -1,0 +1,184 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Hitel k&#246;lts&#233;g&#233;nek sz&#225;m&#237;t&#225;sa </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Hitel k&#246;lts&#233;g&#233;nek sz&#225;m&#237;t&#225;sa ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <link rel="stylesheet" href="../../styles/heatmap.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h2 id="hitel-költségének-számítása">Hitel költségének számítása</h2>
+
+<p>A feladat a nyelvi elemek bemutatására szolgál, nem pénzügyi oldalról közelíti a problémát.</p>
+<pre><code class="lang-csharp">private void btnOk_Click(object sender, EventArgs e)
+{
+    decimal hitelÖsszeg = decimal.Parse(tbHitelÖsszege.Text);
+    decimal haviKamat = decimal.Parse(tbHaviKamat.Text);
+    decimal haviTörlesztő = decimal.Parse(cbHaviTörlesztő.Text);
+
+    decimal hátralék = hitelÖsszeg;
+    decimal befizetés = 0;
+
+    List&lt;Sor&gt; sorok = new List&lt;Sor&gt;();
+
+    int hónap = 1;
+    while (hátralék &gt; 0)
+    {        
+        hátralék += haviKamat * (hátralék/100m);
+        hátralék -= haviTörlesztő;
+        befizetés += haviTörlesztő;
+        hónap++;
+
+        Sor újSor = new Sor();
+        újSor.Hátralék = Math.Round(hátralék);
+        újSor.Hónap = hónap;
+
+        sorok.Add(újSor);
+    }
+
+    dataGridView1.DataSource = sorok;
+}
+</code></pre>
+<pre><code class="lang-csharp">class Sor
+{
+    public int Hónap { get; set; }
+    public decimal Hátralék { get; set; }
+       
+}
+</code></pre>
+<h2 id="megjegyzések-a-kódhoz">Megjegyzések a kódhoz</h2>
+<h4 id="a-sor-osztály">A <code>Sor</code> osztály</h4>
+<p>A <code>Sor</code> osztály felfogható egy olyan összetett típusnak, mely képes két szám tárolására:</p>
+<ul>
+<li>egy <code>int</code> típusú <code>Hónap</code> nevű tulajdonságban tároljuk a hónap számát</li>
+<li>egy <code>decimal</code> típusú <code>Hátralék</code> nevű tulajdonságban tároljuk az adott hónapra vonatkozó hátralékot</li>
+</ul>
+<h4 id="a-sor-osztály-példányosítása">A <code>Sor</code> osztály példányosítása</h4>
+<p>A <code>Sor</code> egy osztály. Az oszályokból példányokat hozunk létre -- ebben a példában minden héthez létrehozunk egy-egy példányt. A példány létrehozása a <code>new</code> kulcsszóval történik. Ezután kerülhet sor az <code>újSor</code> nevű példány tulajdonságainak beállítására.</p>
+<pre><code class="lang-csharp">Sor újSor = new Sor();
+újSor.Hátralék = Math.Round(hátralék);
+újSor.Hónap = hónap;
+</code></pre>
+<div class="IMPORTANT">
+<h5>Important</h5>
+<p>Egy osztályból létrehozott példányt nevezünk <strong>objektum</strong>nak! A példában az <code>újSor</code> egy <code>Sor</code> típusú objektum.</p>
+</div>
+<h4 id="objektumokból-álló-listák">Objektumokból álló listák</h4>
+<p>Listát mindenféléből lehet csinálni, de meg kell adni az elemtípust:</p>
+<pre><code class="lang-c#">List&lt;int&gt; egészSzámok = new List&lt;int&gt;();
+List&lt;string&gt; szavak = new List&lt;string&gt;();
+</code></pre>
+<p>A <code>List</code> is egy osztály, belőle is a <code>new</code> kulcsszóval hozunk létre példányokat.</p>
+<p>Az igazán izgalmas az, amikor egy osztály szerepel az elemtípus helyén, mint a példában:</p>
+<pre><code class="lang-csharp">List&lt;Sor&gt; sorok = new List&lt;Sor&gt;();
+</code></pre>
+<p>Ezzel lényegében létrehoztunk a memóriában egy táblázatot, melynek sorai a hónapok számát és az adott hónaphoz tartozó hátralék értékét tartalmazák.</p>
+<p>Ennek később, amikor adatbázistáblákat mozgatunk az SQL szerver és az alkalmazás között, lesz jelentősége!</p>
+<h2 id="feladatok">Feladatok</h2>
+<p>(+/-) Oldjátok meg, hogy az utolsó hónapban ne mehessen negatívba a hátralék!</p>
+<p>(+/-) A hátralék mellett jelenítsétek meg a befizetések kummulált összegét. Ehhez új tuladjonságot kell felvenni a <code>Sor</code> osztályba.</p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/altinum/szamtud_docfx/blob/main/softec_kk/1_bevezeto/kamatszamitas.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+    <script type="module" src="../../styles/heatmap/main.js"></script>
+    <script type="module" src="../../styles/heatmap/displayHeatmap.js"></script>
+    <script type="module" src="../../styles/heatmap/manageHtmlChange.js"></script>
+    <script type="module" src="../../styles/heatmap/intersectionObserver.js"></script>
+    <script type="module" src="../../styles/heatmap/config.js"></script>  </body>
+</html>

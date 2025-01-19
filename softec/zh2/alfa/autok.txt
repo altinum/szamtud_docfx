@@ -1,0 +1,51 @@
+AutoID,Modell,Gyarto,Evjarat,Uzemanyag,TeljesitmenyHP
+1,M3,BMW,2020,Benzin,473
+2,Civic Type R,Honda,2021,Benzin,306
+3,Golf GTI,Volkswagen,2022,Benzin,241
+4,911 Carrera,Porsche,2022,Benzin,379
+5,Model S,Tesla,2020,Elektromos,1020
+6,F-150 Lightning,Ford,2021,Elektromos,563
+7,Wrangler,Jeep,2022,Dízel,260
+8,Aventador,Lamborghini,2022,Benzin,769
+9,Corvette Stingray,Chevrolet,2021,Benzin,490
+10,Chiron,Bugatti,2020,Benzin,1500
+11,R8,Audi,2022,Benzin,562
+12,Vantage,Aston Martin,2021,Benzin,503
+13,Ghost,Rolls Royce,2020,Benzin,563
+14,Taycan,Porsche,2021,Elektromos,751
+15,Camaro SS,Chevrolet,2022,Benzin,455
+16,Supra,Toyota,2020,Benzin,382
+17,CX-5,Mazda,2021,Dízel,187
+18,Q8,Audi,2022,Dízel,282
+19,Ranger,Ford,2021,Dízel,270
+20,X7,BMW,2022,Dízel,335
+21,Defender,Land Rover,2020,Dízel,296
+22,Urus,Lamborghini,2021,Benzin,641
+23,Macan,Porsche,2022,Benzin,434
+24,Navigator,Lincoln,2021,Dízel,450
+25,Explorer,Ford,2020,Dízel,400
+26,Bolt EV,Chevrolet,2021,Elektromos,200
+27,Leaf,Nissan,2022,Elektromos,214
+28,Kona Electric,Hyundai,2021,Elektromos,201
+29,e-tron,Audi,2020,Elektromos,355
+30,Mustang Mach-E,Ford,2022,Elektromos,346
+31,Cullinan,Rolls Royce,2021,Dízel,563
+32,Silverado,Chevrolet,2020,Dízel,277
+33,Arteon,Volkswagen,2021,Benzin,268
+34,Polestar 2,Polestar,2022,Elektromos,408
+35,Yukon,GMC,2020,Dízel,355
+36,Sorento,Kia,2021,Dízel,191
+37,Rav4,Toyota,2022,Dízel,204
+38,Tucson,Hyundai,2020,Dízel,182
+39,Escalade,Cadillac,2021,Dízel,420
+40,GLE Coupe,Mercedes-Benz,2022,Dízel,429
+41,Santa Fe,Hyundai,2020,Dízel,235
+42,Model X,Tesla,2021,Elektromos,1020
+43,Renegade,Jeep,2022,Dízel,180
+44,Enyaq iV,Skoda,2021,Elektromos,204
+45,I-Pace,Jaguar,2022,Elektromos,394
+46,Grand Cherokee,Jeep,2020,Dízel,375
+47,A4,Audi,2021,Benzin,261
+48,Giulia,Alfa Romeo,2022,Benzin,280
+49,2 Series,BMW,2020,Benzin,255
+50,Model 3,Tesla,2021,Elektromos,450

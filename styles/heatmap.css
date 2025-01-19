@@ -1,0 +1,16 @@
+.col-md-10 {
+  display: flex;
+  padding-left: 0;
+}
+#heatmap {
+  width: 1.5vw;
+  position: relative;
+  border: solid 1pt black;
+  margin-right: 15px;
+  min-height: 100%;
+}
+.map-section {
+  width: 100%;
+  position: absolute;
+  background-color: white;
+}
