@@ -1034,7 +1034,7 @@
           "hash": "WwFEOqP10YeRTxQjznN0EeLj3Q+OVt+QNPgMJAQB87I="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -1068,7 +1068,7 @@
           "hash": "ccwKRCHv6ICnJOSHisy7Opdof+2WPAUmEp8EpWe1C6g="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -1080,7 +1080,7 @@
           "hash": "u5YmSEtmyNqp0Z2hBa5nF7K/aYkXzZhrDBtz/rcRhQQ="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -1092,7 +1092,7 @@
           "hash": "bGSLXM7ZLXovoMmjreuMCALahNTNz5vYeFUFEkhqvbg="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -1104,7 +1104,7 @@
           "hash": "v76DhgQKqovQctaC7AmYxMmeDBQMCQ3L96NFMJn1/8s="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -1116,7 +1116,7 @@
           "hash": "+s4mZDpvjHewQgPktpSybE3a88GZA3jrjT7wPxOVctM="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -1128,7 +1128,7 @@
           "hash": "ya4GriGYjBLpmZHYr0mnXL3TVrblZWr/ZMXsHiKOwqA="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -1140,7 +1140,7 @@
           "hash": "SZdmnlo7PjeRhQMwFYkcoqykEXUSJ7ZVVQ6IDs5zn/I="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -1152,7 +1152,7 @@
           "hash": "5Fd99xlF1dPnIhzTxMsXi+zHeL4O8IbC/U3nTjr84Lw="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -1164,7 +1164,7 @@
           "hash": "WXUvxNcfbS6GIhocnHARtLmXUMiCk7a6A40YoXeCrPI="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -1176,7 +1176,7 @@
           "hash": "dq13c1DTWMTbddgkKsEDSo92QmpT8DUDWPIkCb/zPqc="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -1188,7 +1188,7 @@
           "hash": "4uvRyoxO3JEMAKH/n4XVBlXMku7Ph6ZFeElGp0PfSks="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -1200,7 +1200,7 @@
           "hash": "1XE5bySKrruD/CSBB1AmTheXtw4Cv+zYUYjgIPVas/o="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -1234,7 +1234,7 @@
           "hash": "jkqEE9dO9NssdqZMHZg9+xqVFG0HvE6tVwC/QJ4Yo0Y="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -1268,7 +1268,7 @@
           "hash": "0ztZBcupqJiFCJ6Xt97jMVjdvulR6HrJ3DCMV9qKNDo="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -1368,7 +1368,7 @@
           "hash": "pJ67fTNVIoKlMoh3tzGPiBpULbEVcUhck7/eACdCGcI="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -1413,7 +1413,7 @@
           "hash": "xixclLaByLB7+3y3yWRg4nkfqNaIi8SsAzXRR2Fh7zI="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -1469,7 +1469,7 @@
           "hash": "s3xdQvmiGo9iYzUTMFLXw3/4ut5YHPp3ssA0+K5Arng="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -1605,7 +1605,7 @@
           "hash": "goFwlPhlYxFrbiEgNnHwH1uJb/JI9b2HcYB602zBrvk="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -1870,7 +1870,7 @@
           "hash": "fyIhx/KinYIl2/E9lNvzTk7pdrLjUNhkbN2wgtG2VSU="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -1882,7 +1882,7 @@
           "hash": "rvwNP2bdZA60iE1llhQDeFumriLlISgFvYhuIRlQolo="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -1894,7 +1894,7 @@
           "hash": "Uj3dBYI+1lQVpBLN10m5lr2T23HTLLD8QY2b0oV+FXE="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -1917,7 +1917,7 @@
           "hash": "qAo2xPj3dBbzXD6LaFb47bVINl4FsAEI/cU9K1jqEXQ="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -1929,7 +1929,7 @@
           "hash": "IuuewbPM+f6TaF3E3mBXF+HKBv9rQR1yUZy8eKyAw6U="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -1941,7 +1941,7 @@
           "hash": "9PNHZQKneZsTqUoVkZF8ItQskpi3DKtNkwgABarROxU="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -1953,7 +1953,7 @@
           "hash": "gexpf7RsoZMMsCXfPNkFK/wLS+UdRPLMWlVevMZZ3yY="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -1976,7 +1976,7 @@
           "hash": "Vp6sLXZX9KPT2Bn48kD9FBYu48Z4CZjqt6QniDeoXpM="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -1988,7 +1988,7 @@
           "hash": "AKlMrk/HQV7KqixWzFSzQb1LNF0r0uKTf9sOsDQTbe0="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -2000,7 +2000,7 @@
           "hash": "m4YNZowS/typkrSksrNyQl4J6bXTHSyl+nlSugVc7I0="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -2012,7 +2012,7 @@
           "hash": "ZI9PzUdqFRITBdMsc4dOcZD/glgd43CvQpHQzsPU/QQ="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -2024,7 +2024,7 @@
           "hash": "Nz7FU4tvakNzwpr5wuhiAjHczhp+B9pE64hZgtmR5xM="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -2036,7 +2036,7 @@
           "hash": "TPDU8oCz076YDT9uV0WgVCb0eWgTAPXigQJzg+dq0YU="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -2048,7 +2048,7 @@
           "hash": "3yn0JD6QTxz/ZABE1v29FFCVCIZnOAWfwSDzfHiVmRc="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -2074,7 +2074,7 @@
           "hash": "6I5610ldUVfI4Yqpp+He/bTUClDF7nTzjENSQcAQOMM="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -2229,7 +2229,7 @@
           "hash": "zFVF3kCqyVTvKeqWBBJWaeR3jIqpA1kEKdfr7vXrAFU="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -2373,7 +2373,7 @@
           "hash": "UaiLIPRQldLN8qyIGVwDjBZjzNwPqY3/r4rnsDAIhP0="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -2385,7 +2385,7 @@
           "hash": "Cs7Ym4VEEqweDJeDCgd1XhNabC3rQvuE8Bpl+qTtjGk="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -2397,7 +2397,7 @@
           "hash": "P68BcSPFPnIE47vXlQNkK4V/ILuNHdmtf/LjNWQyWec="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -2409,7 +2409,7 @@
           "hash": "lZHQefCXG3LukM0BLtsTUsvhbtEDap6tg9qPz1hufzk="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -2435,7 +2435,7 @@
           "hash": "xZUfGWojznt5uWDRrnRnnN1XoBPPhxFESA8+GNplyzw="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -2480,7 +2480,7 @@
           "hash": "hiQNWy0tQ3+rnfrflVQD3QCBfxTD2v/8tsFtlWfZBYw="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -2492,7 +2492,7 @@
           "hash": "TC4PU9vvhaLR0CwcxUmOxT1qeXQvScgMAIPwveQV9Gs="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -2515,7 +2515,7 @@
           "hash": "ncy6CMPO5CjiXlFp6VSZm6RQkyKqqgcVjMEcE3gQ5xU="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -2626,7 +2626,7 @@
           "hash": "zPkVrdqwmhiAW7FYuU7nbl8tiO75aEUiRk/lHwnac2A="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -2726,7 +2726,7 @@
           "hash": "6zRsZdR06v06aiU05Y2BOcgVzxLYKjtVZO8p0TuTQZU="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -2749,7 +2749,7 @@
           "hash": "UGzR98NQEr4OQso7XCpXTi2UggJeUCuXpiwIZ7JFiqQ="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -2772,7 +2772,7 @@
           "hash": "Kr0/GOx6/s/aBM7tpPx7FFd3kR79tz/1+/6g7CYsPuk="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -2784,7 +2784,7 @@
           "hash": "K+aMe/BaINXhGnImFIsRXU1gYqrzQpUwqqaJIDsl7RI="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -2796,7 +2796,7 @@
           "hash": "RyDwt81bcghPnGecSaTDMzblLYgMZhyb+Pj7tw1Cplo="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -2808,7 +2808,7 @@
           "hash": "5G7OVE8pvqvO4WixOiNyXq2KSnG1CjoREQ0jc67aHQY="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -2831,7 +2831,7 @@
           "hash": "yCnrFGNs6nAG9Tq1hqevZ8/4nt9ATjzgq+Xq3Br3wwc="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -2854,7 +2854,7 @@
           "hash": "3YmNZJsLNJ9Kc29MugfCCSI240TNttINu1r26EdYPbo="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -2866,7 +2866,7 @@
           "hash": "3Qz68WlZwBcZiGp4254BPvN/jjnSKW3MEWp6IAHVJxE="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -2878,7 +2878,7 @@
           "hash": "8dwiJjic2k/fesHeFC/VibzhFgjY3bSa+xWBW1t6+A4="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -2890,7 +2890,7 @@
           "hash": "Ydpq3qM+TZWvXJGvpYRtcqn1NbONsvIEmNTl2292Si4="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -2905,7 +2905,7 @@
           "hash": "j61wWxmNDre8p6p9aRB4PrkLeRwI8VYh5Qars9hXpaM="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -2931,7 +2931,7 @@
           "hash": "tsGfs7C4tKkXfiTqqRk0epM3CkHOwsLS2iU222TfuHo="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -2990,7 +2990,7 @@
           "hash": "xCOCdIBANYcP0G3xmrzVLw3A7lD6aKccKHHuuFIOs/s="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -3002,7 +3002,7 @@
           "hash": "BbYhE63i3Xc2hDuFOhlqR2tUvjEKauy/oUfHaf1Yv44="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -3025,7 +3025,7 @@
           "hash": "08zdwcr7qsxFHpfpkCTN4eYFBzBUaiU+4rFP9fPWbs8="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -3037,7 +3037,7 @@
           "hash": "9H3+8CF9ApuK0E34aXy6Fm9aDt1Yj6O3yuMdF+mG/Gc="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -3049,7 +3049,7 @@
           "hash": "VXMggUQ6dyVXQcy7kCTNsWgyaMfk92Wddp2F6ur0i1c="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -3061,7 +3061,7 @@
           "hash": "uaI33lKYeWW2ieIMZbJUmH/AixhrLZR39NFtyWxGevg="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -3128,7 +3128,7 @@
           "hash": "D6GCWUETBTFQSgAiMfgnXLWKwnorCmE2fETcYc5Mqyg="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -3140,7 +3140,7 @@
           "hash": "alg4Jkd/ZR3EsAn6DkRg+bryNLYP07bo0HmGPdgQyUQ="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -3167,7 +3167,7 @@
           "hash": "10GKMPKNmM8+IPdW7atmLWx81IGJmIIUNedCZSbPD4A="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -3179,7 +3179,7 @@
           "hash": "BBpg/tFlMJ/s9Zl5nBFWNSGaOEfzJB0iAuFodDy6D98="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -3191,7 +3191,7 @@
           "hash": "sH+OFsykFeTBztVd0494Ck90LpIh1cduB9y+PApnIF4="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -3291,7 +3291,7 @@
           "hash": "YOEE7YqhNEFn4iOBfwIQs1nJ/+bxfporrzvFbT6wbA8="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -3380,7 +3380,7 @@
           "hash": "tq+UYPAYqvh3WOSIeXh6Y2r6XdLS+mlZ0syCcAl8M9M="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -3469,7 +3469,7 @@
           "hash": "7Hg6QybPjyLQNdo5MWDj2rPE9biCSQ3cWlczVSHcow4="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -3547,7 +3547,7 @@
           "hash": "59jpVPf+eke66XIsU3pkkTLT11Y5+XV463mR3xbrcyc="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -3636,7 +3636,7 @@
           "hash": "hJj0oK+wFkEUVnsx/3ssxz/rWVa4ric3YbP/LsTiW9Y="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -3659,7 +3659,7 @@
           "hash": "Do4vEzuYL6CJoBcWgXUn/nmFDlgCNtEK/ag5BNm+cLE="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -3814,7 +3814,7 @@
           "hash": "97mJTTu/XO3bHW5QCer8yH7WYk1w63Od8K+rCSXSQmc="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -3881,7 +3881,7 @@
           "hash": "ay3qvYdygdhPaqvzX02Xn+9UhiIUDxOWYjIsNEpsaoU="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -3893,7 +3893,7 @@
           "hash": "CTtkiuyFbI4naOP3MlGY5CF9YpovTf6QIftw4QZVwL4="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -3946,6 +3946,17 @@
       "output": {
         "resource": {
           "relative_path": "softec/zh2checklist/szavak.csv"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softec/zh3_gyakorlas/TankonyvTamokatas/TankonyvTamokatas/obj/Debug/net8.0-windows/TankonyvTamokatas.csproj.FileListAbsolute.txt",
+      "output": {
+        "resource": {
+          "relative_path": "softec/zh3_gyakorlas/TankonyvTamokatas/TankonyvTamokatas/obj/Debug/net8.0-windows/TankonyvTamokatas.csproj.FileListAbsolute.txt"
         }
       },
       "is_incremental": false,
@@ -4059,7 +4070,7 @@
           "hash": "23FnjQN7mNNiPnA6hKhNJOA6Rzt4ww+WEaAfaE4OM8M="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -4137,7 +4148,7 @@
           "hash": "jgE6HmHxJz2YyeAp3lhGwrlV6Q1n66KrnbttTvRQBwA="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -4149,7 +4160,7 @@
           "hash": "aUlCqY5PEj7PL5Vsuhl8KUtEv1EBa2bGinIqbLQ9P0M="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -6385,6 +6396,649 @@
       "version": ""
     },
     {
+      "type": "Resource",
+      "source_relative_path": "softeng/TereeViewDemo - Copy/WinFormsApp1/WinFormsApp1/obj/Debug/net8.0-windows/WinFormsApp1.csproj.FileListAbsolute.txt",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/TereeViewDemo - Copy/WinFormsApp1/WinFormsApp1/obj/Debug/net8.0-windows/WinFormsApp1.csproj.FileListAbsolute.txt"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/TereeViewDemo.zip",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/TereeViewDemo.zip"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/TereeViewDemo/AndroidAppMK68/AndroidAppMK68/Resources/AboutResources.txt",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/TereeViewDemo/AndroidAppMK68/AndroidAppMK68/Resources/AboutResources.txt"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/TereeViewDemo/AndroidAppMK68/AndroidAppMK68/Resources/mipmap-hdpi/appicon.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/TereeViewDemo/AndroidAppMK68/AndroidAppMK68/Resources/mipmap-hdpi/appicon.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/TereeViewDemo/AndroidAppMK68/AndroidAppMK68/Resources/mipmap-hdpi/appicon_background.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/TereeViewDemo/AndroidAppMK68/AndroidAppMK68/Resources/mipmap-hdpi/appicon_background.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/TereeViewDemo/AndroidAppMK68/AndroidAppMK68/Resources/mipmap-hdpi/appicon_foreground.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/TereeViewDemo/AndroidAppMK68/AndroidAppMK68/Resources/mipmap-hdpi/appicon_foreground.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/TereeViewDemo/AndroidAppMK68/AndroidAppMK68/Resources/mipmap-mdpi/appicon.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/TereeViewDemo/AndroidAppMK68/AndroidAppMK68/Resources/mipmap-mdpi/appicon.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/TereeViewDemo/AndroidAppMK68/AndroidAppMK68/Resources/mipmap-mdpi/appicon_background.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/TereeViewDemo/AndroidAppMK68/AndroidAppMK68/Resources/mipmap-mdpi/appicon_background.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/TereeViewDemo/AndroidAppMK68/AndroidAppMK68/Resources/mipmap-mdpi/appicon_foreground.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/TereeViewDemo/AndroidAppMK68/AndroidAppMK68/Resources/mipmap-mdpi/appicon_foreground.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/TereeViewDemo/AndroidAppMK68/AndroidAppMK68/Resources/mipmap-xhdpi/appicon.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/TereeViewDemo/AndroidAppMK68/AndroidAppMK68/Resources/mipmap-xhdpi/appicon.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/TereeViewDemo/AndroidAppMK68/AndroidAppMK68/Resources/mipmap-xhdpi/appicon_background.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/TereeViewDemo/AndroidAppMK68/AndroidAppMK68/Resources/mipmap-xhdpi/appicon_background.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/TereeViewDemo/AndroidAppMK68/AndroidAppMK68/Resources/mipmap-xhdpi/appicon_foreground.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/TereeViewDemo/AndroidAppMK68/AndroidAppMK68/Resources/mipmap-xhdpi/appicon_foreground.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/TereeViewDemo/AndroidAppMK68/AndroidAppMK68/Resources/mipmap-xxhdpi/appicon.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/TereeViewDemo/AndroidAppMK68/AndroidAppMK68/Resources/mipmap-xxhdpi/appicon.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/TereeViewDemo/AndroidAppMK68/AndroidAppMK68/Resources/mipmap-xxhdpi/appicon_background.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/TereeViewDemo/AndroidAppMK68/AndroidAppMK68/Resources/mipmap-xxhdpi/appicon_background.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/TereeViewDemo/AndroidAppMK68/AndroidAppMK68/Resources/mipmap-xxhdpi/appicon_foreground.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/TereeViewDemo/AndroidAppMK68/AndroidAppMK68/Resources/mipmap-xxhdpi/appicon_foreground.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/TereeViewDemo/AndroidAppMK68/AndroidAppMK68/Resources/mipmap-xxxhdpi/appicon.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/TereeViewDemo/AndroidAppMK68/AndroidAppMK68/Resources/mipmap-xxxhdpi/appicon.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/TereeViewDemo/AndroidAppMK68/AndroidAppMK68/Resources/mipmap-xxxhdpi/appicon_background.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/TereeViewDemo/AndroidAppMK68/AndroidAppMK68/Resources/mipmap-xxxhdpi/appicon_background.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/TereeViewDemo/AndroidAppMK68/AndroidAppMK68/Resources/mipmap-xxxhdpi/appicon_foreground.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/TereeViewDemo/AndroidAppMK68/AndroidAppMK68/Resources/mipmap-xxxhdpi/appicon_foreground.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/TereeViewDemo/AndroidAppMK68/AndroidAppMK68/obj/Debug/net8.0-android/AndroidAppMK68.csproj.FileListAbsolute.txt",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/TereeViewDemo/AndroidAppMK68/AndroidAppMK68/obj/Debug/net8.0-android/AndroidAppMK68.csproj.FileListAbsolute.txt"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/TereeViewDemo/AndroidAppMK68/AndroidAppMK68/obj/Debug/net8.0-android/R.txt",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/TereeViewDemo/AndroidAppMK68/AndroidAppMK68/obj/Debug/net8.0-android/R.txt"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/TereeViewDemo/AndroidAppMK68/AndroidAppMK68/obj/Debug/net8.0-android/__environment__.txt",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/TereeViewDemo/AndroidAppMK68/AndroidAppMK68/obj/Debug/net8.0-android/__environment__.txt"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/TereeViewDemo/AndroidAppMK68/AndroidAppMK68/obj/Debug/net8.0-android/acw-map.txt",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/TereeViewDemo/AndroidAppMK68/AndroidAppMK68/obj/Debug/net8.0-android/acw-map.txt"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/TereeViewDemo/AndroidAppMK68/AndroidAppMK68/obj/Debug/net8.0-android/android/bin/classes.zip",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/TereeViewDemo/AndroidAppMK68/AndroidAppMK68/obj/Debug/net8.0-android/android/bin/classes.zip"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/TereeViewDemo/AndroidAppMK68/AndroidAppMK68/obj/Debug/net8.0-android/buildid.txt",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/TereeViewDemo/AndroidAppMK68/AndroidAppMK68/obj/Debug/net8.0-android/buildid.txt"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/TereeViewDemo/AndroidAppMK68/AndroidAppMK68/obj/Debug/net8.0-android/case_map.txt",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/TereeViewDemo/AndroidAppMK68/AndroidAppMK68/obj/Debug/net8.0-android/case_map.txt"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/TereeViewDemo/AndroidAppMK68/AndroidAppMK68/obj/Debug/net8.0-android/customview-map.txt",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/TereeViewDemo/AndroidAppMK68/AndroidAppMK68/obj/Debug/net8.0-android/customview-map.txt"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/TereeViewDemo/AndroidAppMK68/AndroidAppMK68/obj/Debug/net8.0-android/res/mipmap-hdpi/appicon.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/TereeViewDemo/AndroidAppMK68/AndroidAppMK68/obj/Debug/net8.0-android/res/mipmap-hdpi/appicon.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/TereeViewDemo/AndroidAppMK68/AndroidAppMK68/obj/Debug/net8.0-android/res/mipmap-hdpi/appicon_background.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/TereeViewDemo/AndroidAppMK68/AndroidAppMK68/obj/Debug/net8.0-android/res/mipmap-hdpi/appicon_background.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/TereeViewDemo/AndroidAppMK68/AndroidAppMK68/obj/Debug/net8.0-android/res/mipmap-hdpi/appicon_foreground.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/TereeViewDemo/AndroidAppMK68/AndroidAppMK68/obj/Debug/net8.0-android/res/mipmap-hdpi/appicon_foreground.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/TereeViewDemo/AndroidAppMK68/AndroidAppMK68/obj/Debug/net8.0-android/res/mipmap-mdpi/appicon.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/TereeViewDemo/AndroidAppMK68/AndroidAppMK68/obj/Debug/net8.0-android/res/mipmap-mdpi/appicon.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/TereeViewDemo/AndroidAppMK68/AndroidAppMK68/obj/Debug/net8.0-android/res/mipmap-mdpi/appicon_background.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/TereeViewDemo/AndroidAppMK68/AndroidAppMK68/obj/Debug/net8.0-android/res/mipmap-mdpi/appicon_background.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/TereeViewDemo/AndroidAppMK68/AndroidAppMK68/obj/Debug/net8.0-android/res/mipmap-mdpi/appicon_foreground.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/TereeViewDemo/AndroidAppMK68/AndroidAppMK68/obj/Debug/net8.0-android/res/mipmap-mdpi/appicon_foreground.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/TereeViewDemo/AndroidAppMK68/AndroidAppMK68/obj/Debug/net8.0-android/res/mipmap-xhdpi/appicon.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/TereeViewDemo/AndroidAppMK68/AndroidAppMK68/obj/Debug/net8.0-android/res/mipmap-xhdpi/appicon.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/TereeViewDemo/AndroidAppMK68/AndroidAppMK68/obj/Debug/net8.0-android/res/mipmap-xhdpi/appicon_background.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/TereeViewDemo/AndroidAppMK68/AndroidAppMK68/obj/Debug/net8.0-android/res/mipmap-xhdpi/appicon_background.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/TereeViewDemo/AndroidAppMK68/AndroidAppMK68/obj/Debug/net8.0-android/res/mipmap-xhdpi/appicon_foreground.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/TereeViewDemo/AndroidAppMK68/AndroidAppMK68/obj/Debug/net8.0-android/res/mipmap-xhdpi/appicon_foreground.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/TereeViewDemo/AndroidAppMK68/AndroidAppMK68/obj/Debug/net8.0-android/res/mipmap-xxhdpi/appicon.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/TereeViewDemo/AndroidAppMK68/AndroidAppMK68/obj/Debug/net8.0-android/res/mipmap-xxhdpi/appicon.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/TereeViewDemo/AndroidAppMK68/AndroidAppMK68/obj/Debug/net8.0-android/res/mipmap-xxhdpi/appicon_background.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/TereeViewDemo/AndroidAppMK68/AndroidAppMK68/obj/Debug/net8.0-android/res/mipmap-xxhdpi/appicon_background.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/TereeViewDemo/AndroidAppMK68/AndroidAppMK68/obj/Debug/net8.0-android/res/mipmap-xxhdpi/appicon_foreground.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/TereeViewDemo/AndroidAppMK68/AndroidAppMK68/obj/Debug/net8.0-android/res/mipmap-xxhdpi/appicon_foreground.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/TereeViewDemo/AndroidAppMK68/AndroidAppMK68/obj/Debug/net8.0-android/res/mipmap-xxxhdpi/appicon.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/TereeViewDemo/AndroidAppMK68/AndroidAppMK68/obj/Debug/net8.0-android/res/mipmap-xxxhdpi/appicon.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/TereeViewDemo/AndroidAppMK68/AndroidAppMK68/obj/Debug/net8.0-android/res/mipmap-xxxhdpi/appicon_background.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/TereeViewDemo/AndroidAppMK68/AndroidAppMK68/obj/Debug/net8.0-android/res/mipmap-xxxhdpi/appicon_background.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/TereeViewDemo/AndroidAppMK68/AndroidAppMK68/obj/Debug/net8.0-android/res/mipmap-xxxhdpi/appicon_foreground.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/TereeViewDemo/AndroidAppMK68/AndroidAppMK68/obj/Debug/net8.0-android/res/mipmap-xxxhdpi/appicon_foreground.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/TereeViewDemo/NET_NF_Test/NET_NF_Test/obj/Debug/NET_NF_Test.csproj.FileListAbsolute.txt",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/TereeViewDemo/NET_NF_Test/NET_NF_Test/obj/Debug/NET_NF_Test.csproj.FileListAbsolute.txt"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/TereeViewDemo/NFApp1/NFApp1/obj/Debug/NFApp1.nfproj.FileListAbsolute.txt",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/TereeViewDemo/NFApp1/NFApp1/obj/Debug/NFApp1.nfproj.FileListAbsolute.txt"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "softeng/TereeViewDemo/NFApp1/packages/nanoFramework.CoreLibrary.1.14.2/LICENSE.md",
+      "output": {
+        ".html": {
+          "relative_path": "softeng/TereeViewDemo/NFApp1/packages/nanoFramework.CoreLibrary.1.14.2/LICENSE.html",
+          "hash": "EpGu+Ds/WBTg40jWnos5pQnLc23NyQHVAl7YC6fUXgI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
+      "type": "Conceptual",
+      "source_relative_path": "softeng/TereeViewDemo/NFApp1/packages/nanoFramework.CoreLibrary.1.14.2/docs/README.md",
+      "output": {
+        ".html": {
+          "relative_path": "softeng/TereeViewDemo/NFApp1/packages/nanoFramework.CoreLibrary.1.14.2/docs/README.html",
+          "hash": "acQ6Hn//BWea4snQD70pH8aHqRWlXSVxuiMjNB9X7aU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/TereeViewDemo/NFApp1/packages/nanoFramework.CoreLibrary.1.14.2/images/nf-logo.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/TereeViewDemo/NFApp1/packages/nanoFramework.CoreLibrary.1.14.2/images/nf-logo.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/TereeViewDemo/NFApp1/packages/nanoFramework.CoreLibrary.1.14.2/readme.txt",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/TereeViewDemo/NFApp1/packages/nanoFramework.CoreLibrary.1.14.2/readme.txt"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/TereeViewDemo/SoftengZhEa/SoftengZhEa/obj/Debug/net8.0-windows/SoftengZhEa.csproj.FileListAbsolute.txt",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/TereeViewDemo/SoftengZhEa/SoftengZhEa/obj/Debug/net8.0-windows/SoftengZhEa.csproj.FileListAbsolute.txt"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/TereeViewDemo/TinyCLRApplication1/TinyCLRApplication1/obj/Debug/TinyCLRApplication1.csproj.FileListAbsolute.txt",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/TereeViewDemo/TinyCLRApplication1/TinyCLRApplication1/obj/Debug/TinyCLRApplication1.csproj.FileListAbsolute.txt"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/TereeViewDemo/TizenWeb1/TizenWeb1/icon.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/TereeViewDemo/TizenWeb1/TizenWeb1/icon.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/TereeViewDemo/TizenWeb1/TizenWeb1/images/tizen_32.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/TereeViewDemo/TizenWeb1/TizenWeb1/images/tizen_32.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/TereeViewDemo/TizenWeb12/TizenWeb1/icon.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/TereeViewDemo/TizenWeb12/TizenWeb1/icon.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/TereeViewDemo/TizenWeb12/TizenWeb1/images/tizen_32.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/TereeViewDemo/TizenWeb12/TizenWeb1/images/tizen_32.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/TereeViewDemo/TizenWeb3/TizenWeb3/icon.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/TereeViewDemo/TizenWeb3/TizenWeb3/icon.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/TereeViewDemo/TizenWeb3/TizenWeb3/images/tizen_32.png",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/TereeViewDemo/TizenWeb3/TizenWeb3/images/tizen_32.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/TereeViewDemo/WinFormsApp1/WinFormsApp1/obj/Debug/net8.0-windows/WinFormsApp1.csproj.FileListAbsolute.txt",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/TereeViewDemo/WinFormsApp1/WinFormsApp1/obj/Debug/net8.0-windows/WinFormsApp1.csproj.FileListAbsolute.txt"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/TereeViewDemo/WinFormsAppValidation/WinFormsAppValidation/obj/Debug/net8.0-windows/WinFormsAppValidation.csproj.FileListAbsolute.txt",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/TereeViewDemo/WinFormsAppValidation/WinFormsAppValidation/obj/Debug/net8.0-windows/WinFormsAppValidation.csproj.FileListAbsolute.txt"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "softeng/TereeViewDemo/WinFormsAppXdoc/WinFormsAppXdoc/obj/Debug/net8.0-windows/WinFormsAppXdoc.csproj.FileListAbsolute.txt",
+      "output": {
+        "resource": {
+          "relative_path": "softeng/TereeViewDemo/WinFormsAppXdoc/WinFormsAppXdoc/obj/Debug/net8.0-windows/WinFormsAppXdoc.csproj.FileListAbsolute.txt"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
       "type": "Conceptual",
       "source_relative_path": "softeng/ZH1/index.md",
       "output": {
@@ -6427,7 +7081,7 @@
           "hash": "w1Wru6HfHwIZVZcAkCzc93WhHuUEVXX2kBnzoe2sbL8="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -7337,8 +7991,8 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": true,
           "incrementalPhase": "build",
-          "total_file_count": 183,
-          "skipped_file_count": 179
+          "total_file_count": 185,
+          "skipped_file_count": 183
         },
         "ResourceDocumentProcessor": {
           "can_incremental": false,

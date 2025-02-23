@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Kategoriak>
+  <Kategoria KategoriaId="2" Nev="Divat">
+    <Kategoria KategoriaId="9" Nev="Férfi Ruházat" />
+    <Kategoria KategoriaId="10" Nev="Nõi Ruházat" />
+    <Kategoria KategoriaId="18" Nev="Gyerek Ruházat" />
+  </Kategoria>
+  <Kategoria KategoriaId="3" Nev="Otthon és Kert">
+    <Kategoria KategoriaId="11" Nev="Kerti Eszközök" />
+    <Kategoria KategoriaId="12" Nev="Bútorok" />
+    <Kategoria KategoriaId="19" Nev="Konyhai Eszközök" />
+  </Kategoria>
+  <Kategoria KategoriaId="4" Nev="Szépségápolás">
+    <Kategoria KategoriaId="13" Nev="Arcápolás" />
+    <Kategoria KategoriaId="14" Nev="Hajápolás" />
+    <Kategoria KategoriaId="20" Nev="Smink Termékek" />
+  </Kategoria>
+  <Kategoria KategoriaId="5" Nev="Sport és Szabadidõ">
+    <Kategoria KategoriaId="15" Nev="Fitnesz Eszközök" />
+    <Kategoria KategoriaId="16" Nev="Kültéri Sportok" />
+    <Kategoria KategoriaId="21" Nev="Hobbi és Játékok" />
+  </Kategoria>
+  <Kategoria KategoriaId="6" Nev="Mobiltelefonok" />
+  <Kategoria KategoriaId="7" Nev="Laptopok" />
+  <Kategoria KategoriaId="8" Nev="TV-k" />
+  <Kategoria KategoriaId="17" Nev="Okosórák" />
+  <Kategoria KategoriaId="22" Nev="Új kategória" />
+  <Kategoria KategoriaId="34" Nev="Új kategória" />
+  <Kategoria KategoriaId="49" Nev="K1.2" />
+</Kategoriak>
