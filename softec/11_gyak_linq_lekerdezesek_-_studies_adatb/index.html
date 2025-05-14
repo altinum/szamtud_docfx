@@ -1,0 +1,320 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>11. gyakorlati feladatsor: LINQ lek&#233;rdez&#233;sek a  Studies adatb&#225;zis t&#225;blaira </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="11. gyakorlati feladatsor: LINQ lek&#233;rdez&#233;sek a  Studies adatb&#225;zis t&#225;blaira ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <link rel="stylesheet" href="../../styles/heatmap.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../../toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        <div class="article row grid">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="11-gyakorlati-feladatsor-linq-lekérdezések-a--studies-adatbázis-táblaira">11. gyakorlati feladatsor: LINQ lekérdezések a  Studies adatbázis táblaira</h1>
+
+<h2 id="a-feladat-háttere">A feladat háttere</h2>
+<p>A gyakorlat célja olyan kliens építése, mely LINQ-lekérdezések segítségével szűri és jeleníti meg egy adott tábla tartalmát. A mintafeladat egy tanszék óráit tartalmazó adatbázis köré épül.</p>
+<p><img src="1585069392831.png" alt="1585069392831.png"></p>
+<p>Az <code>Instructor</code> tábla az oktatókat tartalmazza, az oktató státusza (Pl: <em>Adjunktus</em>, <em>Docens</em>, <em>Egyetemi tanár</em>, stb.) idegen kulcsként van tárolva, akárcsak az <code>Emplolyment</code> (Pl: <em>Főállású</em>, <em>félállású</em>, <em>óraadó</em>). A <code>Lesson</code> tábla a saját kulcsa mellett csak idegen kulcsokat tartalmaz. Itt kerül tárolásra, hogy  milyen tantárgyból melyik oktatónak a hét melyik napján, melyik sávban és melyik teremben van órája. <code>Cousre</code> például a <em>szoftvertechnológia</em>, amiből van 7 <code>Lesson</code> egy héten.</p>
+<p>A cél kliens felület építése, mely kétféle nézetben teszi lehetővé az adatbázisban tárolt adatok megjelenítését. A nézetek között gombokkal lehet választani.</p>
+<ul>
+<li>Az egyik nézet egy listában megjeleníti az oktatókat, és a kiválasztott oktatónak listázza az óráit, de úgy, hogy az idegen kulcsok helyén a csatolt táblában szereplő érték jelenjen meg. Az oktatók név szerint szűrhetők az oktatók listája felett lévő szövegdobozban.</li>
+<li>A másik gombhoz tartozó nézetben kurzusonként lehet megtekinteni az órákat.</li>
+</ul>
+<p><img src="linq_studies.png" alt="kep1"></p>
+<h2 id="gyakorlati-feladatsor">Gyakorlati feladatsor</h2>
+<h3 id="1-projekt-létrehozása-és-elnevezése">1. Projekt létrehozása és elnevezése</h3>
+<p>(+/-) Hozz létre egy Widows Forms App típusú <strong>projekt</strong>et</p>
+<h3 id="2-adatbázis-felépítése-és-orm">2. Adatbázis felépítése és ORM</h3>
+<p>Az adatbázis csak az egyetemi IP-tartományból vagy egyetemi VPN-el érhető el!</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Szerver</td>
+<td>bit.uni-corvinus.hu</td>
+</tr>
+<tr>
+<td>Felhasználónév</td>
+<td>hallgato</td>
+</tr>
+<tr>
+<td>Jelszó</td>
+<td>Password123</td>
+</tr>
+<tr>
+<td>Adatbázis</td>
+<td>Studies</td>
+</tr>
+</tbody>
+</table>
+<p>(+/-) telepítsd az adatbázis eléréséhez szükséges NuGet csomagokat, majd készítsd el az ORM osztályokat!</p>
+<p>Hogy ne húzzuk az időt, alant a parancs:</p>
+<pre><code class="lang-powershell">Scaffold-DbContext &quot;Data Source=bit.uni-corvinus.hu;Initial Catalog=Studies;Persist Security Info=True;User ID=hallgato;Password=Password123;TrustServerCertificate=true&quot; Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models
+</code></pre>
+<h3 id="3-felhasználói-felület">3. Felhasználói felület</h3>
+<p>Hozd létre a fenti ábrán látható felületet az alábbi lépésekben!</p>
+<p>(+/-) A <code>Form1</code>-en hozz létre két gombot és egy <code>Panel</code>-t! A <code>Panel</code>-t tervező nézetben a <em>Toolbox</em>-ból behúzhatod. A gombok fogják a UC-ket cserélgetni a paneleken, így tud majd a felhasználó váltogatni a nézetek között.</p>
+<p>(+/-) Állítsd be a panel horgonyait (<code>Anchor</code> a <em>Properties</em> panelen) úgy, hogy a panel kövesse az ablak méretét.</p>
+<p>(+/-) Adj a projekthez két <code>UserControl</code>-t is <code>UserControl1</code> és <code>UserControl2</code> néven. Az <code>UserControl</code>-ok háttérszínét tervezőből állítsd különbözőre, hogy könnyen ellenőrizhető legyen a funkciók működése.</p>
+<p>(+/-) A két <code>UserControl</code> a panelba kerüljön bele. Hozzál létre eseménykiszolgálót a gombok kattintás eseményéhez.</p>
+<p>(+/-) Az esemény-kiszolgálókban hozd létre a gombhoz tartozó <code>UserControl</code>-t, majd add hozzá a panelhez úgy, hogy töltse ki a rendelkezésére álló területet (a <code>UserControl</code> <code>Dock</code> tulajdonságának <code>DockStyles.Fill</code> értékre történő beállításával). Az esemény-kiszolgálóban még a <code>UserControl</code> létrehozása előtt töröljük a panel korábbi tartalmát, végül adjuk a <code>Panel</code> <code>Controls</code> gyűjteményéhez a <code>UserControl</code>-t.</p>
+<blockquote>
+<p><code>Dock</code>: Az objektum szülőobjektumához való illeszkedését határozza meg. Így oldható meg legegyszerűbben, hogy a panel átméretezésével a benne lévő UC mindig vegye fel a panel méretét.</p>
+</blockquote>
+<p>◯ Példaként az első gombhoz tartozó eseménykiszolgáló:</p>
+<pre><code class="lang-csharp">private void button1_Click(object sender, EventArgs e)  
+{  
+	// Kitöröljük az összes vezérlőt a panelről  
+	panel1.Controls.Clear();  
+  
+	// Létrehozzuk az 1. UserControlt  
+	UserControl userControl1 = new UserControl1();  
+  
+	// Hozzáadjuk a panelhez.  
+	panel1.Controls.Add(userControl1);  
+  
+	// Dock: Az objektum szülőobjektumához való illeszkedését határozza meg  
+	// DockStíle.Fill: A vezérlő mind a négy oldala illeszkedjen (és méreteződjön) a szülőobjektumhoz.  
+	userControl1.Dock = DockStyle.Fill;  
+}
+</code></pre>
+<p>(+/-) Az ábrán látható <code>TextBox</code>, <code>ListBox</code> és <code>DataGridView</code> vezérlőket az egyik <code>UserControl</code>-on helyezd el (a <em>Toolbox</em>ról behúzva)! A továbbiakban az első <code>UserControl</code>-ra dolgozz!</p>
+<h3 id="4-usercontorl1-oktatók-lekérdezése">4. UserContorl1: Oktatók lekérdezése</h3>
+<p><img src="uc1.png" alt="image-20240508212628949"></p>
+<h4 id="41-lista-feltöltése-az-oktatók-neveivel">4.1 Lista feltöltése az oktatók neveivel</h4>
+<p>Fel kell tölteni adattal a <code>listBox1</code>-et az alábbiak szerint:</p>
+<p>(+/-) Példányosítsd a <code>context</code>-et az osztály szintjén!</p>
+<blockquote>
+<p><strong>LINQ</strong>: a .NET keretrendszerbe épített lekérdező nyelv (szabálygyűjtemény), amely rendelkezik a hagyományos lekérdező nyelvek (pl.: MSSQL) funkcionalitásának egy részével, egyszersmind integrálva van a programozási nyelvekbe (C#, VB).</p>
+</blockquote>
+<p>(+/-) Az alábbi egyszerű lekérdezéssel, melyet a konstruktorban vagy a <code>Load</code> eseményhez tartozó eseménykiszolgálóban is elhelyezhetünk, megkapjuk az <code>Instructor</code> tábla tartalmát. A LINQ eredményét adjuk meg a <code>listBox1</code> adatforrásaként:</p>
+<pre><code class="lang-csharp">var ilist = from i in context.Instructors
+            select i;
+listBox1.DataSource = ilist.ToList();
+</code></pre>
+<p>(+/-) Ahhoz, hogy a <code>listBox1</code>-ben csak az oktatók neve jelenjen meg, be kell állítani a lista <code>DisplayMember</code> tulajdonságát. Ezt a kódban az alábbi utasítás végzi el:</p>
+<pre><code class="lang-csharp">listBox1.DisplayMember = &quot;Name&quot;;
+</code></pre>
+<div class="WARNING">
+<h5>Warning</h5>
+<p>A <code>DisplayMember</code> értékét pontosan kell megadni, különben nem fog működni! Be kell gépelni. Ha rosszul van megadva, vagy nincs megadva a <code>DisplayMember</code>, a tábla sorait leképező osztály neve jelenik meg annyiszor, ahány eleme van az adatforrásul szolgáló gyüjteménynek. Kerülőút, ha a &quot;fülén&quot; keresztül állítjuk be az adatforrást, és <code>BindingSource</code>-on keresztül kötünk. Ekkor a <em>Properties</em> panelen a <code>DisplayMember</code> tulajdonság legördíthető, és tervezőből is kiválasztható a listában megjelenítendő tulajdonság.</p>
+</div>
+<h4 id="42-oktatók-szűrése-névre">4.2 Oktatók szűrése névre</h4>
+<p>A cél az, hogy ahogy a felhasználó gépel, úgy szűküljön az oktatók listája.</p>
+<p>A LINQ lekérdezésekben az SQL nyelvekhez hasonló módon lehet <code>WHERE</code> záradékokat írni. Az oktatók lekérdezéséhez használt lekérdezést az alábbi módon átalakítva a <code>textBox1</code>-be beírt szöveg alapján szűrve kerülnek az oktatók nevei az adatforrásba. Az alábbi kódrészletet a <code>textBox1</code> <code>TextChanged</code> eseményéhez létrehozott eseménykiszolgálóban célszerű elhelyezni:</p>
+<pre><code class="lang-csharp">listBox1.DataSource = (from i in context.Instructors
+                       where i.Name.Contains(textBox1.Text)
+                       select i).ToList();
+</code></pre>
+<p>A <code>Contains()</code> helyett használható még a <code>StartsWith()</code> metódus is, ha csak név eleji egyezésekre akarunk összpontosítani.</p>
+<pre><code class="lang-csharp">listBox1.DataSource = (from i in context.Instructors
+                       where i.Name.StartsWith(textBox1.Text)
+                       select i).ToList();
+</code></pre>
+<p>Ahhoz, hogy a lekérdezés szűrő jellege ténylegesen működjön, nem elég a konstruktorból meghívni. Szervezd ki a lekérdezést és az adatforrás feltöltését egy külön metódusba, amit aztán hívj meg a konstruktorból és a <code>textBox1</code> <code>TextChanged</code> eseményéhez rendelt eseménykezelőből is!</p>
+<p>Megoldás:</p>
+<pre><code class="lang-csharp">public UserControl1()
+{
+    InitializeComponent();
+
+    FillDataSource();
+    listBox1.DisplayMember = &quot;Name&quot;;
+}
+
+private void FillDataSource()
+{
+    listBox1.DataSource = (from i in context.Instructors
+                           where i.Name.Contains(textBox1.Text)
+                           select i).ToList();
+}
+
+private void TextBox1_TextChanged(object sender, EventArgs e)
+{
+    FillDataSource();
+}
+</code></pre>
+<h4 id="43-a-kiválasztott-oktató-óráinak-lekérdezése">4.3 A kiválasztott oktató óráinak lekérdezése</h4>
+<p>(+/-) Rendelj eseménykezelőt a <code>listBox1</code> <code>SelectedIndexChanged</code> eseményéhez! Az eseménykezelőben kérdezd le egy változóba kiválasztott oktató rekordját:</p>
+<pre><code class="lang-csharp">Instructor instructor = (Instructor)listBox1.SelectedItem;
+</code></pre>
+<p>vagy</p>
+<pre><code class="lang-c#"> Instructor selectedInstructor = listBox1.SelectedItem as Instructor;
+</code></pre>
+<p>Mivel a <code>ListBox1</code> adatforrása <code>Instructor</code> típusú elemekből álló gyűjtemény, bisztosak lehetünk benne, hogy a kiválasztott elem is <code>Instructor</code> típusú, vagy <code>null</code>, ha épp nincs semmi kiválasztva.</p>
+<p>Éppen ezért előtte illik ellenőrizni, hogy van-e egyáltalán kiválasztott oktató, vagy esetleg túl jól sikerült a szűrés :)</p>
+<pre><code class="lang-cs">if(listBox1.SelectedItem == null) return;
+Instructor selectedInstructor = listBox1.SelectedItem as Instructor;
+</code></pre>
+<p>(+/-) Ezt a rekordot felhasználva megírható egy lekérdezés, ami visszaadja az adott oktató tanóráit. A <code>Lessons</code> tábla azonban kizárólag idegen kulcsokat tartalmaz. Így a pontos értékek megjelenítéséhez a táblák összekapcsolására (INNER JOIN) lenne szükség. A LINQ ennél egyszerűbb lehetőséget is ad a táblakapcsolatokon keresztüli lekérdezésekre:</p>
+<pre><code class="lang-csharp">var lessons = from l in context.Lessons
+              where l.InstructorFk == selectedInstructor.InstructorSk
+              select new
+              {
+                  Kurzus = l.CourseFkNavigation.Name,
+                  Nap = l.DayFkNavigation.Name,
+                  Sáv = l.TimeFkNavigation.Name
+              };
+</code></pre>
+<p>A <code>select</code> után a <code>new</code> kulcsszó a három lekérdezett mezőt egy úgynevezett „névtelen típusú” objektumba gyűjti össze a fenti utasítás. A megfelelő kapcsolt táblákon keresztül hivatkozva pedig az idegen kulcsok helyett az egyes értékekhez tartozó neveket is meg tudjuk jeleníteni.</p>
+<p>Ugyanerre használhatsz lambda kifejezést is ha akarsz, kinek mi áll kézre:</p>
+<pre><code class="lang-c#">var lessons2 = context.Lessons.Where(l =&gt; l.InstructorFk == selectedInstructor.InstructorSk)
+    .Select(l =&gt; new
+    {
+        Kurzus = l.CourseFkNavigation.Name,
+        Nap = l.DayFkNavigation.Name,
+        Sáv = l.TimeFkNavigation.Name
+    });
+</code></pre>
+<p>(+/-) Töltsd be a LINQ-lekérdezés eredményét a dataGridView1-be! (Állítsd be a dataGridView1 adatforrását!)</p>
+<pre><code class="lang-csharp">dataGridView1.DataSource = lessons.ToList();
+</code></pre>
+<h3 id="5-usercontrol2-kurzusok-óráinak-lekérdezése">5. UserControl2: kurzusok óráinak lekérdezése</h3>
+<p>(+/-) A második <code>UserControl</code> felületén valósítsd meg a fent leírt szerkezetet, de most a kurzusok jelenjenek meg a <code>ListBox</code>-ban, és az adott kurzus órái legyenek a <code>DataGridView</code>-ban! <strong>Próbáld az alábbi megoldás használata nélkül megvalósítani a funkciót!</strong></p>
+<p>Megoldás</p>
+<pre><code class="lang-csharp">public partial class UserControl2 : UserControl
+{
+    StudiesContext context = new StudiesContext();
+    public UserControl2()
+    {
+        InitializeComponent();
+
+        FillDataSource();
+        listBox1.DisplayMember = &quot;Name&quot;;
+    }
+
+    private void textBox1_TextChanged(object sender, EventArgs e)
+    {
+        FillDataSource();
+    }
+
+    private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+    {
+        if (listBox1.SelectedItem == null) return;
+        Course course = listBox1.SelectedItem as Course;
+
+        dataGridView1.DataSource = (from l in context.Lessons
+                                    where l.CourseFk == course.CourseSk
+                                    select new
+                                    {
+                                        Nap = l.DayFkNavigation.Name,
+                                        Sáv = l.TimeFkNavigation.Name,
+                                        Oktató = l.InstructorFkNavigation.Name
+                                    }).ToList();
+    }
+
+    private void FillDataSource()
+    {
+        listBox1.DataSource = (from c in context.Courses
+                               where c.Name.Contains(textBox1.Text)
+                               select c).ToList();
+    }
+}
+</code></pre>
+<h2 id="6-oktatók-adatainak-megjelenítése-és-mentése">6. Oktatók adatainak megjelenítése és mentése</h2>
+<p>(+/-) Készíts <code>UserControl</code>-t, ami az oktatók adatait jeleníti meg, de az idegen kulcsok helyén a csatolt táblákban szereplő vontkozó szövegek jelenjenek meg!</p>
+<p>(+/-) Készíts gombot, amely CSV állományba menti az oktatókat!</p>
+<h2 id="7-új-kurzus-rögzítése">7. Új kurzus rögzítése</h2>
+<p>(+/-) Készíts <code>UserControl</code>-t, ami a kurzusok adatait jeleníti meg! Új kurzust <em>Ok</em> és <em>Mégse</em> gombot tartalmazó felugró ablakból lehessen rögzíteni!</p>
+<h2 id="8-egyéb-feladatok">8. Egyéb feladatok</h2>
+<p>(+/-)  Egészítsd ki az előző feladatokat úgy, hogy a rácsok és a listák alatt jelenjen meg egy cimkében, hogy éppen hány rekordot taralmaznak!</p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/altinum/szamtud_docfx/blob/main/softec/11_gyak_linq_lekerdezesek_-_studies_adatb/index.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+    <script type="module" src="../../styles/heatmap/main.js"></script>
+    <script type="module" src="../../styles/heatmap/displayHeatmap.js"></script>
+    <script type="module" src="../../styles/heatmap/manageHtmlChange.js"></script>
+    <script type="module" src="../../styles/heatmap/intersectionObserver.js"></script>
+    <script type="module" src="../../styles/heatmap/config.js"></script>  </body>
+</html>

@@ -1,0 +1,203 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Pascal-h&#225;romsz&#246;g kirak&#225;sa gombokb&#243;l </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Pascal-h&#225;romsz&#246;g kirak&#225;sa gombokb&#243;l ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <link rel="stylesheet" href="../../styles/heatmap.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="pascal-háromszög-kirakása-gombokból">Pascal-háromszög kirakása gombokból</h1>
+
+<p>A feladat a  <a href="https://hu.wikipedia.org/wiki/Pascal-h%C3%A1romsz%C3%B6g">Pascal-háromszög</a>  első néhány sorának kirakása gombokból.</p>
+<p>A Pascal háromszögben szereplő binomiális együtthatók kifejezhetők a faktoriálissal:</p>
+<p><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/c42a41f48e94296543f7f82ae26e19f69cc73ece" alt="{\displaystyle {n \choose k}={\frac {n!}{k!,(n-k)!}}}"></p>
+<h3 id="21-faktoriális-kiszámolása">2.1 Faktoriális kiszámolása</h3>
+<p>A .NET keretrendszer nem tartalmaz kész függvényt a faktoriális kiszámítására, ezért első lépésként nekünk kell megírnunk. Kétféle úton is el lehet indulni, bármelyik megoldást választhatjátok.</p>
+<h4 id="1-lehetőség-faktroiális-kiszámítása-iterációval">1. lehetőség: faktroiális kiszámítása iterációval</h4>
+<p><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/4234ee890533fa15c15af33b07648b46ef87f08a" alt=""></p>
+<p>A C# függvény a fenti szorzatösszeget képezi:</p>
+<pre><code class="lang-csharp">int Faktorialis(int n)
+{
+    int eredmény = 1;
+    for (int i = 1; i &lt;= n; i++) eredmény *= i;
+    return eredmény;
+}
+
+</code></pre>
+<ul>
+<li>A <code>*=</code> operátor megszorozza a változó értékét az operátor után szereplő értékkel. Hasonlóképpen működnek a <code>+=</code>,<code>-=</code> és a <code>/=</code> operátorok.</li>
+<li>A <code>++</code> operátor növeli a változó értékét 1-el, míg a <code>--</code> csökkenti.</li>
+</ul>
+<h4 id="2-lehetőség-faktoriális-kiszámítása-rekurzióval">2. lehetőség: faktoriális kiszámítása rekurzióval</h4>
+<p>Mint korábban írtuk, rekurzív függvényeknek azokat a függvényeket nevezzük, melyek saját magukat meghívják. Ebben a megközelítésben abból indulunk ki, hogy ha $n&gt;0$ akkor $n!=(n-1)!$, ha viszont $n\leq0$, akkor $n=1$.</p>
+<p>C#-ul:</p>
+<pre><code class="lang-csharp">int Faktorialis2(int n)
+{ 
+    if (n == 0) return 1;
+    return n * Faktorialis2(n - 1);            
+}
+</code></pre>
+<h2 id="22-a-háromszög-kirakása">2.2 A háromszög kirakása</h2>
+<p>(+/-)  Rakjátok ki a binomiális együtthatókat egy 10x10-es négyzetrácsba gomb (<code>Button</code>) vezérlőkből az alábbi összefüggés alapján:</p>
+<p><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/c42a41f48e94296543f7f82ae26e19f69cc73ece" alt="{\displaystyle {n \choose k}={\frac {n!}{k!,(n-k)!}}}"></p>
+<p>A <em>n</em> helyére a sor számát, <em>k</em> helyére az oszlopét helyettesítsd!</p>
+<p>Először egy négyzetrácsba tesszük az elemeket, majd később csináljuk meg azt, hogy ne jelenjenek meg a főátló felettiek, és később rendezzük őket piramis alakba:</p>
+<pre><code class="lang-csharp">namespace Pascal
+{
+    public partial class Form1 : Form
+    { 
+        public Form1()
+        {
+            InitializeComponent();
+            for (int sor = 0; sor &lt; 10; sor++)
+            {
+                for (int oszlop = 0; oszlop &lt;= 10; oszlop++)
+                {
+                    Button b = new Button();
+                    b.Top = sor * 60;
+                    b.Left = oszlop * 60;
+                    b.Height = 60;
+                    b.Width = 60;
+                    this.Controls.Add(b);
+                    int p = Faktorialis(sor) / (Faktorialis(oszlop) * (Faktorialis(sor-oszlop)));
+                    b.Text = p.ToString();
+                }
+            }
+        }
+
+        int Faktorialis(int n)
+        {
+            int eredmény = 1;
+            for (int i = 1; i &lt;= n; i++) eredmény *=  i; 
+                       
+            return eredmény;
+        }
+
+        int Faktorialis2(int n)
+        { 
+            if (n == 0) return 1;
+            return n * Faktoriális2(n - 1);            
+        }
+    }
+} 
+</code></pre>
+<p>(+/-) Oldjátok meg, hogy csak a főátló, és a főátló alatti “kockák” jelennenek meg.</p>
+<div class="TIP">
+<h5>Tip</h5>
+<p>A főátló alatt azok az elemek vannak, amelyeknél az oszlop száma nagyobb, vagy egyenlő, mint a sor száma. A Pascal-háromszög háromszög, és nem négyzet  Egyenlőre most derékszögű háromszögünk lesz.</p>
+</div>
+<p>(+/-) Az elemek jelenjenek meg piramis-szerűen.</p>
+<div class="TIP">
+<h5>Tip</h5>
+<p>Minden sorban egy kicsit jobban balra kell tolni az elemeket, mint az előző sorben. Egész pontosan minden sorban az elemeket egy fél elemnyivel balrább kell kell tolni, mint az előző sor elemeit.</p>
+</div>
+<div class="TIP">
+<h5>Tip</h5>
+<p>A ClientRectangle.Width kifejezés értéke az ablak belső mérete – keretek nélkül – pixelekben. (Ablak esetén a Width és a Height a keretet is magában foglalja, ami függ Windows verziótól és a beállított témától is.) Az első sort az ablak szélességének felével érdemes jobbra tolni, amiből – ha nagyon szőrszálhasokgatunk – ki kell vonni egy fél elemszélességnyit.</p>
+</div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/altinum/szamtud_docfx/blob/main/softec_kk/2_osztalyok/pascal_haromszog.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+    <script type="module" src="../../styles/heatmap/main.js"></script>
+    <script type="module" src="../../styles/heatmap/displayHeatmap.js"></script>
+    <script type="module" src="../../styles/heatmap/manageHtmlChange.js"></script>
+    <script type="module" src="../../styles/heatmap/intersectionObserver.js"></script>
+    <script type="module" src="../../styles/heatmap/config.js"></script>  </body>
+</html>

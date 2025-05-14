@@ -1,0 +1,313 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>T&#225;voli adatb&#225;zis el&#233;r&#233;se C# alkalmaz&#225;sb&#243;l </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="T&#225;voli adatb&#225;zis el&#233;r&#233;se C# alkalmaz&#225;sb&#243;l ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <link rel="stylesheet" href="../../styles/heatmap.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../../toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        <div class="article row grid">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="távoli-adatbázis-elérése-c-alkalmazásból">Távoli adatbázis elérése C# alkalmazásból</h1>
+
+<h2 id="bevezetés">Bevezetés</h2>
+<h3 id="a-gyakorlat-célja">A gyakorlat célja</h3>
+<p>Ezen a gyakorlaton  olyan alkalmazást építsünk, amely képes</p>
+<ul>
+<li>egy távoli SQL szerveren tárolt adatbázishoz csatlakozni,</li>
+<li>onnét egy tábla adatait letölteni, majd</li>
+<li>egy űrlapon elhelyezett rácsban megjeleníteni.</li>
+</ul>
+<p>A félév során az itt bemutatott módon történik majd a kliens és az SQL server közötti adat mozgatás.</p>
+<h3 id="követelmények">Követelmények</h3>
+<p>A gyakorlat teljesítéséhez a Visual Studio 2022-es változata és a .NET 6 SDK szükséges.</p>
+<h3 id="sql-adatbázis-adatai">SQL adatbázis adatai</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Szerver</td>
+<td>bit.uni-corvinus.hu</td>
+</tr>
+<tr>
+<td>Felhasználónév</td>
+<td>hallgato</td>
+</tr>
+<tr>
+<td>Jelszó</td>
+<td>Password123</td>
+</tr>
+<tr>
+<td>Adatbázis</td>
+<td>Student</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Fontos: a bit.uni-corvinus.hu SQL szerver csak VPN alól érhető el!!!</strong></p>
+<h2 id="1-windows-forms-app-létrehozása-net-6-alatt">1. Windows Forms App létrehozása .NET 6 alatt</h2>
+<p>(+/-) Hozz létre egy <code>Windows Forms App</code> típusú alkalmazást Visual Studio-ban. A Solution és a Project neve tetszőleges, a példában a <code>RemotelDbTest</code> nevet használjuk.</p>
+<p><img src="create_a_new_project.png" alt="image-20220826161152390"></p>
+<p><strong>Vigyázz:</strong> <code>Windows Forms App (.NET Framework)</code> template a régi .NET Framework 4.7 vagy 4.8 keretrendszert használja, nem a .NET 6.0-át! Ne keverd össze! A .NET 6-ban  teljesen újra írták a Windows Forms  kódját és a szerkesztőt is.  Gyakori hiba hogy C# projekt helyett Visual Basic projekt készül.</p>
+<p>Ha jól csináltad ez látszik:</p>
+<p><img src="create_a_new_project_60.png" alt="image-20220826161951275"></p>
+<h2 id="2-adatbázis-kezelése-a-server-explorer-panelben">2. Adatbázis kezelése a Server Explorer panelben</h2>
+<h3 id="21-csatlakozás-server-explorer-ben-az-adatbázishoz">2.1 Csatlakozás Server Explorer-ben az adatbázishoz</h3>
+<p><strong>Figyelem:</strong> A  <em>Server Explorer</em>-nek semmi köze nincs az épp megnyitott projekthez. A Visual Studio egy integrált fejlesztőkörnyezet,  és mint ilyen rendelkezik beépített funkcióval alapvető adatbázis műveletek elvégzésére.  A fejlesztőnek így nem kell elhagyni a VS-t, és más  alkalmazást telepíteni, ha egyszerű adatbázis műveleteket szeretne végrehajtani.  A Server Explorer ablakban  akkor is csatlakozhatunk adatbázishoz, ha a Visual Studio-ban éppen nincsen  projekt megnyitva.</p>
+<p>(+/-) A <em>Server Explorer</em>-ben vegyél fel egy kapcsolatot a bevezetésben megadott adatbázishoz!</p>
+<ul>
+<li><p>Ha nincs meg a Server Explorer panel, a Ctrl+Alt+S vagy a <code>view</code> / <code>Server Explorer</code>  menüpont segítségével lehet bekapcsolni.</p>
+</li>
+<li><p>A <em>Server Explorer</em> <code>Connect To Databese</code> ikonjával lehet felvenni az új adatbáziskapcsoaltot.</p>
+</li>
+</ul>
+<p><img src="add_connection.png" alt="image-20220826185741359"></p>
+<ul>
+<li><p>A szerver neve  magáért beszél.</p>
+</li>
+<li><p>A <code>Windows Authentication</code>  azt jelenti,  hogy a kliens a Windows-ba történő bejelentkezéshez használt credential-ökkel próbálja azonosítani magát a kliens az SQL szerver felé.  Ez azért jó,  mert az SQL Server képes az Active Directory-t használni a jogosultságok ellenőrzéséhez anélkül, hogy felhasználói jelszavakat kellene felvinni.  Lehetne jogosultságot adni egyszerre az összes diáknak. De nálunk nem ez a helyzet.</p>
+</li>
+<li><p>Mi az <code>SQL Server Authentication</code> használjuk,  ahol az SQL szerveren tárolt felhasználónév / jelszó párosokkal  történik az azonosítás.</p>
+</li>
+<li><p>A <code>Save password</code>  pipát fejlesztéskor érdemes lehet betenni.</p>
+</li>
+<li><p>Az adatbázis nevét is érdemes kitölteni,  legördülő dobozból nem mindig választható ki.  Az SQL Server-en  engedélyezhető vagy tiltható az adatbázisok listázása -- ez a beállítás általában attól függ hogy mennyire paranoid az adatbázisgazda :)</p>
+</li>
+<li><p>Ha a <code>Test Connection</code> nem megy,  érdemes ellenőrizni a VPN kapcsolatot.</p>
+</li>
+</ul>
+<h3 id="22-connection-string-kinyerése">2.2 Connection String kinyerése</h3>
+<p>Mint ahogy arról már korábban esett szó, a <em>Server Explorer</em>-nek semmi köze nincs az éppen megnyitott projekthez.  Ahhoz hogy olyan C# programot tudjunk írni,  ami csatlakozik a távoli adatbázishoz, később szükségünk lesz az úgynevezett <em>connection string</em>-re. (Nem most, de úgy tűnik logikusnak, hogy itt tegyünk említést róla.)</p>
+<p>A <em>connection string</em>-ben mező--érték párokat találunk, ez az információ szükséges egy adatbázisba bejelentkezéshez, és egy meghatározott adatbázis eléréséhez. A következő lépésben erre a <em>connection string</em>-re  lesz szükségünk ahhoz,  hogy legeneráljuk az adatbázis eléréséhez szükséges C# osztályokat.</p>
+<p>Ha a <em>Server Explorer</em>-ben  az adatbázisra kattintasz, a <em>Properties</em>  ablakban (jobb lent) megjelenik a <em>connection string</em>:</p>
+<pre><code>Data Source=bit.uni-corvinus.hu;Initial Catalog=Student;Persist Security Info=True;User ID=hallgato;Password=***********
+</code></pre>
+<p>(+/-)  Jegyezd meg, hogy hol találod a <em>connection string</em>-et később kelleni fog!</p>
+<h2 id="3-reverse-engineering">3. &quot;Reverse engineering&quot;</h2>
+<p>A Microsoft-os terminológiában <em>Revrese Engineering</em>-nek  hívjuk azt a folyamatot,  ami egy meglévő adatbázis séma alapján legenerálja azokat az osztályokat,  amelyek leképezik az adatbázist táblákat, a köztük lévő kapcsolatokat, illetve lehetőséget biztosítanak  adatok mozgatására  a kliens és a szerver között.</p>
+<p>Emlékeztetőül az előadáshoz:  két megközelítés létezik. A  <strong>database first</strong>  megközelítésben egy már létező, SQL szerveren felépített adatbázis séma alapján generáljuk le azokat az osztályokat,  melyek az adatbázis eléréséhez szükségesek.  A <strong>code first</strong> megközelítésben először az osztályokat írjuk meg mondjuk C#-ban,  majd ez alapján generálunk SQL adatbázis sémát.  A kurzus során végig a database first megközelítést használjuk.</p>
+<h3 id="31-nuget-csomagok-hozzáadása-a-projekthez">3.1 NuGet csomagok hozzáadása a projekthez</h3>
+<p>(+/-) Nyisdmeg a NuGet csomagkezelőt,  és add az alábbi csomagokat  a projekthez:</p>
+<p><img src="nuget.png" alt="image-20220826172723611"></p>
+<p><img src="nuget_packages.png" alt="image-20220826190651720"></p>
+<p>A <code>Microsoft.EntityFrameworkCore.Tools</code> és a <code>Microsoft.EntityFrameworkCore.SqlServer</code> a NuGet konzolán keresztül ezzel a két paranccsal is hozzáadható a projekthez:</p>
+<pre><code class="lang-powershell">Install-Package Microsoft.EntityFrameworkCore.SqlServer
+Install-Package Microsoft.EntityFrameworkCore.Tools
+</code></pre>
+<h3 id="32-osztályok-generálása">3.2 Osztályok generálása</h3>
+<p>Sajnos .NET Core alatt (még) nem áll rendelkezésre Visual Studio-ba épített grafikus eszköz és varázsló az adatbázis sémája alapját leképező C# osztályok előállítására. (3rd party modul létezik.) Ezt is a <em>Package Manager Console</em>-ból kell megoldani parancssorból, de nem olyan veszélyes, mint első hallásra tűnik. (<code>Tools</code>/<code>NuGet Package Manager</code>)</p>
+<p>A <code>Scaffold-DbContext</code> parancs használata egyszerű, meg kell neki adni a <em>Connection String</em>-et, és a projekten belül azt a mappát, ahova dolgozhat. A mappa neve tipikusan a <code>Models</code>, ha csak egy adatbázisunk van.</p>
+<pre><code class="lang-powershell">Scaffold-DbContext &quot;[Connection String]&quot; Microsoft.EntityFrameworkCore.SqlServer -OutputDir [Mappa]
+</code></pre>
+<p>A mi esetünkben, miután a kicsillagozott jelszót újra megadtuk:</p>
+<pre><code class="lang-powershell">Scaffold-DbContext &quot;Data Source=bit.uni-corvinus.hu;Initial Catalog=Student;Persist Security Info=True;User ID=hallgato;Password=Password123&quot; Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models
+</code></pre>
+<blockquote>
+<p>Fontos: ha a projektet nem lehet lefordítani, amikor kiadjuk a <code>Scaffold-DbContext</code> parancsot, csak egy mérsékelten beszédes &quot;Bulid Failed.&quot;
+üzenetet kapunk. Ha nem ez a baj, használható a parancs végére a <code>-Verbose</code> kapcsoló.</p>
+</blockquote>
+<p>(+/-) Állítsd össze a <code>Scaffold-DbContext</code>  parancsot saját <em>connection string</em>-ed alapján,  majd futtasd  a <em>Package Manager Console</em>-ban.</p>
+<p>Ezután meglelenik a SolutionExplorer-ben egy <code>Models</code> mappa benne a fájlokkal:</p>
+<p><img src="orm_files.png" alt="image-20220826192942832"></p>
+<h4 id="a-students-osztály">A <code>Students</code> osztály</h4>
+<p>Érdemes megnézni a <code>Student.cs</code>-t -- az SQL szerveren lévő <code>Student</code> tábla leképezését tartalmazza:</p>
+<pre><code class="lang-csharp">using System;
+using System.Collections.Generic;
+
+namespace RemoteDBTest.Models
+{
+    public partial class Student
+    {
+        public int Id { get; set; }
+        public string Neptun { get; set; } = null!;
+        public string Name { get; set; } = null!;
+        public DateTime BirthDate { get; set; }
+        public decimal? AverageGrade { get; set; }
+        public bool IsActive { get; set; }
+    }
+}
+</code></pre>
+<p>Összehasonlításul:</p>
+<p><img src="schema.png" alt="image-20220826193754103"></p>
+<h4 id="a-studentcontext-osztály">A <code>StudentContext</code> osztály</h4>
+<h4 id="az-osztály-neve-alapértelmezetten-az-adatbázis-neve--context-formájú">Az osztály neve alapértelmezetten az <strong>[Adatbázis neve] + Context</strong> formájú.</h4>
+<h2 id="4-forms-alapú-felhasználói-felület-készítése">4. Forms alapú felhasználói felület készítése</h2>
+<h3 id="41--datagridview-létrehozása">4.1  DataGridView létrehozása</h3>
+<p>(+/-) Hozz létre egy <code>DataGridView</code>-t a <code>Form1</code>-en, a neve maradjon <code>dataGridView1</code>
+(+/-) Allítsd be a megfelelő <code>anchor</code>-okat, hogy az ablak átméretezésével a <code>DataGridView</code> is átméreteződjön</p>
+<h3 id="42-adatok-olvasása-az-sql-szerverről">4.2 Adatok olvasása az SQL szerverről</h3>
+<p>(+/-) A <code>Form1</code>  osztály szintjén példányosítsd <code>studentContext</code>  néven a  <code>StudentContext</code> osztályt.</p>
+<p>(Emlékezz vissza:  az elnevezési konvenció szerint az osztály neveket nagy betűvel az osztályból létrehozott példány nevét pedig kisbetűvel szokás kezdeni.)</p>
+<p>A példányosítás azért az osztály szintjén végezzük el,  mert az osztályon belül több mert metódusból is el szeretnénk érni a <code>context</code>-et.  (A <code>context</code>  név  szerepel az összes microsoftos dokumentációban és példaprogramban ezért mi is ehhez tartjuk magunkat --  lehetne bármi.)</p>
+<pre><code class="lang-csharp">namespace RemoteDBTest
+{
+    public partial class Form1 : Form
+    {
+        // Ezen a objektumon keresztül lehet majd elérni a távoli adatbázis elemeit
+        Models.StudentContext studentContext =  new Models.StudentContext();
+        public Form1()
+        {
+            InitializeComponent();
+        }
+    }
+}
+</code></pre>
+<pre><code class="lang-csharp">namespace RemoteDBTest
+{
+    public partial class Form1 : Form
+    {
+        Models.StudentContext studentContext =  new Models.StudentContext();
+        public Form1()
+        {
+            InitializeComponent();
+            dataGridView1.DataSource = studentContext.Students.ToList();
+        }
+    }
+}
+</code></pre>
+<p>Az  SQL ben elterjedt  adatbázis objektum elnevezési konvenció szerint  a táblák neve  mindig a tábla alapjául szolgáló entitás egyes számú alakja.  Jelen esetben <em>Student</em> és nem <em>Students</em>. A érdemes megfigyelni, hogy a reverse engineering  során generált <code>StudentContext</code> osztály <code>Students</code>  tulajdonságán keresztül érhető el a <code>Student</code> tábla.  Azaz a táblanév  automatikusan többesszámba került  az angol nyelvtan szabályai szerint. A <code>Scaffold-DbContext</code>  <a href="https://docs.microsoft.com/en-us/ef/core/cli/powershell#scaffold-dbcontext">dokumentációjában</a> szereplő <code>-NoPluralize</code>  kapcsolóval a többesszámba  tétel kikapcsolható,  magyar táblaneveknél elég zavaró tud lenni.</p>
+<h3 id="43-adatkötött-vezérlők-használata">4.3 Adatkötött vezérlők használata</h3>
+<p>(+/-) A <code>dataGridView1</code> vezérlő &quot;fülében&quot; kattints a legördülőre, majd a megjelenő panelen választ az <em>Add Object Data Source</em> gombot!</p>
+<p>(+/-) A párbeszédablakban válaszd ki a <code>Student</code> osztályt. Ez az osztály írja le a <code>Student</code> tábla egy entitását -- magyarul egy-egy <code>Student</code> típusú objektum jön majd létre az adatbázistábla összes memóriába olvasott sorához. Fontos: a <code>Student</code> osztály csak akkor jelenik meg az alábbi ablakban, ha az <code>Scaffold-DbContext</code> után már le lett fordítva (build) az alkalmazás. Innentől az adatforrások között a fában már elérhető a <code>Students</code> osztály.</p>
+<p>(+/-) A <code>dataGridView1</code> adatforrásaként válaszd ki a <code>Student</code> osztályt.</p>
+<p><img src="add_data_source.gif" alt="add_data_source"></p>
+<p>Mi történt?</p>
+<ul>
+<li>Ezzel a lépéssorozattal létrejött egy <code>BindingSource</code> <code>studentBindingSource</code> néven, mely az űrlap alatt jelenik meg a tervezőben, mivel nincs külön vizuális reprezentációja.</li>
+<li>A <code>studentBindingSource</code> adatforrásaként már a tervezőben be van állítva a <code>Student</code> osztály.</li>
+<li>A <code>DataGridView</code> adatforrása a <code>studentBindingSource</code>, és mivel a <code>studentBindingSource</code> &quot;tudja&quot;, hogy <code>Student</code> típusú elemekből álló listát jelenítünk majd meg, a rácsban is megjelennek a <code>Student</code> osztály tulajdonságai.</li>
+<li>A <em>Solution Explorer</em>-ben létrejött egy <code>DataSources</code> elem, amelyben megtalálható az adatforrásként felvett <code>Students</code> osztály. Ha valamit tévedésből vettünk fel, innét lehet törölni.</li>
+</ul>
+<p><img src="datasource_in_solutionexplorer.png" alt="image-20220826233014090"></p>
+<p>(+/-) A rácsba az adatokat a <code>studentBindingSource</code>-on keresztül töltsd.</p>
+<p>Cseréld re ezt a sort:</p>
+<pre><code class="lang-csharp">dataGridView1.DataSource = studentContext.Students.ToList();
+</code></pre>
+<p>erre a sorra:</p>
+<pre><code class="lang-csharp">studentBindingSource.DataSource = studentContext.Students.ToList();
+</code></pre>
+<h3 id="44-változások-mentése-az-adatbátzisba">4.4 Változások mentése az adatbátzisba</h3>
+<p>(+/-)  Helyezz el az űrlapon egy <em>Mentés</em> feliratú gombot <code>saveButton</code> néven, majd rendelj hozzá eseménykiszolgálót.</p>
+<p>(+/-) Az eseménykiszolgálóban mentsd a változásokat:</p>
+<pre><code class="lang-csharp">private void saveButton_Click(object sender, EventArgs e)
+{
+    studentContext.SaveChanges();
+}
+</code></pre>
+<h3 id="47-kivételek-kezelése">4.7 Kivételek kezelése</h3>
+<p>Mivel az Entity Framework <a href="concurrency.html">optimista konkurenciát</a> használ, a futásidejű kivételek kezelésére fel kell készülni.</p>
+<pre><code class="lang-csharp">private void saveButton_Click(object sender, EventArgs e)
+{
+    try
+    {
+        studentContext.SaveChanges();
+    }
+    catch (Exception kivétel)
+    {
+        MessageBox.Show(kivétel.InnerException.Message);
+    }            
+}
+</code></pre>
+<p>így ha pl. hétjegyű neptunkódot próbálunk megadni a <code>studentContext.SaveChanges();</code> hívásakor keletkező hibaüzenetről tájékoztatást kap a felhasználó:</p>
+<p><img src="error.png" alt="image-20220827001032338"></p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/altinum/szamtud_docfx/blob/main/softec/9a_gyak_tavoli_adatbazis_visual_studioban/index.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+    <script type="module" src="../../styles/heatmap/main.js"></script>
+    <script type="module" src="../../styles/heatmap/displayHeatmap.js"></script>
+    <script type="module" src="../../styles/heatmap/manageHtmlChange.js"></script>
+    <script type="module" src="../../styles/heatmap/intersectionObserver.js"></script>
+    <script type="module" src="../../styles/heatmap/config.js"></script>  </body>
+</html>

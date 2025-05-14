@@ -1,0 +1,276 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>K&#237;gy&#243;s j&#225;t&#233;k </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="K&#237;gy&#243;s j&#225;t&#233;k ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <link rel="stylesheet" href="../../styles/heatmap.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../../toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        <div class="article row grid">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="kígyós-játék">Kígyós játék</h1>
+
+<p>A gyakrolat célja a listák használatának elmélyítése, az enumerációk bemtatása, valamint a <code>foreach</code> ciklusok szervezése.</p>
+<h2 id="videók">Videók</h2>
+<p>(!Vid) 1. rész</p>
+<div class="embeddedvideo"><iframe src="https://storage.altinum.hu/szoft1/S1snake1.m4v" frameborder="0" allowfullscreen="true"></iframe></div>
+<p>(!Vid) 2. rész</p>
+<div class="embeddedvideo"><iframe src="https://storage.altinum.hu/szoft1/S1sanke2.m4v" frameborder="0" allowfullscreen="true"></iframe></div>
+<p>(!Vid) 3. rész</p>
+<div class="embeddedvideo"><iframe src="https://storage.altinum.hu/szoft1/S1sake3.m4v" frameborder="0" allowfullscreen="true"></iframe></div>
+<p>(!Vid) 4. rész</p>
+<div class="embeddedvideo"><iframe src="https://storage.altinum.hu/szoft1/S1snake4.m4v" frameborder="0" allowfullscreen="true"></iframe></div>
+<p>(!Vid) 5. rész</p>
+<div class="embeddedvideo"><iframe src="https://storage.altinum.hu/szoft1/S1snake5.m4v" frameborder="0" allowfullscreen="true"></iframe></div>
+<p>(!Vid) 6. rész</p>
+<div class="embeddedvideo"><iframe src="https://storage.altinum.hu/szoft1/S1snake6.m4v" frameborder="0" allowfullscreen="true"></iframe></div>
+<h2 id="a-játék-felépítése">A játék felépítése</h2>
+<p>(+/-)  Származtass a <code>PictureBox</code> osztálytól egy új osztályt <code>KígyóElem</code> néven!</p>
+<p>(+/-) A <code>KígyóElem</code> osztályt bővítsd egy méret statikus egész konstanssal, melynek értéke legyen <code>20</code>.</p>
+<pre><code class="lang-csharp">class KígyóElem : PictureBox
+{
+    public static int Méret = 20;
+}
+</code></pre>
+<p>(+/-) A <code>KígyóElem</code> osztályt bővítsd konstruktorral, melyben az a fenti konstansnak megfelelően 20x20 képpontosra méretezi magát.</p>
+<pre><code class="lang-csharp">class KígyóElem : PictureBox
+{
+    public static int Méret = 10;
+
+    public KígyóElem()
+    {
+        Width = KígyóElem.Méret;
+        Height = KígyóElem.Méret;
+        BackColor = Color.Fuchsia;
+    }
+}
+</code></pre>
+<p>(+/-) A <code>Form1</code> osztályt bővítsd <code>fejX</code> és <code>fejY</code> változókkal, melyekben az utoljára kirakott kígyófej koordinátáit tárolod! Állíts be értelemszerű kezdőéréket! (Pl. 100, 100)</p>
+<pre><code class="lang-csharp">int fej_x = 100;
+int fej_y = 100;
+</code></pre>
+<p>(+/-) A <code>Form1</code> osztályt bővítsd <code>irány_x</code> és <code>irány_y</code> változókkal, melyekben kígyó haladási irályát tárolod! (<code>-1</code>,<code>0</code>,<code>1</code> értékeket vehet fel.) Állíts be kezdőértéket -- ettől függ majd, hogy merre indul a kígyónk!</p>
+<pre><code class="lang-csharp">int irány_x = 1;
+int irány_y = 0;
+</code></pre>
+<p>(+/-) A <code>Form1</code> osztályt bővítsd <code>lépésszám</code> nevű, <code>0</code> kezdőértékű változóval!</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>Ha létrehozol egy <code>int</code> típusú változót, <code>0</code>  lesz a kezdőértéke, nem kell külön inicializálni.</p>
+</div>
+<p>(+/-) A <code>Form1</code>-en helyezz el tervezőből egy <code>Timer</code>-t fél másodperces intervallummal, majd rendelj a <code>Tick</code> eseményéhez esemény-kiszolgáló függvényt!</p>
+<p>(+/-) Az esemény-kiszolgálóban az iránynak és a méretnek megfelelően változtasd a <code>fejX</code> és <code>fejY</code> változók értékeit, majd hozz létre egy új példányt a <code>KígyóElem</code> osztályból, majd ! Ezután már mozogni kell a kígyóknak.</p>
+<pre><code class="lang-csharp">private void timer1_Tick(object sender, EventArgs e)
+{
+    lépésszám++;
+    
+    //Fejnövesztés
+    fej_x += irány_x * KígyóElem.Méret;
+    fej_y += irány_y * KígyóElem.Méret;   
+    
+    KígyóElem ke = new KígyóElem();
+    ke.Top = fej_y;
+    ke.Left = fej_x;
+    Controls.Add(ke);
+}
+</code></pre>
+<p>(+/-) Rendelj esemény-kiszolgálót az űrlap <code>KeyDown</code> eseményhez.</p>
+<p>(+/-) Változtasd a kígyó irányát az esemény-kiszolgáló paramétereként kapott <code>e.KeyValue</code> (vagy <code>KeyCode</code>) értéke alapján!</p>
+<pre><code class="lang-csharp">private void Form1_KeyDown(object sender, KeyEventArgs e)
+{
+    if (e.KeyCode == Keys.Up)
+    {
+        irány_y = -1;
+        irány_x = 0;
+    }
+
+    if (e.KeyCode == Keys.Down)
+    {
+        irány_y = 1;
+        irány_x = 0;
+    }
+
+    if (e.KeyCode == Keys.Left)
+    {
+        irány_y = 0;
+        irány_x = -1;
+    }
+
+    if (e.KeyCode == Keys.Right)
+    {
+        irány_y = 0;
+        irány_x = 1;
+    }
+}
+</code></pre>
+<p>(+/-) Valósítsd meg az ütközésvizsgálatot! Miután kiszámoltad az új <code>fej_x</code> és <code>fej_y</code> értékeket, járd be az űrlap <code>Controls</code> listáját <code>foreach</code> ciklussal, és vizsgálj meg minden <code>KígyóElemet</code> <code>ke</code> néven. Ha van olyan, melynek <code>Top</code> illetve <code>Left</code> tulajdonságai megegyeznek a <code>fej_x</code> illetve <code>fej_y</code> változók értékeivel, a kígyó farkába harapott.</p>
+<pre><code class="lang-csahrp">foreach (KígyóElem item in Controls)
+{
+   //Ha vannak már valami ott, ahova az új fejet tenném, vége a játéknak
+   if (item.Top == fej_y &amp;&amp; item.Left == fej_x) 
+   {
+       timer1.Enabled = false;
+       return;
+   }
+}
+</code></pre>
+<p>(+/-) &quot;Másszon&quot; a kígyó! Ehhez először bővítsd egy <code>hossz</code> nevű változóval az osztályt, melyben a kígyó aktuális hosszát tárolod! Ha az űrlapon lévő vezérlők száma meghaladja a hossz változó értékét, vedd ki az űrlap <code>Controls</code> listájának nulladik elemét!</p>
+<p>Ha a kígyónk hossza nagyobb, mint a kívánt hossz, kivesszük a <code>Controls</code> gyűjtemény nulladik elemét, vagyis a legrégebben belepakolt elemet:</p>
+<pre><code class="lang-csharp">//Farokvágás
+if (Controls.Count &gt; hossz)
+{
+    KígyóElem levágandó = kígyó[0];
+    Controls.RemoveAt(0);
+}
+</code></pre>
+<p>(+/-) A  páros és a páratlan sorszámú kígyóelemeket színezd eltérően!</p>
+<pre><code class="lang-csharp">if (lépésszám % 2 == 0) ke.BackColor = Color.Yellow;
+</code></pre>
+<h3 id="mérgek-és-almák--egyénileg-megoldandó-feladatok">Mérgek és almák- egyénileg megoldandó feladatok</h3>
+<p>Ha  kajákat és mérgeket is elhelyezel az űrlap vezérlőinek listájában,  működésképtelenné válik az az elv,  hogy a <code>Controls.RemoveAt(0);</code>  megoldással kivesszük a legrégebben berakott elemet. A probléma megodására azokat a <code>KígyóElem</code> típusú objektumokat, amelyek a kígyónk testét képezik, külön listában is tároljuk. Hozz létre egy <code>KígyóElem</code> típusú elemekből álló listát a <code>From1</code>-ben, osztály szinten:</p>
+<pre><code class="lang-csharp">List&lt;KígyóElem&gt; kígyó = new List&lt;KígyóElem&gt;();
+</code></pre>
+<p>Amikor új fejet  neveztünk a kígyónak,  azt beletesszük a <code>kígyó</code> listába is  és az űrlap vezérlőinek a listájába is:</p>
+<pre><code class="lang-csharp">//Fejnövesztés
+fej_x += irány_x * KígyóElem.Méret;
+fej_y += irány_y * KígyóElem.Méret;   
+KígyóElem ke = new KígyóElem();
+kígyó.Add(ke); //Amikor új fejet neveztünk a kígyónak, azt beletesszük a `kígyó` listába is ..
+Controls.Add(ke); //.. és az űrlap vezérlőinek a listájába is
+</code></pre>
+<p>A farokvágásnál viszont a <code>kígyó</code> lista legrégebbi eleme alapján jelöljük ki a levágandó kígyóelement:</p>
+<pre><code class="lang-csharp">//Farokvágás
+if (kígyó.Count &gt; hossz)
+{
+    KígyóElem levágandó = kígyó[0];
+    kígyó.RemoveAt(0);
+    Controls.Remove(levágandó);
+}
+</code></pre>
+<p>Az ütközésvizsgálat is másképp alakul:</p>
+<pre><code class="lang-csharp">foreach (object item in Controls)
+{
+    if (item is KígyóElem)
+    {
+        KígyóElem k = (KígyóElem)item;
+
+        if (k.Top == fej_y &amp;&amp; k.Left == fej_x)
+        {
+            timer1.Enabled = false;
+            return;
+        }
+    }
+}
+</code></pre>
+<p>Ezután már létrehozhatunk új osztályokat a kajálnak és a mérgeknek, amelyeket valahány lépésenként véletlenszerűen elhelyezhetünk az űrlapon.</p>
+<h3 id="két-kígyó-egymás-ellen">Két kígyó egymás ellen</h3>
+<p>Lehet két kígyók:</p>
+<pre><code class="lang-csharp">List&lt;KígyóElem&gt; kígyó_1 = new List&lt;KígyóElem&gt;();
+List&lt;KígyóElem&gt; kígyó_2 = new List&lt;KígyóElem&gt;();
+</code></pre>
+<p>A többi már jön magától :)</p>
+<h3 id="ellenőrző-kérdések">Ellenőrző kérdések</h3>
+<ol>
+<li>Egy űrlapon csak a <code>Button</code> osztály példányai vannak. Írd le azt a <code>foreach</code> ciklust, mely bejárja az űrlap <code>Controls</code> listáját és minden gomb <code>Visible</code> tulajdonságát hamis értékűre állítja!</li>
+<li>Hogyan lehet az űrlap <code>Contrlos</code> listájának egy meghatároztt sorszámú elemét törölni?</li>
+<li>Hogyan lehet megtudni, hogy egy lista hány elemet tartalmaz?</li>
+<li>Írd le azt a kódrészletet, mely egy számról eldönti, hogy páros-e!</li>
+<li>Származtass egy osztályt a <code>Button</code> osztályból, mely automatikusan átmétetezi magát 30x30 pixelesre!</li>
+</ol>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/altinum/szamtud_docfx/blob/main/softec/kigyos/index.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+    <script type="module" src="../../styles/heatmap/main.js"></script>
+    <script type="module" src="../../styles/heatmap/displayHeatmap.js"></script>
+    <script type="module" src="../../styles/heatmap/manageHtmlChange.js"></script>
+    <script type="module" src="../../styles/heatmap/intersectionObserver.js"></script>
+    <script type="module" src="../../styles/heatmap/config.js"></script>  </body>
+</html>

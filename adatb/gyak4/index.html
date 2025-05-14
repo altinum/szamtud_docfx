@@ -1,0 +1,570 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>T&#225;bl&#225;k &#246;sszekapcsol&#225;sa </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="T&#225;bl&#225;k &#246;sszekapcsol&#225;sa ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <link rel="stylesheet" href="../../styles/heatmap.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="táblák-összekapcsolása">Táblák összekapcsolása</h1>
+
+<p>Elméleti összefoglaló videó:
+<a href="gyak04-x264.mp4">gyak04-x264.mp4</a></p>
+<h2 id="felvezető-anyag-egyen-összekapcsolás">Felvezető anyag: Egyen-összekapcsolás</h2>
+<p>Összekapcsolás segítségével több táblából kérdezhetünk le adatokat.
+Tételezzük fel, hogy létezik az alábbi két tábla egy adatbázisban:</p>
+<p>A <code>fiu</code> tábla tartalma:</p>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>nev</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>András</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Attila</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Albert</td>
+</tr>
+</tbody>
+</table>
+<p>A <code>lany</code> tábla tartalma:</p>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>nev</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Bori</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Bea</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Barbara</td>
+</tr>
+</tbody>
+</table>
+<p>Tekintsük az alábbi lekérdezést:</p>
+<pre><code class="lang-sql">SELECT fiu.nev, lany.nev FROM fiu, lany
+</code></pre>
+<p>A lekérdezés a két tábla direkt szorzatát képezi, azaz eredményül az összes létező fiu-lány párosítást kapjuk:</p>
+<table>
+<thead>
+<tr>
+<th>fiu.nev</th>
+<th>lany.nev</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>András</td>
+<td>Bori</td>
+</tr>
+<tr>
+<td>Attila</td>
+<td>Bori</td>
+</tr>
+<tr>
+<td>Albert</td>
+<td>Bori</td>
+</tr>
+<tr>
+<td>András</td>
+<td>Bea</td>
+</tr>
+<tr>
+<td>Attila</td>
+<td>Bea</td>
+</tr>
+<tr>
+<td>Albert</td>
+<td>Bea</td>
+</tr>
+<tr>
+<td>András</td>
+<td>Barbara</td>
+</tr>
+<tr>
+<td>Attila</td>
+<td>Barbara</td>
+</tr>
+<tr>
+<td>Albert</td>
+<td>Barbara</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>Ha több táblából kérdezünk le adatokat, a mezőnév elé írjuk ki a mezőhöz tartozó tábla nevét, pl. <code>fiu.nev</code>. Ha egy mezőnév a lekérdezésben szereplő táblák közül csak egyben fordul elő, a táblanév elhagyható. Az áttekinthetőség miatt mindenképpen érdemes megadni a táblanevet!</p>
+</blockquote>
+<p>A következő példa kedvéért egészítsük ki a <code>fiu</code> táblát <code>feleseg</code> mezővel, ahol a fiú feleségének azonosítóját tároljuk, majd rendeljük hozzá a fiukhoz a lányokat.</p>
+<p>A módosított <code>fiu</code> tábla tartalma:</p>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>nev</th>
+<th>feleseg</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>András</td>
+<td>2</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Attila</td>
+<td>3</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Albert</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<pre><code class="lang-sql">SELECT fiu.nev, fiu.feleseg, lany.id, lany.nev FROM fiu, lany
+</code></pre>
+<p>A lekérdezés a következő eredményt adja:</p>
+<table>
+<thead>
+<tr>
+<th>fiuk.nev</th>
+<th>fiu.feleseg</th>
+<th>lany. id</th>
+<th>lany.nev</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>András</td>
+<td>2</td>
+<td>1</td>
+<td>Bori</td>
+</tr>
+<tr>
+<td>Attila</td>
+<td>3</td>
+<td>1</td>
+<td>Bori</td>
+</tr>
+<tr>
+<td>Albert</td>
+<td>1</td>
+<td>1</td>
+<td>Bori</td>
+</tr>
+<tr>
+<td>András</td>
+<td>2</td>
+<td>2</td>
+<td>Bea</td>
+</tr>
+<tr>
+<td>Attila</td>
+<td>3</td>
+<td>2</td>
+<td>Bea</td>
+</tr>
+<tr>
+<td>Albert</td>
+<td>1</td>
+<td>2</td>
+<td>Bea</td>
+</tr>
+<tr>
+<td>András</td>
+<td>2</td>
+<td>3</td>
+<td>Barbara</td>
+</tr>
+<tr>
+<td>Attila</td>
+<td>3</td>
+<td>3</td>
+<td>Barbara</td>
+</tr>
+<tr>
+<td>Albert</td>
+<td>1</td>
+<td>3</td>
+<td>Barbara</td>
+</tr>
+</tbody>
+</table>
+<p>Ezek közül a sorok közül csak azok párok, ahol a <code>fiu.feleség</code> és a <code>lány.id</code> mező megegyeznek. Ha <code>WHERE</code> záradékban feltételként szabjuk a két mező azonosságát, csak a párokat adja eredményül a lekérdezés:</p>
+<pre><code class="lang-sql">SELECT fiu.nev, fiuk.feleseg, lany.id, lany.nev FROM fiu, lany 
+WHERE fiu.feleseg = lany.id
+</code></pre>
+<p>fiu.nev|fiu.feleseg|lany .id|lany.nev
+-|-|-|-
+András|2|2|Bea
+Attila|3|3|Barbara
+Albert|1|1|Bori
+A táblák kapcsolásához használt mezők ki is hagyhatók az eredményből, ha nincs szükségünk rá:</p>
+<pre><code class="lang-sql">SELECT fiu.nev, lany.nev FROM fiu, lany 
+WHERE fiu.feleseg = lany.id
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>fiu.nev</th>
+<th>lany.nev</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>András</td>
+<td>Bea</td>
+</tr>
+<tr>
+<td>Attila</td>
+<td>Barbara</td>
+</tr>
+<tr>
+<td>Albert</td>
+<td>Bori</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>Fontos megjegyezni, hogy az eredményhalmazból kimaradnak azok a fiuk, akiknek nincs megadva a feleségük.</p>
+</blockquote>
+<h2 id="másodlagos-táblanevek-aliasok">Másodlagos táblanevek: aliasok</h2>
+<p>Az oszlopnevek táblanevekkel való minősítése meglehetősen sok időt vesz igénybe - főként,  ha a táblanevek hosszúak. A táblák neve helyett ilyenkor célszerűbb másodlagos táblaneveket használni. Ahogy az oszlop másodlagos neve más nevet ad az oszlopnak, a tábla másodlagos nevével is más néven hivatkozhatunk a táblára. Másodlagos táblanevek használatával
+az SQL-kód sokkal rövidebbé tehető</p>
+<pre><code class="lang-sql">SELECT f.nev, l.nev FROM fiu AS f, lany AS l;
+</code></pre>
+<h1 id="mintafeladat-társkereső">Mintafeladat: társkereső</h1>
+<p>Készítsd el egy társkereső iroda nyilvántartását! A keretsztori a következő: az irodát emelt díjas vonalon keresztül hívhatják a magányűzésre vágyó ifjak és leányzók. A jelentkezők bediktálják saját adataikat, majd megadják az ideális partnerrel szemben támasztott követelményeket. Az operátor a fent említett adatokat adatbázisban rögzíti, majd gombnyomásra lekérdezheti az adatbázis alapján megfelelő párosításokat.</p>
+<p>Nyilvántartandó adatok:</p>
+<ul>
+<li>Név</li>
+<li>Életkor</li>
+<li>e-mail</li>
+<li>csillagjegy</li>
+<li>Ideális partner minimális életkora</li>
+<li>Ideális partner maximális életkora</li>
+</ul>
+<blockquote>
+<p>Tipp: érdemes a fiukat és a lányokat külön táblában rögzíteni, mert így a későbbiekben más paramétereket tudunk a fiukról és a lányokról nyilvántartani, valamint többtáblás lekérdezéssel könnyű az összeillő párokat leszűrni:</p>
+<pre><code class="lang-sql">SELECT fiuk.nev, lanyok.nev FROM fiuk, lanyok WHERE …
+</code></pre>
+</blockquote>
+<p><code>Fiu</code> tábla tartalma:
+ID|nev	|email|	kor|p_kor_min|	p_kor_max
+-|-|-|-|-|-
+1	|András	||	25|	20	|25      |
+2	|Attila	||	30|	25	|32      |</p>
+<p><code>Lány</code> tábla tartalma:
+ID|nev	email	|kor|	P_kor_min|	p_kor_max
+-|-|-|-|-|-
+3|Bori		||100	|10|	30|
+4|Barbara	||22|20|	26|</p>
+<pre><code class="lang-sql">SELECT
+f.nev, l.nev FROM fiuk AS f, lanyok AS l 
+WHERE
+f.kor BETWEEN l.p_kor_min AND l.p_kor_max
+AND
+l.kor BETWEEN f.p_kor_min AND f.p_kor_max;
+</code></pre>
+<p>A lekérdezés a fenti táblákra eredményül egy párt ad:</p>
+<table>
+<thead>
+<tr>
+<th>f.nev</th>
+<th>l.nev</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>András</td>
+<td>Barbara</td>
+</tr>
+</tbody>
+</table>
+<p>Ha ezekkel megvagyunk, bővíthetjük az adatbázist: testmagasság, legmagasabb iskolai végzettség, stb.</p>
+<p>TIPP: a legmagasabb iskolai végzettséget érdemes számmal jelölni, mert így értelmezhetők a <code>&lt;=</code>, <code>&gt;=</code> relációk.</p>
+<p>Extra feladat: Egészítsétek ki a rendszert úgy, hogy figyelembe vegye a zodiákus jegyek összeférhetetlenségeit is!</p>
+<p>Tudományos szakirodalom egybehangzó véleménye: az azonos elemhez tartozó zodiákus jegyek harmóniában vannak egymással (120 fok).</p>
+<p>Mindegyik kategóriába három csillagjegy tartozik:
+Tüzes: Kos, Oroszlán, Nyilas.
+Vizes: Rák, Skorpió, Halak.
+Levegős: Ikrek, Mérleg, Vízöntő.
+Földies: Bika, Szűz, Bak.</p>
+<h1 id="mintafeladat-tábla-összekapcsolása-saját-magával">Mintafeladat: tábla összekapcsolása saját magával</h1>
+<p>Oldjuk meg az előző társkeresős problémát úgy, hogy a fiukat és a lányokat egy táblában tároljuk!</p>
+<p>Tételezzünk fel egy ‘tag’ táblát, mely az eddigi mezőkön felül tartalmaz egy ‘neme’ mezőt, melynek értéke lehet F vagy L.</p>
+<p>Bizonyos esetben a táblát saját magával kell összekapcsolnunk. Ahhoz, hogy a táblában szereplőknek párt találjunk, a táblát önmagával kell összekapcsolni. Ebben az eljárásban kétszer használjuk fel ugyanazt a táblát.</p>
+<pre><code class="lang-sql">SELECT f.*, l.* FROM tag AS f, tag AS l WHERE f.neme&lt;&gt;l.neme …
+</code></pre>
+<h1 id="mintafeladat-tanulmányi-adatbázis">Mintafeladat: tanulmányi adatbázis</h1>
+<p>Feladat: készíts lekérdezést a TAO adatbázis teremfoglalásairól a tanár, az óra neve, a nap, a sáv és a terem feltüntetésével!</p>
+<p>Todo: ADATB. ELÉRHETŐSÉGE</p>
+<pre><code class="lang-sql">SELECT 
+Oktatók.Név, Tantárgyak.Tantárgynév, Sávok.Időpont, Napok.Nap, Termek.Terem, Órák.Ókód
+FROM 
+oktatók, tantárgyak, termek, sávok, napok, órák
+WHERE 
+oktatók.okód=órák.tanár 
+AND
+tantárgyak.tkód=órák.tantárgy
+AND
+Órák.terem=Termek.tkód
+AND
+órák.nap=napok.nkód
+AND
+sávok.Skód=órák.sáv;
+</code></pre>
+<p>Feladat: készíts lekérdezést az ütköző teremfoglalásokról!</p>
+<pre><code class="lang-sql">SELECT 
+a.*,b.*
+FROM órák a, órák b
+WHERE
+a.ókód&lt;&gt;b.ókód
+AND
+a.nap=b.nap
+AND
+a.sáv=b.sáv
+AND
+a.terem=b.terem;
+</code></pre>
+<h1 id="táblák-összekapcsolása-join-művelettel">Táblák összekapcsolása JOIN művelettel</h1>
+<p>Mintafeladat: Készítsünk lekérdezést a tanulmányi adatbázis orak táblájából, mely tárgy szerinti ABC sorrendbe rendezi a rekordokat.</p>
+<pre><code class="lang-sql">SELECT  *  FROM Orak ORDER BY orak.targy
+</code></pre>
+<p>Eredmény: A sorba rendezés nem sikerült, mert az <code>orak</code> táblában a <code>targy</code> mezőben idegen kulcsok vannak.</p>
+<p>Megoldás: Feladatot egy olyan lekérdezéssel lehet megoldani, melyben mindkét tábla szerepel. Az előzőek alapján:</p>
+<pre><code class="lang-sql">SELECT  *  FROM orak, targy
+WHERE orak.targy = targyak.tkód
+</code></pre>
+<p>A fenti megoldással ekvivalens eredményt ad a következő lekérdezés:</p>
+<pre><code class="lang-sql">SELECT * FROM orak INNER JOIN targy ON orak.targy=targyak.tkód
+</code></pre>
+<p>Az INNER JOIN használatára nézzünk egy másik példát! Listázzuk a dvd adatbázisból a filmek címeit és a nyelvüket, nyelv, majd cím szerinti abc sorrendben!</p>
+<pre><code class="lang-sql">SELECT  * FROM nyelvek INNER JOIN dvd ON nyelvek.nyelv_id = dvd.nyelv
+ORDER BY nyelvek.nyelv, dvd.cim
+</code></pre>
+<p>A fenti lekérdezésből hiányoznak</p>
+<ul>
+<li>azok a DVD-k, melyek melyeknél nincs kitöltve a <code>nyelv</code> mező, valamint</li>
+<li>azok a nyelvek, amilyen nyelvű DVD nincs a <code>dvd</code> táblában.</li>
+</ul>
+<p>JOIN-ok típusai:</p>
+<ul>
+<li>INNER JOIN</li>
+<li>LEFT JOIN</li>
+<li>RIGHT JOIN (helyettesíthető left joinnal, ha a táblák nevét felcseréljük)</li>
+<li>FULL JOIN</li>
+</ul>
+<h2 id="feladatok">Feladatok</h2>
+<p>A feladatok a <em>tanulmanyi</em> adatbázishoz készültek.  Készen elérhető a tanszéki kiszolgálón az alábbi kapcsolati adatokkal:</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Szerver</td>
+<td>bit.uni-corvinus.hu</td>
+</tr>
+<tr>
+<td>Felhasználónév</td>
+<td>hallgato</td>
+</tr>
+<tr>
+<td>Jelszó</td>
+<td>Password123</td>
+</tr>
+<tr>
+<td>Adatbázis</td>
+<td>tanulmanyi</td>
+</tr>
+</tbody>
+</table>
+<p>(+/-)1.	Jelenítsük meg az oktatók azonosítóját, titulusát és nevét!
+a.	A név két külön oszlopban jelenjen meg (vezetéknév és keresztnév– feltételezzük, hogy pontosan egy szóköz választja el őket).
+b.	A lista ne tartalmazza azokat a sorokat, ahol a titulus nincs megadva!</p>
+<p><a href="Gy4_1.mp4">Megoldás</a></p>
+<p>(+/-)2.	Készítsünk listát arról, hogy melyik teremben hány óra van!
+a.	Jelenítsük meg a termek azonosítóit és a teremben tartott órák számát!
+b.	Az oszlopokat nevezzük el értelemszerűen!
+c.	Szűrjünk azokra a termekre, ahol az órák száma legalább 3!</p>
+<p><a href="Gy4_2.mp4">Megoldás</a></p>
+<p>(+/-)3.	Készítsünk lekérdezést, amely megadja, hogy minimálian és maximálisan hány kreditet ér egy tantárgy!
+a.	Az oszlopokat nevezzük el értelemszerűen!
+b.	Ne vegyük figyelembe azokat a tantárgyakat, amelyek nevében az „alapjai” szó szerepel, vagy a tantárgy neve 10 karakternél rövidebb!</p>
+<p><a href="Gy4_3.mp4">Megoldás</a></p>
+<p>(+/-)4.	Melyek azok a sávok, amelyek délután (12:00 után) vannak?
+a.	Jelenítsük meg az adott sávok minden adatát!
+ÖTLET: az időpontot alakítsuk át óra:perc formára, majd konvertáljuk át time típusra</p>
+<p><a href="Gy4_4.mp4">Megoldás</a></p>
+<p>(+/-)5.	A tapasztalat alapján a tanársegédeknek 8, az óraadóknak 10 órájuk van egy héten. A többiek annyi órát tartanak, amennyi az elvárt óraszámuk. Készítsünk lekérdezést, amely minden beosztáshoz megjeleníti, hogy hetente hány túlóra tartozik hozzá!
+a.	A lekérdezés csak a beosztások nevét és a heti túlórák számát jelenítse meg!</p>
+<p><a href="Gy4_5.mp4">Megoldás</a></p>
+<p>(+/-)<strong>6.	Készítsünk listát arról, hogy melyik óra melyik teremben van!</strong>
+a.	Jelenítsük meg az óra azonosítóját és a terem nevét!
+b.	A listát szűrjük a 3 karakter hosszú, [100;199] zárt intervallumba eső termekre!
+Feltesszük, hogy a 3 karakter hosszú terem nevek csak számjegyeket tartalmaznak.</p>
+<p><a href="Gy4_6.mp4">Megoldás</a></p>
+<p>(+/-)<strong>7.	Hány óra van összesen az egyes napokon?</strong>
+a.	Jelenítsük meg a napok nevét és az órák számát az adott napon!
+b.	Az oszlopokat nevezzük el értelemszerűen!
+c.	A listát rendezzük óraszám szerint növekvő sorrendbe!</p>
+<p><a href="Gy4_7.mp4">Megoldás</a></p>
+<p>(+/-)<strong>8.	Melyek azok az oktatók, akiknek nincs órájuk?</strong>
+a.	Csak az oktatók neve jelenjen meg!
+b.	ÖTLET: használjunk LEFT JOIN-t, és szűrjünk azokra a rekordokra, ahol NULL érték van a JOIN utáni feltétel jobb oldalán!</p>
+<p><a href="Gy4_8.mp4">Megoldás</a></p>
+<p>(+/-)<strong>9.	Készítsünk lekérdezést, amely részletesen megjeleníti az egyes órák fontosabb adatait, azaz</strong>
+a.	Az órák azonosítóit, a tanár nevét, a tantárgy nevét, a terem nevét és a kezdési időpontot!
+b.	Az oszlopokat nevezzük el értelemszerűen!</p>
+<p><a href="Gy4_9.mp4">Megoldás</a></p>
+<p>(+/-)<strong>10.	Készítsünk listát arról, hogy melyik oktatónak hány órája van az Órák táblában!</strong>
+a.	A lista jelenítse meg az oktatók nevét, és az órák számát!
+b.	Az oszlopokat nevezzük el értelemszerűen!
+c.	A listából hagyjuk ki az óraadókat!</p>
+<p><a href="Gy4_10.mp4">Megoldás</a></p>
+<p>(+/-)11.	Készítsünk listát, amely tartalmazza az egyes órák azonosítóit, és az órán oktatott tantárgy felelősének nevét!
+a.	Rendezzük a listát a tantárgyfelelős neve szerint csökkenő sorrendbe!</p>
+<p><a href="Gy4_11.mp4">Megoldás</a></p>
+<p>(+/-)12.	Van-e olyan tantárgy, amelyből nincs óra?
+a.	Jelentsük meg a tantárgy nevét és a tantárgyfelelős nevét!</p>
+<p><a href="Gy4_12.mp4">Megoldás</a></p>
+<p>(+/-)13.	Készítsünk listát, amely megjeleníti, hogy az Orak táblában lévő órák közül hányat tart Dr., illetve nem Dr. titulusú tanár!
+a.	Az oszlopokat nevezzük el értelemszerűen!</p>
+<p><a href="Gy4_13.mp4">Megoldás</a></p>
+<p>(+/-)14.	Készítsünk listát arról, hogy beosztásonként hány óra szerepel az Orak táblában!
+a.	Jelenítsük meg a beosztások nevét és az órák számát!
+b.	A listát szűrjük azokra a beosztásokra, ahol ez az óraszám 10 feletti!</p>
+<p><a href="Gy4_14.mp4">Megoldás</a></p>
+<p>(+/-)15.	Melyek azok az órák, amelyek kezdési időpontja olyan sávba esik, amely a mostani időpont (óra:perc) után van?
+a.	Listázzuk az órák azonosítóit, valamint az órakezdés napját és időpontját!
+b.	A listát rendezzük az időpont szerint növekvő sorrendbe!</p>
+<p><a href="Gy4_15.mp4">Megoldás</a></p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/altinum/szamtud_docfx/blob/main/adatb/gyak4/index.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+    <script type="module" src="../../styles/heatmap/main.js"></script>
+    <script type="module" src="../../styles/heatmap/displayHeatmap.js"></script>
+    <script type="module" src="../../styles/heatmap/manageHtmlChange.js"></script>
+    <script type="module" src="../../styles/heatmap/intersectionObserver.js"></script>
+    <script type="module" src="../../styles/heatmap/config.js"></script>  </body>
+</html>

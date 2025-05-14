@@ -1,0 +1,306 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>GDI Grafika </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="GDI Grafika ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <link rel="stylesheet" href="../../styles/heatmap.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="gdi-grafika">GDI Grafika</h1>
+
+<p>A .NET hatékony eszközöket kínál grafikák készítésére. A rajzolás első ránézésre nem tűnik egyszerűnek, de néhány példa után könnyen áttekinthetővé válik.</p>
+<p>Windows rendszerben mindenért, amit a képernyőre rajzolunk a GDI (Graphics Device Interface) felelős. A windows-os programok, és maga a Windows is ezen a kódon keresztül rajzolja a szövegeket, vonalakat, grafikákat, stb. a képernyőre. A GDI közvetlen kapcsolatban áll a grafikus kártya meghajtó programjával, és eldönti, hogy a kívánt rajz hogyan jeleníthető meg legjobban a rendelkezésre álló grafikus eszközön. Például, ha a grafikus kártyán beállított színmélység kisebb a megjelenítendő grafika színmélységénél, a GDI gondoskodik az optimális helyettesítő színek megválasztásáról.  A programozónak ezért nem kell azzal törődnie, hogy milyen a rendelkezésre álló grafikus megjelenítő eszköz.</p>
+<p>A C# kód a Graphics osztályon keresztül kommunikál a GDI-vel.</p>
+<h2 id="videók">Videók</h2>
+<p>(!Vid) Toll (Pen) osztály</p>
+<div class="embeddedvideo"><iframe src="https://storage.altinum.hu/szoft1/02_Pen.m4v" frameborder="0" allowfullscreen="true"></iframe></div>
+<p>(!Vid) Vonal rajzolása</p>
+<div class="embeddedvideo"><iframe src="https://storage.altinum.hu/szoft1/03_Drawline.m4v" frameborder="0" allowfullscreen="true"></iframe></div>
+<p>(!Vid) Téglalap rajzolása</p>
+<div class="embeddedvideo"><iframe src="https://storage.altinum.hu/szoft1/04_Drawrectangle.m4v" frameborder="0" allowfullscreen="true"></iframe></div>
+<p>(!Vid) Kör (ellipszis) rajzolása</p>
+<div class="embeddedvideo"><iframe src="https://storage.altinum.hu/szoft1/05_Drawellipse.m4v" frameborder="0" allowfullscreen="true"></iframe></div>
+<p>(!Vid) Ecset (Brush) osztály</p>
+<div class="embeddedvideo"><iframe src="https://storage.altinum.hu/szoft1/06_Brush.m4v" frameborder="0" allowfullscreen="true"></iframe></div>
+<p>(!Vid) Kitöltött rajzolás</p>
+<div class="embeddedvideo"><iframe src="https://storage.altinum.hu/szoft1/07_Fill.m4v" frameborder="0" allowfullscreen="true"></iframe></div>
+<p>(!Vid) Sokszög rajzolás</p>
+<div class="embeddedvideo"><iframe src="https://storage.altinum.hu/szoft1/08_Fillpolygon.m4v" frameborder="0" allowfullscreen="true"></iframe></div>
+<p>(!Vid) Paint esemény</p>
+<div class="embeddedvideo"><iframe src="https://storage.altinum.hu/szoft1/09_Paint.m4v" frameborder="0" allowfullscreen="true"></iframe></div>
+<h2 id="a-graphics-osztály">A Graphics osztály</h2>
+<p>Mielőtt elkezdenénk rajzolni, létre kell hoznunk egy <code>Graphics</code> objektumot. Szerencsére minden vezérlő (<code>Form</code>, <code>UserControl</code>, <code>Button</code>, stb.) automatikusan örökli a <code>CreateGraphics()</code> metódust, melyen keresztül hozzá tudunk férni a vezérlő grafikus részéhez.</p>
+<p>Példának hozzunk létre az űrlapon egy gombot, és kezeljük le a kattintás eseményét! Az eseményhez rendeljük a következő kódot:</p>
+<pre><code class="lang-csharp">private void button1_Click(object sender, EventArgs e)
+{
+   Bitmap kep;
+   kep = new Bitmap(@&quot;c:\kép.jpg&quot;);
+
+   Graphics grafika;
+   grafika = this.CreateGraphics();
+   grafika.DrawImage(kep,0,0);
+}
+</code></pre>
+<ol>
+<li>Az első két sor létrehozz a <code>Bitmap</code> osztály egy példányát <code>kep</code> néven, majd a konstruktornak paraméterként átadjuk a betöltendő kép elérési útvonalát.</li>
+<li>Ezután hozzuk léte a <code>Graphics</code> osztály egy példányát grafika néven. A <code>grafika</code> nevű objektumunkhoz most rendeljük hozzá az aktuális űrlap (<code>this</code>) felületét. Itt az űrlap helyett választhatnánk bármely vezérlőt az űrlapon pl:</li>
+</ol>
+<pre><code class="lang-csharp">grafika = this.TextBox1.CreateGraphics();
+</code></pre>
+<ol start="3">
+<li>Ezután már csak a kép felrajzolása marad hátra a DrawImage() metóduson keresztül a (0,0) koordinátájú ponttól. A koordinátarendszer origója a bal felső sarokban van, a tengelyek jobbra, illetve lefelé mutatnak.</li>
+</ol>
+<p>A példa szemléletes, de nem működik tökéletesen. Ha a Windows-nak újra kell rajzoltatnia ablakunkat, az általunk elhelyezett grafikát nem fogja újrarajzolni. Ha letesszük az ablakot a tálcára, majd vissza, a grafika eltűnik. Ugyanez történhet, ha egy másik ablak egy időre fedi a miénket. Ha a fenti programsorokat az űrlap <code>Paint</code> eseményéhez rendeljük, a rajzolás megtörténik minden alkalommal, amikor az ablak többi elemét újra kell rajzolni.</p>
+<h2 id="a-színek-color">A színek (Color)</h2>
+<p>Színválasztásra három lehetőségünk kínálkozik:</p>
+<ol>
+<li>Választunk a <code>System.Drawing.Color</code> osztály előre definiált színei közül. Ezek a színek angol nevei: pl, <code>Red</code>, <code>Green</code>, <code>DarkBlue</code>. A teljes felsorolás értelmetlen lenne, a komplett lista megjelenítéséhez használjuk az automatikus kódkiegészítőt! (A „<code>color.</code>” legépelése után ctrl+betűköz billentyűk lenyomásával megjelenő lista.)
+Pl:
+<code>Color.Orange</code></li>
+<li>A Wondows témához rendszerszínek közül is választunk. Az asztal beállításai között a felhasználó át tudja állítani a Windows színeit. Ha azt szeretnénk, hogy grafikánk kövesse a felhasználó beállításait, a <code>System.Drawing.SystemColors</code>  színeire hivatkozzunk! (Pl: <code>Window</code> – ablak színe ; <code>Higlight</code> – szövegkijelölés háttérszíne ;  <code>HiglightText</code> – szövegkijelölés szövegszíne ; <code>Desktop</code> – asztal színe , stb.)
+Pl:
+<code>SystemColors.WindowText</code></li>
+<li>Saját színt definiálunk, melynek rendre megadjuk a piros, kék és zöld összetevőit. A <code>Color</code> osztály <code>FromArgb()</code> metódusa három byte típusú paraméterrel rendelkezik, melyeken keresztül beállíthatjuk a három összetevőt. A piros színt a következőképpen adhatjuk meg:
+Pl:
+<code>Color.FromArgb(255, 0, 0);</code></li>
+</ol>
+<h2 id="a-toll-pen">A toll (Pen)</h2>
+<p>Míg graphics osztály biztosítja számunkra a felületet, amire rajzolhatunk, szükségünk van egy eszközre, amivel rajzolunk. Hozzuk létre a <code>Pen</code> osztály egy példányát, és állítsuk be tollunk jellemzőit: adjuk meg a vonal színét, vastagságát és stílusát! A <code>Pen</code> konstruktorának első paramétere a vonal színe, ezután következik a vonal vastagsága pixelben megadva.</p>
+<pre><code class="lang-csharp">Pen toll;
+toll = new Pen(Color.DarkBlue, 3);
+toll.DashStyle = System.Drawing.Drawing2D.DashStyle.Dot;
+</code></pre>
+<p>A <code>System.Drawing.Drawing2D.DashStyle</code> felsorolás tartalmazza a rendelkezésünkre álló vonalstílusokat, ezek közül választhatunk. Ha nem adunk meg külön vonalstílust, a vonal folytonos lesz.</p>
+<table>
+<thead>
+<tr>
+<th><strong>Érték</strong></th>
+<th><strong>Leírás</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Dash</code></td>
+<td>------</td>
+</tr>
+<tr>
+<td><code>DashDot</code></td>
+<td>·-·-·-·-</td>
+</tr>
+<tr>
+<td><code>DashDotDot</code></td>
+<td>··-··-··-</td>
+</tr>
+<tr>
+<td><code>Dot</code></td>
+<td>·············</td>
+</tr>
+<tr>
+<td><code>Solid</code></td>
+<td>Folytonos</td>
+</tr>
+<tr>
+<td><code>Custom</code></td>
+<td>Egyedi. A Pen osztály rendelkezik olyan tulajdonságokkal,  melyeken keresztül egyedi vonalstílus is kialakítható. A részletekre itt nem  térünk ki.</td>
+</tr>
+</tbody>
+</table>
+<p>A rajzoljunk egy vonalat, ellipszist és egy téglalapot! A <code>DrawEllipse()</code> metódus utolsó négy paramétere az ellipszist befoglaló téglalap bal-felső sarkának <em>x</em> és <em>y</em> koordinátája, valamint a téglalap szélessége és magassága:</p>
+<pre><code class="lang-csharp">Pen toll;
+toll = new Pen(Color.DarkBlue, 3);
+toll.DashStyle = System.Drawing.Drawing2D.DashStyle.Dot;
+
+
+grafika.DrawLine(toll, 10, 10,100,100);
+
+grafika.DrawEllipse(toll, 10, 10, 100, 100);
+
+grafika.DrawRectangle(toll, 10, 10, 100, 100);
+</code></pre>
+<h2 id="az-ecset-brush">Az ecset (Brush)</h2>
+<p>Míg a toll a vonalak jellemzőit tartalmazza, az ecset a kitöltendő alakzatok kitöltési tulajdonságait írja le. Hozzunk létre egy saját ecsetet és rajzoljunk vele:</p>
+<pre><code class="lang-csharp">Brush ecset;
+ecset = new System.Drawing.SolidBrush(Color.DarkBlue);
+
+grafika.FillEllipse(ecset,10,10,100,100);
+</code></pre>
+<h2 id="mintás-ecset-és-toll-texturedpen">Mintás ecset és toll (TexturedPen)</h2>
+<p>Létrehozhatunk olyan ecsetet, illetve tollat is, mely egy képből nyert mintával rajzol:</p>
+<pre><code class="lang-csharp">Bitmap kep;
+kep = new Bitmap(@&quot;c:\kép.jpg&quot;);
+
+Brush mintasEcset;
+mintasEcset = new System.Drawing.TextureBrush(kep);
+
+Pen mintasToll = new Pen(MintasEcset, 30);
+grafika.DrawRectangle(mintasToll, 10, 10, 100, 100);
+</code></pre>
+<h2 id="szöveg-rajzolása">Szöveg rajzolása</h2>
+<p>Szöveg rajzolásához két objektumot is létre kell hozni: egy betűtípust és egy ecsetet:</p>
+<pre><code class="lang-csharp">Font betu;
+betu = new System.Drawing.Font(&quot;Arial&quot;, 30);
+
+Brush ecset;
+ecset = new System.Drawing.SolidBrush(Color.Black);
+
+grafika.DrawString(&quot;Hello&quot;, betu, ecset, 10, 10);
+</code></pre>
+<h2 id="állandó-grafikák-létrehozása-az-űrlapon">Állandó grafikák létrehozása az űrlapon</h2>
+<p>Egyszerűbb alakzatok rajzolásánál járható út, hogy a rajzolást az űrlap -- vagy más felület --   <code>Paint</code> eseményéhez kötve minden alkalommal elvégezzük, amikor szükséges.</p>
+<p>Számításigényes grafikák esetén a fenti megoldás nagyon lelassítja az alkalmazást. Ilyenkor létrehozhatunk egy <code>Bitmap</code> objektumot a memóriában, amire egyszer elég megrajzolni a grafikát. A <code>Paint</code> metódusban ezt az objektumot másoljuk az űrlapra:</p>
+<pre><code class="lang-csharp">using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Text;
+using System.Windows.Forms;
+
+namespace WindowsApplication5
+{
+    public partial class Form1 : Form
+    {
+        Bitmap rajzFelulet;
+
+        public Form1()
+        {
+            InitializeComponent();
+
+            //Létrehozzuk a bittérképet a konstruktorban
+            //átadott méretben
+            rajzFelulet = new Bitmap(200,200);
+            
+            //Létrehozzuk a Graphics osztály egy példányát, 
+            //melyen keresztül rajzolhatunk a rajzfelületre
+            Graphics grafika;
+            grafika = Graphics.FromImage(rajzFelulet);
+
+            Brush ecset;
+            ecset = new System.Drawing.SolidBrush(Color.DarkBlue);
+
+            grafika.FillEllipse(ecset, 10, 10, 100, 100);
+        }
+
+        private void Form1_Paint(object sender, PaintEventArgs e)
+        {
+            Graphics grafika;
+            //A grafika objektum űrlapunk-ra (this) mutat
+            grafika = this.CreateGraphics();
+
+            //A DrawImage metódussal felrajzoljuk a rajzFelulet
+            //az űrlapra
+            grafika.DrawImage(rajzFelulet, 0, 0);
+
+            //Megszüntetjük a grafika objektumot
+            grafika.Dispose();
+        }
+    }
+}
+
+</code></pre>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/altinum/szamtud_docfx/blob/main/softec_kk/grafika_ifs_reszletes/grafika.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+    <script type="module" src="../../styles/heatmap/main.js"></script>
+    <script type="module" src="../../styles/heatmap/displayHeatmap.js"></script>
+    <script type="module" src="../../styles/heatmap/manageHtmlChange.js"></script>
+    <script type="module" src="../../styles/heatmap/intersectionObserver.js"></script>
+    <script type="module" src="../../styles/heatmap/config.js"></script>  </body>
+</html>

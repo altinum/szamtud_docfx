@@ -1,0 +1,572 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Normalization </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Normalization ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <link rel="stylesheet" href="../../styles/heatmap.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../../toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        <div class="article row grid">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="normalization">Normalization</h1>
+
+<h2 id="initial-state---nf0">Initial State - NF0</h2>
+<table>
+<thead>
+<tr>
+<th>OrderDate</th>
+<th>CustomerName</th>
+<th>CustomerEmail</th>
+<th>ProductName</th>
+<th>ProductPrice</th>
+<th>CategoryName</th>
+<th>Quantity</th>
+<th>LineTotal</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>9/1/2021</td>
+<td>John Doe</td>
+<td>johndoe@email.com</td>
+<td>Laptop</td>
+<td>1200.00</td>
+<td>Electronics</td>
+<td>1</td>
+<td>1200.00</td>
+</tr>
+<tr>
+<td>9/2/2021</td>
+<td>Jane Smith</td>
+<td>janesmith@email.com</td>
+<td>T-shirt</td>
+<td>20.00</td>
+<td>Clothing</td>
+<td>2</td>
+<td>40.00</td>
+</tr>
+<tr>
+<td>1/10/2022</td>
+<td>Alice Johnson</td>
+<td>alicej@example.com</td>
+<td>Smartphone</td>
+<td>700.00</td>
+<td>Electronics</td>
+<td>1</td>
+<td>70.00</td>
+</tr>
+<tr>
+<td>1/11/2022</td>
+<td>Bob Smith</td>
+<td>bobsmith@example.com</td>
+<td>Jeans</td>
+<td>50.00</td>
+<td>Clothing</td>
+<td>2</td>
+<td>500.00</td>
+</tr>
+<tr>
+<td>1/12/2022</td>
+<td>Carol Brian</td>
+<td>carolb@example.com</td>
+<td>Backpack</td>
+<td>70.00</td>
+<td>Clothing</td>
+<td>1</td>
+<td>150.00</td>
+</tr>
+<tr>
+<td>1/13/2022</td>
+<td>John Doe</td>
+<td>johndoe@email.com</td>
+<td>Tablet</td>
+<td>250.00</td>
+<td>Electronics</td>
+<td>1</td>
+<td>60.00</td>
+</tr>
+<tr>
+<td>1/13/2022</td>
+<td>John Doe</td>
+<td>johndoe@email.com</td>
+<td>Laptop</td>
+<td>1200.00</td>
+<td>Electronics</td>
+<td>1</td>
+<td>700.00</td>
+</tr>
+<tr>
+<td>1/14/2022</td>
+<td>Jane Smith</td>
+<td>janesmith@email.com</td>
+<td>Headphones</td>
+<td>150.00</td>
+<td>Electronics</td>
+<td>1</td>
+<td>25.00</td>
+</tr>
+<tr>
+<td>1/15/2022</td>
+<td>David Lee</td>
+<td>davidlee@example.com</td>
+<td>Sweater</td>
+<td>60.00</td>
+<td>Clothing</td>
+<td>3</td>
+<td>30.00</td>
+</tr>
+<tr>
+<td>1/16/2022</td>
+<td>Emma Watson</td>
+<td>emmaw@example.com</td>
+<td>Charger</td>
+<td>25.00</td>
+<td>Electronics</td>
+<td>1</td>
+<td>30.00</td>
+</tr>
+<tr>
+<td>1/17/2022</td>
+<td>Frank Miller</td>
+<td>frankm@example.com</td>
+<td>Socks</td>
+<td>10.00</td>
+<td>Clothing</td>
+<td>2</td>
+<td>70.00</td>
+</tr>
+</tbody>
+</table>
+<h3 id="issues-with-nf0">Issues with NF0</h3>
+<ul>
+<li><strong>Redundancy</strong>: Customer information is repeated for each order.</li>
+<li><strong>Update Anomaly</strong>: Updating a customer's email would require updating it in every row where the customer appears.</li>
+<li><strong>Insertion Anomaly</strong>: Adding a new customer without an order might require entering dummy order data.</li>
+<li><strong>Deletion Anomaly</strong>: Deleting an order might inadvertently delete customer information.</li>
+</ul>
+<h2 id="using-mermaid">Using Mermaid</h2>
+<p>Mermaid <code>erDiagram</code> code <a href="mermaid.live">mermaid.live</a></p>
+<p>This diagram is referred to as <em>pyhisical ER</em> diagram. ER diagrams have many notations, the one used on the previous lecture is the <em>Chen</em> notation.</p>
+<p>A physical ER (Entity-Relationship) diagram, often referred to as a physical data model (PDM), is a detailed representation of a database's structure. It goes beyond the logical data model by including the physical details needed for the database implementation. Here are the key aspects of a physical ER diagram:</p>
+<ol>
+<li><strong>Table Structures</strong>:
+<ul>
+<li><strong>Tables</strong>: Represent entities as tables.</li>
+<li><strong>Columns</strong>: Show the columns for each table, including data types and constraints (e.g., NOT NULL, UNIQUE).</li>
+<li><strong>Primary Keys</strong>: Indicate the primary key for each table.</li>
+<li><strong>Foreign Keys</strong>: Define foreign keys that establish relationships between tables.</li>
+</ul>
+</li>
+<li><strong>Data Types</strong>:
+<ul>
+<li><strong>SQL Data Types</strong>: Specify the data types for each column (e.g., INT, VARCHAR, DATE).</li>
+</ul>
+</li>
+<li><strong>Relationships</strong>:
+<ul>
+<li><strong>One-to-One, One-to-Many, Many-to-Many</strong>: Indicate the type of relationship between tables, enforced through foreign key constraints.</li>
+</ul>
+</li>
+</ol>
+<p>Let's build the diagram in Mermaid:</p>
+<pre><code>erDiagram
+    ORDER {
+		date OrderDate
+        nvarchar(100) CusotomerName
+        nvarchar(100) CusotomerEmail
+        nvarchar(100) ProductName
+        decimal ProductPrice
+        nvarchar(100) CategoryName
+        int Quantity
+        decimal LineTotal
+    }
+</code></pre>
+<pre><code class="lang-mermaid">erDiagram
+    ORDER {
+
+		date OrderDate
+        nvarchar(100) CusotomerName
+        nvarchar(100) CusotomerEmail
+        nvarchar(100) ProductName
+        decimal ProductPrice
+        nvarchar(100) CategoryName
+        int Quantity
+        decimal LineTotal
+    }
+</code></pre>
+<h2 id="nf1">NF1</h2>
+<h3 id="requirements">Requirements</h3>
+<p>A table is in First Normal Form if it meets the following criteria:</p>
+<ol>
+<li><strong>Atomicity</strong>: Each column contains only atomic (indivisible) values.</li>
+<li><strong>Uniqueness</strong>: Each row must be unique.</li>
+<li><strong>No Repeating Groups</strong>: There should be no repeating groups or arrays.</li>
+</ol>
+<h3 id="solution-1-simple-primary-key">Solution #1: simple primary key</h3>
+<p>In other words <em>single column PK</em></p>
+<pre><code class="lang-mermaid">erDiagram
+    ORDER {
+		int OrderID PK
+		date OrderDate
+        nvarchar(100) CusotomerName
+        nvarchar(100) CusotomerEmail
+        nvarchar(100) ProductName
+        decimal ProductPrice
+        nvarchar(100) CategoryName
+        int Quantity
+        decimal LineTotal
+    }
+</code></pre>
+<h3 id="solution-2-composite-primary-key">Solution #2: composite primary key</h3>
+<p>In other words <em>multi-column PK</em>.</p>
+<pre><code class="lang-mermaid">
+erDiagram
+    ORDER {		
+		date OrderDate PK
+		int CustomerID PK
+        nvarchar(100) CusotomerName
+        nvarchar(100) CusotomerEmail
+        int ProdunctID PK
+        nvarchar(100) ProductName
+        decimal ProductPrice
+        nvarchar(100) CategoryName
+        int Quantity
+        decimal LineTotal
+    }     
+</code></pre>
+<h2 id="nf2">NF2</h2>
+<p>To normalize the given table to the Second Normal Form (2NF), we need to ensure that it meets the following criteria:</p>
+<ol>
+<li>The table must be in the First Normal Form (1NF), which means it should have atomic (indivisible) values and each record should be unique.</li>
+<li>All non-key attributes must be fully functionally dependent on the entire primary key, meaning no partial dependency of any column on a part of the composite primary key.</li>
+</ol>
+<h3 id="case-1--single-column-primary-key-was-added">Case 1:  single-column primary key was added</h3>
+<p>We are good to go!</p>
+<blockquote>
+<p>[!INFORMATION]
+A 1NF table is automatically a 2NF table only when the primary key contains only a single column. This is because 2NF rule prohibits partial dependencies, which won't happen if the primary key only contains a single column.</p>
+</blockquote>
+<h3 id="case-2--combined-primary-key-was-added">Case 2:  combined primary key was added</h3>
+<p>To normalize the given table to the Second Normal Form (2NF), we need to ensure that it meets the following criteria:</p>
+<ul>
+<li><p>[x] The table must be in the First Normal Form (1NF), which means it should have atomic (indivisible) values and each record should be unique.</p>
+</li>
+<li><p>[ ] All non-key attributes must be fully functionally dependent on the entire primary key, meaning no partial dependency of any column on a part of the composite primary key.</p>
+</li>
+</ul>
+<p><strong>The given table violates 2NF because it has partial dependencies</strong>. Specifically,</p>
+<ul>
+<li><code>CusotomerName</code> and <code>CusotomerEmail</code> depend only on <code>CustomerID</code>, and</li>
+<li><code>ProductName</code>, <code>ProductPrice</code>, and <code>CategoryName</code> depend only on <code>ProdunctID</code>.</li>
+</ul>
+<p>Let's break thigs up:</p>
+<pre><code class="lang-mermaid">erDiagram
+    CUSTOMERS {
+        int CustomerID PK
+        nvarchar(100) CusotomerName
+        nvarchar(100) CusotomerEmail
+    }
+
+    ORDERS {
+        int OrderID PK
+        int CustomerFK FK
+        date OrderDate
+        nvarchar(100) ProductName
+        nvarchar(100) CategoryName
+        decimal ProductPrice
+        int Quantity
+        decimal LineTotal
+    }
+    
+    CUSTOMERS ||--o{ ORDERS: &quot;&quot;
+    
+    
+   
+</code></pre>
+<h2 id="nf3">NF3</h2>
+<h3 id="requirements-1">Requirements</h3>
+<p>To bring the given database structure to Third Normal Form (3NF), we need to ensure that:</p>
+<ol>
+<li>The database is in Second Normal Form (2NF).</li>
+<li>All the attributes are functionally dependent on the primary key, and there are no transitive dependencies.</li>
+</ol>
+<p><strong>In the given schema, the <code>ORDERS</code> table has transitive dependencies.</strong> Specifically,</p>
+<ul>
+<li><code>ProductName</code>, <code>CategoryName</code>, and <code>ProductPrice</code> depend on <code>ProductID</code>, which implies they should be moved to a separate <code>PRODUCTS</code> table.</li>
+<li>Additionally, <code>CategoryName</code> depends on <code>CategoryID</code>, which implies the need for a <code>CATEGORIES</code> table.</li>
+</ul>
+<h3 id="solution--1-decomposing-the-tables-to-achieve-3nf">Solution  #1: Decomposing the tables to achieve 3NF</h3>
+<ol>
+<li><strong>Customers Table</strong>: Contains customer-specific information.</li>
+<li><strong>Categories Table</strong>: Contains category-specific information.</li>
+<li><strong>Products Table</strong>: Contains product-specific information with a foreign key to categories.</li>
+<li><strong>Orders Table</strong>: Contains order-specific information with a foreign key to customers.</li>
+<li><strong>OrderDetails Table</strong>: Contains order line items with foreign keys to orders and products.</li>
+</ol>
+<pre><code>erDiagram
+    CATEGORIES {
+        int CategoryID PK
+        nvarchar(100) CategoryName
+    }
+
+    CUSTOMERS {
+        int CustomerID PK
+        nvarchar(100) Name
+        nvarchar(100) Email
+    }
+
+    ORDERDETAILS {
+        int OrderDetailID PK
+        int OrderID FK
+        int ProductID FK
+        int Quantity
+        decimal(10,2) Price
+    }
+
+    ORDERS {
+        int OrderID PK
+        int CustomerID FK
+        date OrderDate
+    }
+
+    PRODUCTS {
+        int ProductID PK
+        nvarchar(100) Name
+        decimal(10,2) Price
+        int CategoryID FK
+    }
+
+    CUSTOMERS ||--o{ ORDERS : &quot;places&quot;
+    ORDERS ||--o{ ORDERDETAILS : &quot;contains&quot;
+    PRODUCTS ||--o{ ORDERDETAILS : &quot;listed in&quot;
+    CATEGORIES ||--o{ PRODUCTS : &quot;categorized by&quot;
+
+</code></pre>
+<pre><code class="lang-mermaid">erDiagram
+    CATEGORIES {
+        int CategoryID PK
+        nvarchar(100) CategoryName
+    }
+
+    CUSTOMERS {
+        int CustomerID PK
+        nvarchar(100) Name
+        nvarchar(100) Email
+    }
+
+    ORDERDETAILS {
+        int OrderDetailID PK
+        int OrderID FK
+        int ProductID FK
+        int Quantity
+        decimal Price
+    }
+
+    ORDERS {
+        int OrderID PK
+        int CustomerID FK
+        date OrderDate
+    }
+
+    PRODUCTS {
+        int ProductID PK
+        nvarchar(100) Name
+        decimal Price
+        int CategoryID FK
+    }
+
+    CUSTOMERS ||--o{ ORDERS : &quot;places&quot;
+    ORDERS ||--o{ ORDERDETAILS : &quot;contains&quot;
+    PRODUCTS ||--o{ ORDERDETAILS : &quot;listed in&quot;
+    CATEGORIES ||--o{ PRODUCTS : &quot;categorized by&quot;
+
+</code></pre>
+<h3 id="solution--2-snow-flake">Solution  #2: Snow Flake</h3>
+<pre><code class="lang-mermaid">erDiagram
+    Dim_Categories {
+        int CategoryKey PK
+        nvarchar(100) CategoryName
+    }
+
+    Dim_Customers {
+        int CustomerKey PK
+        nvarchar(100) Name
+        nvarchar(100) Email
+    }
+
+    Dim_Date {
+        int DateKey PK
+        int Day
+        int Month
+        int Year
+    }
+
+    Dim_Products {
+        int ProductKey PK
+        nvarchar(100) Name
+        decimal Price
+        int CategoryKey FK
+    }
+
+    Fact_Sales {
+        int SaleID PK
+        int DateKey FK
+        int CustomerKey FK
+        int ProductKey FK
+        int Quantity
+        decimal
+        TotalPrice
+    }
+
+    Dim_Categories ||--o{ Dim_Products : &quot;has&quot;
+    Dim_Customers ||--o{ Fact_Sales : &quot;makes&quot;
+    Dim_Date ||--o{ Fact_Sales : &quot;occurs on&quot;
+    Dim_Products ||--o{ Fact_Sales : &quot;contains&quot;
+
+</code></pre>
+<h2 id="nf1-in-practice">NF1 in practice</h2>
+<h3 id="non-atomic-values">Non atomic values</h3>
+<table>
+<thead>
+<tr>
+<th>ProductKey</th>
+<th>Name</th>
+<th>Price</th>
+<th>CategoryKey</th>
+<th>HardwareSpecs</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Laptop</td>
+<td>1200.00</td>
+<td>1</td>
+<td><code>&lt;Hardware&gt;&lt;CPU&gt;Intel i7&lt;/CPU&gt;&lt;RAM&gt;16GB&lt;/RAM&gt;&lt;Storage&gt;512GB SSD&lt;/Storage&gt;&lt;Graphics&gt;NVIDIA GTX 1650&lt;/Graphics&gt;&lt;/Hardware&gt;</code></td>
+</tr>
+<tr>
+<td>2</td>
+<td>Smartphone</td>
+<td>700.00</td>
+<td>1</td>
+<td><code>&lt;Hardware&gt;&lt;CPU&gt;Snapdragon 888&lt;/CPU&gt;&lt;RAM&gt;8GB&lt;/RAM&gt;&lt;Storage&gt;128GB&lt;/Storage&gt;&lt;Camera&gt;108MP&lt;/Camera&gt;&lt;/Hardware&gt;</code></td>
+</tr>
+<tr>
+<td>3</td>
+<td>Tablet</td>
+<td>250.00</td>
+<td>1</td>
+<td><code>&lt;Hardware&gt;&lt;CPU&gt;Apple A14&lt;/CPU&gt;&lt;RAM&gt;4GB&lt;/RAM&gt;&lt;Storage&gt;64GB&lt;/Storage&gt;&lt;Display&gt;10.2 inch&lt;/Display&gt;&lt;/Hardware&gt;</code></td>
+</tr>
+<tr>
+<td>4</td>
+<td>Headphones</td>
+<td>150.00</td>
+<td>1</td>
+<td><code>&lt;Hardware&gt;&lt;Type&gt;Over-Ear&lt;/Type&gt;&lt;Wireless&gt;Yes&lt;/Wireless&gt;&lt;BatteryLife&gt;20 hours&lt;/BatteryLife&gt;&lt;NoiseCancelling&gt;Yes&lt;/NoiseCancelling&gt;&lt;/Hardware&gt;</code></td>
+</tr>
+</tbody>
+</table>
+<p>MMSQL can query into XML directly:</p>
+<pre><code class="lang-sql">SELECT *
+FROM Products
+WHERE HardwareSpecs.exist('/Hardware/Wireless[text()=&quot;Yes&quot;]') = 1;
+</code></pre>
+<h3 id="splitting-addresses-to-atomic-values">Splitting Addresses to atomic values</h3>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/altinum/szamtud_docfx/blob/main/softec/otp/Normalization.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+    <script type="module" src="../../styles/heatmap/main.js"></script>
+    <script type="module" src="../../styles/heatmap/displayHeatmap.js"></script>
+    <script type="module" src="../../styles/heatmap/manageHtmlChange.js"></script>
+    <script type="module" src="../../styles/heatmap/intersectionObserver.js"></script>
+    <script type="module" src="../../styles/heatmap/config.js"></script>  </body>
+</html>

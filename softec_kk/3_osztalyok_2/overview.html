@@ -1,0 +1,2912 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Oszt&#225;lyok &#214;sszefoglal&#243; </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Oszt&#225;lyok &#214;sszefoglal&#243; ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <link rel="stylesheet" href="../../styles/heatmap.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="osztályok-összefoglaló">Osztályok Összefoglaló</h1>
+
+<p>Ez az oldal arra szolgál, hogy egy teljesebb képet adjon az osztályokról. A feltétlenül szükségesnél többet tartalmaz, de a megértéshez hasznos.
+A projekt a szokásos <code>Windows Forms App</code>-ban készül, a <code>Form1.cs</code>-ben. Rendhagyó módon más fájlba nem is dolgozunk.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>A hatékony tanulást segítheti, ha a kódot kipróbáljátok és játszotok vele. Az oldalon végig állatos példák lesznek, érdemes lehet a saját kódot járművekre (vagy bármi másra) megírni.</p>
+</div>
+<h2 id="alapok">Alapok</h2>
+<p>Az osztályok egyfajta sablonként szolgálnak, segítségégükkel létrehozhatunk objektumokat, melyek adattagokat és metódusokat tartalmaznak. Az osztályok lehetővé teszik a programozók számára, hogy strukturáltabb és modulárisabb kódot írjanak, valamint egyszerűbbé tegyék az adatok kezelését és azokat megoszthassák a kód különböző részei között.</p>
+<p>(!Stepper)</p>
+<p>(!Step)[Először hozzunk létre egy eseménykiszolgálót a <code>Form1</code> load eseményére, majd hozzunk létre egy osztályt <code>Kutya</code> névvel.]</p>
+<div class="tabGroup" id="tabgroup_bHGHmlrG6S">
+<ul role="tablist">
+<li role="presentation">
+<a href="#tabpanel_bHGHmlrG6S_focus" role="tab" aria-controls="tabpanel_bHGHmlrG6S_focus" data-tab="focus" tabindex="0" aria-selected="true">lényeg</a>
+</li>
+<li role="presentation">
+<a href="#tabpanel_bHGHmlrG6S_entire" role="tab" aria-controls="tabpanel_bHGHmlrG6S_entire" data-tab="entire" tabindex="-1">teljes kód</a>
+</li>
+</ul>
+<section id="tabpanel_bHGHmlrG6S_focus" role="tabpanel" data-tab="focus">
+
+<pre><code class="lang-csharp"> private void Form1_Load(object sender, EventArgs e)
+ {
+
+ }
+ class Kutya
+ {
+  
+ }
+</code></pre>
+</section>
+<section id="tabpanel_bHGHmlrG6S_entire" role="tabpanel" data-tab="entire" aria-hidden="true" hidden="hidden">
+
+<pre><code class="lang-csharp">namespace OsztalyokDemo
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+    }
+    class Kutya
+    {
+
+    }
+}
+</code></pre>
+</section>
+</div>
+
+<p>(!EndStep)</p>
+<p>(!Step)[Vegyünk fel egy <code>nev</code> változót, amiben a kutyánk nevét fogjuk rakni. Majd hozzunk létre a . <code>Form1_Load</code>-ban egy új <code>Kutya</code> objektumot és rakjuk bele egy <code>k</code> nevű változóba. Ha most megpróbálnánk kiíratni a kutya nevét, akkor nem tudjuk, mert az csak a <code>Kutya</code> osztályon belül látható, a <code>Form1_Load</code>-ban nem.]</p>
+<div class="tabGroup" id="tabgroup_bHGHmlrG6S-1">
+<ul role="tablist">
+<li role="presentation">
+<a href="#tabpanel_bHGHmlrG6S-1_focus" role="tab" aria-controls="tabpanel_bHGHmlrG6S-1_focus" data-tab="focus" tabindex="0" aria-selected="true">lényeg</a>
+</li>
+<li role="presentation">
+<a href="#tabpanel_bHGHmlrG6S-1_entire" role="tab" aria-controls="tabpanel_bHGHmlrG6S-1_entire" data-tab="entire" tabindex="-1">teljes kód</a>
+</li>
+</ul>
+<section id="tabpanel_bHGHmlrG6S-1_focus" role="tabpanel" data-tab="focus">
+
+<pre><code class="lang-csharp"> private void Form1_Load(object sender, EventArgs e)
+        {
+            Kutya k=new Kutya();
+            MessageBox.Show(k.nev); //k.nev nem látszik
+            //A MessageBox.Show() feldob egy ablakot azzal a szöveggel, ami a zárójelei közé kapott.
+        }
+ class Kutya
+    {
+        string nev = &quot;Morzsa&quot;;
+    }
+</code></pre>
+</section>
+<section id="tabpanel_bHGHmlrG6S-1_entire" role="tabpanel" data-tab="entire" aria-hidden="true" hidden="hidden">
+
+<pre><code class="lang-csharp">namespace OsztalyokDemo
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            Kutya k=new Kutya();
+            MessageBox.Show(k.name); //k.nev nem látszik
+            //A MessageBox.Show() feldob egy ablakot azzal a szöveggel, ami a zárójelei közé kapott.
+        }
+    }
+    class Kutya
+    {
+        string nev = &quot;Morzsa&quot;;
+    }
+}
+</code></pre>
+</section>
+</div>
+
+<p>(!EndStep)</p>
+<p>(!Step)[A megoldás, hogy átállítjuk a <code>nev</code> változót <code>public</code>-ra. Ez azt jelenti, hogy az osztályon kívül is elérhető lesz. Most, ha lefuttatjuk a progamot, fel fog ugrani egy ablak, ami kiírja, hogy &quot;Morzsa&quot;.]</p>
+<div class="tabGroup" id="tabgroup_bHGHmlrG6S-2">
+<ul role="tablist">
+<li role="presentation">
+<a href="#tabpanel_bHGHmlrG6S-2_focus" role="tab" aria-controls="tabpanel_bHGHmlrG6S-2_focus" data-tab="focus" tabindex="0" aria-selected="true">lényeg</a>
+</li>
+<li role="presentation">
+<a href="#tabpanel_bHGHmlrG6S-2_entire" role="tab" aria-controls="tabpanel_bHGHmlrG6S-2_entire" data-tab="entire" tabindex="-1">teljes kód</a>
+</li>
+</ul>
+<section id="tabpanel_bHGHmlrG6S-2_focus" role="tabpanel" data-tab="focus">
+
+<pre><code class="lang-csharp"> private void Form1_Load(object sender, EventArgs e)
+        {
+            Kutya k=new Kutya();
+            MessageBox.Show(k.nev);
+        }
+        class Kutya
+        {
+            public string nev = &quot;Morzsa&quot;;
+        }
+</code></pre>
+</section>
+<section id="tabpanel_bHGHmlrG6S-2_entire" role="tabpanel" data-tab="entire" aria-hidden="true" hidden="hidden">
+
+<pre><code class="lang-csharp">namespace OsztalyokDemo
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            Kutya k=new Kutya();
+            MessageBox.Show(k.nev);
+        }
+    }
+    class Kutya
+    {
+        public string nev = &quot;Morzsa&quot;;
+    }
+}
+</code></pre>
+</section>
+</div>
+
+<p>(!EndStep)</p>
+<p>(!Step)[Morzsa felszedett pár kilót, ezért szeretnénk átkeresztelni Kenyérre. Ezt megtehetjük úgy, hogy <code>k.nev</code>-nek adunk egy új értéket. Ha lefuttatjuk a programot, akkor először kiírja, hogy &quot;Morzsa&quot;, majd azt, hogy &quot;Kenyér&quot;. Eddig egy van egy elhízott Morzsánk/Kenyerünk, de mi van, ha szeretnénk több kutyát létrehozni?]</p>
+<div class="tabGroup" id="tabgroup_bHGHmlrG6S-3">
+<ul role="tablist">
+<li role="presentation">
+<a href="#tabpanel_bHGHmlrG6S-3_focus" role="tab" aria-controls="tabpanel_bHGHmlrG6S-3_focus" data-tab="focus" tabindex="0" aria-selected="true">lényeg</a>
+</li>
+<li role="presentation">
+<a href="#tabpanel_bHGHmlrG6S-3_entire" role="tab" aria-controls="tabpanel_bHGHmlrG6S-3_entire" data-tab="entire" tabindex="-1">teljes kód</a>
+</li>
+</ul>
+<section id="tabpanel_bHGHmlrG6S-3_focus" role="tabpanel" data-tab="focus">
+
+<pre><code class="lang-csharp"> private void Form1_Load(object sender, EventArgs e)
+        {
+            Kutya k=new Kutya();
+            MessageBox.Show(k.nev);
+            k.nev = &quot;Kenyér&quot;;
+            MessageBox.Show(k.nev);
+        }
+</code></pre>
+</section>
+<section id="tabpanel_bHGHmlrG6S-3_entire" role="tabpanel" data-tab="entire" aria-hidden="true" hidden="hidden">
+
+<pre><code class="lang-csharp">namespace OsztalyokDemo
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            Kutya k=new Kutya();
+            MessageBox.Show(k.nev);
+            k.nev = &quot;Kenyér&quot;;
+            MessageBox.Show(k.nev);
+        }
+    }
+    class Kutya
+    {
+        public string nev = &quot;Morzsa&quot;;
+    }
+}
+</code></pre>
+</section>
+</div>
+
+<p>(!EndStep)</p>
+<p>(!Step)[A <code>k</code> változónkat cseréljük ki többre, adjunk nekik nevet, majd írassuk ki a nevüket a képernyőre.]</p>
+<div class="tabGroup" id="tabgroup_bHGHmlrG6S-4">
+<ul role="tablist">
+<li role="presentation">
+<a href="#tabpanel_bHGHmlrG6S-4_focus" role="tab" aria-controls="tabpanel_bHGHmlrG6S-4_focus" data-tab="focus" tabindex="0" aria-selected="true">lényeg</a>
+</li>
+<li role="presentation">
+<a href="#tabpanel_bHGHmlrG6S-4_entire" role="tab" aria-controls="tabpanel_bHGHmlrG6S-4_entire" data-tab="entire" tabindex="-1">teljes kód</a>
+</li>
+</ul>
+<section id="tabpanel_bHGHmlrG6S-4_focus" role="tabpanel" data-tab="focus">
+
+<pre><code class="lang-csharp">private void Form1_Load(object sender, EventArgs e)
+        {
+            Kutya k1 = new Kutya();
+            Kutya k2 = new Kutya();
+            Kutya k3 = new Kutya();
+
+            k2.nev = &quot;Liza&quot;;
+            k3.nev = &quot;Bodri&quot;;
+
+            MessageBox.Show($&quot;k1: {k1.nev} k2: {k2.nev} k3: {k3.nev}&quot;);
+            //Ha egy string elé `$` jelet teszünk, akkor a kapcsos zárójelekbe berakhatunk közvetlenül változókat, így olvashatóbb a kód és szebb, mint a +-jeles megoldással.
+        }
+</code></pre>
+</section>
+<section id="tabpanel_bHGHmlrG6S-4_entire" role="tabpanel" data-tab="entire" aria-hidden="true" hidden="hidden">
+
+<pre><code class="lang-csharp">namespace OsztalyokDemo
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            Kutya k1 = new Kutya();
+            Kutya k2 = new Kutya();
+            Kutya k3 = new Kutya();
+
+            k2.nev = &quot;Liza&quot;;
+            k3.nev = &quot;Bodri&quot;;
+
+            MessageBox.Show($&quot;k1: {k1.nev} k2: {k2.nev} k3: {k3.nev}&quot;);
+             //Ha egy string elé `$` jelet teszünk, akkor a kapcsos zárójelekbe berakhatunk közvetlenül változókat, így olvashatóbb a kód és szebb, mint a +-jeles megoldással.
+        }
+    }
+    class Kutya
+    {
+        public string nev = &quot;Morzsa&quot;;
+    }
+}
+</code></pre>
+</section>
+</div>
+
+<p>(!Hint) Mit fog kiírni a program? [!&quot;k1: Morzsa k2: Liza k3: Bodri&quot;, mert a <code>nev</code> alapértelmezett értéke &quot;Morzsa&quot;.]</p>
+<p>(!EndStep)</p>
+<p>(!Step)[Miért pont &quot;Morzsa&quot; legyen az alapértelmezett neve egy kutyának? Vegyük ki.]</p>
+<div class="tabGroup" id="tabgroup_bHGHmlrG6S-5">
+<ul role="tablist">
+<li role="presentation">
+<a href="#tabpanel_bHGHmlrG6S-5_focus" role="tab" aria-controls="tabpanel_bHGHmlrG6S-5_focus" data-tab="focus" tabindex="0" aria-selected="true">lényeg</a>
+</li>
+<li role="presentation">
+<a href="#tabpanel_bHGHmlrG6S-5_entire" role="tab" aria-controls="tabpanel_bHGHmlrG6S-5_entire" data-tab="entire" tabindex="-1">teljes kód</a>
+</li>
+</ul>
+<section id="tabpanel_bHGHmlrG6S-5_focus" role="tabpanel" data-tab="focus">
+
+<pre><code class="lang-csharp">class Kutya
+    {
+        public string nev;
+    }
+</code></pre>
+</section>
+<section id="tabpanel_bHGHmlrG6S-5_entire" role="tabpanel" data-tab="entire" aria-hidden="true" hidden="hidden">
+
+<pre><code class="lang-csharp">namespace OsztalyokDemo
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            Kutya k1 = new Kutya();
+            Kutya k2 = new Kutya();
+            Kutya k3 = new Kutya();
+
+            k2.nev = &quot;Liza&quot;;
+            k3.nev = &quot;Bodri&quot;;
+
+            MessageBox.Show($&quot;k1: {k1.nev} k2: {k2.nev} k3: {k3.nev}&quot;);
+        }
+    }
+    class Kutya
+    {
+        public string nev;
+    }
+}
+</code></pre>
+</section>
+</div>
+
+<p>(!Hint) Most mit fog kiírni a program? [!&quot;k1: k2: Liza k3: Bodri&quot;, mert a <code>nev</code> most null és az alapból egy üres <code>string</code>.]</p>
+<p>(!EndStep)</p>
+<p>(!Step)[Ami nem tud ugatni, az nem lehet kutya. Hozzunk létre egy függvényt a <code>Kutya</code> osztályon belül, ami kiírja a kutya nevét és azt, hogy ugat.]</p>
+<div class="tabGroup" id="tabgroup_bHGHmlrG6S-6">
+<ul role="tablist">
+<li role="presentation">
+<a href="#tabpanel_bHGHmlrG6S-6_focus" role="tab" aria-controls="tabpanel_bHGHmlrG6S-6_focus" data-tab="focus" tabindex="0" aria-selected="true">lényeg</a>
+</li>
+<li role="presentation">
+<a href="#tabpanel_bHGHmlrG6S-6_entire" role="tab" aria-controls="tabpanel_bHGHmlrG6S-6_entire" data-tab="entire" tabindex="-1">teljes kód</a>
+</li>
+</ul>
+<section id="tabpanel_bHGHmlrG6S-6_focus" role="tabpanel" data-tab="focus">
+
+<pre><code class="lang-csharp"> class Kutya
+    {
+        public string nev;
+        public void Ugat()
+        {
+            MessageBox.Show(nev + &quot; ugat.&quot;);
+        }
+    }
+</code></pre>
+</section>
+<section id="tabpanel_bHGHmlrG6S-6_entire" role="tabpanel" data-tab="entire" aria-hidden="true" hidden="hidden">
+
+<pre><code class="lang-csharp">namespace OsztalyokDemo
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            Kutya k1 = new Kutya();
+            Kutya k2 = new Kutya();
+            Kutya k3 = new Kutya();
+
+            k2.nev = &quot;Liza&quot;;
+            k3.nev = &quot;Bodri&quot;;
+
+        }
+    }
+    class Kutya
+    {
+        public string nev;
+        public void Ugat()
+        {
+            MessageBox.Show(nev + &quot; ugat.&quot;);
+        }
+    }
+}
+</code></pre>
+</section>
+</div>
+
+<p>(!EndStep)</p>
+<p>(!Step)[A kutyáink még nem ugatnak, mert nem hívtuk meg egyiken sem az <code>Ugat</code> metódust. Bírjuk őket ugatásra.]</p>
+<div class="tabGroup" id="tabgroup_bHGHmlrG6S-7">
+<ul role="tablist">
+<li role="presentation">
+<a href="#tabpanel_bHGHmlrG6S-7_focus" role="tab" aria-controls="tabpanel_bHGHmlrG6S-7_focus" data-tab="focus" tabindex="0" aria-selected="true">lényeg</a>
+</li>
+<li role="presentation">
+<a href="#tabpanel_bHGHmlrG6S-7_entire" role="tab" aria-controls="tabpanel_bHGHmlrG6S-7_entire" data-tab="entire" tabindex="-1">teljes kód</a>
+</li>
+</ul>
+<section id="tabpanel_bHGHmlrG6S-7_focus" role="tabpanel" data-tab="focus">
+
+<pre><code class="lang-csharp"> private void Form1_Load(object sender, EventArgs e)
+        {
+            Kutya k1 = new Kutya();
+            Kutya k2 = new Kutya();
+            Kutya k3 = new Kutya();
+
+            k1.nev = &quot;Morzsa&quot;;
+            k2.nev = &quot;Liza&quot;;
+            k3.nev = &quot;Bodri&quot;;
+
+            k1.Ugat();
+            k2.Ugat();
+            k3.Ugat();
+        }
+</code></pre>
+</section>
+<section id="tabpanel_bHGHmlrG6S-7_entire" role="tabpanel" data-tab="entire" aria-hidden="true" hidden="hidden">
+
+<pre><code class="lang-csharp">namespace OsztalyokDemo
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            Kutya k1 = new Kutya();
+            Kutya k2 = new Kutya();
+            Kutya k3 = new Kutya();
+
+            k1.nev = &quot;Morzsa&quot;;
+            k2.nev = &quot;Liza&quot;;
+            k3.nev = &quot;Bodri&quot;;
+
+            k1.Ugat();
+            k2.Ugat();
+            k3.Ugat();
+        }
+    }
+    class Kutya
+    {
+        public string nev;
+        public void Ugat()
+        {
+            MessageBox.Show(nev + &quot; ugat.&quot;);
+        }
+    }
+}
+</code></pre>
+</section>
+</div>
+
+<p>(!Hint) Mit fog kiírni a program? [!&quot;Morzsa ugat&quot;,&quot;Liza ugat&quot;,&quot;Bodri ugat&quot; három külön felugró ablakban.]</p>
+<p>(!EndStep)</p>
+<p>(!Step)[A programozásban van egy &quot;DRY&quot; akroníma, ami annak a rövidítése, hogy &quot;Don't repeat yourself.&quot; Mi pedig háromszor ismételjük önmagunkat. Írjuk meg úgy a kódot, hogy ciklussal hozunk létre tíz kutyát.]</p>
+<div class="tabGroup" id="tabgroup_bHGHmlrG6S-8">
+<ul role="tablist">
+<li role="presentation">
+<a href="#tabpanel_bHGHmlrG6S-8_focus" role="tab" aria-controls="tabpanel_bHGHmlrG6S-8_focus" data-tab="focus" tabindex="0" aria-selected="true">lényeg</a>
+</li>
+<li role="presentation">
+<a href="#tabpanel_bHGHmlrG6S-8_entire" role="tab" aria-controls="tabpanel_bHGHmlrG6S-8_entire" data-tab="entire" tabindex="-1">teljes kód</a>
+</li>
+</ul>
+<section id="tabpanel_bHGHmlrG6S-8_focus" role="tabpanel" data-tab="focus">
+
+<pre><code class="lang-csharp">        private void Form1_Load(object sender, EventArgs e)
+        {
+            List&lt;Kutya&gt; kutyák=new List&lt;Kutya&gt;(); //hozzunk létre egy üres listát, amibe a kutyákat tesszük
+            //A List egy osztály a C#-ban, amely lehetővé teszi a dinamikus méretű kollekciók tárolását és kezelését.
+
+            List&lt;string&gt; kutyanevek = new List&lt;string&gt;() {//létrehozunk egy listát kutyanevekkel, kapcsos zárójelben egyből rakunk bele értékeket.
+                &quot;Bajusz&quot;,
+                &quot;Bodri&quot;,
+                &quot;Csipke&quot;,
+                &quot;Csonti&quot;,
+                &quot;Morzsa&quot;,
+                &quot;Cukor&quot;,
+                &quot;Csoki&quot;,
+                &quot;Liza&quot;,
+                &quot;Csíkos&quot;,
+                &quot;Foltos&quot;
+            };
+            foreach (string nev in kutyanevek) //egy foreach ciklussal végigmegyünk a kutyanevek lista összes elemén
+            {
+                Kutya kutya = new Kutya(); //létrehozunk egy új kutya példányt a Kutya osztályból
+                kutya.nev = nev; //ezt a példányt elnevezzük Bajusznak, majd Bodrinak, aztán Csipkének...
+                kutyák.Add(kutya); //hozzáadjuk a kutyák listához az éppen aktuális példányt
+            }
+
+        }
+</code></pre>
+</section>
+<section id="tabpanel_bHGHmlrG6S-8_entire" role="tabpanel" data-tab="entire" aria-hidden="true" hidden="hidden">
+
+<pre><code class="lang-csharp">namespace OsztalyokDemo
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            List&lt;Kutya&gt; kutyák=new List&lt;Kutya&gt;(); //hozzunk létre egy üres listát, amibe a kutyákat tesszük
+            //A List egy osztály a C#-ban, amely lehetővé teszi a dinamikus méretű kollekciók tárolását és kezelését.
+
+            List&lt;string&gt; kutyanevek = new List&lt;string&gt;() {//létrehozunk egy listát kutyanevekkel, kapcsos zárójelben egyből rakunk bele értékeket.
+                &quot;Bajusz&quot;,
+                &quot;Bodri&quot;,
+                &quot;Csipke&quot;,
+                &quot;Csonti&quot;,
+                &quot;Morzsa&quot;,
+                &quot;Cukor&quot;,
+                &quot;Csoki&quot;,
+                &quot;Liza&quot;,
+                &quot;Csíkos&quot;,
+                &quot;Foltos&quot;
+            };
+            foreach (string nev in kutyanevek) //egy foreach ciklussal végigmegyünk a kutyanevek lista összes elemén
+            {
+                Kutya kutya = new Kutya(); //létrehozunk egy új kutya példányt a Kutya osztályból
+                kutya.nev = nev; //ezt a példányt elnevezzük Bajusznak, majd Bodrinak, aztán Csipkének...
+                kutyák.Add(kutya); //hozzáadjuk a kutyák listához az éppen aktuális példányt
+            }
+
+        }
+    }
+    class Kutya
+    {
+        public string nev;
+        public void Ugat()
+        {
+            MessageBox.Show(nev + &quot; ugat.&quot;);
+        }
+    }
+}
+</code></pre>
+</section>
+</div>
+
+<p>(!Hint) Mi az a List&lt;?&gt; [!A List egy olyan osztály a C# programozási nyelvben, amely lehetővé teszi a dinamikus méretű kollekciók tárolását. A List osztály egy generikus osztály, amelyet típusparaméterrel lehet példányosítani, és ezzel meghatározni, hogy milyen típusú elemeket tároljon a lista.A List osztály általában többféle műveletet támogat, például az elemek hozzáadását, eltávolítását, indexelését és számlálójának lekérdezését. Ezeket a műveleteket számos beépített metódus segítségével érhetjük el, mint például az Add, a Remove, a Count és az IndexOf metódusok.Az előző példában egy List<string> típusú változót hoztunk létre, amely a típusparaméterként megadott string típusú elemeket tárolja. Ezután az Add metódussal adtunk hozzá tíz elemet a listához. A lista változót további műveletekre is használhatjuk, például a foreach ciklus segítségével bejárhatjuk az összes elemét.]<p>
+<p>(!Hint) Hogy nézne ki <code>for</code> ciklussal a <code>kutyák</code> lista feltöltése? [!for (int i = 0; i &lt; kutyák.Count; i++){Kutya kutya = new Kutya();kutya.nev = kutyanevek[i];kutyák.Add(kutya);}]</p>
+<p>(!EndStep)</p>
+<p>(!Step)[Még mielőtt átmennénk a következő részre, adjunk értelmet ennek a két ciklusnak egy harmadikkal és bírjuk ugatásra a falkát.]</p>
+<div class="tabGroup" id="tabgroup_bHGHmlrG6S-9">
+<ul role="tablist">
+<li role="presentation">
+<a href="#tabpanel_bHGHmlrG6S-9_focus" role="tab" aria-controls="tabpanel_bHGHmlrG6S-9_focus" data-tab="focus" tabindex="0" aria-selected="true">lényeg</a>
+</li>
+<li role="presentation">
+<a href="#tabpanel_bHGHmlrG6S-9_entire" role="tab" aria-controls="tabpanel_bHGHmlrG6S-9_entire" data-tab="entire" tabindex="-1">teljes kód</a>
+</li>
+</ul>
+<section id="tabpanel_bHGHmlrG6S-9_focus" role="tabpanel" data-tab="focus">
+
+<pre><code class="lang-csharp">            foreach (Kutya kutya in kutyák)
+            {
+                kutya.Ugat();
+            }
+            //vagy
+            for (int i = 0; i &lt; kutyák.Count; i++)
+            {
+                kutyák[i].Ugat();
+            }
+</code></pre>
+</section>
+<section id="tabpanel_bHGHmlrG6S-9_entire" role="tabpanel" data-tab="entire" aria-hidden="true" hidden="hidden">
+
+<pre><code class="lang-csharp">namespace OsztalyokDemo
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            List&lt;Kutya&gt; kutyák=new List&lt;Kutya&gt;(); //hozzunk létre egy üres listát, amibe a kutyákat tesszük
+            //A List egy osztály a C#-ban, amely lehetővé teszi a dinamikus méretű kollekciók tárolását és kezelését.
+
+            List&lt;string&gt; kutyanevek = new List&lt;string&gt;() {//létrehozunk egy listát kutyanevekkel, kapcsos zárójelben egyből rakunk bele értékeket.
+                &quot;Bajusz&quot;,
+                &quot;Bodri&quot;,
+                &quot;Csipke&quot;,
+                &quot;Csonti&quot;,
+                &quot;Morzsa&quot;,
+                &quot;Cukor&quot;,
+                &quot;Csoki&quot;,
+                &quot;Liza&quot;,
+                &quot;Csíkos&quot;,
+                &quot;Foltos&quot;
+            };
+            foreach (string nev in kutyanevek) //egy foreach ciklussal végigmegyünk a kutyanevek lista összes elemén
+            {
+                Kutya kutya = new Kutya(); //létrehozunk egy új kutya példányt a Kutya osztályból
+                kutya.nev = nev; //ezt a példányt elnevezzük Bajusznak, majd Bodrinak, aztán Csipkének...
+                kutyák.Add(kutya); //hozzáadjuk a kutyák listához az éppen aktuális példányt
+            }
+            //for (int i = 0; i &lt; kutyák.Count; i++)
+            //{
+            //    Kutya kutya = new Kutya();
+            //    kutya.nev = kutyanevek[i];
+            //    kutyák.Add(kutya);
+            //}
+            foreach (Kutya kutya in kutyák)
+            {
+                kutya.Ugat();
+            }
+            //vagy
+            for (int i = 0; i &lt; kutyák.Count; i++)
+            {
+                kutyák[i].Ugat();
+            }
+
+        }
+    }
+    class Kutya
+    {
+        public string nev;
+        public void Ugat()
+        {
+            MessageBox.Show(nev + &quot; ugat.&quot;);
+        }
+    }
+}
+</code></pre>
+</section>
+</div>
+
+<div class="NOTE">
+<h5>Note</h5>
+<p>Összefoglalva: létrehoztunk egy Kutya osztályt, ami egy tervrajz és létrehoztunk belőle sok példányt. Az osztályok példányai az objektumok. Egy kutya példánynak volt egy nev tulajdonsága és egy Ugat metódusa.</p>
+</div>
+<div class="NOTE">
+<h5>Note</h5>
+<p>A függvények és metódusok között annyi a különbség, hogy a metódusok egy objektumhoz tartoznak, tehát osztályszinten vannak definiálva. Gyakorlatban sokszor felváltva használják a kettő kifejezést.</p>
+</div>
+<p>(!EndStep)</p>
+<p>(!EndStepper)</p>
+<h2 id="a-konstruktor">A Konstruktor</h2>
+<p>A konstruktor egy speciális függvény az osztályon belül. Ugyanazzal a névvel rendelkezik mint, az osztály és publikus. Amikor létrehozunk egy példányt és azt írjuk le, hogy <code>csharp Kutya k=new Kutya();</code>, akkor a <code>Kutya()</code> maga a konstruktor függvény. Ha nem hoztunk létre konstruktort az osztályban nem probléma, mert automatikusan generálódik egy.</p>
+<p>(!Stepper)</p>
+<p>(!Step)[Ahhoz, hogy tudjuk értékelni, hogy milyen jó dolog a konstruktor adjunk néhány új tulajdonságot a Kutya osztálynak. Nem nehéz rájönni, hogy ha ismét szeretnénk egy ciklussal létrehozni sok példányt az mennyivel több sort igényelne.]</p>
+<div class="tabGroup" id="tabgroup_bHGHmlrG6S-10">
+<ul role="tablist">
+<li role="presentation">
+<a href="#tabpanel_bHGHmlrG6S-10_focus" role="tab" aria-controls="tabpanel_bHGHmlrG6S-10_focus" data-tab="focus" tabindex="0" aria-selected="true">lényeg</a>
+</li>
+<li role="presentation">
+<a href="#tabpanel_bHGHmlrG6S-10_entire" role="tab" aria-controls="tabpanel_bHGHmlrG6S-10_entire" data-tab="entire" tabindex="-1">teljes kód</a>
+</li>
+</ul>
+<section id="tabpanel_bHGHmlrG6S-10_focus" role="tabpanel" data-tab="focus">
+
+<pre><code class="lang-csharp">        private void Form1_Load(object sender, EventArgs e)
+        {
+            Kutya kutya = new Kutya();
+            kutya.nev = &quot;Morzsa&quot;;
+            kutya.fajta = &quot;tacskó&quot;;
+            kutya.hím_E = true;
+            kutya.kor = 1;
+            kutya.súly = 7.6f; //az f azt jelenti, hogy ez egy float típusú változó és nem double, mert ha leírom, hogy 7.6, akkor azt double-nek tekinti a C#. Nincs szükség nagy pontosságra és ezzel így nem kell parse-olni.
+        }
+    class Kutya
+    {
+        public string nev;
+        public string fajta;
+        public bool hím_E; //angolban isMale
+        public int kor;
+        public float súly;
+        public void Ugat()
+        {
+            MessageBox.Show(nev + &quot; ugat.&quot;);
+        }
+    }
+</code></pre>
+</section>
+<section id="tabpanel_bHGHmlrG6S-10_entire" role="tabpanel" data-tab="entire" aria-hidden="true" hidden="hidden">
+
+<pre><code class="lang-csharp">namespace OsztalyokDemo
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            Kutya kutya = new Kutya();
+            kutya.nev = &quot;Morzsa&quot;;
+            kutya.fajta = &quot;tacskó&quot;;
+            kutya.hím_E = true;
+            kutya.kor = 1;
+            kutya.súly = 7.6f; //az f azt jelenti, hogy ez egy float típusú változó és nem double, mert ha leírom, hogy 7.6, akkor azt double-nek tekinti a C#. Nincs szükség nagy pontosságra és ezzel így nem kell parse-olni.
+        }
+    }
+    class Kutya
+    {
+        public string nev;
+        public string fajta;
+        public bool hím_E; //angolban isMale
+        public int kor;
+        public float súly;
+        public void Ugat()
+        {
+            MessageBox.Show(nev + &quot; ugat.&quot;);
+        }
+    }
+}
+</code></pre>
+</section>
+</div>
+
+<p>(!EndStep)</p>
+<p>(!Step)[Itt jön kapóra a konstruktor. Most még nem vagyunk előrébb, ezt kapjuk gyárilag is. Létrehozni a <code>ctor tab tab</code> shortcuttal is lehet. A tulajdonságok után és a metódusok elé szokás elhelyezni.]</p>
+<div class="tabGroup" id="tabgroup_bHGHmlrG6S-11">
+<ul role="tablist">
+<li role="presentation">
+<a href="#tabpanel_bHGHmlrG6S-11_focus" role="tab" aria-controls="tabpanel_bHGHmlrG6S-11_focus" data-tab="focus" tabindex="0" aria-selected="true">lényeg</a>
+</li>
+<li role="presentation">
+<a href="#tabpanel_bHGHmlrG6S-11_entire" role="tab" aria-controls="tabpanel_bHGHmlrG6S-11_entire" data-tab="entire" tabindex="-1">teljes kód</a>
+</li>
+</ul>
+<section id="tabpanel_bHGHmlrG6S-11_focus" role="tabpanel" data-tab="focus">
+
+<pre><code class="lang-csharp">    class Kutya
+    {
+        public string nev;
+        public string fajta;
+        public bool hím_E; //angolban isMale
+        public int kor;
+        public float súly;
+        public Kutya()//ez itt a konstruktor
+        {
+
+        }
+        public void Ugat()
+        {
+            MessageBox.Show(nev + &quot; ugat.&quot;);
+        }
+    }
+</code></pre>
+</section>
+<section id="tabpanel_bHGHmlrG6S-11_entire" role="tabpanel" data-tab="entire" aria-hidden="true" hidden="hidden">
+
+<pre><code class="lang-csharp">namespace OsztalyokDemo
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            Kutya kutya = new Kutya();
+            kutya.nev = &quot;Morzsa&quot;;
+            kutya.fajta = &quot;tacskó&quot;;
+            kutya.hím_E = true;
+            kutya.kor = 1;
+            kutya.súly = 7.6f; //az f azt jelenti, hogy ez egy float típusú változó és nem double, mert ha leírom, hogy 7.6, akkor azt double-nek tekinti a C#. Nincs szükség nagy pontosságra és ezzel így nem kell parse-olni.
+        }
+    }
+    class Kutya
+    {
+        public string nev;
+        public string fajta;
+        public bool hím_E; //angolban isMale
+        public int kor;
+        public float súly;
+        public Kutya()//ez itt a konstruktor
+        {
+
+        }
+        public void Ugat()
+        {
+            MessageBox.Show(nev + &quot; ugat.&quot;);
+        }
+    }
+}
+</code></pre>
+</section>
+</div>
+
+<p>(!EndStep)</p>
+<p>(!Step)[A konstruktor arra való, hogy az általa kapott paraméterek segítségével legyártsa a példányokat. Itt minden értéket, amit kap hozzárendel az osztály megfelelő tulajdonságaihoz.]</p>
+<div class="tabGroup" id="tabgroup_bHGHmlrG6S-12">
+<ul role="tablist">
+<li role="presentation">
+<a href="#tabpanel_bHGHmlrG6S-12_focus" role="tab" aria-controls="tabpanel_bHGHmlrG6S-12_focus" data-tab="focus" tabindex="0" aria-selected="true">lényeg</a>
+</li>
+<li role="presentation">
+<a href="#tabpanel_bHGHmlrG6S-12_entire" role="tab" aria-controls="tabpanel_bHGHmlrG6S-12_entire" data-tab="entire" tabindex="-1">teljes kód</a>
+</li>
+</ul>
+<section id="tabpanel_bHGHmlrG6S-12_focus" role="tabpanel" data-tab="focus">
+
+<pre><code class="lang-csharp">        private void Form1_Load(object sender, EventArgs e)
+        {
+            Kutya kutya = new Kutya();//hibás, mert nem talál ilyen konstrukort, ami nem kér egy paramétert sem
+        }
+    class Kutya
+    {
+        public string nev;
+        public string fajta;
+        public bool hím_e; 
+        public int kor;
+        public float súly;
+        public Kutya(string név,string fajta,bool hím_e,int kor, float súly)
+        {
+            this.nev = név; //mivel a konstruktor paraméterei között lévő név és a Kutya osztály nev tulajdonsága nem ugyanaz, ezért a this előtagra, ami az osztályra utal nincsen szükség, mindenhol máshol van.
+            this.fajta = fajta;
+            this.hím_e = hím_e;
+            this.kor = kor;
+            this.súly = súly;
+        }
+        public void Ugat()
+        {
+            MessageBox.Show(nev + &quot; ugat.&quot;);
+        }
+    }
+</code></pre>
+</section>
+<section id="tabpanel_bHGHmlrG6S-12_entire" role="tabpanel" data-tab="entire" aria-hidden="true" hidden="hidden">
+
+<pre><code class="lang-csharp">namespace OsztalyokDemo
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            Kutya kutya = new Kutya();//hibás, mert nem talál ilyen konstrukort, ami nem kér egy paramétert sem
+        }
+    }
+    class Kutya
+    {
+        public string nev;
+        public string fajta;
+        public bool hím_e; 
+        public int kor;
+        public float súly;
+        public Kutya(string név,string fajta,bool hím_e,int kor, float súly)
+        {
+            this.nev = név; //mivel a konstruktor paraméterei között lévő név és a Kutya osztály nev tulajdonsága nem ugyanaz, ezért a this előtagra, ami az osztályra utal nincsen szükség, mindenhol máshol van.
+            this.fajta = fajta;
+            this.hím_e = hím_e;
+            this.kor = kor;
+            this.súly = súly;
+        }
+        public void Ugat()
+        {
+            MessageBox.Show(nev + &quot; ugat.&quot;);
+        }
+    }
+}
+</code></pre>
+</section>
+</div>
+
+<p>(!Hint) Mit jelent a <code>this</code>? [!Osztályon belül az osztályra utal. Osztályon kívül azt mondanánk, hogy kutya1.nev, osztályon belül this.nev lenne.]</p>
+<p>(!EndStep)</p>
+<p>(!Step)[Nézzük meg, hogyan tudjuk használni a konstruktort.]</p>
+<div class="tabGroup" id="tabgroup_bHGHmlrG6S-13">
+<ul role="tablist">
+<li role="presentation">
+<a href="#tabpanel_bHGHmlrG6S-13_focus" role="tab" aria-controls="tabpanel_bHGHmlrG6S-13_focus" data-tab="focus" tabindex="0" aria-selected="true">lényeg</a>
+</li>
+<li role="presentation">
+<a href="#tabpanel_bHGHmlrG6S-13_entire" role="tab" aria-controls="tabpanel_bHGHmlrG6S-13_entire" data-tab="entire" tabindex="-1">teljes kód</a>
+</li>
+</ul>
+<section id="tabpanel_bHGHmlrG6S-13_focus" role="tabpanel" data-tab="focus">
+
+<pre><code class="lang-csharp">        private void Form1_Load(object sender, EventArgs e)
+        {
+            Kutya kutya = new Kutya(&quot;Morzsa&quot;,&quot;puli&quot;,true,3,25.5f); //konstruktorba, mint egy függvénynek odaadjuk az értékeket
+        }
+</code></pre>
+</section>
+<section id="tabpanel_bHGHmlrG6S-13_entire" role="tabpanel" data-tab="entire" aria-hidden="true" hidden="hidden">
+
+<pre><code class="lang-csharp">namespace OsztalyokDemo
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            Kutya kutya = new Kutya(&quot;Morzsa&quot;,&quot;puli&quot;,true,3,25.5f); //konstruktorba, mint egy függvénynek odaadjuk az értékeket
+        }
+    }
+    class Kutya
+    {
+        public string nev;
+        public string fajta;
+        public bool hím_e; 
+        public int kor;
+        public float súly;
+        public Kutya(string név,string fajta,bool hím_e,int kor, float súly)
+        {
+            this.nev = név; //mivel a konstruktor paraméterei között lévő név és a Kutya osztály nev tulajdonsága nem ugyanaz, ezért a this előtagra, ami az osztályra utal nincsen szükség, mindenhol máshol van.
+            this.fajta = fajta;
+            this.hím_e = hím_e;
+            this.kor = kor;
+            this.súly = súly;
+        }
+        public void Ugat()
+        {
+            MessageBox.Show(nev + &quot; ugat.&quot;);
+        }
+    }
+}
+</code></pre>
+</section>
+</div>
+
+<p>(!Hint) Mit jelent az f a 25.5f-ben? [!Azt, hogy az érték float (lebegő pontos szám).]</p>
+<p>(!EndStep)</p>
+<p>(!Step)[Állatorvos Józsinál a kliensek egy CSV fájlba vannak elmentve. Töltsük fel a kutyák listát a CSV soraiból. Az egyszerűség szellemében a CSV sorai legyenek most egy lista elemei.]</p>
+<div class="tabGroup" id="tabgroup_bHGHmlrG6S-14">
+<ul role="tablist">
+<li role="presentation">
+<a href="#tabpanel_bHGHmlrG6S-14_focus" role="tab" aria-controls="tabpanel_bHGHmlrG6S-14_focus" data-tab="focus" tabindex="0" aria-selected="true">lényeg</a>
+</li>
+<li role="presentation">
+<a href="#tabpanel_bHGHmlrG6S-14_entire" role="tab" aria-controls="tabpanel_bHGHmlrG6S-14_entire" data-tab="entire" tabindex="-1">teljes kód</a>
+</li>
+</ul>
+<section id="tabpanel_bHGHmlrG6S-14_focus" role="tabpanel" data-tab="focus">
+
+<pre><code class="lang-csharp">         List&lt;string&gt; kutyaCSV = new List&lt;string&gt;()
+         {
+            &quot;dog1,Labrador,true,3,45.5&quot;,
+            &quot;dog2,Poodle,false,5,10.2&quot;,
+            &quot;dog3,Bulldog,true,2,30.0&quot;,
+            &quot;dog4,Golden Retriever,false,1,20.7&quot;,
+            &quot;dog5,Siberian Husky,true,4,55.0&quot;
+        };
+</code></pre>
+</section>
+<section id="tabpanel_bHGHmlrG6S-14_entire" role="tabpanel" data-tab="entire" aria-hidden="true" hidden="hidden">
+
+<pre><code class="lang-csharp">namespace OsztalyokDemo
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+        List&lt;string&gt; kutyaCSV = new List&lt;string&gt;()
+         {
+            &quot;dog1,Labrador,true,3,45.5&quot;,
+            &quot;dog2,Poodle,false,5,10.2&quot;,
+            &quot;dog3,Bulldog,true,2,30.0&quot;,
+            &quot;dog4,Golden Retriever,false,1,20.7&quot;,
+            &quot;dog5,Siberian Husky,true,4,55.0&quot;
+        };
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            Kutya kutya = new Kutya(&quot;Morzsa&quot;,&quot;puli&quot;,true,3,25.5f);
+        }
+    }
+    class Kutya
+    {
+        public string nev;
+        public string fajta;
+        public bool hím_e; 
+        public int kor;
+        public float súly;
+        public Kutya(string név,string fajta,bool hím_e,int kor, float súly)
+        {
+            
+            this.nev = név; 
+            this.fajta = fajta;
+            this.hím_e = hím_e;
+            this.kor = kor;
+            this.súly = súly;
+            
+        }
+        public void Ugat()
+        {
+            MessageBox.Show(nev + &quot; ugat.&quot;);
+        }
+    }
+}
+</code></pre>
+</section>
+</div>
+
+<p>(!Hint) Mi az a CSV? [!Comma Separated Values, egy olyan fájl, ahol az értékek valamilyen vesszővel (pontos/sima) vannak elválasztva és minden elem új sorban van.]</p>
+<p>(!EndStep)</p>
+<p>(!Step)[Egy foreach ciklussal menjünk végig a CSV listán és töltsük fel Kutya példányokkal a kutyák listát.]</p>
+<div class="tabGroup" id="tabgroup_bHGHmlrG6S-15">
+<ul role="tablist">
+<li role="presentation">
+<a href="#tabpanel_bHGHmlrG6S-15_focus" role="tab" aria-controls="tabpanel_bHGHmlrG6S-15_focus" data-tab="focus" tabindex="0" aria-selected="true">lényeg</a>
+</li>
+<li role="presentation">
+<a href="#tabpanel_bHGHmlrG6S-15_entire" role="tab" aria-controls="tabpanel_bHGHmlrG6S-15_entire" data-tab="entire" tabindex="-1">teljes kód</a>
+</li>
+</ul>
+<section id="tabpanel_bHGHmlrG6S-15_focus" role="tabpanel" data-tab="focus">
+
+<pre><code class="lang-csharp">        List&lt;Kutya&gt; kutyák = new List&lt;Kutya&gt;(); //a kutyaCSV-vel együtt most ez a lista nem a Form1_Load-ban van benne, de mivel egy osztályban van a Form1_Load ezzel és eggyel feljebb, ezért a Form1_Load-ban látszani fog.
+        //ha lenne egy másik metódusa a Form1-nek, akkor a Form1_Load-ban definiált változó nem látszana a másik metódusban. A Form1_Load látja azt, ami fölötte van, (kutyaCSV, kutyák), de azt ami mellette azt nem.
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            foreach (string sor in kutyaCSV)
+            {
+                string nev = sor.Split(',')[0]; //stringen meghívva a split metódus az feldarabolja a szövegláncot a beadott karakter szerint és egy tömböt ad vissza, itt ennek a tömbnek az első elemére van szükségünk
+                string fajta = sor.Split(',')[1];
+                bool him_e = bool.Parse(sor.Split(',')[2]); //mivel a him_e változó bool és a split tömb harmadik eleme string, ezért át kell konvertálni a szöveget igaz/hamissá
+                int kor= int.Parse(sor.Split(',')[3]);
+                float súly = float.Parse(sor.Split(',')[4]);
+                kutyák.Add(new Kutya(nev, fajta, him_e, kor, súly)); //egy sorban hozzáadunk egy új Kutya példányt a kutyák listához
+            }
+        }
+</code></pre>
+</section>
+<section id="tabpanel_bHGHmlrG6S-15_entire" role="tabpanel" data-tab="entire" aria-hidden="true" hidden="hidden">
+
+<pre><code class="lang-csharp">namespace OsztalyokDemo
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+        List&lt;string&gt; kutyaCSV = new List&lt;string&gt;()
+        {
+            &quot;Árnyék,Labrador,true,3,45.5&quot;,
+            &quot;Karcsi,Pudli,false,5,10.2&quot;,
+            &quot;Bodri,Bulldog,true,2,30.0&quot;,
+            &quot;Tappancs,Golden Retriever,false,1,20.7&quot;,
+            &quot;Luna,Szibériai Husky,true,4,55.0&quot;
+        };
+
+        List&lt;Kutya&gt; kutyák = new List&lt;Kutya&gt;(); //a kutyaCSV-vel együtt most ez a lista nem a Form1_Load-ban van benne, de mivel egy osztályban van a Form1_Load ezzel és eggyel feljebb, ezért a Form1_Load-ban látszani fog.
+        //ha lenne egy másik metódusa a Form1-nek, akkor a Form1_Load-ban definiált változó nem látszana a másik metódusban. A Form1_Load látja azt, ami fölötte van, (kutyaCSV, kutyák), de azt ami mellette azt nem.
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            foreach (string sor in kutyaCSV)
+            {
+                string nev = sor.Split(',')[0]; //stringen meghívva a split metódus az feldarabolja a szövegláncot a beadott karakter szerint és egy tömböt ad vissza, itt ennek a tömbnek az első elemére van szükségünk
+                string fajta = sor.Split(',')[1];
+                bool him_e = bool.Parse(sor.Split(',')[2]); //mivel a him_e változó bool és a split tömb harmadik eleme string, ezért át kell konvertálni a szöveget igaz/hamissá
+                int kor= int.Parse(sor.Split(',')[3]);
+                float súly = float.Parse(sor.Split(',')[4]);
+                kutyák.Add(new Kutya(nev, fajta, him_e, kor, súly)); //egy sorban hozzáadunk egy új Kutya példányt a kutyák listához
+            }
+        }
+    }
+    class Kutya
+    {
+        public string nev;
+        public string fajta;
+        public bool hím_e; 
+        public int kor;
+        public float súly;
+        public Kutya(string név,string fajta,bool hím_e,int kor, float súly)
+        {
+            
+            this.nev = név; 
+            this.fajta = fajta;
+            this.hím_e = hím_e;
+            this.kor = kor;
+            this.súly = súly;
+            
+        }
+        public void Ugat()
+        {
+            MessageBox.Show(nev + &quot; ugat.&quot;);
+        }
+    }
+}
+</code></pre>
+</section>
+</div>
+
+<p>(!EndStep)</p>
+<p>(!Step)[Ha többször be kell olvasni ezt a listát, akkor hamar bele lehet únni abba, hogy minden értéket egyesével ki kell műteni minden sorból, még akkor is, ha nem deklaráljuk külön változóba és egyből a konstruktorba adjuk. Milyen jó lenne, ha csak a elég lenne a konstruktornak a sor-t beadni. Erre való a polimorphizmus (többalakúság).]</p>
+<div class="tabGroup" id="tabgroup_bHGHmlrG6S-16">
+<ul role="tablist">
+<li role="presentation">
+<a href="#tabpanel_bHGHmlrG6S-16_focus" role="tab" aria-controls="tabpanel_bHGHmlrG6S-16_focus" data-tab="focus" tabindex="0" aria-selected="true">lényeg</a>
+</li>
+<li role="presentation">
+<a href="#tabpanel_bHGHmlrG6S-16_entire" role="tab" aria-controls="tabpanel_bHGHmlrG6S-16_entire" data-tab="entire" tabindex="-1">teljes kód</a>
+</li>
+</ul>
+<section id="tabpanel_bHGHmlrG6S-16_focus" role="tabpanel" data-tab="focus">
+
+<pre><code class="lang-csharp">        private void Form1_Load(object sender, EventArgs e)
+        {
+            foreach (string sor in kutyaCSV)
+            {
+                kutyák.Add(new Kutya(sor));
+            }
+        }
+</code></pre>
+</section>
+<section id="tabpanel_bHGHmlrG6S-16_entire" role="tabpanel" data-tab="entire" aria-hidden="true" hidden="hidden">
+
+<pre><code class="lang-csharp">namespace OsztalyokDemo
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+        List&lt;string&gt; kutyaCSV = new List&lt;string&gt;()
+        {
+            &quot;Árnyék,Labrador,true,3,45.5&quot;,
+            &quot;Karcsi,Pudli,false,5,10.2&quot;,
+            &quot;Bodri,Bulldog,true,2,30.0&quot;,
+            &quot;Tappancs,Golden Retriever,false,1,20.7&quot;,
+            &quot;Luna,Szibériai Husky,true,4,55.0&quot;
+        };
+
+        List&lt;Kutya&gt; kutyák = new List&lt;Kutya&gt;();
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            foreach (string sor in kutyaCSV)
+            {
+                kutyák.Add(new Kutya(sor));
+            }
+        }
+    }
+    class Kutya
+    {
+        public string nev;
+        public string fajta;
+        public bool hím_e; 
+        public int kor;
+        public float súly;
+        public Kutya(string név,string fajta,bool hím_e,int kor, float súly)
+        {
+            
+            this.nev = név; 
+            this.fajta = fajta;
+            this.hím_e = hím_e;
+            this.kor = kor;
+            this.súly = súly;
+            
+        }
+        public void Ugat()
+        {
+            MessageBox.Show(nev + &quot; ugat.&quot;);
+        }
+    }
+}
+</code></pre>
+</section>
+</div>
+
+<p>(!EndStep)</p>
+<p>(!Step)[A polimorphizmus azt jelenti, hogy egy függvényt többször is deklarálhatunk, amíg más fajta paramétereket kér az argumentumai közé. Nem csak konstruktornál működik, minden függvénynél. Így most megtehetjük azt, hogy a korábbi módon hozunk létre egy kutya példányt, hogy egyesével be tudjuk rakni a konstruktorba a tulajdonságokat, vagy egyszerűen csak egy string-et adunk és megkíméljük magunkat attól, hogy darabolni kelljen.]</p>
+<div class="tabGroup" id="tabgroup_bHGHmlrG6S-17">
+<ul role="tablist">
+<li role="presentation">
+<a href="#tabpanel_bHGHmlrG6S-17_focus" role="tab" aria-controls="tabpanel_bHGHmlrG6S-17_focus" data-tab="focus" tabindex="0" aria-selected="true">lényeg</a>
+</li>
+<li role="presentation">
+<a href="#tabpanel_bHGHmlrG6S-17_entire" role="tab" aria-controls="tabpanel_bHGHmlrG6S-17_entire" data-tab="entire" tabindex="-1">teljes kód</a>
+</li>
+</ul>
+<section id="tabpanel_bHGHmlrG6S-17_focus" role="tabpanel" data-tab="focus">
+
+<pre><code class="lang-csharp">        public Kutya(string csvSor) //ugyanúgy konstruktor, de más fajta paraméter(eke)-t kér
+        {
+            this.nev = csvSor.Split(',')[0]; //paraméterből egyből beletöltjük a név tulajdonságba
+            this.fajta = csvSor.Split(',')[1];
+            this.hím_e = bool.Parse(csvSor.Split(',')[2]);
+            this.kor = int.Parse(csvSor.Split(',')[3]);
+            this.súly = float.Parse(csvSor.Split(',')[4]);
+        }
+</code></pre>
+</section>
+<section id="tabpanel_bHGHmlrG6S-17_entire" role="tabpanel" data-tab="entire" aria-hidden="true" hidden="hidden">
+
+<pre><code class="lang-csharp">namespace OsztalyokDemo
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+        List&lt;string&gt; kutyaCSV = new List&lt;string&gt;()
+        {
+            &quot;Árnyék,Labrador,true,3,45.5&quot;,
+            &quot;Karcsi,Pudli,false,5,10.2&quot;,
+            &quot;Bodri,Bulldog,true,2,30.0&quot;,
+            &quot;Tappancs,Golden Retriever,false,1,20.7&quot;,
+            &quot;Luna,Szibériai Husky,true,4,55.0&quot;
+        };
+
+        List&lt;Kutya&gt; kutyák = new List&lt;Kutya&gt;();
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            foreach (string sor in kutyaCSV)
+            {
+                kutyák.Add(new Kutya(sor));
+            }
+        }
+    }
+    class Kutya
+    {
+        public string nev;
+        public string fajta;
+        public bool hím_e; 
+        public int kor;
+        public float súly;
+        public Kutya(string név,string fajta,bool hím_e,int kor, float súly)
+        {
+            
+            this.nev = név; 
+            this.fajta = fajta;
+            this.hím_e = hím_e;
+            this.kor = kor;
+            this.súly = súly;
+            
+        }
+        public Kutya(string csvSor) //ugyanúgy konstruktor, de más fajta paraméter(eke)-t kér
+        {
+            this.nev = csvSor.Split(',')[0]; //paraméterből egyből beletöltjük a név tulajdonságba
+            this.fajta = csvSor.Split(',')[1];
+            this.hím_e = bool.Parse(csvSor.Split(',')[2]);
+            this.kor = int.Parse(csvSor.Split(',')[3]);
+            this.súly = float.Parse(csvSor.Split(',')[4]);
+        }
+        public void Ugat()
+        {
+            MessageBox.Show(nev + &quot; ugat.&quot;);
+        }
+    }
+}
+</code></pre>
+</section>
+</div>
+
+<p>(!Hint) Melyik programozási paradigmához lehet köze annak, hogy van egy konstruktorunk, ami bekéri a csv sort? [!DRY]</p>
+<p>(!EndStep)</p>
+<p>(!Step)[Ha írunk három /-jelet egy függvény elé, most nézzük meg az első konstruktorral, akkor kapunk egy speciális kommentelési lehetőséget. Amit ide beírunk, az megjelenik súgó szövegként, amikor éppen az argumentumokat írjuk. A gyári függvények is így készülnek. Jobb klikkel meg lehet nézni a deklarálásukat.]</p>
+<div class="tabGroup" id="tabgroup_bHGHmlrG6S-18">
+<ul role="tablist">
+<li role="presentation">
+<a href="#tabpanel_bHGHmlrG6S-18_focus" role="tab" aria-controls="tabpanel_bHGHmlrG6S-18_focus" data-tab="focus" tabindex="0" aria-selected="true">lényeg</a>
+</li>
+<li role="presentation">
+<a href="#tabpanel_bHGHmlrG6S-18_entire" role="tab" aria-controls="tabpanel_bHGHmlrG6S-18_entire" data-tab="entire" tabindex="-1">teljes kód</a>
+</li>
+</ul>
+<section id="tabpanel_bHGHmlrG6S-18_focus" role="tabpanel" data-tab="focus">
+
+<pre><code class="lang-csharp">        /// &lt;summary&gt;
+        /// Ez a Kutya osztály egyik konstruktora
+        /// &lt;/summary&gt;
+        /// &lt;param name=&quot;név&quot;&gt;&lt;/param&gt;
+        /// &lt;param name=&quot;fajta&quot;&gt;kutya fajtája kisbetűvel&lt;/param&gt;
+        /// &lt;param name=&quot;hím_e&quot;&gt;&lt;/param&gt;
+        /// &lt;param name=&quot;kor&quot;&gt;&lt;/param&gt;
+        /// &lt;param name=&quot;súly&quot;&gt;kutya súlya kg-ban&lt;/param&gt;
+        public Kutya(string név,string fajta,bool hím_e,int kor, float súly)
+        {
+            this.nev = név; 
+            this.fajta = fajta;
+            this.hím_e = hím_e;
+            this.kor = kor;
+            this.súly = súly;
+            
+        }
+</code></pre>
+</section>
+<section id="tabpanel_bHGHmlrG6S-18_entire" role="tabpanel" data-tab="entire" aria-hidden="true" hidden="hidden">
+
+<pre><code class="lang-csharp">namespace OsztalyokDemo
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+        List&lt;string&gt; kutyaCSV = new List&lt;string&gt;()
+        {
+            &quot;Árnyék,Labrador,true,3,45.5&quot;,
+            &quot;Karcsi,Pudli,false,5,10.2&quot;,
+            &quot;Bodri,Bulldog,true,2,30.0&quot;,
+            &quot;Tappancs,Golden Retriever,false,1,20.7&quot;,
+            &quot;Luna,Szibériai Husky,true,4,55.0&quot;
+        };
+
+        List&lt;Kutya&gt; kutyák = new List&lt;Kutya&gt;();
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            foreach (string sor in kutyaCSV)
+            {
+                kutyák.Add(new Kutya(sor));
+            }
+        }
+    }
+    class Kutya
+    {
+        public string nev;
+        public string fajta;
+        public bool hím_e; 
+        public int kor;
+        public float súly;
+        /// &lt;summary&gt;
+        /// Ez a Kutya osztály egyik konstruktora
+        /// &lt;/summary&gt;
+        /// &lt;param name=&quot;név&quot;&gt;&lt;/param&gt;
+        /// &lt;param name=&quot;fajta&quot;&gt;kutya fajtája kisbetűvel&lt;/param&gt;
+        /// &lt;param name=&quot;hím_e&quot;&gt;&lt;/param&gt;
+        /// &lt;param name=&quot;kor&quot;&gt;&lt;/param&gt;
+        /// &lt;param name=&quot;súly&quot;&gt;kutya súlya kg-ban&lt;/param&gt;
+        public Kutya(string név,string fajta,bool hím_e,int kor, float súly)
+        {
+            this.nev = név; 
+            this.fajta = fajta;
+            this.hím_e = hím_e;
+            this.kor = kor;
+            this.súly = súly;
+            
+        }
+        public Kutya(string csvSor)
+        {
+            this.nev = csvSor.Split(',')[0];
+            this.fajta = csvSor.Split(',')[1];
+            this.hím_e = bool.Parse(csvSor.Split(',')[2]);
+            this.kor = int.Parse(csvSor.Split(',')[3]);
+            this.súly = float.Parse(csvSor.Split(',')[4]);
+        }
+        public void Ugat()
+        {
+            MessageBox.Show(nev + &quot; ugat.&quot;);
+        }
+    }
+}
+</code></pre>
+</section>
+</div>
+
+<div class="NOTE">
+<h5>Note</h5>
+<p>Összefoglalva: A konstruktor egy olyan függvény, ami akkor hívódik, meg, ha egy új példányt szeretnénk létrehozni egy osztályból. Többet is létrehozhatunk, amíg más a lenyomatuk, azaz más paramétereket kérnek. Visszaadja a példányt, amit létrehozott.</p>
+</div>
+<p>(!EndStep)</p>
+<p>(!EndStepper)</p>
+<h2 id="tulajdonságok">Tulajdonságok</h2>
+<p>Eddig amit tulajdonságnak hívtunk, az igazából csak egy adattag. A kettő között az a különbség, hogy amit eddig használtunk, az egy publikus mező volt, mindenhol lehetett látni kívül. Amikor alapértelmezett privát volt, kívülről nem lehetett elérni. A tulajdonság ezzel szemben egy ügynök, ami ezt a privát mezőt elérhetővé teszi a külső kód számára. Felmerülhet a kérdés, hogy mire jó ez az extra réteg bonyolultság. Biztonságosabbá teszi az osztályt, nagyobb kontrolt biztosít az adatok felett és lehetőséget ad dinamikusan számított tulajdonságok használatára is.</p>
+<p>(!Stepper)</p>
+<p>(!Step)[Elsőre bonyolultnak tűnhet, de nem az. A get és a set két speciális függvény, ami akkor fut le, ha lekérjük az adott tulajdonságot vagy értéket szeretnénk adni neki.]</p>
+<div class="tabGroup" id="tabgroup_bHGHmlrG6S-19">
+<ul role="tablist">
+<li role="presentation">
+<a href="#tabpanel_bHGHmlrG6S-19_focus" role="tab" aria-controls="tabpanel_bHGHmlrG6S-19_focus" data-tab="focus" tabindex="0" aria-selected="true">lényeg</a>
+</li>
+<li role="presentation">
+<a href="#tabpanel_bHGHmlrG6S-19_entire" role="tab" aria-controls="tabpanel_bHGHmlrG6S-19_entire" data-tab="entire" tabindex="-1">teljes kód</a>
+</li>
+</ul>
+<section id="tabpanel_bHGHmlrG6S-19_focus" role="tabpanel" data-tab="focus">
+
+<pre><code class="lang-csharp">        private string nev; //privát változó az osztályban
+        public string Nev //publikus tulajdonság kifelé
+        {
+            get { return this.nev; }
+            set { this.nev = value; }
+        }
+</code></pre>
+</section>
+<section id="tabpanel_bHGHmlrG6S-19_entire" role="tabpanel" data-tab="entire" aria-hidden="true" hidden="hidden">
+
+<pre><code class="lang-csharp">namespace OsztalyokDemo
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        List&lt;Kutya&gt; kutyák = new List&lt;Kutya&gt;();
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            
+        }
+    }
+    class Kutya
+    {
+        private string nev; //privát változó az osztályban
+        public string Nev //publikus tulajdonság kifelé
+        {
+            get { return this.nev; }
+            set { this.nev = value; }
+        }
+
+        public string fajta;
+        public bool hím_e; 
+        public int kor;
+        public float súly;
+        public Kutya(string név,string fajta,bool hím_e,int kor, float súly)
+        {
+            this.Nev = név; 
+            this.fajta = fajta;
+            this.hím_e = hím_e;
+            this.kor = kor;
+            this.súly = súly;
+            
+        }
+        public void Ugat()
+        {
+            MessageBox.Show(nev + &quot; ugat.&quot;);
+        }
+    }
+}
+</code></pre>
+</section>
+</div>
+
+<div class="TIP">
+<h5>Tip</h5>
+<p><code>propfull tab tab</code> shortcuttal is létre lehet hozni</p>
+</div>
+<p>(!EndStep)</p>
+<p>(!Step)[A privát mező el is hagyható.]</p>
+<div class="tabGroup" id="tabgroup_bHGHmlrG6S-20">
+<ul role="tablist">
+<li role="presentation">
+<a href="#tabpanel_bHGHmlrG6S-20_focus" role="tab" aria-controls="tabpanel_bHGHmlrG6S-20_focus" data-tab="focus" tabindex="0" aria-selected="true">lényeg</a>
+</li>
+<li role="presentation">
+<a href="#tabpanel_bHGHmlrG6S-20_entire" role="tab" aria-controls="tabpanel_bHGHmlrG6S-20_entire" data-tab="entire" tabindex="-1">teljes kód</a>
+</li>
+</ul>
+<section id="tabpanel_bHGHmlrG6S-20_focus" role="tabpanel" data-tab="focus">
+
+<pre><code class="lang-csharp">        public string Nev
+        {
+            get { return this.Nev; }
+            set { this.Nev = value; }
+        }
+</code></pre>
+</section>
+<section id="tabpanel_bHGHmlrG6S-20_entire" role="tabpanel" data-tab="entire" aria-hidden="true" hidden="hidden">
+
+<pre><code class="lang-csharp">namespace OsztalyokDemo
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        List&lt;Kutya&gt; kutyák = new List&lt;Kutya&gt;();
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            
+        }
+    }
+    class Kutya
+    {
+        public string Nev
+        {
+            get { return this.Nev; }
+            set { this.Nev = value; }
+        }
+
+        public string fajta;
+        public bool hím_e; 
+        public int kor;
+        public float súly;
+        public Kutya(string név,string fajta,bool hím_e,int kor, float súly)
+        {
+            this.Nev = név; 
+            this.fajta = fajta;
+            this.hím_e = hím_e;
+            this.kor = kor;
+            this.súly = súly;
+            
+        }
+        public void Ugat()
+        {
+            MessageBox.Show(nev + &quot; ugat.&quot;);
+        }
+    }
+}
+</code></pre>
+</section>
+</div>
+
+<p>(!EndStep)</p>
+<p>(!Step)[Sőt, a gettert és settert is le lehet rövidíteni.]</p>
+<div class="tabGroup" id="tabgroup_bHGHmlrG6S-21">
+<ul role="tablist">
+<li role="presentation">
+<a href="#tabpanel_bHGHmlrG6S-21_focus" role="tab" aria-controls="tabpanel_bHGHmlrG6S-21_focus" data-tab="focus" tabindex="0" aria-selected="true">lényeg</a>
+</li>
+<li role="presentation">
+<a href="#tabpanel_bHGHmlrG6S-21_entire" role="tab" aria-controls="tabpanel_bHGHmlrG6S-21_entire" data-tab="entire" tabindex="-1">teljes kód</a>
+</li>
+</ul>
+<section id="tabpanel_bHGHmlrG6S-21_focus" role="tabpanel" data-tab="focus">
+
+<pre><code class="lang-csharp">        public string Nev
+        {
+            get;
+            set;
+        }
+</code></pre>
+</section>
+<section id="tabpanel_bHGHmlrG6S-21_entire" role="tabpanel" data-tab="entire" aria-hidden="true" hidden="hidden">
+
+<pre><code class="lang-csharp">namespace OsztalyokDemo
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        List&lt;Kutya&gt; kutyák = new List&lt;Kutya&gt;();
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            
+        }
+    }
+    class Kutya
+    {
+        public string Nev
+        {
+            get;
+            set;
+        }
+
+        public string fajta;
+        public bool hím_e; 
+        public int kor;
+        public float súly;
+        public Kutya(string név,string fajta,bool hím_e,int kor, float súly)
+        {
+            this.Nev = név; 
+            this.fajta = fajta;
+            this.hím_e = hím_e;
+            this.kor = kor;
+            this.súly = súly;
+            
+        }
+        public void Ugat()
+        {
+            MessageBox.Show(nev + &quot; ugat.&quot;);
+        }
+    }
+}
+</code></pre>
+</section>
+</div>
+
+<p>(!EndStep)</p>
+<p>(!Step)[Írjuk is át a többi adattagot, hogy tulajdonságok legyenek.]</p>
+<div class="tabGroup" id="tabgroup_bHGHmlrG6S-22">
+<ul role="tablist">
+<li role="presentation">
+<a href="#tabpanel_bHGHmlrG6S-22_focus" role="tab" aria-controls="tabpanel_bHGHmlrG6S-22_focus" data-tab="focus" tabindex="0" aria-selected="true">lényeg</a>
+</li>
+<li role="presentation">
+<a href="#tabpanel_bHGHmlrG6S-22_entire" role="tab" aria-controls="tabpanel_bHGHmlrG6S-22_entire" data-tab="entire" tabindex="-1">teljes kód</a>
+</li>
+</ul>
+<section id="tabpanel_bHGHmlrG6S-22_focus" role="tabpanel" data-tab="focus">
+
+<pre><code class="lang-csharp">    class Kutya
+    {
+        public string Nev{get;set;} //csak át lett rendezve
+        public string Fajta { get; set; }
+        public bool Hím_e { get; set; }
+        public int Kor { get; set; }
+        public float Súly { get; set; }
+        public Kutya(string név,string fajta,bool hím_e,int kor, float súly)
+        {
+            this.Nev = név; 
+            this.Fajta = fajta;
+            this.Hím_e = hím_e;
+            this.Kor = kor;
+            this.Súly = súly;
+            
+        }
+        public void Ugat()
+        {
+            MessageBox.Show(Nev + &quot; ugat.&quot;);
+        }
+    }
+</code></pre>
+</section>
+<section id="tabpanel_bHGHmlrG6S-22_entire" role="tabpanel" data-tab="entire" aria-hidden="true" hidden="hidden">
+
+<pre><code class="lang-csharp">namespace OsztalyokDemo
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        List&lt;Kutya&gt; kutyák = new List&lt;Kutya&gt;();
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            
+        }
+    }
+    class Kutya
+    {
+        public string Nev{get;set;} //csak át lett rendezve
+        public string Fajta { get; set; }
+        public bool Hím_e { get; set; }
+        public int Kor { get; set; }
+        public float Súly { get; set; }
+        public Kutya(string név,string fajta,bool hím_e,int kor, float súly)
+        {
+            this.Nev = név; 
+            this.Fajta = fajta;
+            this.Hím_e = hím_e;
+            this.Kor = kor;
+            this.Súly = súly;
+            
+        }
+        public void Ugat()
+        {
+            MessageBox.Show(Nev + &quot; ugat.&quot;);
+        }
+    }
+}
+</code></pre>
+</section>
+</div>
+
+<p>(!Hint) Miért neveztük át kis betűsről nagy betűsre a tulajdonságokat? [!Mert a C#-ban konvenció és olvashatóbb lesz tőle a kód. A program futása szempontjából nincs jelentősége.]</p>
+<div class="TIP">
+<h5>Tip</h5>
+<p><code>prop tab tab</code> shortcuttal gyorsabb</p>
+</div>
+<p>(!EndStep)</p>
+<p>(!Step)[Eddig nem tudott többet semmivel ez az új megoldás. Ha a csv-fájlt egy napnál tovább használjuk fennál az esélye, hogy változik. Hogyan? Valamelyik kutya betölti a születésnapját. Ezt úgy tudjuk megoldani, hogy kor helyett születésnapot veszünk fel és a kor-t dinamikusan számoljuk.]</p>
+<div class="tabGroup" id="tabgroup_bHGHmlrG6S-23">
+<ul role="tablist">
+<li role="presentation">
+<a href="#tabpanel_bHGHmlrG6S-23_focus" role="tab" aria-controls="tabpanel_bHGHmlrG6S-23_focus" data-tab="focus" tabindex="0" aria-selected="true">lényeg</a>
+</li>
+<li role="presentation">
+<a href="#tabpanel_bHGHmlrG6S-23_entire" role="tab" aria-controls="tabpanel_bHGHmlrG6S-23_entire" data-tab="entire" tabindex="-1">teljes kód</a>
+</li>
+</ul>
+<section id="tabpanel_bHGHmlrG6S-23_focus" role="tabpanel" data-tab="focus">
+
+<pre><code class="lang-csharp">    class Kutya
+    {
+        public string Nev { get; set; }
+        public string Fajta { get; set; }
+        public bool Hím_e { get; set; }
+        public DateTime Születésnap { get; set; } //a DateTime egy elképesztően hasznos beépített osztály C#-ban, amivel lehet dátumokat kezelni
+        public int Kor
+        {
+            get
+            {
+                DateTime maiDatum = DateTime.Now; //mai dátumot megkapjuk a DateTime osztály Now tulajdonságából
+                int kor = maiDatum.Year - this.Születésnap.Year; //megnézzük hány év telt el
+                if (maiDatum.Month &lt; Születésnap.Month || (maiDatum.Month == Születésnap.Month &amp;&amp; maiDatum.Day &lt; Születésnap.Day))
+                {
+                    kor--; //Ha ebben az évben még nem töltötte be a születésnapját vonjunk le egy évet
+                }
+                return kor;
+            }
+        }
+        public float Súly { get; set; }
+        public Kutya(string név, string fajta, bool hím_e, DateTime születésNap, float súly) //kort kicserérljük születésnapra
+        {
+            this.Nev = név;
+            this.Fajta = fajta;
+            this.Hím_e = hím_e;
+            this.Születésnap = születésNap; //új
+            this.Súly = súly;
+
+        }
+        public void Ugat()
+        {
+            MessageBox.Show(Nev + &quot; ugat.&quot;);
+        }
+    }
+</code></pre>
+</section>
+<section id="tabpanel_bHGHmlrG6S-23_entire" role="tabpanel" data-tab="entire" aria-hidden="true" hidden="hidden">
+
+<pre><code class="lang-csharp">namespace OsztalyokDemo
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        List&lt;Kutya&gt; kutyák = new List&lt;Kutya&gt;();
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+    }
+    class Kutya
+    {
+        public string Nev { get; set; }
+        public string Fajta { get; set; }
+        public bool Hím_e { get; set; }
+        public DateTime Születésnap { get; set; } //a DateTime egy elképesztően hasznos beépített osztály C#-ban, amivel lehet dátumokat kezelni
+        public int Kor
+        {
+            get
+            {
+                DateTime maiDatum = DateTime.Now; //mai dátumot megkapjuk a DateTime osztály Now tulajdonságából
+                int kor = maiDatum.Year - this.Születésnap.Year; //megnézzük hány év telt el
+                if (maiDatum.Month &lt; Születésnap.Month || (maiDatum.Month == Születésnap.Month &amp;&amp; maiDatum.Day &lt; Születésnap.Day))
+                {
+                    kor--; //Ha ebben az évben még nem töltötte be a születésnapját vonjunk le egy évet
+                }
+                return kor;
+            }
+        }
+        public float Súly { get; set; }
+        public Kutya(string név, string fajta, bool hím_e, DateTime születésNap, float súly) //kort kicserérljük születésnapra
+        {
+            this.Nev = név;
+            this.Fajta = fajta;
+            this.Hím_e = hím_e;
+            this.Születésnap = születésNap; //új
+            this.Súly = súly;
+
+        }
+        public void Ugat()
+        {
+            MessageBox.Show(Nev + &quot; ugat.&quot;);
+        }
+    }
+}
+</code></pre>
+</section>
+</div>
+
+<p>(!EndStep)</p>
+<p>(!Step)[Próbáljuk ki!]</p>
+<div class="tabGroup" id="tabgroup_bHGHmlrG6S-24">
+<ul role="tablist">
+<li role="presentation">
+<a href="#tabpanel_bHGHmlrG6S-24_focus" role="tab" aria-controls="tabpanel_bHGHmlrG6S-24_focus" data-tab="focus" tabindex="0" aria-selected="true">lényeg</a>
+</li>
+<li role="presentation">
+<a href="#tabpanel_bHGHmlrG6S-24_entire" role="tab" aria-controls="tabpanel_bHGHmlrG6S-24_entire" data-tab="entire" tabindex="-1">teljes kód</a>
+</li>
+</ul>
+<section id="tabpanel_bHGHmlrG6S-24_focus" role="tabpanel" data-tab="focus">
+
+<pre><code class="lang-csharp">        private void Form1_Load(object sender, EventArgs e)
+        {
+            Kutya aida = new Kutya(&quot;Aida&quot;, &quot;németjuhász&quot;, false,new DateTime(2013,11,15),37f);
+            //A DateTime-nak sok konstruktora van, köztük egy olyan is, ami pont egy év,hónap,nap-ot kér
+            MessageBox.Show($&quot;Aida {aida.Kor} éves.&quot;);
+        }
+</code></pre>
+</section>
+<section id="tabpanel_bHGHmlrG6S-24_entire" role="tabpanel" data-tab="entire" aria-hidden="true" hidden="hidden">
+
+<pre><code class="lang-csharp">namespace OsztalyokDemo
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        List&lt;Kutya&gt; kutyák = new List&lt;Kutya&gt;();
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            Kutya aida = new Kutya(&quot;Aida&quot;, &quot;németjuhász&quot;, false,new DateTime(2013,11,15),37f);
+            //A DateTime-nak sok konstruktora van, köztük egy olyan is, ami pont egy év,hónap,nap-ot kér
+            MessageBox.Show($&quot;Aida {aida.Kor} éves.&quot;);
+        }
+    }
+    class Kutya
+    {
+        public string Nev { get; set; }
+        public string Fajta { get; set; }
+        public bool Hím_e { get; set; }
+        public DateTime Születésnap { get; set; }
+        public int Kor
+        {
+            get
+            {
+                DateTime maiDatum = DateTime.Now;
+                int kor = maiDatum.Year - this.Születésnap.Year;
+                if (maiDatum.Month &lt; Születésnap.Month || (maiDatum.Month == Születésnap.Month &amp;&amp; maiDatum.Day &lt; Születésnap.Day))
+                {
+                    kor--;
+                }
+                return kor;
+            }
+        }
+        public float Súly { get; set; }
+        public Kutya(string név, string fajta, bool hím_e, DateTime születésNap, float súly)
+        {
+            this.Nev = név;
+            this.Fajta = fajta;
+            this.Hím_e = hím_e;
+            this.Születésnap = születésNap;
+            this.Súly = súly;
+
+        }
+        public void Ugat()
+        {
+            MessageBox.Show(Nev + &quot; ugat.&quot;);
+        }
+    }
+}
+</code></pre>
+</section>
+</div>
+
+<div class="TIP">
+<h5>Tip</h5>
+<p>Érdemes lehet megnézni a élesben osztályokat. Például ha jobb klikkel rákattintunk a <code>DateTime</code>-ra és kiválasztjuk, hogy go to definition, akkor megnézhetjük, hogy hogyan alkalmazzák a fent említetteket.</p>
+</div>
+<p>(!EndStep)</p>
+<p>(!EndStepper)</p>
+<h2 id="öröklés">Öröklés</h2>
+<p>Az öröklés egy olyan objektumorientált programozási fogalom, amely lehetővé teszi, hogy egy osztály örökölje az egy másik osztályban definiált adattagokat és metódusokat. Az öröklődés révén a leszármazott osztály (a gyermek osztály) a szülő osztályban (az ősosztály) definiált tulajdonságokat és viselkedést örökli, majd azt tovább bővítheti vagy módosíthatja. Ezáltal az öröklés elősegíti a kód újrafelhasználását és a hierarchikus osztálystruktúrák létrehozását a programozás során. Az öröklődési hierarchia fába szervezhető, ahol az ősosztály a gyökér, és az összes leszármazott osztály a fa másik pontján található.</p>
+<p>(!Stepper)</p>
+<p>(!Step)[Hozzunk létre egy Macska osztályt is.]</p>
+<div class="tabGroup" id="tabgroup_bHGHmlrG6S-25">
+<ul role="tablist">
+<li role="presentation">
+<a href="#tabpanel_bHGHmlrG6S-25_focus" role="tab" aria-controls="tabpanel_bHGHmlrG6S-25_focus" data-tab="focus" tabindex="0" aria-selected="true">lényeg</a>
+</li>
+<li role="presentation">
+<a href="#tabpanel_bHGHmlrG6S-25_entire" role="tab" aria-controls="tabpanel_bHGHmlrG6S-25_entire" data-tab="entire" tabindex="-1">teljes kód</a>
+</li>
+</ul>
+<section id="tabpanel_bHGHmlrG6S-25_focus" role="tabpanel" data-tab="focus">
+
+<pre><code class="lang-csharp">class Macska
+    {
+        public string Nev { get; set; }
+        public string Fajta { get; set; }
+        public bool Hím_e { get; set; }
+        public DateTime Születésnap { get; set; }
+        public int Kor
+        {
+            get
+            {
+                DateTime maiDatum = DateTime.Now;
+                int kor = maiDatum.Year - this.Születésnap.Year;
+                if (maiDatum.Month &lt; Születésnap.Month || (maiDatum.Month == Születésnap.Month &amp;&amp; maiDatum.Day &lt; Születésnap.Day))
+                {
+                    kor--;
+                }
+                return kor;
+            }
+        }
+        public float Súly { get; set; }
+        public Macska(string név, string fajta, bool hím_e, DateTime születésNap, float súly)
+        {
+            this.Nev = név;
+            this.Fajta = fajta;
+            this.Hím_e = hím_e;
+            this.Születésnap = születésNap;
+            this.Súly = súly;
+        }
+        public void Nyávog()
+        {
+            MessageBox.Show(Nev + &quot; nyávog.&quot;);
+        }
+
+    }
+</code></pre>
+</section>
+<section id="tabpanel_bHGHmlrG6S-25_entire" role="tabpanel" data-tab="entire" aria-hidden="true" hidden="hidden">
+
+<pre><code class="lang-csharp">namespace OsztalyokDemo
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        List&lt;Kutya&gt; kutyák = new List&lt;Kutya&gt;();
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            Kutya aida = new Kutya(&quot;Aida&quot;, &quot;németjuhász&quot;, false,new DateTime(2013,11,15),37f);
+            //A DateTime-nak sok konstruktora van, köztük egy olyan is, ami pont egy év,hónap,nap-ot kér
+            MessageBox.Show($&quot;Aida {aida.Kor} éves.&quot;);
+        }
+    }
+    class Macska
+    {
+        public string Nev { get; set; }
+        public string Fajta { get; set; }
+        public bool Hím_e { get; set; }
+        public DateTime Születésnap { get; set; }
+        public int Kor
+        {
+            get
+            {
+                DateTime maiDatum = DateTime.Now;
+                int kor = maiDatum.Year - this.Születésnap.Year;
+                if (maiDatum.Month &lt; Születésnap.Month || (maiDatum.Month == Születésnap.Month &amp;&amp; maiDatum.Day &lt; Születésnap.Day))
+                {
+                    kor--;
+                }
+                return kor;
+            }
+        }
+        public float Súly { get; set; }
+        public Macska(string név, string fajta, bool hím_e, DateTime születésNap, float súly)
+        {
+            this.Nev = név;
+            this.Fajta = fajta;
+            this.Hím_e = hím_e;
+            this.Születésnap = születésNap;
+            this.Súly = súly;
+        }
+        public void Nyávog()
+        {
+            MessageBox.Show(Nev + &quot; nyávog.&quot;);
+        }
+
+    }
+    class Kutya
+    {
+        public string Nev { get; set; }
+        public string Fajta { get; set; }
+        public bool Hím_e { get; set; }
+        public DateTime Születésnap { get; set; }
+        public int Kor
+        {
+            get
+            {
+                DateTime maiDatum = DateTime.Now;
+                int kor = maiDatum.Year - this.Születésnap.Year;
+                if (maiDatum.Month &lt; Születésnap.Month || (maiDatum.Month == Születésnap.Month &amp;&amp; maiDatum.Day &lt; Születésnap.Day))
+                {
+                    kor--;
+                }
+                return kor;
+            }
+        }
+        public float Súly { get; set; }
+        public Kutya(string név, string fajta, bool hím_e, DateTime születésNap, float súly)
+        {
+            this.Nev = név;
+            this.Fajta = fajta;
+            this.Hím_e = hím_e;
+            this.Születésnap = születésNap;
+            this.Súly = súly;
+
+        }
+        public void Ugat()
+        {
+            MessageBox.Show(Nev + &quot; ugat.&quot;);
+        }
+    }
+}
+</code></pre>
+</section>
+</div>
+
+<p>(!Hint) Mi a különbség a két osztály között? [!Csak annyi, hogy a Kutya ugat, a Macska nyávog.]</p>
+<p>(!EndStep)</p>
+<p>(!Step)[Hogy ne ismételjük magunkat hozzunkk létre egy Állat osztályt és származtassuk a Kutya és Macska osztályt belőle.]</p>
+<div class="tabGroup" id="tabgroup_bHGHmlrG6S-26">
+<ul role="tablist">
+<li role="presentation">
+<a href="#tabpanel_bHGHmlrG6S-26_focus" role="tab" aria-controls="tabpanel_bHGHmlrG6S-26_focus" data-tab="focus" tabindex="0" aria-selected="true">lényeg</a>
+</li>
+<li role="presentation">
+<a href="#tabpanel_bHGHmlrG6S-26_entire" role="tab" aria-controls="tabpanel_bHGHmlrG6S-26_entire" data-tab="entire" tabindex="-1">teljes kód</a>
+</li>
+</ul>
+<section id="tabpanel_bHGHmlrG6S-26_focus" role="tabpanel" data-tab="focus">
+
+<pre><code class="lang-csharp">    class Allat
+    {
+        public string Nev { get; set; }
+        public string Fajta { get; set; }
+        public bool Hím_e { get; set; }
+        public DateTime Születésnap { get; set; }
+        public int Kor
+        {
+            get
+            {
+                DateTime maiDatum = DateTime.Now;
+                int kor = maiDatum.Year - this.Születésnap.Year;
+                if (maiDatum.Month &lt; Születésnap.Month || (maiDatum.Month == Születésnap.Month &amp;&amp; maiDatum.Day &lt; Születésnap.Day))
+                {
+                    kor--;
+                }
+                return kor;
+            }
+        }
+        public float Súly { get; set; }
+    }
+    class Macska : Allat
+    {
+        public Macska(string név, string fajta, bool hím_e, DateTime születésNap, float súly)
+        {
+            this.Nev = név;
+            this.Fajta = fajta;
+            this.Hím_e = hím_e;
+            this.Születésnap = születésNap;
+            this.Súly = súly;
+        }
+        public void Nyávog()
+        {
+            MessageBox.Show(Nev + &quot; nyávog.&quot;);
+        }
+    }
+    class Kutya : Allat
+    {
+        public Kutya(string név, string fajta, bool hím_e, DateTime születésNap, float súly)
+        {
+            this.Nev = név;
+            this.Fajta = fajta;
+            this.Hím_e = hím_e;
+            this.Születésnap = születésNap;
+            this.Súly = súly;
+
+        }
+        public void Ugat()
+        {
+            MessageBox.Show(Nev + &quot; ugat.&quot;);
+        }
+    }
+</code></pre>
+</section>
+<section id="tabpanel_bHGHmlrG6S-26_entire" role="tabpanel" data-tab="entire" aria-hidden="true" hidden="hidden">
+
+<pre><code class="lang-csharp">namespace OsztalyokDemo
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        List&lt;Kutya&gt; kutyák = new List&lt;Kutya&gt;();
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+    }
+    class Allat
+    {
+        public string Nev { get; set; }
+        public string Fajta { get; set; }
+        public bool Hím_e { get; set; }
+        public DateTime Születésnap { get; set; }
+        public int Kor
+        {
+            get
+            {
+                DateTime maiDatum = DateTime.Now;
+                int kor = maiDatum.Year - this.Születésnap.Year;
+                if (maiDatum.Month &lt; Születésnap.Month || (maiDatum.Month == Születésnap.Month &amp;&amp; maiDatum.Day &lt; Születésnap.Day))
+                {
+                    kor--;
+                }
+                return kor;
+            }
+        }
+        public float Súly { get; set; }
+    }
+    class Macska : Allat
+    {
+        public Macska(string név, string fajta, bool hím_e, DateTime születésNap, float súly)
+        {
+            this.Nev = név;
+            this.Fajta = fajta;
+            this.Hím_e = hím_e;
+            this.Születésnap = születésNap;
+            this.Súly = súly;
+        }
+        public void Nyávog()
+        {
+            MessageBox.Show(Nev + &quot; nyávog.&quot;);
+        }
+    }
+    class Kutya : Allat
+    {
+        public Kutya(string név, string fajta, bool hím_e, DateTime születésNap, float súly)
+        {
+            this.Nev = név;
+            this.Fajta = fajta;
+            this.Hím_e = hím_e;
+            this.Születésnap = születésNap;
+            this.Súly = súly;
+
+        }
+        public void Ugat()
+        {
+            MessageBox.Show(Nev + &quot; ugat.&quot;);
+        }
+    }
+}
+</code></pre>
+</section>
+</div>
+
+<div class="NOTE">
+<h5>Note</h5>
+<p>Mindent, ami közös, átvittünk a szülő (Állat) osztályba. Ez azért is jó, mert ha valamin változtatni kell a tulajdonságok között, akkor azt csak egy helyen kell megtenni.</p>
+</div>
+<p>(!EndStep)</p>
+<p>(!Step)[Viszont a konstruktort még mindig ismételjük. Csináljunk az Állat-nak egy konstruktort. Ezután a Kutya és a Macska konstruktorát a base kulcsszó segítségével rá tudjuk kötni az Állat konstruktorára, így amikor az lefut, első dolga lesz meghívni az Állat konstruktort.]</p>
+<div class="tabGroup" id="tabgroup_bHGHmlrG6S-27">
+<ul role="tablist">
+<li role="presentation">
+<a href="#tabpanel_bHGHmlrG6S-27_focus" role="tab" aria-controls="tabpanel_bHGHmlrG6S-27_focus" data-tab="focus" tabindex="0" aria-selected="true">lényeg</a>
+</li>
+<li role="presentation">
+<a href="#tabpanel_bHGHmlrG6S-27_entire" role="tab" aria-controls="tabpanel_bHGHmlrG6S-27_entire" data-tab="entire" tabindex="-1">teljes kód</a>
+</li>
+</ul>
+<section id="tabpanel_bHGHmlrG6S-27_focus" role="tabpanel" data-tab="focus">
+
+<pre><code class="lang-csharp">    class Allat
+    {
+        public string Nev { get; set; }
+        public string Fajta { get; set; }
+        public bool Hím_e { get; set; }
+        public DateTime Születésnap { get; set; }
+        public int Kor
+        {
+            get
+            {
+                DateTime maiDatum = DateTime.Now;
+                int kor = maiDatum.Year - this.Születésnap.Year;
+                if (maiDatum.Month &lt; Születésnap.Month || (maiDatum.Month == Születésnap.Month &amp;&amp; maiDatum.Day &lt; Születésnap.Day))
+                {
+                    kor--;
+                }
+                return kor;
+            }
+        }
+        public float Súly { get; set; }
+        public Allat(string név, string fajta, bool hím_e, DateTime születésNap, float súly)
+        {
+            this.Nev = név;
+            this.Fajta = fajta;
+            this.Hím_e = hím_e;
+            this.Születésnap = születésNap;
+            this.Súly = súly;
+        }
+    }
+    class Macska : Allat
+    {
+        public Macska(string név, string fajta, bool hím_e, DateTime születésNap, float súly) : base(név, fajta, hím_e, születésNap, súly)
+        {
+
+        }
+        public void Nyávog()
+        {
+            MessageBox.Show(Nev + &quot; nyávog.&quot;);
+        }
+    }
+    class Kutya : Allat
+    {
+        public Kutya(string név, string fajta, bool hím_e, DateTime születésNap, float súly) : base(név, fajta, hím_e, születésNap, súly)
+        {
+
+        }
+        public void Ugat()
+        {
+            MessageBox.Show(Nev + &quot; ugat.&quot;);
+        }
+    }
+</code></pre>
+</section>
+<section id="tabpanel_bHGHmlrG6S-27_entire" role="tabpanel" data-tab="entire" aria-hidden="true" hidden="hidden">
+
+<pre><code class="lang-csharp">namespace OsztalyokDemo
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        List&lt;Kutya&gt; kutyák = new List&lt;Kutya&gt;();
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+    }
+    class Allat
+    {
+        public string Nev { get; set; }
+        public string Fajta { get; set; }
+        public bool Hím_e { get; set; }
+        public DateTime Születésnap { get; set; }
+        public int Kor
+        {
+            get
+            {
+                DateTime maiDatum = DateTime.Now;
+                int kor = maiDatum.Year - this.Születésnap.Year;
+                if (maiDatum.Month &lt; Születésnap.Month || (maiDatum.Month == Születésnap.Month &amp;&amp; maiDatum.Day &lt; Születésnap.Day))
+                {
+                    kor--;
+                }
+                return kor;
+            }
+        }
+        public float Súly { get; set; }
+        public Allat(string név, string fajta, bool hím_e, DateTime születésNap, float súly)
+        {
+            this.Nev = név;
+            this.Fajta = fajta;
+            this.Hím_e = hím_e;
+            this.Születésnap = születésNap;
+            this.Súly = súly;
+        }
+    }
+    class Macska : Allat
+    {
+        public Macska(string név, string fajta, bool hím_e, DateTime születésNap, float súly) : base(név, fajta, hím_e, születésNap, súly)
+        {
+
+        }
+        public void Nyávog()
+        {
+            MessageBox.Show(Nev + &quot; nyávog.&quot;);
+        }
+    }
+    class Kutya : Allat
+    {
+        public Kutya(string név, string fajta, bool hím_e, DateTime születésNap, float súly) : base(név, fajta, hím_e, születésNap, súly)
+        {
+
+        }
+        public void Ugat()
+        {
+            MessageBox.Show(Nev + &quot; ugat.&quot;);
+        }
+    }
+}
+</code></pre>
+</section>
+</div>
+
+<p>(!Hint) Mit jelent a <code>base</code>? [!Ugyanolyan, mint a &quot;this&quot;, csak nem az adott osztályra utal, hanem az adott osztály közvetlen ősére, a szülőre.]</p>
+<p>(!EndStep)</p>
+<p>(!Step)[Nézzük meg hogy viselkednek ezek az osztályok a gyakorlatban. Gond nélkül hozzá tudjuk adni őket egy listához, mert mindent örökölnek, ami ahhoz kell, hogy Allat-ok legyenek.]</p>
+<div class="tabGroup" id="tabgroup_bHGHmlrG6S-28">
+<ul role="tablist">
+<li role="presentation">
+<a href="#tabpanel_bHGHmlrG6S-28_focus" role="tab" aria-controls="tabpanel_bHGHmlrG6S-28_focus" data-tab="focus" tabindex="0" aria-selected="true">lényeg</a>
+</li>
+<li role="presentation">
+<a href="#tabpanel_bHGHmlrG6S-28_entire" role="tab" aria-controls="tabpanel_bHGHmlrG6S-28_entire" data-tab="entire" tabindex="-1">teljes kód</a>
+</li>
+</ul>
+<section id="tabpanel_bHGHmlrG6S-28_focus" role="tabpanel" data-tab="focus">
+
+<pre><code class="lang-csharp">        List&lt;Allat&gt; allatok = new List&lt;Allat&gt;();
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            Macska m = new Macska(&quot;Cirmi&quot;, &quot;sziámi&quot;, true, new DateTime(2022, 3, 27), 1.5f);
+            Kutya k = new Kutya(&quot;Aida&quot;, &quot;németjuhász&quot;, false, new DateTime(2013, 11, 15), 37f);
+
+            allatok.Add(m);
+            allatok.Add(k);
+
+            MessageBox.Show(allatok[0].Nev + &quot; &quot; + allatok[1].Nev);
+        }
+</code></pre>
+</section>
+<section id="tabpanel_bHGHmlrG6S-28_entire" role="tabpanel" data-tab="entire" aria-hidden="true" hidden="hidden">
+
+<pre><code class="lang-csharp">namespace OsztalyokDemo
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        List&lt;Allat&gt; allatok = new List&lt;Allat&gt;();
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            Macska m = new Macska(&quot;Cirmi&quot;, &quot;sziámi&quot;, true, new DateTime(2022, 3, 27), 1.5f);
+            Kutya k = new Kutya(&quot;Aida&quot;, &quot;németjuhász&quot;, false, new DateTime(2013, 11, 15), 37f);
+
+            allatok.Add(m);
+            allatok.Add(k);
+
+            MessageBox.Show(allatok[0].Nev + &quot; &quot; + allatok[1].Nev);
+        }
+    }
+    class Allat
+    {
+        public string Nev { get; set; }
+        public string Fajta { get; set; }
+        public bool Hím_e { get; set; }
+        public DateTime Születésnap { get; set; }
+        public int Kor
+        {
+            get
+            {
+                DateTime maiDatum = DateTime.Now;
+                int kor = maiDatum.Year - this.Születésnap.Year;
+                if (maiDatum.Month &lt; Születésnap.Month || (maiDatum.Month == Születésnap.Month &amp;&amp; maiDatum.Day &lt; Születésnap.Day))
+                {
+                    kor--;
+                }
+                return kor;
+            }
+        }
+        public float Súly { get; set; }
+        public Allat(string név, string fajta, bool hím_e, DateTime születésNap, float súly)
+        {
+            this.Nev = név;
+            this.Fajta = fajta;
+            this.Hím_e = hím_e;
+            this.Születésnap = születésNap;
+            this.Súly = súly;
+        }
+    }
+    class Macska : Allat
+    {
+        public Macska(string név, string fajta, bool hím_e, DateTime születésNap, float súly) : base(név, fajta, hím_e, születésNap, súly)
+        {
+
+        }
+        public void Nyávog()
+        {
+            MessageBox.Show(Nev + &quot; nyávog.&quot;);
+        }
+    }
+    class Kutya : Allat
+    {
+        public Kutya(string név, string fajta, bool hím_e, DateTime születésNap, float súly) : base(név, fajta, hím_e, születésNap, súly)
+        {
+
+        }
+        public void Ugat()
+        {
+            MessageBox.Show(Nev + &quot; ugat.&quot;);
+        }
+    }
+}
+</code></pre>
+</section>
+</div>
+
+<p>(!EndStep)</p>
+<p>(!Step)[Lehet továbbá metódusokat felülírni. Nézzünk rá egy példát. Vegyük fel az Allat osztályba azt a metódust, hogy Vedlik().]</p>
+<div class="tabGroup" id="tabgroup_bHGHmlrG6S-29">
+<ul role="tablist">
+<li role="presentation">
+<a href="#tabpanel_bHGHmlrG6S-29_focus" role="tab" aria-controls="tabpanel_bHGHmlrG6S-29_focus" data-tab="focus" tabindex="0" aria-selected="true">lényeg</a>
+</li>
+<li role="presentation">
+<a href="#tabpanel_bHGHmlrG6S-29_entire" role="tab" aria-controls="tabpanel_bHGHmlrG6S-29_entire" data-tab="entire" tabindex="-1">teljes kód</a>
+</li>
+</ul>
+<section id="tabpanel_bHGHmlrG6S-29_focus" role="tabpanel" data-tab="focus">
+
+<pre><code class="lang-csharp">class Allat
+    {
+        public string Nev { get; set; }
+        public string Fajta { get; set; }
+        public bool Hím_e { get; set; }
+        public DateTime Születésnap { get; set; }
+        public int Kor
+        {
+            get
+            {
+                DateTime maiDatum = DateTime.Now;
+                int kor = maiDatum.Year - this.Születésnap.Year;
+                if (maiDatum.Month &lt; Születésnap.Month || (maiDatum.Month == Születésnap.Month &amp;&amp; maiDatum.Day &lt; Születésnap.Day))
+                {
+                    kor--;
+                }
+                return kor;
+            }
+        }
+        public float Súly { get; set; }
+        public Allat(string név, string fajta, bool hím_e, DateTime születésNap, float súly)
+        {
+            this.Nev = név;
+            this.Fajta = fajta;
+            this.Hím_e = hím_e;
+            this.Születésnap = születésNap;
+            this.Súly = súly;
+        }
+        public void Vedlik()
+        {
+            MessageBox.Show(Nev + &quot; vedlik.&quot;);
+        }
+    }
+</code></pre>
+</section>
+<section id="tabpanel_bHGHmlrG6S-29_entire" role="tabpanel" data-tab="entire" aria-hidden="true" hidden="hidden">
+
+<pre><code class="lang-csharp">namespace OsztalyokDemo
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        List&lt;Allat&gt; allatok = new List&lt;Allat&gt;();
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            Macska m = new Macska(&quot;Cirmi&quot;, &quot;sziámi&quot;, true, new DateTime(2022, 3, 27), 1.5f);
+            Kutya k = new Kutya(&quot;Aida&quot;, &quot;németjuhász&quot;, false, new DateTime(2013, 11, 15), 37f);
+
+            allatok.Add(m);
+            allatok.Add(k);
+
+            MessageBox.Show(allatok[0].Nev + &quot; &quot; + allatok[1].Nev);
+        }
+    }
+    class Allat
+    {
+        public string Nev { get; set; }
+        public string Fajta { get; set; }
+        public bool Hím_e { get; set; }
+        public DateTime Születésnap { get; set; }
+        public int Kor
+        {
+            get
+            {
+                DateTime maiDatum = DateTime.Now;
+                int kor = maiDatum.Year - this.Születésnap.Year;
+                if (maiDatum.Month &lt; Születésnap.Month || (maiDatum.Month == Születésnap.Month &amp;&amp; maiDatum.Day &lt; Születésnap.Day))
+                {
+                    kor--;
+                }
+                return kor;
+            }
+        }
+        public float Súly { get; set; }
+        public Allat(string név, string fajta, bool hím_e, DateTime születésNap, float súly)
+        {
+            this.Nev = név;
+            this.Fajta = fajta;
+            this.Hím_e = hím_e;
+            this.Születésnap = születésNap;
+            this.Súly = súly;
+        }
+        public void Vedlik()
+        {
+            MessageBox.Show(Nev + &quot; vedlik.&quot;);
+        }
+    }
+    class Macska : Allat
+    {
+        public Macska(string név, string fajta, bool hím_e, DateTime születésNap, float súly) : base(név, fajta, hím_e, születésNap, súly)
+        {
+
+        }
+        public void Nyávog()
+        {
+            MessageBox.Show(Nev + &quot; nyávog.&quot;);
+        }
+    }
+    class Kutya : Allat
+    {
+        public Kutya(string név, string fajta, bool hím_e, DateTime születésNap, float súly) : base(név, fajta, hím_e, születésNap, súly)
+        {
+
+        }
+        public void Ugat()
+        {
+            MessageBox.Show(Nev + &quot; ugat.&quot;);
+        }
+    }
+}
+</code></pre>
+</section>
+</div>
+
+<p>(!Hint) Miért tudom meghívni Aidán és Cirmi-n a Vedlik() metódust? [!Mert mind a ketten öröklik az Allat osztálytól.]</p>
+<p>(!EndStep)</p>
+<p>(!Step)[Írjuk felül a Allat osztály Vedlik() metódusát a Macska osztályban. Ehhez virtuálisnak kell jelölni az Állat osztályban, és override-nak a Macska osztályban.]</p>
+<div class="tabGroup" id="tabgroup_bHGHmlrG6S-30">
+<ul role="tablist">
+<li role="presentation">
+<a href="#tabpanel_bHGHmlrG6S-30_focus" role="tab" aria-controls="tabpanel_bHGHmlrG6S-30_focus" data-tab="focus" tabindex="0" aria-selected="true">lényeg</a>
+</li>
+<li role="presentation">
+<a href="#tabpanel_bHGHmlrG6S-30_entire" role="tab" aria-controls="tabpanel_bHGHmlrG6S-30_entire" data-tab="entire" tabindex="-1">teljes kód</a>
+</li>
+</ul>
+<section id="tabpanel_bHGHmlrG6S-30_focus" role="tabpanel" data-tab="focus">
+
+<pre><code class="lang-csharp">    class Allat
+    {
+        public string Nev { get; set; }
+        public string Fajta { get; set; }
+        public bool Hím_e { get; set; }
+        public DateTime Születésnap { get; set; }
+        public int Kor
+        {
+            get
+            {
+                DateTime maiDatum = DateTime.Now;
+                int kor = maiDatum.Year - this.Születésnap.Year;
+                if (maiDatum.Month &lt; Születésnap.Month || (maiDatum.Month == Születésnap.Month &amp;&amp; maiDatum.Day &lt; Születésnap.Day))
+                {
+                    kor--;
+                }
+                return kor;
+            }
+        }
+        public float Súly { get; set; }
+        public Allat(string név, string fajta, bool hím_e, DateTime születésNap, float súly)
+        {
+            this.Nev = név;
+            this.Fajta = fajta;
+            this.Hím_e = hím_e;
+            this.Születésnap = születésNap;
+            this.Súly = súly;
+        }
+        public virtual void Vedlik()//virtuálisnak jelöljük
+        {
+            MessageBox.Show(Nev + &quot; vedlik.&quot;);
+        }
+    }
+    class Macska : Allat
+    {
+        public Macska(string név, string fajta, bool hím_e, DateTime születésNap, float súly) : base(név, fajta, hím_e, születésNap, súly)
+        {
+
+        }
+        public void Nyávog()
+        {
+            MessageBox.Show(Nev + &quot; nyávog.&quot;);
+        }
+        public override void Vedlik()//override-nak jelöljük
+        {
+            base.Vedlik(); //meghívjuk az eredeti vedlik metódust
+            MessageBox.Show(&quot;És mivel macska, ezért megeszi a szőrt&quot;);
+        }
+    }
+</code></pre>
+</section>
+<section id="tabpanel_bHGHmlrG6S-30_entire" role="tabpanel" data-tab="entire" aria-hidden="true" hidden="hidden">
+
+<pre><code class="lang-csharp">namespace OsztalyokDemo
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        List&lt;Allat&gt; allatok = new List&lt;Allat&gt;();
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            Macska m = new Macska(&quot;Cirmi&quot;, &quot;sziámi&quot;, true, new DateTime(2022, 3, 27), 1.5f);
+            Kutya k = new Kutya(&quot;Aida&quot;, &quot;németjuhász&quot;, false, new DateTime(2013, 11, 15), 37f);
+
+            allatok.Add(m);
+            allatok.Add(k);
+
+            MessageBox.Show(allatok[0].Nev + &quot; &quot; + allatok[1].Nev);
+        }
+    }
+    class Allat
+    {
+        public string Nev { get; set; }
+        public string Fajta { get; set; }
+        public bool Hím_e { get; set; }
+        public DateTime Születésnap { get; set; }
+        public int Kor
+        {
+            get
+            {
+                DateTime maiDatum = DateTime.Now;
+                int kor = maiDatum.Year - this.Születésnap.Year;
+                if (maiDatum.Month &lt; Születésnap.Month || (maiDatum.Month == Születésnap.Month &amp;&amp; maiDatum.Day &lt; Születésnap.Day))
+                {
+                    kor--;
+                }
+                return kor;
+            }
+        }
+        public float Súly { get; set; }
+        public Allat(string név, string fajta, bool hím_e, DateTime születésNap, float súly)
+        {
+            this.Nev = név;
+            this.Fajta = fajta;
+            this.Hím_e = hím_e;
+            this.Születésnap = születésNap;
+            this.Súly = súly;
+        }
+        public virtual void Vedlik()//virtuálisnak jelöljük
+        {
+            MessageBox.Show(Nev + &quot; vedlik.&quot;);
+        }
+    }
+    class Macska : Allat
+    {
+        public Macska(string név, string fajta, bool hím_e, DateTime születésNap, float súly) : base(név, fajta, hím_e, születésNap, súly)
+        {
+
+        }
+        public void Nyávog()
+        {
+            MessageBox.Show(Nev + &quot; nyávog.&quot;);
+        }
+        public override void Vedlik()//override-nak jelöljük
+        {
+            base.Vedlik(); //meghívjuk az eredeti vedlik metódust
+            MessageBox.Show(&quot;És mivel macska, ezért megeszi a szőrt&quot;);
+        }
+    }
+    class Kutya : Allat
+    {
+        public Kutya(string név, string fajta, bool hím_e, DateTime születésNap, float súly) : base(név, fajta, hím_e, születésNap, súly)
+        {
+
+        }
+        public void Ugat()
+        {
+            MessageBox.Show(Nev + &quot; ugat.&quot;);
+        }
+    }
+}
+</code></pre>
+</section>
+</div>
+
+<p>(!Hint) Mi fog történni a Kutya Vedlik() metódusával? [!Semmi, változatlan formában örökli az Allat-tól.]</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>Nem csak függvényeket, de operátorokat is felül lehet írni. Ez azt jelentené, hogy meg tudnánk csinálni, hogy összeadunk két kutyát pl: k1+k2 és egy harmadik kutyát kapnánk eredményül. Ennek sok értelme nincsen ugyan, de más osztályoknál pl: saját szám osztálynál igenis sok jelentősége van. Ha érdekel hogyan, nézz utána!</p>
+</div>
+<p>(!EndStep)</p>
+<p>(!Step)[Próbáljuk ki!]</p>
+<div class="tabGroup" id="tabgroup_bHGHmlrG6S-31">
+<ul role="tablist">
+<li role="presentation">
+<a href="#tabpanel_bHGHmlrG6S-31_focus" role="tab" aria-controls="tabpanel_bHGHmlrG6S-31_focus" data-tab="focus" tabindex="0" aria-selected="true">lényeg</a>
+</li>
+<li role="presentation">
+<a href="#tabpanel_bHGHmlrG6S-31_entire" role="tab" aria-controls="tabpanel_bHGHmlrG6S-31_entire" data-tab="entire" tabindex="-1">teljes kód</a>
+</li>
+</ul>
+<section id="tabpanel_bHGHmlrG6S-31_focus" role="tabpanel" data-tab="focus">
+
+<pre><code class="lang-csharp">        private void Form1_Load(object sender, EventArgs e)
+        {
+            Macska m = new Macska(&quot;Cirmi&quot;, &quot;sziámi&quot;, true, new DateTime(2022, 3, 27), 1.5f);
+            Kutya k = new Kutya(&quot;Aida&quot;, &quot;németjuhász&quot;, false, new DateTime(2013, 11, 15), 37f);
+
+            m.Vedlik();
+            k.Vedlik();
+        }
+</code></pre>
+</section>
+<section id="tabpanel_bHGHmlrG6S-31_entire" role="tabpanel" data-tab="entire" aria-hidden="true" hidden="hidden">
+
+<pre><code class="lang-csharp">namespace OsztalyokDemo
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        List&lt;Allat&gt; allatok = new List&lt;Allat&gt;();
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            Macska m = new Macska(&quot;Cirmi&quot;, &quot;sziámi&quot;, true, new DateTime(2022, 3, 27), 1.5f);
+            Kutya k = new Kutya(&quot;Aida&quot;, &quot;németjuhász&quot;, false, new DateTime(2013, 11, 15), 37f);
+
+            m.Vedlik();
+            k.Vedlik();
+        }
+    }
+    class Allat
+    {
+        public string Nev { get; set; }
+        public string Fajta { get; set; }
+        public bool Hím_e { get; set; }
+        public DateTime Születésnap { get; set; }
+        public int Kor
+        {
+            get
+            {
+                DateTime maiDatum = DateTime.Now;
+                int kor = maiDatum.Year - this.Születésnap.Year;
+                if (maiDatum.Month &lt; Születésnap.Month || (maiDatum.Month == Születésnap.Month &amp;&amp; maiDatum.Day &lt; Születésnap.Day))
+                {
+                    kor--;
+                }
+                return kor;
+            }
+        }
+        public float Súly { get; set; }
+        public Allat(string név, string fajta, bool hím_e, DateTime születésNap, float súly)
+        {
+            this.Nev = név;
+            this.Fajta = fajta;
+            this.Hím_e = hím_e;
+            this.Születésnap = születésNap;
+            this.Súly = súly;
+        }
+        public virtual void Vedlik()//virtuálisnak jelöljük
+        {
+            MessageBox.Show(Nev + &quot; vedlik.&quot;);
+        }
+    }
+    class Macska : Allat
+    {
+        public Macska(string név, string fajta, bool hím_e, DateTime születésNap, float súly) : base(név, fajta, hím_e, születésNap, súly)
+        {
+
+        }
+        public void Nyávog()
+        {
+            MessageBox.Show(Nev + &quot; nyávog.&quot;);
+        }
+        public override void Vedlik()//override-nak jelöljük
+        {
+            base.Vedlik(); //meghívjuk az eredeti vedlik metódust
+            MessageBox.Show(&quot;És mivel macska, ezért megeszi a szőrt&quot;);
+        }
+    }
+    class Kutya : Allat
+    {
+        public Kutya(string név, string fajta, bool hím_e, DateTime születésNap, float súly) : base(név, fajta, hím_e, születésNap, súly)
+        {
+
+        }
+        public void Ugat()
+        {
+            MessageBox.Show(Nev + &quot; ugat.&quot;);
+        }
+    }
+}
+</code></pre>
+</section>
+</div>
+
+<p>(!Hint) Vegyél fel egy kedvenc játék tulajdonságot a Kutya osztályba [!prop tab tab-bal meg lehet csinálni a tulajdonságot, és a konstruktort bővíteni kell egy paraméterrel]</p>
+<p>(!EndStep)</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>Amikor a Button osztályból származtatunk egy osztályt, pontosan ugyanezek történnek. Egyből megkapunk mindent, amit a gombok tudnak és nem kell nekünk megvalósítani azt a rengeteg logikát, ami ahhoz kell, hogy az ablakban működjön az összes többi elemmel együtt.</p>
+</div>
+<div class="NOTE">
+<h5>Note</h5>
+<p>Vannak még osztályokhoz kapcsolódó tartalmak, mint például az interfészek, de ezeket nem ez az oldal fogja tárgyalni.</p>
+</div>
+<p>(!EndStepper)</p>
+</string></article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/altinum/szamtud_docfx/blob/main/softec_kk/3_osztalyok_2/overview.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+    <script type="module" src="../../styles/heatmap/main.js"></script>
+    <script type="module" src="../../styles/heatmap/displayHeatmap.js"></script>
+    <script type="module" src="../../styles/heatmap/manageHtmlChange.js"></script>
+    <script type="module" src="../../styles/heatmap/intersectionObserver.js"></script>
+    <script type="module" src="../../styles/heatmap/config.js"></script>  </body>
+</html>

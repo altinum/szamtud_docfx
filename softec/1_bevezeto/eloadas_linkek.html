@@ -1,0 +1,200 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Els&#337; h&#233;t </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Els&#337; h&#233;t ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <link rel="stylesheet" href="../../styles/heatmap.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../../toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        <div class="article row grid">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="első-hét">Első hét</h1>
+
+<h2 id="előadáshoz-kapcsolódó-anyagok">Előadáshoz kapcsolódó anyagok</h2>
+<h3 id="linkek">Linkek</h3>
+<p>Természetes nyelvek népszerűsége: <a href="https://www.visualcapitalist.com/most-popular-languages-people-want-to-learn/">This is the Language Each Country Wants to Learn the Most
+</a></p>
+<p>Microsoft útmutató az Excel kerekítési hibáiról: <a href="https://docs.microsoft.com/en-us/office/troubleshoot/excel/floating-point-arithmetic-inaccurate-result">Floating-point arithmetic may give inaccurate result in Excel - Office | Microsoft Docs</a></p>
+<p>Egyszerű C# kódok böngészőben is kipróbálhatók a Microsoft Docs oldalain: például a <a href="https://docs.microsoft.com/en-us/dotnet/api/system.decimal?view=net-6.0#remarks">Decimal Struct</a> oldalon a <code>Run</code> gomb megnyomása után.</p>
+<p>Könyv pdf fromátumban: <a href="http://mapw.elte.hu/elek/Cshprogramozas.pdf">Reiter István: C# programozás lépésről lépésre</a></p>
+<p>Offtopic videó arról, hogy hogy nézett ki az Apollo földreszálló egységének számítógépe: <a href="https://www.youtube.com/watch?v=B1J2RMorJXM">Light Years Ahead | The 1969 Apollo Guidance Computer</a> (4:47-től érdekes)</p>
+<h3 id="rövid-összefoglaló-az-elemi-változókról">Rövid összefoglaló az elemi változókról</h3>
+<p>Ezeket érdemes megtanulni - a számtípusoknál legalább a nagyságrendeket.</p>
+<table>
+<thead>
+<tr>
+<th>Típus</th>
+<th>Memóriaigény</th>
+<th>Leírás</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>byte</code></td>
+<td>1 byte</td>
+<td>Előjel nélküli 8 bites egész szám(0..255)</td>
+</tr>
+<tr>
+<td><code>char</code></td>
+<td>2</td>
+<td>Egy Unicode karakter</td>
+</tr>
+<tr>
+<td><code>bool</code></td>
+<td>1</td>
+<td>Logikai típus, értéke igaz(1 vagy True)vagy hamis(0 vagy False)</td>
+</tr>
+<tr>
+<td><code>sbyte</code></td>
+<td>1</td>
+<td>Előjeles, 8 bites egész szám (-128..127)</td>
+</tr>
+<tr>
+<td><code>short</code></td>
+<td>2</td>
+<td>Előjeles, 16 bites egész szám (-32768..32767)</td>
+</tr>
+<tr>
+<td><code>ushort</code></td>
+<td>2</td>
+<td>Előjel nélküli, 16 bites egész szám(0..65535)</td>
+</tr>
+<tr>
+<td><code>int</code></td>
+<td>4</td>
+<td>Előjeles, 32 bites egész szám (–2147483648.. 2147483647).</td>
+</tr>
+<tr>
+<td><code>uint</code></td>
+<td>4</td>
+<td>Előjel nélküli, 32 bites egész szám(0..4294967295)</td>
+</tr>
+<tr>
+<td><code>float</code></td>
+<td>4</td>
+<td>Egyszeres pontosságú lebegőpontos szám (kb. 7 decimális számjegy pontosság)</td>
+</tr>
+<tr>
+<td><code>double</code></td>
+<td>8</td>
+<td>Kétszeres pontosságú lebegőpontos szám (kb. 15-16 decimális számjegy pontosság)</td>
+</tr>
+<tr>
+<td><code>decimal</code></td>
+<td>16</td>
+<td>Fix pontosságú 28+1 jegyű szám</td>
+</tr>
+<tr>
+<td><code>long</code></td>
+<td>8</td>
+<td>Előjeles, 64 bites egész szám</td>
+</tr>
+<tr>
+<td><code>ulong</code></td>
+<td>8</td>
+<td>Előjel nélküli, 64 bites egész szám</td>
+</tr>
+<tr>
+<td><code>string</code></td>
+<td>N/A</td>
+<td>Unicode karakterek szekvenciája</td>
+</tr>
+</tbody>
+</table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/altinum/szamtud_docfx/blob/main/softec/1_bevezeto/eloadas_linkek.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+    <script type="module" src="../../styles/heatmap/main.js"></script>
+    <script type="module" src="../../styles/heatmap/displayHeatmap.js"></script>
+    <script type="module" src="../../styles/heatmap/manageHtmlChange.js"></script>
+    <script type="module" src="../../styles/heatmap/intersectionObserver.js"></script>
+    <script type="module" src="../../styles/heatmap/config.js"></script>  </body>
+</html>

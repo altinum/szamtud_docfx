@@ -1,0 +1,176 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>2. ZH - golf </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="2. ZH - golf ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../../../favicon.ico">
+    <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../styles/docfx.css">
+    <link rel="stylesheet" href="../../../styles/main.css">
+    <link rel="stylesheet" href="../../../styles/heatmap.css">
+    <meta property="docfx:navrel" content="../../../toc.html">
+    <meta property="docfx:tocrel" content="../../../toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../../index.html">
+                <img id="logo" class="svg" src="../../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        <div class="article row grid">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="2-zh---golf">2. ZH - golf</h1>
+
+<p>A <a href="repulojaratok.txt">repulojaratok.txt</a> fájlban található adatok alapján kell egy alkalmazást felépíteni.</p>
+<p>A fájl felépítése:</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>JaratID </code></td>
+<td>a járat azonosítója</td>
+<td></td>
+</tr>
+<tr>
+<td><code>Legitarsasag    </code></td>
+<td>a járatot müködtető légitársaság neve</td>
+<td></td>
+</tr>
+<tr>
+<td><code>IndulasiHely </code></td>
+<td>a járat indulási helye</td>
+<td></td>
+</tr>
+<tr>
+<td><code>CelHely </code></td>
+<td>a járat érkezési helye</td>
+<td></td>
+</tr>
+<tr>
+<td><code>UtasokSzama   </code></td>
+<td>utasok száma az adott járaton</td>
+<td></td>
+</tr>
+<tr>
+<td><code>IdotartamOra</code></td>
+<td>hány óra alatt teszi meg a járat az adott távolságot</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<div class="NOTE">
+<h5>Note</h5>
+<p>Az alkalmazás felépítésekor célszerű követni a feladat mellé rakott képernyőképeket, melyek segítségül és kiindulási alapként szolgálnak!</p>
+</div>
+<p>Készíts alkalmazást, amely:</p>
+<p>(+/-) A csv állományt tedd be a projektbe, és másoltasd a futtatható állomány mellé!</p>
+<p>(+/-) Adj a projekthez egy osztályt, amely leképezi az állomány egy sorát!</p>
+<p>(+/-) A program legyen képes megnyitni az állományt, és a sorait felolvasni egy <code>BindingList</code> típusú, <code>Form1</code> osztály szintjén létrehozott listába, majd ezeket megjeleníteni <code>BindingSource</code>-on keresztül egy <code>DataGridView</code>-ban. A lehetséges hibákat kezeld! A betöltés művelet történjen gombnyomásra!</p>
+<p><img src="image1.png" alt="image1"></p>
+<p>(+/-) Az alkalmzás legyen képes menteni a <code>Form1</code> osztályban lévő listát. A mentés helye SaveFileDialog-ban legyen kiválasztható</p>
+<p>Mentés közben kezeld a hibákat (try-catch)!</p>
+<p><img src="image3.png" alt="image3"></p>
+<p>(+/-) Hozz létre egy gombot, melynek segítségével a rácsban az éppen kiválasztott sor törölhető. A törlés csak megerősítő kérdés után történjen meg.
+Ellenőrizd, hogy van-e kiválasztott sor!</p>
+<p><img src="image4.png" alt="image4"></p>
+<p><img src="image5.png" alt="image5"></p>
+<p>(+/-) Felugró ablakon keresztül legyen lehetőség új sor rögzítésére!</p>
+<p><img src="image6.png" alt="image6"></p>
+<p>(+/-) Hozz létre egy gombot, amelyre felugrik egy MessageBox, ami a következő kérdésekre ad nekünk választ:</p>
+<ol>
+<li>Honnan hova repül a leghosszabb menetidejű repülőjárat?</li>
+<li>Átlagosan hány utassal rendelkeznek azok a járatok amelyeknek New York a végállomásuk?</li>
+</ol>
+<p><img src="image7.png" alt="image7"></p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/altinum/szamtud_docfx/blob/main/softec/zh2/golf/index.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../styles/main.js"></script>
+    <script type="module" src="../../../styles/heatmap/main.js"></script>
+    <script type="module" src="../../../styles/heatmap/displayHeatmap.js"></script>
+    <script type="module" src="../../../styles/heatmap/manageHtmlChange.js"></script>
+    <script type="module" src="../../../styles/heatmap/intersectionObserver.js"></script>
+    <script type="module" src="../../../styles/heatmap/config.js"></script>  </body>
+</html>

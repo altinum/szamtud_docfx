@@ -1,0 +1,147 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>A j&#225;t&#233;k </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="A j&#225;t&#233;k ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <link rel="stylesheet" href="../../styles/heatmap.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../../toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        <div class="article row grid">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h2 id="a-játék">A játék</h2>
+
+<p>Az alábbi címen találtok egy szolgáltatást, melynek segítségével külön szoftver telepítése nélkül darabolhattok fel képeket: <a href="https://pinetools.com/split-image">https://pinetools.com/split-image</a></p>
+<p>Első lépésben választhatok egy szimpatikus képet és daraboljátok fel legalább 4x4 darabra!</p>
+<p>Arra érdemes figyelni, hogy a kép szélessége illetve magassága osztható legyen a kívánt osztások számával. Akár Paint-ben is körbe lehet vágni a kiválasztott képet darabolás előtt.</p>
+<p>A csempék között lesz egy kitüntetett, amelyen nem jelenik meg a kép. Ha bármelyik mellete lévő csempére kattintunk, a &quot;megkantintott&quot; csempének helyet kell cserélni ha a kitüntetett csempével. A kitüntetett csempére nem lehet kattintani. A helycsere gyakorlatilag a Top és a Left tulajdonságok értékeinek kicserélődését jelenti a kattintott csempe és a kitüntetett csempe között -- de erről majd később.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>Ha valaki a programozásra koncentrálna a grafikai elemek helyett, fel lehet ép0teni a játékot gombokból is, melyeknek egyre növekvő számok a feliratai.</p>
+</div>
+<h2 id="a-csempe-oszály">A csempe oszály</h2>
+<p>Először érdemes létrehozni egy <code>Csempe</code> osztályt, és ennek felhasználásával kirakni darabokból a képet egyenlőre úgy, hogy minden képdarab a helyén legyen.</p>
+<p>Éredemes lehet rögzíteni egy statikus változóban a csempe méretét.</p>
+<p>Érdemes a <code>Csempe</code> osztályt úgy megtervezni, hogy legyen neki egy teljesen kifejtett <code>Sor</code> és egy <code>Oszlop</code> tulajdonsága is, amelyeknek ha értékül beállítjuk a csempe rácsban elfoglalt pozícióját, a <code>Top</code> és <code>Left</code> tulajdonságokon keresztül méretének felhasználásával helyezi magát.  Így a csempék helycseréjét <code>Sor</code> és <code>Oszlop</code> tulajdonságaik cseréjén keresztül is megvalósíthatjuk.</p>
+<pre><code class="lang-csharp">private int _sor;
+
+public int Sor
+{
+	get { return _sor; }
+	set { 
+		_sor = value;
+		Top = Métert * Sor;
+	}
+}
+</code></pre>
+<p>Érdemes megjegyeztetni a csempével az eredeti sort, illetve eredeti oszlopot. A puzzle akkor van kirakva, ha az <code>EredetiSor</code> megegyezik a <code>Sor</code>-ral, és az <code>EredetiOszlop</code> megegyezik az <code>Oszlop</code>-pal az összes csempénél.  Ez megvalósítás szempontjából azt jelenti, hogy A kattintás hoz tartozó esemény kiszolgáló függvényben a helycsere után egy <code>foreach</code>-el meg kell vizsgálni hogy az összes csempénél teljesül-e ez a feltétel. Ha akár egyet is találunk ahol nem teljesül, a puzzle még nincs kirakva. Az eredeti sor és oszlop akár a konstruktoron keresztül is átadható.</p>
+<h2 id="pályaépítés">Pályaépítés</h2>
+<p>A csempék egymásba ágyazott ciklusból kirakhatók a képernyőre.</p>
+<p>A kitüntetett csempére vonatkozó referenciát érdemes a <code>Form1</code>-ben osztályszinten létrehozni. Kitüntetett csempének a pálya kirakásakor bármelyik csempét választhatjuk: lehet mindig valamelyik sarok, vagy akár véletlenszerűen választott elem is.</p>
+<h2 id="a-csere">A csere</h2>
+<p>A csempék ciklusból történő kirakásánál érdemes közös esemény kiszolgáló függvényt létrehozni az összes csempe kattintás eseményéhez. Csak akkor kerülhet sor a cserére, a kattintással kiválasztott csempe és a kitüntetett csempe egymás mellett vannak. Ha nem akarunk nagyon bonyolult feltételt írni az <code>if</code>-be,  használhatunk abszolút értéket.  Tipp: <code>Math.Abs()</code></p>
+<p>Ha a két oszlop különbségének abszolút értéke 1, és a sorok értéke egyezik, egymás mellett vannak, egy sorban. De az is jó hogy ha egymás alatt vannak egy oszlopban.</p>
+<p>Ha egymás mellett vannak, sor kerülhet a helycserére! (<code>Sor</code> és <code>Oszlop</code> tulajdonságokban szereplő értékek cseréje.)</p>
+<p>Helycsere után lehet ellenőrizni hogy sikerült-e már kirakni a játékot.</p>
+<h2 id="automatikus-bekeverés">Automatikus bekeverés</h2>
+<p>Miután működik a játéknak az a változata, amelyben a helyükön jelennek meg a csempék induláskor, és magunknak kell összekeverni, hogy aztán kirakhassuk, érdemes elgondolkozni azon hogy hogyan lehetne bekeverni a csempéket. Felmerül a kérdés, hogy minden tetszőlegesen összekevert konfiguráció megoldható-e.</p>
+<p>Kérdezzük meg a ChatGPT-t:</p>
+<pre><code>What are the solvable configurations for the sliding puzzle game?
+</code></pre>
+<p>Ennek megfelelően tegyetek javaslatot arra hogy hogyan lehetne bekeverni a csempéket!</p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/altinum/szamtud_docfx/blob/main/softec/slide_puzzle/slide_puzzle.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+    <script type="module" src="../../styles/heatmap/main.js"></script>
+    <script type="module" src="../../styles/heatmap/displayHeatmap.js"></script>
+    <script type="module" src="../../styles/heatmap/manageHtmlChange.js"></script>
+    <script type="module" src="../../styles/heatmap/intersectionObserver.js"></script>
+    <script type="module" src="../../styles/heatmap/config.js"></script>  </body>
+</html>

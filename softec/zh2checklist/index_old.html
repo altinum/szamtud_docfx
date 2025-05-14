@@ -1,0 +1,212 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Checklist az m&#225;sodik ZH-hoz </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Checklist az m&#225;sodik ZH-hoz ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <link rel="stylesheet" href="../../styles/heatmap.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../../toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        <div class="article row grid">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="checklist-az-második-zh-hoz">Checklist az második ZH-hoz</h1>
+
+<h2 id="témakörök">Témakörök</h2>
+<p>Az elmúlt három gyakorlaton a következő témakörök kerültek elő:</p>
+<ul>
+<li>Szövegfájlok beolvasása soronként</li>
+<li>Tömbök használata</li>
+<li>string darabolása elválasztó karkter mentén tömbbe, pl: <code>string[] darabok = egész.Split(';');</code></li>
+<li>Űrlapon szereplő vezérlők listájának bejárása, mint pl. az ütközésvizsgálat a kígyónál</li>
+<li>Billentyű lenyomások kezelése, pl. kígyó vagy játékos mozgatása</li>
+<li>GDI grafika, egyszerű ábrák rajzolása</li>
+</ul>
+<p>ZH-ra bemelegítésül a következő feladatokat javasoljuk:</p>
+<h2 id="gyakorlófeladatok-zh-ra">Gyakorlófeladatok ZH-ra</h2>
+<h3 id="képernyőbillentyűzet">Képernyőbillentyűzet</h3>
+<p>Melléklet: <a href="kbd_hun.txt">kbd_hun.txt</a></p>
+<p>Töltsd le a kbd_hun.txt állományt! Az állomány egy képernyőre kirakható billentyűzetet ír le, minden billentyűhöz adottak a billentyű x és y koordinátái, szélessége, magassága valamint a billentyűn szereplő szimbólum. (Minden billentyűhöz 5 sor tartozik a fájlban.) Építsd fel a képernyőn a billentyűzetet, úgy hogy egy érintőképernyőt feltételezve a billentyűkre kattintással gépelni lehessen egy szövegdobozba. (Érdemes lehet először az összes feladatot végigolvasni, hogy összeálljon a teljes kép.)</p>
+<ol>
+<li>Származtass osztályt <code>Billentyű</code> néven a <code>Button</code> osztályból!</li>
+<li>A származtatott osztályt bővítsd konstruktorral, melyben eseménykiszolgáló függvényt rendelsz a <code>MouseEnter</code> és <code>MouseLeave</code> eseményekhez. Az eseménykiszolgálók színezzék át a magát a gombot <code>Fuchsia</code> színűre, ha az egér fölé ér, majd színezék vissza a Windows témában megadott gomb-színre, ha az egér távozott. (Ezt csak úgy megszokásból :)</li>
+<li>Add a letöltött fájlt a projekthez úgy, hogy minden futtatáskor a lefordított állomány mellé kerüljön! (Copy to output directory)</li>
+<li>A <code>Form1</code> osztály <code>Load</code>  eseményéhez rendelt eseménykiszolgálóban hozz létre egy példányt a <code>StreamReader</code> osztályból, melynek segítségével megnyitod az állományt!</li>
+<li><code>While</code> ciklus segítségével addig olvasd a fájlt, amíg a végére nem ér. A ciklustörzsben
+a.	olvass ki öt sort a fájlból egy-egy értelemszerűen elnevezett <code>string</code> típusú változóba!
+b.	Hozz létre egy példányt a <code>Billentyű</code> osztályból, és ezt add az űrlap vezérlőinek listájához!
+c.	A fájlból olvasott adatok alapján pozícionáld a billentyűt az űrlapon, állítsd be a méretét, és a feliratát! (Elképzelhető, hogy szöveg típusú változókat helyenként számmá kell konvertálni.)
+d.	Rendelj közös esemény-kiszolgáló függvényt a gombok kattintás eseményéhez!</li>
+<li>Hozz létre tervezőből egy szövegdobozt az űrlapon! (Ebbe lehet lesz majd írni a gombokra kattintgatva.)</li>
+<li>Az előző lépésben létrehozott esemény kiszolgálóban castold a sender-t Billentyű típusúvá, majd szövegét add a szövegdoboz szövegéhez. (A += oprtátor szövegekre is működik.)</li>
+</ol>
+<p>A 7. pont egy magyarázatot igényel, erről feltöltök egy videót, nem lesz a ZH-ban, viszont így teljes a példa.</p>
+<p>(!Vid) Megoldás videó 1. része</p>
+<div class="embeddedvideo"><iframe src="https://storage.altinum.hu/szoft1/S1kbdhun1.m4v" frameborder="0" allowfullscreen="true"></iframe></div>
+<p>(!Vid) Megoldás videó 2. része</p>
+<div class="embeddedvideo"><iframe src="https://storage.altinum.hu/szoft1/S1kbdhun2.m4v" frameborder="0" allowfullscreen="true"></iframe></div>
+<h2 id="gombokkal-mozgatható-játékos">Gombokkal mozgatható játékos</h2>
+<p>Képzeljetek el egy billentyűkkel négy irányba mozgatható játékost, ami most az egyszerűség okán egy kis négyzet lesz!</p>
+<ol>
+<li>Származtass osztályt a <code>PictureBox</code>-ból <code>Négyzet</code> néven.</li>
+<li>A <code>Négyzet</code> osztály konstruktorában színezze magát fuksziára, és méretezze magát 30x30 képpontosra.</li>
+<li>Build-eld a projektet -- vagy futtasd és állítsd le.</li>
+<li>Ha minden jól ment, a tervezőben lesz egy <code>Négyzet</code> nevű vezérlő: helyezz el belőle egyet az űrlapon, majd nevezd el <code>játékos</code>-nak.</li>
+<li>Az űrlap <code>KeyDown</code> eseményéhez rendelj eseménykiszolgáló függvényt.</li>
+<li>A <code>KeyDown</code> eseménykiszolgálóban annak függvényében, hogy melyik billentyűt nyomták meg, a <code>játékos</code> <code>Top</code> illetve <code>Left</code> tulajdonságát növeld vagy csökkentsd 30-al értelemszerűen.</li>
+</ol>
+<p>(!Vid) Megoldás videó</p>
+<div class="embeddedvideo"><iframe src="https://storage.altinum.hu/szoft1/S1movingPlayer.m4v" frameborder="0" allowfullscreen="true"></iframe></div>
+<h2 id="véletlenszerűen-mozgó-ellenségek">Véletlenszerűen mozgó ellenségek</h2>
+<ol>
+<li>Származtass osztályt a <code>PictureBox</code>-ból <code>Gonosz</code> néven.</li>
+<li>A <code>Gonosz</code> osztály konstruktorában színezze magát fuksziára, és méretezze magát 30x30 képpontosra.</li>
+<li>A <code>Form1</code> szintjén hozz létre egy példányt a <code>Random</code> osztályból.</li>
+<li>A <code>Form1</code> <code>Load</code> eseményéhez rendelt eseménykiszolgálóban helyezz el 30 gonoszt az űrlapon, de úgy, hogy a koordinátáik 30 többszörösei legyenek.</li>
+<li>Hozz létre egy <code>Timer</code>-t tetszőleges módszerrel, melynek fél másodpercenként sül el a <code>Tick</code> eseménye.</li>
+<li>A <code>Tick</code> eseményhez tartozó eseménykiszolgálóban járd be <code>foreach</code> ciklussal a <code>Controls</code> gyűjteményben szereplő elemeket <code>Gonosz</code>-szá castolva, és mozgass minden gonoszt vétlenszerű irányba.</li>
+<li>Ha egy <code>Gonosz</code>-t olyan pozícióba tennél, ahol már van gonosz, színezd át mind a kettőt tetszőleges színűre.</li>
+</ol>
+<h2 id="rajzolós">Rajzolós</h2>
+<p>A eladat egy állatot rajzoló alkalmazás készítése. Az egyszerű vonalakból felépítendő ábra egyes csúcspontjainak koordinátái a <a href="http://web.uni-corvinus.hu/%7Elmohacs/szoft/ZH/rajz2.csv">rajz2.csv</a> fájlban állnak rendelkezésre. Az ábra szakaszokból álló „tört vonalakból” áll. A csúcspontokat a fájl egy-egy sora jelöli. – a *-ot tartalmazó sorok új „tört vonal” kezdetét jelölik. A fájl formátuma a következő:</p>
+<pre><code>3;12;*
+1;8
+2;5
+2;3
+9;5
+10;10;*
+12;16
+10;18
+13;19
+13;16
+…
+</code></pre>
+<p><img src="clip_image001.png" alt="img"></p>
+<p><strong>Előkészületek</strong></p>
+<ol>
+<li>Helyezz az űrlapra egy panel objektumot, melynek alapértelmezett háttérszínét állítsd fehérre és méretét 500 x 500 pixelre! Igazítsd a <code>Form</code> bal felső sarkába!</li>
+</ol>
+<p><strong>Ábra rajzolása és törlése</strong></p>
+<ol>
+<li><p>A <code>Form1</code> osztály szintjén hozz létre <code>ux</code> és <code>uy</code> nevű egész típusú változót <code>0</code> kezdőértékkel, melyben az utoljára megrajzolt csúcs koordinátáját tárolod.</p>
+</li>
+<li><p>Hozz létre egy gombot, melyre kattintva megtörténik a rajzolás.</p>
+<p><code>StreamReader</code> osztály segítségével nyisd meg a fájlt, és <code>while</code> ciklus segítségével járd be a sorait!</p>
+</li>
+<li><p>A ciklustörzsben olvasd be a fájl egy sorát, és a <code>;</code> karakter mentén törd egy tömbbe. A tömb első két eleme alapján olvasd ki az <code>x</code> és <code>y</code> koordinátákat, majd rajzold meg a panelre <code>(x;y)-(ux;uy)</code> szakaszt! Rajzolás után <code>ux</code> illetve <code>uy</code> értékét állítsd <code>x</code> illetve <code>y</code> értékére! Kirajzoláskor nagyítsd az ábrát 25-szörösre, azaz minden koordinátát szorozz 25-el! (Most még nem vesszük figyelembe <code>*</code> karaktereket és az új „tört vonalak” kezdetét.</p>
+</li>
+<li><p>Vegyük figyelembe az új szakaszok kezdetét: ha a <code>;</code> mentén létrehozott tömb elemeinek száma 3, ne rajzolj, csak állítsd be az <code>ux</code> ill.  <code>uy</code> koordinátákat. (Nem a <code>*</code> karaktert keressük, így egyszerűbb.)</p>
+</li>
+<li><p>Az ábra most fejjel lefelé áll, fordítsd meg!</p>
+<h2 id="előadásra"><strong>Előadásra</strong></h2>
+</li>
+</ol>
+<ul>
+<li><p><a href="colors.csv">colors.csv</a></p>
+</li>
+<li><p><a href="srac.csv">srac.csv</a></p>
+</li>
+<li><p><a href="lany.csv">lany.csv</a></p>
+</li>
+<li><p><a href="quiz.txt">quiz.txt</a></p>
+</li>
+<li><p><a href="szavak.csv">szavak.csv</a></p>
+</li>
+<li><p><a href="fa.csv">fa.csv</a></p>
+</li>
+</ul>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/altinum/szamtud_docfx/blob/main/softec/zh2checklist/index_old.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+    <script type="module" src="../../styles/heatmap/main.js"></script>
+    <script type="module" src="../../styles/heatmap/displayHeatmap.js"></script>
+    <script type="module" src="../../styles/heatmap/manageHtmlChange.js"></script>
+    <script type="module" src="../../styles/heatmap/intersectionObserver.js"></script>
+    <script type="module" src="../../styles/heatmap/config.js"></script>  </body>
+</html>

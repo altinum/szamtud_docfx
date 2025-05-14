@@ -1,0 +1,154 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Projekt ZH &#233;rt&#233;kel&#233;s&#233;nek szempontrendszere </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Projekt ZH &#233;rt&#233;kel&#233;s&#233;nek szempontrendszere ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../../../favicon.ico">
+    <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../styles/docfx.css">
+    <link rel="stylesheet" href="../../../styles/main.css">
+    <link rel="stylesheet" href="../../../styles/heatmap.css">
+    <meta property="docfx:navrel" content="../../../toc.html">
+    <meta property="docfx:tocrel" content="../../../toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../../index.html">
+                <img id="logo" class="svg" src="../../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        <div class="article row grid">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="projekt-zh-értékelésének-szempontrendszere">Projekt ZH értékelésének szempontrendszere</h1>
+
+<div class="IMPORTANT">
+<h5>Important</h5>
+<p>Maximális pont arra a projektfeladatra kapható, mely a feltöltött forráskódból lefrodítható, és a feladatleírásban lefektetett követelményeknek eleget tesz. A feltöltött alkalmazásnak használhatónak és hibatűrőnek kell lennie!</p>
+</div>
+<h2 id="zh-ra-behozható-anyagok">ZH-ra behozható anyagok</h2>
+<p>A ZH-ra kiinduló fájlok, mint képek, adatokat tartalmazó csv, és egyéb állományok behozhatóak, ezeket Moodle-be kell feltölteni csütörtök reggelig, és onnét lehet letölteni a ZH sáv első 5 percében. Ezután már csak a Visual Studio fejlesztőkörnyezet és a futtatott alkalmazás lehet nyitva. Forráskódot és papír alapú segítséget használni nem lehet.</p>
+<h2 id="a-pontozás-menete">A pontozás menete</h2>
+<p>A pontozás során 20 pontról indulunk, és az esetleges hiányosságokért pontlevonásra kerül sor -- arra számítunk, hogy a feltöltött megoldások döntő többsége megfelel a követelményeknek, így maximális pontot kap.</p>
+<p>Az egységesen alkalmazandó pontlevonásokat az alábbi táblázat foglalja össze:</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Fordíthatóság</strong>: Ha a forráskód nem fordítható le, megjegyzésbe tesszük a hibás részeket, és fordítás után kerül a kód értékelésre. Nem fordítható kód esetén a működő feladatrészekre kapott pontból 5 pont kerül levonásra. Ha a kód súlyos elvi hiba miatt nem fordítható (pl. osztály szintjére írt vezérlő szerkezetek stb.), további 5 pont kerül levonásra. Megjegyzésbe írt kódrészleteket nem értékelünk.</td>
+<td><strong>-2x5p</strong></td>
+</tr>
+<tr>
+<td><strong>Megvalósítás</strong>: az elkészült alkalmazás milyen mértékben nyújt megoldást a kapott feladatra – a program valóban alkalmas-e a kapott probléma kezelésére. Ha valamely funkció nem működik, vagy hibásan működik, a nem működő feladatrész komplexitásával arányosan kerül levonásra pont.</td>
+<td><strong>arányosan</strong></td>
+</tr>
+<tr>
+<td><strong>Vizuális megjelenés és kezelhetőség</strong> vezérlők kézre eső, áttekinthető elhelyezése, átméretezhető ablakok kezelése, stb. Ha egy felhasználó ránéz a programra, akkor segítség nélkül rá tudjon jönni, hogyan kell használni. Itt kerül értékelésre az igényes megjelenés. A szürke háttéren szürke gombok is lehetnek igényesek, de egy egyszerű design sokat javíthat a megjelenésen. Ha javítás során a kódból kell kiovasni, hogy hogyan kell hasznáni a programot, 3 pont kerül levonsára. A kígyónál az irányításra az <code>ASWD</code> gombokkal illetve a nyilakkal történő irányítást ismertnek vesszük.</td>
+<td><strong>-3p</strong></td>
+</tr>
+<tr>
+<td><strong>Az alkalmazás hibatűrő képessége</strong>: itt azt vizsgáljuk, hogy hibás adatok megadásával meg lehet-e akasztani a program működését, vagy egy hiányzó, esetleg hibás adatokat tartalmazó fájl kezeletlen kivételt generál-e. A <code>try</code> <code>catch</code> blokkok fontos szerepet játszanak ebben a kategóriában. Ezen a kategórián legfeljebb 5 pontot lehet veszteni.</td>
+<td><strong>-5p</strong></td>
+</tr>
+<tr>
+<td><strong>Kód olvashatósáága</strong>: Itt kerül értékelésre a forráskód olvashatósága – beszédes változónevek, kód tördelése, megfelelő behúzások, stb. Működő, de olvashatatlan kódon egfeljebb 2 pont veszthető. A kód automatikus formázására érdems a <code>Ctrl</code> billentyű nyomvatartása mellett lenyomni a <code>K</code> majd a <code>D</code> billentyűket.</td>
+<td><strong>-2p</strong></td>
+</tr>
+<tr>
+<td><strong>Fájlok elérhetősége:</strong> Ha a projekt adatokat vagy képeket olvas fájlból, ezeket a projekthez kell adni, és a <code>Copy to output directory</code> megfelelő beállításával fordításkor a futtattható állomány mellé másoltatni. Ha abszolút elérési útvonal kerül beállításra (pl. <code>C:\User\......</code>, melyet javításkor át kell írni, 4 pont kerül levonásra.</td>
+<td><strong>-3p</strong></td>
+</tr>
+</tbody>
+</table>
+<h2 id="pótlási-lehetőség">Pótlási lehetőség</h2>
+<p>A vizsgaidőszak első péntekén de. 10 órára adtam le teremfoglalást, amit visszaigazolják, írok. Ezen alalommal egy ZH pótolható -- a projekt ZH is ZH-nak tekintendő.</p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/altinum/szamtud_docfx/blob/main/softec/beadandok/beadando/projekt_zh_ertekeles.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../styles/main.js"></script>
+    <script type="module" src="../../../styles/heatmap/main.js"></script>
+    <script type="module" src="../../../styles/heatmap/displayHeatmap.js"></script>
+    <script type="module" src="../../../styles/heatmap/manageHtmlChange.js"></script>
+    <script type="module" src="../../../styles/heatmap/intersectionObserver.js"></script>
+    <script type="module" src="../../../styles/heatmap/config.js"></script>  </body>
+</html>

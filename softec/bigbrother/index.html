@@ -1,0 +1,228 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>BigBrother </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="BigBrother ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <link rel="stylesheet" href="../../styles/heatmap.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../../toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        <div class="article row grid">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="bigbrother">BigBrother</h1>
+
+<p>A példa célja olyan kliens építése, mely naplózza a gépen történő szoftverhasználatot, és egy közös adatbázisba menti a hallgatóktól gyűjtött eredményeket. A gyakorlat során létre kell hozni egy második, külön projektet is, melynek segítségével lekérdezhetők és elemezhetők az eredmények. Tehát a gyakorlat végére lesz egy adatgyűjtő és egy adatmegjelenítő projekt.</p>
+<p>Ebben a példában két különböző programot is meg kell írni, és melyeknek egy közös adatbázishoz csatlakoznak. Mindkét feladatrészben valósítsd meg a megfelelő ORM osztályokat ugyanahhoz az adatbázishoz! A látványosabb eredmények elérése érdekében érdemes a közös központi adatbázissal dolgozni, amibe a teljes évfolyamról gyűjtött adatok belekerülnek.</p>
+<blockquote>
+<p>FIGYELEM!
+A feladatot eredetileg egyetemi géptermi gyakorlatra terveztük, ami adatvédelmi szempontból teljesen más, mint a saját gépünkről adatot gyűjteni és megosztani. Mielőtt futtatod az adatrögzítőt, nézd meg, mi van nyitva, vagy ha aggályod merül fel, ugord át az adatgyűjtéssel kapcsolatos lépéseket!</p>
+</blockquote>
+<h2 id="a-softwareusage-adatbázis">A SoftwareUsage adatbázis</h2>
+<p>Az adatbázis <strong>csak az egyetemi IP-tartományból vagy VPN-en</strong> keresztül érhető el!</p>
+<table>
+<tr><td>Szerver</td><td>bit.uni-corvinus.hu</td></tr>
+<tr><td>Felhasználónév</td><td>hallgato</td></tr>
+<tr><td>Jelszó</td><td>Password123</td></tr>
+<tr><td>Adatbázis</td><td>SoftwareUsage</td></tr>
+</table>
+<h2 id="i-rész-bigbrother-adatrögzítő-projekt-felépítése">I. rész: <em>BigBrother</em> adatrögzítő projekt felépítése</h2>
+<h4 id="bigbrother-ablak-beépítése">BigBrother ablak beépítése</h4>
+<p>(+/-) Hozz létre egy új <em>Windows Forms Application</em> projektet, de a neve NE legyen <code>BigBrother</code>, mert ez lesz a következő lépésekben betöltött <code>Form</code> neve is.
+(+/-) Töltsd le a <a href="BigBrother.zip">BigBrother.zip</a> állományt, és a benne levő két fájlt add hozzá a projekt könyvtáradhoz. (Legegyszerűbb behúzni egérrel.)
+(+/-)  Mindkét fájl elején cseréld le a névteret (Szoft2.Week10.BigBrother) a projekted nevére.</p>
+<h4 id="bigbrother-adatok-mentése">BigBrother adatok mentése</h4>
+<p>(+/-) A Form1 konstruktorában példányosítsd a <code>BigBrother</code> osztályt és rendelj eseménykezelőt az <code>AblakVáltás</code> eseményéhez.</p>
+<p>(+/-) Az <code>AblakVáltás</code> eseménykezelőben hozz létre egy új <code>SoftwareUsage</code> rekordot, és értelemszerűen töltsd fel a tulajdonságait az esemény argumentumában szereplő értékekkel. (Az ID automata számlálós kulcs mező, nem szabad feltölteni!)</p>
+<p>(+/-) Add hozzá az új rekordot az adatbázis tábládhoz.</p>
+<p>Megoldás:</p>
+<pre><code class="lang-csharp">public Form1()
+{
+    InitializeComponent();
+
+    BigBrother bb = new BigBrother();
+    bb.AblakVáltás += Bb_AblakVáltás;
+}
+
+private void Bb_AblakVáltás(object sender, AlkalmazásHasználatEventArgs e)
+{
+    // A program indulásakor még nincsenek feltöltve az argumentumok, és nem akarunk üres sorokat írni az adatbázisba!
+    if (e.Ablakcím == null ||
+        e.AlkalmazásNév == null ||
+        e.LoginNév == null)
+        return;
+
+    SoftwareUsage s = new SoftwareUsage();
+    s.WindowTitle = e.Ablakcím;
+    s.ApplicationName = e.AlkalmazásNév;
+    s.Login = e.LoginNév;
+    s.Time = (int)e.Idő;
+    context.SoftwareUsages.Add(s);
+    context.SaveChanges();
+}
+</code></pre>
+<p>Ha elkészültél, akkor futtasd a programot! A Form1 és a BigBrother ablakok is meg fognak nyílni. Óra végéig hagyd futni ezt a programot, és ne zárd be ezt a két ablakot (oldalra kihúzhatók, hogy ne legyenek útban). A program mostantól folyamatosan adatbázisba naplózza a gépeden történő ablakváltásokat.</p>
+<p>A továbbiakban nyiss egy új Visual Studio-t, és egy teljesen új projektbe dolgozz!</p>
+<h2 id="ii-rész-adatelemző-projekt-felépítése">II. rész: Adatelemző projekt felépítése</h2>
+<h3 id="felhasználói-felület">Felhasználói felület</h3>
+<p>Hozzd létre az ábrán látható elrendezést! A jobb alsó sarokban látható objektum egy <code>Chart</code>. (Behúzás után még oszlopdiagrammot mutat, később beállítjuk.)</p>
+<p><img src="letoltes.png" alt="kep2"></p>
+<h3 id="login-lista">Login lista</h3>
+<p>A bal oldali <code>ListBox</code>-ba kérdezd le a felhasználók Login neveit, és valósítsd meg hozzájuk a szűrést.</p>
+<p>A <code>SoftwareUsage</code> a táblában az egyes Login nevek többször is szerepelnek, de mi csak egyszer szeretnénk megjeleníteni őket a listában. Ehhez a lekérdezés után az aggregáló függvényekhez hasonlóan meg kell hívni a <code>Distinct()</code> metódust. Ez minden egyforma adatsort csak egyszer fog megjeleníteni, azonban a mi adatsorainknak van egy <code>ID</code> nevű kulcsmezője is, tehát minden sor különbözik. A <code>select</code> részben viszont le tudunk szűkíteni a lekérdezett adatokat kizárólag a Login-ra, és így már megfelelően működik majd a függvény. (Ezzel a megközelítéssel elhagyható a <code>DisplayMember</code> beállítása, hiszen csak egy mezőnk van, így a <code>ListBox</code> automatikusan tudja, hogy azt kell megjelenítenie.)</p>
+<p>Megoldás:</p>
+<pre><code class="lang-csharp">// Fontos, hogy csak a Login mező legyen lekérdezve, különben nem működik majd a Distinct parancs
+var logins = from x in context.SoftwareUsages
+             where x.Login.Contains(txtLoginFilter.Text)
+             select x.Login;
+// A listává alakítás előtt a Distinct paranccsal biztosítjuk, hogy minden login név csak egyszer szerepeljen a listában
+listLogin.DataSource = logins
+    .Distinct()
+    .ToList();
+</code></pre>
+<h3 id="kiválasztott-felhasználó-szoftverhasználatának-lekérdezése">Kiválasztott felhasználó szoftverhasználatának lekérdezése</h3>
+<p>(+/-) A projekt adatforrásai közé vedd fel a <code>SoftwareUsage</code> osztályt!</p>
+<p>(+/-) A felső rács adatforrásaként állítsd be a <code>SoftwareUsage</code> osztályt!</p>
+<p>(+/-) Rendelj eseménykiszolgálót a <code>ListBox</code> <code>SelectedIndexChanged</code> eseményéhez. Az eseménykiszolgálóban a felső rácsban jelenítsd meg a kiválasztott felhasználó összes ablakváltásáról rendelkezésre álló adatot! A lekérdezés eredményét kötheted a <code>softwareUsageBindingSource.DataSource</code>-án keresztül.</p>
+<pre><code class="lang-csharp">	var selectedLogin = (string)listBox1.SelectedItem; 
+	var applicationData = from x in context.SoftwareUsages where x.Login == selectedLogin select x; 
+	// A lekérdezést eredményét betöltjük a már korábban létrehozott BindingSource-ba, amit a design nézetben 	bekötöttünk a DataGridView adatforrásának 
+	softwareUsageBindingSource.DataSource = applicationData.ToList(); 
+</code></pre>
+<h3 id="szoftverhasználat-idejének-összesítése-alkalmazás-szerint">Szoftverhasználat idejének összesítése alkalmazás szerint</h3>
+<p>(+/-) Adj a projekthez egy <code>AppTime</code> osztályt</p>
+<pre><code class="lang-csharp">public class AppTime 
+{
+    public string ApplicationName { get; set; } 
+    public int Time { get; set; } 
+}
+</code></pre>
+<p>(+/-) Az új osztályt vedd fel a projekt adatforrásai közé: Build-eld a projektet és <code>DataSources</code> ablakban hozz létre egy adatkötött objektumot az új osztály alapján.</p>
+<blockquote>
+<p>Korábban csak adatbázis táblák esetén alkalmaztuk ezt a módszert, de bármilyen osztályból létre lehet hozni az adatkötött objektumokat. Az adattáblák esetén sem maguk a táblák, hanem az ORM során, a táblákból létrehozott osztályokat kötöttük be.</p>
+</blockquote>
+<p>(+/-) A jobb-alsó rács adatforrása legyan az <code>AppTime</code> osztály. Mikor beállítod tervezőből, létre fog jönni egy <code>appTimeBindingSource</code> is.</p>
+<p>(+/-) A <code>ListBox</code> <code>SelectedIndexChanged</code> eseménykiszolgálójában az előző LINQ lekérdezés eredményének felhasználásával összesítsd az időket alkalmazásonként!</p>
+<p>(+/-) <code>appTimeBindingSource.DataSource</code>-át a fenit lekérdezés eredményére.</p>
+<p>Megoldás:</p>
+<pre><code class="lang-csharp">// Csoportosítjuk a korábban lekérdezett adatokat az Applikáció neve szerint
+// A csoportokból egy-egy AppTime példányt hozunk létre
+// A csoportosításhoz használt mező(k) a Key tulajdonságból kérdezhetők le
+// Minden egyéb mezőt újabb LINQ segítségével lehet aggregálni (pl.: Sum)
+var appTimes = from x in applicationData
+               group x by new { x.ApplicationName } into g
+               select new AppTime()
+               {
+                   ApplicationName = g.Key.ApplicationName,
+                   Time = (from x in g select x.Time).Sum()
+               };
+// A lekérdezést eredményét betöltjük a már korábban létrehozott BindingSource-ba, amit a design nézetben bekötöttünk a Chart adatforrásának
+appTimeBindingSource.DataSource = appTimes.ToList();
+// Chart esetén ezzel a sorral lehet frissíteni a megjelenést, ha változtak a forrás adatok
+chart1.DataBind();
+</code></pre>
+<h4 id="chart-adatkötés">Chart adatkötés</h4>
+<p>A <code>Chart</code>-ban egy kőrdiagrammon szeretnénk megjeleníteni azt, hogy a jobb-alsó <code>DataGridView</code>-ban szereplő adatokat.</p>
+<p>(+/-) Az <code>appTimeBindingSource</code> legyen a <code>Chart</code> adatforrása!</p>
+<p>(+/-) A <code>Chart</code> objektumnak van egy <code>Series</code> tulajdonsága, ezen keresztül állíthatók be a megjelenítendő adatok. Akár több adatsort is meg lehet jeleníteni egy <code>Chart</code>-on, de mi most csak a meglévővel foglalkozunk. Minden hátralévő beállítás elvégezhető tervező nézetből.</p>
+<p>(+/-) Állítsd be <code>Chart</code>-ot kördiagram típusra, és határozd meg, melyik mezők jelenjenek meg az adatforrásból.</p>
+<p><img src="ChartSettings1.png" alt="kep3"></p>
+<p>(+/-) Azokat az applikációkat, amik kevesebb, mint az idő 10%-ban voltak használatban, vond össze egy <em>Other</em> nevű csoportba.</p>
+<p><img src="ChartSettings2.png" alt="kep4"></p>
+<p><img src="1619594759167.png" alt="1619594759167.png"></p>
+<p>(+/-) Kísérletezz a többi megjelenítési funkcióval! Változtasd meg a színeket, helyezd át másik oldalra a jelmagyarázatot, vagy jelenítsd meg a pontos értékeket is.</p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/altinum/szamtud_docfx/blob/main/softec/bigbrother/index.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+    <script type="module" src="../../styles/heatmap/main.js"></script>
+    <script type="module" src="../../styles/heatmap/displayHeatmap.js"></script>
+    <script type="module" src="../../styles/heatmap/manageHtmlChange.js"></script>
+    <script type="module" src="../../styles/heatmap/intersectionObserver.js"></script>
+    <script type="module" src="../../styles/heatmap/config.js"></script>  </body>
+</html>

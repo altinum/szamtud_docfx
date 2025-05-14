@@ -1,0 +1,190 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>2. ZH - foxtrot </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="2. ZH - foxtrot ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../../../favicon.ico">
+    <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../styles/docfx.css">
+    <link rel="stylesheet" href="../../../styles/main.css">
+    <link rel="stylesheet" href="../../../styles/heatmap.css">
+    <meta property="docfx:navrel" content="../../../toc.html">
+    <meta property="docfx:tocrel" content="../../../toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../../index.html">
+                <img id="logo" class="svg" src="../../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        <div class="article row grid">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="2-zh---foxtrot">2. ZH - foxtrot</h1>
+
+<h2 id="-ui-keret-létrehozása">🅐 UI keret létrehozása</h2>
+<p>❶ Hozz létre egy &quot;Windows Forms App&quot; alapú alkalmazást. Az induláskor megjelenő űrlap bal oldalán helyezz el négy gombot, és egy panelt!</p>
+<p>❷ A Panel kerete legyen vékony vonal.</p>
+<p>❸ A Panel az űrlap átméretezésekor kövesse az űrlap méretét!</p>
+<p>❹ Adj négy <code>UserControl</code>-t is a projekthez, elnevezésük tetszőleges! A következő feladatblokkokat ezekre a vezérlőkre kell majd megvalósítani.</p>
+<p>❺ A gombok megnyomására töröld a panel tartalmát, és helyezd el a gombhoz tartozó <code>UserControl</code>-t úgy, hogy kitöltse a panel teljes területét átméretezéskor is.</p>
+<h2 id="-usercontrol1--csv-állomány-beolvasása">🅑 UserControl1 : CSV állomány beolvasása</h2>
+<p>A <a href="konyv.txt">konyv.txt</a> fájlban található adatokat kell egy <code>DataGridView</code>-benmegjeleníteni.</p>
+<p>A fájl felépítése:</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>KonyvID </code></td>
+<td>a könyv azonosítója</td>
+<td></td>
+</tr>
+<tr>
+<td><code>Szerzo    </code></td>
+<td>a köny szerzője</td>
+<td></td>
+</tr>
+<tr>
+<td><code>Cim </code></td>
+<td>a könyv címe</td>
+<td></td>
+</tr>
+<tr>
+<td><code>KiadasEve </code></td>
+<td>az év, amikor kiadták a könyvet</td>
+<td></td>
+</tr>
+<tr>
+<td><code>Oldalszam   </code></td>
+<td>az oldalak száma a könyvben</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>❶ A csv állományt tedd be a projektbe, és másoltasd a futtatható állomány mellé <strong>-=VAGY=-</strong> a fálj legyen <code>OpenFileDialog</code> segítségével kitallózható!</p>
+<p>❷ Adj a projekthez egy osztályt, amely leképezi az állomány egy sorát!</p>
+<p>❸ A program legyen képes megnyitni az állományt, és a  ❸ sorait felolvasni egy <code>BindingList</code> típusú, <code>UserControl1</code> osztály szintjén létrehozott listába, majd ❹ ezeket megjeleníteni <code>BindingSource</code>-on keresztül egy <code>DataGridView</code>-ban.
+❺ A lehetséges hibákat kezeld!</p>
+<p><img src="image1.png" alt="image1"></p>
+<h2 id="-usercontrol1--új-rekord-rögzítése">🅒 UserControl1 : új rekord rögzítése</h2>
+<p>❶ Felugró ablakon keresztül legyen lehetőség új sor rögzítésére!</p>
+<p><img src="image6.png" alt="image6"></p>
+<h2 id="-usercontrol1--linq-lekérdezések">🅓 UserControl1 : LINQ lekérdezések</h2>
+<p>Hozz létre egy 'Érekességek' gombot, amelyre felugrik egy MessageBox, ami a következő kérdésekre ad nekünk választ:</p>
+<ul>
+<li><p>❶ Melyik évben lett kiadva a leghosszabb könyv?</p>
+</li>
+<li><p>❷ Átlagosan milyen hosszúak a 2000 után kiadott könyvek?</p>
+</li>
+</ul>
+<p><img src="image7.png" alt="image7"></p>
+<h2 id="-orm-osztályok-készítése">🅔 ORM osztályok készítése</h2>
+<p>❶ Telepítsd a NuGet csomagokat a projektbe:</p>
+<pre><code class="lang-powershell">Install-Package Microsoft.EntityFrameworkCore.SqlServer -Version 7.0.20
+Install-Package Microsoft.EntityFrameworkCore.Tools -Version 7.0.20
+</code></pre>
+<p>❷ Készítsd el a Scaffold parancs segítségével az adatbázist leképező osztályokat:</p>
+<pre><code class="lang-powershell">Scaffold-DbContext &quot;Data Source=bit.uni-corvinus.hu;Initial Catalog=se_pets;Persist Security Info=True;User ID=hallgato;Password=Password123;TrustServerCertificate=true&quot; Microsoft.EntityFrameworkCore.SqlServer -OutputDir PetsModels
+</code></pre>
+<p><img src="image-20250513220632338.png" alt="image-20250513220632338"></p>
+<h2 id="-usercontrol2--proceduredone-tábla-tartalmának-megjelenítése">🅕 UserControl2 : <code>ProcedureDone</code> tábla tartalmának megjelenítése</h2>
+<p>❶ Jelenítsd meg a(z) <strong>ProcedureDone</strong> tábla tartalmát rácsban a UserControl-on.  Az idegen kulcsok helyén hivatkozott táblából a megfelelő szövegek jelenjenek meg. Jelenjen meg az állat neve és az elvégzett beavatkozás neve is, és az, hogy mikor végezték a beavatkozást! Ne jelenjenek meg a felesleges technikai mezők.</p>
+<h2 id="-usercontrol3-állatok-fajonként">🅖 UserControl3: Állatok fajonként</h2>
+<p>Helyezz el a UserControl-on egy <code>ListBox</code>-ot és egy <code>DataGridView</code>-t!</p>
+<p>❶ Töltsd be a <strong>Species</strong> tábla tartalmát a ListBox-ba úgy, hogy a <strong>Name</strong> mező tartalma jelenjen meg benne.</p>
+<p>❷ A ListBox felett legyen egy TextBox, amellyel szűrni lehet a ListBox tartalmát. (Ezt a feladatrészt LINQ segítségével old meg!)</p>
+<p>❸ A ListBox mellett legyen egy DataGridView, amiben jelenítsed meg az <strong>Animal</strong> tábla tartalmának azon részét, ami a ListBox-ban éppen kiválasztott elemhez tartozik.</p>
+<h2 id="-usercontrol4--csv-export">🅔🅧🅣🅡🅐 UserControl4 : CSV Export</h2>
+<p>❶ A <code>UserControl4</code>-on jelenítsd meg a <code>Species</code> tábla tartalmát.</p>
+<p>❷ Gombnyomásra felugró <code>SaveFileDialog</code>-on keresztül mentsd a <code>Type</code> tábla tartalmát CSV állományba tetszőleges módszerrel!</p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/altinum/szamtud_docfx/blob/main/softec/zh2/foxtrot/foxtrot.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../styles/main.js"></script>
+    <script type="module" src="../../../styles/heatmap/main.js"></script>
+    <script type="module" src="../../../styles/heatmap/displayHeatmap.js"></script>
+    <script type="module" src="../../../styles/heatmap/manageHtmlChange.js"></script>
+    <script type="module" src="../../../styles/heatmap/intersectionObserver.js"></script>
+    <script type="module" src="../../../styles/heatmap/config.js"></script>  </body>
+</html>

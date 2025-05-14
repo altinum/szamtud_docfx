@@ -1,0 +1,250 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>IFS frakt&#225;lok - P&#225;fr&#225;nylev&#233;l rajzol&#225;sa </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="IFS frakt&#225;lok - P&#225;fr&#225;nylev&#233;l rajzol&#225;sa ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <link rel="stylesheet" href="../../styles/heatmap.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="ifs-fraktálok---páfránylevél-rajzolása">IFS fraktálok - Páfránylevél rajzolása</h1>
+
+<h2 id="videók">Videók</h2>
+<p>(!Vid) 1. videó</p>
+<div class="embeddedvideo"><iframe src="https://storage.altinum.hu/szoft1/S1graph_2.m4v" frameborder="0" allowfullscreen="true"></iframe></div>
+<p>(!Vid) 2. videó</p>
+<div class="embeddedvideo"><iframe src="https://storage.altinum.hu/szoft1/S1graph_3.m4v" frameborder="0" allowfullscreen="true"></iframe></div>
+<p>(!Vid) 3. videó</p>
+<div class="embeddedvideo"><iframe src="https://storage.altinum.hu/szoft1/S1graph_4.m4v" frameborder="0" allowfullscreen="true"></iframe></div>
+<p>(!Vid) 4. videó</p>
+<div class="embeddedvideo"><iframe src="https://storage.altinum.hu/szoft1/S1graph_5.m4v" frameborder="0" allowfullscreen="true"></iframe></div>
+<p><a href="http://paulbourke.net/fractals/ifs/">Macintosh IFS manual</a> -- Paul Bourke részletes leírása  az érdeklődőknek</p>
+<p><a href="http://www.hiddendimension.com/fractalmath/ifs_fractals_main.html">hiddendimension.com</a> -- További táblázatok IFS fraktálokhoz</p>
+<h2 id="az-algoritmus">Az algoritmus</h2>
+<p>:)</p>
+<p>Vegyünk a síkban egy P(x,y) pontot. Kezdetben x és y értéke legyen 0. Majd transzformáljuk a pontot az alábbiak szerint:</p>
+<p>$$x’ = ax + by + e$$
+$$y’ = cx + dy + f$$</p>
+<p>, ahol $x$ és $y$ az eredeti koordináták, $x’$ és $y’$ a transzformáltak. Az $a$, $b$, $c$, $d$, $e$, $f$ betűk pedig paraméterek, melyek a transzformációt jellemzik.</p>
+<p>A paramétereket, melyek a fraktált adják meg, egy táblázatban tároljuk. Az idodalomban előforduló klasszikus példának, a páfránynak így néz ki a táblázata:</p>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>a</th>
+<th>b</th>
+<th>c</th>
+<th>d</th>
+<th>e</th>
+<th>f</th>
+<th>P</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1.</td>
+<td>0.00</td>
+<td>0.00</td>
+<td>0.16</td>
+<td>0.00</td>
+<td>0.00</td>
+<td>0.00</td>
+<td>1%</td>
+</tr>
+<tr>
+<td>2.</td>
+<td>0.85</td>
+<td>0.04</td>
+<td>-0.04</td>
+<td>0.85</td>
+<td>0.00</td>
+<td>1.60</td>
+<td>85%</td>
+</tr>
+<tr>
+<td>3.</td>
+<td>0.20</td>
+<td>-0.26</td>
+<td>0.23</td>
+<td>0.22</td>
+<td>0.00</td>
+<td>1.60</td>
+<td>7%</td>
+</tr>
+<tr>
+<td>4.</td>
+<td>-0.15</td>
+<td>0.28</td>
+<td>0.26</td>
+<td>0.24</td>
+<td>0.00</td>
+<td>0.44</td>
+<td>7%</td>
+</tr>
+</tbody>
+</table>
+<p>A táblázat $a-f$  oszlopai tömb formájában tárolva az elgépelések elkerülésére</p>
+<pre><code class="lang-csharp">double[,] t = {
+    {0,0,0.16,0,0,0},
+    {0.85,0.04,-0.04,0.85,0,1.60},
+    {0.20,-0.26,0.23,0.22,0,1.60 },
+    {-0.15,0.28,0.26,0.24,0,0.44 }
+};
+</code></pre>
+<p>A fraktálrajzoló algoritmus mintegy 15 000-szer végrehajtja a következő műveletsort:</p>
+<ol>
+<li>választunk egy sort a táblázatból a P oszlopban szereplő valószínűséggel.</li>
+<li>elvégezzük a transzformációt a fenti képletbe behelyettesítve a választott sorban szereplő paramétereket és régi $x$, $y$ koordinátákat.</li>
+<li>$x=x', y=y'$ -- a következő iterációs lépésben abból a pontból indulunk ki, ahova ebben a lépében eljutottunk.</li>
+<li>Az új $(x'y)$ koordinátájú pontba rajzolunk egy pontot.</li>
+</ol>
+<p>Az eredményül kapott ábra néhány pixel méretű csak, ezért érdemes a kirajzolás előtt nagyítani.</p>
+<p><img src="fern.png" alt=""></p>
+<h2 id="megoldás-lépésről-lépésre">Megoldás lépésről-lépésre:</h2>
+<p>Rendelj eseménykezelőt a form <code>Paint</code> eseményéhez! A további műveleteket ebben az eseménykezelőben valósítsd meg.</p>
+<h3 id="rajzolóterület">Rajzolóterület</h3>
+<p>Ahhoz, hogy rajzolni tudjunk, először szükségünk lesz egy rajzolóterületre.</p>
+<ol>
+<li>Ehhez először tárold egy <code>Graphics</code> típusú változóba a form <code>CreateGraphics</code> tagfüggvényének visszatérési értékét.</li>
+<li>Majd hozz létre egy 500*500-as <code>Bitmap</code> típusú változót.</li>
+</ol>
+<h3 id="algoritmus">Algoritmus</h3>
+<p>Valósítsd meg a fent leírt algoritmust!</p>
+<ol>
+<li>Vegyél fel egy <code>x</code> és <code>y</code> törtszám típusú változót. Legyen a kezdőértékük 0.</li>
+<li>Vegyél fel egy 6 elemű törtszámokat tároló tömböt. Nem szükséges kezdőérték megadása.</li>
+<li>Példányosíts egy példányt a <code>Random</code> osztályból. Ezt fogjuk használni a valószínűség kezelésére.</li>
+<li>Indíts ciklust 1 és 15 ezer között. A ciklusban:
+4.1 Generálj egy véletlenszámot 0 és 1 között.
+4.2 A táblázatban  $P$ oszlopban szereplő értékek összesen 100% valószínűséget adnak ki (1+85+7+7 = 100). A generált véletlenszám, ha 0,01-nél kisebb, az első sort használjuk, ennek valószínűsége 1%. Egyébként, ha 0.86-nál kisebb, akkor a második sort, ennek valószínűsége 85%, és így tovább. Töltsd be a valószínűségnek megfelelő értékeket a táblázatból a 2. lépésben deklarált tömbbe, ehhez felhasználhatod a segítségképpen fent beillesztett mintát.
+4.3 Végezd el a transzformációt az <code>x</code> és <code>y</code> változók értékei alapján. Mivel az y kiszámításához szükséges az x eredeti értéke, ezért a transzformáció eredményét két új változóba tárold, majd másold vissza az eredményt az x és y változókba!
+4.4 A rajzoláshoz egész típusú változókra lesz szükségünk, így vegyél fel <code>rajzx</code> és <code>rajzy</code> néven két int típusú változót és tárold bennük x és y kerekített, és egész számmá csonkolt változatát.
+4.5 Rajzolj egy pixelt az új koordináták helyén az előzőekben létrehozott bitmapre. A szín legyen <code>Color.Green</code>.</li>
+<li>A ciklus után a bitmapet rajzold ki a rajzolóterületre a <code>DrawImage</code> tagfüggvény segítségével!</li>
+</ol>
+<h3 id="transzformációk">Transzformációk</h3>
+<ol>
+<li>Futtatva a programot ehhez hasonló hibaüzenetbe ütközünk: <em>&quot;A paraméter értékének pozitívnak és a szélességnél (Width) kisebbnek kell lennie.&quot;</em>
+1.1 Könnyen látható, hogy lehetséges negatív érték, így <code>rajzx</code> és <code>rajzy</code> változók értékét módosítsd nullára, ha értékük kisebb annál.
+1.2 Szintén látható, hogy elméletileg a rajzterületünk határain túlra is nyúlhat a kiszámított koordináta, így ha <code>rajzx</code> illetve <code>rajzy</code> b szélességénél illetve magasságánál nagyobb, akkor állítsd be számukra azt. (Figyelem, egy 500 szélességű/magasságú bitmapra 0 és 499 között lehet rajzolni.)</li>
+<li>Ismét futtatva a programot látható, hogy a kirajzolt ábra nagyon apró. Szorozd meg <code>rajzx</code> és <code>rajzy</code> változókba tárolt értéket 40-el. Az eredeti, kiszámított $x$ és $y$ maradjon változatlan!</li>
+<li>Futtatva a programot most már jobban látható a páfrány, de meg kell fordítani, azaz az X tengely mentén tükrözni. Ehhez az $y$ koordinátát kifejező <code>rajzy</code> változó értékét kell transzformálni olyan módon, hogy az eredmény a <code>bitmap</code> magassága és a <code>rajzy</code> koordináta értékének különbsége legyen.
+4 Már csak az a probléma maradt, hogy a túlnyúlások kezelése okán az ábra egy része hiányzik. Ehhez egy újabb transzformációra van szükség: el kell tolni az $x$ és $y$ koordinátákat olyan mértékben, hogy 0&lt;=<code>rajzx</code>&lt;szélesség illetve 0&lt;=<code>rajzy</code>&lt;magasság teljesüljön a koordinátákra a rajzterületen. Ezt az egyszerűség kedvéért becsüljük meg, és a becsült eltolást adjuk a rajzx és rajzy változókhoz. Próbálgatással látható, hogy $x$ esetén 100, $y$ esetén -100 etolás megfelelőnek látszik.</li>
+</ol>
+<h3 id="felhasználói-felület">Felhasználói felület</h3>
+<ol>
+<li>A programot elindítva láthatjuk, hogy ha átméretezzük az ablakot, akkor a program újrajrajzolja a páfrányt, de az eredetit is megtartja. Töröljük a felületet mielőtt rajzolásba fogunk, a <code>Graphics</code> példány <code>Clear</code> tagfüggvényével. A <code>Clear</code> tagfüggvénynek egy paramétere van: a szín, amellyel törölni szeretnénk. A Windows-beli alapértelmezett színeket a <code>SystemColors</code> osztályban találjuk, az ablak alapértelmezetten <code>SystemColors.Control</code> színű. Futtatva a programot látható, hogy a páfrány újrarajzolódik, de már nem egymáson vannak az ábrák.</li>
+<li>Szervezzük ki a rajzolást a <code>Form.Paint</code> eseményből egy külön tagfüggvénybe. A tagfüggvényt továbbra is meghívhatjuk a <code>Form.Paint</code> eseményből.</li>
+<li>Vegyünk fel egy textboxot, amiben megadhatjuk a méret szorzót. A méretezés transzformációt az ide beírt értékkel végezzük el az érték változásakor. Figyeljünk a hibakezelésre, csak akkor rajzoljuk újra az ábrát, ha a beírt érték egész szám!</li>
+</ol>
+<h3 id="extra">Extra</h3>
+<ol>
+<li>Próbáljunk másik vezérlőtípust keresni a toolboxban, amely alkalmasabb lehet a méret megadásának céljára!</li>
+<li>A természetben a növények ritkán egyszínűek. Az egyes pixeleket véletlenszerűen színezzük zöld valamelyik árnyalatára!</li>
+<li>A komplexitás, azaz, hogy hány lépésben rajzoljuk ki a páfrányt, szintén alapvetően befolyásolja az ábránk minőségét. Oldjuk meg ezt is, a méret mintájára, egy másik vezérlővel.</li>
+</ol>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/altinum/szamtud_docfx/blob/main/softec_kk/grafika_ifs_reszletes/index.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+    <script type="module" src="../../styles/heatmap/main.js"></script>
+    <script type="module" src="../../styles/heatmap/displayHeatmap.js"></script>
+    <script type="module" src="../../styles/heatmap/manageHtmlChange.js"></script>
+    <script type="module" src="../../styles/heatmap/intersectionObserver.js"></script>
+    <script type="module" src="../../styles/heatmap/config.js"></script>  </body>
+</html>

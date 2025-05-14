@@ -1,0 +1,323 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>CSV &#225;llom&#225;nyok &#233;s adatk&#246;t&#233;s </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="CSV &#225;llom&#225;nyok &#233;s adatk&#246;t&#233;s ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <link rel="stylesheet" href="../../styles/heatmap.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../../toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        <div class="article row grid">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="csv-állományok-és-adatkötés">CSV állományok és adatkötés</h1>
+
+<h2 id="bevezetés">Bevezetés</h2>
+<p>A heti feladatsor egyben minta ZH-ként is szolgál.</p>
+<p>Az előadás és gyakorlat fő célja az adatkötés bemutatása. Adatkötések (<em>data binding</em>) segítségével elérhető, hogy két tulajdonság értéke mindig szinkronban legyen egymással. Összeköthető például egy szövegdoboz <code>Text</code> tulajdonsága egy objektum valamely <code>string</code> típusú tulajdonságával. Ha a szöveg megváltozik a szövegdobozban, a változás automatikusan átkerül az objelktum kötött tulajdonságába. Az adatkötések nagyon leegyszerűsítik a fejlesztést, hosszas és unalmas kódolás helyett pillanatok alatt látványos eredmények érhetőek el a tervezőben.</p>
+<p>A gyakorlati példa az európai országok területét és lakosságát tartalmazó CSV állományt használ.</p>
+<h2 id="előkészületek">Előkészületek</h2>
+<p>Hozz létre egy projektet a <code>Forms Application</code> projektsablon alapján, majd projektben egy szövegfájlt <code>european_countries.csv</code> néven az alábbi tartalommal.  Legegyszerűbb, ha a projekten melül hozol létre egy szövegfájlt, aminek aztán <code>.csv</code> kitrejesztést adsz!</p>
+<pre><code>Name,Population,AreaInSquareKm
+Albania,2862427,28748
+Andorra,77265,468
+Austria,8917205,83879
+Belarus,9449323,207600
+Belgium,11589623,30528
+Bosnia and Herzegovina,3280819,51209
+Bulgaria,6948445,110879
+Croatia,4105267,56594
+Cyprus,1207359,9251
+Czech Republic,10625695,78866
+Denmark,5818553,42924
+Estonia,1326535,45227
+Finland,5523231,338424
+France,67060000,551695
+Germany,83020000,357578
+Greece,10423054,131957
+Hungary,9773000,93030
+Iceland,343353,102775
+Ireland,4921500,70273
+Italy,60390560,301340
+Kosovo,1845300,10887
+Latvia,1909000,64562
+Liechtenstein,38813,160
+Lithuania,2795335,65300
+Luxembourg,625978,2586
+Malta,514564,316
+Moldova,2681735,33846
+Monaco,38300,2
+Montenegro,622359,13812
+Netherlands,17181084,41543
+North Macedonia,2077132,25713
+Norway,5391369,385207
+Poland,37976687,312696
+Portugal,10276617,92212
+Romania,19237691,238397
+Russia,146171015,17098242
+San Marino,33864,61
+Serbia,6982084,88361
+Slovakia,5467093,49035
+Slovenia,2078654,20273
+Spain,46733038,505990
+Sweden,10367395,450295
+Switzerland,8654622,41285
+Ukraine,44385155,603500
+United Kingdom,67886011,242495
+Vatican City,800,0
+</code></pre>
+<div class="NOTE">
+<h5>Note</h5>
+<p>Ne felejtsd el beállítani a <code>Copy to output directory</code>-t!</p>
+</div>
+<p>Ezután hozz létre egy egyszerű űrlapot:</p>
+<p><img src="image-20240409132717658.png" alt="image-20240409132717658"></p>
+<h2 id="a-megoldás-menete">A megoldás menete</h2>
+<h3 id="1-csvhelper-nuget-csomag-telepítése">1. <code>CsvHelper</code> NuGet csomag telepítése</h3>
+<p>A CSV állományokat fel lehet úgy is olvasni ahogy a múltkor csináltunk: <code>StreamReader</code> osztály segítségével soronként, majd a sorokat a <code>Split()</code> metódus metódus segítségével valamilyen elválasztó karakter mentén tömbbe tördelve. Létezik egy könnyebb út is! C# nyelvhez több csomag is létezik, amely kész osztályt tartalmaz CSV állományok kezeléséhez. A gyakorlaton a <code>CsvHelper</code> csomagot használjuk, amit a Visual Studio beépített beépített csomagkezelőjén a NuGet-en keresztül telepítünk. Ha valakinek nem szimpatikus a <code>CsvHelper</code>, használhatja a két héttel ezelőtt alkalmazott megoldást is - most is és a ZH-ban is.</p>
+<p>A első lépés tehát a <code>CsvHelper</code> NuGet csomag telepítése pár kattintással. Illetve két megoldás létezik, egy parancssoros és egy grafikus.</p>
+<p><strong>A grafikus felület</strong> a  <code>Tools</code> menü, ezen belül <code>NuGet package manager</code>, majd a <code>Manage Packages for Solution</code> menüpont alól érhető el:</p>
+<p><img src="nuegt.png" alt="image-20240409122052533"></p>
+<p><strong>A Parancssoros</strong> a <code>Tools</code> menü, ezen belül <code>NuGet package manager</code>, majd <code>Package Manager console</code> menüpont kiválasztása után érhető el, és a</p>
+<pre><code class="lang-mathematica">Install-Package CsvHelper
+</code></pre>
+<p>paranccsal telepíthető a csomag.</p>
+<p>Bármelyik utat választod, telepítés után a <em>Solution Explorer</em>ben a projekt függőségei között látható a telepített csomag:</p>
+<p><img src="solution_explorer_dependency.png" alt="image-20240409122328780"></p>
+<h3 id="2-csv-állománynak-megfelelő-osztály-létrehozása">2. CSV állománynak megfelelő osztály létrehozása</h3>
+<p>Ezután meg kell vizsgálni a feldolgozandó állományt, és el kell készíteni azt az osztályt, mely az állományban szereplő sorokat reprezentálja:</p>
+<pre><code class="lang-c#">public class CountryData
+{
+    public string Name { get; set; } = string.Empty;
+    public long Population { get; set; }
+    public double AreaInSquareKm { get; set; }
+}
+</code></pre>
+<p>Ebben nincs újdonság. A típusokra érdemes odafigyelni.</p>
+<div class="IMPORTANT">
+<h5>Important</h5>
+<p>A CsvHelper használatánál nagyon fontos, hogy az osztályban szereplő tulajdonságok nevei megegyezzenek a CSV fájl első sorában lévő nevekkel! Ezért érdemes a neveket vágólapon keresztül átvinni a kódba.</p>
+</div>
+<h3 id="3-adatköthető-lista-létrehozása">3. Adatköthető lista létrehozása</h3>
+<p>Osztály szinten létre kell hozni egy listát, melynek elemtípusa az előbb létrehozott osztály. Ebben tároljuk majd a fájlból beolvasott adatokat. Annyi különbség lesz a megszokotthoz képest, hogy nem <code>List&lt;&gt;</code>-et használunk, hanem <code>BindingList&lt;&gt;</code>-et. Ez utóbbi képes arra, hogy ha a memóriában megváltozik a lista, a <code>DataGridView</code>, illetve a többi adatkötött vezérlő tartalma automatikusan frissüljön.</p>
+<pre><code class="lang-c#">public partial class Form1 : Form
+{
+    BindingList&lt;CountryData&gt; countryList = new();
+    
+    public Form1()
+    {
+        InitializeComponent();
+    }
+    ...
+</code></pre>
+<p>Az <code>BindingList</code>-ek elsősorban olyan vezérlők adatforrásaikont használhatók fel, melyek alkalmasak több elem megjelenítésére is, mint  pl: <code>ListBox</code>, <code>DataGridView</code>. Ilyenkor lehetőség van arra is, hogy a felhasználó egy megfelelő vezérlőn keresztül szerkessze listát. Ehhez mindössze be kell állítani, hogy az adatkötött lista legyen a vezérlő adatforrása (<code>DataSource</code>):</p>
+<pre><code class="lang-c#">public partial class Form1 : Form
+{
+    BindingList&lt;CountryData&gt; countryList = new();
+    
+    public Form1()
+    {
+        InitializeComponent();
+        dataGridView1.DataSource = countryList;
+    }
+</code></pre>
+<h3 id="4-a-fájl-feldolgozása">4. A fájl feldolgozása</h3>
+<p>A következő lépés a fájl megnyitása és a CSV fájl feldolgozása:</p>
+<pre><code class="lang-csharp">private void button1_Click(object sender, EventArgs e)
+{
+    StreamReader sr = new StreamReader(&quot;european_countries.csv&quot;);
+    var csv = new CsvReader(sr, CultureInfo.InvariantCulture);
+    var tömb = csv.GetRecords&lt;CountryData&gt;();
+    foreach (var item in )
+    {
+        countryList.Add(item);
+    }
+}    
+</code></pre>
+<p>Vagy így:</p>
+<pre><code class="lang-c#">private void button1_Click(object sender, EventArgs e)
+{
+    using (var reader = new StreamReader(&quot;european_countries.csv&quot;))
+    using (var csv = new CsvReader(reader, CultureInfo.InvariantCulture))
+    {
+        var x = csv.GetRecords&lt;CountryData&gt;();
+        foreach (var item in x)
+        {
+            countryList.Add(item);
+        }
+    }
+}
+</code></pre>
+<p>Miután feltöltöttük a listát össze lehet kötni a <code>DataGridView</code> <code>DataSource</code> tulajdonságát a listával. Ugyanez az adatkötés levégezhető a konstruktorban vagy az űrlap <code>Load()</code> metódusában is - ahogy már meg is tettük -, hiszen amint változik a lista tartalma, a változás megjelenik a rácsban.</p>
+<p>Ha mindent jól csináltál, a gombra kattitnva mejelenik a fájl tartalma a rácsban.</p>
+<h3 id="5-adatkötött-vezérlők">5. Adatkötött vezérlők</h3>
+<p>Az adatköthető rács nagyon hasznos vezérlő, de használatánál eddig nehézséget jelentett, hogy tervező nézetben nem tudtunk változtatni a tartalmán. Ezen segít a <code>BindingSource</code>.</p>
+<p>A <code>BindingSource</code> egy speciális adatkötött objektum. <strong>Egyszerre több vezérlő adatforrásaként is be lehet állítani, és van saját adatforrása is.</strong> Lényegében egy köztes szereplő, melynek segítségével más adatkötött objektumokat több különböző vezérlőhöz is hozzá tudunk rendelni. A <code>BindingSource</code> képes kezelni a kiválasztott elemeket is, így, ha az egyik vezérlőben kiválasztunk egy elemet egy listából, a másikban is megváltozik a kijelölés. Lehetőség van a kiválasztott elem törlésére, is a <code>BindingSource</code>-on keresztül.</p>
+<p>A <code>BindingSource</code>-nak van egy másik hasznos felhasználási módja: tervező nézetben be lehet állítani egy oszályt (típust) adatforrásként. Ha ezt megtettük, az adatkötött vezérlőhöz kötött vezérlőkben, például <code>DataGridView</code>-ban tervező nézetben is lehet szerkeszteni az oszlopokat. (Jobb felső sarokban lévő kis fül, majd <em>Edit columns</em>)</p>
+<p>Az alábbi lépéssorozat eredményeként létrejön egy <code>BindingSource</code> az űrlap alatt:</p>
+<p><img src="add_datasource.gif" alt="add_datasource"></p>
+<div class="IMPORTANT">
+<h5>Important</h5>
+<p>Csak <em>build</em> után lehet kiválasztani egy osztályt adatforrásként.</p>
+</div>
+<p>Ezután érdemes megváltozatni az adatkötést úgy, hogy</p>
+<ul>
+<li>a <code>DateGridView</code> adatforrása legyen a <code>countryBindingSource</code>,</li>
+<li>a <code>countryBindingSource</code> adatforrása pedig a <code>countryList</code>!</li>
+</ul>
+<pre><code class="lang-csharp">public Form1()
+{
+    InitializeComponent();
+    countryDataBindingSource.DataSource = countryList;
+    dataGridView1.DataSource = countryDataBindingSource;
+}
+</code></pre>
+<h2 id="adatok-kezelése">Adatok kezelése</h2>
+<h3 id="rekord-törlése">Rekord törlése</h3>
+<p>Kezdjük a rombolással :) A <code>BindingSource</code> találó nevű metódust tartalmaz a feladat elvégzésére:</p>
+<pre><code class="lang-csharp">private void buttonDelete_Click(object sender, EventArgs e)
+{
+    countryDataBindingSource.RemoveCurrent();
+}
+</code></pre>
+<p>Ha szeretnél megerősítő kérdést a pusztítás előtt, fordulj a ChatGPT-het, Bing Copilot-hoz, vagy bárakárkihez:</p>
+<pre><code>How to display a message box in c# forms app displaying a question, a yes and a no button and branch the code depending on the user's choice?
+</code></pre>
+<h3 id="rekord-szerkesztése">Rekord Szerkesztése</h3>
+<h3 id="űrlap-készítése">Űrlap készítése</h3>
+<p>Készítsétek egy űrlapot három szövegdobozzal és egy gombbal:</p>
+<p><img src="form2.png" alt="image-20240409144214142"></p>
+<p>Adjatok egy <code>BindigSource</code>-ot is tervezőből az űrlaphoz tervezőből. <code>bindingSource1</code> néven fog megjelenni az űralp alatt, mivel nincs vizuális reprezentációja. Az adatforrását űééítsd be a <code>CountryData</code>-ra!</p>
+<p>Ezután már hozzá tudod kötni a <code>TextBox</code>-okat a <code>bindingSource1</code> -hez:</p>
+<p><img src="set_textbox_databinding.gif" alt="set_textbox_databinding"></p>
+<pre><code class="lang-c#">public partial class FormCountryEdit : Form
+{
+    public CountryData CountryData;
+
+    public FormCountryEdit()
+    {
+        InitializeComponent();
+    }
+
+    private void FormCountryEdit_Load(object sender, EventArgs e)
+    {
+        bindingSource1.DataSource = CountryData;
+    }
+}    
+</code></pre>
+<p>A <code>Form1</code>-ből így kell megnyitni:</p>
+<pre><code class="lang-csharp">private void buttonEdit_Click(object sender, EventArgs e)
+{
+    FormCountryEdit fce = new FormCountryEdit();
+    fce.CountryData = countryDataBindingSource.Current as CountryData;
+    fce.Show();
+}
+</code></pre>
+<p><img src="working_databinding.gif" alt="working_databinding"></p>
+<p>A mentés sem nehéz:</p>
+<pre><code class="lang-csharp">private void buttonSave_Click(object sender, EventArgs e)
+{
+    using (var writer = new StreamWriter(&quot;countries.csv&quot;))
+    using (var csv = new CsvWriter(writer, CultureInfo.InvariantCulture))
+    {
+        // Write records to the CSV file
+        csv.WriteRecords(countryList);
+    };
+}
+</code></pre>
+<p>:)</p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/altinum/szamtud_docfx/blob/main/softec/csv_databinding/index.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+    <script type="module" src="../../styles/heatmap/main.js"></script>
+    <script type="module" src="../../styles/heatmap/displayHeatmap.js"></script>
+    <script type="module" src="../../styles/heatmap/manageHtmlChange.js"></script>
+    <script type="module" src="../../styles/heatmap/intersectionObserver.js"></script>
+    <script type="module" src="../../styles/heatmap/config.js"></script>  </body>
+</html>

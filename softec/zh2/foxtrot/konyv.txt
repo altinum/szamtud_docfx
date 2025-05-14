@@ -1,0 +1,51 @@
+KonyvID,Szerzo,Cim,KiadasEve,Oldalszam
+1,John Doe,Az elveszett város,1995,320
+2,Jane Smith,A titok nyitja,2001,215
+3,Alan Poe,Régi idők folyói,1988,198
+4,Mary Johnson,A hajnal éneke,2015,234
+5,Peter Brown,Titkok és árnyak,2005,310
+6,Emily White,A remény színei,1999,289
+7,David Wilson,A tenger szava,2010,210
+8,Lisa Black,A hegyek alatt,2003,180
+9,Michael Green,Kertek és kastélyok,1992,220
+10,Rachel Moore,Világok közt,2018,350
+11,Chris Johnson,A végtelen út,1993,305
+12,Susan Clark,Fények és árnyak,2008,195
+13,Arthur Knight,Múlt és jövő,2012,250
+14,Emma Carter,Éjszaka a városban,2007,202
+15,Oliver Stone,Kalandok szigete,1998,320
+16,Sophie Wells,Az idő kapui,2000,265
+17,Jack White,Homok viharai,1996,285
+18,Megan Brown,A régi torony,1987,234
+19,Tom Harris,Az új kezdet,2021,248
+20,Lucy Green,A kék rózsa,2002,320
+21,George Martin,A kardok vihara,2011,515
+22,Patricia Kelly,Eszmélet,2013,198
+23,Harry Wilson,Az égig érő fa,2014,175
+24,Grace Lee,Napkelte parton,2009,198
+25,Louis Carter,Az elvarázsolt kert,2017,210
+26,Ian Black,Tengeri legendák,1990,240
+27,Diana Ward,Szürke városok,2016,320
+28,Marie Foster,Szivárvány hídja,2014,275
+29,Edward Moore,A végtelen labirintus,2006,310
+30,William Hill,A titkos ügynök,2003,205
+31,Richard Stone,Éjféli találkozó,2015,265
+32,Anna Wright,A kastély árnyékában,2020,245
+33,Robert Young,A zöld ösvény,1994,305
+34,Linda Hall,Messze szigetek,2013,270
+35,Nancy Black,Rejtett ösvények,2011,215
+36,Jennifer Carter,Éjféli álmok,2019,320
+37,Kevin Miller,Tűzgyűrű,1991,295
+38,Elizabeth Taylor,Napfoltok,2004,280
+39,Stephen Fox,A titokzatos erdő,2008,225
+40,Brian Wilson,Az éji fények,2007,250
+41,Rose Parker,A látomás,1997,315
+42,Donald White,A völgy titka,1999,310
+43,Geraldine Brooks,Halál és szerelem,2016,220
+44,Neil Grant,A folyók dalai,2017,305
+45,Steven Hill,Hajnalhasadás,2002,340
+46,Betty Adams,Az utolsó kapu,2011,360
+47,Charlotte Green,Viharok között,2013,200
+48,Francis Wood,Mélység és magasság,2019,255
+49,Martin Phillips,Sötét horizontok,2020,235
+50,Julia Roberts,A sivatag szíve,2005,260

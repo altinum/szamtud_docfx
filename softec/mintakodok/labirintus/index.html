@@ -1,0 +1,253 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Labirintus j&#225;t&#233;k </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Labirintus j&#225;t&#233;k ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../../../favicon.ico">
+    <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../styles/docfx.css">
+    <link rel="stylesheet" href="../../../styles/main.css">
+    <link rel="stylesheet" href="../../../styles/heatmap.css">
+    <meta property="docfx:navrel" content="../../../toc.html">
+    <meta property="docfx:tocrel" content="../../../toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../../index.html">
+                <img id="logo" class="svg" src="../../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        <div class="article row grid">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="labirintus-játék">Labirintus játék</h1>
+
+<div class="NOTE">
+<h5>Note</h5>
+<p>Az alábbi kódrészlet nincs kidolgozva, csak elindulni segíthet a problémamegoldásban.</p>
+</div>
+<pre><code class="lang-c#">namespace Labirintus
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        PictureBox player = new PictureBox();
+
+        List&lt;PictureBox&gt; bricks = new List&lt;PictureBox&gt;();
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            StreamReader sr = new StreamReader(&quot;maze1.txt&quot;);
+            int y = 0;
+            while (!sr.EndOfStream)
+            {
+                string sor = sr.ReadLine();
+                for (int x = 0; x &lt; sor.Length; x++)
+                {                    
+                    if (sor[x] == '#')
+                    {
+                        PictureBox pb = new PictureBox();
+                        pb.Location = new Point(x * 20, y * 20);
+                        pb.Size = new Size(20, 20);
+                        pb.BackColor = Color.Black;
+                        this.Controls.Add(pb);
+                        bricks.Add(pb);
+                    }                                                        
+                }
+                y++;
+            }
+
+            player.Location = new Point(0, 0);
+            player.Size = new Size(20, 20);
+            player.BackColor = Color.Red;
+            Controls.Add(player);    
+
+            KeyDown += Form1_KeyDown; 
+        }
+
+        private void Form1_KeyDown(object? sender, KeyEventArgs e)
+        {
+            int x = player.Location.X;
+            int y = player.Location.Y;
+
+            if (e.KeyCode == Keys.Right)
+            {
+                x += 20;
+            }
+
+            if (e.KeyCode == Keys.Left)
+            {
+                x -= 20;
+            }
+
+            if (e.KeyCode == Keys.Up)
+            {
+                y -= 20;
+            }
+
+            if (e.KeyCode == Keys.Down)
+            {
+               y += 20;
+            }
+
+            var wall = bricks.FirstOrDefault(w =&gt; w.Location.X == x &amp;&amp; w.Location.Y == y);
+            if (wall == null)
+            {
+                player.Location = new Point(x, y);
+            }   
+        }
+    }
+}
+</code></pre>
+<p>Ez volt a <code>maze1.txt</code> tartalma, amit a feladatkiírásban szereplő linken lévő generátorral készítettünk:</p>
+<pre><code>...########################################################################################
+......#........#..#.....#....................#........#..............#...........#..#.....#
+#..#######..####..#..#######..#######..#..####..####..#..####..#######..#..####..#..####..#
+#........#.....#........#.....#........#........#.....#..#........#.....#..#........#..#..#
+#..####..####..#..###################..##########..#######..####..####..#############..#..#
+#..#..#.......................#.....#..#.....#.....#...........#..#.......................#
+####..#..####..#############..#..#..#..####..#############..####..#..####..##########..####
+#..#........#..............#.....#..#...........#..#..#..#.....#........#........#..#..#..#
+#..#..#############..#######..#######..#######..#..#..#..####..#######..#######..#..#..#..#
+#.....#..#.....#..#.....#.....#..#........#.....#...........#..#.....#..#.....#.....#.....#
+#######..####..#..#..####..####..#..##########..#..#..####..#######..####..####..#######..#
+#...........#..#........#..#.................#.....#..#..#...........#.....#...........#..#
+#..#..#..####..##########..##########..##########..####..#######..####..####..##########..#
+#..#..#........#..#..#........#.....#..#..#........#..#.....#..#..#.....#.....#.....#.....#
+#..####..#..####..#..####..#######..#..#..#..#..####..####..#..#######..#..#######..####..#
+#.....#..#..#..#.....#..#.....#...........#..#..#..............#.....#.....#..#........#..#
+####..#######..#..####..#..#..##########..#######..#..#######..#..#..#######..####..####..#
+#.....#..#..............#..#.....#..............#..#........#..#..#..#....................#
+####..#..#..###################..#..####..#######..#..####..####..####..#######..#..#..####
+#.....#.....#........#.................#........#..#.....#.....#..#..#........#..#..#..#..#
+####..####..#..#############..#######..#..####..#..#######..#..#..#..####..####..####..#..#
+#.................#..............#..#..#.....#.....#........#.................#..#........#
+####..####..####..####..#######..#..###################..#######..#######..#..#######..#..#
+#.....#..#..#..#..#........#.....#.....#...........#........#..#..#.....#..#..#.....#..#..#
+####..#..####..##########..#######..####..#..####..####..####..#..#..##########..#######..#
+#..#..#.....#.....#........#.....#........#.....#.....#.....#........#........#..#.....#..#
+#..#..####..#..#..#..#..####..#..####..#..#..###############################..#..####..#..#
+#..............#.....#..#.....#........#..#.....#...........#..#..#........#........#.....#
+####..#..##########..#..#..#..#..#..#..#..##########..#..#..#..#..#..#..#..####..#######..#
+#.....#..#.....#..#..#.....#..#..#..#..#..#...........#..#..#.....#..#..#...........#.....#
+#..####..####..#..#..#######..#..####..#############..##########..####..#######..##########
+#.....#...........#..#.....#..#..#........#..#..#.............................#.....#.....#
+#..#..#######..####..#..####..#############..#..#..#..#..#######..################..####..#
+#..#..#..#........#.....#...........#...........#..#..#........#.....#.....#.....#........#
+#..#..#..###################..#############..##########..##########..####..####..#..#..####
+#..#.....#.....#..#.....#..#.....#.....#.....#.....#........#..............#..#.....#..#..#
+####..####..#..#..#..####..#######..####..#..####..#..#..#..#############..#..#######..#..#
+#........#..#..#..#........#..#..#.....#..#.....#.....#..#..#........#..#.....#...........#
+####..#######..#..#######..#..#..#..##########..####..#######..#..####..#..##########..#..#
+#..#.....#.......................#.....#....................#..#..#........#.....#.....#..#
+#..####..#..####..####..####..####..#..#..#..#..#######..####..#..####..#..#..#..##########
+#........#..#.....#........#..#.....#.....#..#..#........#..#..#........#.....#..#........#
+#..#..####..#..#######..################..#..#######..#..#..#######..####..####..#..####..#
+#..#..#.....#..#..............#........#..#..#........#.....#.....#.....#..#...........#..#
+####..#..#..#######..####..#..####..#..#######..##########..#..#######..################..#
+#.....#..#.....#..#.....#..#..#..#..#...........#..............#.....#..#..#..#...........#
+#..#..#..#######..#######..####..##########..#######..#..##########..####..#..####..####..#
+#..#........#........#.....#.................#........#.....#..#..#..#..#...........#.....#
+#######..#######..#..####..#######..################..#######..#..#..#..#..####..#######..#
+#...........#..#..#..#..............#...........#..#..#..#..#...........#..#..#..#........#
+#..##########..#..##########..####..####..####..#..#..#..#..#..##########..#..##########..#
+#.................#.....#..#.....#.....#.....#..#..............#.....#..#..#.....#..#.....#
+#..##########..#..#..####..#..#..#..####..####..#..#..#######..#..####..#######..#..####..#
+#.....#..#.....#..#.....#.....#..#.....#..#..#..#..#........#..#....................#..#..#
+#..####..#..#..#######..###################..#..#..##########..#..#############..#..#..#..#
+#........#..#..............#........#.....#.....#.....#........#.....#..#..#.....#.....#..#
+####..#..#..#..#######..#..#..##########..#..#..#######..##########..#..#..#..##########..#
+#.....#..#..#.....#.....#.....#.....#.....#..#..#...........#.....#..#....................#
+#..####..####..#..##########..#..#######..#..#..#..#..####..#..#..####..#..####..#######..#
+#.....#.....#..#.....#....................#..#.....#..#........#.....#..#..#...........#..
+########################################################################################..
+</code></pre>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/altinum/szamtud_docfx/blob/main/softec/mintakodok/labirintus/index.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../styles/main.js"></script>
+    <script type="module" src="../../../styles/heatmap/main.js"></script>
+    <script type="module" src="../../../styles/heatmap/displayHeatmap.js"></script>
+    <script type="module" src="../../../styles/heatmap/manageHtmlChange.js"></script>
+    <script type="module" src="../../../styles/heatmap/intersectionObserver.js"></script>
+    <script type="module" src="../../../styles/heatmap/config.js"></script>  </body>
+</html>

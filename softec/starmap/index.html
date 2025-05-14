@@ -1,0 +1,206 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Csillagt&#233;rk&#233;p </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Csillagt&#233;rk&#233;p ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <link rel="stylesheet" href="../../styles/heatmap.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../../toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        <div class="article row grid">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="csillagtérkép">Csillagtérkép</h1>
+
+<p>A mai gyakorlaton egy csillagtérképet fogunk rajzolni. A csillagok adatai egy SQL adatbázisban vannak. Az adatok a <a href="https://www.cosmos.esa.int/web/hipparcos">Hipparcos</a> katalógusból származnak, mely körülbelül 11800 égi objektum adatait tartalmazza.</p>
+<p>A gyakorlaton lehetőség nyílik nagyobb adathalmazzal is dolgozni, nemcsak néhány mintaadattal feltöltött oktatási célú táblákal.</p>
+<h2 id="adatbázis-kapcsolat">Adatbázis kapcsolat</h2>
+<p>Hozzatok létere új projektet, és hozzátok létre az előző héten bemutatott módon az ORM oszályokat:</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Szerver</td>
+<td>bit.uni-corvinus.hu</td>
+</tr>
+<tr>
+<td>Felhasználónév</td>
+<td>hallgato</td>
+</tr>
+<tr>
+<td>Jelszó</td>
+<td>Password123</td>
+</tr>
+<tr>
+<td>Adatbázis</td>
+<td>hajos</td>
+</tr>
+</tbody>
+</table>
+<div class="IMPORTANT">
+<h5>Important</h5>
+<p>A bit.uni-corvinus.hu SQL szerver csak VPN alól érhető el!</p>
+</div>
+<h2 id="az-adatokról">Az adatokról</h2>
+<p>A <code>StarDatum</code> Táblából mindössze négymezőre lesz szükségünk: a csillagot azonosító <code>Hip</code> mezőre, az <code>X</code> és <code>Y</code> koordinátákra, illetve az égitest fényességét megadó magnitúdóra. Az <code>X</code> és <code>Y</code> koordináták egy adott időpillanatban Budapestről látható koordinátáit jelölik, sztereografikus projekcióval, száznyolcvan fokos látószöggel. Evvel a két mezővel került kiegészítésre az eredeti adatbázis.</p>
+<p>A (0,0) koordinátájú pont zenit, Az égi objektumok pedig egy egység sugarú körben helyezkednek el. A körvonal maga a horizont. Felfelé van észak. A körön kívül eső objektumokat nem kéne megjeleníteni, hiszen ezeket eltakarja a Föld.  A <code>ConstellationLine</code> táblának két oszolpa van: <code>star1</code> és <code>star2</code>. Ezeket a csillagokat kell egy-egy vonallal összekötni, ha a csillaglépeket is ki akarjuk rajzolni.</p>
+<h2 id="csillagok-letöltése-az-sql-szerverről">Csillagok letöltése az SQL szerverről</h2>
+<p>Első lépésben érdemes egy listát létrehozni.</p>
+<pre><code class="lang-csharp"> var stars = (from s in context.StarData select new {s.Hip, s.X, s.Y, s.Magnitude }).ToList();
+</code></pre>
+<p>Ha valakinek szimpatikusabb, lehet lambda kifejezéseket is használni:</p>
+<pre><code class="lang-c#">var stars = context.StarData.Select(s =&gt; new { s.Hip, s.X, s.Y, s.Magnitude }).ToList();
+</code></pre>
+<p>A <code>new {s.Hip, s.X s.Y, s.Magnitude }</code> egy úgynevezett anonim típus, ilyen típusú elemekből álló lista lesz a <code>stars</code>. A <code>stars</code> már a gépünk memóriájában lakik, ha ebből csinálunk LINQ lekérdezéseket, már nem terheljük az SQL szervert.</p>
+<p>Ezt a listát kell majd bejárni egy <code>foreach</code>-el, és kirajzolni a csillagokat!</p>
+<pre><code class="lang-c#">foreach (var s in stars)
+{
+	//Rajzolás
+}
+</code></pre>
+<h2 id="gdi-grafika">GDI grafika</h2>
+<p>A rajzoláshoz a GDI grafikát fogjuk használni. Ez egyszerű vonalas ábrák rajzolására alkalmas, a játékfejlesztők nyilván nem ezt használják. Viszont cserébe egyszerű, adatvizualizációra kiválóan alkalmas.</p>
+<p>A rajzolást érdemes egy gomb eseménykiszolgáló függvényből indítani.</p>
+<pre><code class="lang-c#">Graphics g = this.CreateGraphics();
+
+g.Clear(Color.White);
+
+Color c = Color.Black;
+
+Pen toll = new Pen(c, 1);
+Brush brush = new SolidBrush(c);
+</code></pre>
+<p>A <code>Graphics g = this.CreateGraphics();</code> az űrlapon létrehoz egy felületet, amire lehet rajzolni.</p>
+<p>A <code>g.Clear(Color.White);</code> fehérrel törli az űrlapot, lehet szép mélykék színeket is használni.</p>
+<p>Vonalas objektumok rajzolására létre kell hoznunk egy toll (<code>Pen</code>) objektumot kitöltött objektumok ecset (<code>Brush</code>) segítségével rajzolhatóak.</p>
+<pre><code>g.FillEllipse(brush, 10, 10, 10, 10);
+g.DrawLine(toll, 10, 10, 10, 10);
+</code></pre>
+<p>csillagokat érdemes kitöltött ellipszisből rajzolni!</p>
+<div class="IMPORTANT">
+<h5>Important</h5>
+<p>A koordinátákat <code>float</code> vagy <code>int</code> típusban kell megadni! ne felejtsd el konvertálni!</p>
+</div>
+<p>TIPP: a kirajzolásnál érdemes az ábrát eltolni az ablak közepére. Ha megfigyelitek, az adatbázisban a koordináták negatív és pozitív értékeket is felvehetnek.</p>
+<pre><code class="lang-csharp">float cx = ClientRectangle.Width / 2;
+float cy = ClientRectangle.Height / 2;
+</code></pre>
+<p>Érdemes kísérletezni a nagyítás értékével. Aki nagyon szofisztikált szeretném megoldani a feladatot megnézi, hogy milyen tartományba esnek a koordináták, és az ablak méretéből kiszámolja az optimális nagyítást.</p>
+<p>A <strong>magnitúdó</strong> a csillagászatban az égitestek fényességének mértékegysége. A magnitúdó latinul magnituto, magnitutis: nagyság. A magnitúdó skálája logaritmikus és faktora negatív: 5 magnitúdó különbség 100-szoros intenzitáskülönbséget, a kisebb érték nagyobb fényességet jelent! Tiszta, sötét égbolton a szabad szemmel még meglátható csillagok fényessége kb. 6m, a legfényesebbeké 0m. A feladat megoldásánál a 10m-nél halványabb égitesteket nem érdemes megjeleníteni hiszen ezeket szabad szemmel úgysem látjuk.
+Ha minden égitestet egyforma méretűre rajzolunk, nem lesz látványos az ábra. Lehet játszani a pixelek színével, illetve a fényesebb égitestek helyére rajzolhatunk egy korongot.</p>
+<p>Ilyesmivel lehet kísérletezni:</p>
+<pre><code class="lang-csharp">double size = 20 * Math.Pow(10, (star.Magnitude) / -2.5);
+</code></pre>
+<h2 id="konstellációk">Konstellációk</h2>
+<p>A<code>ConstellationLine </code> tábla megadja, hogy melyik <code>Hip</code> számú csillagokat kell vonallal összekötni. Érdemes ezt a táblát is letölteni a memóriába egy listába, és ezután bejárni:</p>
+<pre><code class="lang-csharp">var lines = context.ConstellationLines.ToList();
+
+foreach (var line in lines)
+{
+  //...   
+}
+</code></pre>
+<p>A <code>foreach</code> törzsében minden vonalhoz ki kell keresni a két csillagot, amit összeköt a vonal. Például így:</p>
+<pre><code class="lang-csharp">var star1 = (from s in stars where s.Hip == line.Star1 select s).FirstOrDefault();
+</code></pre>
+<p>Érdemes odafigyelni a <code>.FirstOrDefault()</code>-ra a végén! A <code>from s in stars where s.Hip == line.Star1 select s</code> kifejezés egy gyüjteményt ad vissza, még akkor is, ha mi tudjuk, hogy csak egy eleme lesz -- vagy nem lesz eleme. A <code>FirstOrDefault()</code> a gyűjtemény első elemét adja vissza, vagy <code>null</code> értéket, ha a gyüjtemény üres. Innét már használhatjuk a <code>star1.X</code> kifejezést a vonalhúzásnál!</p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/altinum/szamtud_docfx/blob/main/softec/starmap/index.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+    <script type="module" src="../../styles/heatmap/main.js"></script>
+    <script type="module" src="../../styles/heatmap/displayHeatmap.js"></script>
+    <script type="module" src="../../styles/heatmap/manageHtmlChange.js"></script>
+    <script type="module" src="../../styles/heatmap/intersectionObserver.js"></script>
+    <script type="module" src="../../styles/heatmap/config.js"></script>  </body>
+</html>

@@ -1,0 +1,237 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Gyakorl&#243; sor - haj&#243;s vizsgak&#233;rd&#233;sek </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Gyakorl&#243; sor - haj&#243;s vizsgak&#233;rd&#233;sek ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <link rel="stylesheet" href="../../styles/heatmap.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../../toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        <div class="article row grid">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="gyakorló-sor---hajós-vizsgakérdések">Gyakorló sor - hajós vizsgakérdések</h1>
+
+<div class="WARNING">
+<h5>Warning</h5>
+<p>Gyakorlás közben ne másoljátok be a kódmintákat! Építsétek fel, mint ZH-n! Az automatikus kódkiegészítő veled van :)</p>
+</div>
+<p>Adott az alábbi vesszővel tagolt szöveges állomány:</p>
+<p><a href="hajozasi_szabalyzat_coma.txt">hajozasi_szabalyzat_coma.txt</a></p>
+<p>Készíts alkalamazást, amely</p>
+<ul>
+<li><p>Tartalmazza az állományt a projektben (<code>Copy to output directory</code>-t ne feledd!)</p>
+</li>
+<li><p>Tartalmaz egy oszályt, amely keképezi az állomány egy sorát</p>
+</li>
+<li><p>Képes megnyitni az állományt és a sorait felolvasni egy <code>BindingList</code> típusú, <code>Form1</code> osztály szintjén létrehozott listába</p>
+<ul>
+<li>Megnyitás közben kezeld a hibákat (<code>try</code>-<code>catch</code>)!</li>
+</ul>
+</li>
+<li><p>Képes menteni a <code>Form1</code> oszrályban lévő listát</p>
+<ul>
+<li>A mentés helye <code>SaveFileDialog</code>-ban legyen kiválasztható</li>
+<li>Mentésközben kezeld a hibákat (<code>try</code>-<code>catch</code>)!</li>
+</ul>
+</li>
+<li><p><code>BindingSource</code>-on keresztül megjeleníti a lista tartalmát egy <code>DataGridView</code>-ban</p>
+</li>
+<li><p>Taralamaz egy gombot, melynek segítségével a rácsban az éppen kiválasztott sor törölhető</p>
+<ul>
+<li>A törlés csak megerősítő kérdés után történjen meg</li>
+<li>Ellenőrizd, hogy van-e kiválasztott sor</li>
+</ul>
+</li>
+<li><p>Felugró abalakon keresztül legyen lehetőség új sor rögzítésére</p>
+</li>
+</ul>
+<h3 id="nuget-csomag-telepítése">NuGet csomag telepítése</h3>
+<p>(!Vid) 1. videó: NuGet csomag telepítése</p>
+<div class="embeddedvideo"><iframe src="https://storage.altinum.hu/szoft1/binding/1_Nuget.m4v" frameborder="0" allowfullscreen="true"></iframe></div>
+<h3 id="csv-fájl-beolvasása">CSV fájl beolvasása</h3>
+<p>(!Vid) 2. videó: CSV fájl beolvasása</p>
+<div class="embeddedvideo"><iframe src="https://storage.altinum.hu/szoft1/binding/2_Csvread.m4v" frameborder="0" allowfullscreen="true"></iframe></div>
+<p>Videóban szereplő kódminta:</p>
+<pre><code class="lang-c#">private void buttonOpen_Click(object sender, EventArgs e)
+{
+    try
+    {
+        StreamReader sr = new StreamReader(&quot;hajozasi_szabalyzat_coma.txt&quot;);
+        var csv = new CsvReader(sr, CultureInfo.InvariantCulture);
+        var tömb = csv.GetRecords&lt;VizsgaKérdés&gt;();
+
+        foreach (var item in tömb)
+        {
+            kérdések.Add(item);
+        }
+
+        sr.Close();
+    }
+    catch (Exception ex)
+    {
+        MessageBox.Show(ex.Message);
+    }
+}
+</code></pre>
+<p>Bukatatók:</p>
+<ul>
+<li>Nincs beállítva a <code>Copy to output directory</code></li>
+<li>A <code>VizsgaKérdés</code> osztány tulajdonságai nem felelnek meg karakter szinten a fájl feljécének</li>
+</ul>
+<h3 id="csv-fájl-mentése">CSV fájl mentése</h3>
+<p>(!Vid) 3. videó: CSV fájl mentése</p>
+<div class="embeddedvideo"><iframe src="https://storage.altinum.hu/szoft1/binding/3_Csvwrite.m4v" frameborder="0" allowfullscreen="true"></iframe></div>
+<p>Videóban szereplő kódminta:</p>
+<pre><code class="lang-c#">try
+{
+    SaveFileDialog saveFileDialog = new SaveFileDialog();
+
+    if (saveFileDialog.ShowDialog() == DialogResult.OK)
+    {
+        StreamWriter sw = new StreamWriter(saveFileDialog.FileName);
+        var csv = new CsvWriter(sw, CultureInfo.InvariantCulture);
+        csv.WriteRecords(kérdések);
+        sw.Close();
+    }
+}
+catch (Exception ex)
+{
+    MessageBox.Show(ex.Message);
+}
+</code></pre>
+<h3 id="adatkötés">Adatkötés</h3>
+<p>(!Vid) 4. videó: adatkötés</p>
+<div class="embeddedvideo"><iframe src="https://storage.altinum.hu/szoft1/binding/4_Databinding.m4v" frameborder="0" allowfullscreen="true"></iframe></div>
+<p>Bukatatók:</p>
+<ul>
+<li><p>Több <code>BindingSource</code>-t hozol létre, a vezérlők nem ugyanoda vannak kötve.</p>
+</li>
+<li><p>A <code>DataGridView</code> adatforrását kódból felülírjuk:</p>
+<pre><code class="lang-c#">private void Form1_Load(object sender, EventArgs e)
+{
+    dataGridView1.DataSource = kérdések;
+}
+</code></pre>
+<p>Ha tervezőből bekötöttük a rácsot a <code>vizsgaKérdésBindingSource</code>-ba, akkor így kell kötni:</p>
+<pre><code class="lang-c#">private void Form1_Load(object sender, EventArgs e)
+{
+    vizsgaKérdésBindingSource.DataSource = kérdések;
+}
+</code></pre>
+</li>
+</ul>
+<h3 id="sor-törlése">Sor törlése</h3>
+<p>(!Vid) 5. videó: sor törlése</p>
+<div class="embeddedvideo"><iframe src="https://storage.altinum.hu/szoft1/binding/5_Delete.m4v" frameborder="0" allowfullscreen="true"></iframe></div>
+<pre><code class="lang-c#">private void buttonDelete_Click(object sender, EventArgs e)
+{
+    if (vizsgaKérdésBindingSource.Current == null) return;
+
+    if (MessageBox.Show(&quot;A&quot;, &quot;B&quot;, MessageBoxButtons.YesNo) == DialogResult.Yes)
+    {
+        vizsgaKérdésBindingSource.RemoveCurrent();
+    }
+}
+</code></pre>
+<h3 id="új-sor-rögzítése-felugró-ablakon-keresztül">Új sor rögzítése felugró ablakon keresztül</h3>
+<p>(!Vid) 6. videó: új sor rögzítése felugró ablakon keresztül</p>
+<div class="embeddedvideo"><iframe src="https://storage.altinum.hu/szoft1/binding/6_Newform.m4v" frameborder="0" allowfullscreen="true"></iframe></div>
+<h3 id="sor-szerkesztése-felugró-ablakon-keresztül">Sor szerkesztése felugró ablakon keresztül</h3>
+<p>(!Vid) 7. videó: Sor szerkesztése felugró ablakon keresztül</p>
+<div class="embeddedvideo"><iframe src="https://storage.altinum.hu/szoft1/binding/7_Edit.m4v" frameborder="0" allowfullscreen="true"></iframe></div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/altinum/szamtud_docfx/blob/main/softec/hajos_bindnig/index.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+    <script type="module" src="../../styles/heatmap/main.js"></script>
+    <script type="module" src="../../styles/heatmap/displayHeatmap.js"></script>
+    <script type="module" src="../../styles/heatmap/manageHtmlChange.js"></script>
+    <script type="module" src="../../styles/heatmap/intersectionObserver.js"></script>
+    <script type="module" src="../../styles/heatmap/config.js"></script>  </body>
+</html>

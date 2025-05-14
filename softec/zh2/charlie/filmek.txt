@@ -1,0 +1,51 @@
+FilmID,Cim,KiadasiEv,BevetelekMillioUSD,Sikeres
+1,Az Élők Maradnak,1999,235,true
+2,Árnyék Nélkül,2001,184,false
+3,Zöld Útvesztő,2002,207,true
+4,Mélytengeri Titkok,1998,131,false
+5,Kísértetjárás,2000,178,true
+6,Az Utolsó Kapu,2005,202,true
+7,Régi Világ,2003,150,false
+8,Időtlenség,2007,350,true
+9,Az Elfeledett Sziget,2010,275,true
+10,Sötét Zápor,2012,87,false
+11,Hajsza a Győzelemért,2011,215,true
+12,Északi Mesék,2008,190,false
+13,Szürke Senkiföldje,2009,142,false
+14,Kalandorok,2013,201,true
+15,Hideg Égbolt,2014,365,true
+16,Névtelen Hősök,2016,122,false
+17,Halhatatlanok,2017,334,true
+18,Éji Zene,2018,289,true
+19,Zord Idők,2015,150,false
+20,Édenkert,2016,175,true
+21,Elveszett Paradicsom,2020,312,true
+22,Más Világok,2019,194,false
+23,Titkok Könyve,2021,218,true
+24,Fények Háborúja,2022,410,true
+25,Vándorsólyom Kisértetei,2023,120,false
+26,Krémek Krémje,2024,500,true
+27,Néma Szavak,2025,175,false
+28,A Naphoz Közel,2026,150,true
+29,Alkonyat Régiók,2027,200,false
+30,Zöld Völgyek,2028,340,true
+31,Fény Órája,2029,190,true
+32,A Régi Híd,2030,99,false
+33,Csillagok Háborúja,2031,430,true
+34,Kapuk és Kulcsok,2032,180,false
+35,Útvesztők,2033,210,true
+36,Repülő Álmok,2034,305,true
+37,Sötét Jövő,2035,120,false
+38,Örök Éj,2036,98,false
+39,Halál Hegye,2037,256,true
+40,Világok Ütközése,2038,210,true
+41,Éjféli Nap,2039,89,false
+42,Vihar Előtt,2040,250,true
+43,Hajnali Fény,2041,179,true
+44,Kiút Nélkül,2042,145,false
+45,Sivatagi Árnyak,2043,134,false
+46,Kék Mélység,2044,299,true
+47,Halhatatlan Szív,2045,310,true
+48,Szabadság Hídja,2046,127,false
+49,Kései Találkozás,2047,197,true
+50,Az Utolsó Őrszem,2048,215,true

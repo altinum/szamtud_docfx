@@ -1,0 +1,171 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Projektfeladat:  Labirintus j&#225;t&#233;k </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Projektfeladat:  Labirintus j&#225;t&#233;k ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../../../favicon.ico">
+    <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../styles/docfx.css">
+    <link rel="stylesheet" href="../../../styles/main.css">
+    <link rel="stylesheet" href="../../../styles/heatmap.css">
+    <meta property="docfx:navrel" content="../../../toc.html">
+    <meta property="docfx:tocrel" content="../../../toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../../index.html">
+                <img id="logo" class="svg" src="../../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        <div class="article row grid">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="projektfeladat--labirintus-játék">Projektfeladat:  Labirintus játék</h1>
+
+<h2 id="a-feladat-leírása">A feladat leírása</h2>
+<p>A feladat egy olyan labirintusos játék készítése, melyben a játékos egy fájlmegnyitó ablakon keresztül kiválaszthat egy labirintust leíró fájlt, majd a billentyűk segítségével végigvezethet egy figurát a pályán.</p>
+<p>A labirintus (maze) legenerálására vannak online eszközök, mint <a href="https://www.dcode.fr/maze-generator">ez itt</a>. A legenerált labirintus szövegfájlként letölthető. A letöltött fájlokban jelöljétek a START és a CÉL mezőt is tetszőleges módon.</p>
+<ul>
+<li><p>A labirintust tartalmazó fájlt fájlmegnyitó ablakból lehessen kiválasztani!</p>
+</li>
+<li><p>A fájl megnyitásakor és olvasásakor keletkező esetleges kivételeket le kell kezelni.</p>
+</li>
+<li><p>A labirintust érdemes <code>PictureBox</code>-ból származtatott osztályokból felépíteni, mert a gombok könnyen &quot;lenyelik&quot; a gomblenyomás eseményeket.</p>
+</li>
+<li><p>A játékost gombokkal lehessen irányítani -- az irányítás és az ütközésvizsgálat a kígyós játékhoz hasonlóan történhet.</p>
+</li>
+<li><p>A lépések számát és az eltelt időt meg kell jeleníteni.</p>
+</li>
+<li><p>Legyen lehetőség újrakezdeni a pályát.</p>
+</li>
+<li><p>A játék bővíthető megehető pöttyökkel vagy tetszőleges extrával.</p>
+</li>
+</ul>
+<blockquote>
+<p>Teams-en várjuk a feladattal kapcsolatban kérdéseket, és igyekszünk mihamarabb válaszolni.</p>
+</blockquote>
+<h2 id="tippek-a-megvalósításhoz">Tippek a megvalósításhoz</h2>
+<h3 id="hivatkozás-a-string-elemeire">Hivatkozás a <code>string</code> elemeire</h3>
+<p>A <code>string</code>-ben szereplő betűkre ugyanúgy lehet hivatkozni, mint egy tömb elemeire. Az alábbi kódrészlet fukszia és kék gombokat pakol egymás mellé az <code>s</code> karakterláncban szereplő betűknek megfelelően. Ez a gondolatmenet felhasználható a labirintusfájl olvasásánál. A karakterlánc hossza a <code>Length</code> tulajdonságán keresztül olvasható ki.</p>
+<pre><code class="lang-csharp">string s = &quot;KKFFKK&quot;;
+
+for (int i = 0; i &lt; s.Length; i++)
+{
+    Button b = new Button();
+    b.Left = i * 30;
+    b.Width = 30;
+
+    if (s[i] == 'K') b.BackColor = Color.Blue;
+    if (s[i] == 'F') b.BackColor = Color.Fuchsia;
+
+    Controls.Add(b);
+}
+</code></pre>
+<h3 id="objektumok-típusának-megállapítása">Objektumok típusának megállapítása</h3>
+<p>Az alábbi kódrészlet az űrlapon szereplő vezérlők közül a gombokat fuksziára színezi, a címkéket nem fuksziára. Ez a megoldás felhasználható annak eldöntésére, hogy falnak vagy a célnak ütköztünk.</p>
+<pre><code class="lang-csharp">//Bejárjuk egy iterációval az űrlap összes vezérlőjét, azaz a Controls gyűjteményt
+foreach (var elem in Controls)
+{
+    //Az épp vizsgált elem Button?
+    if (elem is Button)
+    {
+        //Ha igen, cast-oljuk Buttonná, és színezzük
+        Button b = (Button)elem;
+        b.BackColor = Color.Fuchsia;
+    }
+
+
+    //Az épp vizsgált elem Label?
+    if (elem is Label)
+    {
+        //Ha igen, cast-oljuk Labellé, és színezzük
+        Label l = (Label)elem;
+        b.BackColor = Color.Blue;
+    }
+}
+</code></pre>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/altinum/szamtud_docfx/blob/main/softec/beadandok/beadando_maze/index.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../styles/main.js"></script>
+    <script type="module" src="../../../styles/heatmap/main.js"></script>
+    <script type="module" src="../../../styles/heatmap/displayHeatmap.js"></script>
+    <script type="module" src="../../../styles/heatmap/manageHtmlChange.js"></script>
+    <script type="module" src="../../../styles/heatmap/intersectionObserver.js"></script>
+    <script type="module" src="../../../styles/heatmap/config.js"></script>  </body>
+</html>

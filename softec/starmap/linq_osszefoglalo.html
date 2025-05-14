@@ -1,0 +1,216 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Eg&#233;szen kicsi LINQ &#246;sszefoglal&#243; </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Eg&#233;szen kicsi LINQ &#246;sszefoglal&#243; ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <link rel="stylesheet" href="../../styles/heatmap.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../../toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        <div class="article row grid">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="egészen-kicsi-linq-összefoglaló">Egészen kicsi LINQ összefoglaló</h1>
+
+<h2 id="mi-az-a-linq">Mi az a LINQ</h2>
+<p>A LINQ NET keretrendszerbe épített lekérdező nyelv (szabálygyűjtemény), amely rendelkezik a hagyományos lekérdező nyelvek (pl.: MSSQL) funkcionalitásának egy részével, egyszersmind integrálva van a C# nyelvebe.</p>
+<p>A gyakorlatban ez azt jelenti, hogy a programkódba közvetlenül írhatjuk a lekérdezéseket úgy, hogy az automatikus kódkiegészítés és a szintaxis ellenőrzés végig segít. Az <em>Entity Framework</em> a korábbi hetekben bemutatott módon leképezi C# osztályok formájába az adatbázis tábláinak sémáját (ORM), így az Intellisense a C# kód írása közben tisztában van az adatbázis felépítésével.</p>
+<h2 id="linq-példák">LINQ példák</h2>
+<h3 id="a-legegyszerűbb-példa">A legegyszerűbb példa</h3>
+<p>A klasszikus <code>SELECT * FROM hallgatok</code> LINQ megfelelője:</p>
+<pre><code class="lang-csharp">var eredmény = from x in context.Hallgatok select x;
+</code></pre>
+<p>Ebben a példában az <code>x</code> az úgynevezett soriterátor. Neve tetszőleges lehet -- az a lényeg, hogy következetesen használjuk -- de a tömörség miatt egybetűs neveket szokás adni.</p>
+<blockquote>
+<p>Az SQL-ben a záradékok sorrendje a gépi adatfeldolgozás sorrendjét követik. Fugunk egy vagy több táblát (FROM), kiválasztjuk, hogy melyik rekordokra van szükségünk (WHERE), ami a szűrés után bent maradt, csoportosíthatjuk (GROUP BY), a csoportosítás eredményére is szűrhetünk (HAVING), és a legvégén rendezünk csak sorba (ORDER BY).  A SELECT kucsszó a lekérdezés elejére kerül. LINQ-ban a <code>select</code> a végére kerül.</p>
+</blockquote>
+<p>LINQ esetében a <code>from</code>-mal kezdődik a kifejezés, melyet a soriterátor követ -- ami most éppen <code>x</code>, de lehetne bármi--, majd az <code>in</code> kulcsszó után következik a gyűjtemény neve, amiből kérdezni szeretnénk. Ez most épp a <code>Context.Hallgatók</code>. A példát a <code>select</code> zárja, amiben ki lehet kötni, hogy milyen adatokat jelenítsünk meg. A soriterátor szerepe a következő példából talán jobban megérthető:</p>
+<pre><code class="lang-csharp">var eredmény = from x in context.Hallgatok 
+               where x.Neptun == &quot;NEPTUN&quot;
+               select x;
+</code></pre>
+<p>A fenti LINQ kifejezést talán így lehetne magyarra fordítani: &quot;Menj végig a <code>context.Hallgatok</code> gyűjtemény minden egyes elemén. A <code>where</code> kulcsszó után szereplő kifejezést futtasd le a gyűjtemény minden elemére, úgy hogy a soriterátorba (most épp <code>x</code>) kerül az éppen vizsgált elem. Az eredményhalmazban azok az elemek maradnak bent, melyek megfeleltek a <code>where</code>  után szereplő feltételnek.</p>
+<h3 id="egyszerű-lekérdezés-where-záradékkal-szelekció">Egyszerű lekérdezés where záradékkal (szelekció)</h3>
+<p>A fenti példa az eredményhalmazba beteszti az összes olyan objektumot, ami megfelel a feltételnek, de a következő példa már csak a neveket gyűjti ki:</p>
+<pre><code class="lang-csharp">var eredmény = from x in context.Hallgatok 
+               where x.Neptun == &quot;NEPTUN&quot;
+               select x.Nev;
+</code></pre>
+<p>A szűrési feltétel lehet bonyolult kifejezés is C# szintaktikával -- majd az Entity Framework  a motorháztető alatt lefordítja SQL-re ha szükséges.</p>
+<pre><code class="lang-csharp">var eredmény = from x in context.Hallgatok 
+               where x.Neptun != null &amp;&amp; x.Nev.StartsWith(&quot;Moh&quot;)
+               select x;
+</code></pre>
+<h3 id="több-mezővel-a-select-után">Több mezővel a select után</h3>
+<pre><code class="lang-csharp">var eredmény = from x in context.Hallgatok 
+               select new 
+               { 
+                   x.Nev, 
+                   x.Hallgato_id 
+               };
+</code></pre>
+<p>Ebben az esetben egy úgynevezett anonym típus jön létre két tulajdonsággal: <code>Nev</code> és <code>Hallgato_id</code>. (Létre lehetne hozni egy külön osztály ezzel a két tulajdonsággal, de ez unalmas favágás, és legtöbbször felesleges is.)</p>
+<h3 id="egymásba-ágyazott-lekérdezések">Egymásba ágyazott lekérdezések</h3>
+<p>Egy lekérdezés eredményéből gond nélkül kérdezhetünk tovább:</p>
+<pre><code class="lang-csharp">var eredmény = from x in context.Hallgatok 
+               where x.Nev.StartsWith(&quot;A&quot;)
+               select x;
+
+var második = from y in eredmény
+              orderby y.Nev
+              select y;
+</code></pre>
+<blockquote>
+<p>Az SQL szerveren majd csak akkor fult le a lekérdezés, ha használni akarjuk az eredményét. Tehát az első lekérdezés eredménye nem kerül rögtön a memóriába.</p>
+</blockquote>
+<h3 id="saját-új-mezők-képzése-projekció-mezők-elnevezése-as">Saját új mezők képzése (projekció), mezők elnevezése (AS)</h3>
+<pre><code class="lang-csharp">var eredmény = from x in context.Hallgatok 
+               select new 
+               {
+                   nev_es_neptun = x.Nev + &quot; - &quot; + x.Neptun,
+                   x.Hallgato_id 
+               };
+</code></pre>
+<p>Ennek a példának az eredményeképp is létrejön egy anonym típus, de mivel itt nem csak az eredeti mezőket használjuk, a kifejezés eredményét el is kell nevezni: <code>nev_es_neptun =</code>.</p>
+<h3 id="többtáblás-lekérdezések">Többtáblás lekérdezések</h3>
+<pre><code class="lang-csharp">var eredmény = from k in context.Konyvek
+               join r in context.Rendelesek
+               on k.Konyv_id equals r.Konyv
+               select new 
+               {
+                   r.Hallgato, 
+                   r.Konyv, 
+                   k.Cim
+               };
+</code></pre>
+<p>Itt már külön soriterátor van a lekérdezésen szereplő két táblához,</p>
+<p>De a helyzet általában nem ennyire bonyolult. Ha az adatbázis tervezésénél be voltak állítva a kényszerek (táblák közti kapcsolatok), akkor az idegen kulcsok mentén <code>join</code> írása nélkül is el lehet 'lépkedni'. Nézzünk erre egy példát:</p>
+<h2 id="lekérdezés-eredményének-megjelenítése-bejárása">Lekérdezés eredményének megjelenítése, bejárása</h2>
+<h3 id="megjelenítés-datagridview-ban">Megjelenítés DataGridView-ban</h3>
+<p>Az eredményeket megjeleníthetem pl. egy rácsban:</p>
+<pre><code class="lang-csharp">dataGridView1.DataSource = eredmény;
+</code></pre>
+<p>Ez a legegyszerűbb, hiszen a rács tetszőleges számú oszlopot meg tud jeleníteni.</p>
+<h3 id="megjelenítés-listbox-ban">Megjelenítés ListBox-ban</h3>
+<pre><code class="lang-csharp">listBoxHallgatók.DataSource = eredmény;
+listBoxHallgatók.DisplayMember = &quot;nev&quot;;
+listBoxHallgatók.ValueMember = &quot;hallgato_id&quot;;
+</code></pre>
+<p>A <code>DataGridView</code>-val ellentétben a <code>ListBox</code> csak egyetlen oszlopot tud megjeleníteni, ezért a <code>DisplayMember</code>  tulajdonságában meg kell neki adni, hogy melyik legyen az. Sajnos itt be kell gépelni egy string literálba a mező nevét. Ha elírjuk, az oszály neve jelenik meg benne annyiszor, ahány elemű az adatforrásként használt gyűjtemény.</p>
+<p>A <code>ListBox</code> <code>SelectedItem</code> tulajdonságából olvasható ki a felhasználó által kiválasztott elemhez tartozó objektum. A <code>SelectedItem</code>  <code>object</code> típusú, ezért ha használni akarjuk a kiolvasott értéket, cast-olni kell:</p>
+<pre><code class="lang-csharp">Hallgato kiválasztottHallgato = (Hallgato)listBox1.SelectedItem;
+</code></pre>
+<p>A <code>ValueMember</code> tulajdonságban a gyakolatban szinte mindig a saját kulcsot tartalmazó mező nevét állítjuk be. Ebben az esetben  <code>ListBox</code> <code>SelectedValue</code> tulajdonságából kiolvsható a felhasználó által kiválasztott elemhez tartozó kulcsérték.</p>
+<h3 id="megjelenítés-combobox-ban">Megjelenítés ComboBox-ban</h3>
+<p>A <code>ComboBox</code> szinte tökéletesen úgy működik, mint a <code>ListBox</code>, csak máshogy néz ki. A <code>ListBox</code>-ban viszont be lehet állítani, hogy több elemet is választhasson a felhasználó.</p>
+<h3 id="az-eredmény-bejárása">Az eredmény bejárása</h3>
+<p>Az eredmény bejárható egyszerű foreach-el. (Trace -&gt; resolve)</p>
+<pre><code class="lang-csharp">foreach (Hallgatok x in eredmény)
+{
+    Trace.WriteLine(x.Nev);
+}
+</code></pre>
+<p>Ugyanígy lehet fájlba is írni az eredményt.</p>
+<p>Ha nem ismerem az entitástípust -- vagy csak szimplán lusta vagyok--, használhatok var-t is:</p>
+<pre><code class="lang-csharp">foreach (var x in eredmény)
+{
+    Trace.WriteLine(x.Nev);
+}
+</code></pre>
+<h2 id="miért-linq">Miért LINQ?</h2>
+<p>Van lehetőség arra is, hogy az SQL mondatokat string formájában írjuk meg és küldjük el a szervernek, de ebben az esetben csak futás közben derül ki a hiba -- például el van gépelve egy mezőnév vagy táblanév. A gyakorlatban ritka (értsd: nincs) olyan összetettebb projekt, ahol ne válotzna az adatbázis sémája a fejlesztés során. Ha az SQL mondatok string formában vannak, nagyon körülményes annak lekövetése, hogy a sémaváltozás hol okoz gondot.</p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/altinum/szamtud_docfx/blob/main/softec/starmap/linq_osszefoglalo.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+    <script type="module" src="../../styles/heatmap/main.js"></script>
+    <script type="module" src="../../styles/heatmap/displayHeatmap.js"></script>
+    <script type="module" src="../../styles/heatmap/manageHtmlChange.js"></script>
+    <script type="module" src="../../styles/heatmap/intersectionObserver.js"></script>
+    <script type="module" src="../../styles/heatmap/config.js"></script>  </body>
+</html>
